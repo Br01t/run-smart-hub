@@ -1,0 +1,90 @@
+[
+  {
+    "id": "hydro-flask-1",
+    "nome": "Borraccia Termica 750ml",
+    "categoria": "idratazione",
+    "brand": "HydroFlask",
+    "tag": ["idratazione", "corsa", "accessori"],
+    "prezzoRange": "25-35€",
+    "linkAffiliato": "https://www.amazon.it/dp/example1?tag=tuotag-21",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Borraccia in acciaio inox con isolamento termico. Mantiene l'acqua fresca per 24 ore."
+  },
+  {
+    "id": "electrolyte-tabs-1",
+    "nome": "Compresse Elettrolitiche Sport",
+    "categoria": "integratori",
+    "brand": "SiS",
+    "tag": ["elettroliti", "idratazione", "integratori"],
+    "prezzoRange": "8-15€",
+    "linkAffiliato": "https://www.amazon.it/dp/example2?tag=tuotag-21",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Compresse effervescenti per reintegrare sodio, potassio e magnesio durante la corsa."
+  },
+  {
+    "id": "protein-powder-1",
+    "nome": "Proteine Whey Isolate 900g",
+    "categoria": "integratori",
+    "brand": "MyProtein",
+    "tag": ["proteine", "recupero", "integratori"],
+    "prezzoRange": "20-30€",
+    "linkAffiliato": "https://www.amazon.it/dp/example3?tag=tuotag-21",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Proteine del siero di latte isolate per il recupero muscolare post-allenamento."
+  },
+  {
+    "id": "running-shoe-1",
+    "nome": "Scarpe Running Ammortizzate",
+    "categoria": "scarpe",
+    "brand": "ASICS",
+    "tag": ["scarpe", "corsa", "ammortizzazione"],
+    "prezzoRange": "90-130€",
+    "linkAffiliato": "https://www.decathlon.it/example?aff=tuotag",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Scarpe da corsa con tecnologia GEL per massima ammortizzazione su asfalto."
+  },
+  {
+    "id": "magnesium-1",
+    "nome": "Magnesio Citrato 120 Capsule",
+    "categoria": "integratori",
+    "brand": "WeightWorld",
+    "tag": ["magnesio", "recupero", "crampi"],
+    "prezzoRange": "12-18€",
+    "linkAffiliato": "https://www.weightworld.it/example?aff=tuotag",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Magnesio ad alta biodisponibilità per prevenire crampi e supportare il recupero."
+  },
+  {
+    "id": "energy-gel-1",
+    "nome": "Gel Energetici Corsa (12 pz)",
+    "categoria": "integratori",
+    "brand": "Enervit",
+    "tag": ["energia", "corsa", "carboidrati"],
+    "prezzoRange": "18-25€",
+    "linkAffiliato": "https://www.amazon.it/dp/example4?tag=tuotag-21",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Gel a base di maltodestrine per energia rapida durante corse lunghe."
+  },
+  {
+    "id": "foam-roller-1",
+    "nome": "Foam Roller per Recupero",
+    "categoria": "recupero",
+    "brand": "Triggerpoint",
+    "tag": ["recupero", "massaggio", "muscoli"],
+    "prezzoRange": "25-40€",
+    "linkAffiliato": "https://www.amazon.it/dp/example5?tag=tuotag-21",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Rullo miofasciale per il rilascio muscolare e il recupero post-allenamento."
+  },
+  {
+    "id": "running-belt-1",
+    "nome": "Cintura Running con Porta Borraccia",
+    "categoria": "accessori",
+    "brand": "Salomon",
+    "tag": ["accessori", "idratazione", "corsa"],
+    "prezzoRange": "30-45€",
+    "linkAffiliato": "https://www.decathlon.it/example2?aff=tuotag",
+    "immagine": "/placeholder.svg",
+    "descrizione": "Cintura leggera per portare borraccia e smartphone durante la corsa."
+  }
+]
