@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import ToolCard from "@/components/ToolCard";
+import SEOHead from "@/components/SEOHead";
 import { Droplets, Flame, Scale, Dumbbell, Zap } from "lucide-react";
 
 const allTools = [
@@ -38,6 +39,7 @@ const allTools = [
 const ToolsHub = () => {
   return (
     <Layout>
+      <SEOHead title="Calcolatori per Runner" description="Calcolatori gratuiti per idratazione, calorie, BMI, proteine ed elettroliti. Strumenti scientifici per migliorare le tue performance." path="/strumenti" />
       <div className="container mx-auto px-4 py-12">
         <div className="mb-10">
           <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">

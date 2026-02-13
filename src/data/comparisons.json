@@ -1,0 +1,68 @@
+[
+  {
+    "sport": "corsa",
+    "obiettivo": "performance",
+    "categoria": "integratori",
+    "intro": "Scopri i migliori integratori per migliorare le tue performance nella corsa. Dalla caffeina ai gel energetici, ecco una selezione basata su evidenze scientifiche.",
+    "tags": ["energia", "carboidrati", "integratori"],
+    "faq": [
+      { "q": "Quali integratori servono per correre più veloce?", "a": "Caffeina, beta-alanina e gel a base di maltodestrine sono tra i più supportati dalla ricerca per migliorare la performance nella corsa." },
+      { "q": "Quando assumere gli integratori per la corsa?", "a": "I gel energetici vanno assunti durante la corsa (ogni 45-60 min), la caffeina 30-60 minuti prima." }
+    ]
+  },
+  {
+    "sport": "corsa",
+    "obiettivo": "recupero",
+    "categoria": "integratori",
+    "intro": "Il recupero è fondamentale per ogni runner. Ecco i prodotti che possono aiutarti a recuperare più velocemente dopo l'allenamento.",
+    "tags": ["proteine", "recupero", "magnesio"],
+    "faq": [
+      { "q": "Cosa prendere dopo la corsa per recuperare?", "a": "Proteine whey entro 30 minuti, magnesio per prevenire i crampi e un foam roller per il rilascio miofasciale." },
+      { "q": "Il magnesio aiuta il recupero muscolare?", "a": "Sì, il magnesio contribuisce alla funzione muscolare normale e può ridurre crampi e affaticamento." }
+    ]
+  },
+  {
+    "sport": "corsa",
+    "obiettivo": "idratazione",
+    "categoria": "accessori",
+    "intro": "L'idratazione corretta è essenziale per ogni runner. Scopri gli accessori migliori per mantenerti idratato durante la corsa.",
+    "tags": ["idratazione", "elettroliti", "accessori"],
+    "faq": [
+      { "q": "Quanta acqua bere durante la corsa?", "a": "In media 400-800ml all'ora, variabile in base a temperatura, intensità e tasso di sudorazione individuale." },
+      { "q": "Servono le compresse di elettroliti?", "a": "Per corse oltre i 60 minuti o in condizioni di caldo, sì. Reintegrano sodio e potassio persi con il sudore." }
+    ]
+  },
+  {
+    "sport": "corsa",
+    "obiettivo": "dimagrimento",
+    "categoria": "integratori",
+    "intro": "Vuoi perdere peso correndo? Ecco i prodotti che possono supportare il tuo percorso di dimagrimento in modo sano e scientifico.",
+    "tags": ["energia", "proteine", "integratori"],
+    "faq": [
+      { "q": "Correre fa dimagrire?", "a": "Sì, la corsa brucia circa 1 kcal/kg/km. Combinata con un deficit calorico moderato è tra le attività più efficaci." },
+      { "q": "Le proteine aiutano a dimagrire?", "a": "Le proteine aumentano il senso di sazietà e preservano la massa muscolare durante il deficit calorico." }
+    ]
+  },
+  {
+    "sport": "trail",
+    "obiettivo": "performance",
+    "categoria": "scarpe",
+    "intro": "Le scarpe giuste fanno la differenza nel trail running. Scopri come scegliere e i modelli consigliati per le tue avventure off-road.",
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "faq": [
+      { "q": "Che differenza c'è tra scarpe da trail e da strada?", "a": "Le trail hanno suola con tasselli per grip su terreni irregolari, protezione per le rocce e spesso una tomaia più resistente." },
+      { "q": "Ogni quanto cambiare le scarpe da trail?", "a": "In media ogni 500-800 km, ma dipende dal terreno e dal modello." }
+    ]
+  },
+  {
+    "sport": "corsa",
+    "obiettivo": "prevenzione-infortuni",
+    "categoria": "recupero",
+    "intro": "Prevenire gli infortuni è fondamentale per correre a lungo termine. Ecco gli strumenti e prodotti per il recupero e la prevenzione.",
+    "tags": ["recupero", "massaggio", "muscoli"],
+    "faq": [
+      { "q": "Come prevenire gli infortuni nella corsa?", "a": "Stretching, foam rolling, progressione graduale del volume e scarpe adatte al proprio tipo di appoggio." },
+      { "q": "Il foam roller serve davvero?", "a": "Sì, studi mostrano che il foam rolling riduce il DOMS e migliora la mobilità articolare." }
+    ]
+  }
+]
