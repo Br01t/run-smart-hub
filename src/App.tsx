@@ -11,6 +11,10 @@ import BMICalculator from "./pages/calculators/BMICalculator";
 import ProteinCalculator from "./pages/calculators/ProteinCalculator";
 import ElectrolyteCalculator from "./pages/calculators/ElectrolyteCalculator";
 import ProfileQuiz from "./pages/ProfileQuiz";
+import GuidesHub from "./pages/GuidesHub";
+import GuidePage from "./pages/GuidePage";
+import ComparisonsHub from "./pages/ComparisonsHub";
+import ComparisonPage from "./pages/ComparisonPage";
 import Metodo from "./pages/Metodo";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
@@ -32,6 +36,10 @@ const App = () => (
           <Route path="/strumenti/proteine" element={<ProteinCalculator />} />
           <Route path="/strumenti/elettroliti" element={<ElectrolyteCalculator />} />
           <Route path="/quiz" element={<ProfileQuiz />} />
+          <Route path="/guide" element={<GuidesHub />} />
+          <Route path="/guide/:slug" element={<GuidePage />} />
+          <Route path="/confronti" element={<ComparisonsHub />} />
+          <Route path="/confronto/:slug" element={<ComparisonPage />} />
           <Route path="/metodo" element={<Metodo />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />

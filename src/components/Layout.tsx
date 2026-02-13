@@ -6,6 +6,8 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/strumenti", label: "Strumenti" },
   { to: "/quiz", label: "Quiz Profilo" },
+  { to: "/guide", label: "Guide" },
+  { to: "/confronti", label: "Confronti" },
   { to: "/metodo", label: "Il Metodo" },
 ];
 

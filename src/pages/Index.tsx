@@ -1,28 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Droplets, Flame, Scale, Zap, FlaskConical, ShieldCheck, BarChart3 } from "lucide-react";
+import { ArrowRight, Droplets, Flame, Scale, Zap, FlaskConical, ShieldCheck, BarChart3, BookOpen } from "lucide-react";
 import Layout from "@/components/Layout";
 import ToolCard from "@/components/ToolCard";
+import SEOHead from "@/components/SEOHead";
+import heroImage from "@/assets/hero-running.jpg";
 
 const tools = [
-  {
-    title: "Fabbisogno Idrico",
-    description: "Calcola quanta acqua bere prima, durante e dopo la corsa.",
-    icon: Droplets,
-    to: "/strumenti/idratazione",
-  },
-  {
-    title: "Calorie Bruciate",
-    description: "Stima le calorie consumate in base a distanza, peso e ritmo.",
-    icon: Flame,
-    to: "/strumenti/calorie",
-  },
-  {
-    title: "BMI Avanzato",
-    description: "Calcola il tuo indice di massa corporea con analisi dettagliata.",
-    icon: Scale,
-    to: "/strumenti/bmi",
-  },
+  { title: "Fabbisogno Idrico", description: "Calcola quanta acqua bere prima, durante e dopo la corsa.", icon: Droplets, to: "/strumenti/idratazione" },
+  { title: "Calorie Bruciate", description: "Stima le calorie consumate in base a distanza, peso e ritmo.", icon: Flame, to: "/strumenti/calorie" },
+  { title: "BMI Avanzato", description: "Calcola il tuo indice di massa corporea con analisi dettagliata.", icon: Scale, to: "/strumenti/bmi" },
 ];
 
 const trustItems = [
@@ -33,46 +20,50 @@ const trustItems = [
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5 },
-  }),
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }),
 };
 
 const Index = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Strumenti Gratuiti per Runner"
+        description="Calcolatori scientifici gratuiti per corsa, idratazione, nutrizione e recupero. Migliora le tue performance con dati reali."
+        path="/"
+      />
+
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-subtle">
-        <div className="container mx-auto px-4 py-16 sm:py-24">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Runner all'alba" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-foreground/60" />
+        </div>
+        <div className="relative container mx-auto px-4 py-20 sm:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm font-medium text-primary-foreground">
               <Zap className="h-3.5 w-3.5" /> Strumenti gratuiti per runner
             </div>
-            <h1 className="font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              Corri meglio con{" "}
-              <span className="text-gradient-primary">dati reali</span>
+            <h1 className="font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+              Corri meglio con dati reali
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-              Calcolatori scientifici per idratazione, nutrizione e recupero.
-              Tutto gratis, senza registrazione.
+            <p className="mt-4 text-lg text-primary-foreground/80 sm:text-xl">
+              Calcolatori scientifici per idratazione, nutrizione e recupero. Tutto gratis, senza registrazione.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
                 to="/strumenti"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Esplora gli Strumenti <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/quiz"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-card-foreground shadow-card transition-all hover:shadow-card-hover"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur transition-all hover:bg-primary-foreground/20"
               >
                 Quiz Profilo
               </Link>
@@ -84,34 +75,41 @@ const Index = () => {
       {/* Tools Preview */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-10 text-center">
-          <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
-            Strumenti in evidenza
-          </h2>
-          <p className="mt-2 text-muted-foreground">
-            Calcola, analizza e migliora le tue performance
-          </p>
+          <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Strumenti in evidenza</h2>
+          <p className="mt-2 text-muted-foreground">Calcola, analizza e migliora le tue performance</p>
         </div>
         <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool, i) => (
-            <motion.div
-              key={tool.to}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
+            <motion.div key={tool.to} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <ToolCard {...tool} />
             </motion.div>
           ))}
         </div>
         <div className="mt-8 text-center">
-          <Link
-            to="/strumenti"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
-          >
+          <Link to="/strumenti" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
             Vedi tutti gli strumenti <ArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+      </section>
+
+      {/* Guides CTA */}
+      <section className="border-t border-border bg-card">
+        <div className="container mx-auto px-4 py-12">
+          <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <h2 className="font-display text-2xl font-bold text-foreground">Guide per Runner</h2>
+            <p className="mt-2 mb-5 text-muted-foreground">
+              Approfondimenti pratici su scarpe, integratori e recupero muscolare.
+            </p>
+            <Link
+              to="/guide"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-hero px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Leggi le Guide <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -120,15 +118,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-12">
           <div className="mx-auto grid max-w-3xl gap-8 sm:grid-cols-3">
             {trustItems.map((item, i) => (
-              <motion.div
-                key={i}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="flex flex-col items-center text-center"
-              >
+              <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex flex-col items-center text-center">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
