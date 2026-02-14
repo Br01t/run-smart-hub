@@ -2,8 +2,10 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
 import comparisonsData from "@/data/comparisons.json";
+import productsData from "@/data/products.json";
 
 interface Comparison {
   sport: string;
@@ -37,9 +39,41 @@ const ComparisonPage = () => {
   const title = `Migliori ${comparison.categoria} per ${comparison.sport} – ${comparison.obiettivo}`;
   const description = comparison.intro.slice(0, 155);
 
+  const matchedProducts = (productsData as { id: string; nome: string; descrizione: string; prezzoRange: string; linkAffiliato: string; immagine: string; tag: string[] }[])
+    .filter((p) => p.tag.some((t) => comparison.tags.includes(t)));
+
+  const faqJsonLd = comparison.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: comparison.faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  } : null;
+
+  const productJsonLd = matchedProducts.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: title,
+    itemListElement: matchedProducts.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Product",
+        name: p.nome,
+        description: p.descrizione,
+        image: p.immagine,
+        url: p.linkAffiliato,
+      },
+    })),
+  } : null;
+
   return (
     <Layout>
       <SEOHead title={title} description={description} path={`/confronto/${slug}`} />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
+      {productJsonLd && <JsonLd data={productJsonLd} />}
       <div className="container mx-auto max-w-3xl px-4 py-8">
         <Link to="/confronti" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> Tutti i confronti
