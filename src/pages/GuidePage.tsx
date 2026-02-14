@@ -2,7 +2,9 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
+import productsData from "@/data/products.json";
 
 interface GuideContent {
   title: string;
@@ -101,6 +103,29 @@ const GuidePage = () => {
   return (
     <Layout>
       <SEOHead title={guide.title} description={guide.description} path={`/guide/${slug}`} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: guide.title,
+        description: guide.description,
+        publisher: { "@type": "Organization", name: "RunLab" },
+      }} />
+      {(() => {
+        const guideProducts = (productsData as { id: string; nome: string; descrizione: string; linkAffiliato: string; immagine: string; tag: string[] }[])
+          .filter((p) => p.tag.some((t) => guide.tags.includes(t)));
+        return guideProducts.length > 0 ? (
+          <JsonLd data={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: `Prodotti correlati – ${guide.title}`,
+            itemListElement: guideProducts.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              item: { "@type": "Product", name: p.nome, description: p.descrizione, image: p.immagine, url: p.linkAffiliato },
+            })),
+          }} />
+        ) : null;
+      })()}
       <article className="container mx-auto max-w-3xl px-4 py-8">
         <Link to="/guide" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> Tutte le guide
