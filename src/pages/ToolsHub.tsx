@@ -5,51 +5,51 @@ import { Droplets, Flame, Scale, Dumbbell, Zap } from "lucide-react";
 
 const allTools = [
   {
-    title: "Fabbisogno Idrico",
-    description: "Calcola quanta acqua bere prima, durante e dopo la corsa in base a durata, peso e temperatura.",
+    title: "Hydration Needs",
+    description: "Calculate how much water to drink before, during and after your run based on duration, weight and temperature.",
     icon: Droplets,
-    to: "/strumenti/idratazione",
+    to: "/tools/hydration",
   },
   {
-    title: "Calorie Bruciate",
-    description: "Stima le calorie consumate durante la corsa in base a distanza, peso e velocità media.",
+    title: "Calories Burned",
+    description: "Estimate calories burned during your run based on distance, weight and average pace.",
     icon: Flame,
-    to: "/strumenti/calorie",
+    to: "/tools/calories",
   },
   {
-    title: "BMI Avanzato",
-    description: "Calcola il tuo indice di massa corporea con classificazione dettagliata e consigli.",
+    title: "Advanced BMI",
+    description: "Calculate your body mass index with detailed classification and recommendations.",
     icon: Scale,
-    to: "/strumenti/bmi",
+    to: "/tools/bmi",
   },
   {
-    title: "Fabbisogno Proteico",
-    description: "Scopri quante proteine assumere al giorno in base al tuo livello di attività e obiettivi.",
+    title: "Protein Needs",
+    description: "Find out how much protein to consume daily based on your activity level and goals.",
     icon: Dumbbell,
-    to: "/strumenti/proteine",
+    to: "/tools/protein",
   },
   {
-    title: "Fabbisogno Elettroliti",
-    description: "Calcola la quantità di elettroliti da reintegrare in base alla sudorazione e durata.",
+    title: "Electrolyte Needs",
+    description: "Calculate the amount of electrolytes to replenish based on sweat rate and duration.",
     icon: Zap,
-    to: "/strumenti/elettroliti",
+    to: "/tools/electrolytes",
   },
 ];
 
 const ToolsHub = () => {
   return (
     <Layout>
-      <SEOHead title="Calcolatori per Runner" description="Calcolatori gratuiti per idratazione, calorie, BMI, proteine ed elettroliti. Strumenti scientifici per migliorare le tue performance." path="/strumenti" />
-      <div className="container mx-auto px-4 py-12">
-        <div className="mb-10">
-          <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
-            Tutti gli Strumenti
+      <SEOHead title="Calculators for Runners" description="Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance." path="/tools" />
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <div className="mb-8 sm:mb-10">
+          <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+            All Tools
           </h1>
-          <p className="mt-2 text-lg text-muted-foreground">
-            Calcolatori gratuiti basati su dati scientifici per migliorare le tue performance.
+          <p className="mt-2 text-base text-muted-foreground sm:text-lg">
+            Free calculators backed by scientific data to improve your performance.
           </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {allTools.map((tool) => (
             <ToolCard key={tool.to} {...tool} />
           ))}

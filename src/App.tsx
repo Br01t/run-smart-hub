@@ -29,18 +29,18 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/strumenti" element={<ToolsHub />} />
-          <Route path="/strumenti/idratazione" element={<HydrationCalculator />} />
-          <Route path="/strumenti/calorie" element={<CaloriesCalculator />} />
-          <Route path="/strumenti/bmi" element={<BMICalculator />} />
-          <Route path="/strumenti/proteine" element={<ProteinCalculator />} />
-          <Route path="/strumenti/elettroliti" element={<ElectrolyteCalculator />} />
+          <Route path="/tools" element={<ToolsHub />} />
+          <Route path="/tools/hydration" element={<HydrationCalculator />} />
+          <Route path="/tools/calories" element={<CaloriesCalculator />} />
+          <Route path="/tools/bmi" element={<BMICalculator />} />
+          <Route path="/tools/protein" element={<ProteinCalculator />} />
+          <Route path="/tools/electrolytes" element={<ElectrolyteCalculator />} />
           <Route path="/quiz" element={<ProfileQuiz />} />
-          <Route path="/guide" element={<GuidesHub />} />
-          <Route path="/guide/:slug" element={<GuidePage />} />
-          <Route path="/confronti" element={<ComparisonsHub />} />
-          <Route path="/confronto/:slug" element={<ComparisonPage />} />
-          <Route path="/metodo" element={<Metodo />} />
+          <Route path="/guides" element={<GuidesHub />} />
+          <Route path="/guides/:slug" element={<GuidePage />} />
+          <Route path="/comparisons" element={<ComparisonsHub />} />
+          <Route path="/comparison/:slug" element={<ComparisonPage />} />
+          <Route path="/method" element={<Metodo />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

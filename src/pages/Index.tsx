@@ -7,15 +7,15 @@ import SEOHead from "@/components/SEOHead";
 import heroImage from "@/assets/hero-running.jpg";
 
 const tools = [
-  { title: "Fabbisogno Idrico", description: "Calcola quanta acqua bere prima, durante e dopo la corsa.", icon: Droplets, to: "/strumenti/idratazione" },
-  { title: "Calorie Bruciate", description: "Stima le calorie consumate in base a distanza, peso e ritmo.", icon: Flame, to: "/strumenti/calorie" },
-  { title: "BMI Avanzato", description: "Calcola il tuo indice di massa corporea con analisi dettagliata.", icon: Scale, to: "/strumenti/bmi" },
+  { title: "Hydration Needs", description: "Calculate how much water to drink before, during and after your run.", icon: Droplets, to: "/tools/hydration" },
+  { title: "Calories Burned", description: "Estimate calories burned based on distance, weight and pace.", icon: Flame, to: "/tools/calories" },
+  { title: "Advanced BMI", description: "Calculate your body mass index with detailed analysis.", icon: Scale, to: "/tools/bmi" },
 ];
 
 const trustItems = [
-  { icon: FlaskConical, text: "Formule basate su studi scientifici" },
-  { icon: ShieldCheck, text: "Nessuna sponsorizzazione diretta" },
-  { icon: BarChart3, text: "Risultati personalizzati e gratuiti" },
+  { icon: FlaskConical, text: "Formulas based on scientific research" },
+  { icon: ShieldCheck, text: "No direct sponsorships" },
+  { icon: BarChart3, text: "Personalized & free results" },
 ];
 
 const fadeUp = {
@@ -27,18 +27,18 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Strumenti Gratuiti per Runner"
-        description="Calcolatori scientifici gratuiti per corsa, idratazione, nutrizione e recupero. Migliora le tue performance con dati reali."
+        title="Free Tools for Runners"
+        description="Free science-based calculators for running, hydration, nutrition and recovery. Improve your performance with real data."
         path="/"
       />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Runner all'alba" className="h-full w-full object-cover" />
+          <img src={heroImage} alt="Runner at sunrise" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-foreground/60" />
         </div>
-        <div className="relative container mx-auto px-4 py-20 sm:py-32">
+        <div className="relative container mx-auto px-4 py-16 sm:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,26 +46,26 @@ const Index = () => {
             className="mx-auto max-w-2xl text-center"
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm font-medium text-primary-foreground">
-              <Zap className="h-3.5 w-3.5" /> Strumenti gratuiti per runner
+              <Zap className="h-3.5 w-3.5" /> Free tools for runners
             </div>
-            <h1 className="font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-              Corri meglio con dati reali
+            <h1 className="font-display text-3xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+              Run better with real data
             </h1>
-            <p className="mt-4 text-lg text-primary-foreground/80 sm:text-xl">
-              Calcolatori scientifici per idratazione, nutrizione e recupero. Tutto gratis, senza registrazione.
+            <p className="mt-4 text-base text-primary-foreground/80 sm:text-xl">
+              Science-based calculators for hydration, nutrition and recovery. All free, no sign-up required.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
-                to="/strumenti"
+                to="/tools"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
-                Esplora gli Strumenti <ArrowRight className="h-4 w-4" />
+                Explore Tools <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/quiz"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur transition-all hover:bg-primary-foreground/20"
               >
-                Quiz Profilo
+                Profile Quiz
               </Link>
             </div>
           </motion.div>
@@ -73,12 +73,12 @@ const Index = () => {
       </section>
 
       {/* Tools Preview */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="mb-10 text-center">
-          <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Strumenti in evidenza</h2>
-          <p className="mt-2 text-muted-foreground">Calcola, analizza e migliora le tue performance</p>
+      <section className="container mx-auto px-4 py-12 sm:py-16">
+        <div className="mb-8 text-center sm:mb-10">
+          <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Featured Tools</h2>
+          <p className="mt-2 text-muted-foreground">Calculate, analyze and improve your performance</p>
         </div>
-        <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool, i) => (
             <motion.div key={tool.to} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <ToolCard {...tool} />
@@ -86,28 +86,28 @@ const Index = () => {
           ))}
         </div>
         <div className="mt-8 text-center">
-          <Link to="/strumenti" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
-            Vedi tutti gli strumenti <ArrowRight className="h-4 w-4" />
+          <Link to="/tools" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
+            View all tools <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
 
       {/* Guides CTA */}
       <section className="border-t border-border bg-card">
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-10 sm:py-12">
           <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
               <BookOpen className="h-5 w-5 text-primary" />
             </div>
-            <h2 className="font-display text-2xl font-bold text-foreground">Guide per Runner</h2>
+            <h2 className="font-display text-2xl font-bold text-foreground">Runner's Guides</h2>
             <p className="mt-2 mb-5 text-muted-foreground">
-              Approfondimenti pratici su scarpe, integratori e recupero muscolare.
+              Practical guides on shoes, supplements and muscle recovery.
             </p>
             <Link
-              to="/guide"
+              to="/guides"
               className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-hero px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              Leggi le Guide <ArrowRight className="h-4 w-4" />
+              Read the Guides <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -115,8 +115,8 @@ const Index = () => {
 
       {/* Trust */}
       <section className="border-t border-border bg-secondary/30">
-        <div className="container mx-auto px-4 py-12">
-          <div className="mx-auto grid max-w-3xl gap-8 sm:grid-cols-3">
+        <div className="container mx-auto px-4 py-10 sm:py-12">
+          <div className="mx-auto grid max-w-3xl gap-6 sm:gap-8 sm:grid-cols-3">
             {trustItems.map((item, i) => (
               <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex flex-col items-center text-center">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
