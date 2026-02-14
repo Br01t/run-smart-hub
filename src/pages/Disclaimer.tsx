@@ -1,28 +1,28 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 
 const Disclaimer = () => {
   return (
     <Layout>
-      <div className="container mx-auto max-w-3xl px-4 py-12">
-        <h1 className="mb-4 font-display text-3xl font-bold text-foreground">Disclaimer</h1>
-        <div className="space-y-4 text-muted-foreground">
+      <SEOHead title="Disclaimer" description="Important information about RunLab's tools, data and affiliate links." path="/disclaimer" />
+      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
+        <h1 className="mb-4 font-display text-2xl font-bold text-foreground sm:text-3xl">Disclaimer</h1>
+        <div className="space-y-4 text-sm text-muted-foreground sm:text-base">
           <p>
-            Le informazioni fornite da RunLab hanno scopo puramente informativo e non sostituiscono
-            il parere di un medico, nutrizionista o professionista sanitario qualificato.
+            The information provided by RunLab is for informational purposes only and does not replace
+            the advice of a doctor, nutritionist or qualified health professional.
           </p>
           <p>
-            I calcolatori utilizzano formule scientifiche generali che forniscono stime indicative.
-            I risultati possono variare in base a fattori individuali non considerati dagli strumenti.
+            The calculators use general scientific formulas that provide indicative estimates.
+            Results may vary based on individual factors not considered by the tools.
           </p>
           <p>
-            I link presenti nel sito possono essere link affiliati. Ciò significa che RunLab potrebbe
-            ricevere una commissione in caso di acquisto tramite tali link, senza alcun costo aggiuntivo
-            per l'utente.
+            Links on this site may be affiliate links. This means RunLab may receive a commission
+            if you make a purchase through these links, at no additional cost to you.
           </p>
           <p>
-            RunLab non è responsabile per eventuali decisioni prese sulla base delle informazioni
-            fornite dagli strumenti del sito. Si consiglia sempre di consultare un professionista
-            prima di modificare la propria alimentazione o programma di allenamento.
+            RunLab is not responsible for any decisions made based on the information provided
+            by the site's tools. Always consult a professional before changing your diet or training program.
           </p>
         </div>
       </div>

@@ -13,81 +13,62 @@ const ProteinCalculator = () => {
   const calculate = () => {
     const w = parseFloat(weight);
     if (isNaN(w) || w <= 0) return;
-
     const factors: Record<string, Record<string, [number, number]>> = {
       sedentary: { lose: [1.2, 1.6], maintain: [0.8, 1.0], gain: [1.2, 1.4] },
       moderate: { lose: [1.4, 1.8], maintain: [1.2, 1.4], gain: [1.6, 2.0] },
       intense: { lose: [1.6, 2.2], maintain: [1.4, 1.8], gain: [1.8, 2.4] },
     };
-
     const [minF, maxF] = factors[activity][goal];
     setResult({ min: Math.round(w * minF), max: Math.round(w * maxF) });
   };
 
   return (
     <Layout>
-      <CalculatorShell
-        title="Calcolatore Fabbisogno Proteico"
-        description="Scopri quante proteine assumere al giorno in base ai tuoi obiettivi."
-        icon={Dumbbell}
-      >
-        <div className="rounded-xl border border-border bg-card p-6 shadow-card">
-          <div className="grid gap-5 sm:grid-cols-3">
+      <CalculatorShell title="Protein Needs Calculator" description="Find out how much protein to consume daily based on your goals." icon={Dumbbell}>
+        <div className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-6">
+          <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Peso (kg)</label>
-              <input
-                type="number"
-                value={weight}
-                onChange={(e) => setWeight(e.target.value)}
-                placeholder="70"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              />
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Weight (kg)</label>
+              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
+                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Livello attività</label>
-              <select
-                value={activity}
-                onChange={(e) => setActivity(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              >
-                <option value="sedentary">Sedentario</option>
-                <option value="moderate">Attivo (3-5x/sett)</option>
-                <option value="intense">Molto attivo (6-7x/sett)</option>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Activity Level</label>
+              <select value={activity} onChange={(e) => setActivity(e.target.value)}
+                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                <option value="sedentary">Sedentary</option>
+                <option value="moderate">Active (3-5x/week)</option>
+                <option value="intense">Very active (6-7x/week)</option>
               </select>
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Obiettivo</label>
-              <select
-                value={goal}
-                onChange={(e) => setGoal(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              >
-                <option value="lose">Perdere peso</option>
-                <option value="maintain">Mantenere</option>
-                <option value="gain">Aumentare massa</option>
+              <label className="mb-1.5 block text-sm font-medium text-foreground">Goal</label>
+              <select value={goal} onChange={(e) => setGoal(e.target.value)}
+                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                <option value="lose">Lose weight</option>
+                <option value="maintain">Maintain</option>
+                <option value="gain">Build muscle</option>
               </select>
             </div>
           </div>
-          <button
-            onClick={calculate}
-            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto"
-          >
-            Calcola
+          <button onClick={calculate}
+            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto">
+            Calculate
           </button>
         </div>
 
         {result && (
-          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-6">
-            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">I tuoi risultati</h3>
-            <div className="flex flex-col items-center gap-2 rounded-lg bg-card p-6 shadow-card">
-              <p className="text-xs font-medium uppercase text-muted-foreground">Fabbisogno giornaliero</p>
-              <p className="font-display text-4xl font-bold text-primary">
+          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-6">
+            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">Your Results</h3>
+            <div className="flex flex-col items-center gap-2 rounded-lg bg-card p-4 shadow-card sm:p-6">
+              <p className="text-xs font-medium uppercase text-muted-foreground">Daily Intake</p>
+              <p className="font-display text-3xl font-bold text-primary sm:text-4xl">
                 {result.min}–{result.max} g
               </p>
-              <p className="text-sm text-muted-foreground">di proteine al giorno</p>
+              <p className="text-sm text-muted-foreground">of protein per day</p>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              Range basato su linee guida ISSN per atleti e persone attive. Valori indicativi, consulta un nutrizionista per un piano personalizzato.
+              Range based on ISSN guidelines for athletes and active individuals. Consult a nutritionist for a personalized plan.
             </p>
           </div>
         )}

@@ -19,7 +19,6 @@ interface Comparison {
 const ComparisonPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
-  // Parse slug: "integratori-per-corsa-performance"
   const comparison = (comparisonsData as Comparison[]).find((c) => {
     const expectedSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
     return expectedSlug === slug;
@@ -29,14 +28,14 @@ const ComparisonPage = () => {
     return (
       <Layout>
         <div className="container mx-auto px-4 py-12 text-center">
-          <h1 className="font-display text-2xl font-bold text-foreground">Confronto non trovato</h1>
-          <Link to="/confronti" className="mt-4 inline-block text-sm text-primary hover:underline">Vedi tutti i confronti</Link>
+          <h1 className="font-display text-2xl font-bold text-foreground">Comparison not found</h1>
+          <Link to="/comparisons" className="mt-4 inline-block text-sm text-primary hover:underline">View all comparisons</Link>
         </div>
       </Layout>
     );
   }
 
-  const title = `Migliori ${comparison.categoria} per ${comparison.sport} – ${comparison.obiettivo}`;
+  const title = `Best ${comparison.categoria} for ${comparison.sport} – ${comparison.obiettivo}`;
   const description = comparison.intro.slice(0, 155);
 
   const matchedProducts = (productsData as { id: string; nome: string; descrizione: string; prezzoRange: string; linkAffiliato: string; immagine: string; tag: string[] }[])
@@ -71,31 +70,30 @@ const ComparisonPage = () => {
 
   return (
     <Layout>
-      <SEOHead title={title} description={description} path={`/confronto/${slug}`} />
+      <SEOHead title={title} description={description} path={`/comparison/${slug}`} />
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
-      <div className="container mx-auto max-w-3xl px-4 py-8">
-        <Link to="/confronti" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" /> Tutti i confronti
+      <div className="container mx-auto max-w-3xl px-4 py-6 sm:py-8">
+        <Link to="/comparisons" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
+          <ArrowLeft className="h-4 w-4" /> All comparisons
         </Link>
 
-        <h1 className="mb-3 font-display text-2xl font-bold text-foreground capitalize sm:text-3xl">
+        <h1 className="mb-3 font-display text-xl font-bold text-foreground capitalize sm:text-2xl lg:text-3xl">
           {title}
         </h1>
-        <p className="mb-8 text-muted-foreground leading-relaxed">{comparison.intro}</p>
+        <p className="mb-6 text-sm text-muted-foreground leading-relaxed sm:mb-8 sm:text-base">{comparison.intro}</p>
 
-        <RecommendedProducts tags={comparison.tags} title={`${comparison.categoria} consigliati`} maxProducts={4} />
+        <RecommendedProducts tags={comparison.tags} title={`Recommended ${comparison.categoria}`} maxProducts={4} />
 
-        {/* FAQ */}
         {comparison.faq.length > 0 && (
-          <div className="mt-10">
-            <h2 className="mb-5 flex items-center gap-2 font-display text-xl font-semibold text-foreground">
-              <HelpCircle className="h-5 w-5 text-primary" /> Domande Frequenti
+          <div className="mt-8 sm:mt-10">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:mb-5 sm:text-xl">
+              <HelpCircle className="h-5 w-5 text-primary" /> Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {comparison.faq.map((item, i) => (
-                <div key={i} className="rounded-xl border border-border bg-card p-5 shadow-card">
-                  <h3 className="mb-2 font-display text-base font-semibold text-card-foreground">{item.q}</h3>
+                <div key={i} className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-5">
+                  <h3 className="mb-1.5 font-display text-sm font-semibold text-card-foreground sm:mb-2 sm:text-base">{item.q}</h3>
                   <p className="text-sm text-muted-foreground">{item.a}</p>
                 </div>
               ))}
