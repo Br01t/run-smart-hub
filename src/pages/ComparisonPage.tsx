@@ -1,11 +1,12 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, HelpCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, HelpCircle, Wrench, BookOpen } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
 import comparisonsData from "@/data/comparisons.json";
 import productsData from "@/data/products.json";
+import hubsData from "@/data/hubs.json";
 
 interface Comparison {
   sport: string;
@@ -15,6 +16,44 @@ interface Comparison {
   tags: string[];
   faq: { q: string; a: string }[];
 }
+
+const toolSuggestions: Record<string, { to: string; label: string }[]> = {
+  performance: [
+    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/electrolytes", label: "Electrolyte Calculator" },
+  ],
+  recupero: [
+    { to: "/tools/protein", label: "Protein Calculator" },
+    { to: "/tools/hydration", label: "Hydration Calculator" },
+  ],
+  idratazione: [
+    { to: "/tools/hydration", label: "Hydration Calculator" },
+    { to: "/tools/electrolytes", label: "Electrolyte Calculator" },
+  ],
+  dimagrimento: [
+    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/bmi", label: "BMI Calculator" },
+  ],
+  "prevenzione-infortuni": [
+    { to: "/tools/bmi", label: "BMI Calculator" },
+    { to: "/tools/protein", label: "Protein Calculator" },
+  ],
+};
+
+const guideSuggestions: Record<string, { slug: string; label: string }[]> = {
+  integratori: [
+    { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
+  ],
+  scarpe: [
+    { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
+  ],
+  recupero: [
+    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
+  ],
+  accessori: [
+    { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
+  ],
+};
 
 const ComparisonPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -41,6 +80,21 @@ const ComparisonPage = () => {
   const matchedProducts = (productsData as { id: string; nome: string; descrizione: string; prezzoRange: string; linkAffiliato: string; immagine: string; tag: string[] }[])
     .filter((p) => p.tag.some((t) => comparison.tags.includes(t)));
 
+  const relatedTools = toolSuggestions[comparison.obiettivo] || [
+    { to: "/tools/calories", label: "Calories Calculator" },
+  ];
+  const relatedGuides = guideSuggestions[comparison.categoria] || [];
+
+  // Find related hub
+  const relatedHub = (hubsData as { category: string; sport: string }[]).find(
+    (h) => h.category === comparison.categoria || h.sport === comparison.sport
+  );
+
+  // Other comparisons (excluding current)
+  const otherComparisons = (comparisonsData as Comparison[])
+    .filter((c) => c !== comparison && (c.categoria === comparison.categoria || c.sport === comparison.sport))
+    .slice(0, 3);
+
   const faqJsonLd = comparison.faq.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -58,13 +112,7 @@ const ComparisonPage = () => {
     itemListElement: matchedProducts.map((p, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      item: {
-        "@type": "Product",
-        name: p.nome,
-        description: p.descrizione,
-        image: p.immagine,
-        url: p.linkAffiliato,
-      },
+      item: { "@type": "Product", name: p.nome, description: p.descrizione, image: p.immagine, url: p.linkAffiliato },
     })),
   } : null;
 
@@ -73,18 +121,30 @@ const ComparisonPage = () => {
       <SEOHead title={title} description={description} path={`/comparison/${slug}`} />
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
+
       <div className="container mx-auto max-w-3xl px-4 py-6 sm:py-8">
         <Link to="/comparisons" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
           <ArrowLeft className="h-4 w-4" /> All comparisons
         </Link>
 
-        <h1 className="mb-3 font-display text-xl font-bold text-foreground capitalize sm:text-2xl lg:text-3xl">
-          {title}
-        </h1>
+        <h1 className="mb-3 font-display text-xl font-bold text-foreground capitalize sm:text-2xl lg:text-3xl">{title}</h1>
         <p className="mb-6 text-sm text-muted-foreground leading-relaxed sm:mb-8 sm:text-base">{comparison.intro}</p>
+
+        {/* Hub breadcrumb */}
+        {relatedHub && (
+          <div className="mb-6 rounded-lg border border-border bg-secondary/50 px-4 py-3">
+            <p className="text-xs text-muted-foreground">
+              Part of{" "}
+              <Link to={`/hub/${relatedHub.category}/${relatedHub.sport}`} className="font-medium text-primary hover:underline">
+                {relatedHub.category} for {relatedHub.sport} hub
+              </Link>
+            </p>
+          </div>
+        )}
 
         <RecommendedProducts tags={comparison.tags} title={`Recommended ${comparison.categoria}`} maxProducts={4} />
 
+        {/* FAQ */}
         {comparison.faq.length > 0 && (
           <div className="mt-8 sm:mt-10">
             <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:mb-5 sm:text-xl">
@@ -99,6 +159,76 @@ const ComparisonPage = () => {
               ))}
             </div>
           </div>
+        )}
+
+        {/* Related Tools */}
+        {relatedTools.length > 0 && (
+          <section className="mt-8 sm:mt-10">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+              <Wrench className="h-5 w-5 text-primary" /> Related Tools
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {relatedTools.map((tool) => (
+                <Link
+                  key={tool.to}
+                  to={tool.to}
+                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
+                >
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                    <Wrench className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-card-foreground">{tool.label}</span>
+                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related Guides */}
+        {relatedGuides.length > 0 && (
+          <section className="mt-8 sm:mt-10">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+              <BookOpen className="h-5 w-5 text-primary" /> Read More
+            </h2>
+            <div className="grid gap-3">
+              {relatedGuides.map((g) => (
+                <Link
+                  key={g.slug}
+                  to={`/guides/${g.slug}`}
+                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
+                >
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                    <BookOpen className="h-4 w-4 text-accent" />
+                  </div>
+                  <span className="text-sm font-medium text-card-foreground">{g.label}</span>
+                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Other Comparisons */}
+        {otherComparisons.length > 0 && (
+          <section className="mt-8 sm:mt-10">
+            <h2 className="mb-4 font-display text-lg font-semibold text-foreground sm:text-xl">More Comparisons</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {otherComparisons.map((c) => {
+                const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+                return (
+                  <Link
+                    key={cSlug}
+                    to={`/comparison/${cSlug}`}
+                    className="group rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
+                  >
+                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{c.categoria} for {c.sport}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{c.obiettivo}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
         )}
       </div>
     </Layout>

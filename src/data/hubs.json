@@ -1,0 +1,68 @@
+[
+  {
+    "category": "supplements",
+    "sport": "marathon",
+    "title": "Best Supplements for Marathon Runners",
+    "description": "Discover the top supplements to fuel your marathon training and racing. From energy gels to recovery aids, science-backed recommendations.",
+    "intro": "Marathon running demands peak nutrition. Whether you're preparing for your first 42K or chasing a PR, the right supplements can make a significant difference in performance and recovery. Here's our curated selection based on scientific evidence.",
+    "relatedTools": ["/tools/calories", "/tools/electrolytes", "/tools/protein"],
+    "relatedGuides": ["supplements-for-runners", "muscle-recovery"],
+    "tags": ["energia", "carboidrati", "integratori", "magnesio", "proteine", "elettroliti"],
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero", "integratori-per-corsa-dimagrimento"]
+  },
+  {
+    "category": "supplements",
+    "sport": "trail-running",
+    "title": "Best Supplements for Trail Running",
+    "description": "Trail running demands specific nutrition strategies. Find the best supplements for endurance, altitude and recovery on the trails.",
+    "intro": "Trail running pushes your body to its limits with elevation changes, technical terrain and extended effort. Electrolyte balance, sustained energy and rapid recovery are even more critical than road running. Here are the supplements that make a real difference.",
+    "relatedTools": ["/tools/electrolytes", "/tools/hydration", "/tools/calories"],
+    "relatedGuides": ["supplements-for-runners", "muscle-recovery"],
+    "tags": ["elettroliti", "energia", "carboidrati", "integratori", "magnesio"],
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+  },
+  {
+    "category": "shoes",
+    "sport": "trail-running",
+    "title": "Best Trail Running Shoes",
+    "description": "Compare the best trail running shoes for grip, protection and comfort on technical terrain.",
+    "intro": "The right trail shoes can be the difference between a great run and a twisted ankle. Trail shoes need aggressive outsoles for grip, rock plates for protection and durable uppers for brush and debris. Here's what to look for and our top picks.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-trail-performance"]
+  },
+  {
+    "category": "shoes",
+    "sport": "marathon",
+    "title": "Best Marathon Running Shoes",
+    "description": "Find the perfect marathon racing and training shoes. Carbon-plated racers and high-cushion trainers compared.",
+    "intro": "Marathon shoes have evolved dramatically with carbon plates and super-foams. Whether you need a race-day shoe or a high-mileage trainer, choosing the right pair is crucial for performance and injury prevention.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-trail-performance"]
+  },
+  {
+    "category": "hydration",
+    "sport": "marathon",
+    "title": "Best Hydration Gear for Marathon",
+    "description": "Bottles, belts and electrolyte solutions for marathon hydration. Stay fueled across 42K.",
+    "intro": "Proper hydration during a marathon is critical for performance and safety. Dehydration of just 2% body weight can significantly impair performance. Here's the best gear and products to keep you hydrated.",
+    "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
+    "relatedGuides": ["supplements-for-runners"],
+    "tags": ["idratazione", "elettroliti", "accessori"],
+    "comparisonSlugs": ["accessori-per-corsa-idratazione"]
+  },
+  {
+    "category": "recovery",
+    "sport": "marathon",
+    "title": "Best Recovery Tools for Marathon Runners",
+    "description": "Foam rollers, massage guns and supplements for faster marathon recovery.",
+    "intro": "Recovery after a marathon is just as important as the training itself. The right tools and supplements can reduce DOMS, prevent injury and get you back to training faster.",
+    "relatedTools": ["/tools/protein", "/tools/calories"],
+    "relatedGuides": ["muscle-recovery"],
+    "tags": ["recupero", "massaggio", "muscoli", "proteine", "magnesio"],
+    "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-corsa-recupero"]
+  }
+]
