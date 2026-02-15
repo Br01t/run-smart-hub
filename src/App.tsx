@@ -15,6 +15,8 @@ import GuidesHub from "./pages/GuidesHub";
 import GuidePage from "./pages/GuidePage";
 import ComparisonsHub from "./pages/ComparisonsHub";
 import ComparisonPage from "./pages/ComparisonPage";
+import HubsIndex from "./pages/HubsIndex";
+import HubPage from "./pages/HubPage";
 import Metodo from "./pages/Metodo";
 import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/guides/:slug" element={<GuidePage />} />
           <Route path="/comparisons" element={<ComparisonsHub />} />
           <Route path="/comparison/:slug" element={<ComparisonPage />} />
+          <Route path="/hub" element={<HubsIndex />} />
+          <Route path="/hub/:category/:sport" element={<HubPage />} />
           <Route path="/method" element={<Metodo />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
