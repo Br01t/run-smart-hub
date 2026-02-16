@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import guidesHeroImg from "@/assets/guides-hero.jpg";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const guides = [
   {
@@ -102,8 +103,13 @@ const GuidesHub = () => {
           ))}
         </div>
 
+        {/* ZoneRun banner */}
+        <div className="mt-8">
+          <ZoneRunBanner variant="inline" />
+        </div>
+
         {/* Cross-link to comparisons */}
-        <div className="mt-8 flex items-center gap-4 rounded-2xl border border-border bg-secondary/50 p-5 sm:p-6">
+        <div className="mt-6 flex items-center gap-4 rounded-2xl border border-border bg-secondary/50 p-5 sm:p-6">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
             <BookOpen className="h-6 w-6 text-primary" />
           </div>

@@ -9,6 +9,7 @@ import SEOHead from "@/components/SEOHead";
 import heroImage from "@/assets/hero-running.jpg";
 import guidesHero from "@/assets/guides-hero.jpg";
 import hubShoes from "@/assets/hub-shoes.jpg";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -248,6 +249,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ── ZONERUN BANNER ── */}
+      <ZoneRunBanner variant="fullwidth" />
 
       {/* ── FINAL CTA ── */}
       <section className="bg-gradient-hero">
