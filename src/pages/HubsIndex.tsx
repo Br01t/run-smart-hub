@@ -9,6 +9,7 @@ import hubSupplementsImg from "@/assets/hub-supplements.jpg";
 import hubShoesImg from "@/assets/hub-shoes.jpg";
 import hubHydrationImg from "@/assets/hub-hydration.jpg";
 import hubRecoveryImg from "@/assets/hub-recovery.jpg";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 interface Hub {
   category: string;
@@ -108,6 +109,11 @@ const HubsIndex = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* ZoneRun */}
+        <div className="mt-8">
+          <ZoneRunBanner variant="inline" />
         </div>
       </section>
     </Layout>

@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 interface CalculatorShellProps {
   title: string;
@@ -32,6 +33,10 @@ const CalculatorShell = ({ title, description, icon: Icon, children }: Calculato
       </div>
 
       {children}
+
+      <div className="mt-8">
+        <ZoneRunBanner variant="compact" />
+      </div>
     </div>
   );
 };

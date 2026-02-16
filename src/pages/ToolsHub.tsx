@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Droplets, Flame, Scale, Dumbbell, Zap, Footprints, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import toolsHeroImg from "@/assets/tools-hero.jpg";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const allTools = [
   {
@@ -90,8 +91,13 @@ const ToolsHub = () => {
           ))}
         </div>
 
+        {/* ZoneRun */}
+        <div className="mt-8">
+          <ZoneRunBanner variant="inline" />
+        </div>
+
         {/* Bottom CTA */}
-        <div className="mt-10 rounded-2xl bg-gradient-hero p-6 text-center sm:p-8">
+        <div className="mt-8 rounded-2xl bg-gradient-hero p-6 text-center sm:p-8">
           <h2 className="font-display text-xl font-bold text-primary-foreground sm:text-2xl">Not sure where to start?</h2>
           <p className="mt-2 text-sm text-primary-foreground/80 sm:text-base">Take our quiz to get personalized tool recommendations.</p>
           <Link
