@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import ToolCard from "@/components/ToolCard";
 import SEOHead from "@/components/SEOHead";
-import { Droplets, Flame, Scale, Dumbbell, Zap, ArrowRight } from "lucide-react";
+import { Droplets, Flame, Scale, Dumbbell, Zap, Footprints, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import toolsHeroImg from "@/assets/tools-hero.jpg";
 
@@ -41,6 +41,13 @@ const allTools = [
     icon: Zap,
     to: "/tools/electrolytes",
     accent: "bg-gradient-to-r from-amber-400 to-orange-500",
+  },
+  {
+    title: "Best Shoes Finder",
+    description: "Answer 5 questions and get personalized running shoe recommendations for your terrain and goals.",
+    icon: Footprints,
+    to: "/tools/shoes",
+    accent: "bg-gradient-to-r from-emerald-500 to-teal-600",
   },
 ];
 

@@ -10,6 +10,7 @@ import CaloriesCalculator from "./pages/calculators/CaloriesCalculator";
 import BMICalculator from "./pages/calculators/BMICalculator";
 import ProteinCalculator from "./pages/calculators/ProteinCalculator";
 import ElectrolyteCalculator from "./pages/calculators/ElectrolyteCalculator";
+import ShoeFinder from "./pages/calculators/ShoeFinder";
 import ProfileQuiz from "./pages/ProfileQuiz";
 import GuidesHub from "./pages/GuidesHub";
 import GuidePage from "./pages/GuidePage";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/tools/bmi" element={<BMICalculator />} />
           <Route path="/tools/protein" element={<ProteinCalculator />} />
           <Route path="/tools/electrolytes" element={<ElectrolyteCalculator />} />
+          <Route path="/tools/shoes" element={<ShoeFinder />} />
           <Route path="/quiz" element={<ProfileQuiz />} />
           <Route path="/guides" element={<GuidesHub />} />
           <Route path="/guides/:slug" element={<GuidePage />} />
