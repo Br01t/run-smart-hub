@@ -6,7 +6,7 @@
     "description": "Discover the top supplements to fuel your marathon training and racing. From energy gels to recovery aids, science-backed recommendations.",
     "intro": "Marathon running demands peak nutrition. Whether you're preparing for your first 42K or chasing a PR, the right supplements can make a significant difference in performance and recovery. Here's our curated selection based on scientific evidence.",
     "relatedTools": ["/tools/calories", "/tools/electrolytes", "/tools/protein"],
-    "relatedGuides": ["supplements-for-runners", "muscle-recovery"],
+    "relatedGuides": ["supplements-for-runners", "muscle-recovery", "marathon-training"],
     "tags": ["energia", "carboidrati", "integratori", "magnesio", "proteine", "elettroliti"],
     "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero", "integratori-per-corsa-dimagrimento"]
   },
@@ -17,9 +17,9 @@
     "description": "Trail running demands specific nutrition strategies. Find the best supplements for endurance, altitude and recovery on the trails.",
     "intro": "Trail running pushes your body to its limits with elevation changes, technical terrain and extended effort. Electrolyte balance, sustained energy and rapid recovery are even more critical than road running. Here are the supplements that make a real difference.",
     "relatedTools": ["/tools/electrolytes", "/tools/hydration", "/tools/calories"],
-    "relatedGuides": ["supplements-for-runners", "muscle-recovery"],
+    "relatedGuides": ["supplements-for-runners", "muscle-recovery", "trail-running-beginners"],
     "tags": ["elettroliti", "energia", "carboidrati", "integratori", "magnesio"],
-    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero", "integratori-per-trail-recupero"]
   },
   {
     "category": "shoes",
@@ -28,7 +28,7 @@
     "description": "Compare the best trail running shoes for grip, protection and comfort on technical terrain.",
     "intro": "The right trail shoes can be the difference between a great run and a twisted ankle. Trail shoes need aggressive outsoles for grip, rock plates for protection and durable uppers for brush and debris. Here's what to look for and our top picks.",
     "relatedTools": ["/tools/bmi", "/tools/calories"],
-    "relatedGuides": ["choosing-running-shoes"],
+    "relatedGuides": ["choosing-running-shoes", "trail-running-beginners"],
     "tags": ["scarpe", "corsa", "ammortizzazione"],
     "comparisonSlugs": ["scarpe-per-trail-performance"]
   },
@@ -39,9 +39,9 @@
     "description": "Find the perfect marathon racing and training shoes. Carbon-plated racers and high-cushion trainers compared.",
     "intro": "Marathon shoes have evolved dramatically with carbon plates and super-foams. Whether you need a race-day shoe or a high-mileage trainer, choosing the right pair is crucial for performance and injury prevention.",
     "relatedTools": ["/tools/bmi", "/tools/calories"],
-    "relatedGuides": ["choosing-running-shoes"],
+    "relatedGuides": ["choosing-running-shoes", "marathon-training"],
     "tags": ["scarpe", "corsa", "ammortizzazione"],
-    "comparisonSlugs": ["scarpe-per-trail-performance"]
+    "comparisonSlugs": ["scarpe-per-corsa-performance"]
   },
   {
     "category": "hydration",
@@ -50,7 +50,7 @@
     "description": "Bottles, belts and electrolyte solutions for marathon hydration. Stay fueled across 42K.",
     "intro": "Proper hydration during a marathon is critical for performance and safety. Dehydration of just 2% body weight can significantly impair performance. Here's the best gear and products to keep you hydrated.",
     "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
-    "relatedGuides": ["supplements-for-runners"],
+    "relatedGuides": ["supplements-for-runners", "running-nutrition"],
     "tags": ["idratazione", "elettroliti", "accessori"],
     "comparisonSlugs": ["accessori-per-corsa-idratazione"]
   },
@@ -61,8 +61,52 @@
     "description": "Foam rollers, massage guns and supplements for faster marathon recovery.",
     "intro": "Recovery after a marathon is just as important as the training itself. The right tools and supplements can reduce DOMS, prevent injury and get you back to training faster.",
     "relatedTools": ["/tools/protein", "/tools/calories"],
-    "relatedGuides": ["muscle-recovery"],
+    "relatedGuides": ["muscle-recovery", "injury-prevention"],
     "tags": ["recupero", "massaggio", "muscoli", "proteine", "magnesio"],
     "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-corsa-recupero"]
+  },
+  {
+    "category": "hydration",
+    "sport": "trail-running",
+    "title": "Best Hydration Gear for Trail Running",
+    "description": "Hydration vests, soft flasks and electrolyte solutions for off-road adventures.",
+    "intro": "Trail runs often take you far from water sources, making self-sufficiency critical. Hydration vests with soft flasks are the gold standard, paired with the right electrolyte strategy to keep you going on long mountain efforts.",
+    "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
+    "relatedGuides": ["trail-running-beginners", "running-nutrition"],
+    "tags": ["idratazione", "elettroliti", "accessori"],
+    "comparisonSlugs": ["accessori-per-trail-idratazione", "accessori-per-corsa-idratazione"]
+  },
+  {
+    "category": "recovery",
+    "sport": "trail-running",
+    "title": "Best Recovery Tools for Trail Runners",
+    "description": "Specialized recovery gear for the unique demands of trail running: downhill muscle damage, joint stress and more.",
+    "intro": "Trail running causes more eccentric muscle damage than road running due to downhill sections. Recovery tools like foam rollers, compression gear and targeted supplements are essential for bouncing back from tough mountain sessions.",
+    "relatedTools": ["/tools/protein", "/tools/hydration"],
+    "relatedGuides": ["muscle-recovery", "injury-prevention", "trail-running-beginners"],
+    "tags": ["recupero", "massaggio", "muscoli", "proteine"],
+    "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-trail-recupero"]
+  },
+  {
+    "category": "supplements",
+    "sport": "10k",
+    "title": "Best Supplements for 10K Runners",
+    "description": "Optimize your 10K performance with the right supplements: caffeine, electrolytes and recovery aids.",
+    "intro": "The 10K is a sweet spot that demands both speed and endurance. While you don't need the extensive fueling of a marathon, targeted supplementation can still give you an edge in training and racing.",
+    "relatedTools": ["/tools/calories", "/tools/protein", "/tools/electrolytes"],
+    "relatedGuides": ["supplements-for-runners", "running-nutrition"],
+    "tags": ["energia", "integratori", "elettroliti", "proteine"],
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+  },
+  {
+    "category": "shoes",
+    "sport": "10k",
+    "title": "Best Shoes for 10K Racing",
+    "description": "Lightweight, responsive shoes for your fastest 10K. From carbon racers to versatile tempo trainers.",
+    "intro": "A 10K race shoe should be lightweight and responsive, but with enough cushioning for the distance. Carbon-plated super shoes can benefit 10K runners too, while versatile tempo trainers work for both racing and speed workouts.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes", "running-heart-rate-zones"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-corsa-performance"]
   }
 ]

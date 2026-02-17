@@ -66,6 +66,28 @@ const BMICalculator = () => {
                 <span>16</span><span>18.5</span><span>25</span><span>30</span><span>40</span>
               </div>
             </div>
+
+            {/* Personalized insights */}
+            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
+              <h4 className="text-sm font-semibold text-foreground">💡 What this means for runners</h4>
+              {result.bmi < 18.5 && (
+                <p className="text-sm text-muted-foreground">Being underweight can affect energy levels and injury risk. Consider increasing calorie intake with nutrient-dense foods and monitor bone health. Runners with low BMI may benefit from strength training to build lean mass.</p>
+              )}
+              {result.bmi >= 18.5 && result.bmi < 25 && (
+                <p className="text-sm text-muted-foreground">Your BMI is in the healthy range — great for running performance. Most elite distance runners have a BMI between 18.5 and 22. Focus on maintaining your weight with balanced nutrition and consistent training.</p>
+              )}
+              {result.bmi >= 25 && result.bmi < 30 && (
+                <p className="text-sm text-muted-foreground">A slightly elevated BMI is common among runners who also do strength training. If you feel fit and perform well, don't worry too much. Consider focusing on body composition rather than weight alone. Gradual weight loss of 0.5 kg/week through a moderate calorie deficit is safe for runners.</p>
+              )}
+              {result.bmi >= 30 && (
+                <p className="text-sm text-muted-foreground">Starting to run at a higher BMI is absolutely possible — just build up gradually. Use walk-run intervals, invest in well-cushioned shoes, and prioritize joint-friendly surfaces. Consult a healthcare professional to create a safe plan.</p>
+              )}
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Tip</span>
+                <span className="text-xs text-muted-foreground">BMI doesn't distinguish between muscle and fat mass. Athletes often have a higher BMI due to muscle.</span>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-muted-foreground">
               BMI is a general indicator and does not account for muscle mass, body composition and other factors.
             </p>

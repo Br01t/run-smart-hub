@@ -55,6 +55,25 @@ const CaloriesCalculator = () => {
                 <p className="text-xs text-muted-foreground">approximate estimate</p>
               </div>
             </div>
+
+            {/* Personalized insights */}
+            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
+              <h4 className="text-sm font-semibold text-foreground">💡 What this means</h4>
+              <p className="text-sm text-muted-foreground">
+                {result.calories < 300
+                  ? "A light session! This is perfect for easy recovery runs. To refuel, a banana and a glass of water will do the job."
+                  : result.calories < 600
+                  ? "A solid effort! You've burned the equivalent of a full meal. Make sure to replenish with a mix of carbs and protein within 30-60 minutes for optimal recovery."
+                  : result.calories < 1000
+                  ? "An intense session! At this calorie burn, proper refueling is critical. Aim for 1-1.2g/kg of carbs and 20-30g of protein post-run. Consider an energy gel or sports drink during runs of this intensity."
+                  : "An epic effort! Burns above 1000 kcal require serious nutritional planning. You'll need to replace glycogen stores over the next 24 hours. Consider splitting recovery meals into 2-3 smaller portions over 3 hours."}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Did you know?</span>
+                <span className="text-xs text-muted-foreground">Running burns approximately 20-30% more calories than walking the same distance due to higher muscle activation.</span>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-muted-foreground">
               Based on MET coefficient (~1.036 kcal/kg/km). Actual values vary by pace, terrain and conditions.
             </p>
