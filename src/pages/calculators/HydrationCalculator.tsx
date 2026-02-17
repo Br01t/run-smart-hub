@@ -79,6 +79,23 @@ const HydrationCalculator = () => {
                 <p className="text-xs text-muted-foreground">within 2h post run</p>
               </div>
             </div>
+
+            {/* Personalized insights */}
+            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
+              <h4 className="text-sm font-semibold text-foreground">💡 Hydration tips</h4>
+              <p className="text-sm text-muted-foreground">
+                {parseFloat(temp) >= 25
+                  ? "Running in hot conditions significantly increases sweat rate. Consider adding electrolyte tablets to your water — you lose 900-1400mg of sodium per liter of sweat. Weigh yourself before and after to track fluid loss."
+                  : parseFloat(duration) > 90
+                  ? "For runs longer than 90 minutes, plain water isn't enough. Add electrolytes to prevent hyponatremia (low sodium levels). Carry a hydration vest or belt to sip consistently rather than gulping at water stops."
+                  : "Good hydration starts hours before your run. A simple check: if your urine is pale yellow, you're well hydrated. Avoid overdrinking — listen to your thirst and sip regularly throughout the run."}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Pro tip</span>
+                <span className="text-xs text-muted-foreground">Dehydration of just 2% body weight can reduce performance by up to 10%. Stay ahead of thirst!</span>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-muted-foreground">
               These values are estimates based on general scientific formulas. Consult a doctor for specific conditions.
             </p>

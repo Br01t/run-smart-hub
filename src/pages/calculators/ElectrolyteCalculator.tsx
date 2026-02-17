@@ -71,6 +71,23 @@ const ElectrolyteCalculator = () => {
                 <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.magnesium} mg</p>
               </div>
             </div>
+
+            {/* Personalized insights */}
+            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
+              <h4 className="text-sm font-semibold text-foreground">💡 Electrolyte guide</h4>
+              <p className="text-sm text-muted-foreground">
+                {intensity === "high"
+                  ? "High-intensity sessions cause heavy sweating. Sodium is the electrolyte you lose most — up to 1400mg per liter of sweat. Consider salt capsules or high-sodium electrolyte mixes for sessions over 90 minutes. Cramping? Magnesium and potassium deficiency are common culprits."
+                  : parseFloat(duration) > 90
+                  ? "For longer sessions, start supplementing electrolytes from the 45-minute mark. Effervescent tablets in your water bottle are the most practical approach. Don't wait until you feel symptoms — by then, you're already depleted."
+                  : "For moderate sessions under 90 minutes, a balanced diet usually covers your electrolyte needs. However, if you're a heavy sweater (white salt marks on your clothes), you may benefit from electrolyte supplementation even for shorter runs."}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Signs of depletion</span>
+                <span className="text-xs text-muted-foreground">Muscle cramps, dizziness, nausea and fatigue can all indicate electrolyte imbalance.</span>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-muted-foreground">
               Estimated values based on average sweat rate. Actual loss varies by genetics, temperature and acclimatization.
             </p>

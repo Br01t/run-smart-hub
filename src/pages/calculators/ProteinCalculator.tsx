@@ -67,6 +67,23 @@ const ProteinCalculator = () => {
               </p>
               <p className="text-sm text-muted-foreground">of protein per day</p>
             </div>
+
+            {/* Personalized insights */}
+            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
+              <h4 className="text-sm font-semibold text-foreground">💡 How to hit your target</h4>
+              <p className="text-sm text-muted-foreground">
+                {goal === "lose"
+                  ? "When losing weight, protein is your best ally. It preserves muscle mass, boosts satiety and has the highest thermic effect of any macronutrient (burning ~25% of protein calories during digestion). Spread intake across 4-5 meals."
+                  : goal === "gain"
+                  ? "For muscle building, aim for the upper range and distribute protein evenly across 4-5 meals (30-40g each). The post-workout window is important but total daily intake matters more. Combine with progressive strength training."
+                  : "For maintenance, focus on consistent daily intake rather than timing. Good sources: chicken breast (31g/100g), eggs (13g/100g), Greek yogurt (10g/100g), lentils (9g/100g). A protein shake post-run is convenient but not mandatory."}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Quick math</span>
+                <span className="text-xs text-muted-foreground">That's roughly {Math.round(result.min / 4)}–{Math.round(result.max / 4)}g per meal across 4 meals/day.</span>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-muted-foreground">
               Range based on ISSN guidelines for athletes and active individuals. Consult a nutritionist for a personalized plan.
             </p>
