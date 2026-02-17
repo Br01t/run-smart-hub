@@ -40,6 +40,11 @@ const guideLabels: Record<string, string> = {
   "choosing-running-shoes": "How to Choose Running Shoes",
   "supplements-for-runners": "Essential Supplements for Runners",
   "muscle-recovery": "Muscle Recovery After Running",
+  "running-nutrition": "Running Nutrition: What to Eat Before, During & After",
+  "injury-prevention": "Runner's Guide to Injury Prevention",
+  "marathon-training": "Marathon Training Guide for Beginners",
+  "trail-running-beginners": "Getting Started with Trail Running",
+  "running-heart-rate-zones": "Heart Rate Zone Training for Runners",
 };
 
 const HubPage = () => {
