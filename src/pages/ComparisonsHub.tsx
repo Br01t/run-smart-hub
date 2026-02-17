@@ -3,6 +3,8 @@ import { ArrowRight, Filter } from "lucide-react";
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
+import { translateCategory, translateSport, translateGoal } from "@/lib/translations";
 import comparisonsData from "@/data/comparisons.json";
 
 interface Comparison {
@@ -60,7 +62,7 @@ const ComparisonsHub = () => {
         {Object.entries(grouped).map(([sport, items]) => (
           <div key={sport} className="mb-10 last:mb-0">
             <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold capitalize text-foreground sm:mb-6 sm:text-2xl">
-              <span className="text-2xl">{sportEmoji[sport] || "🏅"}</span> {sport}
+              <span className="text-2xl">{sportEmoji[sport] || "🏅"}</span> {translateSport(sport)}
             </h2>
 
             {/* Horizontal scrollable on mobile, grid on desktop */}
@@ -82,14 +84,14 @@ const ComparisonsHub = () => {
                     >
                       <div className="mb-3 flex items-center gap-2">
                         <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${goalColors[c.obiettivo] || "bg-muted text-muted-foreground"}`}>
-                          {c.obiettivo}
+                          {translateGoal(c.obiettivo)}
                         </span>
                         <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">
-                          {c.categoria}
+                          {translateCategory(c.categoria)}
                         </span>
                       </div>
                       <h3 className="mb-2 font-display text-base font-bold capitalize text-card-foreground">
-                        {c.categoria} for {c.sport}
+                        {translateCategory(c.categoria)} for {translateSport(c.sport)}
                       </h3>
                       <p className="mb-4 flex-1 text-sm text-muted-foreground line-clamp-3">{c.intro}</p>
                       <div className="flex items-center gap-1.5 text-sm font-semibold text-primary transition-all group-hover:gap-2.5">
@@ -102,6 +104,10 @@ const ComparisonsHub = () => {
             </div>
           </div>
         ))}
+        {/* ZoneRun Banner */}
+        <div className="mt-8">
+          <ZoneRunBanner variant="inline" />
+        </div>
       </section>
     </Layout>
   );

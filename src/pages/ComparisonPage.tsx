@@ -4,6 +4,8 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
+import ZoneRunBanner from "@/components/ZoneRunBanner";
+import { translateCategory, translateSport, translateGoal } from "@/lib/translations";
 import comparisonsData from "@/data/comparisons.json";
 import productsData from "@/data/products.json";
 import hubsData from "@/data/hubs.json";
@@ -38,20 +40,28 @@ const toolSuggestions: Record<string, { to: string; label: string }[]> = {
     { to: "/tools/bmi", label: "BMI Calculator" },
     { to: "/tools/protein", label: "Protein Calculator" },
   ],
+  resistenza: [
+    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/hydration", label: "Hydration Calculator" },
+  ],
 };
 
 const guideSuggestions: Record<string, { slug: string; label: string }[]> = {
   integratori: [
     { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
+    { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
   ],
   scarpe: [
     { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
+    { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
   ],
   recupero: [
     { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
+    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
   ],
   accessori: [
-    { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
+    { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
+    { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
   ],
 };
 
@@ -74,7 +84,7 @@ const ComparisonPage = () => {
     );
   }
 
-  const title = `Best ${comparison.categoria} for ${comparison.sport} – ${comparison.obiettivo}`;
+  const title = `Best ${translateCategory(comparison.categoria)} for ${translateSport(comparison.sport)} – ${translateGoal(comparison.obiettivo)}`;
   const description = comparison.intro.slice(0, 155);
 
   const matchedProducts = (productsData as { id: string; nome: string; descrizione: string; prezzoRange: string; linkAffiliato: string; immagine: string; tag: string[] }[])
@@ -135,14 +145,19 @@ const ComparisonPage = () => {
           <div className="mb-6 rounded-lg border border-border bg-secondary/50 px-4 py-3">
             <p className="text-xs text-muted-foreground">
               Part of{" "}
-              <Link to={`/hub/${relatedHub.category}/${relatedHub.sport}`} className="font-medium text-primary hover:underline">
-                {relatedHub.category} for {relatedHub.sport} hub
+                <Link to={`/hub/${relatedHub.category}/${relatedHub.sport}`} className="font-medium text-primary hover:underline">
+                  {translateCategory(relatedHub.category)} for {translateSport(relatedHub.sport)} hub
               </Link>
             </p>
           </div>
         )}
 
-        <RecommendedProducts tags={comparison.tags} title={`Recommended ${comparison.categoria}`} maxProducts={4} />
+        <RecommendedProducts tags={comparison.tags} title={`Recommended ${translateCategory(comparison.categoria)}`} maxProducts={4} />
+
+        {/* ZoneRun Banner */}
+        <div className="mt-6">
+          <ZoneRunBanner variant="inline" />
+        </div>
 
         {/* FAQ */}
         {comparison.faq.length > 0 && (
@@ -222,8 +237,8 @@ const ComparisonPage = () => {
                     to={`/comparison/${cSlug}`}
                     className="group rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
                   >
-                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{c.categoria} for {c.sport}</h3>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{c.obiettivo}</p>
+                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{translateCategory(c.categoria)} for {translateSport(c.sport)}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{translateGoal(c.obiettivo)}</p>
                   </Link>
                 );
               })}

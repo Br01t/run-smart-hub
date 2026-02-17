@@ -28,6 +28,41 @@ const guides = [
     readTime: "7 min read",
     category: "Recovery",
   },
+  {
+    slug: "running-nutrition",
+    title: "Running Nutrition: What to Eat Before, During & After",
+    excerpt: "A complete guide to fueling your runs properly for optimal performance and recovery.",
+    readTime: "9 min read",
+    category: "Nutrition",
+  },
+  {
+    slug: "injury-prevention",
+    title: "Runner's Guide to Injury Prevention",
+    excerpt: "Stay injury-free with the 10% rule, strength training and proper recovery techniques.",
+    readTime: "7 min read",
+    category: "Health",
+  },
+  {
+    slug: "marathon-training",
+    title: "Marathon Training Guide for Beginners",
+    excerpt: "Everything you need to know for your first 42K: training plans, pacing and race day tips.",
+    readTime: "10 min read",
+    category: "Training",
+  },
+  {
+    slug: "trail-running-beginners",
+    title: "Getting Started with Trail Running",
+    excerpt: "From gear to technique: a beginner's guide to hitting the trails safely and confidently.",
+    readTime: "8 min read",
+    category: "Trail",
+  },
+  {
+    slug: "running-heart-rate-zones",
+    title: "Heart Rate Zone Training for Runners",
+    excerpt: "Use heart rate zones to train smarter: the 80/20 rule, max HR testing and more.",
+    readTime: "7 min read",
+    category: "Training",
+  },
 ];
 
 const GuidesHub = () => {
