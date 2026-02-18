@@ -1,5 +1,6 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, BookOpen } from "lucide-react";
+import { ArrowRight, Clock, BookOpen, Search, X } from "lucide-react";
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -7,65 +8,30 @@ import guidesHeroImg from "@/assets/guides-hero.jpg";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const guides = [
-  {
-    slug: "choosing-running-shoes",
-    title: "How to Choose Running Shoes",
-    excerpt: "Complete guide to choosing the right running shoes: cushioning, drop, foot strike and terrain.",
-    readTime: "6 min read",
-    category: "Gear",
-  },
-  {
-    slug: "supplements-for-runners",
-    title: "Essential Supplements for Runners",
-    excerpt: "Which supplements actually work? From vitamin D to magnesium, here's what the science says.",
-    readTime: "8 min read",
-    category: "Nutrition",
-  },
-  {
-    slug: "muscle-recovery",
-    title: "Muscle Recovery After Running",
-    excerpt: "Stretching, foam rolling, nutrition and sleep: strategies to recover faster.",
-    readTime: "7 min read",
-    category: "Recovery",
-  },
-  {
-    slug: "running-nutrition",
-    title: "Running Nutrition: What to Eat Before, During & After",
-    excerpt: "A complete guide to fueling your runs properly for optimal performance and recovery.",
-    readTime: "9 min read",
-    category: "Nutrition",
-  },
-  {
-    slug: "injury-prevention",
-    title: "Runner's Guide to Injury Prevention",
-    excerpt: "Stay injury-free with the 10% rule, strength training and proper recovery techniques.",
-    readTime: "7 min read",
-    category: "Health",
-  },
-  {
-    slug: "marathon-training",
-    title: "Marathon Training Guide for Beginners",
-    excerpt: "Everything you need to know for your first 42K: training plans, pacing and race day tips.",
-    readTime: "10 min read",
-    category: "Training",
-  },
-  {
-    slug: "trail-running-beginners",
-    title: "Getting Started with Trail Running",
-    excerpt: "From gear to technique: a beginner's guide to hitting the trails safely and confidently.",
-    readTime: "8 min read",
-    category: "Trail",
-  },
-  {
-    slug: "running-heart-rate-zones",
-    title: "Heart Rate Zone Training for Runners",
-    excerpt: "Use heart rate zones to train smarter: the 80/20 rule, max HR testing and more.",
-    readTime: "7 min read",
-    category: "Training",
-  },
+  { slug: "choosing-running-shoes", title: "How to Choose Running Shoes", excerpt: "Complete guide to choosing the right running shoes: cushioning, drop, foot strike and terrain.", readTime: "6 min read", category: "Gear" },
+  { slug: "supplements-for-runners", title: "Essential Supplements for Runners", excerpt: "Which supplements actually work? From vitamin D to magnesium, here's what the science says.", readTime: "8 min read", category: "Nutrition" },
+  { slug: "muscle-recovery", title: "Muscle Recovery After Running", excerpt: "Stretching, foam rolling, nutrition and sleep: strategies to recover faster.", readTime: "7 min read", category: "Recovery" },
+  { slug: "running-nutrition", title: "Running Nutrition: What to Eat Before, During & After", excerpt: "A complete guide to fueling your runs properly for optimal performance and recovery.", readTime: "9 min read", category: "Nutrition" },
+  { slug: "injury-prevention", title: "Runner's Guide to Injury Prevention", excerpt: "Stay injury-free with the 10% rule, strength training and proper recovery techniques.", readTime: "7 min read", category: "Health" },
+  { slug: "marathon-training", title: "Marathon Training Guide for Beginners", excerpt: "Everything you need to know for your first 42K: training plans, pacing and race day tips.", readTime: "10 min read", category: "Training" },
+  { slug: "trail-running-beginners", title: "Getting Started with Trail Running", excerpt: "From gear to technique: a beginner's guide to hitting the trails safely and confidently.", readTime: "8 min read", category: "Trail" },
+  { slug: "running-heart-rate-zones", title: "Heart Rate Zone Training for Runners", excerpt: "Use heart rate zones to train smarter: the 80/20 rule, max HR testing and more.", readTime: "7 min read", category: "Training" },
 ];
 
+const categories = [...new Set(guides.map((g) => g.category))];
+
 const GuidesHub = () => {
+  const [search, setSearch] = useState("");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const filtered = useMemo(() => {
+    return guides.filter((g) => {
+      const matchesCategory = !activeCategory || g.category === activeCategory;
+      const matchesSearch = !search || g.title.toLowerCase().includes(search.toLowerCase()) || g.excerpt.toLowerCase().includes(search.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [search, activeCategory]);
+
   return (
     <Layout>
       <SEOHead
@@ -99,22 +65,69 @@ const GuidesHub = () => {
         </div>
       </section>
 
-      {/* Guide list — editorial style */}
-      <section className="container mx-auto px-4 py-8 sm:py-12">
+      {/* Filters & search */}
+      <section className="container mx-auto px-4 pt-6 sm:pt-8">
+        {/* Search bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search guides…"
+            className="w-full rounded-xl border border-border bg-background py-2.5 pl-10 pr-10 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 sm:max-w-md"
+          />
+          {search && (
+            <button onClick={() => setSearch("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+
+        {/* Category chips */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button
+            onClick={() => setActiveCategory(null)}
+            className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+              !activeCategory ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            All
+          </button>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
+              className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+                activeCategory === cat ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Results count */}
+        <p className="mt-3 text-xs text-muted-foreground">
+          {filtered.length} {filtered.length === 1 ? "guide" : "guides"} found
+        </p>
+      </section>
+
+      {/* Guide list */}
+      <section className="container mx-auto px-4 py-4 sm:py-6">
         <div className="divide-y divide-border">
-          {guides.map((guide, i) => (
+          {filtered.map((guide, i) => (
             <motion.div
               key={guide.slug}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
             >
               <Link
                 to={`/guides/${guide.slug}`}
                 className="group flex items-start gap-4 py-6 transition-colors sm:gap-6 sm:py-8"
               >
-                {/* Number */}
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 font-display text-lg font-bold text-primary sm:h-12 sm:w-12 sm:text-xl">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -136,6 +149,11 @@ const GuidesHub = () => {
               </Link>
             </motion.div>
           ))}
+          {filtered.length === 0 && (
+            <div className="py-12 text-center">
+              <p className="text-sm text-muted-foreground">No guides match your search. Try different keywords.</p>
+            </div>
+          )}
         </div>
 
         {/* ZoneRun banner */}
