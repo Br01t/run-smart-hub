@@ -285,7 +285,10 @@ const SectionBlock = ({ section, index }: { section: GuideSection; index: number
   const icon = variantIcon[variant];
 
   return (
-    <section className={`${variantStyles[variant]} ${variant === "default" ? (isEven ? "" : "") : ""}`}>
+    <section
+      id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
+      className={`scroll-mt-24 ${variantStyles[variant]} ${variant === "default" ? (isEven ? "" : "") : ""}`}
+    >
       <div className="flex items-start gap-3">
         {icon && <div className="mt-0.5 shrink-0">{icon}</div>}
         <div className="flex-1 min-w-0">
@@ -408,6 +411,29 @@ const GuidePage = () => {
         <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
           {guide.description}
         </p>
+
+        {/* Table of Contents */}
+        <nav className="mt-6 rounded-xl border border-border bg-secondary/30 p-4 sm:mt-8 sm:p-5" aria-label="Table of contents">
+          <h2 className="flex items-center gap-2 font-display text-sm font-bold text-foreground sm:text-base">
+            <BookOpen className="h-4 w-4 text-primary" /> Table of Contents
+          </h2>
+          <ol className="mt-3 space-y-1.5">
+            {guide.sections.map((section, i) => {
+              const sectionId = section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+              return (
+                <li key={i}>
+                  <a
+                    href={`#${sectionId}`}
+                    className="group flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-primary/5 hover:text-primary"
+                  >
+                    <span className="font-mono text-xs text-muted-foreground/60">{String(i + 1).padStart(2, "0")}</span>
+                    {section.heading}
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
 
         {/* Key takeaways */}
         <div className="mt-6 sm:mt-8">
