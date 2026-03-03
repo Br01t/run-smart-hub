@@ -18,6 +18,10 @@ import guideInjury from "@/assets/guide-injury.jpg";
 import guideMarathon from "@/assets/guide-marathon.jpg";
 import guideTrail from "@/assets/guide-trail.jpg";
 import guideHeartrate from "@/assets/guide-heartrate.jpg";
+import guideStretching from "@/assets/guide-stretching.jpg";
+import guideRunningForm from "@/assets/guide-running-form.jpg";
+import guideCadence from "@/assets/guide-cadence.jpg";
+import guideHillTraining from "@/assets/guide-hill-training.jpg";
 
 type SectionVariant = "default" | "highlight" | "tip" | "warning" | "checklist";
 
@@ -257,6 +261,110 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "The 80/20 rule", body: "Elite runners spend 80% of training time in Zones 1-2 and only 20% in Zones 3-5. Most recreational runners do the opposite — running too hard on easy days and too easy on hard days.", variant: "highlight" },
       { heading: "Finding your max heart rate", body: "The '220 minus age' formula is inaccurate for many people. A field test (e.g., 3x 3-minute uphill repeats at max effort) gives a better estimate. Lab testing (VO2max test) is the gold standard.", variant: "tip" },
       { heading: "Chest strap vs optical HR", body: "Chest straps (Polar, Garmin HRM) are more accurate during high-intensity efforts. Wrist-based optical sensors can lag and misread during intervals. For zone training, a chest strap is recommended.", variant: "default" },
+    ],
+  },
+  "stretching-for-runners": {
+    title: "The Runner's Stretching Guide",
+    description: "Dynamic vs static stretching: when to stretch, the best routines, and how flexibility prevents injuries.",
+    tags: ["recupero", "muscoli", "corsa"],
+    heroImage: guideStretching,
+    readTime: "7 min read",
+    keyTakeaways: [
+      "Dynamic stretching before, static stretching after running",
+      "Consistent stretching reduces injury risk by up to 30%",
+      "Focus on hip flexors, hamstrings and calves",
+    ],
+    relatedTools: [
+      { to: "/tools/bmi", label: "BMI Calculator" },
+      { to: "/tools/protein", label: "Protein Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
+      { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    ],
+    sections: [
+      { heading: "Dynamic vs static stretching", body: "Dynamic stretching (leg swings, walking lunges, high knees) prepares muscles for activity by increasing blood flow and range of motion. Static stretching (holding a position for 20-30 seconds) is best post-run when muscles are warm. Never static stretch cold muscles before running.", variant: "highlight" },
+      { heading: "Pre-run warm-up routine", body: "Spend 5-10 minutes on dynamic stretches before every run. This primes your nervous system and gradually increases heart rate.", variant: "checklist", listItems: ["Leg swings: 15 each leg, front-to-back and side-to-side", "Walking lunges: 10 each leg with a gentle torso twist", "High knees: 20 steps, focus on hip flexor activation", "Butt kicks: 20 steps, warming up hamstrings and quads", "Ankle circles: 10 each direction per foot"] },
+      { heading: "Post-run static stretches", body: "After running, hold each stretch for 20-30 seconds without bouncing. Focus on the muscle groups most worked during your run.", variant: "default", listItems: ["Standing quad stretch: pull heel to glute, keep knees together", "Standing calf stretch: lean into wall, straight back leg", "Pigeon pose: excellent for hip flexors and glutes", "Hamstring stretch: straight leg on elevated surface, hinge at hips", "Figure-four stretch: targets deep hip rotators"] },
+      { heading: "Flexibility and injury prevention", body: "Tight hip flexors are the #1 contributor to runner's knee and IT band issues. A 10-minute daily stretching routine — even on rest days — can reduce injury risk by up to 30%. Yoga for runners is an excellent supplement.", variant: "tip" },
+    ],
+  },
+  "running-form": {
+    title: "How to Improve Your Running Form",
+    description: "Fix your posture, arm swing, foot strike and breathing for more efficient, injury-free running.",
+    tags: ["corsa", "muscoli", "scarpe"],
+    heroImage: guideRunningForm,
+    readTime: "8 min read",
+    keyTakeaways: [
+      "Slight forward lean from ankles, not waist",
+      "Arms at 90°, relaxed shoulders, no crossing midline",
+      "Land under your center of mass, not ahead of it",
+    ],
+    relatedTools: [
+      { to: "/tools/bmi", label: "BMI Calculator" },
+      { to: "/tools/calories", label: "Calories Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "running-cadence", label: "Running Cadence: Why Steps Per Minute Matter" },
+      { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    ],
+    sections: [
+      { heading: "Posture and alignment", body: "Good running posture starts with a tall spine and slight forward lean from the ankles — not the waist. Imagine a string pulling you up from the crown of your head. Keep your gaze 10-20 meters ahead, not at your feet. A hunched posture restricts breathing and wastes energy.", variant: "highlight" },
+      { heading: "Arm swing", body: "Your arms drive your legs. Keep elbows at roughly 90° and swing forward-back, not across your body. Crossing your midline creates rotational forces that waste energy and stress your spine. Keep hands relaxed — imagine holding a potato chip without breaking it.", variant: "tip" },
+      { heading: "Foot strike", body: "Where your foot lands relative to your body matters more than heel vs forefoot strike.", variant: "default", listItems: ["Land under your center of mass, not ahead of it", "Overstriding (foot landing ahead) is the most common form error", "Midfoot strike is generally most efficient for distance running", "A slight forward lean naturally encourages midfoot contact", "Transition gradually — sudden changes cause injuries"] },
+      { heading: "Breathing technique", body: "Rhythmic breathing synced to your cadence improves oxygen delivery and core stability. A 3:2 pattern (3 steps inhale, 2 steps exhale) works well for easy runs. For hard efforts, switch to 2:1. Belly breathing (diaphragmatic) is more efficient than shallow chest breathing.", variant: "checklist", listItems: ["Easy runs: inhale 3 steps, exhale 2 steps", "Tempo/threshold: inhale 2 steps, exhale 1 step", "Breathe from the diaphragm (belly expands)", "Exhale forcefully to trigger a stronger inhale reflex"] },
+    ],
+  },
+  "running-cadence": {
+    title: "Running Cadence: Why Steps Per Minute Matter",
+    description: "Learn why cadence impacts performance, the 180 spm benchmark, and how to safely increase yours.",
+    tags: ["corsa", "accessori"],
+    heroImage: guideCadence,
+    readTime: "6 min read",
+    keyTakeaways: [
+      "Higher cadence reduces impact forces on joints",
+      "Optimal cadence is individual — 170-190 spm for most runners",
+      "Increase by no more than 5% at a time",
+    ],
+    relatedTools: [
+      { to: "/tools/calories", label: "Calories Calculator" },
+      { to: "/tools/bmi", label: "BMI Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "running-form", label: "How to Improve Your Running Form" },
+      { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
+    ],
+    sections: [
+      { heading: "What is cadence?", body: "Cadence is the number of steps you take per minute (spm). It's one of the two factors that determine speed (the other is stride length). Most recreational runners have a cadence of 150-170 spm, while elite runners typically run at 180-190+ spm.", variant: "highlight" },
+      { heading: "Why higher cadence helps", body: "A higher cadence naturally shortens your stride, which means your foot lands closer to your center of mass. This reduces braking forces, decreases impact loading on knees and hips by up to 20%, and improves running economy.", variant: "default", listItems: ["Reduced ground contact time = less energy wasted", "Lower vertical oscillation = smoother running", "Less impact on joints = fewer overuse injuries", "Better turnover = maintained speed with less effort"] },
+      { heading: "How to measure and increase cadence", body: "Most GPS watches track cadence automatically. You can also count steps for 30 seconds and multiply by 2. To increase cadence, do it gradually — no more than 5% at a time.", variant: "tip", listItems: ["Use a metronome app set to your target spm", "Do cadence drills during easy runs (1-2 min at target, then relax)", "Run to music with the right BPM (e.g., 180 BPM playlists)", "Focus on 'quick feet' rather than consciously shortening stride"] },
+      { heading: "Common mistakes", body: "Don't chase 180 spm as a magic number. Optimal cadence varies by height, leg length, pace and terrain. Taller runners naturally have lower cadence. The goal is to find YOUR optimal range, not copy someone else's.", variant: "warning" },
+    ],
+  },
+  "hill-training": {
+    title: "Hill Training for Runners",
+    description: "Master uphill repeats, downhill technique and build explosive strength with targeted hill workouts.",
+    tags: ["corsa", "muscoli", "energia"],
+    heroImage: guideHillTraining,
+    readTime: "8 min read",
+    keyTakeaways: [
+      "Hill repeats build strength equivalent to gym work",
+      "Uphill running improves VO2max faster than flat intervals",
+      "Downhill technique is a skill — practice it deliberately",
+    ],
+    relatedTools: [
+      { to: "/tools/calories", label: "Calories Calculator" },
+      { to: "/tools/hydration", label: "Hydration Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "running-form", label: "How to Improve Your Running Form" },
+      { slug: "marathon-training", label: "Marathon Training Guide for Beginners" },
+    ],
+    sections: [
+      { heading: "Why hills make you faster", body: "Hill running recruits more muscle fibers, builds explosive power and improves cardiovascular fitness simultaneously. A study in the Journal of Strength and Conditioning found that 6 weeks of hill sprints improved 5K times by an average of 2%. Hills are 'speed work in disguise.'", variant: "highlight" },
+      { heading: "Uphill technique", body: "Running uphill efficiently requires technique adjustments to maintain momentum and conserve energy.", variant: "checklist", listItems: ["Shorten stride and increase cadence by 5-10%", "Lean slightly forward from ankles, not waist", "Drive arms more aggressively — they power your legs uphill", "Keep eyes 3-5 meters ahead, not at your feet", "Use power hiking on very steep grades (>15%) — even pros do it"] },
+      { heading: "Hill repeat workouts", body: "Start with a moderate hill (4-6% grade, 200-400m long). After a 10-min warm-up, run hard uphill for 60-90 seconds, jog down to recover, repeat.", variant: "default", listItems: ["Beginner: 4-6 repeats × 60 seconds, full recovery jog down", "Intermediate: 6-8 repeats × 90 seconds, controlled jog down", "Advanced: 8-12 repeats × 2 minutes, or long hill tempo (10-15 min)", "Frequency: 1 hill session per week during base/build phase"] },
+      { heading: "Downhill running technique", body: "Downhill running causes more muscle damage than uphill due to eccentric contractions. But it's a trainable skill. Lean into the descent, use quick light steps and let gravity do the work. Braking by landing on your heels increases impact forces by 3-4x.", variant: "tip" },
     ],
   },
 };
