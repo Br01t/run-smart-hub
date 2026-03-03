@@ -22,6 +22,28 @@
     "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero", "integratori-per-trail-recupero"]
   },
   {
+    "category": "supplements",
+    "sport": "10k",
+    "title": "Best Supplements for 10K Runners",
+    "description": "Optimize your 10K performance with the right supplements: caffeine, electrolytes and recovery aids.",
+    "intro": "The 10K is a sweet spot that demands both speed and endurance. While you don't need the extensive fueling of a marathon, targeted supplementation can still give you an edge in training and racing.",
+    "relatedTools": ["/tools/calories", "/tools/protein", "/tools/electrolytes"],
+    "relatedGuides": ["supplements-for-runners", "running-nutrition"],
+    "tags": ["energia", "integratori", "elettroliti", "proteine"],
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+  },
+  {
+    "category": "supplements",
+    "sport": "half-marathon",
+    "title": "Best Supplements for Half Marathon",
+    "description": "The perfect fueling strategy for 21K: gels, electrolytes and recovery supplements to nail your half marathon.",
+    "intro": "The half marathon sits in a unique spot — long enough to require fueling strategy but short enough that over-supplementing can backfire. Here's the evidence-based approach to supplementation for 21K.",
+    "relatedTools": ["/tools/calories", "/tools/electrolytes", "/tools/protein"],
+    "relatedGuides": ["supplements-for-runners", "running-nutrition", "marathon-training"],
+    "tags": ["energia", "carboidrati", "integratori", "elettroliti"],
+    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+  },
+  {
     "category": "shoes",
     "sport": "trail-running",
     "title": "Best Trail Running Shoes",
@@ -44,6 +66,39 @@
     "comparisonSlugs": ["scarpe-per-corsa-performance"]
   },
   {
+    "category": "shoes",
+    "sport": "10k",
+    "title": "Best Shoes for 10K Racing",
+    "description": "Lightweight, responsive shoes for your fastest 10K. From carbon racers to versatile tempo trainers.",
+    "intro": "A 10K race shoe should be lightweight and responsive, but with enough cushioning for the distance. Carbon-plated super shoes can benefit 10K runners too, while versatile tempo trainers work for both racing and speed workouts.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes", "running-heart-rate-zones"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-corsa-performance"]
+  },
+  {
+    "category": "shoes",
+    "sport": "half-marathon",
+    "title": "Best Shoes for Half Marathon",
+    "description": "The ideal balance of speed and cushioning for 21K: race-day and training shoe picks.",
+    "intro": "Half marathon shoes need to balance responsiveness for speed with enough cushioning for 21 kilometers. Whether you're targeting a PB or just finishing strong, the right shoe makes a difference.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes", "marathon-training"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-corsa-performance"]
+  },
+  {
+    "category": "shoes",
+    "sport": "5k",
+    "title": "Best Shoes for 5K Racing",
+    "description": "Ultra-light racing flats and spikes for your fastest 5K. Maximum speed, minimum weight.",
+    "intro": "At the 5K distance, every gram counts. Racing flats, super shoes and track spikes all have their place depending on the surface and your goals. Here's how to choose.",
+    "relatedTools": ["/tools/bmi", "/tools/calories"],
+    "relatedGuides": ["choosing-running-shoes", "running-cadence"],
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "comparisonSlugs": ["scarpe-per-corsa-performance"]
+  },
+  {
     "category": "hydration",
     "sport": "marathon",
     "title": "Best Hydration Gear for Marathon",
@@ -51,6 +106,28 @@
     "intro": "Proper hydration during a marathon is critical for performance and safety. Dehydration of just 2% body weight can significantly impair performance. Here's the best gear and products to keep you hydrated.",
     "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
     "relatedGuides": ["supplements-for-runners", "running-nutrition"],
+    "tags": ["idratazione", "elettroliti", "accessori"],
+    "comparisonSlugs": ["accessori-per-corsa-idratazione"]
+  },
+  {
+    "category": "hydration",
+    "sport": "trail-running",
+    "title": "Best Hydration Gear for Trail Running",
+    "description": "Hydration vests, soft flasks and electrolyte solutions for off-road adventures.",
+    "intro": "Trail runs often take you far from water sources, making self-sufficiency critical. Hydration vests with soft flasks are the gold standard, paired with the right electrolyte strategy to keep you going on long mountain efforts.",
+    "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
+    "relatedGuides": ["trail-running-beginners", "running-nutrition"],
+    "tags": ["idratazione", "elettroliti", "accessori"],
+    "comparisonSlugs": ["accessori-per-trail-idratazione", "accessori-per-corsa-idratazione"]
+  },
+  {
+    "category": "hydration",
+    "sport": "half-marathon",
+    "title": "Best Hydration for Half Marathon",
+    "description": "Hydration strategy and gear for 21K: handheld bottles, electrolyte drinks and fueling plans.",
+    "intro": "The half marathon is long enough that hydration strategy matters. Whether you rely on aid stations or carry your own, having the right plan and products ensures you perform at your best.",
+    "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
+    "relatedGuides": ["running-nutrition", "supplements-for-runners"],
     "tags": ["idratazione", "elettroliti", "accessori"],
     "comparisonSlugs": ["accessori-per-corsa-idratazione"]
   },
@@ -66,17 +143,6 @@
     "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-corsa-recupero"]
   },
   {
-    "category": "hydration",
-    "sport": "trail-running",
-    "title": "Best Hydration Gear for Trail Running",
-    "description": "Hydration vests, soft flasks and electrolyte solutions for off-road adventures.",
-    "intro": "Trail runs often take you far from water sources, making self-sufficiency critical. Hydration vests with soft flasks are the gold standard, paired with the right electrolyte strategy to keep you going on long mountain efforts.",
-    "relatedTools": ["/tools/hydration", "/tools/electrolytes"],
-    "relatedGuides": ["trail-running-beginners", "running-nutrition"],
-    "tags": ["idratazione", "elettroliti", "accessori"],
-    "comparisonSlugs": ["accessori-per-trail-idratazione", "accessori-per-corsa-idratazione"]
-  },
-  {
     "category": "recovery",
     "sport": "trail-running",
     "title": "Best Recovery Tools for Trail Runners",
@@ -88,25 +154,25 @@
     "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-trail-recupero"]
   },
   {
-    "category": "supplements",
-    "sport": "10k",
-    "title": "Best Supplements for 10K Runners",
-    "description": "Optimize your 10K performance with the right supplements: caffeine, electrolytes and recovery aids.",
-    "intro": "The 10K is a sweet spot that demands both speed and endurance. While you don't need the extensive fueling of a marathon, targeted supplementation can still give you an edge in training and racing.",
-    "relatedTools": ["/tools/calories", "/tools/protein", "/tools/electrolytes"],
-    "relatedGuides": ["supplements-for-runners", "running-nutrition"],
-    "tags": ["energia", "integratori", "elettroliti", "proteine"],
-    "comparisonSlugs": ["integratori-per-corsa-performance", "integratori-per-corsa-recupero"]
+    "category": "recovery",
+    "sport": "half-marathon",
+    "title": "Best Recovery for Half Marathon",
+    "description": "Recovery tools, supplements and protocols to bounce back fast from a 21K race or hard training block.",
+    "intro": "Half marathon recovery is often underestimated. While not as brutal as a full marathon, 21K still demands structured recovery to avoid injury and maintain training consistency.",
+    "relatedTools": ["/tools/protein", "/tools/calories"],
+    "relatedGuides": ["muscle-recovery", "stretching-for-runners", "injury-prevention"],
+    "tags": ["recupero", "massaggio", "muscoli", "proteine"],
+    "comparisonSlugs": ["recupero-per-corsa-prevenzione-infortuni", "integratori-per-corsa-recupero"]
   },
   {
-    "category": "shoes",
-    "sport": "10k",
-    "title": "Best Shoes for 10K Racing",
-    "description": "Lightweight, responsive shoes for your fastest 10K. From carbon racers to versatile tempo trainers.",
-    "intro": "A 10K race shoe should be lightweight and responsive, but with enough cushioning for the distance. Carbon-plated super shoes can benefit 10K runners too, while versatile tempo trainers work for both racing and speed workouts.",
-    "relatedTools": ["/tools/bmi", "/tools/calories"],
-    "relatedGuides": ["choosing-running-shoes", "running-heart-rate-zones"],
-    "tags": ["scarpe", "corsa", "ammortizzazione"],
-    "comparisonSlugs": ["scarpe-per-corsa-performance"]
+    "category": "supplements",
+    "sport": "5k",
+    "title": "Best Supplements for 5K Runners",
+    "description": "Speed-focused supplementation for 5K: caffeine timing, pre-race nutrition and fast recovery.",
+    "intro": "The 5K is all about speed. While it's short enough that you don't need mid-race fueling, the right pre-race supplementation and recovery protocol can shave seconds off your time.",
+    "relatedTools": ["/tools/calories", "/tools/protein"],
+    "relatedGuides": ["supplements-for-runners", "running-cadence", "running-form"],
+    "tags": ["energia", "integratori", "proteine"],
+    "comparisonSlugs": ["integratori-per-corsa-performance"]
   }
 ]
