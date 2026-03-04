@@ -131,7 +131,7 @@ const GuidesHub = () => {
       </section>
 
       {/* Guide list */}
-      <section className="container mx-auto px-4 py-4 sm:py-6">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((guide, i) => {
             const style = categoryStyle[guide.category] || categoryStyle.Gear;

@@ -103,10 +103,10 @@ const Index = () => {
       </section>
 
       {/* ── TOOLS GRID (icon tiles, not cards) ── */}
-      <section className="container mx-auto px-4 py-12 sm:py-20">
-        <div className="mb-8 sm:mb-12">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
+        <div className="mb-8 sm:mb-10">
           <p className="text-xs font-bold uppercase tracking-widest text-primary">Toolkit</p>
-          <h2 className="mt-1 font-display text-2xl font-bold text-foreground sm:text-3xl">Quick access to every tool</h2>
+          <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Quick access to every tool</h2>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 sm:gap-4">
           {popularTools.map((tool, i) => (
@@ -136,7 +136,7 @@ const Index = () => {
             <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-accent backdrop-blur-sm">
               <Footprints className="h-3.5 w-3.5" /> New Tool
             </div>
-            <h2 className="font-display text-2xl font-bold text-primary-foreground sm:text-4xl">
+             <h2 className="font-display text-xl font-bold text-primary-foreground sm:text-3xl">
               Best Shoes Finder
             </h2>
             <p className="mt-3 text-primary-foreground/80 sm:text-lg">
@@ -153,7 +153,7 @@ const Index = () => {
       </section>
 
       {/* ── GUIDES + QUIZ SPLIT ── */}
-      <section className="container mx-auto px-4 py-12 sm:py-20">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
           {/* Guides */}
           <Link to="/guides" className="group relative overflow-hidden rounded-2xl">
@@ -191,11 +191,11 @@ const Index = () => {
 
       {/* ── EXPLORE HUBS ── */}
       <section className="border-t border-border bg-secondary/30">
-        <div className="container mx-auto px-4 py-12 sm:py-16">
+        <div className="container mx-auto px-4 py-10 sm:py-14">
           <div className="mb-8 flex items-center justify-between">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-primary">Discover</p>
-              <h2 className="mt-1 font-display text-2xl font-bold text-foreground sm:text-3xl">Product Hubs</h2>
+              <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Product Hubs</h2>
             </div>
             <Link to="/hub" className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex">
               View all <ArrowRight className="h-4 w-4" />
@@ -231,10 +231,10 @@ const Index = () => {
 
       {/* ── TRUST ── */}
       <section className="border-t border-border">
-        <div className="container mx-auto px-4 py-12 sm:py-16">
+        <div className="container mx-auto px-4 py-10 sm:py-14">
           <div className="mb-8 text-center">
             <p className="text-xs font-bold uppercase tracking-widest text-primary">Why RunLab</p>
-            <h2 className="mt-1 font-display text-2xl font-bold text-foreground sm:text-3xl">Built different</h2>
+            <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Built different</h2>
           </div>
           <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-3 sm:gap-8">
             {trustItems.map((item, i) => (
@@ -255,9 +255,9 @@ const Index = () => {
 
       {/* ── FINAL CTA ── */}
       <section className="bg-gradient-hero">
-        <div className="container mx-auto px-4 py-12 text-center sm:py-16">
+        <div className="container mx-auto px-4 py-10 text-center sm:py-14">
           <Compass className="mx-auto mb-4 h-8 w-8 text-primary-foreground/70" />
-          <h2 className="font-display text-2xl font-bold text-primary-foreground sm:text-3xl">Ready to level up?</h2>
+          <h2 className="font-display text-xl font-bold text-primary-foreground sm:text-2xl">Ready to level up?</h2>
           <p className="mx-auto mt-2 max-w-md text-primary-foreground/80">
             Start with any tool, take the quiz, or browse our product hubs — everything is free.
           </p>

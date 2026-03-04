@@ -51,16 +51,16 @@ const HubsIndex = () => {
       />
 
       {/* Minimal header */}
-      <section className="container mx-auto px-4 pt-8 sm:pt-12">
+      <section className="container mx-auto px-4 py-8 sm:py-10">
         <p className="mb-1 text-xs font-bold uppercase tracking-widest text-primary">Curated Collections</p>
-        <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">Product Hubs</h1>
+        <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">Product Hubs</h1>
         <p className="mt-2 max-w-lg text-base text-muted-foreground sm:text-lg">
           Dive into curated product collections for every category and sport.
         </p>
       </section>
 
       {/* Large image cards per category */}
-      <section className="container mx-auto px-4 py-8 sm:py-12">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
         <div className="space-y-6 sm:space-y-8">
           {Object.entries(grouped).map(([category, categoryHubs], ci) => (
             <motion.div

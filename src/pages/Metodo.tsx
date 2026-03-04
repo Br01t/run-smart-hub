@@ -37,10 +37,10 @@ const Metodo = () => {
 
       {/* Header */}
       <section className="border-b border-border bg-secondary/30">
-        <div className="container mx-auto max-w-3xl px-4 py-10 text-center sm:py-14">
+        <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-10 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">Transparency</p>
-            <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">Our Method</h1>
+            <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">Our Method</h1>
             <p className="mx-auto mt-3 max-w-md text-base text-muted-foreground sm:text-lg">
               How RunLab works and why you can trust our recommendations.
             </p>
@@ -49,7 +49,7 @@ const Metodo = () => {
       </section>
 
       {/* Timeline-style steps */}
-      <section className="container mx-auto max-w-2xl px-4 py-8 sm:py-12">
+      <section className="container mx-auto max-w-2xl px-4 py-10 sm:py-14">
         <div className="relative space-y-0">
           {/* Vertical line */}
           <div className="absolute left-5 top-0 bottom-0 w-px bg-border sm:left-6" />
