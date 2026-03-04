@@ -24,6 +24,15 @@ const guides = [
 
 const categories = [...new Set(guides.map((g) => g.category))];
 
+const categoryStyle: Record<string, { active: string; inactive: string; dot: string }> = {
+  Gear: { active: "bg-primary text-primary-foreground", inactive: "border-primary/30 text-primary hover:bg-primary/10", dot: "bg-primary" },
+  Nutrition: { active: "bg-accent text-accent-foreground", inactive: "border-accent/30 text-accent hover:bg-accent/10", dot: "bg-accent" },
+  Recovery: { active: "bg-violet-600 text-white", inactive: "border-violet-400/30 text-violet-600 hover:bg-violet-50", dot: "bg-violet-600" },
+  Health: { active: "bg-rose-600 text-white", inactive: "border-rose-400/30 text-rose-600 hover:bg-rose-50", dot: "bg-rose-600" },
+  Training: { active: "bg-sky-600 text-white", inactive: "border-sky-400/30 text-sky-600 hover:bg-sky-50", dot: "bg-sky-600" },
+  Trail: { active: "bg-emerald-700 text-white", inactive: "border-emerald-400/30 text-emerald-700 hover:bg-emerald-50", dot: "bg-emerald-700" },
+};
+
 const GuidesHub = () => {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -92,23 +101,27 @@ const GuidesHub = () => {
         <div className="mt-4 flex flex-wrap gap-2">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
-              !activeCategory ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
+            className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all ${
+              !activeCategory ? "bg-foreground text-background border-foreground" : "border-border text-muted-foreground hover:text-foreground hover:border-foreground/40"
             }`}
           >
             All
           </button>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
-              className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
-                activeCategory === cat ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {categories.map((cat) => {
+            const style = categoryStyle[cat] || categoryStyle.Gear;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
+                className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all flex items-center gap-1.5 ${
+                  activeCategory === cat ? style.active + " border-transparent" : style.inactive
+                }`}
+              >
+                <span className={`inline-block h-2 w-2 rounded-full ${activeCategory === cat ? "bg-current opacity-60" : style.dot}`} />
+                {cat}
+              </button>
+            );
+          })}
         </div>
 
         {/* Results count */}
@@ -119,46 +132,47 @@ const GuidesHub = () => {
 
       {/* Guide list */}
       <section className="container mx-auto px-4 py-4 sm:py-6">
-        <div className="divide-y divide-border">
-          {filtered.map((guide, i) => (
-            <motion.div
-              key={guide.slug}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.06, duration: 0.4 }}
-            >
-              <Link
-                to={`/guides/${guide.slug}`}
-                className="group flex items-start gap-4 py-6 transition-colors sm:gap-6 sm:py-8"
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((guide, i) => {
+            const style = categoryStyle[guide.category] || categoryStyle.Gear;
+            return (
+              <motion.div
+                key={guide.slug}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05, duration: 0.4 }}
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 font-display text-lg font-bold text-primary sm:h-12 sm:w-12 sm:text-xl">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="flex-1">
-                  <div className="mb-1 flex items-center gap-3">
-                    <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
+                <Link
+                  to={`/guides/${guide.slug}`}
+                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1"
+                >
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${style.active}`}>
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-current opacity-60" />
                       {guide.category}
                     </span>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" /> {guide.readTime}
                     </span>
                   </div>
-                  <h2 className="font-display text-lg font-bold text-foreground transition-colors group-hover:text-primary sm:text-xl lg:text-2xl">
+                  <h2 className="mb-2 font-display text-base font-bold text-card-foreground transition-colors group-hover:text-primary sm:text-lg">
                     {guide.title}
                   </h2>
-                  <p className="mt-1 text-sm text-muted-foreground sm:text-base">{guide.excerpt}</p>
-                </div>
-                <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:text-primary" />
-              </Link>
-            </motion.div>
-          ))}
-          {filtered.length === 0 && (
-            <div className="py-12 text-center">
-              <p className="text-sm text-muted-foreground">No guides match your search. Try different keywords.</p>
-            </div>
-          )}
+                  <p className="mb-4 flex-1 text-sm text-muted-foreground line-clamp-3">{guide.excerpt}</p>
+                  <div className="flex items-center gap-1.5 text-sm font-semibold text-primary transition-all group-hover:gap-2.5">
+                    Read guide <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
+        {filtered.length === 0 && (
+          <div className="py-12 text-center">
+            <p className="text-sm text-muted-foreground">No guides match your search. Try different keywords.</p>
+          </div>
+        )}
 
         {/* ZoneRun banner */}
         <div className="mt-8">

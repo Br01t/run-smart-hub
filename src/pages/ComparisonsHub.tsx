@@ -183,6 +183,14 @@ const ComparisonsHub = () => {
               <div className="flex gap-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-3">
                 {items.map((c, i) => {
                   const slug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+                  const goalBg: Record<string, string> = {
+                    performance: "from-primary/5 to-primary/10 border-primary/20",
+                    recupero: "from-violet-500/5 to-violet-500/10 border-violet-400/20",
+                    idratazione: "from-sky-500/5 to-sky-500/10 border-sky-400/20",
+                    dimagrimento: "from-rose-500/5 to-rose-500/10 border-rose-400/20",
+                    "prevenzione-infortuni": "from-amber-500/5 to-amber-500/10 border-amber-400/20",
+                    resistenza: "from-emerald-500/5 to-emerald-500/10 border-emerald-400/20",
+                  };
                   return (
                     <motion.div
                       key={slug}
@@ -194,17 +202,17 @@ const ComparisonsHub = () => {
                     >
                       <Link
                         to={`/comparison/${slug}`}
-                        className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1"
+                        className={`group flex h-full flex-col rounded-2xl border bg-gradient-to-br p-5 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 ${goalBg[c.obiettivo] || "from-muted/50 to-muted border-border"}`}
                       >
                         <div className="mb-3 flex items-center gap-2">
                           <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${goalColors[c.obiettivo] || "bg-muted text-muted-foreground"}`}>
                             {translateGoal(c.obiettivo)}
                           </span>
-                          <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">
+                          <span className="rounded-full bg-card/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-card-foreground">
                             {translateCategory(c.categoria)}
                           </span>
                         </div>
-                        <h3 className="mb-2 font-display text-base font-bold capitalize text-card-foreground">
+                        <h3 className="mb-2 font-display text-base font-bold capitalize text-foreground">
                           {translateCategory(c.categoria)} for {translateSport(c.sport)}
                         </h3>
                         <p className="mb-4 flex-1 text-sm text-muted-foreground line-clamp-3">{c.intro}</p>
