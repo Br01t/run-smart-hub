@@ -165,7 +165,7 @@ const ComparisonsHub = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-8 sm:py-12">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
         {filtered.length === 0 ? (
           <div className="py-12 text-center">
             <p className="text-lg font-semibold text-muted-foreground">No comparisons match your filters.</p>

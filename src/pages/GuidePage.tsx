@@ -514,7 +514,7 @@ const GuidePage = () => {
         </div>
       </div>
 
-      <article className="container mx-auto max-w-3xl px-4 py-6 sm:py-8 lg:py-10">
+      <article className="container mx-auto max-w-3xl px-4 py-8 sm:py-10 lg:py-12">
         {/* Description */}
         <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
           {guide.description}
@@ -566,7 +566,7 @@ const GuidePage = () => {
         {/* Related Tools */}
         {guide.relatedTools.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <Wrench className="h-5 w-5 text-primary" /> Try These Tools
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -590,7 +590,7 @@ const GuidePage = () => {
         {/* Related Comparisons */}
         {relatedComparisons.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <BarChart3 className="h-5 w-5 text-primary" /> Related Comparisons
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -615,7 +615,7 @@ const GuidePage = () => {
         {/* Related Guides */}
         {guide.relatedGuides.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <BookOpen className="h-5 w-5 text-primary" /> Keep Reading
             </h2>
             <div className="grid gap-3">

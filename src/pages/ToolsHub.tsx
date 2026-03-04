@@ -82,7 +82,7 @@ const ToolsHub = () => {
       </section>
 
       {/* Tool grid */}
-      <section className="container mx-auto px-4 py-8 sm:py-12">
+      <section className="container mx-auto px-4 py-10 sm:py-14">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {allTools.map((tool, i) => (
             <motion.div key={tool.to} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>

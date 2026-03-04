@@ -80,16 +80,16 @@ const HubPage = () => {
         description: hub.description,
       }} />
 
-      <div className="container mx-auto max-w-4xl px-4 py-6 sm:py-8">
+      <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-10">
         <Link to="/hub" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
           <ArrowLeft className="h-4 w-4" /> All Hubs
         </Link>
 
-        <header className="mb-6 sm:mb-8">
+        <header className="mb-8 sm:mb-10">
           <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium capitalize text-primary">
             <Package className="h-3.5 w-3.5" /> {hub.category} · {hub.sport}
           </div>
-          <h1 className="font-display text-xl font-bold text-foreground sm:text-2xl lg:text-3xl">{hub.title}</h1>
+          <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">{hub.title}</h1>
           <p className="mt-2 text-sm text-muted-foreground leading-relaxed sm:text-base">{hub.intro}</p>
         </header>
 
@@ -99,7 +99,7 @@ const HubPage = () => {
         {/* Comparison Links */}
         {matchedComparisons.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <BarChart3 className="h-5 w-5 text-primary" /> Detailed Comparisons
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -128,7 +128,7 @@ const HubPage = () => {
         {/* Related Tools */}
         {hub.relatedTools.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <Wrench className="h-5 w-5 text-primary" /> Related Tools
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -152,7 +152,7 @@ const HubPage = () => {
         {/* Related Guides */}
         {hub.relatedGuides.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-semibold text-foreground sm:text-xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
               <BookOpen className="h-5 w-5 text-primary" /> Related Guides
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
