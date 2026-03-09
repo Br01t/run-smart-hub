@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowRight, Droplets, Flame, Scale, Footprints, Zap, Dumbbell,
-  FlaskConical, ShieldCheck, BarChart3, BookOpen, Compass, Users
+  FlaskConical, ShieldCheck, BarChart3, BookOpen, Compass, Users, HelpCircle
 } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
