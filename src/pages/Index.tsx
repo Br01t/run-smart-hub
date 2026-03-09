@@ -39,6 +39,17 @@ const trustItems = [
   { icon: BarChart3, title: "Personalized", text: "Results tailored to your body and goals." },
 ];
 
+const faqItems = [
+  { q: "What tools does RunLab offer for runners?", a: "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." },
+  { q: "Are RunLab's running calculators free?", a: "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." },
+  { q: "How much water should I drink while running?", a: "On average 400–800 ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." },
+  { q: "How many calories do you burn running a mile?", a: "A general estimate is about 80–120 calories per mile depending on body weight, pace and terrain. Heavier runners and faster paces burn more. Use the Calories Burned Calculator for a personalized figure." },
+  { q: "How much protein do runners need per day?", a: "Endurance runners typically need 1.2–1.7 g of protein per kg of body weight per day, depending on training volume and goals. The Protein Needs Calculator can give you a tailored recommendation." },
+  { q: "What are the best running shoes for beginners?", a: "Beginners generally benefit from neutral, well-cushioned shoes with moderate drop (8–10 mm). The right shoe depends on foot type, surface and budget. Try RunLab's Shoe Finder to get matched in under a minute." },
+  { q: "How do electrolytes affect running performance?", a: "Electrolytes — especially sodium, potassium and magnesium — help maintain fluid balance, prevent cramps and support muscle function. Losses increase with heat and duration. Use the Electrolyte Calculator to estimate your needs." },
+  { q: "What is a healthy BMI for runners?", a: "Most competitive runners fall between 18.5 and 24.9 BMI, but BMI alone doesn't account for muscle mass or body composition. It's best used as one data point alongside other metrics. Try the BMI Calculator for context." },
+];
+
 const Index = () => {
   return (
     <Layout>
