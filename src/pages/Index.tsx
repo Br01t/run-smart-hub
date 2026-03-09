@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowRight, Droplets, Flame, Scale, Footprints, Zap, Dumbbell,
-  FlaskConical, ShieldCheck, BarChart3, BookOpen, Compass, Users
+  FlaskConical, ShieldCheck, BarChart3, BookOpen, Compass, Users, HelpCircle
 } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
@@ -36,6 +37,17 @@ const trustItems = [
   { icon: FlaskConical, title: "Evidence-Based", text: "Every formula grounded in peer-reviewed research." },
   { icon: ShieldCheck, title: "No Sponsorships", text: "Independent recommendations you can trust." },
   { icon: BarChart3, title: "Personalized", text: "Results tailored to your body and goals." },
+];
+
+const faqItems = [
+  { q: "What tools does RunLab offer for runners?", a: "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." },
+  { q: "Are RunLab's running calculators free?", a: "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." },
+  { q: "How much water should I drink while running?", a: "On average 400–800 ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." },
+  { q: "How many calories do you burn running a mile?", a: "A general estimate is about 80–120 calories per mile depending on body weight, pace and terrain. Heavier runners and faster paces burn more. Use the Calories Burned Calculator for a personalized figure." },
+  { q: "How much protein do runners need per day?", a: "Endurance runners typically need 1.2–1.7 g of protein per kg of body weight per day, depending on training volume and goals. The Protein Needs Calculator can give you a tailored recommendation." },
+  { q: "What are the best running shoes for beginners?", a: "Beginners generally benefit from neutral, well-cushioned shoes with moderate drop (8–10 mm). The right shoe depends on foot type, surface and budget. Try RunLab's Shoe Finder to get matched in under a minute." },
+  { q: "How do electrolytes affect running performance?", a: "Electrolytes — especially sodium, potassium and magnesium — help maintain fluid balance, prevent cramps and support muscle function. Losses increase with heat and duration. Use the Electrolyte Calculator to estimate your needs." },
+  { q: "What is a healthy BMI for runners?", a: "Most competitive runners fall between 18.5 and 24.9 BMI, but BMI alone doesn't account for muscle mass or body composition. It's best used as one data point alongside other metrics. Try the BMI Calculator for context." },
 ];
 
 const Index = () => {
@@ -72,21 +84,11 @@ const Index = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What tools does RunLab offer for runners?",
-              "acceptedAnswer": { "@type": "Answer", "text": "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." }
-            },
-            {
-              "@type": "Question",
-              "name": "Are RunLab's running calculators free?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." }
-            },
-            {
-              "@type": "Question",
-              "name": "How much water should I drink while running?",
-              "acceptedAnswer": { "@type": "Answer", "text": "On average 400-800ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." }
-            }
+            ...faqItems.map(faq => ({
+              "@type": "Question" as const,
+              "name": faq.q,
+              "acceptedAnswer": { "@type": "Answer" as const, "text": faq.a }
+            }))
           ]
         }
       ]} />
@@ -291,6 +293,33 @@ const Index = () => {
                 <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="border-t border-border">
+        <div className="container mx-auto px-4 py-10 sm:py-14">
+          <div className="mb-8 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary">FAQ</p>
+            <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Frequently Asked Questions</h2>
+            <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">
+              Quick answers to the most common questions runners ask about hydration, nutrition, gear and training.
+            </p>
+          </div>
+          <div className="mx-auto max-w-3xl">
+            <Accordion type="single" collapsible className="space-y-2">
+              {faqItems.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:shadow-card-hover">
+                  <AccordionTrigger className="text-left font-display text-sm font-semibold text-card-foreground hover:no-underline sm:text-base">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
