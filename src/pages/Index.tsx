@@ -297,6 +297,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <section className="border-t border-border">
+        <div className="container mx-auto px-4 py-10 sm:py-14">
+          <div className="mb-8 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary">FAQ</p>
+            <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Frequently Asked Questions</h2>
+            <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">
+              Quick answers to the most common questions runners ask about hydration, nutrition, gear and training.
+            </p>
+          </div>
+          <div className="mx-auto max-w-3xl">
+            <Accordion type="single" collapsible className="space-y-2">
+              {faqItems.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:shadow-card-hover">
+                  <AccordionTrigger className="text-left font-display text-sm font-semibold text-card-foreground hover:no-underline sm:text-base">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* ── ZONERUN BANNER ── */}
       <ZoneRunBanner variant="fullwidth" />
 
