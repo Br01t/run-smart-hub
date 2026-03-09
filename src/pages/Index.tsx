@@ -73,21 +73,11 @@ const Index = () => {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What tools does RunLab offer for runners?",
-              "acceptedAnswer": { "@type": "Answer", "text": "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." }
-            },
-            {
-              "@type": "Question",
-              "name": "Are RunLab's running calculators free?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." }
-            },
-            {
-              "@type": "Question",
-              "name": "How much water should I drink while running?",
-              "acceptedAnswer": { "@type": "Answer", "text": "On average 400-800ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." }
-            }
+            ...faqItems.map(faq => ({
+              "@type": "Question" as const,
+              "name": faq.q,
+              "acceptedAnswer": { "@type": "Answer" as const, "text": faq.a }
+            }))
           ]
         }
       ]} />
