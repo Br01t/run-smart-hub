@@ -1,7 +1,9 @@
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
+import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 
 interface CalculatorShellProps {
   title: string;
@@ -11,8 +13,31 @@ interface CalculatorShellProps {
 }
 
 const CalculatorShell = ({ title, description, icon: Icon, children }: CalculatorShellProps) => {
+  const location = useLocation();
+
   return (
     <div className="container mx-auto max-w-3xl px-4 py-6 sm:py-8">
+      <SEOHead title={title} description={description} path={location.pathname} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": title,
+        "description": description,
+        "url": `https://runlab.app${location.pathname}`,
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "RunLab",
+          "url": "https://runlab.app"
+        }
+      }} />
+
       <Link
         to="/tools"
         className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6"

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import ToolCard from "@/components/ToolCard";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import { Droplets, Flame, Scale, Dumbbell, Zap, Footprints, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import toolsHeroImg from "@/assets/tools-hero.jpg";
@@ -61,6 +62,22 @@ const ToolsHub = () => {
   return (
     <Layout>
       <SEOHead title="Calculators for Runners" description="Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance." path="/tools" />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Runner's Calculator Suite",
+        "description": "Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance.",
+        "url": "https://runlab.app/tools",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": allTools.map((tool, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://runlab.app${tool.to}`,
+            "name": tool.title
+          }))
+        }
+      }} />
 
       {/* Hero banner */}
       <section className="relative overflow-hidden">

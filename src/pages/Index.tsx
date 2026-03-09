@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import heroImage from "@/assets/hero-running.jpg";
 import guidesHero from "@/assets/guides-hero.jpg";
 import hubShoes from "@/assets/hub-shoes.jpg";
@@ -45,6 +46,50 @@ const Index = () => {
         description="Free science-based calculators for running, hydration, nutrition and recovery. Improve your performance with real data."
         path="/"
       />
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "RunLab",
+          "url": "https://runlab.app",
+          "description": "Free science-based calculators for running, hydration, nutrition and recovery.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://runlab.app/tools?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "RunLab",
+          "url": "https://runlab.app",
+          "logo": "https://runlab.app/favicon.ico",
+          "sameAs": [],
+          "description": "Free science-based tools and guides for runners. Calculators for hydration, calories, BMI, protein, electrolytes and shoe selection."
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What tools does RunLab offer for runners?",
+              "acceptedAnswer": { "@type": "Answer", "text": "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." }
+            },
+            {
+              "@type": "Question",
+              "name": "Are RunLab's running calculators free?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." }
+            },
+            {
+              "@type": "Question",
+              "name": "How much water should I drink while running?",
+              "acceptedAnswer": { "@type": "Answer", "text": "On average 400-800ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." }
+            }
+          ]
+        }
+      ]} />
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
