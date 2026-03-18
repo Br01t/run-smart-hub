@@ -6,8 +6,7 @@ import {
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-running.jpg";
 import guidesHero from "@/assets/guides-hero.jpg";
 import hubShoes from "@/assets/hub-shoes.jpg";
@@ -53,50 +52,45 @@ const faqItems = [
 const Index = () => {
   return (
     <Layout>
-      <SEOHead
-        title="Free Tools for Runners"
-        description="Free science-based calculators for running, hydration, nutrition and recovery. Improve your performance with real data."
+      <SEO
+        title="Best Running Tools & Shoe Finder 2025"
+        description="Optimize your performance with science-based running calculators for hydration, nutrition, and recovery. Find the best running shoes and gear with our expert guides."
         path="/"
-      />
-      <JsonLd data={[
-        {
+        schema={{
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "RunLab",
-          "url": "https://runlab.app",
-          "description": "Free science-based calculators for running, hydration, nutrition and recovery.",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://runlab.app/tools?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "RunLab",
-          "url": "https://runlab.app",
-          "logo": "https://runlab.app/favicon.ico",
-          "sameAs": [],
-          "description": "Free science-based tools and guides for runners. Calculators for hydration, calories, BMI, protein, electrolytes and shoe selection."
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            ...faqItems.map(faq => ({
-              "@type": "Question" as const,
-              "name": faq.q,
-              "acceptedAnswer": { "@type": "Answer" as const, "text": faq.a }
-            }))
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://runlab.app/#website",
+              "url": "https://runlab.app",
+              "name": "RunLab",
+              "description": "Science-backed tools and gear recommendations for runners.",
+              "publisher": { "@id": "https://runlab.app/#organization" }
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://runlab.app/#organization",
+              "name": "RunLab",
+              "url": "https://runlab.app",
+              "logo": { "@type": "ImageObject", "url": "https://runlab.app/favicon.ico" },
+              "description": "RunLab provides evidence-based calculators and unbiased gear reviews for runners of all levels."
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": faqItems.map(faq => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+              }))
+            }
           ]
-        }
-      ]} />
+        }}
+      />
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Runner at sunrise" className="h-full w-full object-cover object-top" />
+          <img src={heroImage} alt="Runner at sunrise on a trail" width={1440} height={900} fetchPriority="high" decoding="async" className="h-full w-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
         </div>
         <div className="relative container mx-auto px-4 py-20 sm:py-36">
@@ -110,8 +104,8 @@ const Index = () => {
               <Zap className="h-3.5 w-3.5" /> RunLab — Science Meets Performance
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-[1.1] text-primary-foreground sm:text-6xl lg:text-7xl">
-              Optimize every
-              <span className="block text-gradient-primary"> mile you run</span>
+              The Ultimate
+              <span className="block text-gradient-primary"> Runner's Toolkit</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base text-primary-foreground/80 sm:text-lg">
               Free calculators and interactive tools for hydration, nutrition, recovery and gear. All science-backed, no account needed.
@@ -153,7 +147,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-10 sm:py-14">
         <div className="mb-8 sm:mb-10">
           <p className="text-xs font-bold uppercase tracking-widest text-primary">Toolkit</p>
-          <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Quick access to every tool</h2>
+          <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Elite Running Calculators & Tools</h2>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 sm:gap-4">
           {popularTools.map((tool, i) => (
@@ -175,7 +169,7 @@ const Index = () => {
       {/* ── SHOE FINDER HIGHLIGHT (full-width banner) ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hubShoes} alt="Running shoes" className="h-full w-full object-cover" />
+          <img src={hubShoes} alt="Running shoes collection" width={1440} height={600} loading="lazy" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-transparent" />
         </div>
         <div className="relative container mx-auto px-4 py-12 sm:py-20">
@@ -204,7 +198,7 @@ const Index = () => {
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
           {/* Guides */}
           <Link to="/guides" className="group relative overflow-hidden rounded-2xl">
-            <img src={guidesHero} alt="Runner reading" className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-72" />
+            <img src={guidesHero} alt="Runner reading a training guide" width={720} height={288} loading="lazy" decoding="async" className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-72" />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
               <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-primary/80">
@@ -242,7 +236,7 @@ const Index = () => {
           <div className="mb-8 flex items-center justify-between">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-primary">Discover</p>
-              <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Product Hubs</h2>
+              <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Expert Gear Reviews & Hubs</h2>
             </div>
             <Link to="/hub" className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex">
               View all <ArrowRight className="h-4 w-4" />
@@ -294,6 +288,15 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── AFFILIATE DISCLOSURE ── */}
+      <section className="bg-muted px-4 py-8">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            <strong>Affiliate Disclosure:</strong> RunLab is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. This helps us keep our tools free and independent. Our recommendations are always based on science and performance data, never on sponsorship.
+          </p>
         </div>
       </section>
 
