@@ -23,6 +23,7 @@ const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
 const HubsIndex = lazy(() => import("./pages/HubsIndex"));
 const HubPage = lazy(() => import("./pages/HubPage"));
 const Metodo = lazy(() => import("./pages/Metodo"));
+const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/hub" element={<HubsIndex />} />
             <Route path="/hub/:category/:sport" element={<HubPage />} />
             <Route path="/method" element={<Metodo />} />
+            <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
