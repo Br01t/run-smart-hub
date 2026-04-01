@@ -23,6 +23,7 @@ const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
 const HubsIndex = lazy(() => import("./pages/HubsIndex"));
 const HubPage = lazy(() => import("./pages/HubPage"));
 const Metodo = lazy(() => import("./pages/Metodo"));
+const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
