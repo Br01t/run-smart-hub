@@ -62,6 +62,7 @@ const App = () => (
             <Route path="/hub" element={<HubsIndex />} />
             <Route path="/hub/:category/:sport" element={<HubPage />} />
             <Route path="/method" element={<Metodo />} />
+            <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

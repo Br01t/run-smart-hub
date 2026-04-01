@@ -97,6 +97,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <span className="font-display text-sm font-semibold text-foreground">RunLab</span>
             </div>
             <nav aria-label="Footer navigation" className="flex gap-4 text-sm text-muted-foreground">
+              <Link to="/about" className="hover:text-foreground transition-colors">About Us</Link>
               <Link to="/method" className="hover:text-foreground transition-colors">Our Method</Link>
               <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
             </nav>
