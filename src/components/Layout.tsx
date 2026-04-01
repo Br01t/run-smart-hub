@@ -10,6 +10,7 @@ const navLinks = [
   { to: "/guides", label: "Guides" },
   { to: "/quiz", label: "Quiz" },
   { to: "/method", label: "Our Method" },
+  { to: "/about", label: "About" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
