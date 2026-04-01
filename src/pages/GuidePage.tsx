@@ -22,6 +22,10 @@ import guideStretching from "@/assets/guide-stretching.jpg";
 import guideRunningForm from "@/assets/guide-running-form.jpg";
 import guideCadence from "@/assets/guide-cadence.jpg";
 import guideHillTraining from "@/assets/guide-hill-training.jpg";
+import guideRunningWatches from "@/assets/guide-running-watches.jpg";
+import guideWinterRunning from "@/assets/guide-winter-running.jpg";
+import guideIntervalTraining from "@/assets/guide-interval-training.jpg";
+import guideSleepRecovery from "@/assets/guide-sleep-recovery.jpg";
 
 type SectionVariant = "default" | "highlight" | "tip" | "warning" | "checklist";
 
@@ -367,9 +371,116 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "Downhill running technique", body: "Downhill running causes more muscle damage than uphill due to eccentric contractions. But it's a trainable skill. Lean into the descent, use quick light steps and let gravity do the work. Braking by landing on your heels increases impact forces by 3-4x.", variant: "tip" },
     ],
   },
+  "best-running-watches": {
+    title: "Best GPS Running Watches: Buyer's Guide",
+    description: "A comprehensive, independent guide to choosing the right GPS running watch. We break down features, accuracy, battery life and value across every budget — from entry-level to premium multisport.",
+    tags: ["accessori", "corsa"],
+    heroImage: guideRunningWatches,
+    readTime: "10 min read",
+    keyTakeaways: [
+      "GPS accuracy and heart rate reliability vary significantly between brands",
+      "Battery life is the #1 factor for ultra and trail runners",
+      "Mid-range watches ($200-350) offer the best value for most runners",
+    ],
+    relatedTools: [
+      { to: "/tools/calories", label: "Calories Calculator" },
+      { to: "/tools/hydration", label: "Hydration Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
+      { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
+    ],
+    sections: [
+      { heading: "Why a GPS watch matters", body: "A GPS running watch is more than a timer — it's your most objective training partner. It tracks pace, distance, heart rate, elevation and recovery metrics that help you train smarter, avoid overtraining and measure progress over weeks and months. Unlike phone apps, a dedicated watch provides real-time data without draining your phone battery or requiring you to carry it.", variant: "highlight" },
+      { heading: "Key features to compare", body: "Not all features matter equally. Prioritize based on your running type and goals.", variant: "checklist", listItems: ["GPS accuracy: multi-band GNSS is the gold standard for trail runners", "Optical heart rate: adequate for easy runs, less reliable at high intensity", "Battery life: 20+ hours GPS for marathoners, 40+ for ultra runners", "Navigation: breadcrumb trails and turn-by-turn for trail and adventure runs", "Training metrics: VO2max estimate, training load, recovery advisor", "Music storage: Spotify/Amazon offline playback without carrying a phone"] },
+      { heading: "Budget tier ($100-200)", body: "Entry-level GPS watches cover the essentials well. Expect reliable GPS tracking, basic heart rate monitoring and 10-15 hours of GPS battery life. These are ideal for beginner to intermediate road runners who want pace and distance data without complexity. Models in this range typically lack advanced navigation, multi-band GPS and detailed training analytics, but they're perfectly functional for 5K-to-marathon training.", variant: "default", listItems: ["Accurate GPS for road running and well-marked trails", "Optical HR suitable for zone training on easy-moderate runs", "Basic interval and workout features", "Smartphone notifications and activity tracking"] },
+      { heading: "Mid-range tier ($200-400)", body: "This is the sweet spot for serious recreational runners. You get multi-band GPS, more accurate HR sensors, training load tracking, recovery metrics, and 25-40 hours of GPS battery. Many models include offline maps, music storage and advanced workout builders. These watches can genuinely help you improve by providing data-driven insights into your training balance.", variant: "tip" },
+      { heading: "Premium tier ($400+)", body: "Premium watches are for competitive athletes, ultra runners and tech enthusiasts. Expect touchscreen AMOLED displays, solar charging, full topographic maps, advanced training analytics (stamina, HRV, power), and 60+ hours of GPS battery. The performance gains over mid-range are marginal for most runners — the jump is mainly in durability, display quality and ultra-long battery.", variant: "default" },
+      { heading: "Wrist HR vs chest strap", body: "Optical wrist HR sensors have improved dramatically but still struggle with high-intensity intervals, cold weather and dark skin tones. If you train by heart rate zones seriously, consider pairing your watch with a chest strap (Polar H10, Garmin HRM-Pro Plus) for threshold and interval sessions. Wrist HR is fine for easy and steady-state runs.", variant: "warning" },
+    ],
+  },
+  "winter-running": {
+    title: "How to Run Safely in Cold Weather",
+    description: "A practical guide to winter running: layering systems, essential gear, breathing techniques and safety precautions for training through the coldest months.",
+    tags: ["accessori", "corsa", "scarpe"],
+    heroImage: guideWinterRunning,
+    readTime: "8 min read",
+    keyTakeaways: [
+      "Dress for 10°C warmer than the actual temperature",
+      "Three layers (base, mid, outer) regulate temperature and moisture",
+      "Reflective gear and headlamps are essential for low-light runs",
+    ],
+    relatedTools: [
+      { to: "/tools/hydration", label: "Hydration Calculator" },
+      { to: "/tools/calories", label: "Calories Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
+      { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    ],
+    sections: [
+      { heading: "The layering system", body: "The key to comfortable winter running is layering — not bulk. A proper three-layer system wicks sweat away from your skin, insulates, and blocks wind and rain. The biggest mistake? Overdressing. You should feel slightly cool when you step outside — your body generates significant heat within the first 5-10 minutes of running.", variant: "highlight", listItems: ["Base layer: merino wool or synthetic moisture-wicking fabric (never cotton)", "Mid layer: lightweight fleece or insulated vest for temps below 0°C", "Outer layer: windproof, water-resistant jacket (not waterproof — you need breathability)"] },
+      { heading: "Extremities and exposed skin", body: "Your body prioritizes core temperature, reducing blood flow to hands, feet and ears. These are the first areas to suffer. A thin pair of running gloves, a merino beanie or headband, and wool-blend socks make a dramatic difference. For temperatures below -5°C, consider a buff or balaclava to warm the air before it enters your lungs.", variant: "checklist", listItems: ["Gloves: lightweight touchscreen-compatible for most conditions", "Head: merino beanie or ear-covering headband", "Feet: merino wool socks (avoid cotton — it retains moisture)", "Face: buff or neck gaiter pulled up in wind and extreme cold", "Vaseline: apply to cheeks and nose to prevent windburn"] },
+      { heading: "Traction and footing", body: "Ice and packed snow are the biggest injury risks in winter. Regular road shoes have zero grip on icy surfaces. Trail shoes with aggressive lugs provide some traction on snow, but for icy roads you'll need traction devices (Yaktrax, Kahtoola NANOspikes) that slip over your shoes. Shorten your stride on slippery surfaces and lower your center of gravity.", variant: "warning" },
+      { heading: "Visibility and safety", body: "Winter means shorter days and reduced visibility for both you and drivers. Reflective vests, LED armbands and a headlamp are non-negotiable for any low-light running. Stick to well-lit, familiar routes. Tell someone your planned route and expected return time, especially in extreme conditions.", variant: "tip" },
+      { heading: "Breathing in cold air", body: "Cold, dry air can trigger bronchospasm and irritate airways. Breathe through a buff or face covering to warm and humidify the air. If you have exercise-induced asthma, cold weather is a known trigger — carry your inhaler and warm up gradually. Nose breathing during easy runs naturally warms the air before it reaches your lungs.", variant: "default" },
+    ],
+  },
+  "interval-training": {
+    title: "Interval Training for Runners: The Complete Guide",
+    description: "Master every type of speed workout — from fartlek to VO2max repeats. Learn how to structure intervals, set target paces, and periodize speed work for race-day results.",
+    tags: ["corsa", "energia", "muscoli"],
+    heroImage: guideIntervalTraining,
+    readTime: "9 min read",
+    keyTakeaways: [
+      "Speed work should be max 20% of weekly volume (80/20 rule)",
+      "Different interval types target different energy systems",
+      "Always warm up 10-15 min before any speed session",
+    ],
+    relatedTools: [
+      { to: "/tools/calories", label: "Calories Calculator" },
+      { to: "/tools/hydration", label: "Hydration Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
+      { slug: "marathon-training", label: "Marathon Training Guide for Beginners" },
+    ],
+    sections: [
+      { heading: "Types of speed work", body: "Not all intervals are equal — each type trains a different physiological system. Understanding these differences lets you target specific weaknesses and peak for race day.", variant: "highlight", listItems: ["Strides: 80-100m accelerations at 90-95% effort with full recovery — neuromuscular activation", "Fartlek: unstructured speed play mixing fast and easy segments — great for beginners", "Tempo runs: 20-40 min at lactate threshold pace — teaches your body to clear lactate", "VO2max intervals: 3-5 min repeats at 95-100% max HR — improves oxygen processing", "Repetitions: 200-400m sprints with full recovery — develops pure speed and running economy"] },
+      { heading: "How to set target paces", body: "Your interval paces should be based on recent race performances or a time trial, not arbitrary numbers. A recent 5K time is the most practical reference point. Tempo pace is roughly your 1-hour race pace. VO2max intervals should be at your 3K-5K pace. If you can't finish the last rep at the same quality as the first, you started too fast.", variant: "tip" },
+      { heading: "Session structure", body: "Every speed session follows the same template: warm up, main set, cool down. Never skip the warm-up — it prepares your cardiovascular system, muscles and joints for intense effort, and dramatically reduces injury risk.", variant: "checklist", listItems: ["Warm-up: 10-15 min easy jog + dynamic stretches + 2-3 strides", "Main set: intervals at target pace with prescribed recovery", "Recovery between reps: jog or walk (never stop completely)", "Cool-down: 10 min easy jog + static stretching", "Total session: 45-75 minutes including warm-up and cool-down"] },
+      { heading: "Weekly programming", body: "For most runners, 1-2 speed sessions per week is optimal. More than that increases injury risk without proportional fitness gains. Separate hard sessions by at least 48 hours. A common weekly structure: Monday easy, Tuesday intervals, Wednesday easy, Thursday tempo, Friday rest, Saturday long run, Sunday easy or rest.", variant: "default" },
+      { heading: "Common interval mistakes", body: "The most common mistake is running recovery intervals too fast. Your recovery pace should be genuinely easy — walking is perfectly acceptable for short reps. Running recoveries too hard turns a precise training stimulus into generic 'hard running' that doesn't target any specific system effectively.", variant: "warning", listItems: ["Starting reps too fast and fading — practice even pacing", "Running recovery too hard — it should feel easy", "Doing speed work when fatigued from yesterday's session", "Skipping the warm-up — this is an injury waiting to happen", "Too much volume: quality over quantity for intervals"] },
+    ],
+  },
+  "sleep-and-running": {
+    title: "Sleep & Running Performance: The Science",
+    description: "Why sleep is the most powerful (and free) performance enhancer for runners. Learn how sleep quality affects recovery, injury risk, and race-day performance.",
+    tags: ["recupero", "proteine", "muscoli"],
+    heroImage: guideSleepRecovery,
+    readTime: "7 min read",
+    keyTakeaways: [
+      "One night of poor sleep reduces endurance performance by 11%",
+      "Growth hormone peaks during deep sleep — essential for muscle repair",
+      "Sleep extension (9+ hours) measurably improves sprint times and reaction time",
+    ],
+    relatedTools: [
+      { to: "/tools/protein", label: "Protein Calculator" },
+      { to: "/tools/hydration", label: "Hydration Calculator" },
+    ],
+    relatedGuides: [
+      { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
+      { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
+    ],
+    sections: [
+      { heading: "Sleep is your #1 recovery tool", body: "No supplement, foam roller or ice bath comes close to the restorative power of sleep. During deep sleep (stages 3-4), your body releases 70% of its daily growth hormone — the key driver of muscle repair and tissue regeneration. A Stanford study found that athletes who extended sleep to 9+ hours improved sprint times by 5% and reaction time by 9%. Sleep is not passive rest — it's active recovery.", variant: "highlight" },
+      { heading: "How poor sleep impacts running", body: "Sleep deprivation has measurable, negative effects on every aspect of running performance. Even one night of poor sleep (under 6 hours) impacts your body significantly.", variant: "warning", listItems: ["Endurance drops 11% after one bad night", "Perceived effort (RPE) increases — the same pace feels harder", "Glycogen replenishment is impaired — less fuel for tomorrow's run", "Injury risk increases 1.7x with less than 7 hours of sleep", "Immune function drops — making you more susceptible to illness during heavy training"] },
+      { heading: "Sleep hygiene for runners", body: "Sleep quality matters as much as quantity. These evidence-based habits improve both how fast you fall asleep and how much deep sleep you achieve.", variant: "checklist", listItems: ["Consistent schedule: same bedtime and wake time, even weekends (±30 min)", "Cool room: 16-19°C is optimal for deep sleep", "No screens 60 min before bed: blue light suppresses melatonin by 50%", "Avoid caffeine after 2pm: half-life is 5-6 hours", "Post-run timing: finish intense sessions at least 3 hours before bed", "Magnesium glycinate (200-400mg) before bed supports sleep quality"] },
+      { heading: "Naps and sleep banking", body: "A 20-30 minute nap between 1-3pm can partially compensate for a poor night's sleep without affecting nighttime sleep quality. Longer naps (60-90 minutes) include a full sleep cycle and are beneficial before races or during heavy training blocks. 'Sleep banking' — extending sleep for a week before a race — has been shown to buffer against race-week sleep disruptions.", variant: "tip" },
+      { heading: "Pre-race sleep strategy", body: "Race-night insomnia is extremely common — and largely harmless. Research shows that the sleep 2 nights before the race matters more than the night before. Bank extra sleep during race week, plan a calming pre-bed routine, and don't stress about race-night wakefulness. Your adrenaline will more than compensate on race day.", variant: "default" },
+    ],
+  },
 };
-
-/* ─── Section renderer with visual variants ─── */
 const SectionBlock = ({ section, index }: { section: GuideSection; index: number }) => {
   const isEven = index % 2 === 0;
 
