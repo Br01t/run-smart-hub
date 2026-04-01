@@ -22,6 +22,10 @@ import guideStretching from "@/assets/guide-stretching.jpg";
 import guideRunningForm from "@/assets/guide-running-form.jpg";
 import guideCadence from "@/assets/guide-cadence.jpg";
 import guideHillTraining from "@/assets/guide-hill-training.jpg";
+import guideRunningWatches from "@/assets/guide-running-watches.jpg";
+import guideWinterRunning from "@/assets/guide-winter-running.jpg";
+import guideIntervalTraining from "@/assets/guide-interval-training.jpg";
+import guideSleepRecovery from "@/assets/guide-sleep-recovery.jpg";
 
 type SectionVariant = "default" | "highlight" | "tip" | "warning" | "checklist";
 
