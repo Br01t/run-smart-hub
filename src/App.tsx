@@ -25,6 +25,8 @@ const HubPage = lazy(() => import("./pages/HubPage"));
 const Metodo = lazy(() => import("./pages/Metodo"));
 const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
