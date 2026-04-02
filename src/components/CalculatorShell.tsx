@@ -14,7 +14,7 @@ interface CalculatorShellProps {
 
 const CalculatorShell = ({ title, description, icon: Icon, children, keywords }: CalculatorShellProps) => {
   const location = useLocation();
-  const canonicalUrl = `https://runlab.app${location.pathname}`;
+  const canonicalUrl = `https://www.runners-hub.org${location.pathname}`;
 
   return (
     <div className="container mx-auto max-w-3xl px-4 py-6 sm:py-8">
@@ -33,13 +33,13 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
               "applicationCategory": "HealthApplication",
               "operatingSystem": "All",
               "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-              "author": { "@type": "Organization", "name": "RunLab", "url": "https://runlab.app" }
+              "author": { "@type": "Organization", "name": "RunLab", "url": "https://www.runners-hub.org" }
             },
             {
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://runlab.app" },
-                { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://runlab.app/tools" },
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://www.runners-hub.org/tools" },
                 { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl }
               ]
             }

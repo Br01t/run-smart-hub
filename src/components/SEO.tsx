@@ -14,9 +14,9 @@ interface SEOProps {
 const SEO = ({
   title = "RunLab – Free Tools for Runners",
   description = "Free science-based calculators for running, hydration, nutrition and recovery.",
-  canonical = "https://runlab.app/",
+  canonical = "https://www.runners-hub.org/",
   ogType = "website",
-  ogImage = "https://runlab.app/og-image.png",
+  ogImage = "https://www.runners-hub.org/og-image.png",
   twitterCard = "summary_large_image",
   schema,
 }: SEOProps) => {

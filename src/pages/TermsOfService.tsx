@@ -8,7 +8,7 @@ const TermsOfService = () => {
     "@type": "WebPage",
     name: "Terms of Service – RunLab",
     description: "Terms and conditions for using RunLab's website and tools.",
-    url: "https://runlab.app/terms",
+    url: "https://www.runners-hub.org/terms",
   };
 
   return (
@@ -30,7 +30,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="mb-2 font-display text-lg font-semibold text-foreground">1. Acceptance of Terms</h2>
             <p>
-              By accessing and using RunLab (runlab.app), you agree to be bound by these Terms of Service.
+              By accessing and using RunLab (www.runners-hub.org), you agree to be bound by these Terms of Service.
               If you do not agree to these terms, please do not use our website.
             </p>
           </section>
@@ -138,7 +138,7 @@ const TermsOfService = () => {
             <h2 className="mb-2 font-display text-lg font-semibold text-foreground">12. Contact</h2>
             <p>
               For questions about these Terms of Service, please contact us at{" "}
-              <span className="text-primary">legal@runlab.app</span>.
+              <span className="text-primary">legal@www.runners-hub.org</span>.
             </p>
           </section>
         </div>

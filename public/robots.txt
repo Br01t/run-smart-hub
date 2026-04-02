@@ -39,4 +39,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://runlab.app/sitemap.xml
+Sitemap: https://www.runners-hub.org/sitemap.xml

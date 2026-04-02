@@ -581,9 +581,9 @@ const GuidePage = () => {
         "@type": "Article",
         headline: guide.title,
         description: guide.description,
-        author: { "@type": "Organization", name: "RunLab", url: "https://runlab.app" },
-        publisher: { "@type": "Organization", name: "RunLab", url: "https://runlab.app", logo: { "@type": "ImageObject", url: "https://runlab.app/favicon.ico" } },
-        mainEntityOfPage: { "@type": "WebPage", "@id": `https://runlab.app/guides/${slug}` },
+        author: { "@type": "Organization", name: "RunLab", url: "https://www.runners-hub.org" },
+        publisher: { "@type": "Organization", name: "RunLab", url: "https://www.runners-hub.org", logo: { "@type": "ImageObject", url: "https://www.runners-hub.org/favicon.ico" } },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.runners-hub.org/guides/${slug}` },
         image: guide.heroImage,
         articleSection: guide.tags.join(", "),
         speakable: {

@@ -8,9 +8,9 @@ interface SEOHeadProps {
   imageUrl?: string;
 }
 
-const SITE_NAME = "RunLab";
-const BASE_URL = "https://runlab.app";
-const DEFAULT_IMAGE = "https://runlab.app/og-image.png";
+const SITE_NAME = "Runners Hub";
+const BASE_URL = "https://www.runners-hub.org";
+const DEFAULT_IMAGE = "https://www.runners-hub.org/og-image.png";
 
 const SEOHead = ({ title, description, path = "", type = "website", imageUrl }: SEOHeadProps) => {
   useEffect(() => {

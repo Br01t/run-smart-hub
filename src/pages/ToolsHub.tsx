@@ -67,13 +67,13 @@ const ToolsHub = () => {
         "@type": "CollectionPage",
         "name": "Runner's Calculator Suite",
         "description": "Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance.",
-        "url": "https://runlab.app/tools",
+        "url": "https://www.runners-hub.org/tools",
         "mainEntity": {
           "@type": "ItemList",
           "itemListElement": allTools.map((tool, i) => ({
             "@type": "ListItem",
             "position": i + 1,
-            "url": `https://runlab.app${tool.to}`,
+            "url": `https://www.runners-hub.org${tool.to}`,
             "name": tool.title
           }))
         }

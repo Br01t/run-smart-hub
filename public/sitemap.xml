@@ -1,66 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core pages -->
-  <url><loc>https://runlab.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://runlab.app/tools</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://runlab.app/guides</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://runlab.app/comparisons</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://runlab.app/hub</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/quiz</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/method</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://runlab.app/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.runners-hub.org/tools</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/guides</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/comparisons</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/hub</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/quiz</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/method</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.runners-hub.org/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Tools -->
-  <url><loc>https://runlab.app/tools/hydration</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/tools/calories</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/tools/bmi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/tools/protein</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/tools/electrolytes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/tools/shoes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/hydration</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/calories</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/bmi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/protein</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/electrolytes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/shoes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Guides -->
-  <url><loc>https://runlab.app/guides/choosing-running-shoes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/supplements-for-runners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/muscle-recovery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/running-nutrition</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/injury-prevention</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/marathon-training</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/trail-running-beginners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/running-heart-rate-zones</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/stretching-for-runners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/running-form</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/running-cadence</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://runlab.app/guides/hill-training</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/choosing-running-shoes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/supplements-for-runners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/muscle-recovery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-nutrition</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/injury-prevention</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/marathon-training</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/trail-running-beginners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-heart-rate-zones</loc><changefreq>monthly</priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/stretching-for-runners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-form</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-cadence</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/hill-training</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/best-running-watches</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/winter-running</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/interval-training</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/sleep-and-running</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Comparisons -->
-  <url><loc>https://runlab.app/comparison/integratori-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/integratori-per-corsa-recupero</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/accessori-per-corsa-idratazione</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/integratori-per-corsa-dimagrimento</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/scarpe-per-trail-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/recupero-per-corsa-prevenzione-infortuni</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/scarpe-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/accessori-per-trail-idratazione</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/integratori-per-trail-recupero</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/integratori-per-corsa-resistenza</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/recupero-per-trail-prevenzione-infortuni</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/comparison/accessori-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/integratori-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/integratori-per-corsa-recupero</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/accessori-per-corsa-idratazione</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/integratori-per-corsa-dimagrimento</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/scarpe-per-trail-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recupero-per-corsa-prevenzione-infortuni</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/scarpe-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/accessori-per-trail-idratazione</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/integratori-per-trail-recupero</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/integratori-per-corsa-resistenza</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recupero-per-trail-prevenzione-infortuni</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/accessori-per-corsa-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Hubs -->
-  <url><loc>https://runlab.app/hub/supplements/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/supplements/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/supplements/10k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/supplements/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/supplements/5k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/shoes/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/shoes/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/shoes/10k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/shoes/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/shoes/5k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/hydration/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/hydration/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/hydration/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/recovery/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/recovery/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://runlab.app/hub/recovery/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/10k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/5k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/10k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/5k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery/marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -12,17 +12,17 @@ const About = () => {
       "@type": "AboutPage",
       name: "About RunLab",
       description: "Independent running science platform providing evidence-based tools, guides, and product reviews for runners of all levels.",
-      url: "https://runlab.app/about",
+      url: "https://www.runners-hub.org/about",
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "RunLab",
-      url: "https://runlab.app",
-      logo: "https://runlab.app/og-image.png",
+      url: "https://www.runners-hub.org",
+      logo: "https://www.runners-hub.org/og-image.png",
       contactPoint: {
         "@type": "ContactPoint",
-        email: "hello@runlab.app",
+        email: "hello@www.runners-hub.org",
         contactType: "customer support",
       },
       sameAs: [],
@@ -147,21 +147,21 @@ const About = () => {
               <Mail className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">General Inquiries</p>
-                <a href="mailto:hello@runlab.app" className="text-sm text-primary hover:underline">hello@runlab.app</a>
+                <a href="mailto:hello@www.runners-hub.org" className="text-sm text-primary hover:underline">hello@www.runners-hub.org</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Users className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">Partnerships & Affiliates</p>
-                <a href="mailto:partners@runlab.app" className="text-sm text-primary hover:underline">partners@runlab.app</a>
+                <a href="mailto:partners@www.runners-hub.org" className="text-sm text-primary hover:underline">partners@www.runners-hub.org</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Target className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">Press & Media</p>
-                <a href="mailto:press@runlab.app" className="text-sm text-primary hover:underline">press@runlab.app</a>
+                <a href="mailto:press@www.runners-hub.org" className="text-sm text-primary hover:underline">press@www.runners-hub.org</a>
               </div>
             </div>
           </div>

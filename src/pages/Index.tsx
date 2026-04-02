@@ -61,18 +61,18 @@ const Index = () => {
           "@graph": [
             {
               "@type": "WebSite",
-              "@id": "https://runlab.app/#website",
-              "url": "https://runlab.app",
+              "@id": "https://www.runners-hub.org/#website",
+              "url": "https://www.runners-hub.org",
               "name": "RunLab",
               "description": "Science-backed tools and gear recommendations for runners.",
-              "publisher": { "@id": "https://runlab.app/#organization" }
+              "publisher": { "@id": "https://www.runners-hub.org/#organization" }
             },
             {
               "@type": "Organization",
-              "@id": "https://runlab.app/#organization",
+              "@id": "https://www.runners-hub.org/#organization",
               "name": "RunLab",
-              "url": "https://runlab.app",
-              "logo": { "@type": "ImageObject", "url": "https://runlab.app/favicon.ico" },
+              "url": "https://www.runners-hub.org",
+              "logo": { "@type": "ImageObject", "url": "https://www.runners-hub.org/favicon.ico" },
               "description": "RunLab provides evidence-based calculators and unbiased gear reviews for runners of all levels."
             },
             {

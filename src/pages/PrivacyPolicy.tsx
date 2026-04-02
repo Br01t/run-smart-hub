@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
     "@type": "WebPage",
     name: "Privacy Policy – RunLab",
     description: "How RunLab collects, uses, and protects your personal data.",
-    url: "https://runlab.app/privacy",
+    url: "https://www.runners-hub.org/privacy",
   };
 
   return (
@@ -30,9 +30,9 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="mb-2 font-display text-lg font-semibold text-foreground">1. Who We Are</h2>
             <p>
-              RunLab ("we", "us", "our") operates the website runlab.app. We are committed to protecting
+              RunLab ("we", "us", "our") operates the website www.runners-hub.org. We are committed to protecting
               your privacy and handling your personal data transparently. For any privacy-related inquiries,
-              contact us at <span className="text-primary">privacy@runlab.app</span>.
+              contact us at <span className="text-primary">privacy@www.runners-hub.org</span>.
             </p>
           </section>
 
@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
               <li>Request data portability.</li>
               <li>Lodge a complaint with your local data protection authority.</li>
             </ul>
-            <p className="mt-2">To exercise any of these rights, email us at <span className="text-primary">privacy@runlab.app</span>.</p>
+            <p className="mt-2">To exercise any of these rights, email us at <span className="text-primary">privacy@www.runners-hub.org</span>.</p>
           </section>
 
           <section>
