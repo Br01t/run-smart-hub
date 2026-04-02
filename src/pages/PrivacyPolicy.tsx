@@ -6,8 +6,8 @@ const PrivacyPolicy = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Privacy Policy – RunLab",
-    description: "How RunLab collects, uses, and protects your personal data.",
+    name: "Privacy Policy – Runners Hub",
+    description: "How Runners Hub collects, uses, and protects your personal data.",
     url: "https://www.runners-hub.org/privacy",
   };
 
@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
     <Layout>
       <SEOHead
         title="Privacy Policy"
-        description="How RunLab collects, uses, and protects your personal data under GDPR and international privacy regulations."
+        description="How Runners Hub collects, uses, and protects your personal data under GDPR and international privacy regulations."
         path="/privacy"
       />
       <JsonLd data={schema} />
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="mb-2 font-display text-lg font-semibold text-foreground">1. Who We Are</h2>
             <p>
-              RunLab ("we", "us", "our") operates the website www.runners-hub.org. We are committed to protecting
+              Runners Hub ("we", "us", "our") operates the website www.runners-hub.org. We are committed to protecting
               your privacy and handling your personal data transparently. For any privacy-related inquiries,
               contact us at <span className="text-primary">privacy@www.runners-hub.org</span>.
             </p>

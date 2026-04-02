@@ -4,20 +4,21 @@ import JsonLd from "@/components/JsonLd";
 import { Activity, Mail, Target, Users, TrendingUp, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo1.webp";
 
 const About = () => {
   const jsonLd = [
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
-      name: "About RunLab",
+      name: "About Runners Hub",
       description: "Independent running science platform providing evidence-based tools, guides, and product reviews for runners of all levels.",
       url: "https://www.runners-hub.org/about",
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "RunLab",
+      name: "Runners Hub",
       url: "https://www.runners-hub.org",
       logo: "https://www.runners-hub.org/og-image.png",
       contactPoint: {
@@ -33,7 +34,7 @@ const About = () => {
     <Layout>
       <SEOHead
         title="About Us — Our Mission & Team"
-        description="RunLab is an independent running science platform. Learn about our mission, editorial standards, and how we help runners make smarter decisions."
+        description="Runners Hub is an independent running science platform. Learn about our mission, editorial standards, and how we help runners make smarter decisions."
         path="/about"
       />
       <JsonLd data={jsonLd} />
@@ -41,11 +42,11 @@ const About = () => {
       {/* Hero */}
       <section className="bg-gradient-hero py-14 sm:py-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20 mb-6">
-            <Activity className="h-8 w-8 text-primary" />
+          <div className="mx-auto flex h-32 w-32 items-center justify-center overflow-hidden mb-6">
+            <img src={logo} alt="Runners Hub logo" width={96} height={96} loading="eager" decoding="async" className="h-24 w-24 object-contain" aria-hidden="true" />
           </div>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About RunLab
+            About Runners Hub
           </h1>
           <p className="mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground">
             Independent, evidence-based running science — built by runners, for runners.
@@ -59,13 +60,13 @@ const About = () => {
           <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Our Story</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              RunLab was born from a simple frustration: finding reliable, unbiased running advice shouldn't be this hard. Too many websites push products without proper research, and too few offer actionable tools backed by sports science.
+              Runners Hub was born from a simple frustration: finding reliable, unbiased running advice shouldn't be this hard. Too many websites push products without proper research, and too few offer actionable tools backed by sports science.
             </p>
             <p>
               We started as a small project in 2024, building calculators and writing guides that we wished existed when we were starting out. What began as a personal resource quickly grew into a platform used by thousands of runners looking for honest, data-driven recommendations.
             </p>
             <p>
-              Today, RunLab combines interactive tools, in-depth product reviews, and practical training guides — all grounded in peer-reviewed research and real-world running experience. We don't just list products; we analyze them, compare them, and help you find what actually works for your goals.
+              Today, Runners Hub combines interactive tools, in-depth product reviews, and practical training guides — all grounded in peer-reviewed research and real-world running experience. We don't just list products; we analyze them, compare them, and help you find what actually works for your goals.
             </p>
           </div>
         </div>
@@ -124,7 +125,7 @@ const About = () => {
               Transparency is central to everything we do. When we recommend a product, we explain exactly why. When we link to a product, we clearly disclose that we may earn a commission through affiliate partnerships — at no extra cost to you.
             </p>
             <p>
-              Our editorial team independently selects and reviews every product featured on RunLab. Affiliate relationships never influence our ratings, rankings, or recommendations. If a product doesn't meet our standards, we say so — or we simply don't feature it.
+              Our editorial team independently selects and reviews every product featured on Runners Hub. Affiliate relationships never influence our ratings, rankings, or recommendations. If a product doesn't meet our standards, we say so — or we simply don't feature it.
             </p>
             <p>
               For more details on how we evaluate products and maintain objectivity, visit our{" "}

@@ -19,7 +19,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Transparent Monetization",
-    body: "RunLab is sustained through affiliate links (Amazon, Decathlon, Top4Running, WeightWorld). When you buy through our links, we receive a small commission at no extra cost to you.",
+    body: "Runners Hub is sustained through affiliate links (Amazon, Decathlon, Top4Running, WeightWorld). When you buy through our links, we receive a small commission at no extra cost to you.",
     accent: "bg-accent/10 text-accent",
   },
   {
@@ -33,7 +33,7 @@ const steps = [
 const Metodo = () => {
   return (
     <Layout>
-      <SEOHead title="Our Method" description="Full transparency on how RunLab works and why you can trust our tools." path="/method" />
+      <SEOHead title="Our Method" description="Full transparency on how Runners Hub works and why you can trust our tools." path="/method" />
 
       {/* Header */}
       <section className="border-b border-border bg-secondary/30">
@@ -42,7 +42,7 @@ const Metodo = () => {
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">Transparency</p>
             <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">Our Method</h1>
             <p className="mx-auto mt-3 max-w-md text-base text-muted-foreground sm:text-lg">
-              How RunLab works and why you can trust our recommendations.
+              How Runners Hub works and why you can trust our recommendations.
             </p>
           </motion.div>
         </div>

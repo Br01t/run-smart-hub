@@ -4,7 +4,7 @@ import { ArrowRight, Clock, BookOpen, Search, X, TrendingUp } from "lucide-react
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
-import guidesHeroImg from "@/assets/guides-hero.jpg";
+import guidesHeroImg from "@/assets/guides-hero.webp";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const guides = [
@@ -83,7 +83,7 @@ const GuidesHub = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="overflow-hidden rounded-2xl"
             >
-              <img src={guidesHeroImg} alt="Running gear flat lay" className="h-48 w-full object-cover sm:h-64 lg:h-72" loading="eager" />
+              <img src={guidesHeroImg} alt="Running gear flat lay" width={800} height={400} fetchPriority="high" className="h-48 w-full object-cover sm:h-64 lg:h-72" loading="eager" decoding="async" />
             </motion.div>
           </div>
         </div>

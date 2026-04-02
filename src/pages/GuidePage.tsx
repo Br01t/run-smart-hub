@@ -10,22 +10,22 @@ import productsData from "@/data/products.json";
 import comparisonsData from "@/data/comparisons.json";
 
 // Hero images
-import guideShoes from "@/assets/guide-shoes.jpg";
-import guideSupplements from "@/assets/guide-supplements.jpg";
-import guideRecovery from "@/assets/guide-recovery.jpg";
-import guideNutrition from "@/assets/guide-nutrition.jpg";
-import guideInjury from "@/assets/guide-injury.jpg";
-import guideMarathon from "@/assets/guide-marathon.jpg";
-import guideTrail from "@/assets/guide-trail.jpg";
-import guideHeartrate from "@/assets/guide-heartrate.jpg";
-import guideStretching from "@/assets/guide-stretching.jpg";
-import guideRunningForm from "@/assets/guide-running-form.jpg";
-import guideCadence from "@/assets/guide-cadence.jpg";
-import guideHillTraining from "@/assets/guide-hill-training.jpg";
-import guideRunningWatches from "@/assets/guide-running-watches.jpg";
-import guideWinterRunning from "@/assets/guide-winter-running.jpg";
-import guideIntervalTraining from "@/assets/guide-interval-training.jpg";
-import guideSleepRecovery from "@/assets/guide-sleep-recovery.jpg";
+import guideShoes from "@/assets/guide-shoes.webp";
+import guideSupplements from "@/assets/guide-supplements.webp";
+import guideRecovery from "@/assets/guide-recovery.webp";
+import guideNutrition from "@/assets/guide-nutrition.webp";
+import guideInjury from "@/assets/guide-injury.webp";
+import guideMarathon from "@/assets/guide-marathon.webp";
+import guideTrail from "@/assets/guide-trail.webp";
+import guideHeartrate from "@/assets/guide-heartrate.webp";
+import guideStretching from "@/assets/guide-stretching.webp";
+import guideRunningForm from "@/assets/guide-running-form.webp";
+import guideCadence from "@/assets/guide-cadence.webp";
+import guideHillTraining from "@/assets/guide-hill-training.webp";
+import guideRunningWatches from "@/assets/guide-running-watches.webp";
+import guideWinterRunning from "@/assets/guide-winter-running.webp";
+import guideIntervalTraining from "@/assets/guide-interval-training.webp";
+import guideSleepRecovery from "@/assets/guide-sleep-recovery.webp";
 
 type SectionVariant = "default" | "highlight" | "tip" | "warning" | "checklist";
 
@@ -581,8 +581,8 @@ const GuidePage = () => {
         "@type": "Article",
         headline: guide.title,
         description: guide.description,
-        author: { "@type": "Organization", name: "RunLab", url: "https://www.runners-hub.org" },
-        publisher: { "@type": "Organization", name: "RunLab", url: "https://www.runners-hub.org", logo: { "@type": "ImageObject", url: "https://www.runners-hub.org/favicon.ico" } },
+        author: { "@type": "Organization", name: "Runners Hub", url: "https://www.runners-hub.org" },
+        publisher: { "@type": "Organization", name: "Runners Hub", url: "https://www.runners-hub.org", logo: { "@type": "ImageObject", url: "https://www.runners-hub.org/favicon.ico" } },
         mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.runners-hub.org/guides/${slug}` },
         image: guide.heroImage,
         articleSection: guide.tags.join(", "),
@@ -609,8 +609,12 @@ const GuidePage = () => {
         <img
           src={guide.heroImage}
           alt={guide.title}
+          width={1200}
+          height={400}
+          fetchPriority="high"
           className="h-48 w-full object-cover opacity-60 sm:h-64 md:h-80 lg:h-96"
           loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent" />
         <div className="absolute inset-0 flex items-end">

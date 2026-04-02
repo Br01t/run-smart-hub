@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import { Droplets, Flame, Scale, Dumbbell, Zap, Footprints, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import toolsHeroImg from "@/assets/tools-hero.jpg";
+import toolsHeroImg from "@/assets/tools-hero.webp";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const allTools = [
@@ -82,7 +82,7 @@ const ToolsHub = () => {
       {/* Hero banner */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={toolsHeroImg} alt="Runner on track" className="h-full w-full object-cover" />
+          <img src={toolsHeroImg} alt="Runner on track" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
         </div>
         <div className="relative container mx-auto px-4 py-12 sm:py-20">

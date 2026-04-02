@@ -33,7 +33,7 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
               "applicationCategory": "HealthApplication",
               "operatingSystem": "All",
               "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-              "author": { "@type": "Organization", "name": "RunLab", "url": "https://www.runners-hub.org" }
+              "author": { "@type": "Organization", "name": "Runners Hub", "url": "https://www.runners-hub.org" }
             },
             {
               "@type": "BreadcrumbList",

@@ -7,9 +7,9 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/hero-running.jpg";
-import guidesHero from "@/assets/guides-hero.jpg";
-import hubShoes from "@/assets/hub-shoes.jpg";
+import heroImage from "@/assets/hero-running.webp";
+import guidesHero from "@/assets/guides-hero.webp";
+import hubShoes from "@/assets/hub-shoes.webp";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const fadeUp = {
@@ -39,12 +39,12 @@ const trustItems = [
 ];
 
 const faqItems = [
-  { q: "What tools does RunLab offer for runners?", a: "RunLab offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." },
-  { q: "Are RunLab's running calculators free?", a: "Yes, all RunLab tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." },
-  { q: "How much water should I drink while running?", a: "On average 400–800 ml per hour, depending on temperature, intensity and individual sweat rate. Use RunLab's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." },
+  { q: "What tools does Runners Hub offer for runners?", a: "Runners Hub offers 6 free science-based calculators: Hydration Calculator, Calories Burned Calculator, BMI Calculator, Protein Needs Calculator, Electrolyte Calculator, and a Shoe Finder tool." },
+  { q: "Are Runners Hub's running calculators free?", a: "Yes, all Runners Hub tools are 100% free with no sign-up required. Every formula is based on peer-reviewed research." },
+  { q: "How much water should I drink while running?", a: "On average 400–800 ml per hour, depending on temperature, intensity and individual sweat rate. Use Runners Hub's Hydration Calculator for a personalized recommendation based on your weight, duration and conditions." },
   { q: "How many calories do you burn running a mile?", a: "A general estimate is about 80–120 calories per mile depending on body weight, pace and terrain. Heavier runners and faster paces burn more. Use the Calories Burned Calculator for a personalized figure." },
   { q: "How much protein do runners need per day?", a: "Endurance runners typically need 1.2–1.7 g of protein per kg of body weight per day, depending on training volume and goals. The Protein Needs Calculator can give you a tailored recommendation." },
-  { q: "What are the best running shoes for beginners?", a: "Beginners generally benefit from neutral, well-cushioned shoes with moderate drop (8–10 mm). The right shoe depends on foot type, surface and budget. Try RunLab's Shoe Finder to get matched in under a minute." },
+  { q: "What are the best running shoes for beginners?", a: "Beginners generally benefit from neutral, well-cushioned shoes with moderate drop (8–10 mm). The right shoe depends on foot type, surface and budget. Try Runners Hub's Shoe Finder to get matched in under a minute." },
   { q: "How do electrolytes affect running performance?", a: "Electrolytes — especially sodium, potassium and magnesium — help maintain fluid balance, prevent cramps and support muscle function. Losses increase with heat and duration. Use the Electrolyte Calculator to estimate your needs." },
   { q: "What is a healthy BMI for runners?", a: "Most competitive runners fall between 18.5 and 24.9 BMI, but BMI alone doesn't account for muscle mass or body composition. It's best used as one data point alongside other metrics. Try the BMI Calculator for context." },
 ];
@@ -63,17 +63,17 @@ const Index = () => {
               "@type": "WebSite",
               "@id": "https://www.runners-hub.org/#website",
               "url": "https://www.runners-hub.org",
-              "name": "RunLab",
+              "name": "Runners Hub",
               "description": "Science-backed tools and gear recommendations for runners.",
               "publisher": { "@id": "https://www.runners-hub.org/#organization" }
             },
             {
               "@type": "Organization",
               "@id": "https://www.runners-hub.org/#organization",
-              "name": "RunLab",
+              "name": "Runners Hub",
               "url": "https://www.runners-hub.org",
               "logo": { "@type": "ImageObject", "url": "https://www.runners-hub.org/favicon.ico" },
-              "description": "RunLab provides evidence-based calculators and unbiased gear reviews for runners of all levels."
+              "description": "Runners Hub provides evidence-based calculators and unbiased gear reviews for runners of all levels."
             },
             {
               "@type": "FAQPage",
@@ -90,7 +90,7 @@ const Index = () => {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Runner at sunrise on a trail" width={1440} height={900} fetchPriority="high" decoding="async" className="h-full w-full object-cover object-top" />
+          <img src={heroImage} alt="Runner at sunrise on a trail" width={1440} height={900} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
         </div>
         <div className="relative container mx-auto px-4 py-20 sm:py-36">
@@ -101,7 +101,7 @@ const Index = () => {
             className="mx-auto max-w-3xl text-center"
           >
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary-foreground backdrop-blur-sm">
-              <Zap className="h-3.5 w-3.5" /> RunLab — Science Meets Performance
+              <Zap className="h-3.5 w-3.5" /> Runners Hub — Science Meets Performance
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-[1.1] text-primary-foreground sm:text-6xl lg:text-7xl">
               The Ultimate
@@ -274,7 +274,7 @@ const Index = () => {
       <section className="border-t border-border">
         <div className="container mx-auto px-4 py-10 sm:py-14">
           <div className="mb-8 text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary">Why RunLab</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-primary">Why Runners Hub</p>
             <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">Built different</h2>
           </div>
           <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-3 sm:gap-8">
@@ -295,7 +295,7 @@ const Index = () => {
       <section className="bg-muted px-4 py-8">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-xs text-muted-foreground leading-relaxed">
-            <strong>Affiliate Disclosure:</strong> RunLab is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. This helps us keep our tools free and independent. Our recommendations are always based on science and performance data, never on sponsorship.
+            <strong>Affiliate Disclosure:</strong> Runners Hub is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. This helps us keep our tools free and independent. Our recommendations are always based on science and performance data, never on sponsorship.
           </p>
         </div>
       </section>

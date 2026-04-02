@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Activity, Menu, X, Cookie } from "lucide-react";
 import { useState } from "react";
 import CookieConsent, { resetCookieConsent } from "./CookieConsent";
+import logo from "@/assets/logo1.webp";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -30,11 +31,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
-          <Link to="/" className="flex items-center gap-2" aria-label="RunLab homepage">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-hero">
-              <Activity className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
+          <Link to="/" className="flex items-center gap-4" aria-label="Runners Hub homepage">
+            <div className="flex h-14 w-14 items-center justify-center overflow-hidden">
+              <img src={logo} alt="Runners Hub logo" className="h-12 w-12 object-contain" aria-hidden="true" />
             </div>
-            <span className="font-display text-xl font-bold text-foreground">RunLab</span>
+            <span className="font-display text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">Runners Hub</span>
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
@@ -93,9 +94,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <footer className="border-t border-border bg-secondary/50">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <div className="flex items-center gap-2">
-              <Activity className="h-4 w-4 text-primary" aria-hidden="true" />
-              <span className="font-display text-sm font-semibold text-foreground">RunLab</span>
+            <div className="flex items-center gap-4">
+              <img src={logo} alt="" className="h-12 w-12 object-contain" aria-hidden="true" />
+              <span className="font-display text-lg font-extrabold text-foreground">Runners Hub</span>
             </div>
             <nav aria-label="Footer navigation" className="flex flex-wrap gap-4 text-sm text-muted-foreground">
               <Link to="/about" className="hover:text-foreground transition-colors">About Us</Link>
@@ -112,7 +113,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </button>
             </nav>
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} RunLab. For informational purposes only.
+              © {new Date().getFullYear()} Runners Hub. For informational purposes only.
             </p>
           </div>
         </div>

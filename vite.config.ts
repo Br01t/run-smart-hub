@@ -34,11 +34,12 @@ export default defineConfig(({ mode }) => ({
             "@radix-ui/react-select",
             "@radix-ui/react-tabs",
             "@radix-ui/react-tooltip",
+            "lucide-react",
           ],
         },
       },
     },
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 10240,
     cssCodeSplit: true,
   },
 }));

@@ -9,7 +9,7 @@ type CookiePreferences = {
   marketing: boolean;
 };
 
-const STORAGE_KEY = "runlab_cookie_consent";
+const STORAGE_KEY = "runners_hub_cookie_consent";
 
 const getStoredPreferences = (): CookiePreferences | null => {
   try {

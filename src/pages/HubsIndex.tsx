@@ -5,10 +5,10 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import hubsData from "@/data/hubs.json";
 
-import hubSupplementsImg from "@/assets/hub-supplements.jpg";
-import hubShoesImg from "@/assets/hub-shoes.jpg";
-import hubHydrationImg from "@/assets/hub-hydration.jpg";
-import hubRecoveryImg from "@/assets/hub-recovery.jpg";
+import hubSupplementsImg from "@/assets/hub-supplements.webp";
+import hubShoesImg from "@/assets/hub-shoes.webp";
+import hubHydrationImg from "@/assets/hub-hydration.webp";
+import hubRecoveryImg from "@/assets/hub-recovery.webp";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 interface Hub {
@@ -76,6 +76,10 @@ const HubsIndex = () => {
                 <img
                   src={categoryImages[category] || hubSupplementsImg}
                   alt={category}
+                  width={800}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${categoryGradients[category] || "from-foreground/70 to-foreground/30"}`} />

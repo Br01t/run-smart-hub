@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "RunLab – Free Tools for Runners",
+  title = "Runners Hub – Free Tools for Runners",
   description = "Free science-based calculators for running, hydration, nutrition and recovery.",
   canonical = "https://www.runners-hub.org/",
   ogType = "website",
@@ -20,7 +20,7 @@ const SEO = ({
   twitterCard = "summary_large_image",
   schema,
 }: SEOProps) => {
-  const fullTitle = `${title} | RunLab`;
+  const fullTitle = `${title} | Runners Hub`;
 
   return (
     <Helmet>
