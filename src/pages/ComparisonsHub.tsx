@@ -89,7 +89,7 @@ const ComparisonsHub = () => {
       {/* Filters */}
       <section className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 sm:py-5">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="space-y-3 sm:space-y-0 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Filter by:</span>
 
             {/* Sport filter */}
@@ -109,7 +109,7 @@ const ComparisonsHub = () => {
               ))}
             </div>
 
-            <div className="h-5 w-px bg-border" />
+            <div className="hidden sm:block h-5 w-px bg-border" />
 
             {/* Goal filter */}
             <div className="flex flex-wrap gap-1.5">
@@ -128,7 +128,7 @@ const ComparisonsHub = () => {
               ))}
             </div>
 
-            <div className="h-5 w-px bg-border" />
+            <div className="hidden sm:block h-5 w-px bg-border" />
 
             {/* Category filter */}
             <div className="flex flex-wrap gap-1.5">
@@ -150,7 +150,7 @@ const ComparisonsHub = () => {
             {hasFilters && (
               <button
                 onClick={clearFilters}
-                className="ml-auto inline-flex items-center gap-1 rounded-full bg-destructive/10 px-3 py-1.5 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/20"
+                className="inline-flex items-center gap-1 rounded-full bg-destructive/10 px-3 py-1.5 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/20"
               >
                 <X className="h-3 w-3" /> Clear
               </button>
