@@ -97,10 +97,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <Activity className="h-4 w-4 text-primary" aria-hidden="true" />
               <span className="font-display text-sm font-semibold text-foreground">RunLab</span>
             </div>
-            <nav aria-label="Footer navigation" className="flex gap-4 text-sm text-muted-foreground">
+            <nav aria-label="Footer navigation" className="flex flex-wrap gap-4 text-sm text-muted-foreground">
               <Link to="/about" className="hover:text-foreground transition-colors">About Us</Link>
               <Link to="/method" className="hover:text-foreground transition-colors">Our Method</Link>
               <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
+              <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+              <Link to="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+              <button
+                onClick={resetCookieConsent}
+                className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+              >
+                <Cookie className="h-3.5 w-3.5" aria-hidden="true" />
+                Cookie Settings
+              </button>
             </nav>
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} RunLab. For informational purposes only.
@@ -108,6 +117,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </footer>
+
+      <CookieConsent />
     </div>
   );
 };
