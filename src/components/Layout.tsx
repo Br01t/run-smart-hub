@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { Activity, Menu, X } from "lucide-react";
+import { Activity, Menu, X, Cookie } from "lucide-react";
 import { useState } from "react";
+import CookieConsent, { resetCookieConsent } from "./CookieConsent";
 
 const navLinks = [
   { to: "/", label: "Home" },
