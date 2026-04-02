@@ -37,7 +37,7 @@ const PageLoader = () => (
   </div>
 );
 
-const basename = import.meta.env.PROD ? "/run-smart-hub" : "/";
+const basename = "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
