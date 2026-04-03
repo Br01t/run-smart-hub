@@ -1,6 +1,6 @@
 import { ArrowRight, Trophy } from "lucide-react";
 
-const ZONERUN_URL = "https://zonerun.app";
+const ZONERUN_URL = "https://zonerun.xyz/";
 
 interface ZoneRunBannerProps {
   variant?: "inline" | "fullwidth" | "compact";

@@ -45,10 +45,10 @@ const About = () => {
           <div className="mx-auto flex h-32 w-32 items-center justify-center overflow-hidden mb-6">
             <img src={logo} alt="Runners Hub logo" width={96} height={96} loading="eager" decoding="async" className="h-24 w-24 object-contain" aria-hidden="true" />
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             About Runners Hub
           </h1>
-          <p className="mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-base sm:text-lg text-primary-foreground/80">
             Independent, evidence-based running science — built by runners, for runners.
           </p>
         </div>
@@ -173,8 +173,8 @@ const About = () => {
       {/* CTA */}
       <section className="py-10 sm:py-14 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">Start Exploring</h2>
-          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground mb-3">Start Exploring</h2>
+          <p className="text-primary-foreground/80 mb-6 max-w-lg mx-auto">
             Discover our tools, read our latest guides, or find the perfect gear for your next run.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
