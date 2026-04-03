@@ -132,13 +132,15 @@ const ComparisonPage = () => {
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
 
-      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-10">
-        <Link to="/comparisons" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
+      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
+        <Link to="/comparisons" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> All comparisons
         </Link>
 
-        <h1 className="mb-3 font-display text-2xl font-bold text-foreground capitalize sm:text-3xl lg:text-4xl">{title}</h1>
-        <p className="mb-6 text-sm text-muted-foreground leading-relaxed sm:mb-8 sm:text-base">{comparison.intro}</p>
+        <div className="editorial-line">
+          <h1 className="font-display text-display-lg font-bold text-foreground capitalize">{title}</h1>
+        </div>
+        <p className="mt-3 text-muted-foreground leading-relaxed sm:text-lg">{comparison.intro}</p>
 
         {/* Hub breadcrumb */}
         {relatedHub && (
