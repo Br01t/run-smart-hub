@@ -80,17 +80,17 @@ const HubPage = () => {
         description: hub.description,
       }} />
 
-      <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-10">
-        <Link to="/hub" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
+      <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
+        <Link to="/hub" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> All Hubs
         </Link>
 
-        <header className="mb-8 sm:mb-10">
-          <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium capitalize text-primary">
+        <header className="mb-10 editorial-line">
+          <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold capitalize text-primary">
             <Package className="h-3.5 w-3.5" /> {hub.category} · {hub.sport}
-          </div>
-          <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">{hub.title}</h1>
-          <p className="mt-2 text-sm text-muted-foreground leading-relaxed sm:text-base">{hub.intro}</p>
+          </span>
+          <h1 className="font-display text-display-lg font-bold text-foreground">{hub.title}</h1>
+          <p className="mt-2 text-muted-foreground sm:text-lg">{hub.intro}</p>
         </header>
 
         {/* Products */}
