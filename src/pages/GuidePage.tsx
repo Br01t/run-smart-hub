@@ -622,7 +622,7 @@ const GuidePage = () => {
             <Link to="/guides" className="mb-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary-foreground/70 transition-colors hover:text-primary-foreground sm:text-sm">
               <ArrowLeft className="h-3.5 w-3.5" /> All guides
             </Link>
-            <h1 className="font-display text-2xl font-extrabold text-primary-foreground sm:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+            <h1 className="font-display text-display-lg font-bold text-primary-foreground leading-tight">
               {guide.title}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-3 sm:mt-3">
