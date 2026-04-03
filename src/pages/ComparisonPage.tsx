@@ -181,7 +181,7 @@ const ComparisonPage = () => {
         {/* Related Tools */}
         {relatedTools.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <Wrench className="h-5 w-5 text-primary" /> Related Tools
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
