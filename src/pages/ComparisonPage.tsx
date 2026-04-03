@@ -164,7 +164,7 @@ const ComparisonPage = () => {
         {/* FAQ */}
         {comparison.faq.length > 0 && (
           <div className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:mb-5 sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <HelpCircle className="h-5 w-5 text-primary" /> Frequently Asked Questions
             </h2>
             <div className="space-y-3 sm:space-y-4">
