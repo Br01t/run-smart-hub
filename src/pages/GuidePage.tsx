@@ -622,7 +622,7 @@ const GuidePage = () => {
             <Link to="/guides" className="mb-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary-foreground/70 transition-colors hover:text-primary-foreground sm:text-sm">
               <ArrowLeft className="h-3.5 w-3.5" /> All guides
             </Link>
-            <h1 className="font-display text-2xl font-extrabold text-primary-foreground sm:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+            <h1 className="font-display text-display-lg font-bold text-primary-foreground leading-tight">
               {guide.title}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-3 sm:mt-3">
@@ -637,7 +637,7 @@ const GuidePage = () => {
         </div>
       </div>
 
-      <article className="container mx-auto max-w-3xl px-4 py-8 sm:py-10 lg:py-12">
+      <article className="container mx-auto max-w-3xl px-4 py-10 sm:py-14">
         {/* Description */}
         <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
           {guide.description}
@@ -689,7 +689,7 @@ const GuidePage = () => {
         {/* Related Tools */}
         {guide.relatedTools.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <Wrench className="h-5 w-5 text-primary" /> Try These Tools
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -713,7 +713,7 @@ const GuidePage = () => {
         {/* Related Comparisons */}
         {relatedComparisons.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <BarChart3 className="h-5 w-5 text-primary" /> Related Comparisons
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -738,7 +738,7 @@ const GuidePage = () => {
         {/* Related Guides */}
         {guide.relatedGuides.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <BookOpen className="h-5 w-5 text-primary" /> Keep Reading
             </h2>
             <div className="grid gap-3">

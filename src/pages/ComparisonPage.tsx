@@ -132,13 +132,15 @@ const ComparisonPage = () => {
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
 
-      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-10">
-        <Link to="/comparisons" className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:mb-6">
+      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
+        <Link to="/comparisons" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> All comparisons
         </Link>
 
-        <h1 className="mb-3 font-display text-2xl font-bold text-foreground capitalize sm:text-3xl lg:text-4xl">{title}</h1>
-        <p className="mb-6 text-sm text-muted-foreground leading-relaxed sm:mb-8 sm:text-base">{comparison.intro}</p>
+        <div className="editorial-line">
+          <h1 className="font-display text-display-lg font-bold text-foreground capitalize">{title}</h1>
+        </div>
+        <p className="mt-3 text-muted-foreground leading-relaxed sm:text-lg">{comparison.intro}</p>
 
         {/* Hub breadcrumb */}
         {relatedHub && (
@@ -162,7 +164,7 @@ const ComparisonPage = () => {
         {/* FAQ */}
         {comparison.faq.length > 0 && (
           <div className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:mb-5 sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <HelpCircle className="h-5 w-5 text-primary" /> Frequently Asked Questions
             </h2>
             <div className="space-y-3 sm:space-y-4">
@@ -179,7 +181,7 @@ const ComparisonPage = () => {
         {/* Related Tools */}
         {relatedTools.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <Wrench className="h-5 w-5 text-primary" /> Related Tools
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -203,7 +205,7 @@ const ComparisonPage = () => {
         {/* Related Guides */}
         {relatedGuides.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold text-foreground sm:text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <BookOpen className="h-5 w-5 text-primary" /> Read More
             </h2>
             <div className="grid gap-3">
@@ -227,7 +229,7 @@ const ComparisonPage = () => {
         {/* Other Comparisons */}
         {otherComparisons.length > 0 && (
           <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 font-display text-xl font-bold text-foreground sm:text-2xl">More Comparisons</h2>
+            <h2 className="mb-4 font-display text-display-md font-bold text-foreground">More Comparisons</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {otherComparisons.map((c) => {
                 const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;

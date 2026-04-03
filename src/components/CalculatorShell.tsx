@@ -1,4 +1,3 @@
-import { ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
@@ -17,7 +16,7 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
   const canonicalUrl = `https://www.runners-hub.org${location.pathname}`;
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-6 sm:py-8">
+    <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
       <SEO
         title={title}
         description={description}
@@ -47,8 +46,8 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
         }}
       />
 
-      {/* Breadcrumb – visible, semantic, AI-friendly */}
-      <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-1.5 text-xs text-muted-foreground sm:mb-6">
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-1.5 text-xs text-muted-foreground">
         <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
         <span aria-hidden="true">/</span>
         <Link to="/tools" className="hover:text-foreground transition-colors">Tools</Link>
@@ -56,21 +55,23 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
         <span className="text-foreground font-medium" aria-current="page">{title}</span>
       </nav>
 
-      <div className="mb-6 flex items-start gap-3 sm:mb-8 sm:gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 sm:h-12 sm:w-12" aria-hidden="true">
-          <Icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
-        </div>
-        <div>
-          <h1 className="font-display text-xl font-bold text-foreground sm:text-2xl lg:text-3xl">
-            {title}
-          </h1>
-          <p className="mt-1 text-sm text-muted-foreground sm:text-base">{description}</p>
+      <div className="mb-8 editorial-line">
+        <div className="flex items-start gap-4">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10" aria-hidden="true">
+            <Icon className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h1 className="font-display text-display-md font-bold text-foreground">
+              {title}
+            </h1>
+            <p className="mt-1 text-muted-foreground">{description}</p>
+          </div>
         </div>
       </div>
 
       {children}
 
-      <div className="mt-8">
+      <div className="mt-10">
         <ZoneRunBanner variant="compact" />
       </div>
     </div>
