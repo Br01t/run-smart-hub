@@ -16,19 +16,18 @@ interface Comparison {
 }
 
 const sportEmoji: Record<string, string> = { corsa: "🏃", trail: "🏔️" };
-const goalColors: Record<string, string> = {
-  performance: "bg-primary/10 text-primary",
-  recupero: "bg-violet-500/10 text-violet-600",
-  idratazione: "bg-sky-500/10 text-sky-600",
-  dimagrimento: "bg-rose-500/10 text-rose-600",
-  "prevenzione-infortuni": "bg-amber-500/10 text-amber-700",
-  resistenza: "bg-emerald-500/10 text-emerald-700",
+
+const goalAccent: Record<string, { pill: string; border: string }> = {
+  performance: { pill: "bg-primary/10 text-primary", border: "border-l-primary" },
+  recupero: { pill: "bg-violet-500/10 text-violet-600", border: "border-l-violet-500" },
+  idratazione: { pill: "bg-sky-500/10 text-sky-600", border: "border-l-sky-500" },
+  dimagrimento: { pill: "bg-rose-500/10 text-rose-600", border: "border-l-rose-500" },
+  "prevenzione-infortuni": { pill: "bg-amber-500/10 text-amber-700", border: "border-l-amber-500" },
+  resistenza: { pill: "bg-emerald-500/10 text-emerald-700", border: "border-l-emerald-600" },
 };
 
 const ComparisonsHub = () => {
   const comparisons = comparisonsData as Comparison[];
-
-  // Extract unique filter values
   const allSports = useMemo(() => [...new Set(comparisons.map((c) => c.sport))], [comparisons]);
   const allGoals = useMemo(() => [...new Set(comparisons.map((c) => c.obiettivo))], [comparisons]);
   const allCategories = useMemo(() => [...new Set(comparisons.map((c) => c.categoria))], [comparisons]);
@@ -48,7 +47,6 @@ const ComparisonsHub = () => {
     });
   }, [comparisons, filterSport, filterGoal, filterCategory]);
 
-  // Group by sport
   const grouped = filtered.reduce<Record<string, Comparison[]>>((acc, c) => {
     if (!acc[c.sport]) acc[c.sport] = [];
     acc[c.sport].push(c);
@@ -70,87 +68,67 @@ const ComparisonsHub = () => {
       />
 
       {/* Header */}
-      <section className="border-b border-border bg-secondary/30">
-        <div className="container mx-auto px-4 py-8 sm:py-10">
-          <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-hero">
-              <Filter className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">Product Comparisons</h1>
-              <p className="mt-1 text-base text-muted-foreground sm:text-lg">
-                Products compared by sport, goal and category.
-              </p>
-            </div>
+      <section className="border-b border-border">
+        <div className="container mx-auto px-4 py-12 sm:py-16">
+          <div className="max-w-xl editorial-line">
+            <h1 className="font-display text-display-lg font-bold text-foreground">Product Comparisons</h1>
+            <p className="mt-2 text-muted-foreground sm:text-lg">
+              Products compared by sport, goal and category — find exactly what you need.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Filters */}
       <section className="border-b border-border bg-card">
-        <div className="container mx-auto px-4 py-4 sm:py-5">
-          <div className="space-y-3 sm:space-y-0 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Filter by:</span>
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground mr-1">Filter:</span>
 
-            {/* Sport filter */}
-            <div className="flex flex-wrap gap-1.5">
-              {allSports.map((sport) => (
-                <button
-                  key={sport}
-                  onClick={() => setFilterSport(filterSport === sport ? null : sport)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
-                    filterSport === sport
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {sportEmoji[sport] || "🏅"} {translateSport(sport)}
-                </button>
-              ))}
-            </div>
+            {allSports.map((sport) => (
+              <button
+                key={sport}
+                onClick={() => setFilterSport(filterSport === sport ? null : sport)}
+                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
+                  filterSport === sport ? "bg-foreground text-background" : "border border-border text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {sportEmoji[sport] || "🏅"} {translateSport(sport)}
+              </button>
+            ))}
 
-            <div className="hidden sm:block h-5 w-px bg-border" />
+            <span className="hidden sm:block h-4 w-px bg-border" />
 
-            {/* Goal filter */}
-            <div className="flex flex-wrap gap-1.5">
-              {allGoals.map((goal) => (
-                <button
-                  key={goal}
-                  onClick={() => setFilterGoal(filterGoal === goal ? null : goal)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
-                    filterGoal === goal
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : `${goalColors[goal] || "bg-muted text-muted-foreground"} hover:opacity-80`
-                  }`}
-                >
-                  {translateGoal(goal)}
-                </button>
-              ))}
-            </div>
+            {allGoals.map((goal) => (
+              <button
+                key={goal}
+                onClick={() => setFilterGoal(filterGoal === goal ? null : goal)}
+                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
+                  filterGoal === goal ? "bg-foreground text-background" : `${(goalAccent[goal] || goalAccent.performance).pill} hover:opacity-80`
+                }`}
+              >
+                {translateGoal(goal)}
+              </button>
+            ))}
 
-            <div className="hidden sm:block h-5 w-px bg-border" />
+            <span className="hidden sm:block h-4 w-px bg-border" />
 
-            {/* Category filter */}
-            <div className="flex flex-wrap gap-1.5">
-              {allCategories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setFilterCategory(filterCategory === cat ? null : cat)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
-                    filterCategory === cat
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {translateCategory(cat)}
-                </button>
-              ))}
-            </div>
+            {allCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilterCategory(filterCategory === cat ? null : cat)}
+                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
+                  filterCategory === cat ? "bg-foreground text-background" : "border border-border text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {translateCategory(cat)}
+              </button>
+            ))}
 
             {hasFilters && (
               <button
                 onClick={clearFilters}
-                className="inline-flex items-center gap-1 rounded-full bg-destructive/10 px-3 py-1.5 text-xs font-semibold text-destructive transition-colors hover:bg-destructive/20"
+                className="inline-flex items-center gap-1 rounded-full bg-destructive/10 px-3 py-1.5 text-xs font-semibold text-destructive hover:bg-destructive/20"
               >
                 <X className="h-3 w-3" /> Clear
               </button>
@@ -158,16 +136,16 @@ const ComparisonsHub = () => {
           </div>
 
           {hasFilters && (
-            <p className="mt-3 text-xs text-muted-foreground">
+            <p className="mt-2 text-xs text-muted-foreground">
               Showing {filtered.length} of {comparisons.length} comparisons
             </p>
           )}
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-10 sm:py-14">
+      <section className="container mx-auto px-4 py-12 sm:py-16">
         {filtered.length === 0 ? (
-          <div className="py-12 text-center">
+          <div className="py-16 text-center">
             <p className="text-lg font-semibold text-muted-foreground">No comparisons match your filters.</p>
             <button onClick={clearFilters} className="mt-3 text-sm font-medium text-primary hover:underline">
               Clear all filters
@@ -175,50 +153,42 @@ const ComparisonsHub = () => {
           </div>
         ) : (
           Object.entries(grouped).map(([sport, items]) => (
-            <div key={sport} className="mb-10 last:mb-0">
-              <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-bold capitalize text-foreground sm:mb-6 sm:text-2xl">
+            <div key={sport} className="mb-12 last:mb-0">
+              <h2 className="mb-5 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
                 <span className="text-2xl">{sportEmoji[sport] || "🏅"}</span> {translateSport(sport)}
               </h2>
 
-              <div className="flex gap-4 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {items.map((c, i) => {
                   const slug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
-                  const goalBg: Record<string, string> = {
-                    performance: "from-primary/5 to-primary/10 border-primary/20",
-                    recupero: "from-violet-500/5 to-violet-500/10 border-violet-400/20",
-                    idratazione: "from-sky-500/5 to-sky-500/10 border-sky-400/20",
-                    dimagrimento: "from-rose-500/5 to-rose-500/10 border-rose-400/20",
-                    "prevenzione-infortuni": "from-amber-500/5 to-amber-500/10 border-amber-400/20",
-                    resistenza: "from-emerald-500/5 to-emerald-500/10 border-emerald-400/20",
-                  };
+                  const accent = goalAccent[c.obiettivo] || goalAccent.performance;
                   return (
                     <motion.div
                       key={slug}
-                      initial={{ opacity: 0, y: 16 }}
+                      initial={{ opacity: 0, y: 12 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: i * 0.08, duration: 0.4 }}
-                      className="min-w-[260px] flex-shrink-0 sm:min-w-0"
+                      transition={{ delay: i * 0.05, duration: 0.35 }}
                     >
                       <Link
                         to={`/comparison/${slug}`}
-                        className={`group flex h-full flex-col rounded-2xl border bg-gradient-to-br p-5 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 ${goalBg[c.obiettivo] || "from-muted/50 to-muted border-border"}`}
+                        className={`group flex h-full flex-col rounded-lg border border-border border-l-4 ${accent.border} bg-card p-5 transition-all hover:shadow-card-hover`}
                       >
-                        <div className="mb-3 flex items-center gap-2">
-                          <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${goalColors[c.obiettivo] || "bg-muted text-muted-foreground"}`}>
+                        <div className="mb-3 flex flex-wrap items-center gap-2">
+                          <span className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${accent.pill}`}>
                             {translateGoal(c.obiettivo)}
                           </span>
-                          <span className="rounded-full bg-card/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-card-foreground">
+                          <span className="rounded-full bg-muted px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                             {translateCategory(c.categoria)}
                           </span>
                         </div>
-                        <h3 className="mb-2 font-display text-base font-bold capitalize text-foreground">
+                        <h3 className="mb-2 font-display text-base font-bold capitalize text-card-foreground group-hover:text-primary">
                           {translateCategory(c.categoria)} for {translateSport(c.sport)}
                         </h3>
                         <p className="mb-4 flex-1 text-sm text-muted-foreground line-clamp-3">{c.intro}</p>
-                        <div className="flex items-center gap-1.5 text-sm font-semibold text-primary transition-all group-hover:gap-2.5">
-                          Compare <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                        </div>
+                        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5">
+                          Compare <ArrowRight className="h-4 w-4" />
+                        </span>
                       </Link>
                     </motion.div>
                   );
@@ -228,8 +198,7 @@ const ComparisonsHub = () => {
           ))
         )}
 
-        {/* ZoneRun Banner */}
-        <div className="mt-8">
+        <div className="mt-10">
           <ZoneRunBanner variant="inline" />
         </div>
       </section>
