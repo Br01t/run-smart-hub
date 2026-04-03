@@ -637,7 +637,7 @@ const GuidePage = () => {
         </div>
       </div>
 
-      <article className="container mx-auto max-w-3xl px-4 py-8 sm:py-10 lg:py-12">
+      <article className="container mx-auto max-w-3xl px-4 py-10 sm:py-14">
         {/* Description */}
         <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
           {guide.description}
