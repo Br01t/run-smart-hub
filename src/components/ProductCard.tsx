@@ -62,7 +62,7 @@ const ProductCard = ({ product, variant = "default" }: ProductCardProps) => {
               aria-label={`View ${product.nome} deal (affiliate link, opens in new tab)`}
               className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-accent px-3 py-1.5 text-xs font-bold text-accent-foreground transition-opacity hover:opacity-90"
             >
-              View <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              Shop Now <ExternalLink className="h-3 w-3" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -128,7 +128,7 @@ const ProductCard = ({ product, variant = "default" }: ProductCardProps) => {
             aria-label={`Check price for ${product.nome} (affiliate link, opens in new tab)`}
             className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-accent px-4 py-2 text-xs font-bold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            View Deal <ExternalLink className="h-3 w-3" aria-hidden="true" />
+            Shop Now <ExternalLink className="h-3 w-3" aria-hidden="true" />
           </a>
         </div>
       </div>
