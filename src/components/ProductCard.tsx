@@ -58,11 +58,11 @@ const ProductCard = ({ product, variant = "default" }: ProductCardProps) => {
             <a
               href={product.linkAffiliato}
               target="_blank"
-              rel="noopener noreferrer nofollow"
+              rel="noopener noreferrer sponsored"
               aria-label={`View ${product.nome} deal (affiliate link, opens in new tab)`}
               className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-accent px-3 py-1.5 text-xs font-bold text-accent-foreground transition-opacity hover:opacity-90"
             >
-              View <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              Shop Now <ExternalLink className="h-3 w-3" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -75,7 +75,7 @@ const ProductCard = ({ product, variant = "default" }: ProductCardProps) => {
       <a
         href={product.linkAffiliato}
         target="_blank"
-        rel="noopener noreferrer nofollow"
+        rel="noopener noreferrer sponsored"
         aria-label={`${product.nome} by ${product.brand} – ${product.prezzoRange} (affiliate link)`}
         className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-all hover:shadow-card-hover hover:-translate-y-0.5"
       >
@@ -124,11 +124,11 @@ const ProductCard = ({ product, variant = "default" }: ProductCardProps) => {
           <a
             href={product.linkAffiliato}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="noopener noreferrer sponsored"
             aria-label={`Check price for ${product.nome} (affiliate link, opens in new tab)`}
             className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-accent px-4 py-2 text-xs font-bold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            View Deal <ExternalLink className="h-3 w-3" aria-hidden="true" />
+            Shop Now <ExternalLink className="h-3 w-3" aria-hidden="true" />
           </a>
         </div>
       </div>
