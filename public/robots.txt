@@ -40,3 +40,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.runners-hub.org/sitemap.xml
+
+# AI content discovery
+# See https://llmstxt.org
+LLMs.txt: https://www.runners-hub.org/llms.txt
