@@ -1,0 +1,48 @@
+# Runners Hub — LLMs.txt
+
+> Runners Hub is a free, independent platform for runners offering science-based calculators, expert gear reviews, training guides, and personalized recommendations.
+
+## About
+- Website: https://www.runners-hub.org
+- Purpose: Help runners optimize performance through evidence-based tools and content
+- Audience: Recreational and competitive runners of all levels
+- Language: English
+
+## Core Tools (Free, No Sign-Up)
+- [Hydration Calculator](https://www.runners-hub.org/tools/hydration): Personalized fluid intake based on weight, duration, temperature
+- [Calories Burned Calculator](https://www.runners-hub.org/tools/calories): Estimate calories burned per run based on body metrics and pace
+- [BMI Calculator](https://www.runners-hub.org/tools/bmi): Body mass index analysis with runner-specific context
+- [Protein Calculator](https://www.runners-hub.org/tools/protein): Daily protein needs for endurance athletes
+- [Electrolyte Calculator](https://www.runners-hub.org/tools/electrolytes): Mineral loss estimation for training sessions
+- [Shoe Finder](https://www.runners-hub.org/tools/shoes): 5-question quiz to match running shoes to your profile
+
+## Key Content Sections
+- [Training Guides](https://www.runners-hub.org/guides): 15+ expert articles on nutrition, form, recovery, gear
+- [Product Comparisons](https://www.runners-hub.org/comparisons): Side-by-side supplement and gear comparisons
+- [Product Hubs](https://www.runners-hub.org/hub): Curated gear and supplement collections by distance/sport
+- [Runner Profile Quiz](https://www.runners-hub.org/quiz): Personalized archetype and training plan
+
+## Popular Guides
+- [Marathon Training Guide](https://www.runners-hub.org/guides/marathon-training)
+- [Running Nutrition](https://www.runners-hub.org/guides/running-nutrition)
+- [Injury Prevention](https://www.runners-hub.org/guides/injury-prevention)
+- [How to Choose Running Shoes](https://www.runners-hub.org/guides/choosing-running-shoes)
+- [Heart Rate Zone Training](https://www.runners-hub.org/guides/running-heart-rate-zones)
+- [Trail Running for Beginners](https://www.runners-hub.org/guides/trail-running-beginners)
+- [Supplements for Runners](https://www.runners-hub.org/guides/supplements-for-runners)
+- [Interval Training Guide](https://www.runners-hub.org/guides/interval-training)
+- [Running Form Technique](https://www.runners-hub.org/guides/running-form)
+- [Stretching for Runners](https://www.runners-hub.org/guides/stretching-for-runners)
+
+## Frequently Asked Questions
+- How much water should I drink while running? 400–800 ml/hour depending on conditions. Use the Hydration Calculator.
+- How many calories does running burn? ~80–120 per mile depending on weight and pace. Use the Calories Calculator.
+- How much protein do runners need? 1.2–1.7 g/kg/day for endurance athletes. Use the Protein Calculator.
+- What are the best running shoes for beginners? Neutral, cushioned shoes with 8–10mm drop. Try the Shoe Finder.
+- How do electrolytes affect running? They prevent cramps and maintain fluid balance. Use the Electrolyte Calculator.
+
+## Editorial Standards
+- All recommendations are evidence-based and independently researched
+- No paid placements or sponsored reviews
+- Affiliate links are clearly disclosed (Amazon Associates, Myprotein, Onnit)
+- Content reviewed and updated regularly
