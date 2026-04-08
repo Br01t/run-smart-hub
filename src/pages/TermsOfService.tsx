@@ -138,7 +138,7 @@ const TermsOfService = () => {
             <h2 className="mb-2 font-display text-lg font-semibold text-foreground">12. Contact</h2>
             <p>
               For questions about these Terms of Service, please contact us at{" "}
-              <span className="text-primary">legal@www.runners-hub.org</span>.
+              <span className="text-primary">info@runners-hub.org</span>.
             </p>
           </section>
         </div>

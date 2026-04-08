@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
             <p>
               Runners Hub ("we", "us", "our") operates the website www.runners-hub.org. We are committed to protecting
               your privacy and handling your personal data transparently. For any privacy-related inquiries,
-              contact us at <span className="text-primary">privacy@www.runners-hub.org</span>.
+              contact us at <span className="text-primary">info@runners-hub.org</span>.
             </p>
           </section>
 
@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
               <li>Request data portability.</li>
               <li>Lodge a complaint with your local data protection authority.</li>
             </ul>
-            <p className="mt-2">To exercise any of these rights, email us at <span className="text-primary">privacy@www.runners-hub.org</span>.</p>
+            <p className="mt-2">To exercise any of these rights, email us at <span className="text-primary">info@runners-hub.org</span>.</p>
           </section>
 
           <section>

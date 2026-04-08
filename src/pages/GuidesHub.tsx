@@ -57,7 +57,7 @@ const GuidesHub = () => {
   return (
     <Layout>
       <SEOHead
-        title="Runner's Guides"
+        title="Best Runner's Guides 2026"
         description="Practical, science-backed guides on running shoes, supplements and muscle recovery to improve your performance."
         path="/guides"
       />

@@ -23,7 +23,7 @@ const About = () => {
       logo: "https://www.runners-hub.org/og-image.png",
       contactPoint: {
         "@type": "ContactPoint",
-        email: "hello@www.runners-hub.org",
+        email: "info@runners-hub.org",
         contactType: "customer support",
       },
       sameAs: [],
@@ -148,21 +148,21 @@ const About = () => {
               <Mail className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">General Inquiries</p>
-                <a href="mailto:hello@www.runners-hub.org" className="text-sm text-primary hover:underline">hello@www.runners-hub.org</a>
+                <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Users className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">Partnerships & Affiliates</p>
-                <a href="mailto:partners@www.runners-hub.org" className="text-sm text-primary hover:underline">partners@www.runners-hub.org</a>
+                <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Target className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">Press & Media</p>
-                <a href="mailto:press@www.runners-hub.org" className="text-sm text-primary hover:underline">press@www.runners-hub.org</a>
+                <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
           </div>

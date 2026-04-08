@@ -14,27 +14,33 @@ interface SEOProps {
 const SEO = ({
   title = "Runners Hub – Free Tools for Runners",
   description = "Free science-based calculators for running, hydration, nutrition and recovery.",
-  canonical = "https://www.runners-hub.org/",
+  path = "/",
   ogType = "website",
   ogImage = "https://www.runners-hub.org/og-image.png",
   twitterCard = "summary_large_image",
   schema,
 }: SEOProps) => {
-  const fullTitle = `${title} | Runners Hub`;
+  const SITE_NAME = "Runners Hub";
+  const BASE_URL = "https://www.runners-hub.org";
+  
+  const fullTitle = `${title} | ${SITE_NAME}`;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  const canonicalUrl = `${BASE_URL}${cleanPath === "/" ? "/" : cleanPath}`;
+  const ogUrl = `${BASE_URL}${cleanPath === "/" ? "" : cleanPath}`;
 
   return (
     <Helmet>
       {/* Standard Metadata */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={ogUrl} />
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />

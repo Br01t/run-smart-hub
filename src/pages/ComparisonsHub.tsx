@@ -62,7 +62,7 @@ const ComparisonsHub = () => {
   return (
     <Layout>
       <SEOHead
-        title="Product Comparisons for Runners"
+        title="Best Product Comparisons 2026"
         description="Compare the best products for running and trail: supplements, shoes, accessories and recovery tools filtered by goal."
         path="/comparisons"
       />

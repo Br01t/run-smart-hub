@@ -131,7 +131,7 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEOHead
-        title="Best Shoes Finder — Find Your Perfect Running Shoe"
+        title="Best Running Shoes Finder 2026"
         description="Answer 5 quick questions and get personalized running shoe recommendations based on your terrain, goals and budget."
         path="/tools/shoes"
       />

@@ -55,7 +55,7 @@ const allTools = [
 const ToolsHub = () => {
   return (
     <Layout>
-      <SEOHead title="Calculators for Runners" description="Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance." path="/tools" />
+      <SEOHead title="Best Calculators for Runners 2026" description="Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance." path="/tools" />
       <JsonLd data={{
         "@context": "https://schema.org",
         "@type": "CollectionPage",

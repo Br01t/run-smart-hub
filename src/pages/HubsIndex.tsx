@@ -36,7 +36,7 @@ const HubsIndex = () => {
   return (
     <Layout>
       <SEOHead
-        title="Product Hubs – Browse by Category & Sport"
+        title="Best Gear Hubs 2026"
         description="Explore curated product hubs for runners: supplements, shoes, hydration and recovery gear filtered by sport and distance."
         path="/hub"
       />

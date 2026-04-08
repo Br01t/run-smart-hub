@@ -42,7 +42,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Best Running Tools & Shoe Finder 2025"
+        title="Best Running Tools & Shoe Finder 2026"
         description="Optimize your performance with science-based running calculators for hydration, nutrition, and recovery. Find the best running shoes and gear with our expert guides."
         path="/"
         schema={{

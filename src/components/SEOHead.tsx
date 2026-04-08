@@ -15,7 +15,9 @@ const DEFAULT_IMAGE = "https://www.runners-hub.org/og-image.png";
 const SEOHead = ({ title, description, path = "", type = "website", imageUrl }: SEOHeadProps) => {
   useEffect(() => {
     const fullTitle = `${title} | ${SITE_NAME}`;
-    const fullUrl = `${BASE_URL}${path}`;
+    const cleanPath = path.startsWith("/") ? path : `/${path}`;
+    const fullUrl = `${BASE_URL}${cleanPath === "/" ? "" : cleanPath}`;
+    const canonicalUrl = `${BASE_URL}${cleanPath === "/" ? "/" : cleanPath}`;
     const image = imageUrl || DEFAULT_IMAGE;
 
     document.title = fullTitle;
@@ -48,7 +50,7 @@ const SEOHead = ({ title, description, path = "", type = "website", imageUrl }: 
     setMeta("description", description);
 
     // Canonical
-    setLink("canonical", fullUrl);
+    setLink("canonical", canonicalUrl);
 
     // Open Graph
     setMeta("og:title", fullTitle);
