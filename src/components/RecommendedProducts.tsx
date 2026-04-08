@@ -14,7 +14,12 @@ const RecommendedProducts = ({
   maxProducts = 3,
 }: RecommendedProductsProps) => {
   const products = (productsData as Product[])
-    .filter((p) => p.tag.some((t) => tags.includes(t)))
+    .map((p) => ({
+      ...p,
+      _score: p.tag.filter((t) => tags.includes(t)).length,
+    }))
+    .filter((p) => p._score > 0)
+    .sort((a, b) => b._score - a._score)
     .slice(0, maxProducts);
 
   if (products.length === 0) return null;
