@@ -144,24 +144,17 @@ const About = () => {
             Have a question, suggestion, or partnership inquiry? We'd love to hear from you.
           </p>
           <div className="rounded-xl border border-border bg-card p-6 sm:p-8 space-y-5">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">General Inquiries</p>
                 <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm font-medium text-foreground">Partnerships & Affiliates</p>
-                <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Target className="h-5 w-5 text-primary" />
-              <div>
-                <p className="text-sm font-medium text-foreground">Press & Media</p>
                 <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
