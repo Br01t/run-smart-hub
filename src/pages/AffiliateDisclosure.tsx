@@ -33,28 +33,13 @@ const AffiliateDisclosure = () => {
           </div>
 
           <div>
-            <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">Our Affiliate Partners</h2>
-            <p className="mb-4">We currently participate in the following affiliate programs:</p>
-            <ul className="space-y-4">
-              <li className="rounded-xl border border-border bg-card p-5">
-                <h3 className="font-display text-base font-semibold text-foreground mb-1">Amazon Associates (Amazon.it)</h3>
-                <p className="text-sm">
-                  Runners Hub is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.it. As an Amazon Associate, we earn from qualifying purchases.
-                </p>
-              </li>
-              <li className="rounded-xl border border-border bg-card p-5">
-                <h3 className="font-display text-base font-semibold text-foreground mb-1">Myprotein</h3>
-                <p className="text-sm">
-                  We are an affiliate partner of Myprotein, the world's leading sports nutrition brand. Links to Myprotein products may generate a commission for Runners Hub when a purchase is made.
-                </p>
-              </li>
-              <li className="rounded-xl border border-border bg-card p-5">
-                <h3 className="font-display text-base font-semibold text-foreground mb-1">Onnit</h3>
-                <p className="text-sm">
-                  We participate in the Onnit affiliate program. Links to Onnit supplements and performance products may earn us a referral fee when you make a purchase.
-                </p>
-              </li>
-            </ul>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">Affiliate Partnerships</h2>
+            <p>
+              Some of the links on Runners Hub point to products sold by third-party retailers and brands. We partner with selected companies in the running, fitness, and sports nutrition space through their affiliate programs. When you click on these links and make a purchase, we may receive a small referral commission.
+            </p>
+            <p className="mt-3">
+              These partnerships help us cover the costs of running this website — including hosting, research, and content creation — while keeping everything free for you.
+            </p>
           </div>
 
           <div>
@@ -64,13 +49,6 @@ const AffiliateDisclosure = () => {
             </p>
             <p className="mt-3">
               If a product doesn't meet our quality standards, we won't feature it — regardless of the potential commission. Our reputation depends on your trust.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">How to Identify Affiliate Links</h2>
-            <p>
-              All affiliate links on Runners Hub are marked with the <code className="rounded bg-secondary px-1.5 py-0.5 text-xs font-mono">rel="sponsored"</code> attribute in the HTML. Product cards with a "Shop Now" button link to affiliate partner websites. We also include a note at the bottom of product recommendation sections.
             </p>
           </div>
 
