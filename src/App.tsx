@@ -25,6 +25,7 @@ const HubPage = lazy(() => import("./pages/HubPage"));
 const Metodo = lazy(() => import("./pages/Metodo"));
 const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const AffiliateDisclosure = lazy(() => import("./pages/AffiliateDisclosure"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -66,6 +67,7 @@ const App = () => (
             <Route path="/method" element={<Metodo />} />
             <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="*" element={<NotFound />} />

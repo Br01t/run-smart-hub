@@ -153,6 +153,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li><Link to="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-primary-foreground transition-colors">Terms of Service</Link></li>
                 <li><Link to="/disclaimer" className="hover:text-primary-foreground transition-colors">Disclaimer</Link></li>
+                <li><Link to="/affiliate-disclosure" className="hover:text-primary-foreground transition-colors">Affiliate Disclosure</Link></li>
                 <li>
                   <button onClick={resetCookieConsent} className="inline-flex items-center gap-1 hover:text-primary-foreground transition-colors">
                     <Cookie className="h-3.5 w-3.5" /> Cookie Settings
