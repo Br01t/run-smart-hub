@@ -12,7 +12,7 @@ const About = () => {
       "@context": "https://schema.org",
       "@type": "AboutPage",
       name: "About Runners Hub",
-      description: "Independent running science platform providing evidence-based tools, guides, and product reviews for runners of all levels.",
+      description: "Independent running platform providing evidence-based tools, guides, and product reviews for runners of all levels.",
       url: "https://www.runners-hub.org/about",
     },
     {
@@ -33,8 +33,8 @@ const About = () => {
   return (
     <Layout>
       <SEOHead
-        title="About Us — Our Mission & Team"
-        description="Runners Hub is an independent running science platform. Learn about our mission, editorial standards, and how we help runners make smarter decisions."
+        title="About Us — Our Mission & Story"
+        description="Runners Hub is built by a passionate runner. Learn why this project exists, who's behind it, and how we help runners make smarter decisions."
         path="/about"
       />
       <JsonLd data={jsonLd} />
@@ -49,24 +49,68 @@ const About = () => {
             About Runners Hub
           </h1>
           <p className="mx-auto max-w-2xl text-base sm:text-lg text-primary-foreground/80">
-            Independent, evidence-based running science — built by runners, for runners.
+            Built by a runner, for runners — because honest advice shouldn't be hard to find.
           </p>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Personal Story */}
       <section className="py-10 sm:py-14">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Our Story</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Who I Am</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Runners Hub was born from a simple frustration: finding reliable, unbiased running advice shouldn't be this hard. Too many websites push products without proper research, and too few offer actionable tools backed by sports science.
+              Hi, I'm the person behind Runners Hub. I'm an everyday runner — not an elite athlete, not a certified coach, just someone who fell in love with running and couldn't stop learning about it.
             </p>
             <p>
-              We started as a small project in 2024, building calculators and writing guides that we wished existed when we were starting out. What began as a personal resource quickly grew into a platform used by thousands of runners looking for honest, data-driven recommendations.
+              I started running a few years ago to clear my head and get in shape. What began as a casual habit quickly turned into a genuine passion. I went from struggling through my first 5K to training for half marathons, chasing pace goals, and nerding out over nutrition, shoes, and training science.
             </p>
             <p>
-              Today, Runners Hub combines interactive tools, in-depth product reviews, and practical training guides — all grounded in peer-reviewed research and real-world running experience. We don't just list products; we analyze them, compare them, and help you find what actually works for your goals.
+              Along the way, I realized something frustrating: finding reliable, unbiased running advice online is surprisingly hard. Most sites are either full of sponsored content disguised as reviews, or they're so technical that beginners get lost. I wanted something different — a place where real runners could find practical, honest information without the noise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Running */}
+      <section className="py-10 sm:py-14 bg-secondary/30">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Why Running?</h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Running changed my life. It gave me discipline, mental clarity, and a community I never expected. It taught me that consistency matters more than talent, and that the right gear and nutrition can make a real difference — not just in performance, but in how much you enjoy the process.
+            </p>
+            <p>
+              I built Runners Hub because I believe every runner deserves access to the same quality information, whether you're lacing up for the first time or preparing for your tenth marathon. Running is one of the most democratic sports in the world — all you need is a pair of shoes and the will to start.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Site Is */}
+      <section className="py-10 sm:py-14">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">What Runners Hub Is</h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Runners Hub combines three things I wish I had when I started:
+            </p>
+            <ul className="space-y-2 ml-1">
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Interactive tools</strong> — calculators for hydration, calories, protein, BMI, and more, all based on validated sports science formulas.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Honest reviews & comparisons</strong> — real product analysis with pros, cons, and practical recommendations. No pay-to-play rankings.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Practical guides</strong> — from choosing your first running shoes to advanced marathon nutrition, written in plain language.</span>
+              </li>
+            </ul>
+            <p>
+              Every piece of content is researched, written, and reviewed with care. I use peer-reviewed studies when available, cross-reference multiple sources, and always prioritize what actually works over what sounds impressive.
             </p>
           </div>
         </div>
@@ -75,15 +119,15 @@ const About = () => {
       {/* Values */}
       <section className="py-10 sm:py-14 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-8 text-center">What Drives Us</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-8 text-center">What Drives This Project</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: Target, title: "Evidence-Based", desc: "Every recommendation is backed by sports science research and real-world testing." },
-              { icon: Users, title: "For All Levels", desc: "Whether you're running your first 5K or chasing a marathon PR, we've got you covered." },
-              { icon: TrendingUp, title: "Independent Reviews", desc: "We maintain editorial independence. Our reviews are honest, even when products disappoint." },
-              { icon: Heart, title: "Runner-First", desc: "We're runners too. We build the tools and write the guides we actually use." },
-              { icon: Activity, title: "Data-Driven Tools", desc: "Our calculators use validated formulas from sports nutrition and exercise physiology." },
-              { icon: Mail, title: "Community Focused", desc: "We listen to our readers and continuously improve based on your feedback." },
+              { icon: Target, title: "Evidence-Based", desc: "Every recommendation is grounded in sports science research and real-world experience." },
+              { icon: Users, title: "For All Levels", desc: "Whether you're running your first 5K or chasing a marathon PR, you'll find value here." },
+              { icon: TrendingUp, title: "Honest Reviews", desc: "I maintain full editorial independence. If a product doesn't deliver, I say so." },
+              { icon: Heart, title: "Runner-First", desc: "I build the tools and write the guides I actually use in my own training." },
+              { icon: Activity, title: "Data-Driven", desc: "Calculators use validated formulas from sports nutrition and exercise physiology." },
+              { icon: Mail, title: "Open to Feedback", desc: "I listen to readers and continuously improve based on what you actually need." },
             ].map((v) => (
               <div key={v.title} className="rounded-xl border border-border bg-card p-6">
                 <v.icon className="h-6 w-6 text-primary mb-3" />
@@ -95,53 +139,29 @@ const About = () => {
         </div>
       </section>
 
-      {/* Target Audience */}
+      {/* Transparency */}
       <section className="py-10 sm:py-14">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Who We Help</h2>
-          <ul className="space-y-3 text-muted-foreground">
-            {[
-              "Beginner runners looking for trustworthy gear recommendations and training basics",
-              "Intermediate athletes optimizing nutrition, hydration, and recovery strategies",
-              "Marathon and ultra-marathon runners seeking advanced performance insights",
-              "Trail runners exploring specialized footwear and safety equipment",
-              "Anyone who wants to make smarter, science-backed decisions about their running",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Editorial Policy */}
-      <section className="py-10 sm:py-14 bg-secondary/30">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Editorial Standards</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Transparency & Monetization</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Transparency is central to everything we do. When we recommend a product, we explain exactly why. When we link to a product, we clearly disclose that we may earn a commission through affiliate partnerships — at no extra cost to you.
+              Runners Hub is a free resource. To sustain it, I participate in affiliate programs with <strong>Amazon Associates</strong>, <strong>Myprotein</strong>, and <strong>Onnit</strong>. When you purchase a product through one of my links, I may earn a small commission — at no extra cost to you.
             </p>
             <p>
-              Our editorial team independently selects and reviews every product featured on Runners Hub. Affiliate relationships never influence our ratings, rankings, or recommendations. If a product doesn't meet our standards, we say so — or we simply don't feature it.
-            </p>
-            <p>
-              For more details on how we evaluate products and maintain objectivity, visit our{" "}
-              <Link to="/method" className="text-primary hover:underline font-medium">methodology page</Link> and{" "}
-              <Link to="/disclaimer" className="text-primary hover:underline font-medium">disclaimer</Link>.
+              These partnerships <strong>never influence my content</strong>. I select products based on quality, relevance, and value — not commission rates. For full details, read my{" "}
+              <Link to="/affiliate-disclosure" className="text-primary hover:underline font-medium">Affiliate Disclosure</Link> and{" "}
+              <Link to="/method" className="text-primary hover:underline font-medium">methodology</Link>.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact */}
-      <section className="py-10 sm:py-14">
+      <section className="py-10 sm:py-14 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Get in Touch</h2>
           <p className="text-muted-foreground mb-6">
-            Have a question, suggestion, or partnership inquiry? We'd love to hear from you.
+            Have a question, suggestion, or partnership inquiry? I'd love to hear from you.
           </p>
           <div className="rounded-xl border border-border bg-card p-6 sm:p-8 space-y-5">
             <div className="flex items-center gap-2">
@@ -159,7 +179,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">We typically respond within 24–48 hours.</p>
+          <p className="mt-4 text-xs text-muted-foreground">I typically respond within 24–48 hours.</p>
         </div>
       </section>
 
@@ -168,7 +188,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground mb-3">Start Exploring</h2>
           <p className="text-primary-foreground/80 mb-6 max-w-lg mx-auto">
-            Discover our tools, read our latest guides, or find the perfect gear for your next run.
+            Discover the tools, read the latest guides, or find the perfect gear for your next run.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button asChild><Link to="/tools">Explore Tools</Link></Button>
