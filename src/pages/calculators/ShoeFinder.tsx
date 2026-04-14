@@ -70,36 +70,37 @@ interface ShoeResult {
 const getRecommendations = (answers: Record<number, string>): ShoeResult[] => {
   const terrain = answers[0];
   const priority = answers[3];
+  const budget = answers[4];
 
   if (terrain === "trail") {
     return [
-      { name: "Speedcross 6", brand: "Salomon", category: "Trail", price: "€130–€150", why: "Aggressive grip and protection for technical trails.", features: ["Contagrip® sole", "Quicklace system", "Anti-debris mesh"] },
-      { name: "Pegasus Trail 4", brand: "Nike", category: "Trail", price: "€120–€140", why: "Versatile trail shoe with road-level comfort.", features: ["React foam", "Rock plate", "Trail-specific outsole"] },
+      { name: "Speedcross 6", brand: "Salomon", category: "Trail", price: "€130–€150", why: "The reference for grip on mud and soft terrain. Aggressive lugs and secure fit.", features: ["Quicklace™ system", "Contagrip® sole", "Anti-debris mesh"] },
+      { name: "Cascadia 17", brand: "Brooks", category: "Trail", price: "€120–€140", why: "A 'tank' for technical trails. Durable, stable, and protective for any terrain.", features: ["DNA LOFT v2", "Rock plate", "TrailTack rubber"] },
       { name: "Speedgoat 5", brand: "HOKA", category: "Trail", price: "€145–€165", why: "Maximum cushioning for ultra-distance trail runs.", features: ["Vibram Megagrip", "Late-stage Meta-Rocker", "32mm stack height"] },
     ];
   }
 
   if (priority === "speed") {
     return [
+      { name: "Electrify Nitro", brand: "Puma", category: "Performance", price: "€70–€90", why: "Responsive NITRO™ foam technology for faster paces. Great value for speed work.", features: ["NITRO™ foam", "PUMAGRIP", "Engineered mesh"] },
       { name: "Vaporfly 3", brand: "Nike", category: "Racing", price: "€250–€280", why: "Carbon-plated racer for PR-chasing performance.", features: ["ZoomX foam", "Carbon fiber plate", "Ultra-light upper"] },
-      { name: "Adizero Adios Pro 3", brand: "Adidas", category: "Racing", price: "€220–€250", why: "Energyrod technology for elite-level speed.", features: ["Lightstrike Pro", "ENERGYRODS 2.0", "Continental rubber"] },
-      { name: "Endorphin Pro 3", brand: "Saucony", category: "Racing", price: "€200–€230", why: "Responsive carbon plate racer at a competitive price.", features: ["PWRRUN PB foam", "Carbon plate", "Speedroll geometry"] },
+      { name: "Duramo Speed", brand: "Adidas", category: "Daily Trainer", price: "€60–€80", why: "Lightweight and reactive with an excellent quality-to-price ratio.", features: ["Lightstrike cushioning", "Breathable mesh", "Durable outsole"] },
     ];
   }
 
-  if (priority === "stability") {
-    return [
-      { name: "Adrenaline GTS 24", brand: "Brooks", category: "Stability", price: "€130–€150", why: "GuideRails® for holistic support without rigidity.", features: ["DNA LOFT v2 cushioning", "GuideRails® support", "Segmented Crash Pad"] },
-      { name: "GT-2000 12", brand: "ASICS", category: "Stability", price: "€120–€140", why: "Trusted stability with premium GEL™ technology.", features: ["FF BLAST™ PLUS", "LITETRUSS™", "3D Guidance System"] },
-      { name: "Arahi 7", brand: "HOKA", category: "Stability", price: "€130–€150", why: "Lightweight stability with J-Frame™ tech.", features: ["J-Frame™ support", "Compression EVA", "Meta-Rocker geometry"] },
+  if (budget === "budget") {
+     return [
+      { name: "Revolution 6", brand: "Nike", category: "Daily Trainer", price: "€50–€65", why: "The perfect entry-level running shoe for those starting their journey.", features: ["Soft foam", "Eco-friendly materials", "Versatile design"] },
+      { name: "Duramo Speed", brand: "Adidas", category: "Daily Trainer", price: "€60–€80", why: "Excellent quality-to-price ratio for a responsive daily ride.", features: ["Lightstrike", "Speed-oriented design", "Great value"] },
+      { name: "Gel-Contend 8", brand: "ASICS", category: "Daily Trainer", price: "€55–€70", why: "Trusted stability with premium GEL™ technology for a great price.", features: ["GEL™ tech", "AmpliFoam", "Durable"] },
     ];
   }
 
-  // Default: cushioning / general road
+  // Default: Daily Trainers / Comfort
   return [
-    { name: "Gel-Nimbus 26", brand: "ASICS", category: "Cushioned", price: "€160–€180", why: "PureGEL™ for cloud-like cushioning on every step.", features: ["FF BLAST™ PLUS ECO", "PureGEL™ technology", "Knit upper"] },
+    { name: "Gel-Contend 8", brand: "ASICS", category: "Daily Trainer", price: "€60–€75", why: "A classic, stable daily trainer with GEL™ technology for reliable comfort.", features: ["Rearfoot GEL™", "OrthoLite™ sockliner", "Stable ride"] },
+    { name: "Fresh Foam Arishi v4", brand: "New Balance", category: "Daily Trainer", price: "€65–€80", why: "Fresh Foam cushioning that works as well in the gym as it does on the road.", features: ["Fresh Foam", "Seamless upper", "Versatile"] },
     { name: "Ghost 16", brand: "Brooks", category: "Daily Trainer", price: "€120–€140", why: "Balanced cushioning ideal for everyday training.", features: ["DNA LOFT v2", "Segmented Crash Pad", "3D Fit Print upper"] },
-    { name: "Clifton 9", brand: "HOKA", category: "Cushioned", price: "€140–€160", why: "Featherlight with max cushion — a crowd favorite.", features: ["Compression EVA", "Early-stage Meta-Rocker", "Breathable mesh"] },
   ];
 };
 

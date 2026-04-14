@@ -4,6 +4,11 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
+import ShoeComparisonTable from "@/components/ShoeComparisonTable";
+import SupplementComparisonTable from "@/components/SupplementComparisonTable";
+import GearComparisonTable from "@/components/GearComparisonTable";
+import ApparelComparisonTable from "@/components/ApparelComparisonTable";
+import RecoveryComparisonTable from "@/components/RecoveryComparisonTable";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 import { translateCategory, translateSport, translateGoal } from "@/lib/translations";
 import productsData from "@/data/products.json";
@@ -61,7 +66,7 @@ const guidesContent: Record<string, GuideContent> = {
   "choosing-running-shoes": {
     title: "How to Choose Running Shoes",
     description: "Complete guide to choosing the right running shoes for your foot type, terrain and goals.",
-    tags: ["scarpe", "corsa", "ammortizzazione"],
+    tags: ["scarpe", "corsa", "ammortizzazione", "top-picks-2026"],
     heroImage: guideShoes,
     readTime: "8 min read",
     keyTakeaways: [
@@ -81,13 +86,16 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "Why the right shoes matter", body: "Running shoes are the most important investment for a runner. Ill-fitting shoes can cause injuries, joint pain and reduce performance. Your choice depends on foot strike (neutral, overpronator, supinator), terrain (road, trail, mixed), distance and training frequency.", variant: "highlight" },
       { heading: "Foot strike type", body: "Foot strike is the primary factor. A neutral strike needs balanced cushioning. Overpronators need medial support. Supinators require extra cushioning on the outer side.", variant: "default", listItems: ["Neutral: balanced cushioning, most versatile", "Overpronation: medial post support, stability shoes", "Supination: extra lateral cushioning, neutral-cushioned shoes", "Use a wet test or gait analysis to determine your type"] },
       { heading: "Drop and cushioning", body: "Drop is the height difference between heel and toe. High drop (8-12mm) suits heel strikers. Low drop (0-6mm) is for midfoot or forefoot runners. Cushioning should match your weight and distance: the more km you run, the more cushioning you need.", variant: "tip" },
+      { heading: "Recommended Daily Trainers", body: "For most runners, a daily trainer provides the right balance of cushioning and comfort for 2-4 runs per week.", variant: "default", listItems: ["Nike Revolution 6: Best entry-level choice", "Adidas Duramo Speed: Great reactive feel & value", "ASICS Gel-Contend 8: Stable and reliable classic", "NB Fresh Foam Arishi v4: Versatile for run & gym"] },
+      { heading: "Performance & Trail Picks", body: "When you need to go faster or head off-road, these specialized models offer the grip and response required.", variant: "default", listItems: ["Puma Electrify Nitro: Responsive foam for speed", "Brooks Cascadia: The rugged 'tank' for technical trails", "Salomon Speedcross: Maximum grip on mud and soft ground"] },
+      { heading: "Comparison Summary", body: "Check the table below to compare the technical specifications of our top recommendations for 2026.", variant: "highlight" },
       { heading: "When to replace your shoes", body: "On average, running shoes last 600-1000 km. Track the km on each pair to know when to replace them.", variant: "warning", listItems: ["Outsole rubber is smooth or worn through", "Midsole feels flat and unresponsive", "You're experiencing new aches or pains", "The upper is stretched or torn"] },
     ],
   },
   "supplements-for-runners": {
     title: "Essential Supplements for Runners",
     description: "Which supplements actually work for running? An evidence-based guide.",
-    tags: ["integratori", "elettroliti", "proteine"],
+    tags: ["integratori", "elettroliti", "proteine", "top-supplements-2026"],
     heroImage: guideSupplements,
     readTime: "10 min read",
     keyTakeaways: [
@@ -106,15 +114,16 @@ const guidesContent: Record<string, GuideContent> = {
     ],
     sections: [
       { heading: "Do you really need supplements?", body: "For most recreational runners, a balanced diet is sufficient. However, some supplements have solid evidence for improving performance and recovery: magnesium, vitamin D, whey protein, electrolytes and caffeine.", variant: "highlight" },
-      { heading: "Magnesium", body: "Magnesium is involved in over 300 enzymatic reactions. For runners it's crucial: it reduces cramps, supports muscle function and improves sleep quality. Citrate form has the highest bioavailability. Recommended dose: 300-400mg/day.", variant: "default" },
-      { heading: "Protein", body: "Protein is essential for muscle recovery. For runners training 4+ times per week, 1.4-1.8g/kg body weight per day is optimal. Whey isolate within 30 minutes post-workout accelerates recovery.", variant: "tip" },
-      { heading: "Electrolytes", body: "For runs over 60 minutes or in hot conditions, electrolytes are essential. Sodium, potassium and magnesium are lost through sweat. Effervescent tablets are the most practical format during activity.", variant: "default", listItems: ["Sodium: 300-600mg per hour of running", "Potassium: supports nerve and muscle function", "Magnesium: prevents cramps, aids recovery", "Look for sugar-free electrolyte tablets"] },
+      { heading: "Magnesium", body: "Magnesium is involved in over 300 enzymatic reactions. For runners it's crucial: it reduces cramps, supports muscle function and improves sleep quality.", variant: "default" },
+      { heading: "Top Picks for Performance", body: "Our selection focusing on the three main pillars: Performance, Energy, and Recovery.", variant: "default", listItems: ["Performance: Alpha BRAIN, Creatine, Beta-Alanine", "Energy: Shroom TECH Sport", "Recovery: Impact Whey Protein, Total Human"] },
+      { heading: "Comparison Summary", body: "Use the table below to compare the key features and benefits of these top-rated supplements.", variant: "highlight" },
+      { heading: "Electrolytes", body: "For runs over 60 minutes or in hot conditions, electrolytes are essential.", variant: "default", listItems: ["Sodium: 300-600mg per hour of running", "Potassium: supports nerve and muscle function", "Magnesium: prevents cramps, aids recovery", "Look for sugar-free electrolyte tablets"] },
     ],
   },
   "muscle-recovery": {
     title: "Muscle Recovery After Running",
     description: "Scientific strategies to recover faster: stretching, foam rolling, nutrition and sleep.",
-    tags: ["recupero", "massaggio", "proteine"],
+    tags: ["recupero", "massaggio", "proteine", "top-recovery-2026"],
     heroImage: guideRecovery,
     readTime: "7 min read",
     keyTakeaways: [
@@ -132,9 +141,10 @@ const guidesContent: Record<string, GuideContent> = {
     ],
     sections: [
       { heading: "Why recovery is essential", body: "Training creates micro-damage in muscles. It's during recovery that your body adapts and grows stronger. Skipping recovery leads to overtraining, injuries and performance decline.", variant: "highlight" },
-      { heading: "Foam rolling", body: "Foam rolling (or SMR – Self-Myofascial Release) reduces DOMS (delayed onset muscle soreness) by up to 50% according to some studies. 10-15 minutes post-workout on major muscle groups is sufficient.", variant: "default", listItems: ["Quads: 60 seconds per leg, slow rolls", "Calves: focus on tight spots, pause on tender areas", "IT band: roll from hip to just above knee", "Glutes: sit on roller, cross one ankle over opposite knee"] },
-      { heading: "Post-run nutrition", body: "The anabolic window within 30-60 minutes after training is the optimal time to consume protein (20-30g) and carbs (1g/kg). A shake with whey protein and a banana is a practical and effective solution.", variant: "tip" },
-      { heading: "Sleep", body: "Sleep is the most underrated recovery factor. During deep sleep, growth hormone (GH) is released, essential for muscle repair. Target: 7-9 hours per night, with consistent schedules.", variant: "warning" },
+      { heading: "Foam rolling", body: "Foam rolling (or SMR – Self-Myofascial Release) reduces DOMS (delayed onset muscle soreness) by up to 50% according to some studies.", variant: "default", listItems: ["TriggerPoint GRID: The original density-patterned roller", "Mini Massage Gun: Portable percussion for deep tissue", "Lacrosse Ball: Precise trigger point release for feet/glutes"] },
+      { heading: "Comparison Summary", body: "Review the evidence-based recovery tools below to find the best match for your specific muscle tension needs.", variant: "highlight" },
+      { heading: "Compression Gear", body: "Physix Gear compression socks are excellent for post-race drainage and long travel days to prevent swelling.", variant: "tip" },
+      { heading: "Post-run nutrition", body: "The anabolic window within 30-60 minutes after training is the optimal time to consume protein (20-30g) and carbs (1g/kg).", variant: "default" },
     ],
   },
   "running-nutrition": {
@@ -166,7 +176,7 @@ const guidesContent: Record<string, GuideContent> = {
   "injury-prevention": {
     title: "Runner's Guide to Injury Prevention",
     description: "How to stay injury-free with smart training, strength work and proper recovery techniques.",
-    tags: ["recupero", "massaggio", "muscoli", "scarpe"],
+    tags: ["recupero", "massaggio", "muscoli", "scarpe", "top-recovery-2026"],
     heroImage: guideInjury,
     readTime: "8 min read",
     keyTakeaways: [
@@ -186,13 +196,14 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "The 10% rule", body: "Never increase weekly mileage by more than 10%. Sudden volume spikes are the leading cause of running injuries. Build gradually and include cutback weeks every 3-4 weeks.", variant: "warning" },
       { heading: "Strength training for runners", body: "2-3 strength sessions per week targeting glutes, core and calves dramatically reduce injury risk.", variant: "default", listItems: ["Single-leg squats: 3x12 each leg", "Calf raises: 3x15, both straight and bent knee", "Hip bridges: 3x15, progress to single-leg", "Planks: 3x45 seconds, include side planks"] },
       { heading: "Common running injuries", body: "Runner's knee, shin splints, IT band syndrome, plantar fasciitis and Achilles tendinopathy are the most common. Most are overuse injuries that respond to load management.", variant: "highlight" },
-      { heading: "When to see a professional", body: "If pain persists beyond 2 weeks, worsens during runs, causes limping, or involves swelling, see a sports physiotherapist. Early intervention prevents chronic issues.", variant: "tip" },
+      { heading: "When to see a professional", body: "If pain persists beyond 2 weeks, worsens during runs, causes limping, or involves swelling, see a sports physiotherapist.", variant: "tip" },
+      { heading: "Comparison Summary", body: "Effective injury prevention includes having the right recovery tools. Compare our recommended selection below.", variant: "highlight" },
     ],
   },
   "marathon-training": {
     title: "Marathon Training Guide for Beginners",
     description: "Everything you need to know to train for your first marathon: plans, pacing, nutrition and gear.",
-    tags: ["energia", "carboidrati", "scarpe", "corsa"],
+    tags: ["energia", "carboidrati", "scarpe", "abbigliamento", "top-apparel-2026"],
     heroImage: guideMarathon,
     readTime: "12 min read",
     keyTakeaways: [
@@ -213,12 +224,14 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "Training structure", body: "A typical marathon plan includes 4-5 runs per week:", variant: "default", listItems: ["1 long run (cornerstone): 20km → 32-35km peak", "1 tempo run: sustained effort at threshold pace", "1 interval session: shorter, faster repeats for speed", "1-2 easy runs: active recovery, aerobic base"] },
       { heading: "Pacing strategy", body: "Most beginners start too fast and crash after 30km ('hitting the wall'). Use negative splits: run the first half 10-15 sec/km slower than goal pace. Practice marathon pace in long runs.", variant: "tip" },
       { heading: "Race week and taper", body: "Reduce volume by 40-60% in the final 2-3 weeks (taper). Maintain intensity but cut distance.", variant: "checklist", listItems: ["2-3 weeks before: begin taper, reduce volume 40-60%", "3 days before: carb-load (7-10g/kg bodyweight)", "Night before: lay out ALL gear — nothing new on race day", "Race morning: eat proven pre-race meal 3 hours before start"] },
+      { heading: "Essential Marathon Apparel", body: "Testing your gear during long runs is critical to avoid race-day surprises like chafing or overheating.", variant: "default", listItems: ["Under Armour Tech 2.0: Best-selling breathable tee", "Adidas AEROREADY Shorts: Integrated liner to prevent chafing", "Nike Dri-FIT Academy: Reliable daily training staple"] },
+      { heading: "Comparison Summary", body: "Check the table below to compare our top apparel picks for marathon training cycles.", variant: "highlight" },
     ],
   },
   "trail-running-beginners": {
     title: "Getting Started with Trail Running",
     description: "A beginner's guide to trail running: gear, technique, safety and finding the right trails.",
-    tags: ["scarpe", "corsa", "accessori", "idratazione"],
+    tags: ["scarpe", "corsa", "accessori", "idratazione", "top-gear-2026"],
     heroImage: guideTrail,
     readTime: "9 min read",
     keyTakeaways: [
@@ -236,7 +249,9 @@ const guidesContent: Record<string, GuideContent> = {
     ],
     sections: [
       { heading: "Road to trail transition", body: "Trail running is slower than road running — and that's perfectly normal. Expect to be 20-40% slower on technical terrain. Focus on effort (heart rate or perceived exertion) rather than pace.", variant: "highlight" },
-      { heading: "Essential trail gear", body: "Having the right gear makes trail running safer and more enjoyable.", variant: "checklist", listItems: ["Trail shoes with aggressive lugs for traction", "Hydration vest for runs over 1 hour", "Lightweight rain jacket (weather changes fast)", "Phone with offline maps downloaded", "Trekking poles (optional, helpful on steep terrain)"] },
+      { heading: "Hydration & Essentials", body: "Having the right gear makes trail running safer and more enjoyable. A vest is essential for any run over 60 minutes.", variant: "checklist", listItems: ["Salomon Adv Skin 12: The top-tier, zero-bounce vest", "Azarxis 10L: Functional and budget-friendly for beginners", "Garmin Fenix: Essential for mapping technical trails", "Danish Endurance: Merino socks for comfort & no blisters"] },
+      { heading: "Comparison Summary", body: "Compare the top gear picks below to see which hydration and accessory options fit your trail goals.", variant: "highlight" },
+      { heading: "Essential trail gear", body: "Beyond hydration, prioritize traction and safety.", variant: "default", listItems: ["Trail shoes with aggressive lugs for traction", "Lightweight rain jacket (weather changes fast)", "Phone with offline maps downloaded", "Trekking poles (optional, helpful on steep terrain)"] },
       { heading: "Uphill and downhill technique", body: "Uphill: shorten your stride, lean slightly forward, use your arms. Walking steep uphills is not cheating — even elites walk. Downhill: lean forward, quick light steps, eyes on the trail 3-5 meters ahead.", variant: "tip" },
       { heading: "Safety on the trails", body: "Trail running requires more planning than road running.", variant: "warning", listItems: ["Always tell someone your route and expected return", "Carry enough water and food for emergencies", "Check weather conditions before heading out", "Start with well-marked, popular trails first"] },
     ],
@@ -374,7 +389,7 @@ const guidesContent: Record<string, GuideContent> = {
   "best-running-watches": {
     title: "Best GPS Running Watches: Buyer's Guide",
     description: "A comprehensive, independent guide to choosing the right GPS running watch. We break down features, accuracy, battery life and value across every budget — from entry-level to premium multisport.",
-    tags: ["accessori", "corsa"],
+    tags: ["accessori", "corsa", "orologi", "top-gear-2026"],
     heroImage: guideRunningWatches,
     readTime: "10 min read",
     keyTakeaways: [
@@ -396,13 +411,15 @@ const guidesContent: Record<string, GuideContent> = {
       { heading: "Budget tier ($100-200)", body: "Entry-level GPS watches cover the essentials well. Expect reliable GPS tracking, basic heart rate monitoring and 10-15 hours of GPS battery life. These are ideal for beginner to intermediate road runners who want pace and distance data without complexity. Models in this range typically lack advanced navigation, multi-band GPS and detailed training analytics, but they're perfectly functional for 5K-to-marathon training.", variant: "default", listItems: ["Accurate GPS for road running and well-marked trails", "Optical HR suitable for zone training on easy-moderate runs", "Basic interval and workout features", "Smartphone notifications and activity tracking"] },
       { heading: "Mid-range tier ($200-400)", body: "This is the sweet spot for serious recreational runners. You get multi-band GPS, more accurate HR sensors, training load tracking, recovery metrics, and 25-40 hours of GPS battery. Many models include offline maps, music storage and advanced workout builders. These watches can genuinely help you improve by providing data-driven insights into your training balance.", variant: "tip" },
       { heading: "Premium tier ($400+)", body: "Premium watches are for competitive athletes, ultra runners and tech enthusiasts. Expect touchscreen AMOLED displays, solar charging, full topographic maps, advanced training analytics (stamina, HRV, power), and 60+ hours of GPS battery. The performance gains over mid-range are marginal for most runners — the jump is mainly in durability, display quality and ultra-long battery.", variant: "default" },
-      { heading: "Wrist HR vs chest strap", body: "Optical wrist HR sensors have improved dramatically but still struggle with high-intensity intervals, cold weather and dark skin tones. If you train by heart rate zones seriously, consider pairing your watch with a chest strap (Polar H10, Garmin HRM-Pro Plus) for threshold and interval sessions. Wrist HR is fine for easy and steady-state runs.", variant: "warning" },
+      { heading: "Wrist HR vs chest strap", body: "Optical wrist HR sensors have improved dramatically but still struggle with high-intensity intervals. For threshold sessions, consider a chest strap.", variant: "warning" },
+      { heading: "Comparison Summary", body: "Check the comparison table below to find the perfect GPS watch for your budget and performance level.", variant: "highlight" },
+      { heading: "Our Top Watch Picks", body: "We've selected the best representatives for both entry-level value and premium performance.", variant: "default", listItems: ["Best Value: Garmin Forerunner 55 — essentials done right", "Best Premium: Garmin Fenix Series — mapping and power"] },
     ],
   },
   "winter-running": {
     title: "How to Run Safely in Cold Weather",
     description: "A practical guide to winter running: layering systems, essential gear, breathing techniques and safety precautions for training through the coldest months.",
-    tags: ["accessori", "corsa", "scarpe"],
+    tags: ["accessori", "corsa", "abbigliamento", "top-apparel-2026"],
     heroImage: guideWinterRunning,
     readTime: "8 min read",
     keyTakeaways: [
@@ -419,8 +436,9 @@ const guidesContent: Record<string, GuideContent> = {
       { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
     ],
     sections: [
-      { heading: "The layering system", body: "The key to comfortable winter running is layering — not bulk. A proper three-layer system wicks sweat away from your skin, insulates, and blocks wind and rain. The biggest mistake? Overdressing. You should feel slightly cool when you step outside — your body generates significant heat within the first 5-10 minutes of running.", variant: "highlight", listItems: ["Base layer: merino wool or synthetic moisture-wicking fabric (never cotton)", "Mid layer: lightweight fleece or insulated vest for temps below 0°C", "Outer layer: windproof, water-resistant jacket (not waterproof — you need breathability)"] },
-      { heading: "Extremities and exposed skin", body: "Your body prioritizes core temperature, reducing blood flow to hands, feet and ears. These are the first areas to suffer. A thin pair of running gloves, a merino beanie or headband, and wool-blend socks make a dramatic difference. For temperatures below -5°C, consider a buff or balaclava to warm the air before it enters your lungs.", variant: "checklist", listItems: ["Gloves: lightweight touchscreen-compatible for most conditions", "Head: merino beanie or ear-covering headband", "Feet: merino wool socks (avoid cotton — it retains moisture)", "Face: buff or neck gaiter pulled up in wind and extreme cold", "Vaseline: apply to cheeks and nose to prevent windburn"] },
+      { heading: "The layering system", body: "The key to comfortable winter running is layering — not bulk.", variant: "highlight", listItems: ["Base layer: Under Armour Tech 2.0 or Nike Dri-FIT Academy", "Mid layer: Lightweight fleece or insulated vest", "Outer layer: Gore Wear R3 Tex Jacket for extreme wind & rain"] },
+      { heading: "Comparison Summary", body: "Compare technical fabrics and protection levels in our top apparel recommendations below.", variant: "highlight" },
+      { heading: "Extremities and exposed skin", body: "Your body prioritizes core temperature, reducing blood flow to hands, feet and ears.", variant: "checklist", listItems: ["Gloves: lightweight touchscreen-compatible", "Head: merino beanie or headband", "Feet: merino wool socks (Danish Endurance)"] },
       { heading: "Traction and footing", body: "Ice and packed snow are the biggest injury risks in winter. Regular road shoes have zero grip on icy surfaces. Trail shoes with aggressive lugs provide some traction on snow, but for icy roads you'll need traction devices (Yaktrax, Kahtoola NANOspikes) that slip over your shoes. Shorten your stride on slippery surfaces and lower your center of gravity.", variant: "warning" },
       { heading: "Visibility and safety", body: "Winter means shorter days and reduced visibility for both you and drivers. Reflective vests, LED armbands and a headlamp are non-negotiable for any low-light running. Stick to well-lit, familiar routes. Tell someone your planned route and expected return time, especially in extreme conditions.", variant: "tip" },
       { heading: "Breathing in cold air", body: "Cold, dry air can trigger bronchospasm and irritate airways. Breathe through a buff or face covering to warm and humidify the air. If you have exercise-induced asthma, cold weather is a known trigger — carry your inhaler and warm up gradually. Nose breathing during easy runs naturally warms the air before it reaches your lungs.", variant: "default" },
@@ -674,7 +692,34 @@ const GuidePage = () => {
         {/* Sections */}
         <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
           {guide.sections.map((section, i) => (
-            <SectionBlock key={i} section={section} index={i} />
+            <div key={i}>
+              <SectionBlock section={section} index={i} />
+              {slug === "choosing-running-shoes" && section.heading === "Comparison Summary" && (
+                <div className="mt-8">
+                  <ShoeComparisonTable />
+                </div>
+              )}
+              {slug === "supplements-for-runners" && section.heading === "Comparison Summary" && (
+                <div className="mt-8">
+                  <SupplementComparisonTable />
+                </div>
+              )}
+              {["best-running-watches", "trail-running-beginners"].includes(slug) && section.heading === "Comparison Summary" && (
+                <div className="mt-8">
+                  <GearComparisonTable />
+                </div>
+              )}
+              {["marathon-training", "winter-running"].includes(slug) && section.heading === "Comparison Summary" && (
+                <div className="mt-8">
+                  <ApparelComparisonTable />
+                </div>
+              )}
+              {["muscle-recovery", "injury-prevention"].includes(slug) && section.heading === "Comparison Summary" && (
+                <div className="mt-8">
+                  <RecoveryComparisonTable />
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
