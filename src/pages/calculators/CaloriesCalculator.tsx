@@ -21,66 +21,89 @@ const CaloriesCalculator = () => {
   return (
     <Layout>
       <CalculatorShell title="Calories Burned Calculator" description="Estimate calories burned during your run." icon={Flame}>
-        <div className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-6">
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-2">
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Weight (kg)</label>
-              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Distance (km)</label>
-              <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)} placeholder="10"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-          </div>
-          <button onClick={calculate}
-            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto">
-            Calculate
-          </button>
-        </div>
-
-        {result && (
-          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-6">
-            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">Your Results</h3>
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-              <div className="rounded-lg bg-card p-4 text-center shadow-card">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Total Calories</p>
-                <p className="mt-1 font-display text-2xl font-bold text-primary sm:text-3xl">{result.calories}</p>
-                <p className="text-xs text-muted-foreground">kcal burned</p>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+          {/* Inputs Column */}
+          <div className="flex-1 space-y-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+              <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Body Weight (kg)</label>
+                  <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Run Distance (km)</label>
+                  <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)} placeholder="10"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
               </div>
-              <div className="rounded-lg bg-card p-4 text-center shadow-card">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Fat Burned</p>
-                <p className="mt-1 font-display text-2xl font-bold text-accent sm:text-3xl">{result.fatGrams} g</p>
-                <p className="text-xs text-muted-foreground">approximate estimate</p>
-              </div>
+              <button onClick={calculate}
+                className="mt-8 w-full rounded-xl bg-gradient-hero px-6 py-4 text-sm font-extrabold text-primary-foreground shadow-hero transition-all hover:opacity-90 active:scale-[0.98] sm:w-auto">
+                Estimate Calories Burned
+              </button>
             </div>
 
-            {/* Personalized insights */}
-            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
-              <h4 className="text-sm font-semibold text-foreground">💡 What this means</h4>
-              <p className="text-sm text-muted-foreground">
-                {result.calories < 300
-                  ? "A light session! This is perfect for easy recovery runs. To refuel, a banana and a glass of water will do the job."
-                  : result.calories < 600
-                  ? "A solid effort! You've burned the equivalent of a full meal. Make sure to replenish with a mix of carbs and protein within 30-60 minutes for optimal recovery."
-                  : result.calories < 1000
-                  ? "An intense session! At this calorie burn, proper refueling is critical. Aim for 1-1.2g/kg of carbs and 20-30g of protein post-run. Consider an energy gel or sports drink during runs of this intensity."
-                  : "An epic effort! Burns above 1000 kcal require serious nutritional planning. You'll need to replace glycogen stores over the next 24 hours. Consider splitting recovery meals into 2-3 smaller portions over 3 hours."}
+            {/* Scientific disclaimer */}
+            <div className="rounded-xl border border-border bg-secondary/20 p-4">
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <strong>Note:</strong> Estimates use the MET coefficient (~1.036 kcal/kg/km). Real burn depends on pace, efficiency, and terrain.
               </p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Did you know?</span>
-                <span className="text-xs text-muted-foreground">Running burns approximately 20-30% more calories than walking the same distance due to higher muscle activation.</span>
-              </div>
             </div>
-
-            <p className="mt-4 text-sm text-muted-foreground">
-              Based on MET coefficient (~1.036 kcal/kg/km). Actual values vary by pace, terrain and conditions.
-            </p>
           </div>
-        )}
 
-        {result && <RecommendedProducts tags={["energia", "carboidrati", "integratori"]} />}
+          {/* Results Column */}
+          <div className="lg:w-[450px] space-y-8">
+            {result ? (
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Your Energy Stats</h3>
+                <div className="grid gap-4">
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Total Burn</p>
+                      <p className="text-sm font-medium text-foreground">Active Energy</p>
+                    </div>
+                    <p className="font-display text-3xl font-bold text-primary">{result.calories} <span className="text-xs font-bold uppercase text-muted-foreground/60">kcal</span></p>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Fat Mass</p>
+                      <p className="text-sm font-medium text-foreground">Est. Consumption</p>
+                    </div>
+                    <p className="font-display text-3xl font-bold text-accent">{result.fatGrams} <span className="text-xs font-bold uppercase text-muted-foreground/60">g</span></p>
+                  </div>
+                </div>
+
+                {/* Insight */}
+                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
+                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">⚡</span>
+                    Fueling Insight
+                  </h4>
+                  <div className="text-sm leading-relaxed text-muted-foreground">
+                    {result.calories < 300
+                      ? "A light session! Perfect for recovery. Stick to hydration and a small post-run snack."
+                      : result.calories < 600
+                      ? "Solid burn. You've emptied about 25% of your glycogen. Refuel within 60 min to kickstart recovery."
+                      : result.calories < 1000
+                      ? "Significant effort. Proper carb refueling is critical to prevent fatigue tomorrow."
+                      : "Epic burn! Glycogen depletion is high. Focus on high-carb intake over the next 24 hours."}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/50">
+                  <Flame className="h-8 w-8 text-muted-foreground/40" />
+                </div>
+                <h3 className="font-display text-base font-bold text-muted-foreground">No Calculation Yet</h3>
+                <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">See how many calories you'll burn on your next run.</p>
+              </div>
+            )}
+
+            {result && <RecommendedProducts tags={["energia", "carboidrati", "integratori"]} title="Refueling Support" maxProducts={2} />}
+          </div>
+        </div>
       </CalculatorShell>
     </Layout>
   );

@@ -30,45 +30,42 @@ const steps = [
   },
 ];
 
-const Metodo = () => {
+const Method = () => {
   return (
     <Layout>
       <SEOHead title="Our Method" description="Full transparency on how Runners Hub works and why you can trust our tools." path="/method" />
 
       {/* Header */}
       <section className="border-b border-border bg-secondary/30">
-        <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-10 text-center">
+        <div className="container mx-auto max-w-7xl px-4 py-12 sm:py-16 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-primary">Transparency</p>
-            <h1 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">Our Method</h1>
-            <p className="mx-auto mt-3 max-w-md text-base text-muted-foreground sm:text-lg">
-              How Runners Hub works and why you can trust our recommendations.
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Operational Transparency</p>
+            <h1 className="font-display text-3xl font-black text-foreground sm:text-4xl lg:text-5xl">Our Method</h1>
+            <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground sm:text-lg lg:text-xl">
+              Discover the rigorous scientific and ethical standards behind our tools and recommendations.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Timeline-style steps */}
-      <section className="container mx-auto max-w-2xl px-4 py-10 sm:py-14">
-        <div className="relative space-y-0">
-          {/* Vertical line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-border sm:left-6" />
-
+      {/* Denser Grid steps */}
+      <section className="container mx-auto max-w-7xl px-4 py-12 sm:py-20">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.4 }}
-              className="relative flex gap-4 pb-8 last:pb-0 sm:gap-5"
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="group relative flex flex-col rounded-3xl border border-border bg-card p-8 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-1"
             >
-              <div className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${step.accent} sm:h-12 sm:w-12`}>
-                <step.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+              <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${step.accent} shadow-sm transition-transform group-hover:scale-110`}>
+                <step.icon className="h-7 w-7" />
               </div>
-              <div className="pt-1">
-                <h2 className="font-display text-base font-bold text-foreground sm:text-lg">{step.title}</h2>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">{step.body}</p>
+              <div>
+                <h2 className="font-display text-lg font-bold text-foreground mb-3">{step.title}</h2>
+                <p className="text-sm leading-relaxed text-muted-foreground">{step.body}</p>
               </div>
             </motion.div>
           ))}
@@ -78,4 +75,4 @@ const Metodo = () => {
   );
 };
 
-export default Metodo;
+export default Method;

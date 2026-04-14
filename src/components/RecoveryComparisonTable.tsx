@@ -7,77 +7,59 @@ import {
   TableRow 
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Activity, Zap, ShieldCheck, HeartPulse, Info } from "lucide-react";
+import { Activity, HeartPulse } from "lucide-react";
 
 interface RecoverySpec {
   name: string;
   brand: string;
-  benefit: string;
-  targetArea: string;
-  mobility: "Static" | "Portable";
-  priceLevel: "$" | "$$" | "$$$";
+  intensity: string; // Density for rollers, mmHg for compression, Stall Force for guns
+  techDetails: string; // Surface, Noise, Use case
+  useType: "Running" | "Rest" | "Race";
+  bestFor: string;
 }
 
 const recoverySpecs: RecoverySpec[] = [
   { 
     name: "GRID Foam Roller", 
     brand: "TriggerPoint", 
-    benefit: "Myofascial Release", 
-    targetArea: "Large Muscle Groups",
-    mobility: "Static",
-    priceLevel: "$$"
+    intensity: "High (Rigid/Grid)", 
+    techDetails: "Sculpted surface for drainage", 
+    useType: "Rest",
+    bestFor: "Experienced runners seeking deep myofascial release"
   },
   { 
     name: "Mini Massage Gun", 
-    brand: "Generic/TopRated", 
-    benefit: "Percussion Therapy", 
-    targetArea: "Full Body / Deep Tissue",
-    mobility: "Portable",
-    priceLevel: "$$$"
+    brand: "Generic", 
+    intensity: "12kg Stall Force", 
+    techDetails: "Quiet (<45dB) / Portable", 
+    useType: "Race",
+    bestFor: "Immediate trigger point treatment post-long run"
   },
   { 
     name: "Compression Socks", 
     brand: "Physix Gear", 
-    benefit: "Blood Flow & Drainage", 
-    targetArea: "Calves / Lower Legs",
-    mobility: "Portable",
-    priceLevel: "$"
+    intensity: "20-30 mmHg (Graduated)", 
+    techDetails: "Increased blood flow / Drainage", 
+    useType: "Rest",
+    bestFor: "Post-race recovery or for long travel days"
   },
   { 
     name: "Lacrosse Ball", 
     brand: "Generic", 
-    benefit: "Trigger Point Focus", 
-    targetArea: "Feet (Plantar) / Knots",
-    mobility: "Portable",
-    priceLevel: "$"
+    intensity: "Maximum (Focused pressure)", 
+    techDetails: "Smooth surface / Dense rubber", 
+    useType: "Rest",
+    bestFor: "Specific foot sole massage (plantar fasciitis)"
   },
 ];
 
-export const RecoveryComparisonTable = () => {
-  const getBenefitIcon = (benefit: string) => {
-    switch (benefit) {
-      case 'Myofascial Release': return <Activity className="h-3 w-3" />;
-      case 'Percussion Therapy': return <Zap className="h-3 w-3" />;
-      case 'Blood Flow & Drainage': return <HeartPulse className="h-3 w-3" />;
-      case 'Trigger Point Focus': return <ShieldCheck className="h-3 w-3" />;
-      default: return <Info className="h-3 w-3" />;
-    }
-  };
-
-  const getMobilityColor = (mobility: string) => {
-    switch (mobility) {
-      case 'Static': return 'text-slate-600 bg-slate-50 border-slate-200';
-      case 'Portable': return 'text-indigo-600 bg-indigo-50 border-indigo-200';
-      default: return '';
-    }
-  };
-
+export const RecoveryComparisonTable = ({ sport = "road" }: { sport?: "road" | "trail" }) => {
   return (
     <div className="my-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
       <div className="bg-muted/50 px-6 py-4 border-b border-border">
         <h3 className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
           <HeartPulse className="h-5 w-5 text-primary" />
-          Recovery Tools: Evidence-Based Selection
+          Treatment Intensity: Recovery & Prevention
         </h3>
       </div>
       <div className="overflow-x-auto">
@@ -85,35 +67,39 @@ export const RecoveryComparisonTable = () => {
           <TableHeader>
             <TableRow className="bg-muted/30 hover:bg-muted/30">
               <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
-              <TableHead className="font-bold text-foreground">Primary Benefit</TableHead>
-              <TableHead className="font-bold text-foreground">Target Area</TableHead>
-              <TableHead className="font-bold text-foreground">Mobility</TableHead>
-              <TableHead className="font-bold text-foreground text-right">Price</TableHead>
+              <TableHead className="font-bold text-foreground">Intensity / Density</TableHead>
+              <TableHead className="font-bold text-foreground">Technical Details</TableHead>
+              <TableHead className="font-bold text-foreground">Specific Use</TableHead>
+              <TableHead className="font-bold text-foreground">Best For</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {recoverySpecs.map((spec) => (
               <TableRow key={spec.name} className="transition-colors hover:bg-muted/20">
                 <TableCell className="font-semibold text-foreground">
-                  <div>{spec.name}</div>
-                  <div className="text-[10px] text-muted-foreground uppercase">{spec.brand}</div>
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-1.5 text-sm font-medium text-foreground">
-                    <span className="p-1 rounded-full bg-primary/10 text-primary">
-                      {getBenefitIcon(spec.benefit)}
-                    </span>
-                    {spec.benefit}
+                  <div className="flex flex-col">
+                    <span>{spec.name}</span>
+                    <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
                   </div>
                 </TableCell>
-                <TableCell className="text-sm text-muted-foreground">{spec.targetArea}</TableCell>
+                <TableCell className="text-sm text-foreground">
+                  <div className="flex items-center gap-1.5 font-medium">
+                    <Activity className="h-3 w-3 text-primary" />
+                    {spec.intensity}
+                  </div>
+                </TableCell>
+                <TableCell className="text-sm text-muted-foreground">
+                  {spec.techDetails}
+                </TableCell>
                 <TableCell>
-                  <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider ${getMobilityColor(spec.mobility)}`}>
-                    {spec.mobility}
+                  <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider ${
+                    spec.useType === 'Race' ? 'bg-amber-50 text-amber-700' : 'bg-slate-50 text-slate-700'
+                  }`}>
+                    {spec.useType}
                   </Badge>
                 </TableCell>
-                <TableCell className="text-right font-mono font-bold text-primary">
-                  {spec.priceLevel}
+                <TableCell className="text-sm text-muted-foreground font-medium italic">
+                  {spec.bestFor}
                 </TableCell>
               </TableRow>
             ))}

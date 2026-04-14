@@ -31,78 +31,103 @@ const HydrationCalculator = () => {
         description="Find out how much water to drink before, during and after your run."
         icon={Droplets}
       >
-        <div className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-6">
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Weight (kg)</label>
-              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Duration (min)</label>
-              <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} placeholder="60"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Temperature (°C)</label>
-              <select value={temp} onChange={(e) => setTemp(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                <option value="10">Cold (&lt;15°C)</option>
-                <option value="20">Mild (15-25°C)</option>
-                <option value="30">Hot (&gt;25°C)</option>
-              </select>
-            </div>
-          </div>
-          <button onClick={calculate}
-            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto">
-            Calculate
-          </button>
-        </div>
-
-        {result && (
-          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-6">
-            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">Your Results</h3>
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Before</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.before} ml</p>
-                <p className="text-xs text-muted-foreground">2h before your run</p>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+          {/* Inputs Column */}
+          <div className="flex-1 space-y-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+              <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Body Weight (kg)</label>
+                  <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Run Duration (min)</label>
+                  <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} placeholder="60"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Expected Temperature (°C)</label>
+                  <select value={temp} onChange={(e) => setTemp(e.target.value)}
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <option value="10">Cold Environment (&lt;15°C)</option>
+                    <option value="20">Mild / Perfect Conditions (15-25°C)</option>
+                    <option value="30">Hot / Humid (&gt;25°C)</option>
+                  </select>
+                </div>
               </div>
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">During</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.during} ml</p>
-                <p className="text-xs text-muted-foreground">per hour of running</p>
-              </div>
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">After</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.after} ml</p>
-                <p className="text-xs text-muted-foreground">within 2h post run</p>
-              </div>
+              <button onClick={calculate}
+                className="mt-8 w-full rounded-xl bg-gradient-hero px-6 py-4 text-sm font-extrabold text-primary-foreground shadow-hero transition-all hover:opacity-90 active:scale-[0.98] sm:w-auto">
+                Calculate Hydration Needs
+              </button>
             </div>
 
-            {/* Personalized insights */}
-            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
-              <h4 className="text-sm font-semibold text-foreground">💡 Hydration tips</h4>
-              <p className="text-sm text-muted-foreground">
-                {parseFloat(temp) >= 25
-                  ? "Running in hot conditions significantly increases sweat rate. Consider adding electrolyte tablets to your water — you lose 900-1400mg of sodium per liter of sweat. Weigh yourself before and after to track fluid loss."
-                  : parseFloat(duration) > 90
-                  ? "For runs longer than 90 minutes, plain water isn't enough. Add electrolytes to prevent hyponatremia (low sodium levels). Carry a hydration vest or belt to sip consistently rather than gulping at water stops."
-                  : "Good hydration starts hours before your run. A simple check: if your urine is pale yellow, you're well hydrated. Avoid overdrinking — listen to your thirst and sip regularly throughout the run."}
+            {/* Scientific disclaimer */}
+            <div className="rounded-xl border border-border bg-secondary/20 p-4">
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <strong>Note:</strong> These values are estimates based on general sweat rate models. Factors like humidity, altitude, and individual physiology can significantly alter these needs.
               </p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Pro tip</span>
-                <span className="text-xs text-muted-foreground">Dehydration of just 2% body weight can reduce performance by up to 10%. Stay ahead of thirst!</span>
-              </div>
             </div>
-
-            <p className="mt-4 text-sm text-muted-foreground">
-              These values are estimates based on general scientific formulas. Consult a doctor for specific conditions.
-            </p>
           </div>
-        )}
 
-        {result && <RecommendedProducts tags={["idratazione", "elettroliti"]} />}
+          {/* Results/Recommendations Column */}
+          <div className="lg:w-[450px] space-y-8">
+            {result ? (
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Your Personal Strategy</h3>
+                <div className="grid gap-4">
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Before Run</p>
+                      <p className="text-sm font-medium text-foreground">2h Window</p>
+                    </div>
+                    <p className="font-display text-2xl font-bold text-primary">{result.before}ml</p>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">During Run</p>
+                      <p className="text-sm font-medium text-foreground">Every Hour</p>
+                    </div>
+                    <p className="font-display text-2xl font-bold text-primary">{result.during}ml</p>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">After Run</p>
+                      <p className="text-sm font-medium text-foreground">Recovery Window</p>
+                    </div>
+                    <p className="font-display text-2xl font-bold text-primary">{result.after}ml</p>
+                  </div>
+                </div>
+
+                {/* Insight */}
+                <div className="mt-8 space-y-4">
+                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">💡</span>
+                    Expert Insight
+                  </h4>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {parseFloat(temp) >= 25
+                      ? "In high heat, you're losing significant sodium (~900mg/L). Water alone can cause hyponatremia; always mix with electrolytes."
+                      : parseFloat(duration) > 90
+                      ? "For endurance efforts over 90 min, sip small amounts every 15 min rather than drinking large volumes at once."
+                      : "Sip according to thirst. If your urine is straw-colored before starting, you're in the optimal hydration zone."}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/50">
+                  <Droplets className="h-8 w-8 text-muted-foreground/40" />
+                </div>
+                <h3 className="font-display text-base font-bold text-muted-foreground">No Results Yet</h3>
+                <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">Fill in your weight and run details to generate your hydration strategy.</p>
+              </div>
+            )}
+
+            {result && <RecommendedProducts tags={["idratazione", "elettroliti"]} title="Hydration Essentials" maxProducts={2} />}
+          </div>
+        </div>
       </CalculatorShell>
     </Layout>
   );

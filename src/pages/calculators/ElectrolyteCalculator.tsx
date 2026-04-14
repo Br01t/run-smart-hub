@@ -26,75 +26,94 @@ const ElectrolyteCalculator = () => {
   return (
     <Layout>
       <CalculatorShell title="Electrolyte Calculator" description="Calculate sodium, potassium and magnesium to replenish during your run." icon={Zap}>
-        <div className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-6">
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Weight (kg)</label>
-              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Duration (min)</label>
-              <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} placeholder="60"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Intensity</label>
-              <select value={intensity} onChange={(e) => setIntensity(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                <option value="low">Low</option>
-                <option value="moderate">Moderate</option>
-                <option value="high">High</option>
-              </select>
-            </div>
-          </div>
-          <button onClick={calculate}
-            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto">
-            Calculate
-          </button>
-        </div>
-
-        {result && (
-          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-6">
-            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">Your Results</h3>
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Sodium</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.sodium} mg</p>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+          {/* Inputs Column */}
+          <div className="flex-1 space-y-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+              <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Body Weight (kg)</label>
+                  <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Run Duration (min)</label>
+                  <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} placeholder="60"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Expected Intensity</label>
+                  <select value={intensity} onChange={(e) => setIntensity(e.target.value)}
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <option value="low">Low (Recovery / Easy Run)</option>
+                    <option value="moderate">Moderate (Tempo / Steady)</option>
+                    <option value="high">High (Intervals / Race)</option>
+                  </select>
+                </div>
               </div>
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Potassium</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.potassium} mg</p>
-              </div>
-              <div className="rounded-lg bg-card p-3 text-center shadow-card sm:p-4">
-                <p className="text-xs font-medium uppercase text-muted-foreground">Magnesium</p>
-                <p className="mt-1 font-display text-xl font-bold text-primary sm:text-2xl">{result.magnesium} mg</p>
-              </div>
+              <button onClick={calculate}
+                className="mt-8 w-full rounded-xl bg-gradient-hero px-6 py-4 text-sm font-extrabold text-primary-foreground shadow-hero transition-all hover:opacity-90 active:scale-[0.98] sm:w-auto">
+                Calculate Replenishment
+              </button>
             </div>
 
-            {/* Personalized insights */}
-            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
-              <h4 className="text-sm font-semibold text-foreground">💡 Electrolyte guide</h4>
-              <p className="text-sm text-muted-foreground">
-                {intensity === "high"
-                  ? "High-intensity sessions cause heavy sweating. Sodium is the electrolyte you lose most — up to 1400mg per liter of sweat. Consider salt capsules or high-sodium electrolyte mixes for sessions over 90 minutes. Cramping? Magnesium and potassium deficiency are common culprits."
-                  : parseFloat(duration) > 90
-                  ? "For longer sessions, start supplementing electrolytes from the 45-minute mark. Effervescent tablets in your water bottle are the most practical approach. Don't wait until you feel symptoms — by then, you're already depleted."
-                  : "For moderate sessions under 90 minutes, a balanced diet usually covers your electrolyte needs. However, if you're a heavy sweater (white salt marks on your clothes), you may benefit from electrolyte supplementation even for shorter runs."}
+            {/* Scientific disclaimer */}
+            <div className="rounded-xl border border-border bg-secondary/20 p-4">
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <strong>Note:</strong> Electrolyte loss varies significantly based on sweat rate and individual physiology. Use these as start points.
               </p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Signs of depletion</span>
-                <span className="text-xs text-muted-foreground">Muscle cramps, dizziness, nausea and fatigue can all indicate electrolyte imbalance.</span>
-              </div>
             </div>
-
-            <p className="mt-4 text-sm text-muted-foreground">
-              Estimated values based on average sweat rate. Actual loss varies by genetics, temperature and acclimatization.
-            </p>
           </div>
-        )}
 
-        {result && <RecommendedProducts tags={["elettroliti", "magnesio", "idratazione"]} />}
+          {/* Results/Recommendations Column */}
+          <div className="lg:w-[450px] space-y-8">
+            {result ? (
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Ammount to Replenish</h3>
+                <div className="grid gap-3">
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sodium (Na+)</span>
+                    <p className="font-display text-2xl font-bold text-primary">{result.sodium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Potassium (K+)</span>
+                    <p className="font-display text-2xl font-bold text-primary">{result.potassium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                  </div>
+                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Magnesium (Mg++)</span>
+                    <p className="font-display text-2xl font-bold text-primary">{result.magnesium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                  </div>
+                </div>
+
+                {/* Insight */}
+                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
+                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">⚡</span>
+                    Replenishment Guide
+                  </h4>
+                  <div className="text-sm leading-relaxed text-muted-foreground">
+                    {intensity === "high"
+                      ? "Sodium is your priority (~90%-95% of electrolyte loss). High intensity requires at least 500-1000mg per liter of fluid."
+                      : parseFloat(duration) > 90
+                      ? "Longer efforts deplete potassium and magnesium, leading to muscle fatigue and cramps. Supplement early (at 45 min)."
+                      : "For shorter, moderate sessions, water with a pinch of salt or a standard effervescent tablet is usually sufficient."}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/50">
+                  <Zap className="h-8 w-8 text-muted-foreground/40" />
+                </div>
+                <h3 className="font-display text-base font-bold text-muted-foreground">No Calculation Yet</h3>
+                <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">Map out your electrolyte needs based on your next training effort.</p>
+              </div>
+            )}
+
+            {result && <RecommendedProducts tags={["elettroliti", "magnesio"]} title="Top Rated Supplement" maxProducts={2} />}
+          </div>
+        </div>
       </CalculatorShell>
     </Layout>
   );

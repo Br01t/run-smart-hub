@@ -8,6 +8,8 @@ const categoryMap: Record<string, string> = {
   shoes: "Shoes",
   hydration: "Hydration",
   recovery: "Recovery",
+  abbigliamento: "Apparel",
+  apparel: "Apparel",
 };
 
 const sportMap: Record<string, string> = {
@@ -21,6 +23,7 @@ const sportMap: Record<string, string> = {
   ciclismo: "Cycling",
   nuoto: "Swimming",
   triathlon: "Triathlon",
+  road: "Running",
 };
 
 const goalMap: Record<string, string> = {
@@ -31,6 +34,7 @@ const goalMap: Record<string, string> = {
   "prevenzione-infortuni": "Injury Prevention",
   resistenza: "Endurance",
   forza: "Strength",
+  muscle: "Muscle Building",
 };
 
 export const translateCategory = (key: string): string =>

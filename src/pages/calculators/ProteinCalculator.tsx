@@ -25,72 +25,89 @@ const ProteinCalculator = () => {
   return (
     <Layout>
       <CalculatorShell title="Protein Needs Calculator" description="Find out how much protein to consume daily based on your goals." icon={Dumbbell}>
-        <div className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-6">
-          <div className="grid gap-4 sm:gap-5 sm:grid-cols-3">
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Weight (kg)</label>
-              <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Activity Level</label>
-              <select value={activity} onChange={(e) => setActivity(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                <option value="sedentary">Sedentary</option>
-                <option value="moderate">Active (3-5x/week)</option>
-                <option value="intense">Very active (6-7x/week)</option>
-              </select>
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-foreground">Goal</label>
-              <select value={goal} onChange={(e) => setGoal(e.target.value)}
-                className="w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                <option value="lose">Lose weight</option>
-                <option value="maintain">Maintain</option>
-                <option value="gain">Build muscle</option>
-              </select>
-            </div>
-          </div>
-          <button onClick={calculate}
-            className="mt-5 w-full rounded-lg bg-gradient-hero px-6 py-3 text-sm font-semibold text-primary-foreground shadow-hero transition-opacity hover:opacity-90 sm:w-auto">
-            Calculate
-          </button>
-        </div>
-
-        {result && (
-          <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-6">
-            <h3 className="mb-4 font-display text-lg font-semibold text-foreground">Your Results</h3>
-            <div className="flex flex-col items-center gap-2 rounded-lg bg-card p-4 shadow-card sm:p-6">
-              <p className="text-xs font-medium uppercase text-muted-foreground">Daily Intake</p>
-              <p className="font-display text-3xl font-bold text-primary sm:text-4xl">
-                {result.min}–{result.max} g
-              </p>
-              <p className="text-sm text-muted-foreground">of protein per day</p>
-            </div>
-
-            {/* Personalized insights */}
-            <div className="mt-5 space-y-3 rounded-lg border border-border bg-card p-4">
-              <h4 className="text-sm font-semibold text-foreground">💡 How to hit your target</h4>
-              <p className="text-sm text-muted-foreground">
-                {goal === "lose"
-                  ? "When losing weight, protein is your best ally. It preserves muscle mass, boosts satiety and has the highest thermic effect of any macronutrient (burning ~25% of protein calories during digestion). Spread intake across 4-5 meals."
-                  : goal === "gain"
-                  ? "For muscle building, aim for the upper range and distribute protein evenly across 4-5 meals (30-40g each). The post-workout window is important but total daily intake matters more. Combine with progressive strength training."
-                  : "For maintenance, focus on consistent daily intake rather than timing. Good sources: chicken breast (31g/100g), eggs (13g/100g), Greek yogurt (10g/100g), lentils (9g/100g). A protein shake post-run is convenient but not mandatory."}
-              </p>
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary-foreground">Quick math</span>
-                <span className="text-xs text-muted-foreground">That's roughly {Math.round(result.min / 4)}–{Math.round(result.max / 4)}g per meal across 4 meals/day.</span>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+          {/* Inputs Column */}
+          <div className="flex-1 space-y-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+              <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Body Weight (kg)</label>
+                  <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="70"
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20" />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Daily Activity</label>
+                  <select value={activity} onChange={(e) => setActivity(e.target.value)}
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <option value="sedentary">Sedentary (No Exercise)</option>
+                    <option value="moderate">Active (3-5x/week)</option>
+                    <option value="intense">Intense (6-7x/week)</option>
+                  </select>
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="mb-2 block text-sm font-semibold text-foreground">Training Goal</label>
+                  <select value={goal} onChange={(e) => setGoal(e.target.value)}
+                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <option value="lose">Weight Loss / Definition</option>
+                    <option value="maintain">Maintenance / Performance</option>
+                    <option value="gain">Muscle Gain / Hypertrophy</option>
+                  </select>
+                </div>
               </div>
+              <button onClick={calculate}
+                className="mt-8 w-full rounded-xl bg-gradient-hero px-6 py-4 text-sm font-extrabold text-primary-foreground shadow-hero transition-all hover:opacity-90 active:scale-[0.98] sm:w-auto">
+                Discover Your Protein Needs
+              </button>
             </div>
 
-            <p className="mt-4 text-sm text-muted-foreground">
-              Range based on ISSN guidelines for athletes and active individuals. Consult a nutritionist for a personalized plan.
-            </p>
+            {/* Scientific disclaimer */}
+            <div className="rounded-xl border border-border bg-secondary/20 p-4">
+              <p className="text-xs leading-relaxed text-muted-foreground">
+                <strong>Note:</strong> These calculations follow ISSN guidelines. Individual needs may vary based on age, sex, and lean muscle mass percentage.
+              </p>
+            </div>
           </div>
-        )}
 
-        {result && <RecommendedProducts tags={["proteine", "recupero"]} />}
+          {/* Results Column */}
+          <div className="lg:w-[450px] space-y-8">
+            {result ? (
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Recommended Intake</h3>
+                <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-8 shadow-sm border border-border/50">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Total Daily Target</p>
+                  <p className="font-display text-5xl font-black text-primary">{result.min}–{result.max}<span className="text-xl ml-1 font-bold text-muted-foreground/40">g</span></p>
+                  <p className="mt-2 text-xs font-medium text-muted-foreground">distributed over 4-5 meals</p>
+                </div>
+
+                {/* Insight */}
+                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
+                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">💪</span>
+                    Nutrition Insight
+                  </h4>
+                  <div className="text-sm leading-relaxed text-muted-foreground">
+                    {goal === "lose"
+                      ? "High protein intake is vital during a deficit to avoid losing muscle. Aim for the higher end of the range."
+                      : goal === "gain"
+                      ? "Pair this intake with heavy resistance training. Distribute 30-40g of protein every 3-4 hours."
+                      : "Performance-focused needs. Focus on timing: 20-30g of protein within 45 minutes of finishing your run."}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/50">
+                  <Dumbbell className="h-8 w-8 text-muted-foreground/40" />
+                </div>
+                <h3 className="font-display text-base font-bold text-muted-foreground">No Results Yet</h3>
+                <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">Tell us about your activity level to optimize your macronutrient profile.</p>
+              </div>
+            )}
+
+            {result && <RecommendedProducts tags={["proteine", "recupero"]} title="Top Protein Sources" maxProducts={2} />}
+          </div>
+        </div>
       </CalculatorShell>
     </Layout>
   );

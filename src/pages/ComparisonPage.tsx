@@ -10,6 +10,12 @@ import comparisonsData from "@/data/comparisons.json";
 import productsData from "@/data/products.json";
 import hubsData from "@/data/hubs.json";
 
+import ShoeComparisonTable from "@/components/ShoeComparisonTable";
+import SupplementComparisonTable from "@/components/SupplementComparisonTable";
+import GearComparisonTable from "@/components/GearComparisonTable";
+import ApparelComparisonTable from "@/components/ApparelComparisonTable";
+import RecoveryComparisonTable from "@/components/RecoveryComparisonTable";
+
 interface Comparison {
   sport: string;
   obiettivo: string;
@@ -78,7 +84,7 @@ const ComparisonPage = () => {
       <Layout>
         <div className="container mx-auto px-4 py-12 text-center">
           <h1 className="font-display text-2xl font-bold text-foreground">Comparison not found</h1>
-          <Link to="/comparisons" className="mt-4 inline-block text-sm text-primary hover:underline">View all comparisons</Link>
+          <Link to="/hub" className="mt-4 inline-block text-sm text-primary hover:underline">View all hubs</Link>
         </div>
       </Layout>
     );
@@ -95,10 +101,21 @@ const ComparisonPage = () => {
   ];
   const relatedGuides = guideSuggestions[comparison.categoria] || [];
 
-  // Find related hub
+  // Find related hub with normalized slug matching
+  const catMap: Record<string, string> = {
+    integratori: "supplements",
+    scarpe: "shoes",
+    accessori: "hydration",
+    recupero: "recovery",
+    abbigliamento: "apparel",
+  };
+  const normalizedCat = catMap[comparison.categoria] || comparison.categoria;
+  const normalizedSport = comparison.sport === "corsa" ? "marathon" : comparison.sport === "trail" ? "trail-running" : comparison.sport;
+
   const relatedHub = (hubsData as { category: string; sport: string }[]).find(
-    (h) => h.category === comparison.categoria || h.sport === comparison.sport
+    (h) => h.category === normalizedCat || h.sport === normalizedSport
   );
+  const hubLink = relatedHub ? `/hub/${relatedHub.category}/${relatedHub.sport}` : null;
 
   // Other comparisons (excluding current)
   const otherComparisons = (comparisonsData as Comparison[])
@@ -131,105 +148,135 @@ const ComparisonPage = () => {
       <SEOHead title={title} description={description} path={`/comparison/${slug}`} />
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
       {productJsonLd && <JsonLd data={productJsonLd} />}
-
-      <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
-        <Link to="/comparisons" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-          <ArrowLeft className="h-4 w-4" /> All comparisons
+      
+      <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-12">
+        <Link to="/hub" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          <ArrowLeft className="h-4 w-4" /> All Hubs
         </Link>
+        
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+          {/* Main Content */}
+          <div className="min-w-0 flex-1">
+            <header className="mb-10 editorial-line">
+              <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold capitalize text-primary">
+                {comparison.categoria} · {comparison.sport}
+              </span>
+              <h1 className="font-display text-display-lg font-bold text-foreground capitalize">
+                {translateCategory(comparison.categoria)} for {translateSport(comparison.sport)}: {translateGoal(comparison.obiettivo)}
+              </h1>
+              <p className="mt-2 text-muted-foreground sm:text-lg">{comparison.intro}</p>
+            </header>
 
-        <div className="editorial-line">
-          <h1 className="font-display text-display-lg font-bold text-foreground capitalize">{title}</h1>
-        </div>
-        <p className="mt-3 text-muted-foreground leading-relaxed sm:text-lg">{comparison.intro}</p>
-
-        {/* Hub breadcrumb */}
-        {relatedHub && (
-          <div className="mb-6 rounded-lg border border-border bg-secondary/50 px-4 py-3">
-            <p className="text-xs text-muted-foreground">
-              Part of{" "}
-                <Link to={`/hub/${relatedHub.category}/${relatedHub.sport}`} className="font-medium text-primary hover:underline">
-                  {translateCategory(relatedHub.category)} for {translateSport(relatedHub.sport)} hub
-              </Link>
-            </p>
-          </div>
-        )}
-
-        <RecommendedProducts tags={comparison.tags} title={`Recommended ${translateCategory(comparison.categoria)}`} maxProducts={4} />
-
-        {/* ZoneRun Banner */}
-        <div className="mt-6">
-          <ZoneRunBanner variant="inline" />
-        </div>
-
-        {/* FAQ */}
-        {comparison.faq.length > 0 && (
-          <div className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <HelpCircle className="h-5 w-5 text-primary" /> Frequently Asked Questions
-            </h2>
-            <div className="space-y-3 sm:space-y-4">
-              {comparison.faq.map((item, i) => (
-                <div key={i} className="rounded-xl border border-border bg-card p-4 shadow-card sm:p-5">
-                  <h3 className="mb-1.5 font-display text-sm font-semibold text-card-foreground sm:mb-2 sm:text-base">{item.q}</h3>
-                  <p className="text-sm text-muted-foreground">{item.a}</p>
+            {/* Hub Link */}
+            {hubLink && (
+              <div className="mb-10 rounded-2xl border border-primary/20 bg-primary/5 p-5 shadow-sm">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="text-sm font-bold text-primary uppercase tracking-wider">Product Hub</h3>
+                    <p className="text-sm text-muted-foreground">View all tested products for this category.</p>
+                  </div>
+                  <Link to={hubLink} className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-md transition-opacity hover:opacity-90">
+                    Explore the Hub <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
-              ))}
+              </div>
+            )}
+
+            {/* Technical Comparison Table */}
+            <div>
+              {comparison.categoria === 'scarpe' && <ShoeComparisonTable />}
+              {comparison.categoria === 'integratori' && <SupplementComparisonTable />}
+              {(comparison.categoria === 'accessori' || comparison.categoria === 'idratazione') && <GearComparisonTable />}
+              {comparison.categoria === 'abbigliamento' && <ApparelComparisonTable />}
+              {comparison.categoria === 'recupero' && <RecoveryComparisonTable />}
+            </div>
+
+            {/* Products Selection */}
+            <div className="mt-16 pt-10 border-t border-border">
+              <RecommendedProducts tags={comparison.tags} title={`Expert ${translateCategory(comparison.categoria)} Picks`} maxProducts={4} />
             </div>
           </div>
-        )}
 
-        {/* Related Tools */}
-        {relatedTools.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <Wrench className="h-5 w-5 text-primary" /> Related Tools
-            </h2>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {relatedTools.map((tool) => (
-                <Link
-                  key={tool.to}
-                  to={tool.to}
-                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Wrench className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-sm font-medium text-card-foreground">{tool.label}</span>
-                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+          {/* Sidebar */}
+          <aside className="shrink-0 lg:w-[320px] space-y-10">
+            {/* FAQ Area */}
+            {comparison.faq.length > 0 && (
+              <section className="rounded-2xl border border-border bg-card p-5 shadow-card overflow-hidden">
+                <h2 className="mb-5 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-widest">
+                  <HelpCircle className="h-4 w-4 text-primary" /> Q&A
+                </h2>
+                <div className="space-y-6">
+                  {comparison.faq.map((item, i) => (
+                    <div key={i}>
+                      <h3 className="mb-1.5 text-xs font-bold text-card-foreground leading-snug">{item.q}</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
-        {/* Related Guides */}
-        {relatedGuides.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <BookOpen className="h-5 w-5 text-primary" /> Read More
-            </h2>
-            <div className="grid gap-3">
-              {relatedGuides.map((g) => (
-                <Link
-                  key={g.slug}
-                  to={`/guides/${g.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                    <BookOpen className="h-4 w-4 text-accent" />
-                  </div>
-                  <span className="text-sm font-medium text-card-foreground">{g.label}</span>
-                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+            {/* ZoneRun Banner */}
+            <section>
+              <ZoneRunBanner variant="compact" />
+            </section>
+
+            {/* Tools Area */}
+            {relatedTools.length > 0 && (
+              <section>
+                <h2 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-widest">
+                  <Wrench className="h-4 w-4 text-primary" /> Pro Tools
+                </h2>
+                <div className="grid gap-2">
+                  {relatedTools.map((tool) => (
+                    <Link
+                      key={tool.to}
+                      to={tool.to}
+                      className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                    >
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                        <Wrench className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-xs font-semibold text-card-foreground group-hover:text-primary">
+                        {tool.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Guides Area */}
+            {relatedGuides.length > 0 && (
+              <section>
+                <h2 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-widest">
+                  <BookOpen className="h-4 w-4 text-primary" /> Expert Guides
+                </h2>
+                <div className="grid gap-2">
+                  {relatedGuides.map((g) => (
+                    <Link
+                      key={g.slug}
+                      to={`/guides/${g.slug}`}
+                      className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                    >
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                        <BookOpen className="h-4 w-4 text-accent" />
+                      </div>
+                      <span className="text-xs font-semibold text-card-foreground group-hover:text-primary leading-tight">
+                        {g.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+          </aside>
+        </div>
 
         {/* Other Comparisons */}
         {otherComparisons.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 font-display text-display-md font-bold text-foreground">More Comparisons</h2>
+          <section className="mt-16 pt-10 border-t border-border">
+            <h2 className="mb-8 font-display text-display-md font-bold text-foreground">More Comparisons</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {otherComparisons.map((c) => {
                 const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;

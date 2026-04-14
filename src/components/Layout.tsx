@@ -8,7 +8,6 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/tools", label: "Tools" },
   { to: "/hub", label: "Product Hubs" },
-  { to: "/comparisons", label: "Comparisons" },
   { to: "/guides", label: "Guides" },
   { to: "/quiz", label: "Quiz" },
   { to: "/method", label: "Our Method" },
@@ -138,7 +137,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-primary-foreground/40">Resources</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
                 <li><Link to="/guides" className="hover:text-primary-foreground transition-colors">Guides</Link></li>
-                <li><Link to="/comparisons" className="hover:text-primary-foreground transition-colors">Comparisons</Link></li>
                 <li><Link to="/hub" className="hover:text-primary-foreground transition-colors">Product Hubs</Link></li>
                 <li><Link to="/quiz" className="hover:text-primary-foreground transition-colors">Profile Quiz</Link></li>
               </ul>

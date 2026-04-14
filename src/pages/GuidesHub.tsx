@@ -246,7 +246,7 @@ const GuidesHub = () => {
             <h3 className="font-display text-sm font-bold text-foreground">Looking for product comparisons?</h3>
             <p className="mt-0.5 text-xs text-muted-foreground">Side-by-side comparisons filtered by sport and goal.</p>
           </div>
-          <Link to="/comparisons" className="shrink-0 text-sm font-bold text-primary hover:underline">View →</Link>
+          <Link to="/hub" className="shrink-0 text-sm font-bold text-primary hover:underline">View →</Link>
         </div>
       </section>
     </Layout>

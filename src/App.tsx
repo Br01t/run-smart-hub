@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
@@ -18,11 +18,10 @@ const ShoeFinder = lazy(() => import("./pages/calculators/ShoeFinder"));
 const ProfileQuiz = lazy(() => import("./pages/ProfileQuiz"));
 const GuidesHub = lazy(() => import("./pages/GuidesHub"));
 const GuidePage = lazy(() => import("./pages/GuidePage"));
-const ComparisonsHub = lazy(() => import("./pages/ComparisonsHub"));
+const MasterHub = lazy(() => import("./pages/MasterHub"));
 const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
-const HubsIndex = lazy(() => import("./pages/HubsIndex"));
 const HubPage = lazy(() => import("./pages/HubPage"));
-const Metodo = lazy(() => import("./pages/Metodo"));
+const Method = lazy(() => import("./pages/Method"));
 const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const AffiliateDisclosure = lazy(() => import("./pages/AffiliateDisclosure"));
@@ -60,11 +59,10 @@ const App = () => (
             <Route path="/quiz" element={<ProfileQuiz />} />
             <Route path="/guides" element={<GuidesHub />} />
             <Route path="/guides/:slug" element={<GuidePage />} />
-            <Route path="/comparisons" element={<ComparisonsHub />} />
             <Route path="/comparison/:slug" element={<ComparisonPage />} />
-            <Route path="/hub" element={<HubsIndex />} />
+            <Route path="/hub" element={<MasterHub />} />
             <Route path="/hub/:category/:sport" element={<HubPage />} />
-            <Route path="/method" element={<Metodo />} />
+            <Route path="/method" element={<Method />} />
             <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />

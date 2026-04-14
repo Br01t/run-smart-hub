@@ -4,11 +4,6 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
-import ShoeComparisonTable from "@/components/ShoeComparisonTable";
-import SupplementComparisonTable from "@/components/SupplementComparisonTable";
-import GearComparisonTable from "@/components/GearComparisonTable";
-import ApparelComparisonTable from "@/components/ApparelComparisonTable";
-import RecoveryComparisonTable from "@/components/RecoveryComparisonTable";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 import { translateCategory, translateSport, translateGoal } from "@/lib/translations";
 import productsData from "@/data/products.json";
@@ -569,6 +564,26 @@ const KeyTakeaways = ({ items }: { items: string[] }) => (
   </div>
 );
 
+const ComparisonCTA = ({ category, sport, goal }: { category: string; sport: string; goal: string }) => {
+  const slug = `${category}-per-${sport}-${goal}`;
+  return (
+    <div className="my-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center sm:p-8">
+      <h4 className="font-display text-lg font-bold text-foreground sm:text-xl">
+        Want to see the tech specs?
+      </h4>
+      <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+        Check out our detailed 2026 comparison hub for {translateCategory(category)} specifically for {translateSport(sport)}.
+      </p>
+      <Link 
+        to={`/comparison/${slug}`}
+        className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 hover:bg-primary/90"
+      >
+        View Comparison Table <ArrowRight className="h-4 w-4" />
+      </Link>
+    </div>
+  );
+};
+
 const GuidePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const guide = slug ? guidesContent[slug] : null;
@@ -655,155 +670,161 @@ const GuidePage = () => {
         </div>
       </div>
 
-      <article className="container mx-auto max-w-3xl px-4 py-10 sm:py-14">
-        {/* Description */}
-        <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
-          {guide.description}
-        </p>
+      <div className="container mx-auto max-w-7xl px-4 py-10 sm:py-14">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+          {/* Main Column */}
+          <article className="min-w-0 flex-1">
+            {/* Description */}
+            <p className="text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl lg:leading-relaxed">
+              {guide.description}
+            </p>
 
-        {/* Table of Contents */}
-        <nav className="mt-6 rounded-xl border border-border bg-secondary/30 p-4 sm:mt-8 sm:p-5" aria-label="Table of contents">
-          <h2 className="flex items-center gap-2 font-display text-sm font-bold text-foreground sm:text-base">
-            <BookOpen className="h-4 w-4 text-primary" /> Table of Contents
-          </h2>
-          <ol className="mt-3 space-y-1.5">
-            {guide.sections.map((section, i) => {
-              const sectionId = section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-              return (
-                <li key={i}>
-                  <a
-                    href={`#${sectionId}`}
-                    className="group flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-primary/5 hover:text-primary"
-                  >
-                    <span className="font-mono text-xs text-muted-foreground/60">{String(i + 1).padStart(2, "0")}</span>
-                    {section.heading}
-                  </a>
-                </li>
-              );
-            })}
-          </ol>
-        </nav>
-
-        {/* Key takeaways */}
-        <div className="mt-6 sm:mt-8">
-          <KeyTakeaways items={guide.keyTakeaways} />
-        </div>
-
-        {/* Sections */}
-        <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
-          {guide.sections.map((section, i) => (
-            <div key={i}>
-              <SectionBlock section={section} index={i} />
-              {slug === "choosing-running-shoes" && section.heading === "Comparison Summary" && (
-                <div className="mt-8">
-                  <ShoeComparisonTable />
-                </div>
-              )}
-              {slug === "supplements-for-runners" && section.heading === "Comparison Summary" && (
-                <div className="mt-8">
-                  <SupplementComparisonTable />
-                </div>
-              )}
-              {["best-running-watches", "trail-running-beginners"].includes(slug) && section.heading === "Comparison Summary" && (
-                <div className="mt-8">
-                  <GearComparisonTable />
-                </div>
-              )}
-              {["marathon-training", "winter-running"].includes(slug) && section.heading === "Comparison Summary" && (
-                <div className="mt-8">
-                  <ApparelComparisonTable />
-                </div>
-              )}
-              {["muscle-recovery", "injury-prevention"].includes(slug) && section.heading === "Comparison Summary" && (
-                <div className="mt-8">
-                  <RecoveryComparisonTable />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Products */}
-        <RecommendedProducts tags={guide.tags} title="Related products" />
-
-        {/* ZoneRun Banner */}
-        <div className="mt-8">
-          <ZoneRunBanner variant="inline" />
-        </div>
-
-        {/* Related Tools */}
-        {guide.relatedTools.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <Wrench className="h-5 w-5 text-primary" /> Try These Tools
-            </h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {guide.relatedTools.map((tool) => (
-                <Link
-                  key={tool.to}
-                  to={tool.to}
-                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Wrench className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-sm font-medium text-card-foreground">{tool.label}</span>
-                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Related Comparisons */}
-        {relatedComparisons.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <BarChart3 className="h-5 w-5 text-primary" /> Related Comparisons
-            </h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedComparisons.map((c) => {
-                const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+            <div className="mt-10 space-y-12">
+              {guide.sections.map((section, i) => {
+                const sectionId = section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
                 return (
-                  <Link
-                    key={cSlug}
-                    to={`/comparison/${cSlug}`}
-                    className="group rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
-                  >
-                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{translateCategory(c.categoria)} for {translateSport(c.sport)}</h3>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{translateGoal(c.obiettivo)}</p>
-                    <p className="mt-2 text-xs text-muted-foreground line-clamp-2">{c.intro}</p>
-                  </Link>
+                  <div key={i} id={sectionId} className="scroll-mt-24">
+                    <h2 className="mb-4 font-display text-2xl font-bold text-foreground sm:text-3xl leading-tight">
+                      {section.heading}
+                    </h2>
+                    <div className="prose prose-sm sm:prose-base max-w-none text-muted-foreground leading-relaxed">
+                      {section.body.split("\n\n").map((para, j) => (
+                        <p key={j} className="mb-4">{para}</p>
+                      ))}
+                    </div>
+                    {slug === "choosing-running-shoes" && section.heading === "Comparison Summary" && (
+                      <ComparisonCTA category="scarpe" sport="corsa" goal="performance" />
+                    )}
+                    {slug === "supplements-for-runners" && section.heading === "Comparison Summary" && (
+                      <ComparisonCTA category="integratori" sport="corsa" goal="performance" />
+                    )}
+                    {slug === "muscle-recovery" && section.heading === "Comparison Summary" && (
+                      <ComparisonCTA category="recupero" sport="corsa" goal="recupero" />
+                    )}
+                    {slug === "injury-prevention" && section.heading === "Comparison Summary" && (
+                      <ComparisonCTA category="recupero" sport="corsa" goal="prevenzione-infortuni" />
+                    )}
+                  </div>
                 );
               })}
             </div>
-          </section>
-        )}
 
-        {/* Related Guides */}
-        {guide.relatedGuides.length > 0 && (
-          <section className="mt-8 sm:mt-10">
-            <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
-              <BookOpen className="h-5 w-5 text-primary" /> Keep Reading
-            </h2>
-            <div className="grid gap-3">
-              {guide.relatedGuides.map((g) => (
-                <Link
-                  key={g.slug}
-                  to={`/guides/${g.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                    <BookOpen className="h-4 w-4 text-accent" />
-                  </div>
-                  <span className="text-sm font-medium text-card-foreground">{g.label}</span>
-                  <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </Link>
-              ))}
+            {/* Expert Gear Selection */}
+            <div className="mt-16 pt-10 border-t border-border">
+              <RecommendedProducts tags={guide.tags} title="Expert Gear Selection" maxProducts={4} />
             </div>
-          </section>
-        )}
-      </article>
+
+            {/* ZoneRun Banner */}
+            <div className="mt-12">
+              <ZoneRunBanner variant="inline" />
+            </div>
+          </article>
+
+          {/* Sidebar */}
+          <aside className="shrink-0 lg:w-[320px]">
+            <div className="sticky top-24 space-y-10">
+              {/* Table of Contents */}
+              <nav className="rounded-2xl border border-border bg-card p-5 shadow-card overflow-hidden" aria-label="Table of contents">
+                <div className="flex items-center gap-2 mb-4">
+                  <BookOpen className="h-4 w-4 text-primary" />
+                  <h2 className="font-display text-sm font-bold text-foreground uppercase tracking-wider">In this guide</h2>
+                </div>
+                <ol className="space-y-1">
+                  {guide.sections.map((section, i) => {
+                    const sectionId = section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+                    return (
+                      <li key={i}>
+                        <a
+                          href={`#${sectionId}`}
+                          className="block rounded-lg px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary"
+                        >
+                          {section.heading}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </nav>
+
+              {/* Related Tools */}
+              {guide.relatedTools.length > 0 && (
+                <section>
+                  <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
+                    <Wrench className="h-4 w-4 text-primary" /> Try These Tools
+                  </h3>
+                  <div className="grid gap-2">
+                    {guide.relatedTools.map((tool) => (
+                      <Link
+                        key={tool.to}
+                        to={tool.to}
+                        className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                      >
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                          <Wrench className="h-4 w-4 text-primary" />
+                        </div>
+                        <span className="text-xs font-semibold text-card-foreground group-hover:text-primary">
+                          {tool.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Related Comparisons */}
+              {relatedComparisons.length > 0 && (
+                <section>
+                  <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
+                    <BarChart3 className="h-4 w-4 text-primary" /> Technical Hubs
+                  </h3>
+                  <div className="grid gap-2">
+                    {relatedComparisons.map((c) => {
+                      const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+                      return (
+                        <Link
+                          key={cSlug}
+                          to={`/comparison/${cSlug}`}
+                          className="group rounded-xl border border-border bg-card p-3 shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                        >
+                          <h4 className="text-xs font-bold text-card-foreground group-hover:text-primary">
+                            {translateCategory(c.categoria)} Hub
+                          </h4>
+                          <p className="mt-0.5 text-[10px] text-muted-foreground line-clamp-1">{c.intro}</p>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </section>
+              )}
+
+              {/* Related Guides */}
+              {guide.relatedGuides.length > 0 && (
+                <section>
+                  <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
+                    <BookOpen className="h-4 w-4 text-primary" /> Keep Reading
+                  </h3>
+                  <div className="grid gap-2">
+                    {guide.relatedGuides.map((g) => (
+                      <Link
+                        key={g.slug}
+                        to={`/guides/${g.slug}`}
+                        className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                      >
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                          <BookOpen className="h-4 w-4 text-accent" />
+                        </div>
+                        <span className="text-xs font-semibold text-card-foreground group-hover:text-primary leading-tight">
+                          {g.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+            </div>
+          </aside>
+        </div>
+      </div>
     </Layout>
   );
 };

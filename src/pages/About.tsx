@@ -117,24 +117,34 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-10 sm:py-14 bg-secondary/30">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-8 text-center">What Drives This Project</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { icon: Target, title: "Evidence-Based", desc: "Every recommendation is grounded in sports science research and real-world experience." },
-              { icon: Users, title: "For All Levels", desc: "Whether you're running your first 5K or chasing a marathon PR, you'll find value here." },
-              { icon: TrendingUp, title: "Honest Reviews", desc: "I maintain full editorial independence. If a product doesn't deliver, I say so." },
-              { icon: Heart, title: "Runner-First", desc: "I build the tools and write the guides I actually use in my own training." },
-              { icon: Activity, title: "Data-Driven", desc: "Calculators use validated formulas from sports nutrition and exercise physiology." },
-              { icon: Mail, title: "Open to Feedback", desc: "I listen to readers and continuously improve based on what you actually need." },
-            ].map((v) => (
-              <div key={v.title} className="rounded-xl border border-border bg-card p-6">
-                <v.icon className="h-6 w-6 text-primary mb-3" />
-                <h3 className="font-display text-base font-semibold text-foreground mb-2">{v.title}</h3>
-                <p className="text-sm text-muted-foreground">{v.desc}</p>
+      <section className="py-14 sm:py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="font-display text-2xl sm:text-3xl font-black text-foreground mb-6">What Drives This Project</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Runners Hub isn't just a website; it's a commitment to transparency in an industry often clouded by marketing. These six pillars guide every piece of content we produce.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="rounded-full shadow-hero"><Link to="/method">Read Our Methodology</Link></Button>
               </div>
-            ))}
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                { icon: Target, title: "Evidence-Based", desc: "Recommendations grounded in sports science and real-world experience." },
+                { icon: Users, title: "For All Levels", desc: "Value for everyone from first-timers to marathon veterans." },
+                { icon: TrendingUp, title: "Honest Reviews", desc: "Full independence. If it doesn't work, we say so." },
+                { icon: Heart, title: "Runner-First", desc: "Tools and guides I actually use in my own training." },
+                { icon: Activity, title: "Data-Driven", desc: "Calculators use validated formulas from exercise physiology." },
+                { icon: Mail, title: "Open to Feedback", desc: "Continuous improvement based on what you actually need." },
+              ].map((v) => (
+                <div key={v.title} className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-md">
+                  <v.icon className="h-6 w-6 text-primary mb-3" />
+                  <h3 className="font-display text-sm font-bold text-foreground mb-1">{v.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

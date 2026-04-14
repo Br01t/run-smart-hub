@@ -80,7 +80,7 @@ const HubPage = () => {
         description: hub.description,
       }} />
 
-      <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
+      <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-12">
         <Link to="/hub" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
           <ArrowLeft className="h-4 w-4" /> All Hubs
         </Link>
@@ -93,8 +93,6 @@ const HubPage = () => {
           <p className="mt-2 text-muted-foreground sm:text-lg">{hub.intro}</p>
         </header>
 
-        {/* Products */}
-        <RecommendedProducts tags={hub.tags} title="Top Products" maxProducts={6} />
 
         {/* Comparison Links */}
         {matchedComparisons.length > 0 && (
@@ -102,7 +100,7 @@ const HubPage = () => {
             <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <BarChart3 className="h-5 w-5 text-primary" /> Detailed Comparisons
             </h2>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {matchedComparisons.map((c) => {
                 const slug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
                 return (
@@ -131,7 +129,7 @@ const HubPage = () => {
             <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <Wrench className="h-5 w-5 text-primary" /> Related Tools
             </h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {hub.relatedTools.map((tool) => (
                 <Link
                   key={tool}
@@ -155,7 +153,7 @@ const HubPage = () => {
             <h2 className="mb-4 flex items-center gap-2 font-display text-display-md font-bold text-foreground">
               <BookOpen className="h-5 w-5 text-primary" /> Related Guides
             </h2>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {hub.relatedGuides.map((slug) => (
                 <Link
                   key={slug}
@@ -172,6 +170,11 @@ const HubPage = () => {
             </div>
           </section>
         )}
+        
+        {/* Products */}
+        <div className="mt-12 pt-8 border-t border-border">
+          <RecommendedProducts tags={hub.tags} title="Top Selection" maxProducts={6} />
+        </div>
       </div>
     </Layout>
   );

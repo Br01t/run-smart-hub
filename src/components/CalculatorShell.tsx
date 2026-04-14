@@ -16,7 +16,7 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
   const canonicalUrl = `https://www.runners-hub.org${location.pathname}`;
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
+    <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-12">
       <SEO
         title={title}
         description={description}
