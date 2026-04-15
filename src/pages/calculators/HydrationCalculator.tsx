@@ -125,7 +125,7 @@ const HydrationCalculator = () => {
               </div>
             )}
 
-            {result && <RecommendedProducts tags={["idratazione", "elettroliti"]} title="Hydration Essentials" maxProducts={2} />}
+            {result && <RecommendedProducts tags={["idratazione", "elettroliti"]} title="Hydration Essentials" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

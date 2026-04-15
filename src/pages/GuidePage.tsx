@@ -711,7 +711,7 @@ const GuidePage = () => {
 
             {/* Expert Gear Selection */}
             <div className="mt-16 pt-10 border-t border-border">
-              <RecommendedProducts tags={guide.tags} title="Expert Gear Selection" maxProducts={4} />
+              <RecommendedProducts tags={guide.tags} title="Expert Gear Selection" maxProducts={6} />
             </div>
 
             {/* ZoneRun Banner */}

@@ -177,7 +177,7 @@ const MasterHub = () => {
                       <RecommendedProducts 
                         tags={[catKey, activeSport === "marathon" ? "corsa" : "trail"]} 
                         title={`Top ${guide?.title || catKey} Selection`} 
-                        maxProducts={4} 
+                        maxProducts={6} 
                       />
                     </div>
                   </div>

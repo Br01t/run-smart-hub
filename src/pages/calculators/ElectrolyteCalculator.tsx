@@ -111,7 +111,7 @@ const ElectrolyteCalculator = () => {
               </div>
             )}
 
-            {result && <RecommendedProducts tags={["elettroliti", "magnesio"]} title="Top Rated Supplement" maxProducts={2} />}
+            {result && <RecommendedProducts tags={["elettroliti", "magnesio"]} title="Top Rated Supplement" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

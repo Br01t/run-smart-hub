@@ -101,7 +101,7 @@ const CaloriesCalculator = () => {
               </div>
             )}
 
-            {result && <RecommendedProducts tags={["energia", "carboidrati", "integratori"]} title="Refueling Support" maxProducts={2} />}
+            {result && <RecommendedProducts tags={["energia", "carboidrati", "integratori"]} title="Refueling Support" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

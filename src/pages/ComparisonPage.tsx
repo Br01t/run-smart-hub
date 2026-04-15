@@ -193,7 +193,7 @@ const ComparisonPage = () => {
 
             {/* Products Selection */}
             <div className="mt-16 pt-10 border-t border-border">
-              <RecommendedProducts tags={comparison.tags} title={`Expert ${translateCategory(comparison.categoria)} Picks`} maxProducts={4} />
+              <RecommendedProducts tags={comparison.tags} title={`Expert ${translateCategory(comparison.categoria)} Picks`} maxProducts={6} />
             </div>
           </div>
 

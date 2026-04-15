@@ -504,7 +504,7 @@ const ProfileQuiz = () => {
 
             {/* Products */}
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
-              <RecommendedProducts tags={profile.tags} title="Products Picked For You" maxProducts={4} />
+              <RecommendedProducts tags={profile.tags} title="Products Picked For You" maxProducts={6} />
             </motion.div>
 
             {/* ZoneRun */}

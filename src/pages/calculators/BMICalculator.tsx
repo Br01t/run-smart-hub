@@ -114,7 +114,7 @@ const BMICalculator = () => {
               </div>
             )}
 
-            {result && <RecommendedProducts tags={["proteine", "integratori", "recupero"]} title="Performance Fuel" maxProducts={2} />}
+            {result && <RecommendedProducts tags={["proteine", "integratori", "recupero"]} title="Performance Fuel" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

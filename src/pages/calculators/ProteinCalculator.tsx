@@ -105,7 +105,7 @@ const ProteinCalculator = () => {
               </div>
             )}
 
-            {result && <RecommendedProducts tags={["proteine", "recupero"]} title="Top Protein Sources" maxProducts={2} />}
+            {result && <RecommendedProducts tags={["proteine", "recupero"]} title="Top Protein Sources" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>
