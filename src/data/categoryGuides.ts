@@ -14,7 +14,7 @@ export const categoryGuides: Record<string, CategoryGuide> = {
     scientificDescription: "Choosing the right shoe is more than just comfort; it's about biomechanical efficiency and injury prevention. We analyze every shoe based on 4 technical pillars.",
     pillars: [
       { 
-        title: "Drop (Differenziale)", 
+        title: "Drop", 
         description: "The height difference between heel and toe. 10mm+ for heel strikers, 4-6mm for natural runners." 
       },
       { 

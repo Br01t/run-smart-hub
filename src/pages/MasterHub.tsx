@@ -1,15 +1,10 @@
-import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
-  Settings, 
-  Map, 
   ChevronRight, 
   BarChart3, 
-  Package, 
   BookOpen, 
   Wrench,
-  Info
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -21,24 +16,53 @@ import GearComparisonTable from "@/components/GearComparisonTable";
 import ApparelComparisonTable from "@/components/ApparelComparisonTable";
 import RecoveryComparisonTable from "@/components/RecoveryComparisonTable";
 
-import hubsData from "@/data/hubs.json";
 import comparisonsData from "@/data/comparisons.json";
 import { categoryGuides } from "@/data/categoryGuides";
-import { translateCategory, translateSport } from "@/lib/translations";
 
 const categories = ["shoes", "supplements", "hydration", "recovery", "apparel"];
 
 const MasterHub = () => {
-  const [activeSport, setActiveSport] = useState<"marathon" | "trail-running">("marathon");
+  // Category theme colors for vibrant UI
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case "shoes": return "hsl(25, 95%, 50%)"; // Amber/Orange
+      case "supplements": return "hsl(270, 70%, 60%)"; // Purple
+      case "hydration": return "hsl(190, 90%, 45%)"; // Cyan/Sky
+      case "recovery": return "hsl(150, 80%, 35%)"; // Emerald
+      case "apparel": return "hsl(230, 80%, 60%)"; // Indigo
+      default: return "hsl(var(--primary))";
+    }
+  };
 
-  // Filter hubs and comparisons based on sport
-  // Note: We treat marathon as the representative for 'road' sports for the table display
+  // Filter hubs and comparisons based on category only and deduplicate by objective
   const getComparisonsForCategory = (category: string) => {
-    return (comparisonsData as any[]).filter(c => {
+    const matched = (comparisonsData as any[]).filter(c => {
       const normalizedCat = category === "hydration" ? "accessori" : category;
-      const normalizedSport = activeSport === "marathon" ? "corsa" : "trail";
-      return c.categoria === normalizedCat && c.sport === normalizedSport;
+      
+      // Filter out the redundant focus cards requested by user
+      const isRedundant = (c.obiettivo === "idratazione" || c.obiettivo === "performance") && normalizedCat === "accessori";
+      
+      return c.categoria === normalizedCat && !isRedundant;
     });
+    
+    // Deduplicate by objective (pick the first one found)
+    const uniqueObjectives = new Map();
+    matched.forEach(item => {
+      if (!uniqueObjectives.has(item.obiettivo)) {
+        uniqueObjectives.set(item.obiettivo, item);
+      }
+    });
+    
+    return Array.from(uniqueObjectives.values());
+  };
+
+  // Mapping English category keys to the tags used in products.json (which are mostly Italian)
+  const categoryProductTags: Record<string, string[]> = {
+    shoes: ["scarpe", "shoes"],
+    supplements: ["integratori", "supplements"],
+    hydration: ["idratazione", "accessori", "hydration"],
+    recovery: ["recupero", "recovery"],
+    apparel: ["abbigliamento", "apparel"]
   };
 
   return (
@@ -81,6 +105,8 @@ const MasterHub = () => {
             const guide = categoryGuides[catKey === "hydration" ? "hydration" : catKey === "shoes" ? "shoes" : catKey === "supplements" ? "supplements" : catKey === "recovery" ? "recovery" : "apparel"];
             const matchedComparisons = getComparisonsForCategory(catKey);
             
+            const accentColor = getCategoryColor(catKey);
+            
             return (
               <section key={catKey} id={catKey} className="scroll-mt-32">
                 <div className="grid gap-12 lg:grid-cols-[1fr_300px] lg:gap-20">
@@ -88,7 +114,12 @@ const MasterHub = () => {
                   <div>
                     <div className="mb-8 items-end justify-between sm:flex border-b border-border pb-6">
                       <div className="editorial-line">
-                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">0{categories.indexOf(catKey) + 1} / {catKey}</span>
+                        <span 
+                          className="text-[10px] font-bold uppercase tracking-[0.2em] transition-colors duration-500"
+                          style={{ color: accentColor }}
+                        >
+                          0{categories.indexOf(catKey) + 1} / {catKey}
+                        </span>
                         <h2 className="mt-2 font-display text-display-md font-bold text-foreground capitalize">
                           {guide?.title || catKey}
                         </h2>
@@ -99,7 +130,10 @@ const MasterHub = () => {
                     {guide && (
                       <div className="mb-12 overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
                         <div className="grid md:grid-cols-[1fr_1.5fr]">
-                          <div className="bg-primary/5 p-8 sm:p-10">
+                          <div 
+                            className="p-8 sm:p-10 transition-colors duration-500"
+                            style={{ backgroundColor: `${accentColor}10` }}
+                          >
                             <h3 className="font-display text-xl font-bold text-foreground">
                               {guide.scientificTitle}
                             </h3>
@@ -111,7 +145,12 @@ const MasterHub = () => {
                             <div className="grid gap-6 sm:grid-cols-2">
                               {guide.pillars.map((pillar) => (
                                 <div key={pillar.title}>
-                                  <h4 className="text-xs font-bold uppercase tracking-wider text-foreground">{pillar.title}</h4>
+                                  <h4 
+                                    className="text-xs font-bold uppercase tracking-wider transition-colors duration-500"
+                                    style={{ color: accentColor }}
+                                  >
+                                    {pillar.title}
+                                  </h4>
                                   <p className="mt-1 text-[11px] leading-normal text-muted-foreground">{pillar.description}</p>
                                 </div>
                               ))}
@@ -125,36 +164,16 @@ const MasterHub = () => {
                     <div className="space-y-12">
                       <div className="flex items-center justify-between border-b border-border pb-4">
                         <h3 className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
-                          <BarChart3 className="h-5 w-5 text-primary" /> Technical Comparison
+                          <BarChart3 className="h-5 w-5 opacity-40" /> Technical Comparison
                         </h3>
-                        
-                        {/* Context Toggle - Moved here near the elements that change */}
-                        <div className="flex rounded-lg bg-muted p-1">
-                          <button 
-                            onClick={() => setActiveSport("marathon")}
-                            className={`flex items-center gap-2 rounded-md px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-all ${
-                              activeSport === "marathon" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                            }`}
-                          >
-                            <Settings className="h-3 w-3" /> Road
-                          </button>
-                          <button 
-                            onClick={() => setActiveSport("trail-running")}
-                            className={`flex items-center gap-2 rounded-md px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-all ${
-                              activeSport === "trail-running" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                            }`}
-                          >
-                            <Map className="h-3 w-3" /> Trail
-                          </button>
-                        </div>
                       </div>
 
                       {/* Render appropriate table based on category */}
-                      {catKey === "shoes" && <ShoeComparisonTable sport={activeSport === "marathon" ? "road" : "trail"} />}
-                      {catKey === "supplements" && <SupplementComparisonTable sport={activeSport === "marathon" ? "road" : "trail"} />}
-                      {catKey === "hydration" && <GearComparisonTable sport={activeSport === "marathon" ? "road" : "trail"} />}
-                      {catKey === "recovery" && <RecoveryComparisonTable sport={activeSport === "marathon" ? "road" : "trail"} />}
-                      {catKey === "apparel" && <ApparelComparisonTable sport={activeSport === "marathon" ? "road" : "trail"} />}
+                      {catKey === "shoes" && <ShoeComparisonTable accentColor={accentColor} />}
+                      {catKey === "supplements" && <SupplementComparisonTable accentColor={accentColor} />}
+                      {catKey === "hydration" && <GearComparisonTable accentColor={accentColor} />}
+                      {catKey === "recovery" && <RecoveryComparisonTable accentColor={accentColor} />}
+                      {catKey === "apparel" && <ApparelComparisonTable accentColor={accentColor} />}
 
                       {/* Goal-specific Intros (from comparisons.json) */}
                       <div className="grid gap-4 sm:grid-cols-2">
@@ -175,7 +194,7 @@ const MasterHub = () => {
                     {/* Recommended Products Grid moved after tables */}
                     <div className="mt-16 mb-8">
                       <RecommendedProducts 
-                        tags={[catKey, activeSport === "marathon" ? "corsa" : "trail"]} 
+                        tags={categoryProductTags[catKey] || [catKey]} 
                         title={`Top ${guide?.title || catKey} Selection`} 
                         maxProducts={6} 
                       />
