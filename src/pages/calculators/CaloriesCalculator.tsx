@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Flame } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
-import RecommendedProducts from "@/components/RecommendedProducts";
+import HubReferral from "@/components/HubReferral";
 
 const CaloriesCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -55,41 +55,60 @@ const CaloriesCalculator = () => {
           {/* Results Column */}
           <div className="lg:w-[450px] space-y-8">
             {result ? (
-              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Your Energy Stats</h3>
-                <div className="grid gap-4">
-                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Total Burn</p>
-                      <p className="text-sm font-medium text-foreground">Active Energy</p>
+              <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
+                  <h3 className="mb-6 font-display text-xl font-bold text-foreground">Energy Expenditure</h3>
+                  <div className="grid gap-4">
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Total Burn</span>
+                      <p className="font-display text-3xl font-bold text-primary">{result.calories} <span className="text-xs font-bold uppercase text-muted-foreground/60">kcal</span></p>
                     </div>
-                    <p className="font-display text-3xl font-bold text-primary">{result.calories} <span className="text-xs font-bold uppercase text-muted-foreground/60">kcal</span></p>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Fat Mass</p>
-                      <p className="text-sm font-medium text-foreground">Est. Consumption</p>
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Fat Mass Equiv.</span>
+                      <p className="font-display text-3xl font-bold text-accent">{result.fatGrams} <span className="text-xs font-bold uppercase text-muted-foreground/60">g</span></p>
                     </div>
-                    <p className="font-display text-3xl font-bold text-accent">{result.fatGrams} <span className="text-xs font-bold uppercase text-muted-foreground/60">g</span></p>
                   </div>
                 </div>
 
-                {/* Insight */}
-                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
-                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">⚡</span>
-                    Fueling Insight
-                  </h4>
-                  <div className="text-sm leading-relaxed text-muted-foreground">
-                    {result.calories < 300
-                      ? "A light session! Perfect for recovery. Stick to hydration and a small post-run snack."
-                      : result.calories < 600
-                      ? "Solid burn. You've emptied about 25% of your glycogen. Refuel within 60 min to kickstart recovery."
-                      : result.calories < 1000
-                      ? "Significant effort. Proper carb refueling is critical to prevent fatigue tomorrow."
-                      : "Epic burn! Glycogen depletion is high. Focus on high-carb intake over the next 24 hours."}
+                {/* Science Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.014 9 16.014 9s1.014-4 2.014-4c0 0-1 4-1 6 0 2 1.5 5 2.643 7.657z" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
                   </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Running caloric burn is primarily determined by mass and distance (Work = Force x Distance). The MET (Metabolic Equivalent of Task) for running (~11-14) is one of the highest in human movement, requiring significant oxygen consumption and glycogen turnover.
+                  </p>
                 </div>
+
+                {/* Practice Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Practice</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>Post-run window: Consume a 3:1 Carb-to-Protein ratio within 45 min for optimal glycogen resynthesis.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>Don't over-fuel: Many runners overestimate burn and over-eat, leading to GI distress and unwanted weight gain.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <HubReferral 
+                  category="supplements"
+                  href="/comparison/supplements-for-running-performance"
+                  title="Best Performance Fuel Hub"
+                  description="View technical specs of energy gels, chews, and carb mixes to find the perfect fuel for your next long effort."
+                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -100,8 +119,6 @@ const CaloriesCalculator = () => {
                 <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">See how many calories you'll burn on your next run.</p>
               </div>
             )}
-
-            {result && <RecommendedProducts tags={["energia", "carboidrati", "integratori"]} title="Refueling Support" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

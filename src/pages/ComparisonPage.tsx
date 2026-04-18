@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 import { translateCategory, translateSport, translateGoal } from "@/lib/translations";
-import comparisonsData from "@/data/comparisons.json";
+import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 import productsData from "@/data/products.json";
 import hubsData from "@/data/hubs.json";
 
@@ -18,8 +18,8 @@ import RecoveryComparisonTable from "@/components/RecoveryComparisonTable";
 
 interface Comparison {
   sport: string;
-  obiettivo: string;
-  categoria: string;
+  objective: string;
+  category: string;
   intro: string;
   tags: string[];
   faq: { q: string; a: string }[];
@@ -30,42 +30,42 @@ const toolSuggestions: Record<string, { to: string; label: string }[]> = {
     { to: "/tools/calories", label: "Calories Calculator" },
     { to: "/tools/electrolytes", label: "Electrolyte Calculator" },
   ],
-  recupero: [
+  recovery: [
     { to: "/tools/protein", label: "Protein Calculator" },
     { to: "/tools/hydration", label: "Hydration Calculator" },
   ],
-  idratazione: [
+  hydration: [
     { to: "/tools/hydration", label: "Hydration Calculator" },
     { to: "/tools/electrolytes", label: "Electrolyte Calculator" },
   ],
-  dimagrimento: [
+  "weight-loss": [
     { to: "/tools/calories", label: "Calories Calculator" },
     { to: "/tools/bmi", label: "BMI Calculator" },
   ],
-  "prevenzione-infortuni": [
+  "injury-prevention": [
     { to: "/tools/bmi", label: "BMI Calculator" },
     { to: "/tools/protein", label: "Protein Calculator" },
   ],
-  resistenza: [
+  endurance: [
     { to: "/tools/calories", label: "Calories Calculator" },
     { to: "/tools/hydration", label: "Hydration Calculator" },
   ],
 };
 
 const guideSuggestions: Record<string, { slug: string; label: string }[]> = {
-  integratori: [
+  supplements: [
     { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
     { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
   ],
-  scarpe: [
+  shoes: [
     { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
     { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
   ],
-  recupero: [
+  recovery: [
     { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
     { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
   ],
-  accessori: [
+  accessories: [
     { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
     { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
   ],
@@ -75,7 +75,7 @@ const ComparisonPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const comparison = (comparisonsData as Comparison[]).find((c) => {
-    const expectedSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+    const expectedSlug = `${c.category}-for-${c.sport}-${c.objective}`;
     return expectedSlug === slug;
   });
 
@@ -90,27 +90,20 @@ const ComparisonPage = () => {
     );
   }
 
-  const title = `Best ${translateCategory(comparison.categoria)} for ${translateSport(comparison.sport)} – ${translateGoal(comparison.obiettivo)}`;
+  const title = `Best ${translateCategory(comparison.category)} for ${translateSport(comparison.sport)} – ${translateGoal(comparison.objective)}`;
   const description = comparison.intro.slice(0, 155);
 
-  const matchedProducts = (productsData as { id: string; nome: string; descrizione: string; prezzoRange: string; linkAffiliato: string; immagine: string; tag: string[] }[])
-    .filter((p) => p.tag.some((t) => comparison.tags.includes(t)));
+  const matchedProducts = (productsData as any[])
+    .filter((p) => p.tag.some((t: string) => comparison.tags.includes(t)));
 
-  const relatedTools = toolSuggestions[comparison.obiettivo] || [
+  const relatedTools = toolSuggestions[comparison.objective] || [
     { to: "/tools/calories", label: "Calories Calculator" },
   ];
-  const relatedGuides = guideSuggestions[comparison.categoria] || [];
+  const relatedGuides = guideSuggestions[comparison.category] || [];
 
   // Find related hub with normalized slug matching
-  const catMap: Record<string, string> = {
-    integratori: "supplements",
-    scarpe: "shoes",
-    accessori: "hydration",
-    recupero: "recovery",
-    abbigliamento: "apparel",
-  };
-  const normalizedCat = catMap[comparison.categoria] || comparison.categoria;
-  const normalizedSport = comparison.sport === "corsa" ? "marathon" : comparison.sport === "trail" ? "trail-running" : comparison.sport;
+  const normalizedCat = comparison.category;
+  const normalizedSport = comparison.sport === "running" ? "marathon" : comparison.sport === "trail" ? "trail-running" : comparison.sport;
 
   const relatedHub = (hubsData as { category: string; sport: string }[]).find(
     (h) => h.category === normalizedCat || h.sport === normalizedSport
@@ -119,7 +112,7 @@ const ComparisonPage = () => {
 
   // Other comparisons (excluding current)
   const otherComparisons = (comparisonsData as Comparison[])
-    .filter((c) => c !== comparison && (c.categoria === comparison.categoria || c.sport === comparison.sport))
+    .filter((c) => c !== comparison && (c.category === comparison.category || c.sport === comparison.sport))
     .slice(0, 3);
 
   const faqJsonLd = comparison.faq.length > 0 ? {
@@ -159,10 +152,10 @@ const ComparisonPage = () => {
           <div className="min-w-0 flex-1">
             <header className="mb-10 editorial-line">
               <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold capitalize text-primary">
-                {comparison.categoria} · {comparison.sport}
+                {comparison.category} · {comparison.sport}
               </span>
               <h1 className="font-display text-display-lg font-bold text-foreground capitalize">
-                {translateCategory(comparison.categoria)} for {translateSport(comparison.sport)}: {translateGoal(comparison.obiettivo)}
+                {translateCategory(comparison.category)} for {translateSport(comparison.sport)}: {translateGoal(comparison.objective)}
               </h1>
               <p className="mt-2 text-muted-foreground sm:text-lg">{comparison.intro}</p>
             </header>
@@ -184,16 +177,16 @@ const ComparisonPage = () => {
 
             {/* Technical Comparison Table */}
             <div>
-              {comparison.categoria === 'scarpe' && <ShoeComparisonTable />}
-              {comparison.categoria === 'integratori' && <SupplementComparisonTable />}
-              {(comparison.categoria === 'accessori' || comparison.categoria === 'idratazione') && <GearComparisonTable />}
-              {comparison.categoria === 'abbigliamento' && <ApparelComparisonTable />}
-              {comparison.categoria === 'recupero' && <RecoveryComparisonTable />}
+              {comparison.category === 'shoes' && <ShoeComparisonTable />}
+              {comparison.category === 'supplements' && <SupplementComparisonTable />}
+              {(comparison.category === 'accessories' || comparison.category === 'hydration') && <GearComparisonTable />}
+              {comparison.category === 'apparel' && <ApparelComparisonTable />}
+              {comparison.category === 'recovery' && <RecoveryComparisonTable />}
             </div>
 
             {/* Products Selection */}
             <div className="mt-16 pt-10 border-t border-border">
-              <RecommendedProducts tags={comparison.tags} title={`Expert ${translateCategory(comparison.categoria)} Picks`} maxProducts={6} />
+              <RecommendedProducts tags={comparison.tags} title={`Expert ${translateCategory(comparison.category)} Picks`} maxProducts={6} />
             </div>
           </div>
 
@@ -279,15 +272,15 @@ const ComparisonPage = () => {
             <h2 className="mb-8 font-display text-display-md font-bold text-foreground">More Comparisons</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {otherComparisons.map((c) => {
-                const cSlug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+                const cSlug = `${c.category}-for-${c.sport}-${c.objective}`;
                 return (
                   <Link
                     key={cSlug}
                     to={`/comparison/${cSlug}`}
                     className="group rounded-xl border border-border bg-card p-4 shadow-card transition-all hover:shadow-card-hover hover:-translate-y-0.5"
                   >
-                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{translateCategory(c.categoria)} for {translateSport(c.sport)}</h3>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{translateGoal(c.obiettivo)}</p>
+                    <h3 className="text-sm font-semibold capitalize text-card-foreground">{translateCategory(c.category)} for {translateSport(c.sport)}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-accent">{translateGoal(c.objective)}</p>
                   </Link>
                 );
               })}

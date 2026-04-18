@@ -30,9 +30,9 @@ const goalMap: Record<string, string> = {
   performance: "Performance",
   recupero: "Recovery",
   idratazione: "Hydration",
-  dimagrimento: "Weight Loss",
-  "prevenzione-infortuni": "Injury Prevention",
-  resistenza: "Endurance",
+  "weight-loss": "Weight Loss",
+  "injury-prevention": "Injury Prevention",
+  endurance: "Endurance",
   forza: "Strength",
   muscle: "Muscle Building",
 };

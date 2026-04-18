@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Zap } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
-import RecommendedProducts from "@/components/RecommendedProducts";
+import HubReferral from "@/components/HubReferral";
 
 const ElectrolyteCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -69,37 +69,64 @@ const ElectrolyteCalculator = () => {
           {/* Results/Recommendations Column */}
           <div className="lg:w-[450px] space-y-8">
             {result ? (
-              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Ammount to Replenish</h3>
-                <div className="grid gap-3">
-                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
-                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sodium (Na+)</span>
-                    <p className="font-display text-2xl font-bold text-primary">{result.sodium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
-                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Potassium (K+)</span>
-                    <p className="font-display text-2xl font-bold text-primary">{result.potassium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
-                  </div>
-                  <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm">
-                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Magnesium (Mg++)</span>
-                    <p className="font-display text-2xl font-bold text-primary">{result.magnesium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+              <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
+                  <h3 className="mb-6 font-display text-xl font-bold text-foreground">Ammount to Replenish</h3>
+                  <div className="grid gap-3">
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sodium (Na+)</span>
+                      <p className="font-display text-2xl font-bold text-primary">{result.sodium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                    </div>
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Potassium (K+)</span>
+                      <p className="font-display text-2xl font-bold text-primary">{result.potassium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                    </div>
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Magnesium (Mg++)</span>
+                      <p className="font-display text-2xl font-bold text-primary">{result.magnesium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Insight */}
-                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
-                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">⚡</span>
-                    Replenishment Guide
-                  </h4>
-                  <div className="text-sm leading-relaxed text-muted-foreground">
-                    {intensity === "high"
-                      ? "Sodium is your priority (~90%-95% of electrolyte loss). High intensity requires at least 500-1000mg per liter of fluid."
-                      : parseFloat(duration) > 90
-                      ? "Longer efforts deplete potassium and magnesium, leading to muscle fatigue and cramps. Supplement early (at 45 min)."
-                      : "For shorter, moderate sessions, water with a pinch of salt or a standard effervescent tablet is usually sufficient."}
+                {/* Science Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
                   </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Electrolytes are electric signals. Sodium is the primary driver of water absorption in the small intestine; without enough sodium, you won't absorb the water you drink, leading to "slosh stomach" and decreased performance.
+                  </p>
                 </div>
+
+                {/* Practice Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500/10 text-teal-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Practice</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>Pre-load: Take 500mg sodium 60 min before a hot race.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>Check for salt crusting on skin; it's a sign of a "salty sweater" who needs more Na+.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <HubReferral 
+                  category="supplements"
+                  href="/comparison/supplements-for-running-performance"
+                  title="Best Electrolyte Solutions"
+                  description="Compare the technical specifications, salt ratios, and bioavailability of the market's leading electrolyte brands."
+                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -110,8 +137,6 @@ const ElectrolyteCalculator = () => {
                 <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">Map out your electrolyte needs based on your next training effort.</p>
               </div>
             )}
-
-            {result && <RecommendedProducts tags={["elettroliti", "magnesio"]} title="Top Rated Supplement" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

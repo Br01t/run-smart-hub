@@ -5,104 +5,8 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import shoeHero from "@/assets/shoes-finder-hero.webp";
 
-interface QuizStep {
-  question: string;
-  options: { label: string; value: string; emoji: string }[];
-}
-
-const steps: QuizStep[] = [
-  {
-    question: "What type of running do you do most?",
-    options: [
-      { label: "Road Running", value: "road", emoji: "🛣️" },
-      { label: "Trail Running", value: "trail", emoji: "⛰️" },
-      { label: "Track / Speed", value: "track", emoji: "🏟️" },
-      { label: "Mixed Terrain", value: "mixed", emoji: "🌍" },
-    ],
-  },
-  {
-    question: "What's your weekly mileage?",
-    options: [
-      { label: "Under 20 km", value: "low", emoji: "🚶" },
-      { label: "20–50 km", value: "medium", emoji: "🏃" },
-      { label: "50–80 km", value: "high", emoji: "🏃‍♂️" },
-      { label: "80+ km", value: "ultra", emoji: "🦸" },
-    ],
-  },
-  {
-    question: "How would you describe your foot arch?",
-    options: [
-      { label: "Flat / Low Arch", value: "flat", emoji: "🦶" },
-      { label: "Normal / Medium", value: "normal", emoji: "👟" },
-      { label: "High Arch", value: "high", emoji: "📐" },
-      { label: "Not Sure", value: "unsure", emoji: "❓" },
-    ],
-  },
-  {
-    question: "What's your main priority in a shoe?",
-    options: [
-      { label: "Cushioning", value: "cushion", emoji: "☁️" },
-      { label: "Speed / Lightweight", value: "speed", emoji: "⚡" },
-      { label: "Stability / Support", value: "stability", emoji: "🛡️" },
-      { label: "Durability", value: "durability", emoji: "🔩" },
-    ],
-  },
-  {
-    question: "What's your budget range?",
-    options: [
-      { label: "Under €80", value: "budget", emoji: "💰" },
-      { label: "€80 – €130", value: "mid", emoji: "💳" },
-      { label: "€130 – €180", value: "premium", emoji: "💎" },
-      { label: "No limit", value: "unlimited", emoji: "🏆" },
-    ],
-  },
-];
-
-interface ShoeResult {
-  name: string;
-  brand: string;
-  category: string;
-  price: string;
-  why: string;
-  features: string[];
-}
-
-const getRecommendations = (answers: Record<number, string>): ShoeResult[] => {
-  const terrain = answers[0];
-  const priority = answers[3];
-  const budget = answers[4];
-
-  if (terrain === "trail") {
-    return [
-      { name: "Speedcross 6", brand: "Salomon", category: "Trail", price: "€130–€150", why: "The reference for grip on mud and soft terrain. Aggressive lugs and secure fit.", features: ["Quicklace™ system", "Contagrip® sole", "Anti-debris mesh"] },
-      { name: "Cascadia 17", brand: "Brooks", category: "Trail", price: "€120–€140", why: "A 'tank' for technical trails. Durable, stable, and protective for any terrain.", features: ["DNA LOFT v2", "Rock plate", "TrailTack rubber"] },
-      { name: "Speedgoat 5", brand: "HOKA", category: "Trail", price: "€145–€165", why: "Maximum cushioning for ultra-distance trail runs.", features: ["Vibram Megagrip", "Late-stage Meta-Rocker", "32mm stack height"] },
-    ];
-  }
-
-  if (priority === "speed") {
-    return [
-      { name: "Electrify Nitro", brand: "Puma", category: "Performance", price: "€70–€90", why: "Responsive NITRO™ foam technology for faster paces. Great value for speed work.", features: ["NITRO™ foam", "PUMAGRIP", "Engineered mesh"] },
-      { name: "Vaporfly 3", brand: "Nike", category: "Racing", price: "€250–€280", why: "Carbon-plated racer for PR-chasing performance.", features: ["ZoomX foam", "Carbon fiber plate", "Ultra-light upper"] },
-      { name: "Duramo Speed", brand: "Adidas", category: "Daily Trainer", price: "€60–€80", why: "Lightweight and reactive with an excellent quality-to-price ratio.", features: ["Lightstrike cushioning", "Breathable mesh", "Durable outsole"] },
-    ];
-  }
-
-  if (budget === "budget") {
-     return [
-      { name: "Revolution 6", brand: "Nike", category: "Daily Trainer", price: "€50–€65", why: "The perfect entry-level running shoe for those starting their journey.", features: ["Soft foam", "Eco-friendly materials", "Versatile design"] },
-      { name: "Duramo Speed", brand: "Adidas", category: "Daily Trainer", price: "€60–€80", why: "Excellent quality-to-price ratio for a responsive daily ride.", features: ["Lightstrike", "Speed-oriented design", "Great value"] },
-      { name: "Gel-Contend 8", brand: "ASICS", category: "Daily Trainer", price: "€55–€70", why: "Trusted stability with premium GEL™ technology for a great price.", features: ["GEL™ tech", "AmpliFoam", "Durable"] },
-    ];
-  }
-
-  // Default: Daily Trainers / Comfort
-  return [
-    { name: "Gel-Contend 8", brand: "ASICS", category: "Daily Trainer", price: "€60–€75", why: "A classic, stable daily trainer with GEL™ technology for reliable comfort.", features: ["Rearfoot GEL™", "OrthoLite™ sockliner", "Stable ride"] },
-    { name: "Fresh Foam Arishi v4", brand: "New Balance", category: "Daily Trainer", price: "€65–€80", why: "Fresh Foam cushioning that works as well in the gym as it does on the road.", features: ["Fresh Foam", "Seamless upper", "Versatile"] },
-    { name: "Ghost 16", brand: "Brooks", category: "Daily Trainer", price: "€120–€140", why: "Balanced cushioning ideal for everyday training.", features: ["DNA LOFT v2", "Segmented Crash Pad", "3D Fit Print upper"] },
-  ];
-};
+import { shoeFinderSteps as steps, getShoeRecommendations as getRecommendations } from "@/lib/calculators/shoeService";
+import HubReferral from "@/components/HubReferral";
 
 const ShoeFinder = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -220,61 +124,69 @@ const ShoeFinder = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              className="space-y-8"
             >
-              <div className="mb-6 flex items-center gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary" />
-                <h2 className="font-display text-xl font-bold text-foreground sm:text-2xl">
-                  Your Top Picks
+              {/* Result Header */}
+              <div className="rounded-2xl border-2 border-primary bg-primary/5 p-8 text-center shadow-hero">
+                <CheckCircle2 className="mx-auto h-12 w-12 text-primary mb-4" />
+                <h2 className="mb-2 font-display text-2xl font-black text-foreground sm:text-3xl">
+                  {results.categoryName}
                 </h2>
+                <p className="mx-auto max-w-lg text-sm text-muted-foreground sm:text-base">
+                  {results.description}
+                </p>
+                
+                <div className="mt-6 flex flex-wrap justify-center gap-2">
+                  {results.features.map(f => (
+                    <span key={f} className="rounded-full bg-background px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-foreground border border-border shadow-sm">
+                      {f}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-4">
-                {results.map((shoe, i) => (
-                  <motion.div
-                    key={shoe.name}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.15 }}
-                    className="overflow-hidden rounded-2xl border border-border bg-card"
-                  >
-                    <div className="flex items-start gap-4 p-5">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-accent text-sm font-bold text-accent-foreground">
-                        #{i + 1}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex flex-wrap items-baseline gap-2">
-                          <h3 className="font-display text-lg font-bold text-card-foreground">{shoe.name}</h3>
-                          <span className="text-sm text-muted-foreground">by {shoe.brand}</span>
-                        </div>
-                        <div className="mt-1 flex flex-wrap gap-2">
-                          <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">{shoe.category}</span>
-                          <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">{shoe.price}</span>
-                        </div>
-                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{shoe.why}</p>
-                        <div className="mt-3 flex flex-wrap gap-1.5">
-                          {shoe.features.map((f) => (
-                            <span key={f} className="rounded-md border border-border bg-background px-2 py-0.5 text-xs text-muted-foreground">{f}</span>
-                          ))}
-                        </div>
-                      </div>
+              {/* Science & Practice Sections */}
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115 3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477 2.387a2 2 0 00.547 1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
                     </div>
-                  </motion.div>
-                ))}
+                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {results.science}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Practice</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {results.practice}
+                  </p>
+                </div>
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              {/* Hub Referral */}
+              <HubReferral 
+                category="shoes"
+                href="/hub/shoes/marathon"
+                title="Explore the Best Shoes Hub"
+                description={`View our complete technical comparison of all top-rated ${results.categoryName} models to find your perfect pair with live availability and pricing.`}
+              />
+
+              <div className="flex justify-center pt-4">
                 <button
                   onClick={reset}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 text-sm font-bold text-foreground shadow-sm transition-all hover:bg-secondary hover:shadow-md"
                 >
-                  <RotateCcw className="h-4 w-4" /> Try Again
+                  <RotateCcw className="h-4 w-4" /> Start New Search
                 </button>
-                <a
-                  href="/hub/shoes/marathon"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-hero px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  Browse All Shoes <ArrowRight className="h-4 w-4" />
-                </a>
               </div>
             </motion.div>
           )}

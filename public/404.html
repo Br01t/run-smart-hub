@@ -5,7 +5,7 @@
     <script>
       // GitHub Pages SPA redirect: convert 404 path into query string
       // so index.html can restore the correct route on load.
-      var pathSegmentsToKeep = 1; // number of path segments for the repo sub-path
+      var pathSegmentsToKeep = 0; // number of path segments for the repo sub-path
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

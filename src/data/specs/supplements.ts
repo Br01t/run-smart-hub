@@ -1,0 +1,135 @@
+import { SupplementSpec } from "@/types/specs";
+
+export const supplementSpecs: SupplementSpec[] = [
+  { 
+    name: "Impact Whey Protein", 
+    absorption: "Fast", 
+    timing: "Post-workout", 
+    ingredients: "80% Whey Protein + BCAA", 
+    bestFor: "Immediate muscle recovery post-effort",
+    effect: "Anabolic / Reparative",
+    recommendedFor: "Recovery",
+    link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/",
+    image: "https://static.thcdn.com/productimg/original/10530943-2175262135686325.jpg",
+    emphasized: true
+  },
+  { 
+    name: "Impact Whey Isolate", 
+    absorption: "Fast", 
+    timing: "Post-workout", 
+    ingredients: "90% Whey Protein Isolate", 
+    bestFor: "Maximum protein purity and fast muscle recovery",
+    effect: "Lean muscle growth",
+    recommendedFor: "Recovery",
+    link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/",
+    image: "https://static.thcdn.com/productimg/original/10530911-8525307235362378.jpg"
+  },
+  { 
+    name: "Impact EAA", 
+    absorption: "Fast", 
+    timing: "Post-workout", 
+    ingredients: "All 9 Essential Amino Acids", 
+    bestFor: "Superior muscle repair and prevention of catabolism",
+    effect: "Protein Synthesis Support",
+    recommendedFor: "Recovery",
+    link: "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/",
+    image: "https://static.thcdn.com/productimg/original/15952589-9415323049696760.png"
+  },
+  { 
+    name: "100% Maltodextrin Carbs", 
+    absorption: "Fast", 
+    timing: "During", 
+    ingredients: "Pure Maltodextrin", 
+    bestFor: "Glycogen replenishment during long runs",
+    effect: "Energy source",
+    recommendedFor: "Endurance",
+    link: "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/",
+    image: "https://static.thcdn.com/productimg/original/10530114-1135180485543170.jpg"
+  },
+  { 
+    name: "Oat Protein Flapjack", 
+    absorption: "Medium", 
+    timing: "Post-workout", 
+    ingredients: "Rolled Oats + Whey Protein", 
+    bestFor: "Convenient recovery snack with balanced macros",
+    effect: "Sustained Repair",
+    recommendedFor: "Recovery",
+    link: "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/",
+    image: "https://static.thcdn.com/productimg/original/12948773-4584910350702434.jpg"
+  },
+  { 
+    name: "Impact Creatine", 
+    absorption: "Medium", 
+    timing: "Anytime", 
+    ingredients: "Pure micronized creatine", 
+    bestFor: "Increasing power in sprints and strength",
+    effect: "Phosphocreatine saturation",
+    recommendedFor: "Power / Strength",
+    link: "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/",
+    image: "https://static.thcdn.com/productimg/original/10530050-5555271174703488.jpg"
+  },
+  { 
+    name: "Beta Alanine", 
+    absorption: "Slow", 
+    timing: "Pre-workout", 
+    ingredients: "Pure amino acid", 
+    bestFor: "Reduction of fatigue feeling in high intensities",
+    effect: "Lactic acid buffer",
+    recommendedFor: "Intensity",
+    link: "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/",
+    image: "https://static.thcdn.com/productimg/original/10529809-1144869503463372.jpg"
+  },
+  { 
+    name: "Alpha BRAIN® (90ct)", 
+    absorption: "Fast", 
+    timing: "Pre-workout", 
+    ingredients: "L-Theanine, Bacopa, Cat's Claw", 
+    bestFor: "Mental clarity and sharp focus during races",
+    effect: "Cognitive support",
+    recommendedFor: "Focus",
+    link: "https://www.onnit.com/products/alpha-brain-90-ct",
+    image: "https://www.onnit.com/cdn/shop/files/media_0d26030c-9e9b-40bd-82ae-df059b2ad547.png?v=1773124741&width=400"
+  },
+  { 
+    name: "Alpha BRAIN® (60ct)", 
+    absorption: "Fast", 
+    timing: "Pre-workout", 
+    ingredients: "L-Theanine, Bacopa, Cat's Claw", 
+    bestFor: "Daily cognitive support and focus",
+    effect: "Mental processing speed",
+    recommendedFor: "Daily Focus",
+    link: "https://www.onnit.com/products/alpha-brain-60-ct",
+    image: "https://www.onnit.com/cdn/shop/files/media_dc157b53-6764-4216-8b34-c3af69482ff8.png?v=1774923661&width=400"
+  },
+  { 
+    name: "Alpha BRAIN Black Label", 
+    absorption: "Fast", 
+    timing: "Pre-workout", 
+    ingredients: "Lion's Mane, L-Tyrosine", 
+    bestFor: "Elite performers needing maximum cognitive drive",
+    effect: "Potent mental focus",
+    recommendedFor: "Elite Focus",
+    link: "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
+    emphasized: true
+  },
+  { 
+    name: "Shroom TECH Sport", 
+    absorption: "Medium", 
+    timing: "Pre-workout", 
+    ingredients: "Cordyceps + Mushrooms", 
+    bestFor: "Oxygen optimization in endurance sports",
+    effect: "Respiratory support",
+    recommendedFor: "Endurance",
+    link: "https://www.onnit.com/products/shroom-tech-sport-84-ct"
+  },
+  { 
+    name: "Total Human", 
+    absorption: "Medium", 
+    timing: "Anytime", 
+    ingredients: "Detailed Day/Night Packs", 
+    bestFor: "General health and full-body recovery",
+    effect: "Systemic recovery",
+    recommendedFor: "All Sports",
+    link: "https://www.onnit.com/products/total-human-30-day-supply"
+  },
+];

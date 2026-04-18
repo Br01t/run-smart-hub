@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Dumbbell } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
-import RecommendedProducts from "@/components/RecommendedProducts";
+import HubReferral from "@/components/HubReferral";
 
 const ProteinCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -72,28 +72,55 @@ const ProteinCalculator = () => {
           {/* Results Column */}
           <div className="lg:w-[450px] space-y-8">
             {result ? (
-              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-card sm:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <h3 className="mb-6 font-display text-lg font-bold text-foreground">Recommended Intake</h3>
-                <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-8 shadow-sm border border-border/50">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Total Daily Target</p>
-                  <p className="font-display text-5xl font-black text-primary">{result.min}–{result.max}<span className="text-xl ml-1 font-bold text-muted-foreground/40">g</span></p>
-                  <p className="mt-2 text-xs font-medium text-muted-foreground">distributed over 4-5 meals</p>
-                </div>
-
-                {/* Insight */}
-                <div className="mt-8 space-y-4 rounded-xl border border-border bg-card p-5">
-                  <h4 className="flex items-center gap-2 text-sm font-bold text-foreground">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-[10px] text-primary">💪</span>
-                    Nutrition Insight
-                  </h4>
-                  <div className="text-sm leading-relaxed text-muted-foreground">
-                    {goal === "lose"
-                      ? "High protein intake is vital during a deficit to avoid losing muscle. Aim for the higher end of the range."
-                      : goal === "gain"
-                      ? "Pair this intake with heavy resistance training. Distribute 30-40g of protein every 3-4 hours."
-                      : "Performance-focused needs. Focus on timing: 20-30g of protein within 45 minutes of finishing your run."}
+              <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
+                  <h3 className="mb-6 font-display text-xl font-bold text-foreground">Recommended Intake</h3>
+                  <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-8 shadow-sm border border-border">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Total Daily Target</p>
+                    <p className="font-display text-5xl font-black text-primary">{result.min}–{result.max}<span className="text-xl ml-1 font-bold text-muted-foreground/40">g</span></p>
+                    <p className="mt-2 text-xs font-medium text-muted-foreground">distributed over 4-5 meals</p>
                   </div>
                 </div>
+
+                {/* Science Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115 3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477 2.387a2 2 0 00.547 1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Muscle Protein Synthesis (MPS) is triggered by the "Leucine Threshold." For runners, protein isn't just for bulk; it's critical for repairing the micro-tears in connective tissue and maintaining the metabolic health of skeletal muscle during high-mileage blocks.
+                  </p>
+                </div>
+
+                {/* Practice Section */}
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground">The Practice</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>Aim for 20-30g per meal. This maximizes the MPS response more effectively than eating one massive protein-heavy meal.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>The "Anabolic Window" is longer than previously thought (up to 24h), but getting protein within 2h of a long run helps blunt cortisol.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <HubReferral 
+                  category="supplements"
+                  href="/comparison/supplements-for-running-recovery"
+                  title="Best Protein & Recovery Hub"
+                  description="Compare the purity, amino acid profiles, and absorption rates of the highest-rated whey, vegan, and recovery protein powders."
+                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -104,8 +131,6 @@ const ProteinCalculator = () => {
                 <p className="mt-2 text-sm text-muted-foreground/60 max-w-[240px]">Tell us about your activity level to optimize your macronutrient profile.</p>
               </div>
             )}
-
-            {result && <RecommendedProducts tags={["proteine", "recupero"]} title="Top Protein Sources" maxProducts={6} />}
           </div>
         </div>
       </CalculatorShell>

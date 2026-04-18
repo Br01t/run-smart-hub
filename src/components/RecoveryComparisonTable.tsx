@@ -35,59 +35,8 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
   </Select>
 );
 
-interface RecoverySpec {
-  name: string;
-  brand: string;
-  intensity: string; // Density for rollers, mmHg for compression, Stall Force for guns
-  techDetails: string; // Surface, Noise, Use case
-  useType: "Running" | "Rest" | "Race";
-  bestFor: string;
-  recommendedFor: string;
-  link?: string;
-}
-
-const recoverySpecs: RecoverySpec[] = [
-  { 
-    name: "GRID Foam Roller", 
-    brand: "TriggerPoint", 
-    intensity: "High (Rigid/Grid)", 
-    techDetails: "Sculpted surface for drainage", 
-    useType: "Rest",
-    bestFor: "Experienced runners seeking deep myofascial release",
-    recommendedFor: "All Runners",
-    link: "https://www.amazon.it/Trigger-Point-Performance-Rullo-Massaggio/dp/B0040EGNIU"
-  },
-  { 
-    name: "Mini Massage Gun", 
-    brand: "Generic", 
-    intensity: "12kg Stall Force", 
-    techDetails: "Quiet (<45dB) / Portable", 
-    useType: "Race",
-    bestFor: "Immediate trigger point treatment post-long run",
-    recommendedFor: "Recovery / Travel",
-    link: "https://www.amazon.it/Mini-Pistola-Massaggio-Muscolare-Portatile/dp/B08L5VYQFZ"
-  },
-  { 
-    name: "Compression Socks", 
-    brand: "Physix Gear", 
-    intensity: "20-30 mmHg (Graduated)", 
-    techDetails: "Increased blood flow / Drainage", 
-    useType: "Rest",
-    bestFor: "Post-race recovery or for long travel days",
-    recommendedFor: "Post-Race / Travel",
-    link: "https://www.amazon.it/Physix-Gear-Sport-Compressione-Graduata/dp/B01J4ME6L4"
-  },
-  { 
-    name: "Lacrosse Ball", 
-    brand: "Generic", 
-    intensity: "Maximum (Focused pressure)", 
-    techDetails: "Smooth surface / Dense rubber", 
-    useType: "Rest",
-    bestFor: "Specific foot sole massage (plantar fasciitis)",
-    recommendedFor: "Injury Prevention",
-    link: "https://www.amazon.it/Palla-Massaggio-Lacrosse-Trigger-Point/dp/B07V6Q8ZMN"
-  },
-];
+import { RecoverySpec } from "@/types/specs";
+import { recoverySpecs } from "@/data/specs/recovery";
 
 export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
@@ -146,6 +95,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
                 <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
+                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
                 <TableHead className="font-bold text-foreground">Recommended For</TableHead>
                 <TableHead className="font-bold text-foreground">Intensity / Density</TableHead>
                 <TableHead className="font-bold text-foreground">Specific Use</TableHead>
@@ -157,7 +107,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                 filteredData.map((spec) => (
                   <TableRow 
                     key={spec.name} 
-                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''}`}
+                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
                     <TableCell className="px-4">
@@ -168,19 +118,36 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                     </TableCell>
                     <TableCell className="font-semibold text-foreground">
                       <div className="flex flex-col">
-                        {spec.link ? (
-                          <a 
-                            href={spec.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer sponsored"
-                            className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                          >
-                            {spec.name}
-                          </a>
-                        ) : (
-                          <span>{spec.name}</span>
-                        )}
+                        <div className="flex items-center gap-1.5">
+                          {spec.link ? (
+                            <a 
+                              href={spec.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer sponsored"
+                              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            >
+                              {spec.name}
+                            </a>
+                          ) : (
+                            <span>{spec.name}</span>
+                          )}
+                          {spec.emphasized && (
+                            <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                              Expert Pick
+                            </Badge>
+                          )}
+                        </div>
                         <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
+                        <img 
+                          src={spec.image} 
+                          alt={spec.name} 
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
                       </div>
                     </TableCell>
                     <TableCell>
@@ -208,7 +175,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={6} className="h-40 text-center">
+                  <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No recovery tools found matching these criteria.</p>
@@ -244,6 +211,22 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
+                <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
+                      <div className="flex justify-center">
+                        <div className="relative group/img h-32 w-40 overflow-hidden rounded-lg border border-border bg-white p-2 shadow-sm transition-transform hover:scale-105">
+                          <img 
+                            src={p.image} 
+                            alt={p.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
                 {[
                   { label: "Recommendation", key: "recommendedFor" },
                   { label: "Intensity", key: "intensity" },

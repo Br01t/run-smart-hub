@@ -35,139 +35,8 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
   </Select>
 );
 
-interface SupplementSpec {
-  name: string;
-  absorption: "Fast" | "Medium" | "Slow";
-  timing: "Pre-workout" | "During" | "Post-workout" | "Anytime";
-  ingredients: string;
-  effect: string;
-  bestFor: string;
-  recommendedFor: string;
-  link?: string;
-}
-
-const supplementSpecs: SupplementSpec[] = [
-  { 
-    name: "Impact Whey Protein", 
-    absorption: "Fast", 
-    timing: "Post-workout", 
-    ingredients: "80% Whey Protein + BCAA", 
-    bestFor: "Immediate muscle recovery post-effort",
-    effect: "Anabolic / Reparative",
-    recommendedFor: "Recovery",
-    link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/"
-  },
-  { 
-    name: "Impact Whey Isolate", 
-    absorption: "Fast", 
-    timing: "Post-workout", 
-    ingredients: "90% Whey Protein Isolate", 
-    bestFor: "Maximum protein purity and fast muscle recovery",
-    effect: "Lean muscle growth",
-    recommendedFor: "Recovery",
-    link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/"
-  },
-  { 
-    name: "Impact EAA", 
-    absorption: "Fast", 
-    timing: "Post-workout", 
-    ingredients: "All 9 Essential Amino Acids", 
-    bestFor: "Superior muscle repair and prevention of catabolism",
-    effect: "Protein Synthesis Support",
-    recommendedFor: "Recovery",
-    link: "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/"
-  },
-  { 
-    name: "100% Maltodextrin Carbs", 
-    absorption: "Fast", 
-    timing: "During", 
-    ingredients: "Pure Maltodextrin", 
-    bestFor: "Glycogen replenishment during long runs",
-    effect: "Energy source",
-    recommendedFor: "Endurance",
-    link: "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/"
-  },
-  { 
-    name: "Oat Protein Flapjack", 
-    absorption: "Medium", 
-    timing: "Post-workout", 
-    ingredients: "Rolled Oats + Whey Protein", 
-    bestFor: "Convenient recovery snack with balanced macros",
-    effect: "Sustained Repair",
-    recommendedFor: "Recovery",
-    link: "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/"
-  },
-  { 
-    name: "Impact Creatine", 
-    absorption: "Medium", 
-    timing: "Anytime", 
-    ingredients: "Pure micronized creatine", 
-    bestFor: "Increasing power in sprints and strength",
-    effect: "Phosphocreatine saturation",
-    recommendedFor: "Power / Strength",
-    link: "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/"
-  },
-  { 
-    name: "Beta Alanine", 
-    absorption: "Slow", 
-    timing: "Pre-workout", 
-    ingredients: "Pure amino acid", 
-    bestFor: "Reduction of fatigue feeling in high intensities",
-    effect: "Lactic acid buffer",
-    recommendedFor: "Intensity",
-    link: "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/"
-  },
-  { 
-    name: "Alpha BRAIN (90ct)", 
-    absorption: "Fast", 
-    timing: "Pre-workout", 
-    ingredients: "L-Theanine, Bacopa, Cat's Claw", 
-    bestFor: "Mental clarity and sharp focus during races",
-    effect: "Cognitive support",
-    recommendedFor: "Focus",
-    link: "https://www.onnit.com/products/alpha-brain-90-ct"
-  },
-  { 
-    name: "Alpha BRAIN (60ct)", 
-    absorption: "Fast", 
-    timing: "Pre-workout", 
-    ingredients: "L-Theanine, Bacopa, Cat's Claw", 
-    bestFor: "Daily cognitive support and focus",
-    effect: "Mental processing speed",
-    recommendedFor: "Daily Focus",
-    link: "https://www.onnit.com/products/alpha-brain-60-ct"
-  },
-  { 
-    name: "Alpha BRAIN Black Label", 
-    absorption: "Fast", 
-    timing: "Pre-workout", 
-    ingredients: "Lion's Mane, L-Tyrosine", 
-    bestFor: "Elite performers needing maximum cognitive drive",
-    effect: "Potent mental focus",
-    recommendedFor: "Elite Focus",
-    link: "https://www.onnit.com/products/alpha-brain-black-label-80-ct"
-  },
-  { 
-    name: "Shroom TECH Sport", 
-    absorption: "Medium", 
-    timing: "Pre-workout", 
-    ingredients: "Cordyceps + Mushrooms", 
-    bestFor: "Oxygen optimization in endurance sports",
-    effect: "Respiratory support",
-    recommendedFor: "Endurance",
-    link: "https://www.onnit.com/products/shroom-tech-sport-84-ct"
-  },
-  { 
-    name: "Total Human", 
-    absorption: "Medium", 
-    timing: "Anytime", 
-    ingredients: "Detailed Day/Night Packs", 
-    bestFor: "General health and full-body recovery",
-    effect: "Systemic recovery",
-    recommendedFor: "All Sports",
-    link: "https://www.onnit.com/products/total-human-30-day-supply"
-  },
-];
+import { SupplementSpec } from "@/types/specs";
+import { supplementSpecs } from "@/data/specs/supplements";
 
 export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
@@ -227,6 +96,7 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
                 <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
+                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
                 <TableHead className="font-bold text-foreground">Recommended For</TableHead>
                 <TableHead className="font-bold text-foreground">Absorption</TableHead>
                 <TableHead className="font-bold text-foreground">Timing</TableHead>
@@ -240,7 +110,7 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                 filteredData.map((spec) => (
                   <TableRow 
                     key={spec.name} 
-                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''}`}
+                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
                     <TableCell className="px-4">
@@ -250,18 +120,35 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                       />
                     </TableCell>
                     <TableCell className="font-semibold text-foreground">
-                      {spec.link ? (
-                        <a 
-                          href={spec.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer sponsored"
-                          className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                        >
-                          {spec.name}
-                        </a>
-                      ) : (
-                        spec.name
-                      )}
+                      <div className="flex items-center gap-1.5">
+                        {spec.link ? (
+                          <a 
+                            href={spec.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer sponsored"
+                            className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                          >
+                            {spec.name}
+                          </a>
+                        ) : (
+                          spec.name
+                        )}
+                        {spec.emphasized && (
+                          <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                            Expert Pick
+                          </Badge>
+                        )}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
+                        <img 
+                          src={spec.image} 
+                          alt={spec.name} 
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
+                      </div>
                     </TableCell>
                     <TableCell>
                       <Badge variant="secondary" className="bg-secondary/50 text-[10px] font-bold uppercase tracking-wider">
@@ -290,7 +177,7 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={8} className="h-40 text-center">
+                  <TableCell colSpan={9} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No results found for these filters.</p>
@@ -325,21 +212,42 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border">
+              <tbody className="divide-y divide-border text-foreground">
+                <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
+                      <div className="flex justify-center">
+                        <div className="relative group/img h-32 w-40 overflow-hidden rounded-lg border border-border bg-white p-2 shadow-sm transition-transform hover:scale-105">
+                          <img 
+                            src={p.image} 
+                            alt={p.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
                 {[
-                  { label: "Recommendation", key: "recommendedFor" },
+                  { label: "Recommended For", key: "recommendedFor", isBadge: true },
                   { label: "Absorption", key: "absorption", isBadge: true },
                   { label: "Timing", key: "timing" },
-                  { label: "Ingredients", key: "ingredients" },
+                  { label: "Key Ingredients", key: "ingredients" },
                   { label: "Primary Effect", key: "effect" },
                   { label: "Best For", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
-                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>
+                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">{row.label}</td>
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
                         {row.isBadge ? (
-                          <Badge variant="outline" className="text-[10px] uppercase font-bold">{p[row.key as keyof SupplementSpec]}</Badge>
+                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${
+                            p[row.key as keyof SupplementSpec] === 'Recovery' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 
+                            p[row.key as keyof SupplementSpec] === 'Fast' ? 'bg-sky-50 text-sky-700 border-sky-100' : ''
+                          }`}>
+                            {p[row.key as keyof SupplementSpec]}
+                          </Badge>
                         ) : (
                           p[row.key as keyof SupplementSpec]
                         )}

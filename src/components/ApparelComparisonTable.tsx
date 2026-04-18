@@ -35,64 +35,8 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
   </Select>
 );
 
-interface ApparelSpec {
-  name: string;
-  brand: string;
-  category: "Shirt" | "Shorts" | "Jacket";
-  breathability: string; // Tech details (Dri-FIT, UA Tech, Mesh)
-  fit: "Compression" | "Fitted" | "Loose";
-  details: string; // Seams, pockets, reflective
-  bestFor: string;
-  usage: string;
-  link?: string;
-}
-
-const apparelSpecs: ApparelSpec[] = [
-  { 
-    name: "UA Tech 2.0", 
-    brand: "Under Armour", 
-    category: "Shirt", 
-    breathability: "UA Tech™ - Ultra-fast drying", 
-    fit: "Loose",
-    details: "Flatlock anti-chafing seams",
-    bestFor: "Daily training and gym sessions",
-    usage: "Daily / Gym",
-    link: "https://www.amazon.it/Under-Armour-Tech-T-Shirt-Uomo/dp/B0D17ZTY7M"
-  },
-  { 
-    name: "Dri-FIT Academy", 
-    brand: "Nike", 
-    category: "Shirt", 
-    breathability: "Nike Dri-FIT - Breathable mesh", 
-    fit: "Fitted",
-    details: "Lightweight technical fabric",
-    bestFor: "Runners seeking a versatile and fresh classic",
-    usage: "Road / Hot Weather",
-    link: "https://www.amazon.it/Nike-Maglietta-Dri-Fit-Horizon-HF6142-370/dp/B0DN1PM19Z"
-  },
-  { 
-    name: "AEROREADY Shorts", 
-    brand: "Adidas", 
-    category: "Shorts", 
-    breathability: "AEROREADY - Moisture management", 
-    fit: "Loose",
-    details: "Anti-chafing internal brief",
-    bestFor: "Avoiding irritation during long runs",
-    usage: "All Terrain / Long Runs",
-    link: "https://www.amazon.it/adidas-Camo-SHO-Pantaloncini-Uomo/dp/B096KLC2SH"
-  },
-  { 
-    name: "R3 Tex Jacket", 
-    brand: "Gore Wear", 
-    category: "Jacket", 
-    breathability: "GORE-TEX® - Waterproof/Breathable", 
-    fit: "Fitted",
-    details: "360° Reflective inserts / Smartphone pocket",
-    bestFor: "Running in extreme rain and strong wind",
-    usage: "Trail / Bad Weather",
-    link: "https://www.amazon.it/GORE-WEAR-Giacca-Running-Cappuccio/dp/B07G4M6VYF"
-  },
-];
+import { ApparelSpec } from "@/types/specs";
+import { apparelSpecs } from "@/data/specs/apparel";
 
 export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
@@ -151,6 +95,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
                 <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
+                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
                 <TableHead className="font-bold text-foreground">Usage</TableHead>
                 <TableHead className="font-bold text-foreground">Breathability</TableHead>
                 <TableHead className="font-bold text-foreground">Fit</TableHead>
@@ -163,7 +108,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                 filteredData.map((spec) => (
                   <TableRow 
                     key={spec.name} 
-                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''}`}
+                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
                     <TableCell className="px-4">
@@ -174,19 +119,36 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                     </TableCell>
                     <TableCell className="font-semibold text-foreground">
                       <div className="flex flex-col">
-                        {spec.link ? (
-                          <a 
-                            href={spec.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer sponsored"
-                            className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                          >
-                            {spec.name}
-                          </a>
-                        ) : (
-                          <span>{spec.name}</span>
-                        )}
+                        <div className="flex items-center gap-1.5">
+                          {spec.link ? (
+                            <a 
+                              href={spec.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer sponsored"
+                              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            >
+                              {spec.name}
+                            </a>
+                          ) : (
+                            <span>{spec.name}</span>
+                          )}
+                          {spec.emphasized && (
+                            <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                              Expert Pick
+                            </Badge>
+                          )}
+                        </div>
                         <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
+                        <img 
+                          src={spec.image} 
+                          alt={spec.name} 
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
                       </div>
                     </TableCell>
                     <TableCell>
@@ -218,7 +180,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={7} className="h-40 text-center">
+                  <TableCell colSpan={8} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No apparel found matching these criteria.</p>
@@ -254,6 +216,22 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
+                <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
+                      <div className="flex justify-center">
+                        <div className="relative group/img h-32 w-40 overflow-hidden rounded-lg border border-border bg-white p-2 shadow-sm transition-transform hover:scale-105">
+                          <img 
+                            src={p.image} 
+                            alt={p.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
                 {[
                   { label: "Usage", key: "usage" },
                   { label: "Breathability", key: "breathability" },

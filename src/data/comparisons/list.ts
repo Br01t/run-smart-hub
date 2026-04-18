@@ -1,43 +1,45 @@
-[
+import { ComparisonData } from "@/types/comparison";
+
+export const comparisonsList: ComparisonData[] = [
   {
-    "sport": "corsa",
-    "obiettivo": "performance",
-    "categoria": "integratori",
+    "sport": "running",
+    "objective": "performance",
+    "category": "supplements",
     "intro": "Discover the best supplements to boost your running performance. From caffeine to energy gels, here's an evidence-based selection.",
-    "tags": ["energia", "carboidrati", "integratori"],
+    "tags": ["energy", "carbohydrates", "supplements"],
     "faq": [
       { "q": "What supplements help you run faster?", "a": "Caffeine, beta-alanine and maltodextrin-based gels are among the most research-backed for improving running performance." },
       { "q": "When should you take running supplements?", "a": "Energy gels should be taken during runs (every 45-60 min), caffeine 30-60 minutes before." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "recupero",
-    "categoria": "integratori",
+    "sport": "running",
+    "objective": "recovery",
+    "category": "supplements",
     "intro": "Recovery is fundamental for every runner. Here are the products that can help you bounce back faster after training.",
-    "tags": ["proteine", "recupero", "magnesio"],
+    "tags": ["protein", "recovery", "magnesium"],
     "faq": [
       { "q": "What should you take after running for recovery?", "a": "Whey protein within 30 minutes, magnesium to prevent cramps and a foam roller for myofascial release." },
       { "q": "Does magnesium help muscle recovery?", "a": "Yes, magnesium contributes to normal muscle function and can reduce cramps and fatigue." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "idratazione",
-    "categoria": "accessori",
+    "sport": "running",
+    "objective": "hydration",
+    "category": "accessories",
     "intro": "Proper hydration is essential for every runner. Discover the best accessories to stay hydrated during your runs.",
-    "tags": ["idratazione", "elettroliti", "accessori"],
+    "tags": ["hydration", "electrolytes", "accessories"],
     "faq": [
       { "q": "How much water should you drink while running?", "a": "On average 400-800ml per hour, depending on temperature, intensity and individual sweat rate." },
       { "q": "Do you need electrolyte tablets?", "a": "For runs over 60 minutes or in hot conditions, yes. They replenish sodium and potassium lost through sweat." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "dimagrimento",
-    "categoria": "integratori",
+    "sport": "running",
+    "objective": "weight-loss",
+    "category": "supplements",
     "intro": "Want to lose weight through running? Here are the products that can support your weight loss journey in a healthy, science-backed way.",
-    "tags": ["energia", "proteine", "integratori"],
+    "tags": ["energy", "protein", "supplements"],
     "faq": [
       { "q": "Does running help you lose weight?", "a": "Yes, running burns approximately 1 kcal/kg/km. Combined with a moderate calorie deficit, it's one of the most effective activities." },
       { "q": "Do proteins help with weight loss?", "a": "Proteins increase satiety and preserve muscle mass during a calorie deficit." }
@@ -45,32 +47,32 @@
   },
   {
     "sport": "trail",
-    "obiettivo": "performance",
-    "categoria": "scarpe",
+    "objective": "performance",
+    "category": "shoes",
     "intro": "The right shoes make all the difference in trail running. Discover how to choose and the recommended models for your off-road adventures.",
-    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "tags": ["shoes", "running", "cushioning"],
     "faq": [
       { "q": "What's the difference between trail and road shoes?", "a": "Trail shoes have lugged soles for grip on uneven terrain, rock protection and often a more durable upper." },
       { "q": "How often should you replace trail shoes?", "a": "On average every 500-800 km, depending on terrain and model." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "prevenzione-infortuni",
-    "categoria": "recupero",
+    "sport": "running",
+    "objective": "injury-prevention",
+    "category": "recovery",
     "intro": "Preventing injuries is key to running long-term. Here are the best tools and products for recovery and injury prevention.",
-    "tags": ["recupero", "massaggio", "muscoli"],
+    "tags": ["recovery", "massage", "muscles"],
     "faq": [
       { "q": "How to prevent running injuries?", "a": "Stretching, foam rolling, gradual volume progression and shoes suited to your foot strike." },
       { "q": "Does foam rolling really work?", "a": "Yes, studies show foam rolling reduces DOMS and improves joint mobility." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "performance",
-    "categoria": "scarpe",
+    "sport": "running",
+    "objective": "performance",
+    "category": "shoes",
     "intro": "Your running shoes are the most important piece of gear. Compare the best performance road running shoes for speed and comfort.",
-    "tags": ["scarpe", "corsa", "ammortizzazione"],
+    "tags": ["shoes", "running", "cushioning"],
     "faq": [
       { "q": "Are carbon-plated shoes worth it?", "a": "For race day and tempo runs, carbon plates can improve running economy by 2-4%. They're best for distances 10K and above." },
       { "q": "How much drop should a performance shoe have?", "a": "Most modern performance shoes have 6-10mm drop. Lower drop suits midfoot strikers, higher drop for heel strikers." }
@@ -78,10 +80,10 @@
   },
   {
     "sport": "trail",
-    "obiettivo": "idratazione",
-    "categoria": "accessori",
+    "objective": "hydration",
+    "category": "accessories",
     "intro": "Trail runs often take you far from water sources. The right hydration gear is critical for safety and performance on the trails.",
-    "tags": ["idratazione", "elettroliti", "accessori"],
+    "tags": ["hydration", "electrolytes", "accessories"],
     "faq": [
       { "q": "What's the best hydration system for trail running?", "a": "Hydration vests with soft flasks are the most popular choice. They distribute weight evenly and allow hands-free drinking." },
       { "q": "How much water should you carry on a trail run?", "a": "As a rule of thumb, carry 500ml per hour of running. In hot conditions or long distances, increase to 750ml-1L per hour." }
@@ -89,21 +91,21 @@
   },
   {
     "sport": "trail",
-    "obiettivo": "recupero",
-    "categoria": "integratori",
+    "objective": "recovery",
+    "category": "supplements",
     "intro": "Trail running is especially demanding on muscles and joints. The right recovery supplements can help you bounce back from tough mountain sessions.",
-    "tags": ["proteine", "recupero", "magnesio"],
+    "tags": ["protein", "recovery", "magnesium"],
     "faq": [
       { "q": "Why is recovery harder after trail runs?", "a": "Trail running involves more eccentric muscle contractions from downhill running, causing greater muscle damage and longer recovery times." },
       { "q": "What supplements help with trail running recovery?", "a": "Whey protein for muscle repair, tart cherry juice for inflammation, magnesium for cramps and electrolytes for rehydration." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "resistenza",
-    "categoria": "integratori",
+    "sport": "running",
+    "objective": "endurance",
+    "category": "supplements",
     "intro": "Building endurance requires smart nutrition. Discover the supplements that help you run longer and stronger during marathon training.",
-    "tags": ["energia", "carboidrati", "elettroliti", "integratori"],
+    "tags": ["energy", "carbohydrates", "electrolytes", "supplements"],
     "faq": [
       { "q": "What supplements improve running endurance?", "a": "Beetroot juice (nitrates), caffeine, sodium bicarbonate and proper carbohydrate loading are the most evidence-based endurance boosters." },
       { "q": "Should long-distance runners take iron supplements?", "a": "Only if blood tests show low ferritin levels. Runners are prone to iron deficiency due to foot-strike hemolysis and sweat losses." }
@@ -111,24 +113,24 @@
   },
   {
     "sport": "trail",
-    "obiettivo": "prevenzione-infortuni",
-    "categoria": "recupero",
+    "objective": "injury-prevention",
+    "category": "recovery",
     "intro": "Trail running puts unique stress on ankles, knees and stabilizer muscles. Here are the best tools to prevent trail-specific injuries.",
-    "tags": ["recupero", "massaggio", "muscoli"],
+    "tags": ["recovery", "massage", "muscles"],
     "faq": [
       { "q": "What are the most common trail running injuries?", "a": "Ankle sprains, IT band syndrome, patellofemoral pain and plantar fasciitis are the most common. Strength training and proper shoes help prevent them." },
       { "q": "How to strengthen ankles for trail running?", "a": "Single-leg balance exercises, resistance band work and proprioception training on unstable surfaces are highly effective." }
     ]
   },
   {
-    "sport": "corsa",
-    "obiettivo": "performance",
-    "categoria": "accessori",
+    "sport": "running",
+    "objective": "performance",
+    "category": "accessories",
     "intro": "From GPS watches to heart rate monitors, the right accessories can transform your training data and help you reach new PRs.",
-    "tags": ["accessori", "corsa"],
+    "tags": ["accessories", "running"],
     "faq": [
       { "q": "Do I need a running watch?", "a": "A GPS watch helps track pace, distance and heart rate zones. It's valuable for structured training but not essential for casual runners." },
       { "q": "What running accessories improve performance?", "a": "GPS watches for pacing, heart rate straps for zone training, and compression socks for reduced fatigue on long runs." }
     ]
   }
-]
+];

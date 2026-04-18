@@ -36,89 +36,8 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
   </Select>
 );
 
-interface ShoeSpec {
-  name: string;
-  weight: string;
-  drop: string;
-  cushion: "Minimal" | "Balanced" | "Maximum";
-  support: "Neutral" | "Stable";
-  bestFor: string;
-  terrain: "Road" | "Trail";
-  link?: string;
-}
-
-const shoeSpecs: ShoeSpec[] = [
-  { 
-    name: "Nike Revolution 6", 
-    weight: "280g", 
-    drop: "10mm", 
-    cushion: "Balanced", 
-    support: "Neutral", 
-    bestFor: "Beginners running < 15km/week",
-    terrain: "Road",
-    link: "https://www.amazon.it/Nike-Revolution-Scarpe-Corsa-Uomo/dp/B09WMQBLHC"
-  },
-  { 
-    name: "Adidas Duramo Speed", 
-    weight: "265g", 
-    drop: "6mm", 
-    cushion: "Minimal", 
-    support: "Neutral", 
-    bestFor: "Those seeking reactivity and speed at a great price",
-    terrain: "Road",
-    link: "https://www.amazon.it/adidas-Duramo-Speed-M-Scarpe-Running/dp/B0BYDLN6R7"
-  },
-  { 
-    name: "ASICS Gel-Contend 8", 
-    weight: "300g", 
-    drop: "10mm", 
-    cushion: "Maximum", 
-    support: "Stable", 
-    bestFor: "Runners looking for extra stability and protection",
-    terrain: "Road",
-    link: "https://www.amazon.it/ASICS-Gel-Contend-Scarpe-Running-Uomo/dp/B0B6H2K1RT"
-  },
-  { 
-    name: "NB Fresh Foam Arishi v4", 
-    weight: "250g", 
-    drop: "8mm", 
-    cushion: "Maximum", 
-    support: "Neutral", 
-    bestFor: "Versatile runners (running + gym)",
-    terrain: "Road",
-    link: "https://www.amazon.it/New-Balance-Fresh-Arishi-Running/dp/B0BN5TQHVC"
-  },
-  { 
-    name: "Puma Electrify Nitro", 
-    weight: "240g", 
-    drop: "8mm", 
-    cushion: "Minimal", 
-    support: "Neutral", 
-    bestFor: "Tempo runs and speed sessions",
-    terrain: "Road",
-    link: "https://www.amazon.it/PUMA-Electrify-Nitro-Scarpe-Running/dp/B0BSLRRLNQ"
-  },
-  { 
-    name: "Brooks Cascadia", 
-    weight: "310g", 
-    drop: "8mm", 
-    cushion: "Balanced", 
-    support: "Stable", 
-    bestFor: "Technical trails and uneven terrain",
-    terrain: "Trail",
-    link: "https://www.amazon.it/Brooks-Cascadia-17-Scarpa-Running/dp/B0B6H2K1RT"
-  },
-  { 
-    name: "Salomon Speedcross", 
-    weight: "298g", 
-    drop: "10mm", 
-    cushion: "Minimal", 
-    support: "Neutral", 
-    bestFor: "Maximum grip on mud and soft terrain",
-    terrain: "Trail",
-    link: "https://www.amazon.it/Salomon-Speedcross-6-Trail-Running-Shoes/dp/B09WMQBLHC"
-  },
-];
+import { ShoeSpec } from "@/types/specs";
+import { shoeSpecs } from "@/data/specs/shoes";
 
 export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
@@ -176,6 +95,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
                 <TableHead className="w-[180px] font-bold text-foreground">Model</TableHead>
+                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
                 <TableHead className="font-bold text-foreground text-center">Terrain</TableHead>
                 <TableHead className="font-bold text-foreground text-center">Weight</TableHead>
                 <TableHead className="font-bold text-foreground text-center">Drop</TableHead>
@@ -189,8 +109,8 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                 filteredData.map((shoe) => (
                   <TableRow 
                     key={shoe.name} 
-                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(shoe.name) ? 'font-medium' : ''}`}
-                    style={{ backgroundColor: selectedNames.includes(shoe.name) ? `${accentColor}10` : 'transparent' }}
+                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(shoe.name) ? 'font-medium' : ''} ${shoe.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
+                    style={{ backgroundColor: selectedNames.includes(shoe.name) ? `${accentColor}10` : (shoe.emphasized ? 'var(--primary-light)' : 'transparent') }}
                   >
                     <TableCell className="px-4">
                       <Checkbox 
@@ -200,19 +120,36 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                     </TableCell>
                     <TableCell className="font-semibold text-foreground">
                       <div className="flex flex-col">
-                        {shoe.link ? (
-                          <a 
-                            href={shoe.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer sponsored"
-                            className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                          >
-                            {shoe.name}
-                          </a>
-                        ) : (
-                          <span>{shoe.name}</span>
-                        )}
+                        <div className="flex items-center gap-1.5">
+                          {shoe.link ? (
+                            <a 
+                              href={shoe.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer sponsored"
+                              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            >
+                              {shoe.name}
+                            </a>
+                          ) : (
+                            <span>{shoe.name}</span>
+                          )}
+                          {shoe.emphasized && (
+                            <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                              Expert Pick
+                            </Badge>
+                          )}
+                        </div>
                         <span className="text-[10px] text-muted-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">Technical Model</span>
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
+                        <img 
+                          src={shoe.image} 
+                          alt={shoe.name} 
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
                       </div>
                     </TableCell>
                     <TableCell className="text-center">
@@ -244,7 +181,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={8} className="h-40 text-center">
+                  <TableCell colSpan={9} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No shoes found matching these criteria.</p>
@@ -279,21 +216,42 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border">
+              <tbody className="divide-y divide-border text-foreground">
+                <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
+                      <div className="flex justify-center">
+                        <div className="relative group/img h-32 w-40 overflow-hidden rounded-lg border border-border bg-white p-2 shadow-sm transition-transform hover:scale-105">
+                          <img 
+                            src={p.image} 
+                            alt={p.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
                 {[
-                  { label: "Terrain", key: "terrain" },
+                  { label: "Terrain", key: "terrain", isBadge: true },
                   { label: "Weight", key: "weight" },
                   { label: "Drop", key: "drop" },
-                  { label: "Cushioning", key: "cushion", isBadge: true },
-                  { label: "Support", key: "support" },
+                  { label: "Cushion", key: "cushion", isBadge: true },
+                  { label: "Support", key: "support", isBadge: true },
                   { label: "Best For", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
-                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>
+                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">{row.label}</td>
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
                         {row.isBadge ? (
-                          <Badge variant="outline" className="text-[10px] uppercase font-bold">{p[row.key as keyof ShoeSpec]}</Badge>
+                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${
+                            p[row.key as keyof ShoeSpec] === 'Trail' ? 'bg-amber-50 text-amber-700 border-amber-100' : 
+                            p[row.key as keyof ShoeSpec] === 'Maximum' ? 'bg-sky-50 text-sky-700 border-sky-100' : ''
+                          }`}>
+                            {p[row.key as keyof ShoeSpec]}
+                          </Badge>
                         ) : (
                           p[row.key as keyof ShoeSpec]
                         )}

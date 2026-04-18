@@ -35,89 +35,8 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
   </Select>
 );
 
-interface GearSpec {
-  name: string;
-  brand: string;
-  category: "Watch" | "Hydration" | "Lighting" | "Socks" | "Belt";
-  metric1: string; // Battery / Capacity / Lumens / Fit
-  metric2: string; // Maps / Pockets / Charging / Material
-  bestFor: string;
-  usage: string;
-  link?: string;
-}
-
-const gearSpecs: GearSpec[] = [
-  { 
-    name: "Forerunner 55", 
-    brand: "Garmin", 
-    category: "Watch", 
-    metric1: "20h Active GPS", 
-    metric2: "No Maps / Wrist HR",
-    bestFor: "Entry-level heart rate and GPS tracking",
-    usage: "Road / Track",
-    link: "https://www.amazon.it/Garmin-Forerunner-55-Smartwatch-GPS/dp/B09579MVN4"
-  },
-  { 
-    name: "Fenix Series", 
-    brand: "Garmin", 
-    category: "Watch", 
-    metric1: "Infinite (Solar) / 60h+ GPS", 
-    metric2: "Topo Maps / Pro Cardio",
-    bestFor: "Trail and ultra runners seeking offline maps",
-    usage: "Trail / Ultra",
-    link: "https://www.amazon.it/Garmin-Fenix-7-Sapphire-Solar/dp/B09NMK4XRP"
-  },
-  { 
-    name: "Azarxis 10L", 
-    brand: "Azarxis", 
-    category: "Hydration", 
-    metric1: "10L Load / 2L Bladder", 
-    metric2: "6 Accessible pockets",
-    bestFor: "Budget-friendly runners for marathon distances",
-    usage: "Road / Long Runs",
-    link: "https://www.amazon.it/Azarxis-Zaino-Idratazione-10L-Maratona/dp/B07TX8G5H6"
-  },
-  { 
-    name: "Salomon Adv Skin", 
-    brand: "Salomon", 
-    category: "Hydration", 
-    metric1: "12L Load / SensiFit", 
-    metric2: "No-Stop Accessibility",
-    bestFor: "Top-tier for those wanting zero bounce",
-    usage: "Trail / Technical",
-    link: "https://www.amazon.it/Salomon-Adv-Skin-12-Set-Hydration/dp/B09VPRB9K4"
-  },
-  { 
-    name: "Fitgriff Belt", 
-    brand: "Fitgriff", 
-    category: "Belt", 
-    metric1: "Ultra-slim / Adjustable", 
-    metric2: "Smartphone / Key pocket",
-    bestFor: "Carrying smartphone without bounce during training",
-    usage: "Road / Daily",
-    link: "https://www.amazon.it/dp/B07F3M6VYF"
-  },
-  { 
-    name: "LED Chest Light", 
-    brand: "Generic", 
-    category: "Lighting", 
-    metric1: "500-800 Lumens", 
-    metric2: "USB Charging",
-    bestFor: "Safety and 360° visibility for night runs",
-    usage: "All Conditions",
-    link: "https://www.amazon.it/dp/B089Y4R3L1"
-  },
-  { 
-    name: "Danish Endurance", 
-    brand: "Danish Endurance", 
-    category: "Socks", 
-    metric1: "Merino Wool / Compression", 
-    metric2: "Anti-blister / Breathable",
-    bestFor: "Avoiding blisters and chafing on long runs",
-    usage: "All Terrain",
-    link: "https://www.amazon.it/dp/B07TX8G5H6"
-  },
-];
+import { GearSpec } from "@/types/specs";
+import { gearSpecs } from "@/data/specs/gear";
 
 export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
@@ -183,6 +102,7 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
                 <TableHead className="w-[180px] font-bold text-foreground">Gear</TableHead>
+                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
                 <TableHead className="font-bold text-foreground">Category</TableHead>
                 <TableHead className="font-bold text-foreground">Usage</TableHead>
                 <TableHead className="font-bold text-foreground">Technical Specs</TableHead>
@@ -196,7 +116,7 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                   return (
                     <TableRow 
                       key={spec.name} 
-                      className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''}`}
+                      className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                       style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                     >
                       <TableCell className="px-4">
@@ -207,19 +127,36 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                       </TableCell>
                       <TableCell className="font-semibold text-foreground">
                         <div className="flex flex-col">
-                          {spec.link ? (
-                            <a 
-                              href={spec.link} 
-                              target="_blank" 
-                              rel="noopener noreferrer sponsored"
-                              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                            >
-                              {spec.name}
-                            </a>
-                          ) : (
-                            <span>{spec.name}</span>
-                          )}
+                          <div className="flex items-center gap-1.5">
+                            {spec.link ? (
+                              <a 
+                                href={spec.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer sponsored"
+                                className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                              >
+                                {spec.name}
+                              </a>
+                            ) : (
+                              <span>{spec.name}</span>
+                            )}
+                            {spec.emphasized && (
+                              <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                                Expert Pick
+                              </Badge>
+                            )}
+                          </div>
                           <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
+                          <img 
+                            src={spec.image} 
+                            alt={spec.name} 
+                            className="h-full w-full object-contain"
+                            loading="lazy"
+                          />
                         </div>
                       </TableCell>
                       <TableCell>
@@ -253,7 +190,7 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                 })
               ) : (
                 <TableRow>
-                  <TableCell colSpan={6} className="h-40 text-center">
+                  <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No gear found matching these criteria.</p>
@@ -289,6 +226,22 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
+                <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
+                      <div className="flex justify-center">
+                        <div className="relative group/img h-32 w-40 overflow-hidden rounded-lg border border-border bg-white p-2 shadow-sm transition-transform hover:scale-105">
+                          <img 
+                            src={p.image} 
+                            alt={p.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
                 {[
                   { label: "Usage", key: "usage" },
                   { label: "Category", key: "category", isBadge: true },

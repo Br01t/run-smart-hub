@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import RecommendedProducts from "@/components/RecommendedProducts";
 import hubsData from "@/data/hubs.json";
-import comparisonsData from "@/data/comparisons.json";
+import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 
 interface Hub {
   category: string;
@@ -21,8 +21,8 @@ interface Hub {
 
 interface Comparison {
   sport: string;
-  obiettivo: string;
-  categoria: string;
+  objective: string;
+  category: string;
   intro: string;
   tags: string[];
   faq: { q: string; a: string }[];
@@ -66,7 +66,7 @@ const HubPage = () => {
   }
 
   const matchedComparisons = (comparisonsData as Comparison[]).filter((c) => {
-    const slug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+    const slug = `${c.category}-for-${c.sport}-${c.objective}`;
     return hub.comparisonSlugs.includes(slug);
   });
 
@@ -102,7 +102,7 @@ const HubPage = () => {
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {matchedComparisons.map((c) => {
-                const slug = `${c.categoria}-per-${c.sport}-${c.obiettivo}`;
+                const slug = `${c.category}-for-${c.sport}-${c.objective}`;
                 return (
                   <Link
                     key={slug}
@@ -111,7 +111,7 @@ const HubPage = () => {
                   >
                     <div>
                       <h3 className="text-sm font-semibold capitalize text-card-foreground">
-                        {c.categoria} for {c.sport} – {c.obiettivo}
+                        {c.category} for {c.sport} – {c.objective}
                       </h3>
                       <p className="mt-1 text-xs text-muted-foreground line-clamp-1">{c.intro}</p>
                     </div>

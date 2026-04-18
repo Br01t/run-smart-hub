@@ -1,0 +1,97 @@
+import { ShoeSpec } from "@/types/specs";
+
+export const shoeSpecs: ShoeSpec[] = [
+  { 
+    name: "Nike Revolution 6", 
+    brand: "Nike",
+    terrain: "Road",
+    weight: "280g", 
+    drop: "10mm", 
+    cushion: "Balanced", 
+    support: "Neutral",
+    bestFor: "Beginners running < 15km/week",
+    price: "€60-70",
+    image: "https://m.media-amazon.com/images/I/61MvUfWfD6L._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=Nike+Revolution+6",
+    emphasized: true
+  },
+  { 
+    name: "Adidas Duramo Speed", 
+    brand: "Adidas",
+    terrain: "Road",
+    weight: "265g", 
+    drop: "6mm", 
+    cushion: "Minimal", 
+    support: "Neutral",
+    bestFor: "Those seeking reactivity and speed at a great price",
+    price: "€70-90",
+    image: "https://m.media-amazon.com/images/I/61UfRE67GGL._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/Adidas-Duramo/s?k=Adidas+Duramo"
+  },
+  { 
+    name: "ASICS Gel-Contend 8", 
+    brand: "ASICS",
+    terrain: "Road",
+    weight: "300g", 
+    drop: "10mm", 
+    cushion: "Maximum", 
+    support: "Stable",
+    bestFor: "Runners looking for extra stability and protection",
+    price: "€65-80",
+    image: "https://m.media-amazon.com/images/I/71y0+vjHACL._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=ASICS+Gel-Contend+8"
+  },
+  { 
+    name: "NB Fresh Foam Arishi v4", 
+    brand: "New Balance",
+    terrain: "Road",
+    weight: "250g", 
+    drop: "8mm", 
+    cushion: "Maximum", 
+    support: "Neutral",
+    bestFor: "Versatile runners (running + gym)",
+    price: "€70-85",
+    image: "https://m.media-amazon.com/images/I/71NnI8T117L._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+Arishi+v4"
+  },
+  { 
+    name: "Puma Electrify Nitro", 
+    brand: "Puma",
+    terrain: "Road",
+    weight: "240g", 
+    drop: "8mm", 
+    cushion: "Balanced", 
+    support: "Neutral",
+    bestFor: "Tempo runs and speed sessions",
+    price: "€80-100",
+    image: "https://m.media-amazon.com/images/I/71UqE-pL2vL._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=Puma+Electrify+Nitro"
+  },
+  { 
+    name: "Brooks Cascadia", 
+    brand: "Brooks",
+    terrain: "Trail",
+    weight: "310g", 
+    drop: "8mm", 
+    cushion: "Balanced", 
+    support: "Stable",
+    bestFor: "Technical trails and uneven terrain",
+    price: "€130-150",
+    image: "https://m.media-amazon.com/images/I/71Y-o6W4+JL._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=Brooks+Cascadia"
+  },
+  { 
+    name: "Salomon Speedcross", 
+    brand: "Salomon",
+    terrain: "Trail",
+    weight: "298g", 
+    drop: "10mm", 
+    cushion: "Minimal", 
+    support: "Stable",
+    bestFor: "Maximum grip on mud and soft terrain",
+    price: "€140-160",
+    image: "https://m.media-amazon.com/images/I/71u9SreZ0LL._AC_SL1500_.jpg",
+    link: "https://www.amazon.com/s?k=Salomon+Speedcross",
+    emphasized: true
+  },
+];
