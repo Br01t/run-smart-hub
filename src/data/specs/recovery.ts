@@ -9,6 +9,7 @@ export const recoverySpecs: RecoverySpec[] = [
     useType: "Rest",
     bestFor: "Experienced runners seeking deep myofascial release",
     recommendedFor: "All Runners",
+    price: "€35-45",
     link: "https://www.amazon.it/Trigger-Point-Performance-Rullo-Massaggio/dp/B0040EGNIU",
     image: "https://m.media-amazon.com/images/I/71YyP4D-a-L._AC_SL1500_.jpg",
     emphasized: true
@@ -21,6 +22,7 @@ export const recoverySpecs: RecoverySpec[] = [
     useType: "Race",
     bestFor: "Immediate trigger point treatment post-long run",
     recommendedFor: "Recovery / Travel",
+    price: "€40-70",
     link: "https://www.amazon.it/Mini-Pistola-Massaggio-Muscolare-Portatile/dp/B08L5VYQFZ",
     image: "https://m.media-amazon.com/images/I/71D0Y7ZfMML._AC_SL1500_.jpg",
     emphasized: true
@@ -33,6 +35,7 @@ export const recoverySpecs: RecoverySpec[] = [
     useType: "Rest",
     bestFor: "Post-race recovery or for long travel days",
     recommendedFor: "Post-Race / Travel",
+    price: "€10-15",
     link: "https://www.amazon.it/Physix-Gear-Sport-Compressione-Graduata/dp/B01J4ME6L4",
     image: "https://m.media-amazon.com/images/I/71nS4v5f-TL._AC_SL1500_.jpg"
   },
@@ -44,6 +47,7 @@ export const recoverySpecs: RecoverySpec[] = [
     useType: "Rest",
     bestFor: "Specific foot sole massage (plantar fasciitis)",
     recommendedFor: "Injury Prevention",
+    price: "€5-10",
     link: "https://www.amazon.it/Palla-Massaggio-Lacrosse-Trigger-Point/dp/B07V6Q8ZMN",
     image: "https://m.media-amazon.com/images/I/71O6R5rW+vL._AC_SL1500_.jpg"
   },

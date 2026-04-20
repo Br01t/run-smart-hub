@@ -9,6 +9,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Immediate muscle recovery post-effort",
     effect: "Anabolic / Reparative",
     recommendedFor: "Recovery",
+    price: "€30-45",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/",
     image: "https://static.thcdn.com/productimg/original/10530943-2175262135686325.jpg",
     emphasized: true
@@ -21,6 +22,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Maximum protein purity and fast muscle recovery",
     effect: "Lean muscle growth",
     recommendedFor: "Recovery",
+    price: "€40-60",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/",
     image: "https://static.thcdn.com/productimg/original/10530911-8525307235362378.jpg"
   },
@@ -32,6 +34,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Superior muscle repair and prevention of catabolism",
     effect: "Protein Synthesis Support",
     recommendedFor: "Recovery",
+    price: "€25-35",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/",
     image: "https://static.thcdn.com/productimg/original/15952589-9415323049696760.png"
   },
@@ -43,6 +46,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Glycogen replenishment during long runs",
     effect: "Energy source",
     recommendedFor: "Endurance",
+    price: "€15-20",
     link: "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/",
     image: "https://static.thcdn.com/productimg/original/10530114-1135180485543170.jpg"
   },
@@ -54,6 +58,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Convenient recovery snack with balanced macros",
     effect: "Sustained Repair",
     recommendedFor: "Recovery",
+    price: "€20-25 (12pk)",
     link: "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/",
     image: "https://static.thcdn.com/productimg/original/12948773-4584910350702434.jpg"
   },
@@ -65,6 +70,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Increasing power in sprints and strength",
     effect: "Phosphocreatine saturation",
     recommendedFor: "Power / Strength",
+    price: "€20-30",
     link: "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/",
     image: "https://static.thcdn.com/productimg/original/10530050-5555271174703488.jpg"
   },
@@ -76,6 +82,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Reduction of fatigue feeling in high intensities",
     effect: "Lactic acid buffer",
     recommendedFor: "Intensity",
+    price: "€15-25",
     link: "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/",
     image: "https://static.thcdn.com/productimg/original/10529809-1144869503463372.jpg"
   },
@@ -87,6 +94,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Mental clarity and sharp focus during races",
     effect: "Cognitive support",
     recommendedFor: "Focus",
+    price: "€75-80",
     link: "https://www.onnit.com/products/alpha-brain-90-ct",
     image: "https://www.onnit.com/cdn/shop/files/media_0d26030c-9e9b-40bd-82ae-df059b2ad547.png?v=1773124741&width=400"
   },
@@ -98,6 +106,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Daily cognitive support and focus",
     effect: "Mental processing speed",
     recommendedFor: "Daily Focus",
+    price: "€55-60",
     link: "https://www.onnit.com/products/alpha-brain-60-ct",
     image: "https://www.onnit.com/cdn/shop/files/media_dc157b53-6764-4216-8b34-c3af69482ff8.png?v=1774923661&width=400"
   },
@@ -109,6 +118,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Elite performers needing maximum cognitive drive",
     effect: "Potent mental focus",
     recommendedFor: "Elite Focus",
+    price: "€95-100",
     link: "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
     emphasized: true
   },
@@ -120,6 +130,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "Oxygen optimization in endurance sports",
     effect: "Respiratory support",
     recommendedFor: "Endurance",
+    price: "€50-55",
     link: "https://www.onnit.com/products/shroom-tech-sport-84-ct"
   },
   { 
@@ -130,6 +141,7 @@ export const supplementSpecs: SupplementSpec[] = [
     bestFor: "General health and full-body recovery",
     effect: "Systemic recovery",
     recommendedFor: "All Sports",
+    price: "€130-140",
     link: "https://www.onnit.com/products/total-human-30-day-supply"
   },
 ];

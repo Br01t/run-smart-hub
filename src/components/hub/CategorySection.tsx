@@ -15,6 +15,7 @@ interface CategorySectionProps {
   accentColor: string;
   matchedComparisons: any[];
   categoryProductTags: Record<string, string[]>;
+  sidebar?: React.ReactNode;
 }
 
 const CategorySection = ({ 
@@ -23,13 +24,14 @@ const CategorySection = ({
   guide, 
   accentColor, 
   matchedComparisons, 
-  categoryProductTags 
+  categoryProductTags,
+  sidebar
 }: CategorySectionProps) => {
   return (
     <section id={catKey} className="scroll-mt-32">
-      <div className="grid gap-12 lg:grid-cols-[1fr_300px] lg:gap-20">
+      <div className="grid gap-12 lg:grid-cols-[1fr_280px] lg:gap-10">
         {/* Left Column: Main Content */}
-        <div>
+        <div className="min-w-0">
           <div className="mb-8 items-end justify-between sm:flex border-b border-border pb-6">
             <div className="editorial-line">
               <span 
@@ -61,21 +63,6 @@ const CategorySection = ({
             {catKey === "hydration" && <GearComparisonTable accentColor={accentColor} />}
             {catKey === "recovery" && <RecoveryComparisonTable accentColor={accentColor} />}
             {catKey === "apparel" && <ApparelComparisonTable accentColor={accentColor} />}
-
-            {/* Goal-specific Intros */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              {matchedComparisons.map((c) => (
-                <div key={c.objective} className="rounded-2xl border border-border bg-muted/30 p-5">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Focus: {c.objective}</span>
-                    <BarChart3 className="h-3.5 w-3.5 text-muted-foreground/40" />
-                  </div>
-                  <p className="text-xs text-muted-foreground italic leading-relaxed">
-                    "{c.intro}"
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Recommended Products Grid */}
@@ -88,9 +75,11 @@ const CategorySection = ({
           </div>
         </div>
 
-        {/* Right Column: Sidebar Resources (Rendered separately in MasterHub to maintain sticky behavior if needed, or passed as children) */}
-        <div className="hidden lg:block">
-           {/* This is a placeholder for the sidebar which remains in MasterHub for now to maintain shared sticky context */}
+        {/* Right Column: Sidebar Resources */}
+        <div className="hidden lg:block relative">
+           <div className="sticky top-32 space-y-10">
+            {sidebar}
+           </div>
         </div>
       </div>
     </section>

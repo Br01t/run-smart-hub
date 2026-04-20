@@ -21,6 +21,7 @@ import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
 import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 
 const SelectFilter = ({ value, onValueChange, options }: { value: string, onValueChange: (v: string) => void, options: {label: string, value: string}[] }) => (
   <Select value={value} onValueChange={onValueChange}>
@@ -94,12 +95,11 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
-                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
-                <TableHead className="font-bold text-foreground">Recommended For</TableHead>
-                <TableHead className="font-bold text-foreground">Intensity / Density</TableHead>
-                <TableHead className="font-bold text-foreground">Specific Use</TableHead>
-                <TableHead className="font-bold text-foreground">Best For</TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Product</TableHead>
+                <TableHead className="w-[110px] px-2 font-bold text-foreground text-xs text-center">Recommended</TableHead>
+                <TableHead className="w-[120px] px-2 font-bold text-foreground text-xs">Intensity / Density</TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center">Specific Use</TableHead>
+                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -110,15 +110,15 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                     className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
-                    <TableCell className="px-4">
+                    <TableCell className="px-2 w-[40px] text-center">
                       <Checkbox 
                         checked={selectedNames.includes(spec.name)} 
                         onCheckedChange={() => toggleSelection(spec.name)}
                       />
                     </TableCell>
-                    <TableCell className="font-semibold text-foreground">
-                      <div className="flex flex-col">
-                        <div className="flex items-center gap-1.5">
+                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
                           {spec.link ? (
                             <a 
                               href={spec.link} 
@@ -132,50 +132,40 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                             <span>{spec.name}</span>
                           )}
                           {spec.emphasized && (
-                            <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                            <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
                               Expert Pick
                             </Badge>
                           )}
                         </div>
-                        <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                        <span className="text-[9px] text-muted-foreground uppercase">{spec.brand}</span>
                       </div>
                     </TableCell>
-                    <TableCell>
-                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
-                        <img 
-                          src={spec.image} 
-                          alt={spec.name} 
-                          className="h-full w-full object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <Badge variant="secondary" className="bg-secondary/50 text-[10px] font-bold uppercase tracking-wider">
+                    <TableCell className="px-2 text-center">
+                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
                         {spec.recommendedFor}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-sm text-foreground">
-                      <div className="flex items-center gap-1.5 font-medium">
-                        <Activity className="h-3 w-3 text-primary" />
+                    <TableCell className="px-2 text-[11px] text-foreground leading-tight font-medium">
+                      <div className="flex items-center gap-1">
+                        <Activity className="h-3 w-3 text-primary shrink-0" />
                         {spec.intensity}
                       </div>
                     </TableCell>
-                    <TableCell>
-                      <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider ${
+                    <TableCell className="px-2 text-center">
+                      <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
                         spec.useType === 'Race' ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-slate-50 text-slate-700'
                       }`}>
                         {spec.useType}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground font-medium italic leading-snug">
+                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
                       {spec.bestFor}
                     </TableCell>
                   </TableRow>
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={7} className="h-40 text-center">
+                  <TableCell colSpan={6} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No recovery tools found matching these criteria.</p>
@@ -212,6 +202,14 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
               </thead>
               <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
+                      {p.price || "€---"}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="hover:bg-muted/5 transition-colors border-t border-border">
                   <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">

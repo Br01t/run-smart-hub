@@ -17,7 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Info, Search } from "lucide-react";
+import { Info, Search, Star } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
@@ -94,14 +94,13 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[180px] font-bold text-foreground">Model</TableHead>
-                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
-                <TableHead className="font-bold text-foreground text-center">Terrain</TableHead>
-                <TableHead className="font-bold text-foreground text-center">Weight</TableHead>
-                <TableHead className="font-bold text-foreground text-center">Drop</TableHead>
-                <TableHead className="font-bold text-foreground">Cushioning</TableHead>
-                <TableHead className="font-bold text-foreground">Support</TableHead>
-                <TableHead className="font-bold text-foreground">Best For</TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Model</TableHead>
+                <TableHead className="w-[85px] px-2 font-bold text-foreground text-xs text-center">Terrain</TableHead>
+                <TableHead className="w-[75px] px-2 font-bold text-foreground text-xs text-center">Weight</TableHead>
+                <TableHead className="w-[65px] px-2 font-bold text-foreground text-xs text-center">Drop</TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Cushioning</TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Support</TableHead>
+                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -112,15 +111,15 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                     className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(shoe.name) ? 'font-medium' : ''} ${shoe.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(shoe.name) ? `${accentColor}10` : (shoe.emphasized ? 'var(--primary-light)' : 'transparent') }}
                   >
-                    <TableCell className="px-4">
+                    <TableCell className="px-2 w-[40px] text-center">
                       <Checkbox 
                         checked={selectedNames.includes(shoe.name)} 
                         onCheckedChange={() => toggleSelection(shoe.name)}
                       />
                     </TableCell>
-                    <TableCell className="font-semibold text-foreground">
-                      <div className="flex flex-col">
-                        <div className="flex items-center gap-1.5">
+                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
                           {shoe.link ? (
                             <a 
                               href={shoe.link} 
@@ -134,33 +133,23 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                             <span>{shoe.name}</span>
                           )}
                           {shoe.emphasized && (
-                            <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                            <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
                               Expert Pick
                             </Badge>
                           )}
                         </div>
-                        <span className="text-[10px] text-muted-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">Technical Model</span>
+                        <span className="text-[9px] text-muted-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">Technical Model</span>
                       </div>
                     </TableCell>
-                    <TableCell>
-                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
-                        <img 
-                          src={shoe.image} 
-                          alt={shoe.name} 
-                          className="h-full w-full object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Badge variant="secondary" className="bg-secondary/50 text-[10px] font-bold uppercase tracking-wider">
+                    <TableCell className="px-2 text-center">
+                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
                         {shoe.terrain}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-sm text-center text-muted-foreground font-medium">{shoe.weight}</TableCell>
-                    <TableCell className="text-sm text-center text-muted-foreground font-mono font-bold italic">{shoe.drop}</TableCell>
-                    <TableCell>
-                      <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider ${
+                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-medium">{shoe.weight}</TableCell>
+                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-mono font-bold italic">{shoe.drop}</TableCell>
+                    <TableCell className="px-2">
+                      <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
                         shoe.cushion === 'Maximum' ? 'bg-sky-50 text-sky-700 border-sky-100' : 
                         shoe.cushion === 'Minimal' ? 'bg-amber-50 text-amber-700 border-amber-100' : 
                         'bg-slate-50 text-slate-700'
@@ -168,20 +157,20 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                         {shoe.cushion}
                       </Badge>
                     </TableCell>
-                    <TableCell>
-                       <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
+                    <TableCell className="px-2">
+                       <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-foreground">
                          <div className={`h-2 w-2 rounded-full ${shoe.support === 'Stable' ? 'bg-indigo-500' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]'}`} />
                          {shoe.support}
                        </span>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground font-medium italic leading-snug">
+                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
                       {shoe.bestFor}
                     </TableCell>
                   </TableRow>
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={9} className="h-40 text-center">
+                  <TableCell colSpan={8} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No shoes found matching these criteria.</p>
@@ -218,6 +207,14 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               </thead>
               <tbody className="divide-y divide-border text-foreground">
                 <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
+                      {p.price}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="hover:bg-muted/5 transition-colors border-t border-border">
                   <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">

@@ -6,6 +6,7 @@ export interface SupplementSpec {
   effect: string;
   bestFor: string;
   recommendedFor: string;
+  price?: string;
   link?: string;
   image?: string;
   emphasized?: boolean;
@@ -34,6 +35,7 @@ export interface GearSpec {
   metric2: string; // Maps / Pockets / Charging / Material
   bestFor: string;
   usage: string;
+  price?: string;
   link?: string;
   image?: string;
   emphasized?: boolean;
@@ -48,6 +50,7 @@ export interface ApparelSpec {
   details: string; 
   bestFor: string;
   usage: string;
+  price?: string;
   link?: string;
   image?: string;
   emphasized?: boolean;
@@ -61,6 +64,7 @@ export interface RecoverySpec {
   useType: "Running" | "Rest" | "Race";
   bestFor: string;
   recommendedFor: string;
+  price?: string;
   link?: string;
   image?: string;
   emphasized?: boolean;

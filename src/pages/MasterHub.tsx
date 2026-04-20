@@ -93,6 +93,52 @@ const MasterHub = () => {
     apparel: ["apparel", "running"]
   };
 
+  const SidebarContent = () => (
+    <>
+      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+        <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
+          <Wrench className="h-3.5 w-3.5 text-primary" /> Analysis Tools
+        </h4>
+        <div className="space-y-3">
+          <Link to="/tools/calories" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
+            <span>Calories Calculator</span>
+            <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          <Link to="/tools/hydration" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
+            <span>Hydration Needs</span>
+            <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+        <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
+          <BookOpen className="h-3.5 w-3.5 text-accent" /> Expert Guides
+        </h4>
+        <div className="space-y-4">
+          <Link to="/guides/supplements-for-runners" className="block group">
+            <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Mastering Fueling & Electrolytes</p>
+            <p className="mt-1 text-[10px] text-muted-foreground">Long-form deep dive on endurance nutrition.</p>
+          </Link>
+          <Link to="/guides/choosing-running-shoes" className="block group">
+            <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Finding Your Perfect Fit</p>
+            <p className="mt-1 text-[10px] text-muted-foreground">The biomechanics of running footwear.</p>
+          </Link>
+        </div>
+      </div>
+      
+      <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-lg">
+        <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
+        <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
+          Take our 2-minute quiz to get personalized recommendations.
+        </p>
+        <Link to="/quiz" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-background px-4 py-2.5 text-xs font-bold text-foreground transition-opacity hover:opacity-90">
+          Start Quiz <ArrowRight className="h-3.5 w-3.5" />
+        </Link>
+      </div>
+    </>
+  );
+
   return (
     <Layout>
       <SEOHead 
@@ -145,61 +191,16 @@ const MasterHub = () => {
             const accentColor = getCategoryColor(catKey);
             
             return (
-              <div key={catKey} className="relative">
-                <CategorySection 
-                  catKey={catKey}
-                  index={index}
-                  guide={guide}
-                  accentColor={accentColor}
-                  matchedComparisons={matchedComparisons}
-                  categoryProductTags={categoryProductTags}
-                />
-                
-                {/* Sidebar Resource Overlay (Positioned to match CategorySection layout) */}
-                <aside className="hidden lg:block absolute top-[100px] right-0 w-[300px] space-y-10">
-                  <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                    <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-                      <Wrench className="h-3.5 w-3.5 text-primary" /> Analysis Tools
-                    </h4>
-                    <div className="space-y-3">
-                      <Link to="/tools/calories" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
-                        <span>Calories Calculator</span>
-                        <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                      </Link>
-                      <Link to="/tools/hydration" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
-                        <span>Hydration Needs</span>
-                        <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                    <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-                      <BookOpen className="h-3.5 w-3.5 text-accent" /> Expert Guides
-                    </h4>
-                    <div className="space-y-4">
-                      <Link to="/guides/supplements-for-runners" className="block group">
-                        <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Mastering Fueling & Electrolytes</p>
-                        <p className="mt-1 text-[10px] text-muted-foreground">Long-form deep dive on endurance nutrition.</p>
-                      </Link>
-                      <Link to="/guides/choosing-running-shoes" className="block group">
-                        <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Finding Your Perfect Fit</p>
-                        <p className="mt-1 text-[10px] text-muted-foreground">The biomechanics of running footwear.</p>
-                      </Link>
-                    </div>
-                  </div>
-                  
-                  <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-lg">
-                    <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
-                    <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
-                      Take our 2-minute quiz to get personalized recommendations.
-                    </p>
-                    <Link to="/quiz" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-background px-4 py-2.5 text-xs font-bold text-foreground transition-opacity hover:opacity-90">
-                      Start Quiz <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
-                  </div>
-                </aside>
-              </div>
+              <CategorySection 
+                key={catKey}
+                catKey={catKey}
+                index={index}
+                guide={guide}
+                accentColor={accentColor}
+                matchedComparisons={matchedComparisons}
+                categoryProductTags={categoryProductTags}
+                sidebar={<SidebarContent />}
+              />
             );
           })}
         </div>

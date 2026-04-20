@@ -21,6 +21,7 @@ import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
 import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 
 const SelectFilter = ({ value, onValueChange, options }: { value: string, onValueChange: (v: string) => void, options: {label: string, value: string}[] }) => (
   <Select value={value} onValueChange={onValueChange}>
@@ -100,13 +101,11 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
-                <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[180px] font-bold text-foreground">Gear</TableHead>
-                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
-                <TableHead className="font-bold text-foreground">Category</TableHead>
-                <TableHead className="font-bold text-foreground">Usage</TableHead>
-                <TableHead className="font-bold text-foreground">Technical Specs</TableHead>
-                <TableHead className="font-bold text-foreground">Best For</TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Gear</TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center">Category</TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center">Usage</TableHead>
+                <TableHead className="w-[180px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center">Technical Specs</TableHead>
+                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -119,78 +118,65 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                       className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                       style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                     >
-                      <TableCell className="px-4">
+                      <TableCell className="px-2 w-[40px] text-center">
                         <Checkbox 
                           checked={selectedNames.includes(spec.name)} 
                           onCheckedChange={() => toggleSelection(spec.name)}
                         />
                       </TableCell>
-                      <TableCell className="font-semibold text-foreground">
-                        <div className="flex flex-col">
-                          <div className="flex items-center gap-1.5">
-                            {spec.link ? (
-                              <a 
-                                href={spec.link} 
-                                target="_blank" 
-                                rel="noopener noreferrer sponsored"
-                                className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
-                              >
-                                {spec.name}
-                              </a>
-                            ) : (
-                              <span>{spec.name}</span>
-                            )}
-                            {spec.emphasized && (
-                              <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
-                                Expert Pick
-                              </Badge>
-                            )}
-                          </div>
-                          <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          {spec.link ? (
+                            <a 
+                              href={spec.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer sponsored"
+                              className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
+                            >
+                              {spec.name}
+                            </a>
+                          ) : (
+                            <span>{spec.name}</span>
+                          )}
+                          {spec.emphasized && (
+                            <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
+                              Expert Pick
+                            </Badge>
+                          )}
                         </div>
-                      </TableCell>
-                      <TableCell>
-                        <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
-                          <img 
-                            src={spec.image} 
-                            alt={spec.name} 
-                            className="h-full w-full object-contain"
-                            loading="lazy"
-                          />
+                        <span className="text-[9px] text-muted-foreground uppercase">{spec.brand}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-center">
+                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-widest">
+                        {spec.category}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="px-2 text-center text-[10px]">
+                      <div className="text-[11px] font-medium text-muted-foreground whitespace-nowrap">
+                        {spec.usage}
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-center text-[10px]">
+                      <div className="flex flex-col gap-1 inline-flex">
+                        <div className="text-[9px] font-bold text-foreground leading-none bg-muted px-1.5 py-0.5 rounded border border-border uppercase tracking-tighter text-left">
+                          {labels.m1}: <span className="text-primary font-mono ml-1">{spec.metric1}</span>
                         </div>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant="outline" className="flex w-fit items-center gap-1.5 text-[10px] uppercase font-bold tracking-wider">
-                          {getCategoryIcon(spec.category)}
-                          {spec.category}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant="secondary" className="bg-secondary/50 text-[10px] font-bold uppercase tracking-wider">
-                          {spec.usage}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-sm text-foreground">
-                        <div className="flex flex-col gap-1">
-                          <div className="flex items-center gap-2">
-                            <span className="text-[9px] font-bold text-muted-foreground uppercase w-20">{labels.m1}:</span>
-                            <span className="text-xs">{spec.metric1}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-[9px] font-bold text-muted-foreground uppercase w-20">{labels.m2}:</span>
-                            <span className="text-xs">{spec.metric2}</span>
-                          </div>
+                        <div className="text-[9px] font-bold text-foreground leading-none bg-muted px-1.5 py-0.5 rounded border border-border uppercase tracking-tighter text-left">
+                          {labels.m2}: <span className="text-accent font-mono ml-1">{spec.metric2}</span>
                         </div>
-                      </TableCell>
-                      <TableCell className="text-sm text-muted-foreground font-medium italic leading-snug">
-                        {spec.bestFor}
-                      </TableCell>
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
+                      {spec.bestFor}
+                    </TableCell>
                     </TableRow>
                   );
                 })
               ) : (
                 <TableRow>
-                  <TableCell colSpan={7} className="h-40 text-center">
+                  <TableCell colSpan={6} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No gear found matching these criteria.</p>
@@ -227,6 +213,14 @@ export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               </thead>
               <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
+                      {p.price || "€---"}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="hover:bg-muted/5 transition-colors border-t border-border">
                   <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">

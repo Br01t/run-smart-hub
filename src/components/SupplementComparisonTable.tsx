@@ -16,7 +16,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Activity, Clock, Search } from "lucide-react";
+import { Activity, Clock, Search, Star } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
@@ -95,14 +95,13 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[180px] font-bold text-foreground">Product</TableHead>
-                <TableHead className="w-[100px] font-bold text-foreground">Visual</TableHead>
-                <TableHead className="font-bold text-foreground">Recommended For</TableHead>
-                <TableHead className="font-bold text-foreground">Absorption</TableHead>
-                <TableHead className="font-bold text-foreground">Timing</TableHead>
-                <TableHead className="font-bold text-foreground">Key Ingredients</TableHead>
-                <TableHead className="font-bold text-foreground">Primary Effect</TableHead>
-                <TableHead className="font-bold text-foreground">Best For</TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Product</TableHead>
+                <TableHead className="w-[110px] px-2 font-bold text-foreground text-xs">Recommended</TableHead>
+                <TableHead className="w-[85px] px-2 font-bold text-foreground text-xs text-center">Absorption</TableHead>
+                <TableHead className="w-[95px] px-2 font-bold text-foreground text-xs">Timing</TableHead>
+                <TableHead className="w-[130px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Ingredients</TableHead>
+                <TableHead className="w-[130px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Primary Effect</TableHead>
+                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -113,14 +112,14 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                     className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
-                    <TableCell className="px-4">
+                    <TableCell className="px-2 w-[40px] text-center">
                       <Checkbox 
                         checked={selectedNames.includes(spec.name)} 
                         onCheckedChange={() => toggleSelection(spec.name)}
                       />
                     </TableCell>
-                    <TableCell className="font-semibold text-foreground">
-                      <div className="flex items-center gap-1.5">
+                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                      <div className="flex flex-col gap-1">
                         {spec.link ? (
                           <a 
                             href={spec.link} 
@@ -134,50 +133,40 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                           spec.name
                         )}
                         {spec.emphasized && (
-                          <Badge variant="default" className="bg-primary hover:bg-primary text-[9px] h-4 px-1 rounded font-bold uppercase tracking-tighter shadow-sm text-white border-0">
+                          <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
                             Expert Pick
                           </Badge>
                         )}
                       </div>
                     </TableCell>
-                    <TableCell>
-                      <div className="h-12 w-16 overflow-hidden rounded-md border border-border bg-white p-1">
-                        <img 
-                          src={spec.image} 
-                          alt={spec.name} 
-                          className="h-full w-full object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <Badge variant="secondary" className="bg-secondary/50 text-[10px] font-bold uppercase tracking-wider">
+                    <TableCell className="px-2">
+                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
                         {spec.recommendedFor}
                       </Badge>
                     </TableCell>
-                    <TableCell>
-                      <Badge variant="outline" className={`text-[10px] uppercase font-bold tracking-wider ${
-                        spec.absorption === 'Fast' ? 'bg-emerald-50 text-emerald-700 border-emerald-100 shadow-[0_0_8px_rgba(16,185,129,0.1)]' : 'bg-slate-50 text-slate-700'
+                    <TableCell className="px-2 text-center">
+                      <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
+                        spec.absorption === 'Fast' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 'bg-slate-50 text-slate-700'
                       }`}>
                         {spec.absorption}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground whitespace-nowrap">
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="h-3 w-3 text-primary" />
+                    <TableCell className="px-2 text-[11px] text-muted-foreground leading-tight">
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3 text-primary shrink-0" />
                         {spec.timing}
                       </div>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground font-medium">{spec.ingredients}</TableCell>
-                    <TableCell className="text-sm font-bold text-foreground">{spec.effect}</TableCell>
-                    <TableCell className="text-sm text-muted-foreground font-medium italic leading-snug">
+                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium leading-tight max-w-[130px]">{spec.ingredients}</TableCell>
+                    <TableCell className="px-2 text-[11px] font-bold text-foreground leading-tight max-w-[130px]">{spec.effect}</TableCell>
+                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
                       {spec.bestFor}
                     </TableCell>
                   </TableRow>
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={9} className="h-40 text-center">
+                  <TableCell colSpan={8} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No results found for these filters.</p>
@@ -214,6 +203,14 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
               </thead>
               <tbody className="divide-y divide-border text-foreground">
                 <tr className="hover:bg-muted/5 transition-colors">
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  {selectedProducts.map(p => (
+                    <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
+                      {p.price || "Contact Support"}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="hover:bg-muted/5 transition-colors border-t border-border">
                   <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
