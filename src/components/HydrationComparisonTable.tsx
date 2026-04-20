@@ -9,45 +9,24 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { 
-  SelectItem,
-  Select, 
-  SelectContent, 
-  SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select";
-import { Activity, Clock, Search, Star, Zap, FlaskConical, Target, ShieldCheck } from "lucide-react";
+import { Droplets, Info, Search, Zap, Star, Clock, Activity, Box, Apple, Target } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
-import { TableFilterBar } from "./TableFilterBar";
-import { ComparisonTray } from "./ComparisonTray";
+import { TableFilterBar } from "@/components/TableFilterBar";
+import { ComparisonTray } from "@/components/ComparisonTray";
 import { Button } from "@/components/ui/button";
+import { hydrationSpecs } from "@/data/specs/hydration";
+import { GearSpec } from "@/types/specs";
 
-const SelectFilter = ({ value, onValueChange, options }: { value: string, onValueChange: (v: string) => void, options: {label: string, value: string}[] }) => (
-  <Select value={value} onValueChange={onValueChange}>
-    <SelectTrigger className="bg-background">
-      <SelectValue />
-    </SelectTrigger>
-    <SelectContent>
-      {options.map(opt => (
-        <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
-      ))}
-    </SelectContent>
-  </Select>
-);
-
-import { SupplementSpec } from "@/types/specs";
-import { supplementSpecs } from "@/data/specs/supplements";
-
-export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 
     activeFilters, setActiveFilters,
     selectedNames, toggleSelection, setSelectedNames,
     filteredData, clearFilters 
-  } = useProductTable(supplementSpecs, ["name", "ingredients", "effect"]);
+  } = useProductTable(hydrationSpecs, ["name", "brand", "bestFor", "effect"]);
 
-  const selectedProducts = supplementSpecs.filter(p => selectedNames.includes(p.name));
+  const selectedProducts = hydrationSpecs.filter(p => selectedNames.includes(p.name));
 
   return (
     <div className="my-8 space-y-4">
@@ -61,32 +40,20 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
           onClearFilters={clearFilters}
           accentColor={accentColor}
         >
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Timing</label>
-            <SelectFilter 
-              value={activeFilters.timing || "all"} 
-              onValueChange={(v) => setActiveFilters({...activeFilters, timing: v})}
-              options={[
-                { label: "All Timings", value: "all" },
-                { label: "Pre-workout", value: "Pre-workout" },
-                { label: "During", value: "During" },
-                { label: "Post-workout", value: "Post-workout" },
-                { label: "Anytime", value: "Anytime" },
-              ]}
-            />
-          </div>
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Absorption</label>
-            <SelectFilter 
-              value={activeFilters.absorption || "all"} 
-              onValueChange={(v) => setActiveFilters({...activeFilters, absorption: v})}
-              options={[
-                { label: "All Speeds", value: "all" },
-                { label: "Fast", value: "Fast" },
-                { label: "Medium", value: "Medium" },
-                { label: "Slow", value: "Slow" },
-              ]}
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+             <div className="space-y-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Format</label>
+              <select 
+                value={activeFilters.format || "all"} 
+                onChange={(e) => setActiveFilters({...activeFilters, format: e.target.value})}
+                className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              >
+                <option value="all">All Formats</option>
+                <option value="Polvere">Powder</option>
+                <option value="Bustine">Sachets</option>
+                <option value="Compresse">Tablets</option>
+              </select>
+            </div>
           </div>
         </TableFilterBar>
 
@@ -100,26 +67,32 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                 </TableHead>
                 <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
-                        <Zap className="h-3 w-3 opacity-50 text-amber-500" />
-                        Technique
+                        <Box className="h-3 w-3 opacity-50" />
+                        Format
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
-                        <Clock className="h-3 w-3 opacity-50" />
-                        Timing
+                        <Zap className="h-3 w-3 opacity-50 text-blue-500" />
+                        Sodium
+                    </div>
+                </TableHead>
+                <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Apple className="h-3 w-3 opacity-50 text-emerald-500" />
+                        Sugar
                     </div>
                 </TableHead>
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
-                        <FlaskConical className="h-3 w-3 opacity-50" />
-                        Ingredients
+                        <Activity className="h-3 w-3 opacity-50" />
+                        Primary Focus
                     </div>
                 </TableHead>
                 <TableHead className="w-[110px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
-                        <ShieldCheck className="h-3 w-3 opacity-50 text-emerald-500" />
-                        Safety
+                        <Clock className="h-3 w-3 opacity-50" />
+                        Timing
                     </div>
                 </TableHead>
                 <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
@@ -169,22 +142,22 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                       </div>
                     </TableCell>
                     <TableCell className="px-2 text-center text-[10px]">
-                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
-                        {spec.recommendedFor}
+                      <Badge variant="outline" className="bg-blue-500/5 text-blue-700 border-blue-200/50 text-[9px] font-bold uppercase tracking-widest whitespace-nowrap">
+                        {spec.format}
                       </Badge>
                     </TableCell>
                     <TableCell className="px-2 text-center">
-                      <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
-                        spec.absorption === 'Fast' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 'bg-slate-50 text-slate-700'
-                      }`}>
-                        {spec.absorption}
-                      </Badge>
+                      <div className="text-[10px] font-bold text-primary font-mono bg-primary/5 px-2 py-0.5 rounded border border-primary/10 inline-block">
+                        {spec.sodium}
+                      </div>
                     </TableCell>
-                    <TableCell className="px-2 text-center text-[11px] text-muted-foreground leading-tight">
-                        {spec.timing}
+                    <TableCell className="px-2 text-center text-[10px]">
+                      <div className={`text-[10px] font-bold px-2 py-0.5 rounded border inline-block ${spec.sugar === '0g' || spec.sugar === 'Zero' ? 'text-emerald-700 bg-emerald-50 border-emerald-100' : 'text-amber-700 bg-amber-50 border-amber-100'}`}>
+                        {spec.sugar}
+                      </div>
                     </TableCell>
-                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium leading-tight max-w-[130px] text-center">{spec.ingredients}</TableCell>
-                    <TableCell className="px-2 text-[11px] font-bold text-foreground leading-tight max-w-[130px] text-center">{spec.effect}</TableCell>
+                    <TableCell className="px-2 text-center text-[10px] font-bold text-foreground leading-tight">{spec.effect}</TableCell>
+                    <TableCell className="px-2 text-center text-[11px] text-muted-foreground font-medium leading-tight">{spec.timing}</TableCell>
                     <TableCell className="px-4 text-[11px] text-muted-foreground font-medium italic leading-tight">
                       {spec.bestFor}
                     </TableCell>
@@ -192,10 +165,10 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={8} className="h-40 text-center">
+                  <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
-                      <p className="font-medium">No results found for these filters.</p>
+                      <p className="font-medium">No hydration products found.</p>
                       <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Clear all filters</Button>
                     </div>
                   </TableCell>
@@ -227,12 +200,12 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border text-foreground">
+              <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
                   <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
-                      {p.price || "Contact Support"}
+                      {p.price || "€---"}
                     </td>
                   ))}
                 </tr>
@@ -253,27 +226,19 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
                   ))}
                 </tr>
                 {[
-                  { label: "Recommended For", key: "recommendedFor", isBadge: true },
-                  { label: "Absorption", key: "absorption", isBadge: true },
+                  { label: "Usage", key: "usage" },
+                  { label: "Format", key: "format" },
+                  { label: "Sodium", key: "sodium" },
+                  { label: "Sugar", key: "sugar" },
                   { label: "Timing", key: "timing" },
-                  { label: "Key Ingredients", key: "ingredients" },
-                  { label: "Primary Effect", key: "effect" },
+                  { label: "Focus", key: "effect" },
                   { label: "Best For", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
-                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">{row.label}</td>
+                    <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
-                        {row.isBadge ? (
-                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${
-                            p[row.key as keyof SupplementSpec] === 'Recovery' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 
-                            p[row.key as keyof SupplementSpec] === 'Fast' ? 'bg-sky-50 text-sky-700 border-sky-100' : ''
-                          }`}>
-                            {p[row.key as keyof SupplementSpec]}
-                          </Badge>
-                        ) : (
-                          p[row.key as keyof SupplementSpec]
-                        )}
+                        {p[row.key as keyof GearSpec] || "---"}
                       </td>
                     ))}
                   </tr>
@@ -287,4 +252,4 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
   );
 };
 
-export default SupplementComparisonTable;
+export default HydrationComparisonTable;

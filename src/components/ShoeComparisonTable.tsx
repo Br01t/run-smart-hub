@@ -17,7 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Info, Search, Star } from "lucide-react";
+import { Info, Search, Star, Mountain, Scale, ArrowDownLeft, Cloud, Shield, Activity } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
@@ -93,78 +93,110 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
-                <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Model</TableHead>
-                <TableHead className="w-[85px] px-2 font-bold text-foreground text-xs text-center">Terrain</TableHead>
-                <TableHead className="w-[75px] px-2 font-bold text-foreground text-xs text-center">Weight</TableHead>
-                <TableHead className="w-[65px] px-2 font-bold text-foreground text-xs text-center">Drop</TableHead>
-                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Cushioning</TableHead>
-                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Support</TableHead>
-                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
+                <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
+                <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                    Model
+                </TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Mountain className="h-3 w-3 opacity-50" />
+                        Terrain
+                    </div>
+                </TableHead>
+                <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Scale className="h-3 w-3 opacity-50" />
+                        Weight
+                    </div>
+                </TableHead>
+                <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <ArrowDownLeft className="h-3 w-3 opacity-50" />
+                        Drop
+                    </div>
+                </TableHead>
+                <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Cloud className="h-3 w-3 opacity-50 text-sky-400" />
+                        Cushioning
+                    </div>
+                </TableHead>
+                <TableHead className="w-[110px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Shield className="h-3 w-3 opacity-50" />
+                        Stability
+                    </div>
+                </TableHead>
+                <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Activity className="h-3 w-3 opacity-50 text-left w-full" />
+                        Best For
+                    </div>
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {filteredData.length > 0 ? (
-                filteredData.map((shoe) => (
+                filteredData.map((spec) => (
                   <TableRow 
-                    key={shoe.name} 
-                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(shoe.name) ? 'font-medium' : ''} ${shoe.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
-                    style={{ backgroundColor: selectedNames.includes(shoe.name) ? `${accentColor}10` : (shoe.emphasized ? 'var(--primary-light)' : 'transparent') }}
+                    key={spec.name} 
+                    className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
+                    style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
-                    <TableCell className="px-2 w-[40px] text-center">
+                    <TableCell className="sticky left-0 z-20 px-2 w-[50px] text-center bg-card/95 backdrop-blur-sm group-hover:bg-muted/30 transition-colors shadow-[1px_0_0_0_rgba(255,255,255,0.05)]">
                       <Checkbox 
-                        checked={selectedNames.includes(shoe.name)} 
-                        onCheckedChange={() => toggleSelection(shoe.name)}
+                        checked={selectedNames.includes(spec.name)} 
+                        onCheckedChange={() => toggleSelection(spec.name)}
                       />
                     </TableCell>
-                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                    <TableCell className="sm:sticky sm:left-[50px] z-20 px-2 py-3 font-semibold text-foreground text-xs leading-tight sm:bg-card/95 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] group-hover:bg-muted/30 transition-colors">
                       <div className="flex flex-col gap-1">
                         <div className="flex items-center gap-1.5 flex-wrap">
-                          {shoe.link ? (
+                          {spec.link ? (
                             <a 
-                              href={shoe.link} 
+                              href={spec.link} 
                               target="_blank" 
                               rel="noopener noreferrer sponsored"
                               className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4"
                             >
-                              {shoe.name}
+                              {spec.name}
                             </a>
                           ) : (
-                            <span>{shoe.name}</span>
+                            <span>{spec.name}</span>
                           )}
-                          {shoe.emphasized && (
+                          {spec.emphasized && (
                             <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
-                              Expert Pick
+                              Pick
                             </Badge>
                           )}
                         </div>
-                        <span className="text-[9px] text-muted-foreground uppercase opacity-0 transition-opacity group-hover:opacity-100">Technical Model</span>
+                        <span className="text-[9px] text-muted-foreground uppercase opacity-40">{spec.brand}</span>
                       </div>
                     </TableCell>
                     <TableCell className="px-2 text-center">
                       <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
-                        {shoe.terrain}
+                        {spec.terrain}
                       </Badge>
                     </TableCell>
-                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-medium">{shoe.weight}</TableCell>
-                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-mono font-bold italic">{shoe.drop}</TableCell>
-                    <TableCell className="px-2">
+                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-medium">{spec.weight}</TableCell>
+                    <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-mono font-bold italic">{spec.drop}</TableCell>
+                    <TableCell className="px-2 text-center">
                       <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
-                        shoe.cushion === 'Maximum' ? 'bg-sky-50 text-sky-700 border-sky-100' : 
-                        shoe.cushion === 'Minimal' ? 'bg-amber-50 text-amber-700 border-amber-100' : 
+                        spec.cushion === 'Maximum' ? 'bg-sky-50 text-sky-700 border-sky-100' : 
+                        spec.cushion === 'Minimal' ? 'bg-amber-50 text-amber-700 border-amber-100' : 
                         'bg-slate-50 text-slate-700'
                       }`}>
-                        {shoe.cushion}
+                        {spec.cushion}
                       </Badge>
                     </TableCell>
-                    <TableCell className="px-2">
+                    <TableCell className="px-2 text-center">
                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-foreground">
-                         <div className={`h-2 w-2 rounded-full ${shoe.support === 'Stable' ? 'bg-indigo-500' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]'}`} />
-                         {shoe.support}
+                         <div className={`h-2 w-2 rounded-full ${spec.support === 'Stable' ? 'bg-indigo-500' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]'}`} />
+                         {spec.support}
                        </span>
                     </TableCell>
-                    <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
-                      {shoe.bestFor}
+                    <TableCell className="px-4 text-[11px] text-muted-foreground font-medium italic leading-tight">
+                      {spec.bestFor}
                     </TableCell>
                   </TableRow>
                 ))

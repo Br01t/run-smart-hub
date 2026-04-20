@@ -1,5 +1,6 @@
 export interface SupplementSpec {
   name: string;
+  brand: string;
   absorption: "Fast" | "Medium" | "Slow";
   timing: "Pre-workout" | "During" | "Post-workout" | "Anytime";
   ingredients: string;
@@ -30,12 +31,17 @@ export interface ShoeSpec {
 export interface GearSpec {
   name: string;
   brand: string;
-  category: "Watch" | "Hydration" | "Lighting" | "Socks" | "Belt";
+  category: "Watch" | "Hydration" | "Lighting" | "Socks" | "Belt" | "Gear";
   metric1: string; // Battery / Capacity / Lumens / Fit
   metric2: string; // Maps / Pockets / Charging / Material
   bestFor: string;
   usage: string;
   price?: string;
+  format?: string;
+  sodium?: string;
+  sugar?: string;
+  timing?: string;
+  effect?: string;
   link?: string;
   image?: string;
   emphasized?: boolean;
@@ -44,9 +50,12 @@ export interface GearSpec {
 export interface ApparelSpec {
   name: string;
   brand: string;
-  category: "Shirt" | "Shorts" | "Jacket";
+  category: "Shirt" | "Shorts" | "Jacket" | "Leggings" | "Accessory";
   breathability: string; 
-  fit: "Compression" | "Fitted" | "Loose";
+  fit: "Compression" | "Fitted" | "Loose" | "Regular" | "One Size";
+  antiChafing: string; // e.g. "Flatlock", "Seamless"
+  visibility: string; // e.g. "360 Reflex", "Standard"
+  seasonal: string; // e.g. "Summer", "All Season", "Rain/Wind"
   details: string; 
   bestFor: string;
   usage: string;
@@ -59,9 +68,13 @@ export interface ApparelSpec {
 export interface RecoverySpec {
   name: string;
   brand: string;
-  intensity: string; 
-  techDetails: string; 
-  useType: "Running" | "Rest" | "Race";
+  method?: "Deep Massage" | "Circulatory Support" | "Active Prevention" | "Thermal Therapy";
+  benefit?: string;
+  targetArea?: string; // e.g. "Muscles", "Circulation", "IT Band"
+  strategy?: string; // e.g. "Release", "Activation", "Therapy"
+  intensity: string; // High / Medium / Low / Temp-based
+  techDetails: string;
+  useType: "Rest" | "Race";
   bestFor: string;
   recommendedFor: string;
   price?: string;

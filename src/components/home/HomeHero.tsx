@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-running.webp";
 
 const HomeHero = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[70vh] sm:min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
           src={heroImage} 

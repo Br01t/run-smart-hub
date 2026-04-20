@@ -16,7 +16,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Activity, HeartPulse, Search } from "lucide-react";
+import { Activity, HeartPulse, Search, ShieldCheck, Zap, Droplets, Thermometer, Weight, Crosshair, ListTodo, Target, LayoutGrid } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
@@ -39,16 +39,36 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { RecoverySpec } from "@/types/specs";
 import { recoverySpecs } from "@/data/specs/recovery";
 
-export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 
     activeFilters, setActiveFilters,
     selectedNames, toggleSelection, setSelectedNames,
     filteredData, clearFilters 
-  } = useProductTable(recoverySpecs, ["name", "brand", "techDetails"]);
+  } = useProductTable(recoverySpecs, ["name", "brand", "benefit", "method", "targetArea", "strategy"]);
 
   const selectedProducts = recoverySpecs.filter(p => selectedNames.includes(p.name));
+
+  const getMethodIcon = (method: string) => {
+    switch (method) {
+      case 'Deep Massage': return <Zap className="h-4 w-4" />;
+      case 'Circulatory Support': return <Droplets className="h-4 w-4" />;
+      case 'Active Prevention': return <ShieldCheck className="h-4 w-4" />;
+      case 'Thermal Therapy': return <Thermometer className="h-4 w-4" />;
+      default: return <Activity className="h-4 w-4" />;
+    }
+  };
+
+  const getMethodColorClass = (method: string) => {
+    switch (method) {
+      case 'Deep Massage': return 'bg-violet-50 text-violet-700 border-violet-100';
+      case 'Circulatory Support': return 'bg-sky-50 text-sky-700 border-sky-100';
+      case 'Active Prevention': return 'bg-emerald-50 text-emerald-700 border-emerald-100';
+      case 'Thermal Therapy': return 'bg-rose-50 text-rose-700 border-rose-100';
+      default: return 'bg-slate-50 text-slate-700';
+    }
+  };
 
   return (
     <div className="my-8 space-y-4">
@@ -63,28 +83,16 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
           accentColor={accentColor}
         >
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Recommended For</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Application Method</label>
             <SelectFilter 
-              value={activeFilters.recommendedFor || "all"} 
-              onValueChange={(v) => setActiveFilters({...activeFilters, recommendedFor: v})}
+              value={activeFilters.method || "all"} 
+              onValueChange={(v) => setActiveFilters({...activeFilters, method: v})}
               options={[
-                { label: "All Contexts", value: "all" },
-                { label: "All Runners", value: "All Runners" },
-                { label: "Recovery / Travel", value: "Recovery / Travel" },
-                { label: "Post-Race / Travel", value: "Post-Race / Travel" },
-                { label: "Injury Prevention", value: "Injury Prevention" },
-              ]}
-            />
-          </div>
-          <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Use Type</label>
-            <SelectFilter 
-              value={activeFilters.useType || "all"} 
-              onValueChange={(v) => setActiveFilters({...activeFilters, useType: v})}
-              options={[
-                { label: "All Types", value: "all" },
-                { label: "Rest", value: "Rest" },
-                { label: "Race", value: "Race" },
+                { label: "All Methods", value: "all" },
+                { label: "Deep Massage", value: "Deep Massage" },
+                { label: "Circulatory Support", value: "Circulatory Support" },
+                { label: "Active Prevention", value: "Active Prevention" },
+                { label: "Thermal Therapy", value: "Thermal Therapy" },
               ]}
             />
           </div>
@@ -94,12 +102,46 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
-                <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Product</TableHead>
-                <TableHead className="w-[110px] px-2 font-bold text-foreground text-xs text-center">Recommended</TableHead>
-                <TableHead className="w-[120px] px-2 font-bold text-foreground text-xs">Intensity / Density</TableHead>
-                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center">Specific Use</TableHead>
-                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
+                <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
+                <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                    Product
+                </TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Zap className="h-3 w-3 opacity-50" />
+                        Method
+                    </div>
+                </TableHead>
+                <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Crosshair className="h-3 w-3 opacity-50" />
+                        Target Area
+                    </div>
+                </TableHead>
+                <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <LayoutGrid className="h-3 w-3 opacity-50" />
+                        Strategy
+                    </div>
+                </TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Activity className="h-3 w-3 opacity-50" />
+                        Intensity
+                    </div>
+                </TableHead>
+                <TableHead className="w-[160px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <HeartPulse className="h-3 w-3 opacity-50" />
+                        Key Benefit
+                    </div>
+                </TableHead>
+                <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Target className="h-3 w-3 opacity-50 text-left w-full" />
+                        Best For
+                    </div>
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -110,13 +152,13 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                     className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
-                    <TableCell className="px-2 w-[40px] text-center">
+                    <TableCell className="sticky left-0 z-20 px-2 w-[50px] text-center bg-card/95 backdrop-blur-sm group-hover:bg-muted/30 transition-colors shadow-[1px_0_0_0_rgba(255,255,255,0.05)]">
                       <Checkbox 
                         checked={selectedNames.includes(spec.name)} 
                         onCheckedChange={() => toggleSelection(spec.name)}
                       />
                     </TableCell>
-                    <TableCell className="px-2 py-3 font-semibold text-foreground text-xs leading-tight">
+                    <TableCell className="sm:sticky sm:left-[50px] z-20 px-2 py-3 font-semibold text-foreground text-xs leading-tight sm:bg-card/95 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] group-hover:bg-muted/30 transition-colors">
                       <div className="flex flex-col gap-1">
                         <div className="flex items-center gap-1.5 flex-wrap">
                           {spec.link ? (
@@ -133,30 +175,38 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                           )}
                           {spec.emphasized && (
                             <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
-                              Expert Pick
+                              Pick
                             </Badge>
                           )}
                         </div>
-                        <span className="text-[9px] text-muted-foreground uppercase">{spec.brand}</span>
+                        <span className="text-[9px] text-muted-foreground uppercase opacity-40">{spec.brand}</span>
                       </div>
                     </TableCell>
                     <TableCell className="px-2 text-center">
-                      <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
-                        {spec.recommendedFor}
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="px-2 text-[11px] text-foreground leading-tight font-medium">
-                      <div className="flex items-center gap-1">
-                        <Activity className="h-3 w-3 text-primary shrink-0" />
-                        {spec.intensity}
+                      <div className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-md border text-[9px] font-bold uppercase tracking-widest ${getMethodColorClass(spec.method || '')}`}>
+                        {getMethodIcon(spec.method || '')}
+                        {spec.method}
                       </div>
                     </TableCell>
                     <TableCell className="px-2 text-center">
-                      <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
-                        spec.useType === 'Race' ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-slate-50 text-slate-700'
-                      }`}>
-                        {spec.useType}
-                      </Badge>
+                       <div className="flex flex-col items-center gap-0.5">
+                        <Crosshair className="h-3 w-3 text-muted-foreground/40" />
+                        <span className="text-[10px] font-bold text-foreground leading-tight">{spec.targetArea}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-center">
+                       <div className="flex flex-col items-center gap-0.5">
+                        <ListTodo className="h-3 w-3 text-muted-foreground/40" />
+                        <span className="text-[10px] font-bold text-muted-foreground leading-tight">{spec.strategy}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-center text-[10px] font-medium text-muted-foreground leading-tight">
+                      {spec.intensity}
+                    </TableCell>
+                    <TableCell className="px-2 text-center">
+                       <span className="text-[10px] font-bold text-foreground leading-tight block max-w-[150px] mx-auto">
+                        {spec.benefit}
+                      </span>
                     </TableCell>
                     <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
                       {spec.bestFor}
@@ -165,7 +215,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={6} className="h-40 text-center">
+                  <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
                       <p className="font-medium">No recovery tools found matching these criteria.</p>
@@ -226,10 +276,12 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                   ))}
                 </tr>
                 {[
-                  { label: "Recommendation", key: "recommendedFor" },
-                  { label: "Intensity", key: "intensity" },
-                  { label: "Specific Use", key: "useType", isBadge: true },
-                  { label: "Tech Details", key: "techDetails" },
+                  { label: "Application Method", key: "method", isBadge: true },
+                  { label: "Target Area", key: "targetArea" },
+                  { label: "Strategy", key: "strategy" },
+                  { label: "Intensity / Power", key: "intensity" },
+                  { label: "Key Benefit", key: "benefit" },
+                  { label: "Technical Specs", key: "techDetails" },
                   { label: "Best For", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
@@ -237,7 +289,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(var(--primary))" }:
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
                         {row.isBadge ? (
-                          <Badge variant="outline" className="text-[10px] uppercase font-bold">{p[row.key as keyof RecoverySpec]}</Badge>
+                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${getMethodColorClass(p.method || '')}`}>{p[row.key as keyof RecoverySpec]}</Badge>
                         ) : (
                           p[row.key as keyof RecoverySpec]
                         )}

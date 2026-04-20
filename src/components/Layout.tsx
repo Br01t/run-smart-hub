@@ -49,13 +49,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-0.5 md:flex" aria-label="Main navigation">
+          <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 aria-current={location.pathname === link.to ? "page" : undefined}
-                className={`relative rounded-md px-3 py-2 text-[13px] font-medium transition-colors ${
+                className={`relative rounded-md px-2 lg:px-3 py-2 text-[13px] font-medium transition-colors ${
                   location.pathname === link.to
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"

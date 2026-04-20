@@ -16,7 +16,7 @@ import CategorySection from "@/components/hub/CategorySection";
 import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 import { categoryGuides } from "@/data/categoryGuides";
 
-const categories = ["shoes", "supplements", "hydration", "recovery", "apparel"];
+const categories = ["shoes", "supplements", "hydration", "recovery", "apparel", "gear"];
 
 const MasterHub = () => {
   const [activeCategory, setActiveCategory] = useState("shoes");
@@ -58,12 +58,13 @@ const MasterHub = () => {
   // Category theme colors for vibrant UI
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "shoes": return "hsl(25, 95%, 50%)"; // Amber/Orange
-      case "supplements": return "hsl(270, 70%, 60%)"; // Purple
-      case "hydration": return "hsl(190, 90%, 45%)"; // Cyan/Sky
-      case "recovery": return "hsl(150, 80%, 35%)"; // Emerald
-      case "apparel": return "hsl(230, 80%, 60%)"; // Indigo
-      default: return "hsl(var(--primary))";
+      case "shoes": return { h: 22, s: 95, l: 50 };       // Vibrant Orange/Red
+      case "supplements": return { h: 270, s: 80, l: 65 }; // Electric Purple
+      case "hydration": return { h: 185, s: 95, l: 45 };   // Cyan/Teal
+      case "recovery": return { h: 145, s: 80, l: 42 };    // Deep Emerald
+      case "apparel": return { h: 330, s: 90, l: 60 };     // Hot Pink
+      case "gear": return { h: 215, s: 95, l: 55 };        // Royal Blue
+      default: return { h: 230, s: 80, l: 60 };
     }
   };
 
@@ -90,7 +91,8 @@ const MasterHub = () => {
     supplements: ["supplements", "protein"],
     hydration: ["hydration", "accessories"],
     recovery: ["recovery", "massage"],
-    apparel: ["apparel", "running"]
+    apparel: ["apparel", "running"],
+    gear: ["gear", "watch", "accessories"]
   };
 
   const SidebarContent = () => (
@@ -147,24 +149,26 @@ const MasterHub = () => {
         path="/hub"
       />
 
-      {/* Floating Category Nav (Desktop) */}
-      <nav className="sticky top-[72px] z-30 hidden border-b border-border bg-background/80 backdrop-blur-md lg:block">
+      {/* Floating Category Nav (Responsive & Multi-level) */}
+      <nav className="sticky top-[64px] z-30 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="flex items-center gap-8 py-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 sm:gap-8 py-3 sm:py-4">
             {categories.map((cat) => (
               <a 
                 key={cat} 
                 href={`#${cat}`}
-                className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:text-primary ${
+                className={`text-[10px] sm:text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:text-primary ${
                   activeCategory === cat ? "text-primary scale-110" : "text-muted-foreground"
                 }`}
               >
-                <span className="relative">
+                <span className="relative whitespace-nowrap">
                   {cat}
                   {activeCategory === cat && (
                     <span 
                       className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full transition-all duration-500"
-                      style={{ backgroundColor: getCategoryColor(cat) }}
+                      style={{ 
+                        backgroundColor: `hsl(${getCategoryColor(cat).h}, ${getCategoryColor(cat).s}%, ${getCategoryColor(cat).l}%)` 
+                      }}
                     />
                   )}
                 </span>
@@ -176,7 +180,7 @@ const MasterHub = () => {
 
       <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-16">
         <header className="mb-16 editorial-line">
-          <h1 className="font-display text-display-xl font-bold text-foreground">
+          <h1 className="font-display text-4xl sm:text-display-xl font-bold text-foreground transition-all">
             Master Gear & <br/>Supplement Guide
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -186,9 +190,10 @@ const MasterHub = () => {
 
         <div className="space-y-32">
           {categories.map((catKey, index) => {
-            const guide = categoryGuides[catKey === "hydration" ? "hydration" : catKey === "shoes" ? "shoes" : catKey === "supplements" ? "supplements" : catKey === "recovery" ? "recovery" : "apparel"];
+            const guide = categoryGuides[catKey === "hydration" ? "hydration" : catKey === "shoes" ? "shoes" : catKey === "supplements" ? "supplements" : catKey === "recovery" ? "recovery" : catKey === "gear" ? "gear" : "apparel"];
             const matchedComparisons = getComparisonsForCategory(catKey);
-            const accentColor = getCategoryColor(catKey);
+            const accentData = getCategoryColor(catKey);
+            const accentColor = `hsl(${accentData.h}, ${accentData.s}%, ${accentData.l}%)`;
             
             return (
               <CategorySection 
@@ -197,6 +202,7 @@ const MasterHub = () => {
                 index={index}
                 guide={guide}
                 accentColor={accentColor}
+                accentHsl={accentData}
                 matchedComparisons={matchedComparisons}
                 categoryProductTags={categoryProductTags}
                 sidebar={<SidebarContent />}

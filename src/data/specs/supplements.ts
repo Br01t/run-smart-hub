@@ -3,6 +3,7 @@ import { SupplementSpec } from "@/types/specs";
 export const supplementSpecs: SupplementSpec[] = [
   { 
     name: "Impact Whey Protein", 
+    brand: "Myprotein",
     absorption: "Fast", 
     timing: "Post-workout", 
     ingredients: "80% Whey Protein + BCAA", 
@@ -16,6 +17,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Impact Whey Isolate", 
+    brand: "Myprotein",
     absorption: "Fast", 
     timing: "Post-workout", 
     ingredients: "90% Whey Protein Isolate", 
@@ -28,6 +30,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Impact EAA", 
+    brand: "Myprotein",
     absorption: "Fast", 
     timing: "Post-workout", 
     ingredients: "All 9 Essential Amino Acids", 
@@ -40,6 +43,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "100% Maltodextrin Carbs", 
+    brand: "Myprotein",
     absorption: "Fast", 
     timing: "During", 
     ingredients: "Pure Maltodextrin", 
@@ -52,6 +56,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Oat Protein Flapjack", 
+    brand: "Myprotein",
     absorption: "Medium", 
     timing: "Post-workout", 
     ingredients: "Rolled Oats + Whey Protein", 
@@ -64,6 +69,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Impact Creatine", 
+    brand: "Myprotein",
     absorption: "Medium", 
     timing: "Anytime", 
     ingredients: "Pure micronized creatine", 
@@ -76,6 +82,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Beta Alanine", 
+    brand: "Myprotein",
     absorption: "Slow", 
     timing: "Pre-workout", 
     ingredients: "Pure amino acid", 
@@ -88,6 +95,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Alpha BRAIN® (90ct)", 
+    brand: "Onnit",
     absorption: "Fast", 
     timing: "Pre-workout", 
     ingredients: "L-Theanine, Bacopa, Cat's Claw", 
@@ -100,6 +108,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Alpha BRAIN® (60ct)", 
+    brand: "Onnit",
     absorption: "Fast", 
     timing: "Pre-workout", 
     ingredients: "L-Theanine, Bacopa, Cat's Claw", 
@@ -112,6 +121,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Alpha BRAIN Black Label", 
+    brand: "Onnit",
     absorption: "Fast", 
     timing: "Pre-workout", 
     ingredients: "Lion's Mane, L-Tyrosine", 
@@ -124,6 +134,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Shroom TECH Sport", 
+    brand: "Onnit",
     absorption: "Medium", 
     timing: "Pre-workout", 
     ingredients: "Cordyceps + Mushrooms", 
@@ -135,6 +146,7 @@ export const supplementSpecs: SupplementSpec[] = [
   },
   { 
     name: "Total Human", 
+    brand: "Onnit",
     absorption: "Medium", 
     timing: "Anytime", 
     ingredients: "Detailed Day/Night Packs", 

@@ -16,7 +16,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Shirt, Zap, ShieldCheck, Search } from "lucide-react";
+import { Shirt, Zap, ShieldCheck, Search, Wind, Sun, Layers, Ruler, Target, Activity, LayoutGrid } from "lucide-react";
 import { useProductTable } from "@/hooks/useProductTable";
 import { TableFilterBar } from "./TableFilterBar";
 import { ComparisonTray } from "./ComparisonTray";
@@ -39,14 +39,14 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { ApparelSpec } from "@/types/specs";
 import { apparelSpecs } from "@/data/specs/apparel";
 
-export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: { accentColor?: string }) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 
     activeFilters, setActiveFilters,
     selectedNames, toggleSelection, setSelectedNames,
     filteredData, clearFilters 
-  } = useProductTable(apparelSpecs, ["name", "brand", "details", "breathability"]);
+  } = useProductTable(apparelSpecs, ["name", "brand", "details", "breathability", "antiChafing"]);
 
   const selectedProducts = apparelSpecs.filter(p => selectedNames.includes(p.name));
 
@@ -63,20 +63,22 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
           accentColor={accentColor}
         >
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Category</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Category</label>
             <SelectFilter 
               value={activeFilters.category || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, category: v})}
               options={[
-                { label: "All Categories", value: "all" },
+                { label: "All Gear", value: "all" },
                 { label: "Shirt", value: "Shirt" },
                 { label: "Shorts", value: "Shorts" },
                 { label: "Jacket", value: "Jacket" },
+                { label: "Leggings", value: "Leggings" },
+                { label: "Accessory", value: "Accessory" },
               ]}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Fit</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Fit</label>
             <SelectFilter 
               value={activeFilters.fit || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, fit: v})}
@@ -85,6 +87,8 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                 { label: "Compression", value: "Compression" },
                 { label: "Fitted", value: "Fitted" },
                 { label: "Loose", value: "Loose" },
+                { label: "Regular", value: "Regular" },
+                { label: "One Size", value: "One Size" },
               ]}
             />
           </div>
@@ -94,13 +98,46 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/30 hover:bg-muted/30">
-                <TableHead className="w-[50px] px-4"></TableHead>
-                <TableHead className="w-[140px] px-2 font-bold text-foreground text-xs">Product</TableHead>
-                <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center">Usage</TableHead>
-                <TableHead className="w-[130px] px-2 font-bold text-foreground text-xs">Breathability</TableHead>
-                <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center">Fit</TableHead>
-                <TableHead className="w-[150px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Technical Details</TableHead>
-                <TableHead className="px-2 font-bold text-foreground text-[10px] uppercase tracking-tight">Best For</TableHead>
+                <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
+                <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                    Product
+                </TableHead>
+                <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <LayoutGrid className="h-3 w-3 opacity-50" />
+                        Usage
+                    </div>
+                </TableHead>
+                <TableHead className="w-[140px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Wind className="h-3 w-3 opacity-50" />
+                        Breathability
+                    </div>
+                </TableHead>
+                <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Layers className="h-3 w-3 opacity-50" />
+                        Anti-Chafing
+                    </div>
+                </TableHead>
+                <TableHead className="w-[90px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Sun className="h-3 w-3 opacity-50" />
+                        Visibility
+                    </div>
+                </TableHead>
+                <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Ruler className="h-3 w-3 opacity-50" />
+                        Fit
+                    </div>
+                </TableHead>
+                <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-1">
+                        <Target className="h-3 w-3 opacity-50 text-left w-full" />
+                        Best For
+                    </div>
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -111,15 +148,15 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                     className={`group transition-all hover:bg-muted/30 ${selectedNames.includes(spec.name) ? 'font-medium' : ''} ${spec.emphasized ? 'bg-primary/5 border-l-2 border-primary' : ''}`}
                     style={{ backgroundColor: selectedNames.includes(spec.name) ? `${accentColor}10` : 'transparent' }}
                   >
-                    <TableCell className="px-2 w-[40px] text-center">
+                    <TableCell className="sticky left-0 z-20 px-2 w-[50px] text-center bg-card/95 backdrop-blur-sm group-hover:bg-muted/30 transition-colors shadow-[1px_0_0_0_rgba(255,255,255,0.05)]">
                       <Checkbox 
                         checked={selectedNames.includes(spec.name)} 
                         onCheckedChange={() => toggleSelection(spec.name)}
                       />
                     </TableCell>
-                    <TableCell className="font-semibold text-foreground">
-                      <div className="flex flex-col">
-                        <div className="flex items-center gap-1.5">
+                    <TableCell className="sm:sticky sm:left-[50px] z-20 px-2 py-3 font-semibold text-foreground text-xs leading-tight sm:bg-card/95 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] group-hover:bg-muted/30 transition-colors">
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-1.5 flex-wrap">
                           {spec.link ? (
                             <a 
                               href={spec.link} 
@@ -133,34 +170,45 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                             <span>{spec.name}</span>
                           )}
                           {spec.emphasized && (
-                            <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[9px] h-5 px-1.5 rounded-sm font-bold uppercase tracking-widest shadow-[0_2px_10px_rgba(245,158,11,0.3)] text-white border-0 flex items-center gap-1 shrink-0">
-                              <Star className="h-2.5 w-2.5 fill-current" /> Expert Pick
+                            <Badge className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-[8px] h-4 px-1 rounded-sm font-bold uppercase tracking-wider shadow-sm text-white border-0 flex items-center gap-1 shrink-0 w-fit">
+                              Pick
                             </Badge>
                           )}
                         </div>
-                        <span className="text-[10px] text-muted-foreground uppercase">{spec.brand}</span>
+                        <span className="text-[9px] text-muted-foreground uppercase opacity-40">{spec.brand}</span>
                       </div>
                     </TableCell>
-                    <TableCell className="px-2 text-center text-[10px]">
+                    <TableCell className="px-2 text-center">
                       <Badge variant="secondary" className="bg-secondary/50 text-[9px] font-bold uppercase tracking-tighter">
                         {spec.usage}
                       </Badge>
                     </TableCell>
-                    <TableCell className="px-2 text-[11px] text-foreground leading-tight">
-                      <div className="flex items-center gap-1">
-                        <Zap className="h-3 w-3 text-primary shrink-0" />
-                        {spec.breathability}
+                    <TableCell className="px-2 text-center">
+                      <div className="flex flex-col items-center gap-0.5">
+                        <Wind className="h-3 w-3 text-primary/60" />
+                        <span className="text-[10px] font-bold text-foreground leading-tight text-center">{spec.breathability}</span>
                       </div>
                     </TableCell>
-                    <TableCell className="px-2 text-center text-[10px]">
-                      <Badge variant="outline" className="text-[9px] uppercase font-bold tracking-tighter">
-                        {spec.fit}
-                      </Badge>
+                    <TableCell className="px-2 text-center">
+                      <div className="flex flex-col items-center gap-0.5">
+                        <Layers className="h-3 w-3 text-indigo-500/60" />
+                        <span className="text-[10px] font-medium text-muted-foreground leading-tight">{spec.antiChafing}</span>
+                      </div>
                     </TableCell>
-                    <TableCell className="px-2 text-[11px] text-muted-foreground leading-tight max-w-[150px]">
-                      <div className="flex items-center gap-1">
-                        <ShieldCheck className="h-3 w-3 text-indigo-500 shrink-0" />
-                        {spec.details}
+                    <TableCell className="px-2 text-center">
+                       <div className="flex flex-col items-center gap-0.5">
+                        <Sun className={`h-3 w-3 ${spec.visibility.includes('High') ? 'text-amber-500 animate-pulse' : 'text-muted-foreground/30'}`} />
+                        <Badge variant="outline" className={`text-[9px] font-bold uppercase p-0 px-1 border-0 ${spec.visibility.includes('High') ? 'text-amber-600' : 'text-muted-foreground'}`}>
+                          {spec.visibility}
+                        </Badge>
+                      </div>
+                    </TableCell>
+                    <TableCell className="px-2 text-center">
+                      <div className="flex flex-col items-center gap-0.5">
+                        <Ruler className="h-3 w-3 text-muted-foreground/30" />
+                        <Badge variant="outline" className="text-[9px] uppercase font-bold tracking-tighter px-1">
+                          {spec.fit}
+                        </Badge>
                       </div>
                     </TableCell>
                     <TableCell className="px-2 text-[11px] text-muted-foreground font-medium italic leading-tight">
@@ -231,10 +279,13 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                   ))}
                 </tr>
                 {[
-                  { label: "Usage", key: "usage" },
+                  { label: "Category", key: "category", isBadge: true },
                   { label: "Breathability", key: "breathability" },
+                  { label: "Anti-Chafing", key: "antiChafing" },
+                  { label: "Visibility", key: "visibility", isBadge: true },
+                  { label: "Seasonal", key: "seasonal" },
                   { label: "Fit", key: "fit", isBadge: true },
-                  { label: "Technical Details", key: "details" },
+                  { label: "Details", key: "details" },
                   { label: "Best For", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
@@ -242,7 +293,9 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(var(--primary))" }: 
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
                         {row.isBadge ? (
-                          <Badge variant="outline" className="text-[10px] uppercase font-bold">{p[row.key as keyof ApparelSpec]}</Badge>
+                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${p.visibility.includes('High') && row.key === 'visibility' ? 'bg-amber-50 text-amber-600' : ''}`}>
+                            {p[row.key as keyof ApparelSpec]}
+                          </Badge>
                         ) : (
                           p[row.key as keyof ApparelSpec]
                         )}

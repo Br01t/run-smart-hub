@@ -14,7 +14,7 @@ const tools = [
 
 const ToolGrid = () => {
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-20">
+    <section className="container mx-auto px-4 pt-8 pb-16 sm:pt-12 sm:pb-20">
       <div className="editorial-line">
         <h2 className="font-display text-display-md font-bold text-foreground">The Toolkit</h2>
         <p className="mt-2 max-w-md text-muted-foreground">
@@ -22,7 +22,7 @@ const ToolGrid = () => {
         </p>
       </div>
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((tool, i) => (
           <motion.div
             key={tool.to}

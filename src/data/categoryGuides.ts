@@ -114,5 +114,25 @@ export const categoryGuides: Record<string, CategoryGuide> = {
         description: "Membranes like GORE-TEX that offer absolute waterproofness with high vapor permeability." 
       }
     ]
+  },
+  gear: {
+    id: "gear",
+    title: "Performance Gear",
+    scientificTitle: "Biomechanical Efficiency & Connectivity",
+    scientificDescription: "Running gear should disappear during the run while providing critical data or infrastructure. We analyze durability, weight-to-utility ratio, and interface speed.",
+    pillars: [
+      { 
+        title: "Weight/Utility Ratio", 
+        description: "Every gram must justify its presence. Whether it's a 10L vest or a 40g sensor, efficiency is key." 
+      },
+      { 
+        title: "Connectivity", 
+        description: "Focus on ecosystem compatibility (ANT+, Bluetooth) and data fidelity for precise training metrics." 
+      },
+      { 
+        title: "Mechanical Durability", 
+        description: "Resistance to sweat, impact, and extreme weather. Gear that survives the trail is gear that justifies its cost." 
+      }
+    ]
   }
 };
