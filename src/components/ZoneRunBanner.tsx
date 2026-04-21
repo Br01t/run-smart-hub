@@ -1,61 +1,128 @@
-import { ArrowRight, Trophy } from "lucide-react";
-
+import { ArrowRight } from "lucide-react";
 const ZONERUN_URL = "https://zonerun.xyz/";
+const LOGO_PATH = "/src/assets/zonerun-logo.webp";
+
+// A high-fidelity SVG fallback that coordinates with the cyber-aesthetic
+const LogoFallback = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    className={className}
+  >
+    <path 
+      d="M13 10V3L4 14H11V21L20 10H13Z" 
+      fill="currentColor" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+    <path 
+      d="M17 3L21 7" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round"
+    />
+    <path 
+      d="M19 5L20 5" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round"
+    />
+  </svg>
+);
 
 interface ZoneRunBannerProps {
   variant?: "inline" | "fullwidth" | "compact";
 }
 
 const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
+  const zonerunColors = {
+    dark: "#061a19",
+    mint: "#2dd4bf",
+    emerald: "#10b981",
+    glow: "rgba(45, 212, 191, 0.3)"
+  };
+
   if (variant === "compact") {
     return (
       <a
         href={ZONERUN_URL}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        className="group flex items-center gap-3 rounded-xl border border-accent/20 bg-accent/5 p-3 transition-all hover:border-accent/40 hover:bg-accent/10 sm:p-4"
+        className="group flex items-center gap-3 rounded-xl border border-teal-500/20 bg-teal-950/20 p-3 transition-all hover:border-teal-400/40 hover:bg-teal-950/30 sm:p-4"
+        style={{ borderColor: `${zonerunColors.mint}33` }}
       >
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-accent">
-          <Trophy className="h-4 w-4 text-accent-foreground" />
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center">
+          <img 
+            src={LOGO_PATH} 
+            alt="ZoneRun" 
+            className="h-10 w-10 object-contain" 
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          <LogoFallback className="hidden h-9 w-9 text-teal-400" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-xs font-bold text-foreground">ZoneRun</p>
           <p className="text-[11px] text-muted-foreground truncate">Turn every run into rewards</p>
         </div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-accent">Try free</span>
+        <span className="text-[10px] font-bold uppercase tracking-wider text-teal-400">Try free</span>
       </a>
     );
   }
 
   if (variant === "fullwidth") {
     return (
-      <section className="relative overflow-hidden bg-gradient-to-r from-foreground via-foreground/95 to-foreground/90">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, hsl(var(--accent) / 0.4), transparent 50%), radial-gradient(circle at 80% 50%, hsl(var(--primary) / 0.3), transparent 50%)" }} />
+      <section className="relative overflow-hidden bg-[#061a19]">
+        {/* Futuristic Background Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{ 
+            backgroundImage: `radial-gradient(circle at 20% 50%, ${zonerunColors.mint}20, transparent 50%), radial-gradient(circle at 80% 50%, ${zonerunColors.emerald}15, transparent 50%)` 
+          }} />
+          <div className="absolute inset-0 texture-noise opacity-20" />
         </div>
+        
         <div className="relative container mx-auto px-4 py-8 sm:py-12">
-          <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-accent shadow-hero sm:h-16 sm:w-16">
-              <Trophy className="h-7 w-7 text-accent-foreground sm:h-8 sm:w-8" />
-            </div>
-            <div className="flex-1">
-              <div className="mb-1 flex items-center justify-center gap-2 sm:justify-start">
-                <span className="rounded-full bg-accent/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">Sponsored</span>
+          <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+            <div className="relative group/logo">
+              <div className="absolute -inset-2 bg-teal-500/20 rounded-full blur-xl opacity-0 group-hover/logo:opacity-100 transition-opacity" />
+              <div className="relative flex h-32 w-32 shrink-0 items-center justify-center sm:h-48 sm:w-48">
+                <img 
+                  src={LOGO_PATH} 
+                  alt="ZoneRun Logo" 
+                  className="h-24 w-24 sm:h-40 sm:w-40 object-contain" 
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <LogoFallback className="hidden h-20 w-20 sm:h-32 sm:w-32 text-teal-400" />
               </div>
-              <h3 className="font-display text-xl font-bold text-primary-foreground sm:text-2xl">
-                ZoneRun — Turn Every Run Into Rewards
+            </div>
+            
+            <div className="flex-1">
+              <div className="mb-2 flex items-center justify-center gap-2 sm:justify-start">
+                <span className="rounded-full bg-teal-500/10 border border-teal-500/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-400">Official Partner</span>
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white sm:text-3xl tracking-tight">
+                ZoneRun — <span className="text-teal-400">The Future of Running</span>
               </h3>
-              <p className="mt-1 text-sm text-primary-foreground/70 sm:text-base">
-                The move-to-earn app that gamifies your runs. Earn tokens, unlock challenges and compete with runners worldwide.
+              <p className="mt-2 text-sm text-teal-100/60 sm:text-base max-w-xl">
+                The leading move-to-earn experience. Turn your daily runs into real rewards, unlock cyber-challenges, and dominate the digital leaderboard.
               </p>
             </div>
+            
             <a
               href={ZONERUN_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-accent px-6 py-3 text-sm font-bold text-accent-foreground transition-transform hover:scale-105"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-teal-500 px-8 py-4 text-sm font-bold text-teal-950 transition-all hover:bg-teal-400 hover:scale-105 shadow-[0_0_25px_rgba(45,212,191,0.4)]"
             >
-              Try ZoneRun Free <ArrowRight className="h-4 w-4" />
+              Join for free <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -69,24 +136,37 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
       href={ZONERUN_URL}
       target="_blank"
       rel="noopener noreferrer sponsored"
-      className="group block overflow-hidden rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/5 via-card to-primary/5 transition-all hover:border-accent/40 hover:shadow-card-hover"
+      className="group relative block overflow-hidden rounded-2xl border border-teal-500/20 bg-gradient-to-br from-[#061a19] via-[#0d2a27] to-[#061a19] transition-all hover:border-teal-400/40 hover:shadow-[0_20px_50px_rgba(6,26,25,0.5)]"
     >
-      <div className="p-5 sm:p-6">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-accent">
-            <Trophy className="h-6 w-6 text-accent-foreground" />
-          </div>
-          <div className="flex-1">
-            <div className="mb-1.5 flex items-center gap-2">
-              <span className="font-display text-base font-bold text-card-foreground sm:text-lg">ZoneRun</span>
-              <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">Sponsored</span>
+      <div className="absolute inset-0 texture-noise opacity-10" />
+      <div className="relative p-6 sm:p-8">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div className="relative">
+            <div className="absolute -inset-1 bg-teal-500/10 rounded-xl blur-lg group-hover:bg-teal-500/20 transition-all" />
+            <div className="relative flex h-32 w-32 shrink-0 items-center justify-center transition-colors">
+              <img 
+                src={LOGO_PATH} 
+                alt="ZoneRun" 
+                className="h-24 w-24 object-contain" 
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <LogoFallback className="hidden h-20 w-20 text-teal-400" />
             </div>
-            <p className="font-display text-sm font-semibold text-foreground">Turn Every Run Into Rewards</p>
-            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-              The gamified running app where every mile counts. Earn tokens, complete challenges and compete with a global community of runners.
+          </div>
+          <div className="flex-1 text-center sm:text-left">
+            <div className="mb-2 flex items-center justify-center sm:justify-start gap-3">
+              <span className="font-display text-xl font-bold text-white tracking-tight">ZoneRun</span>
+              <span className="rounded-full bg-teal-500/10 border border-teal-500/20 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest text-teal-400">Sponsored</span>
+            </div>
+            <p className="font-display text-sm font-bold text-teal-100/90 leading-snug">Turn every mile into digital rewards</p>
+            <p className="mt-2 text-sm leading-relaxed text-teal-100/50">
+              The gamified movement app where every run earns you more. Complete challenges, join the global community, and upgrade your performance.
             </p>
-            <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-accent transition-all group-hover:gap-2.5">
-              Try it free <ArrowRight className="h-4 w-4" />
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-teal-400 transition-all group-hover:gap-3">
+              Join for free <ArrowRight className="h-4 w-4" />
             </span>
           </div>
         </div>
