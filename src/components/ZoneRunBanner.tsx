@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/zonerun-logo.webp";
+
 const ZONERUN_URL = "https://zonerun.xyz/";
-const LOGO_PATH = "/src/assets/zonerun-logo.webp";
 
 // A high-fidelity SVG fallback that coordinates with the cyber-aesthetic
 const LogoFallback = ({ className }: { className?: string }) => (
@@ -56,7 +57,7 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
       >
         <div className="flex h-14 w-14 shrink-0 items-center justify-center">
           <img 
-            src={LOGO_PATH} 
+            src={logo} 
             alt="ZoneRun" 
             className="h-10 w-10 object-contain" 
             onError={(e) => {
@@ -92,7 +93,7 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
               <div className="absolute -inset-2 bg-teal-500/20 rounded-full blur-xl opacity-0 group-hover/logo:opacity-100 transition-opacity" />
               <div className="relative flex h-32 w-32 shrink-0 items-center justify-center sm:h-48 sm:w-48">
                 <img 
-                  src={LOGO_PATH} 
+                  src={logo} 
                   alt="ZoneRun Logo" 
                   className="h-24 w-24 sm:h-40 sm:w-40 object-contain" 
                   onError={(e) => {
@@ -145,7 +146,7 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
             <div className="absolute -inset-1 bg-teal-500/10 rounded-xl blur-lg group-hover:bg-teal-500/20 transition-all" />
             <div className="relative flex h-32 w-32 shrink-0 items-center justify-center transition-colors">
               <img 
-                src={LOGO_PATH} 
+                src={logo} 
                 alt="ZoneRun" 
                 className="h-24 w-24 object-contain" 
                 onError={(e) => {
