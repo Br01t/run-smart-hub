@@ -11,7 +11,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Road / Track",
     price: "€160-190",
     link: "https://www.amazon.it/Garmin-Forerunner-55-Smartwatch-GPS/dp/B09579MVN4",
-    image: "https://m.media-amazon.com/images/I/71YyP4D-a-L._AC_SL1500_.jpg",
+    image: "/images/products/amazon-garmin-forerunner-55.webp",
     emphasized: true
   },
   { 
@@ -24,7 +24,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Road / Marathon",
     price: "€300-350",
     link: "https://www.amazon.it/Garmin-Forerunner-255-Smartwatch-Corsa/dp/B09WTV9FJN",
-    image: "https://m.media-amazon.com/images/I/61S-d5YV+fL._AC_SL1500_.jpg",
+    image: "/images/products/gear-forerunner-255.webp",
     emphasized: true
   },
   { 
@@ -37,7 +37,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Trail / Ultra",
     price: "€500-750",
     link: "https://www.amazon.it/Garmin-Fenix-7-Sapphire-Solar/dp/B09NMK4XRP",
-    image: "https://m.media-amazon.com/images/I/71D0Y7ZfMML._AC_SL1500_.jpg"
+    image: "/images/products/amazon-garmin-fenix.webp"
   },
   { 
     name: "10L Hydration Vest", 
@@ -49,7 +49,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Long Runs / Ultra",
     price: "€40-60",
     link: "https://www.amazon.it/s?k=zaino+idratazione+10l",
-    image: "https://m.media-amazon.com/images/I/71nS4v5f-TL._AC_SL1500_.jpg"
+    image: "/images/products/amazon-azarxis-10l.webp"
   },
   { 
     name: "LED Chest Light", 
@@ -61,7 +61,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Night Running",
     price: "€25-40",
     link: "https://www.amazon.it/s?k=luce+led+pettorale",
-    image: "https://m.media-amazon.com/images/I/71Q6N+pQBOL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-luce-running.webp",
     emphasized: true
   },
   { 
@@ -74,7 +74,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Daily / Road",
     price: "€15-20",
     link: "https://www.amazon.it/dp/B07F3M6VYF",
-    image: "https://m.media-amazon.com/images/I/71S-d5YV+fL._AC_SL1500_.jpg"
+    image: "/images/products/amazon-marsupio-fitgriff.webp"
   },
   { 
     name: "Danish Endurance Socks", 
@@ -86,6 +86,6 @@ export const gearSpecs: GearSpec[] = [
     usage: "All Terrain",
     price: "€15-25 (3pk)",
     link: "https://www.amazon.it/dp/B07TX8G5H6",
-    image: "https://m.media-amazon.com/images/I/71k+I+n-t1L._AC_SL1500_.jpg"
+    image: "/images/products/amazon-calze-danish.webp"
   },
 ];

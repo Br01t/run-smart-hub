@@ -16,7 +16,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Training / Recovery",
     price: "€15-25",
     link: "https://www.myprotein.com/sports-nutrition/electrolyte-powder/10529707.html",
-    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/10529707-1044810793132646.jpg",
+    image: "/images/products/hydration-electrolyte-powder.webp",
     emphasized: true
   },
   { 
@@ -34,7 +34,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Hydration Only / Recovery",
     price: "€25-35",
     link: "https://www.myprotein.com/sports-nutrition/clear-whey-electrolyte/12553188.html",
-    image: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12553188-1214876615856983.jpg"
+    image: "/images/products/myprotein-clear-whey.webp"
   },
   { 
     name: "HydrateTech", 
@@ -51,7 +51,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Advanced Training / Race",
     price: "€30-40",
     link: "https://www.onnit.com/hydrate/",
-    image: "https://onnit.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F7vskf9psup2w%2F4W1b86V6Z6mS2W6E6K6u6o%2Fe0f8d1c7e0c1f1d1e4c1f1d1e4%2FOnnit_Hydrate_Lemon.png&w=1200&q=75"
+    image: "/images/products/hydration-onnit-hydrate.webp"
   },
   { 
     name: "Liquid I.V.", 
@@ -67,7 +67,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Those seeking a rapid energy and hydration boost",
     usage: "Race / Intense Effort",
     price: "€25-45",
-    image: "https://m.media-amazon.com/images/I/71R2W6u3ZLL._AC_SL1500_.jpg",
+    image: "/images/products/hydration-liquid-iv.webp",
     emphasized: true
   },
   { 
@@ -84,7 +84,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "On-the-go convenience (bottles / trail)",
     usage: "Race / Trail / Daily",
     price: "€7-12",
-    image: "https://m.media-amazon.com/images/I/71h6l8H2aBL._AC_SL1500_.jpg"
+    image: "/images/products/hydration-nuun.webp"
   },
   { 
     name: "LMNT Electrolyte", 
@@ -100,7 +100,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Endurance athletes prone to cramping",
     usage: "Race / Ultra / Extreme Heat",
     price: "€45-60 (30pk)",
-    image: "https://m.media-amazon.com/images/I/71NnJ2X-7FL._AC_SL1500_.jpg",
+    image: "/images/products/hydration-lmnt.webp",
     emphasized: true
   },
 ];

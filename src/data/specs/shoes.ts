@@ -11,7 +11,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Neutral",
     bestFor: "Beginners running < 15km/week",
     price: "€60-70",
-    image: "https://m.media-amazon.com/images/I/61MvUfWfD6L._AC_SL1500_.jpg",
+    image: "/images/products/amazon-nike-revolution.webp",
     link: "https://www.amazon.com/s?k=Nike+Revolution+6",
     emphasized: true
   },
@@ -25,7 +25,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Neutral",
     bestFor: "Those seeking reactivity and speed at a great price",
     price: "€70-90",
-    image: "https://m.media-amazon.com/images/I/61UfRE67GGL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-adidas-duramo-speed.webp",
     link: "https://www.amazon.com/Adidas-Duramo/s?k=Adidas+Duramo"
   },
   { 
@@ -38,7 +38,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Stable",
     bestFor: "Runners looking for extra stability and protection",
     price: "€65-80",
-    image: "https://m.media-amazon.com/images/I/71y0+vjHACL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-asics-gel-contend.webp",
     link: "https://www.amazon.com/s?k=ASICS+Gel-Contend+8"
   },
   { 
@@ -51,7 +51,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Neutral",
     bestFor: "Versatile runners (running + gym)",
     price: "€70-85",
-    image: "https://m.media-amazon.com/images/I/71NnI8T117L._AC_SL1500_.jpg",
+    image: "/images/products/amazon-nb-fresh-foam-arishi.webp",
     link: "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+Arishi+v4"
   },
   { 
@@ -64,7 +64,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Neutral",
     bestFor: "Tempo runs and speed sessions",
     price: "€80-100",
-    image: "https://m.media-amazon.com/images/I/71UqE-pL2vL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-puma-electrify.webp",
     link: "https://www.amazon.com/s?k=Puma+Electrify+Nitro"
   },
   { 
@@ -77,7 +77,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Stable",
     bestFor: "Technical trails and uneven terrain",
     price: "€130-150",
-    image: "https://m.media-amazon.com/images/I/71Y-o6W4+JL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-brooks-cascadia.webp",
     link: "https://www.amazon.com/s?k=Brooks+Cascadia"
   },
   { 
@@ -90,7 +90,7 @@ export const shoeSpecs: ShoeSpec[] = [
     support: "Stable",
     bestFor: "Maximum grip on mud and soft terrain",
     price: "€140-160",
-    image: "https://m.media-amazon.com/images/I/71u9SreZ0LL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-salomon-speedcross.webp",
     link: "https://www.amazon.com/s?k=Salomon+Speedcross",
     emphasized: true
   },

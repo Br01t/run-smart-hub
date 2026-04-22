@@ -15,7 +15,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "Pro Recovery",
     price: "€70-100",
     link: "https://www.amazon.it/RENPHO-Pistola-Massaggio-Muscolare-Massaggiatore/dp/B0868K7HLH",
-    image: "https://m.media-amazon.com/images/I/71D0Y7ZfMML._AC_SL1500_.jpg",
+    image: "/images/products/amazon-massage-gun-mini.webp",
     emphasized: true
   },
   { 
@@ -32,7 +32,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "All Runners",
     price: "€35-45",
     link: "https://www.amazon.it/Trigger-Point-Performance-Rullo-Massaggio/dp/B0040EGNIU",
-    image: "https://m.media-amazon.com/images/I/71YyP4D-a-L._AC_SL1500_.jpg",
+    image: "/images/products/amazon-triggerpoint-grid.webp",
     emphasized: true
   },
   { 
@@ -49,7 +49,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "Recovery / Travel",
     price: "€10-15",
     link: "https://www.amazon.it/Physix-Gear-Sport-Compressione-Graduata/dp/B01J4ME6L4",
-    image: "https://m.media-amazon.com/images/I/71nS4v5f-TL._AC_SL1500_.jpg"
+    image: "/images/products/amazon-physix-gear-socks.webp"
   },
   { 
     name: "Mini Loop Bands", 
@@ -65,7 +65,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "Injury Prevention",
     price: "€10-15",
     link: "https://www.amazon.it/s?k=fasce+elastiche+loop+bands",
-    image: "https://m.media-amazon.com/images/I/71O6R5rW+vL._AC_SL1500_.jpg"
+    image: "/images/products/recovery-loop-bands.webp"
   },
   { 
     name: "Massage Ball", 
@@ -81,7 +81,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "Specific Maintenance",
     price: "€5-10",
     link: "https://www.amazon.it/Palla-Massaggio-Lacrosse-Trigger-Point/dp/B07V6Q8ZMN",
-    image: "https://m.media-amazon.com/images/I/71O6R5rW+vL._AC_SL1500_.jpg"
+    image: "/images/products/amazon-lacrosse-ball.webp"
   },
   { 
     name: "Reusable Gel Pack", 
@@ -97,6 +97,6 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "First Aid / Therapy",
     price: "€10-15",
     link: "https://www.amazon.it/s?k=gel+pack+reusable",
-    image: "https://m.media-amazon.com/images/I/71oX6j7S6SL._AC_SL1500_.jpg"
+    image: "/images/products/recovery-gel-pack.webp"
   }
 ];

@@ -12,7 +12,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Recovery",
     price: "€30-45",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/",
-    image: "https://static.thcdn.com/productimg/original/10530943-2175262135686325.jpg",
+    image: "/images/products/myprotein-impact-whey.webp",
     emphasized: true
   },
   { 
@@ -26,7 +26,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Recovery",
     price: "€40-60",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/",
-    image: "https://static.thcdn.com/productimg/original/10530911-8525307235362378.jpg"
+    image: "/images/products/myprotein-whey-isolate.webp"
   },
   { 
     name: "Impact EAA", 
@@ -39,7 +39,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Recovery",
     price: "€25-35",
     link: "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/",
-    image: "https://static.thcdn.com/productimg/original/15952589-9415323049696760.png"
+    image: "/images/products/myprotein-eaa.webp"
   },
   { 
     name: "100% Maltodextrin Carbs", 
@@ -52,7 +52,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Endurance",
     price: "€15-20",
     link: "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/",
-    image: "https://static.thcdn.com/productimg/original/10530114-1135180485543170.jpg"
+    image: "/images/products/myprotein-maltodextrin.webp"
   },
   { 
     name: "Oat Protein Flapjack", 
@@ -65,7 +65,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Recovery",
     price: "€20-25 (12pk)",
     link: "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/",
-    image: "https://static.thcdn.com/productimg/original/12948773-4584910350702434.jpg"
+    image: "/images/products/myprotein-oat-flapjack.webp"
   },
   { 
     name: "Impact Creatine", 
@@ -78,7 +78,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Power / Strength",
     price: "€20-30",
     link: "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/",
-    image: "https://static.thcdn.com/productimg/original/10530050-5555271174703488.jpg"
+    image: "/images/products/myprotein-creatine.webp"
   },
   { 
     name: "Beta Alanine", 
@@ -91,7 +91,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Intensity",
     price: "€15-25",
     link: "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/",
-    image: "https://static.thcdn.com/productimg/original/10529809-1144869503463372.jpg"
+    image: "/images/products/myprotein-beta-alanine.webp"
   },
   { 
     name: "Alpha BRAIN® (90ct)", 
@@ -104,7 +104,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Focus",
     price: "€75-80",
     link: "https://www.onnit.com/products/alpha-brain-90-ct",
-    image: "https://www.onnit.com/cdn/shop/files/media_0d26030c-9e9b-40bd-82ae-df059b2ad547.png?v=1773124741&width=400"
+    image: "/images/products/onnit-alpha-brain.webp"
   },
   { 
     name: "Alpha BRAIN® (60ct)", 
@@ -117,7 +117,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Daily Focus",
     price: "€55-60",
     link: "https://www.onnit.com/products/alpha-brain-60-ct",
-    image: "https://www.onnit.com/cdn/shop/files/media_dc157b53-6764-4216-8b34-c3af69482ff8.png?v=1774923661&width=400"
+    image: "/images/products/onnit-alpha-brain.webp"
   },
   { 
     name: "Alpha BRAIN Black Label", 
@@ -130,6 +130,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Elite Focus",
     price: "€95-100",
     link: "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
+    image: "/images/products/onnit-alpha-brain-black-label.webp",
     emphasized: true
   },
   { 
@@ -142,7 +143,8 @@ export const supplementSpecs: SupplementSpec[] = [
     effect: "Respiratory support",
     recommendedFor: "Endurance",
     price: "€50-55",
-    link: "https://www.onnit.com/products/shroom-tech-sport-84-ct"
+    link: "https://www.onnit.com/products/shroom-tech-sport-84-ct",
+    image: "/images/products/onnit-shroom-tech-sport.webp"
   },
   { 
     name: "Total Human", 
@@ -154,6 +156,7 @@ export const supplementSpecs: SupplementSpec[] = [
     effect: "Systemic recovery",
     recommendedFor: "All Sports",
     price: "€130-140",
-    link: "https://www.onnit.com/products/total-human-30-day-supply"
+    link: "https://www.onnit.com/products/total-human-30-day-supply",
+    image: "/images/products/onnit-total-human-pack.webp"
   },
 ];

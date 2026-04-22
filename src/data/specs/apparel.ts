@@ -15,7 +15,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Daily Training",
     price: "€20-30",
     link: "https://www.amazon.it/Under-Armour-Tech-T-Shirt-Uomo/dp/B0D17ZTY7M",
-    image: "https://m.media-amazon.com/images/I/51r+T+b-t1L._AC_SL1500_.jpg",
+    image: "/images/products/amazon-ua-tech-shirt.webp",
     emphasized: true
   },
   { 
@@ -32,7 +32,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Intensity / Performance",
     price: "€25-35",
     link: "https://www.amazon.it/Nike-Maglietta-Dri-Fit-Horizon-HF6142-370/dp/B0DN1PM19Z",
-    image: "https://m.media-amazon.com/images/I/61S-d5YV+fL._AC_SL1500_.jpg",
+    image: "/images/products/amazon-nike-dri-fit.webp",
     emphasized: true
   },
   { 
@@ -49,7 +49,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Road / Long Runs",
     price: "€25-40",
     link: "https://www.amazon.it/adidas-Camo-SHO-Pantaloncini-Uomo/dp/B096KLC2SH",
-    image: "https://m.media-amazon.com/images/I/61S-d5YV+fL._AC_SL1500_.jpg"
+    image: "/images/products/amazon-adidas-shorts.webp"
   },
   { 
     name: "R3 Running Jacket", 
@@ -65,7 +65,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Trail / Winter",
     price: "€150-220",
     link: "https://www.amazon.it/GORE-WEAR-Giacca-Running-Cappuccio/dp/B07G4M6VYF",
-    image: "https://m.media-amazon.com/images/I/71S-d5YV+fL._AC_SL1500_.jpg",
+    image: "/images/products/apparel-gore-wear-r3.webp",
     emphasized: true
   },
   { 
@@ -82,7 +82,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Recovery / Support",
     price: "€30-50",
     link: "https://www.amazon.it/Under-Armour-HeatGear-Armour-Leggings/dp/B08726P4C8",
-    image: "https://m.media-amazon.com/images/I/51r+T+b-t1L._AC_SL1500_.jpg"
+    image: "/images/products/apparel-leggings.webp"
   },
   { 
     name: "Original Headwear", 
@@ -98,6 +98,6 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "All Conditions",
     price: "€15-20",
     link: "https://www.amazon.it/BUFF-Original-Scaldacollo-Multifunzionale-Unisex/dp/B07P6Z1Z6L",
-    image: "https://m.media-amazon.com/images/I/71k+I+n-t1L._AC_SL1500_.jpg"
+    image: "/images/products/apparel-headwear.webp"
   }
 ];
