@@ -65,7 +65,7 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "Injury Prevention",
     price: "€10-15",
     link: "https://www.amazon.com/s?k=mini+loop+resistance+bands+set",
-    image: "/images/products/recovery-loop-bands.webp"
+    image: "/images/products/amazon-loop-bands.webp"
   },
   { 
     name: "Massage Ball", 
@@ -97,6 +97,6 @@ export const recoverySpecs: RecoverySpec[] = [
     recommendedFor: "First Aid / Therapy",
     price: "€10-15",
     link: "https://www.amazon.com/s?k=reusable+gel+ice+pack+hot+cold",
-    image: "/images/products/recovery-gel-pack.webp"
+    image: "/images/products/amazon-gel-pack.webp"
   }
 ];

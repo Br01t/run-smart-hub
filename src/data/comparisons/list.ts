@@ -26,7 +26,7 @@ export const comparisonsList: ComparisonData[] = [
   {
     "sport": "running",
     "objective": "hydration",
-    "category": "accessories",
+    "category": "hydration",
     "intro": "Proper hydration is essential for every runner. Discover the best accessories to stay hydrated during your runs.",
     "tags": ["hydration", "electrolytes", "accessories"],
     "faq": [
@@ -81,7 +81,7 @@ export const comparisonsList: ComparisonData[] = [
   {
     "sport": "trail",
     "objective": "hydration",
-    "category": "accessories",
+    "category": "hydration",
     "intro": "Trail runs often take you far from water sources. The right hydration gear is critical for safety and performance on the trails.",
     "tags": ["hydration", "electrolytes", "accessories"],
     "faq": [
@@ -125,12 +125,23 @@ export const comparisonsList: ComparisonData[] = [
   {
     "sport": "running",
     "objective": "performance",
-    "category": "accessories",
+    "category": "gear",
     "intro": "From GPS watches to heart rate monitors, the right accessories can transform your training data and help you reach new PRs.",
     "tags": ["accessories", "running"],
     "faq": [
       { "q": "Do I need a running watch?", "a": "A GPS watch helps track pace, distance and heart rate zones. It's valuable for structured training but not essential for casual runners." },
       { "q": "What running accessories improve performance?", "a": "GPS watches for pacing, heart rate straps for zone training, and compression socks for reduced fatigue on long runs." }
+    ]
+  },
+  {
+    "sport": "running",
+    "objective": "performance",
+    "category": "apparel",
+    "intro": "Technical apparel is your first line of defense against the elements. Discover the best fabrics for thermoregulation and comfort.",
+    "tags": ["abbigliamento", "running", "top-apparel-2026"],
+    "faq": [
+      { "q": "Why avoid cotton for running?", "a": "Cotton absorbs moisture and stays wet, leading to chafing, blisters, and hypothermia in cold conditions." },
+      { "q": "What are the benefits of compression apparel?", "a": "Compression can reduce muscle oscillation and improve proprioception, though its recovery benefits are more scientifically significant." }
     ]
   }
 ];

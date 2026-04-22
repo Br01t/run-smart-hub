@@ -11,6 +11,7 @@ interface TableFilterBarProps {
   activeFiltersCount: number;
   onClearFilters: () => void;
   children: React.ReactNode;
+  title?: string;
   accentColor?: string; // e.g. "hsl(25, 95%, 50%)"
 }
 
@@ -22,6 +23,7 @@ export const TableFilterBar = ({
   activeFiltersCount,
   onClearFilters,
   children,
+  title = "Technical Comparison",
   accentColor = "hsl(var(--primary))"
 }: TableFilterBarProps) => {
   return (
@@ -40,7 +42,7 @@ export const TableFilterBar = ({
           >
             <SlidersHorizontal className="h-4 w-4" />
           </div>
-          Technical Comparison
+          {title}
         </h3>
         
         <Button 

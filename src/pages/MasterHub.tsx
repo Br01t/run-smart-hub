@@ -8,7 +8,7 @@ import {
   Wrench,
 } from "lucide-react";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 // Refactored Components
@@ -16,7 +16,7 @@ import CategorySection from "@/components/hub/CategorySection";
 import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 import { categoryGuides } from "@/data/categoryGuides";
 
-const categories = ["shoes", "supplements", "hydration", "recovery", "apparel", "gear"];
+const categories = ["shoes", "gear", "supplements", "hydration", "recovery", "apparel"];
 
 const MasterHub = () => {
   const [activeCategory, setActiveCategory] = useState("shoes");
@@ -51,6 +51,22 @@ const MasterHub = () => {
       const id = hash.replace("#", "");
       if (categories.includes(id)) {
         setActiveCategory(id);
+        
+        // Wait for next tick to ensure sections are rendered
+        const scrollTask = () => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        };
+
+        // Retry once if el not found immediately
+        const el = document.getElementById(id);
+        if (el) {
+          setTimeout(scrollTask, 100);
+        } else {
+          setTimeout(scrollTask, 500);
+        }
       }
     }
   }, [hash]);
@@ -70,11 +86,7 @@ const MasterHub = () => {
 
   // Filter hubs and comparisons based on category only and deduplicate by objective
   const getComparisonsForCategory = (category: string) => {
-    const matched = (comparisonsData as any[]).filter(c => {
-      const normalizedCat = category === "hydration" ? "accessories" : category;
-      const isRedundant = (c.objective === "hydration" || c.objective === "performance") && normalizedCat === "accessories";
-      return c.category === normalizedCat && !isRedundant;
-    });
+    const matched = (comparisonsData as any[]).filter(c => c.category === category);
     
     const uniqueObjectives = new Map();
     matched.forEach(item => {
@@ -95,57 +107,126 @@ const MasterHub = () => {
     gear: ["gear", "watch", "accessories"]
   };
 
-  const SidebarContent = () => (
-    <>
-      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-        <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-          <Wrench className="h-3.5 w-3.5 text-primary" /> Analysis Tools
-        </h4>
-        <div className="space-y-3">
-          <Link to="/tools/calories" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
-            <span>Calories Calculator</span>
-            <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <Link to="/tools/hydration" className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
-            <span>Hydration Needs</span>
-            <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-        </div>
-      </div>
+  const SidebarContent = ({ category }: { category: string }) => {
+    const categoryResources = {
+      shoes: {
+        tools: [
+          { name: "Best Shoes Finder", path: "/tools/shoes" },
+          { name: "BMI Calculator", path: "/tools/bmi" }
+        ],
+        guides: [
+          { name: "Finding Your Perfect Fit", path: "/guides/choosing-running-shoes", desc: "The biomechanics of running footwear." },
+          { name: "Running Form Guide", path: "/guides/running-form", desc: "Optimize your efficiency and reduce impact." }
+        ]
+      },
+      supplements: {
+        tools: [
+          { name: "Protein Calculator", path: "/tools/protein" },
+          { name: "Electrolyte Needs", path: "/tools/electrolytes" }
+        ],
+        guides: [
+          { name: "Mastering Fueling", path: "/guides/supplements-for-runners", desc: "Long-form deep dive on endurance nutrition." },
+          { name: "Running Nutrition 101", path: "/guides/running-nutrition", desc: "What to eat before, during & after." }
+        ]
+      },
+      hydration: {
+        tools: [
+          { name: "Hydration Needs", path: "/tools/hydration" },
+          { name: "Electrolyte Needs", path: "/tools/electrolytes" }
+        ],
+        guides: [
+          { name: "Fueling & Electrolytes", path: "/guides/supplements-for-runners", desc: "Hydration is half the battle." },
+          { name: "Marathon Nutrition", path: "/guides/marathon-training", desc: "Complete hydration strategies for 42K." }
+        ]
+      },
+      recovery: {
+        tools: [
+          { name: "Protein Needs", path: "/tools/protein" },
+          { name: "Hydration Needs", path: "/tools/hydration" }
+        ],
+        guides: [
+          { name: "Muscle Recovery Guide", path: "/guides/muscle-recovery", desc: "Accelerate repair and reduce soreness." },
+          { name: "Injury Prevention", path: "/guides/injury-prevention", desc: "Science-backed techniques for longevity." }
+        ]
+      },
+      apparel: {
+        tools: [
+          { name: "Hydration Needs", path: "/tools/hydration" },
+          { name: "Calories Burned", path: "/tools/calories" }
+        ],
+        guides: [
+          { name: "Winter Running Guide", path: "/guides/winter-running", desc: "Mastering the technical layering system." },
+          { name: "Running Form Essentials", path: "/guides/running-form", desc: "How fabric weight affects your cadence." }
+        ]
+      },
+      gear: {
+        tools: [
+          { name: "Calories Burned", path: "/tools/calories" },
+          { name: "BMI Calculator", path: "/tools/bmi" }
+        ],
+        guides: [
+          { name: "Best Running Watches", path: "/guides/best-running-watches", desc: "2026 technical analysis of GPS gear." },
+          { name: "Heart Rate Zones", path: "/guides/running-heart-rate-zones", desc: "Train smarter with technical data." }
+        ]
+      }
+    };
 
-      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-        <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-          <BookOpen className="h-3.5 w-3.5 text-accent" /> Expert Guides
-        </h4>
-        <div className="space-y-4">
-          <Link to="/guides/supplements-for-runners" className="block group">
-            <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Mastering Fueling & Electrolytes</p>
-            <p className="mt-1 text-[10px] text-muted-foreground">Long-form deep dive on endurance nutrition.</p>
-          </Link>
-          <Link to="/guides/choosing-running-shoes" className="block group">
-            <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">Finding Your Perfect Fit</p>
-            <p className="mt-1 text-[10px] text-muted-foreground">The biomechanics of running footwear.</p>
+    const res = categoryResources[category as keyof typeof categoryResources] || categoryResources.shoes;
+
+    return (
+      <>
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
+            <Wrench className="h-3.5 w-3.5 text-primary" /> Analysis Tools
+          </h4>
+          <div className="space-y-3">
+            {res.tools.map(tool => (
+              <Link key={tool.path} to={tool.path} className="group flex items-center justify-between text-sm text-muted-foreground hover:text-primary">
+                <span>{tool.name}</span>
+                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            ))}
+            <Link to="/tools" className="mt-4 flex items-center gap-1.5 pt-3 border-t border-border text-[10px] font-bold uppercase tracking-wider text-primary hover:underline">
+              View all tools <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
+            <BookOpen className="h-3.5 w-3.5 text-accent" /> Expert Guides
+          </h4>
+          <div className="space-y-4">
+            {res.guides.map(guide => (
+              <Link key={guide.path} to={guide.path} className="block group">
+                <p className="text-xs font-bold text-card-foreground group-hover:text-primary leading-tight">{guide.name}</p>
+                <p className="mt-1 text-[10px] text-muted-foreground">{guide.desc}</p>
+              </Link>
+            ))}
+            <Link to="/guides" className="mt-2 flex items-center gap-1.5 pt-3 border-t border-border text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
+              View all guides <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+        
+        <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-lg">
+          <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
+          <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
+            Take our 2-minute quiz to get personalized recommendations.
+          </p>
+          <Link to="/quiz" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-background px-4 py-2.5 text-xs font-bold text-foreground transition-opacity hover:opacity-90">
+            Start Quiz <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
-      </div>
-      
-      <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-lg">
-        <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
-        <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
-          Take our 2-minute quiz to get personalized recommendations.
-        </p>
-        <Link to="/quiz" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-background px-4 py-2.5 text-xs font-bold text-foreground transition-opacity hover:opacity-90">
-          Start Quiz <ArrowRight className="h-3.5 w-3.5" />
-        </Link>
-      </div>
-    </>
-  );
+      </>
+    );
+  };
 
   return (
     <Layout>
-      <SEOHead 
+      <SEO 
         title="Best Running Gear Comparisons & Product Hub 2026" 
-        description="The ultimate dashboard for runners. Science-backed technical guides, side-by-side product comparisons, and expert recommendations for shoes, supplements, and recovery."
+        description="Side-by-side technical comparisons of running shoes, supplements, and gear based on scientific principles and biomechanical data."
         path="/hub"
       />
 
@@ -205,7 +286,7 @@ const MasterHub = () => {
                 accentHsl={accentData}
                 matchedComparisons={matchedComparisons}
                 categoryProductTags={categoryProductTags}
-                sidebar={<SidebarContent />}
+                sidebar={<SidebarContent category={catKey} />}
               />
             );
           })}

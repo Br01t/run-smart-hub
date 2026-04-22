@@ -8,7 +8,7 @@ const GearHubLinks = () => {
       <div className="container mx-auto px-4 py-16 sm:py-20">
         <div className="mb-8 flex items-end justify-between">
           <div className="editorial-line">
-            <h2 className="font-display text-display-md font-bold text-foreground">Gear Hubs</h2>
+            <h2 className="font-display text-display-md font-bold text-foreground">Hubs</h2>
             <p className="mt-1 text-sm text-muted-foreground">Curated picks across every category.</p>
           </div>
           <Link to="/hub" className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex">

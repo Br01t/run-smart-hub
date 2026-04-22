@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Clock, BookOpen, Search, X, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 import guidesHeroImg from "@/assets/guides-hero.webp";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 
@@ -31,10 +31,26 @@ const GuidesHub = () => {
 
   return (
     <Layout>
-      <SEOHead
+      <SEO
         title="Best Runner's Guides 2026"
         description="Practical, science-backed guides on running shoes, supplements and muscle recovery to improve your performance."
         path="/guides"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Expert Runner's Guides",
+          "description": "Comprehensive knowledge base for runners covering nutrition, gear, recovery and biomechanics.",
+          "url": "https://www.runners-hub.org/guides",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": guides.map((guide, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://www.runners-hub.org/guides/${guide.slug}`,
+              "name": guide.title
+            }))
+          }
+        }}
       />
 
       {/* Hero */}
@@ -133,7 +149,7 @@ const GuidesHub = () => {
               </div>
             )}
 
-            {!isFiltered && <ZoneRunBanner variant="inline" />}
+
 
             {/* Rest — compact rows */}
             {rest.length > 0 && (
@@ -160,6 +176,12 @@ const GuidesHub = () => {
           </div>
           <Link to="/hub" className="shrink-0 text-sm font-bold text-primary hover:underline">View →</Link>
         </div>
+
+        {!isFiltered && (
+          <div className="mt-10">
+            <ZoneRunBanner variant="inline" />
+          </div>
+        )}
       </section>
     </Layout>
   );

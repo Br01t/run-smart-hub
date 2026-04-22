@@ -16,7 +16,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Training / Recovery",
     price: "€15-25",
     link: "https://www.myprotein.com/p/sports-nutrition/the-eaa/13457131/",
-    image: "/images/products/hydration-electrolyte-powder.webp",
+    image: "/images/products/myprotein-eaa.webp",
     emphasized: true
   },
   { 
@@ -34,7 +34,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Race / Intense Effort",
     price: "€25-45",
     link: "https://www.amazon.com/s?k=Liquid+IV+hydration+multiplier",
-    image: "/images/products/hydration-liquid-iv.webp",
+    image: "/images/products/amazon-liquid-iv.webp",
     emphasized: true
   },
   { 
@@ -52,7 +52,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Race / Trail / Daily",
     price: "€7-12",
     link: "https://www.amazon.com/s?k=Nuun+Sport+electrolyte+tablets",
-    image: "/images/products/hydration-nuun.webp"
+    image: "/images/products/amazon-nuun-tablets.webp"
   },
   { 
     name: "LMNT Electrolyte", 
@@ -69,7 +69,7 @@ export const hydrationSpecs: GearSpec[] = [
     usage: "Race / Ultra / Extreme Heat",
     price: "€45-60 (30pk)",
     link: "https://www.amazon.com/s?k=LMNT+electrolyte+drink+mix",
-    image: "/images/products/hydration-lmnt.webp",
+    image: "/images/products/amazon-lmnt-electrolytes.webp",
     emphasized: true
   },
 ];

@@ -3,6 +3,8 @@ import { Zap } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
+import SEO from "@/components/SEO";
+import GuidesReferral from "@/components/GuidesReferral";
 
 const ElectrolyteCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -25,9 +27,22 @@ const ElectrolyteCalculator = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Runner's Electrolyte Replenishment Calculator" 
+        description="Calculate the precise amount of sodium, potassium, and magnesium you need to replenish based on sweat rate, intensity, and duration."
+        path="/tools/electrolytes"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Runner's Electrolyte Calculator",
+          "description": "Evidence-based mineral replenishment estimator for endurance athletes.",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All"
+        }}
+      />
       <CalculatorShell title="Electrolyte Calculator" description="Calculate sodium, potassium and magnesium to replenish during your run." icon={Zap}>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-          {/* Inputs Column */}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
+          {/* Left Column: Inputs & Science */}
           <div className="flex-1 space-y-8">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
               <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
@@ -58,20 +73,26 @@ const ElectrolyteCalculator = () => {
               </button>
             </div>
 
-            {/* Scientific disclaimer */}
-            <div className="rounded-xl border border-border bg-secondary/20 p-4">
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                <strong>Note:</strong> Electrolyte loss varies significantly based on sweat rate and individual physiology. Use these as start points.
+            {/* Science Section */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Electrolytes are electric signals. Sodium is the primary driver of water absorption in the small intestine; without enough sodium, you won't absorb the water you drink, leading to "slosh stomach" and decreased performance.
               </p>
             </div>
           </div>
 
-          {/* Results/Recommendations Column */}
-          <div className="lg:w-[450px] space-y-8">
+          {/* Right Column: Results & Practice */}
+          <div className="space-y-8">
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
-                  <h3 className="mb-6 font-display text-xl font-bold text-foreground">Ammount to Replenish</h3>
+                  <h3 className="mb-6 font-display text-xl font-bold text-foreground">Amount to Replenish</h3>
                   <div className="grid gap-3">
                     <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
                       <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sodium (Na+)</span>
@@ -86,22 +107,16 @@ const ElectrolyteCalculator = () => {
                       <p className="font-display text-2xl font-bold text-primary">{result.magnesium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
                     </div>
                   </div>
-                </div>
 
-                {/* Science Section */}
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="mb-4 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                  {/* Note Section moved inside results */}
+                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4">
+                    <p className="text-xs leading-relaxed text-muted-foreground italic">
+                      <strong>Note:</strong> Electrolyte loss varies significantly based on sweat rate and individual physiology. Use these as start points.
+                    </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Electrolytes are electric signals. Sodium is the primary driver of water absorption in the small intestine; without enough sodium, you won't absorb the water you drink, leading to "slosh stomach" and decreased performance.
-                  </p>
                 </div>
 
-                {/* Practice Section */}
+                {/* Practice Section moved after results */}
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500/10 text-teal-500">
@@ -120,13 +135,6 @@ const ElectrolyteCalculator = () => {
                     </li>
                   </ul>
                 </div>
-
-                <HubReferral 
-                  category="supplements"
-                  href="/comparison/supplements-for-running-performance"
-                  title="Best Electrolyte Solutions"
-                  description="Compare the technical specifications, salt ratios, and bioavailability of the market's leading electrolyte brands."
-                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -138,6 +146,21 @@ const ElectrolyteCalculator = () => {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Referrals Section consolidated at bottom */}
+        <div className="mt-16 space-y-12 border-t border-border pt-16">
+          <GuidesReferral guides={[
+            { title: "Fueling & Electrolytes", path: "/guides/supplements-for-runners", desc: "The delicate balance of mineral replenishment for peak athletic output." },
+            { title: "Marathon Nutrition", path: "/guides/marathon-training", desc: "Avoiding the wall through strategic salt and fluid management." }
+          ]} />
+
+          <HubReferral 
+            category="hydration"
+            href="/hub#hydration"
+            title="Best Electrolyte Solutions"
+            description="Compare the technical specifications, salt ratios, and bioavailability of the market's leading electrolyte brands."
+          />
         </div>
       </CalculatorShell>
     </Layout>

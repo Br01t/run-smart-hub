@@ -2,8 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 
 // Refactored Data & Components
 import { profileQuestions as questions } from "@/data/questions/profile";
@@ -39,12 +38,12 @@ const ProfileQuiz = () => {
 
   return (
     <Layout>
-      <SEOHead
+      <SEO
         title="Runner Profile Quiz — Personalized Training & Gear Plan"
         description="Answer 5 questions to discover your runner archetype and get personalized recommendations for training, nutrition, supplements and gear."
         path="/quiz"
+        schema={jsonLd}
       />
-      <JsonLd data={jsonLd} />
 
       {!done && (
         <div className="min-h-[85vh] flex flex-col bg-gradient-to-b from-background via-background to-secondary/20">

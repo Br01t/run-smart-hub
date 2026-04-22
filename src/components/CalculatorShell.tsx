@@ -70,10 +70,6 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
       </div>
 
       {children}
-
-      <div className="mt-10">
-        <ZoneRunBanner variant="compact" />
-      </div>
     </div>
   );
 };

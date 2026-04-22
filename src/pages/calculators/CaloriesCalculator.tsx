@@ -3,6 +3,8 @@ import { Flame } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
+import SEO from "@/components/SEO";
+import GuidesReferral from "@/components/GuidesReferral";
 
 const CaloriesCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -20,9 +22,22 @@ const CaloriesCalculator = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Running Calories Burned Calculator" 
+        description="Estimate the total calories burned during your run based on distance, weight, and average pace using scientific MET coefficients."
+        path="/tools/calories"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Running Calories Burned Calculator",
+          "description": "Scientific calorie expenditure estimator for endurance athletes.",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All"
+        }}
+      />
       <CalculatorShell title="Calories Burned Calculator" description="Estimate calories burned during your run." icon={Flame}>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-          {/* Inputs Column */}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
+          {/* Left Column: Inputs & Science */}
           <div className="flex-1 space-y-8">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
               <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
@@ -44,16 +59,22 @@ const CaloriesCalculator = () => {
               </button>
             </div>
 
-            {/* Scientific disclaimer */}
-            <div className="rounded-xl border border-border bg-secondary/20 p-4">
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                <strong>Note:</strong> Estimates use the MET coefficient (~1.036 kcal/kg/km). Real burn depends on pace, efficiency, and terrain.
+            {/* Science Section */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.014 9 16.014 9s1.014-4 2.014-4c0 0-1 4-1 6 0 2 1.5 5 2.643 7.657z" /></svg>
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Running caloric burn is primarily determined by mass and distance (Work = Force x Distance). The MET (Metabolic Equivalent of Task) for running (~11-14) is one of the highest in human movement, requiring significant oxygen consumption and glycogen turnover.
               </p>
             </div>
           </div>
 
-          {/* Results Column */}
-          <div className="lg:w-[450px] space-y-8">
+          {/* Right Column: Results & Practice */}
+          <div className="space-y-8">
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
@@ -68,22 +89,16 @@ const CaloriesCalculator = () => {
                       <p className="font-display text-3xl font-bold text-accent">{result.fatGrams} <span className="text-xs font-bold uppercase text-muted-foreground/60">g</span></p>
                     </div>
                   </div>
-                </div>
 
-                {/* Science Section */}
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="mb-4 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.014 9 16.014 9s1.014-4 2.014-4c0 0-1 4-1 6 0 2 1.5 5 2.643 7.657z" /></svg>
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                  {/* Note Section moved inside results */}
+                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4">
+                    <p className="text-xs leading-relaxed text-muted-foreground italic">
+                      <strong>Note:</strong> Estimates use the MET coefficient (~1.036 kcal/kg/km). Real burn depends on pace, efficiency, and terrain.
+                    </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Running caloric burn is primarily determined by mass and distance (Work = Force x Distance). The MET (Metabolic Equivalent of Task) for running (~11-14) is one of the highest in human movement, requiring significant oxygen consumption and glycogen turnover.
-                  </p>
                 </div>
 
-                {/* Practice Section */}
+                {/* Practice Section moved after results */}
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
@@ -102,13 +117,6 @@ const CaloriesCalculator = () => {
                     </li>
                   </ul>
                 </div>
-
-                <HubReferral 
-                  category="supplements"
-                  href="/comparison/supplements-for-running-performance"
-                  title="Best Performance Fuel Hub"
-                  description="View technical specs of energy gels, chews, and carb mixes to find the perfect fuel for your next long effort."
-                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -120,6 +128,21 @@ const CaloriesCalculator = () => {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Referrals Section consolidated at bottom */}
+        <div className="mt-16 space-y-12 border-t border-border pt-16">
+          <GuidesReferral guides={[
+            { title: "Running Nutrition 101", path: "/guides/running-nutrition", desc: "A comprehensive guide on what to eat before, during, and after your efforts." },
+            { title: "Mastering Fueling", path: "/guides/supplements-for-runners", desc: "Scientific deep dive on optimizing glycogen stores for long distance." }
+          ]} />
+
+          <HubReferral 
+            category="supplements"
+            href="/hub#supplements"
+            title="Best Performance Fuel Hub"
+            description="View technical specs of energy gels, chews, and carb mixes to find the perfect fuel for your next long effort."
+          />
         </div>
       </CalculatorShell>
     </Layout>

@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 
 const TermsOfService = () => {
   const schema = {
@@ -13,12 +12,12 @@ const TermsOfService = () => {
 
   return (
     <Layout>
-      <SEOHead
+      <SEO
         title="Terms of Service"
         description="Terms and conditions governing the use of Runners Hub's website, tools, and content."
         path="/terms"
+        schema={schema}
       />
-      <JsonLd data={schema} />
 
       <div className="container mx-auto max-w-3xl px-4 py-10 sm:py-14">
         <h1 className="mb-6 font-display text-xl font-bold text-foreground sm:text-2xl">

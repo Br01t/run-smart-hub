@@ -19,8 +19,6 @@ const ProfileQuiz = lazy(() => import("./pages/ProfileQuiz"));
 const GuidesHub = lazy(() => import("./pages/GuidesHub"));
 const GuidePage = lazy(() => import("./pages/GuidePage"));
 const MasterHub = lazy(() => import("./pages/MasterHub"));
-const ComparisonPage = lazy(() => import("./pages/ComparisonPage"));
-const HubPage = lazy(() => import("./pages/HubPage"));
 const Method = lazy(() => import("./pages/Method"));
 const About = lazy(() => import("./pages/About"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
@@ -65,9 +63,7 @@ const App = () => (
             <Route path="/quiz" element={<ProfileQuiz />} />
             <Route path="/guides" element={<GuidesHub />} />
             <Route path="/guides/:slug" element={<GuidePage />} />
-            <Route path="/comparison/:slug" element={<ComparisonPage />} />
             <Route path="/hub" element={<MasterHub />} />
-            <Route path="/hub/:category/:sport" element={<HubPage />} />
             <Route path="/method" element={<Method />} />
             <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

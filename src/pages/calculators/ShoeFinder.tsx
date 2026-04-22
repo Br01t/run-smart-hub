@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Footprints, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2 } from "lucide-react";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 import shoeHero from "@/assets/shoes-finder-hero.webp";
 
 import { shoeFinderSteps as steps, getShoeRecommendations as getRecommendations } from "@/lib/calculators/shoeService";
@@ -35,10 +35,18 @@ const ShoeFinder = () => {
 
   return (
     <Layout>
-      <SEOHead
-        title="Best Running Shoes Finder 2026"
-        description="Answer 5 quick questions and get personalized running shoe recommendations based on your terrain, goals and budget."
+      <SEO 
+        title="Best Running Shoes Finder 2026" 
+        description="Answer 5 quick questions and get personalized running shoe recommendations based on your terrain, goals and biomechanics."
         path="/tools/shoes"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Personalized Running Shoe Finder",
+          "description": "Expert recommendation engine for matching runners with the perfect footwear.",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All"
+        }}
       />
 
       {/* Hero */}
@@ -175,7 +183,7 @@ const ShoeFinder = () => {
               {/* Hub Referral */}
               <HubReferral 
                 category="shoes"
-                href="/hub/shoes/marathon"
+                href="/hub#shoes"
                 title="Explore the Best Shoes Hub"
                 description={`View our complete technical comparison of all top-rated ${results.categoryName} models to find your perfect pair with live availability and pricing.`}
               />

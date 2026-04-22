@@ -44,3 +44,4 @@ Sitemap: https://www.runners-hub.org/sitemap.xml
 # AI content discovery
 # See https://llmstxt.org
 LLMs.txt: https://www.runners-hub.org/llms.txt
+LLMs-full.txt: https://www.runners-hub.org/llms-full.txt

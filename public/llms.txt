@@ -18,8 +18,7 @@
 
 ## Key Content Sections
 - [Training Guides](https://www.runners-hub.org/guides): 15+ expert articles on nutrition, form, recovery, gear
-- [Product Comparisons](https://www.runners-hub.org/comparisons): Side-by-side supplement and gear comparisons
-- [Product Hubs](https://www.runners-hub.org/hub): Curated gear and supplement collections by distance/sport
+- [Master Hub & Comparisons](https://www.runners-hub.org/hub): Side-by-side technical comparisons and curated gear hubs
 - [Runner Profile Quiz](https://www.runners-hub.org/quiz): Personalized archetype and training plan
 
 ## Popular Guides

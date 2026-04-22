@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 
 const Disclaimer = () => {
   return (
     <Layout>
-      <SEOHead title="Disclaimer" description="Important information about Runners Hub's tools, data and affiliate links." path="/disclaimer" />
+      <SEO title="Disclaimer" description="Important information about Runners Hub's tools, data and affiliate links." path="/disclaimer" />
       <div className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
         <h1 className="mb-4 font-display text-2xl font-bold text-foreground sm:text-3xl">Disclaimer</h1>
         <div className="space-y-4 text-sm text-muted-foreground sm:text-base">

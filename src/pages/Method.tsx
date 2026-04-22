@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 import { FlaskConical, ShieldCheck, BarChart3, Heart } from "lucide-react";
 
 const steps = [
@@ -19,7 +19,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Transparent Monetization",
-    body: "Runners Hub is sustained through affiliate links (Amazon, Decathlon, Top4Running, WeightWorld). When you buy through our links, we receive a small commission at no extra cost to you.",
+    body: "Runners Hub is sustained through affiliate links (Amazon, Myprotein, Onnit). When you buy through our links, we receive a small commission at no extra cost to you.",
     accent: "bg-accent/10 text-accent",
   },
   {
@@ -33,7 +33,7 @@ const steps = [
 const Method = () => {
   return (
     <Layout>
-      <SEOHead title="Our Method" description="Full transparency on how Runners Hub works and why you can trust our tools." path="/method" />
+      <SEO title="Our Method" description="Full transparency on how Runners Hub works and why you can trust our tools." path="/method" />
 
       {/* Header */}
       <section className="border-b border-border bg-secondary/30">

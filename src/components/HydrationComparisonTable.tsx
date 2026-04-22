@@ -39,6 +39,7 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
+          title="Hydration comparison"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="space-y-2">

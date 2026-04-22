@@ -1,11 +1,11 @@
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 
 const AffiliateDisclosure = () => {
   return (
     <Layout>
-      <SEOHead
+      <SEO
         title="Affiliate Disclosure"
         description="Full transparency on how Runners Hub earns revenue through affiliate partnerships with Amazon, Myprotein, and Onnit."
         path="/affiliate-disclosure"

@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import { Activity, Mail, Target, Users, TrendingUp, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -32,12 +31,15 @@ const About = () => {
 
   return (
     <Layout>
-      <SEOHead
+      <SEO
         title="About Us — Our Mission & Story"
         description="Runners Hub is built by a passionate runner. Learn why this project exists, who's behind it, and how we help runners make smarter decisions."
         path="/about"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": jsonLd
+        }}
       />
-      <JsonLd data={jsonLd} />
 
       {/* Hero */}
       <section className="bg-gradient-hero py-14 sm:py-20">

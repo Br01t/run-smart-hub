@@ -117,7 +117,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Elite Focus",
     price: "€95-100",
     link: "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
-    image: "/images/products/onnit-alpha-brain-black-label.webp",
+    image: "/images/products/onnit-alpha-brain-black.webp",
     emphasized: true
   },
   { 
@@ -131,7 +131,7 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "Endurance",
     price: "€50-55",
     link: "https://www.onnit.com/products/shroom-tech-sport-84-ct",
-    image: "/images/products/onnit-shroom-tech-sport.webp"
+    image: "/images/products/onnit-shroom-tech.webp"
   },
   { 
     name: "Total Human", 
@@ -144,6 +144,6 @@ export const supplementSpecs: SupplementSpec[] = [
     recommendedFor: "All Sports",
     price: "€130-140",
     link: "https://www.onnit.com/products/total-human-30-day-supply",
-    image: "/images/products/onnit-total-human-pack.webp"
+    image: "/images/products/onnit-total-human.webp"
   },
 ];

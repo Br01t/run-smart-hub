@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   path?: string;
-  canonical?: string;
   ogType?: string;
   ogImage?: string;
   twitterCard?: string;
@@ -12,9 +11,9 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "Runners Hub – Free Tools for Runners",
-  description = "Free science-based calculators for running, hydration, nutrition and recovery.",
-  path = "/",
+  title,
+  description,
+  path = "",
   ogType = "website",
   ogImage = "https://www.runners-hub.org/og-image.png",
   twitterCard = "summary_large_image",
@@ -41,6 +40,8 @@ const SEO = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={ogUrl} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />

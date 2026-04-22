@@ -3,6 +3,8 @@ import { Scale } from "lucide-react";
 import Layout from "@/components/Layout";
 import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
+import SEO from "@/components/SEO";
+import GuidesReferral from "@/components/GuidesReferral";
 
 const getBMICategory = (bmi: number) => {
   if (bmi < 18.5) return { label: "Underweight", color: "text-accent" };
@@ -27,9 +29,22 @@ const BMICalculator = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Runner's BMI Calculator" 
+        description="Calculate your body mass index with runner-specific context. Understand how your weight affects joint loading and shoe selection."
+        path="/tools/bmi"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Runner's BMI Calculator",
+          "description": "Body mass index calculator optimized for endurance athletes.",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All"
+        }}
+      />
       <CalculatorShell title="Advanced BMI Calculator" description="Calculate your body mass index with detailed classification." icon={Scale}>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-          {/* Inputs Column */}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
+          {/* Left Column: Inputs & Science */}
           <div className="flex-1 space-y-8">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
               <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
@@ -51,16 +66,22 @@ const BMICalculator = () => {
               </button>
             </div>
 
-            {/* Scientific disclaimer */}
-            <div className="rounded-xl border border-border bg-secondary/20 p-4">
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                <strong>Note:</strong> BMI is a basic screening tool and does not account for muscle mass, bone density, or overall body composition.
+            {/* Science Section */}
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115-3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477-2.387a2 2 0 00-.547-1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                For runners, body mass dictates the "Load-to-Force" ratio. Every 1kg of excess body weight adds ~3-4kg of landing force per stride. Over a 10km run (~10,000 steps), this translates to 40,000kg of additional cumulative impact on joints and tendons.
               </p>
             </div>
           </div>
 
-          {/* Results Column */}
-          <div className="lg:w-[450px] space-y-8">
+          {/* Right Column: Results & Practice */}
+          <div className="space-y-8">
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
@@ -82,22 +103,16 @@ const BMICalculator = () => {
                       <span>16</span><span>18.5</span><span>25</span><span>30</span><span>+</span>
                     </div>
                   </div>
-                </div>
 
-                {/* Science Section */}
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="mb-4 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500">
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115 3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477 2.387a2 2 0 00.547 1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                  {/* Note Section moved inside results */}
+                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4">
+                    <p className="text-xs leading-relaxed text-muted-foreground italic">
+                      <strong>Note:</strong> BMI is a basic screening tool and does not account for muscle mass, bone density, or overall body composition.
+                    </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    For runners, body mass dictates the "Load-to-Force" ratio. Every 1kg of excess body weight adds ~3-4kg of landing force per stride. Over a 10km run (~10,000 steps), this translates to 40,000kg of additional cumulative impact on joints and tendons.
-                  </p>
                 </div>
 
-                {/* Practice Section */}
+                {/* Practice Section moved after results */}
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
@@ -116,13 +131,6 @@ const BMICalculator = () => {
                     </li>
                   </ul>
                 </div>
-
-                <HubReferral 
-                  category="shoes"
-                  href="/hub/shoes/marathon"
-                  title="Best Shoes for Your Profile"
-                  description="Find the right pair of shoes with the appropriate cushioning level based on your body mass and running goals."
-                />
               </div>
             ) : (
               <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border bg-card p-8 text-center">
@@ -134,6 +142,21 @@ const BMICalculator = () => {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Referrals Section consolidated at bottom */}
+        <div className="mt-16 space-y-12 border-t border-border pt-16">
+          <GuidesReferral guides={[
+            { title: "Finding Your Perfect Fit", path: "/guides/choosing-running-shoes", desc: "How body weight and biomechanics dictate your ideal footwear requirements." },
+            { title: "Injury Prevention", path: "/guides/injury-prevention", desc: "Scientific techniques to manage increased joint loading effectively." }
+          ]} />
+
+          <HubReferral 
+            category="shoes"
+            href="/hub#shoes"
+            title="Best Shoes for Your Profile"
+            description="Find the right pair of shoes with the appropriate cushioning level based on your body mass and running goals."
+          />
         </div>
       </CalculatorShell>
     </Layout>

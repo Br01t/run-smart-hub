@@ -60,6 +60,7 @@ export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" 
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
+          title="Supplements comparison"
         >
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Timing</label>

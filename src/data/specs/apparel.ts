@@ -65,7 +65,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Trail / Winter",
     price: "€150-220",
     link: "https://www.amazon.com/s?k=Gore+Wear+R3+running+jacket",
-    image: "/images/products/apparel-gore-wear-r3.webp",
+    image: "/images/products/amazon-gore-tex-jacket.webp",
     emphasized: true
   },
   { 
@@ -82,7 +82,7 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "Recovery / Support",
     price: "€30-50",
     link: "https://www.amazon.com/s?k=Under+Armour+HeatGear+leggings",
-    image: "/images/products/apparel-leggings.webp"
+    image: "/images/products/amazon-ua-leggings.webp"
   },
   { 
     name: "Original Headwear", 
@@ -98,6 +98,6 @@ export const apparelSpecs: ApparelSpec[] = [
     usage: "All Conditions",
     price: "€15-20",
     link: "https://www.amazon.com/s?k=Buff+Original+tubular+headwear",
-    image: "/images/products/apparel-headwear.webp"
+    image: "/images/products/amazon-buff-headwear.webp"
   }
 ];

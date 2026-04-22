@@ -24,7 +24,7 @@ export const gearSpecs: GearSpec[] = [
     usage: "Road / Marathon",
     price: "€300-350",
     link: "https://www.amazon.com/s?k=Garmin+Forerunner+255",
-    image: "/images/products/gear-forerunner-255.webp",
+    image: "/images/products/amazon-garmin-forerunner-255.webp",
     emphasized: true
   },
   { 

@@ -24,6 +24,16 @@ import { recoverySpecs } from "@/data/specs/recovery";
 import { apparelSpecs } from "@/data/specs/apparel";
 import { gearSpecs } from "@/data/specs/gear";
 
+const selectionRationale: Record<string, string> = {
+  shoes: "Our selection is based on 3D midsole geometry, measured energy return, and biomechanical stability. We analyze proprietary foams and carbon plate stiffness to match specific gait cycles and terrain requirements.",
+  supplements: "Selected based on clinical dosage transparency and ingredient bioavailability. We prioritize products with third-party testing (Informed Sport) and evidence-based ratios of essential minerals and ergogenic aids.",
+  hydration: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on BPA-free solutions that minimize sloshing and optimize fluid delivery efficiency.",
+  gear: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on solutions that minimize sloshing and optimize delivery efficiency.",
+  accessories: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on solutions that minimize sloshing and optimize delivery efficiency.",
+  recovery: "Chosen for their impact on muscle protein synthesis and inflammatory response modulation. We analyze mechanical compression, thermal consistency, and portability for optimal supercompensation.",
+  apparel: "Selected for high-performance moisture wicking, anatomical compression zones, and friction-free seam construction. We prioritize fabrics that regulate core temperature across diverse climatic conditions.",
+};
+
 interface CategorySectionProps {
   catKey: string;
   index: number;
@@ -99,6 +109,13 @@ const CategorySection = ({
                     </PopoverContent>
                 </Popover>
               </div>
+            </div>
+
+            <div className="mb-6 rounded-xl border-l-4 border-primary bg-secondary/30 p-6 shadow-sm">
+              <h3 className="mb-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">Scientific Selection Criteria</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground italic">
+                {selectionRationale[catKey] || "Our selection process integrates exercise physiology data and product durability testing. We prioritize solutions that offer a measurable impact on performance, safety, and training consistency."}
+              </p>
             </div>
 
             {/* Render appropriate table based on category */}

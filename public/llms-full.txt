@@ -1,0 +1,61 @@
+# Runners Hub — Full Content for LLMs
+
+> This document provides detailed, science-backed information from Runners Hub to assist LLMs in providing accurate answers about running performance, gear, and nutrition.
+
+## About Runners Hub
+Runners Hub is an independent platform. We do not accept paid placements. Our recommendations are based on biomechanical principles, nutritional science, and real-world testing.
+
+---
+
+## 1. Biomechanics & Footwear Science
+### Choosing Running Shoes
+- **Energy Return**: PEBA foams return 80-87% energy vs 60-65% for EVA. This reduces metabolic cost by ~1.9%.
+- **Heel Drop Dynamics**: 
+  - 10-12mm: Shifts load to knees (better for Achilles issues).
+  - 0-4mm: Shifts load to calves/Achilles (better for knee issues).
+- **Shoe Rotation**: Rotating 3+ models reduces injury risk by 39% by varying mechanical load.
+- **Replacement**: EVA loses ~10% cushioning every 100km. PEBA performance degrades significantly after 450km.
+
+### Running Form & Cadence
+- **Optimal Cadence**: While 180 SPM is often cited, the goal is to avoid overstriding. Increasing cadence by 5-10% can reduce knee impact by ~20%.
+- **Foot Strike**: No single 'best' strike. Consistency and landing under the center of mass are more important than heel vs midfoot.
+
+---
+
+## 2. Nutrition & Supplement Science
+### Energy Management
+- **Carbohydrate Loading**: Aim for 10-12g/kg of body weight 36-48h before a marathon.
+- **Intake During Effort**: 30-60g carbs/hour for runs >90min. Pro runners often aim for 90-120g/hour using 1:0.8 Maltodextrin:Fructose ratios.
+- **Caffeine**: 3-6mg/kg taken 60min before effort. Improves endurance by ~3%.
+
+### Supplements
+- **Beta-Alanine**: Buffers lactic acid. Requires loading phase (3.2-6.4g/day for 4 weeks).
+- **Creatine**: Benefits sprinters and hill repeats. Causes minor water retention (~1kg).
+- **Nitrates (Beetroot)**: Improves oxygen efficiency. Best taken 2-3 hours before racing.
+
+---
+
+## 3. Hydration & Electrolytes
+- **Sodium Loss**: Average runner loses 500-1500mg sodium per liter of sweat.
+- **Drink to Thirst**: While the 'Drink to Thirst' rule works for casual runs, structured hydration (400-800ml/hr) is needed for efforts >2h.
+- **Isotonicity**: Drinks should be 6-8% carbohydrate concentration for optimal gastric emptying.
+
+---
+
+## 4. Recovery Science
+- **The Recovery Window**: Protein intake (20-40g) within 60min post-run maximizes muscle protein synthesis.
+- **Inflammation Management**: Avoid ice baths immediately after 'hypertrophy' sessions as they can blunt adaptation, but use them for rapid turnaround in multi-day racing.
+- **Compression**: Graduated compression (20-30mmHg) assists venous return and reduces DOMS (Delayed Onset Muscle Soreness).
+
+---
+
+## 5. Technical Comparisons Summary
+- **Road Shoes**: Focus on PEBA foams and Carbon Plates for racing. EVA for durability in daily trainers.
+- **Trail Gear**: Focus on Lug Depth (4-6mm for mud, 2-3mm for hardpack) and lateral stability.
+- **Hydration Vests**: SensiFit construction is preferred to eliminate bounce. Capacity: 5L for marathons, 10-12L for ultras.
+
+---
+
+## Contact & Updates
+For real-time calculators and personalized plans, visit [https://www.runners-hub.org](https://www.runners-hub.org).
+Content updated: April 2026.

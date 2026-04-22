@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
 import { Droplets, Flame, Scale, Dumbbell, Zap, Footprints, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import toolsHeroImg from "@/assets/tools-hero.webp";
@@ -52,95 +51,108 @@ const allTools = [
   },
 ];
 
+const ToolCard = ({ tool, index }: { tool: typeof allTools[0], index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: index * 0.1, duration: 0.5 }}
+  >
+    <Link
+      to={tool.to}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-lg hover:border-primary/20 sm:flex-row"
+    >
+      <div className={`flex w-full shrink-0 items-center justify-center bg-gradient-to-br ${tool.gradient} p-6 sm:w-32`}>
+        <tool.icon className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
+      </div>
+      
+      <div className="flex flex-1 flex-col p-6 sm:p-8">
+        <div className="flex items-center justify-between">
+          <h3 className="font-display text-xl font-bold text-foreground transition-colors group-hover:text-primary">
+            {tool.title}
+          </h3>
+          <ArrowRight className="h-4 w-4 text-primary opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
+        </div>
+        
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+          {tool.description}
+        </p>
+        
+        <div className="mt-6 flex items-center gap-2">
+          <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover:underline decoration-2 underline-offset-4">Open Calculator</span>
+        </div>
+      </div>
+    </Link>
+  </motion.div>
+);
+
 const ToolsHub = () => {
   return (
     <Layout>
-      <SEOHead title="Best Calculators for Runners 2026" description="Free calculators for hydration, calories, BMI, protein and electrolytes. Science-based tools to improve your performance." path="/tools" />
-      <JsonLd data={{
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Runner's Calculator Suite",
-        "description": "Free calculators for hydration, calories, BMI, protein and electrolytes.",
-        "url": "https://www.runners-hub.org/tools",
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": allTools.map((tool, i) => ({
-            "@type": "ListItem",
-            "position": i + 1,
-            "url": `https://www.runners-hub.org${tool.to}`,
-            "name": tool.title
-          }))
-        }
-      }} />
+      <SEO 
+        title="Runner's Technical Calculator Suite | Performance Tools" 
+        description="Access our suite of science-based running calculators. Optimize your hydration, nutrition, and gear selection with precision data." 
+        path="/tools" 
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={toolsHeroImg} alt="Runner on track" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/40 to-foreground/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/80" />
         </div>
         <div className="relative container mx-auto px-4 py-16 sm:py-24">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-xl">
-            <span className="inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 backdrop-blur-sm">
-              Science-based
-            </span>
-            <h1 className="mt-4 font-display text-display-lg font-bold text-primary-foreground">
-              Runner's Calculator Suite
+          <motion.div 
+            initial={{ opacity: 0, y: 24 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6 }} 
+            className="max-w-xl"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px w-12 bg-primary" />
+              <span className="text-xs font-black uppercase tracking-[0.4em] text-primary-foreground/80">Analysis Suite</span>
+            </div>
+            <h1 className="font-display text-5xl sm:text-7xl font-bold text-white leading-none tracking-tight">
+              Technical <br/> <span className="text-blue-200 italic">Calculators</span>
             </h1>
-            <p className="mt-3 text-primary-foreground/70 sm:text-lg">
-              6 free tools to optimize every aspect of your training — from hydration to recovery.
+            <p className="mt-8 text-lg sm:text-xl text-white/70 max-w-xl leading-relaxed">
+              Empower your training with data. Our suite of technical calculators uses the latest exercise physiology research to optimize your performance.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Tool grid */}
-      <section className="container mx-auto px-4 py-16 sm:py-20">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Tools Grid */}
+      <section className="container mx-auto px-4 py-20 sm:py-32">
+        <div className="grid gap-6 lg:grid-cols-2">
           {allTools.map((tool, i) => (
-            <motion.div
-              key={tool.to}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.06, duration: 0.4 }}
-            >
-              <Link
-                to={tool.to}
-                className="group flex items-start gap-4 rounded-lg border border-border bg-card p-5 transition-all hover:shadow-card-hover hover:border-primary/20"
-              >
-                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${tool.gradient}`}>
-                  <tool.icon className="h-5 w-5 text-white" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="font-display text-sm font-bold text-card-foreground sm:text-base">{tool.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{tool.description}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
-                    Calculate now <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
+            <ToolCard key={tool.to} tool={tool} index={i} />
           ))}
         </div>
 
-        <div className="mt-10">
-          <ZoneRunBanner variant="inline" />
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-10 relative overflow-hidden rounded-xl bg-gradient-hero p-8 text-center sm:p-10">
-          <div className="pointer-events-none absolute inset-0 texture-noise" />
-          <div className="relative">
-            <h2 className="font-display text-display-md font-bold text-primary-foreground">Not sure where to start?</h2>
-            <p className="mt-2 text-primary-foreground/70 sm:text-lg">Take our quiz to get personalized tool recommendations.</p>
+        {/* Dynamic CTA */}
+        <div className="mt-32 relative overflow-hidden rounded-[40px] bg-foreground p-10 sm:p-20 text-center">
+          <div className="absolute inset-0 opacity-10">
+             <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-primary blur-[100px]" />
+             <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500 blur-[100px]" />
+          </div>
+          
+          <div className="relative max-w-2xl mx-auto">
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight">Can't decide where to start?</h2>
+            <p className="mt-6 text-lg text-white/60 leading-relaxed">
+              Take our 2-minute physiological assessment to receive a personalized analysis of your training needs and recommended tools.
+            </p>
             <Link
               to="/quiz"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-background px-6 py-3 text-sm font-bold text-foreground transition-all hover:shadow-float"
+              className="mt-10 inline-flex items-center gap-3 rounded-2xl bg-primary px-10 py-5 text-sm font-black uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 active:scale-95"
             >
-              Take the Quiz <ArrowRight className="h-4 w-4" />
+              Initialize Assessment <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
+        </div>
+
+        <div className="mt-20">
+          <ZoneRunBanner variant="inline" />
         </div>
       </section>
     </Layout>

@@ -81,6 +81,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
+          title="Recovery comparison"
         >
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Application Method</label>

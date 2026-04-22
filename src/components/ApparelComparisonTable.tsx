@@ -61,6 +61,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
+          title="Apparel comparison"
         >
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Category</label>

@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Tag, BarChart3, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import SEOHead from "@/components/SEOHead";
-import JsonLd from "@/components/JsonLd";
+import SEO from "@/components/SEO";
+
 import { translateCategory } from "@/lib/translations";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
@@ -37,13 +37,11 @@ const GuidePage = () => {
 
   return (
     <Layout>
-      <SEOHead 
-        title={`${guide.title} | RunSmart Hub`} 
+      <SEO 
+        title={`${guide.title}`} 
         description={guide.description}
         path={`/guides/${slug}`}
-      />
-      <JsonLd 
-        data={{
+        schema={{
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": guide.title,
@@ -51,7 +49,7 @@ const GuidePage = () => {
           "image": guide.heroImage,
           "author": {
             "@type": "Organization",
-            "name": "RunSmart Hub"
+            "name": "Runners Hub"
           }
         }}
       />
