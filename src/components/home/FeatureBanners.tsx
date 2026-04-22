@@ -24,12 +24,12 @@ const FeatureBanners = () => {
               </p>
               <Link
                 to="/tools/shoes"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-accent-foreground transition-all hover:brightness-110"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-sm font-bold text-accent-foreground btn-depth btn-depth-hover"
               >
                 Launch Shoe Finder <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="relative z-10 overflow-hidden rounded-xl">
+            <div className="relative z-10 overflow-hidden rounded-2xl shadow-float inner-glow">
               <img src={hubShoes} alt="Running shoes collection" width={640} height={400} loading="lazy" decoding="async" className="h-64 w-full object-cover sm:h-80" />
             </div>
           </div>
@@ -39,7 +39,7 @@ const FeatureBanners = () => {
       {/* Guides + Quiz */}
       <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="grid gap-6 lg:grid-cols-5">
-          <Link to="/guides" className="group relative overflow-hidden rounded-xl lg:col-span-3">
+          <Link to="/guides" className="group relative overflow-hidden rounded-2xl lg:col-span-3 shadow-card transition-all hover:shadow-card-hover">
             <img src={guidesHero} alt="Runner reading a training guide" width={720} height={400} loading="lazy" decoding="async" className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-96" />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
@@ -54,7 +54,7 @@ const FeatureBanners = () => {
             </div>
           </Link>
 
-          <Link to="/quiz" className="group flex flex-col justify-between rounded-xl border border-border bg-card p-6 transition-all hover:shadow-card-hover sm:p-8 lg:col-span-2">
+          <Link to="/quiz" className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all card-depth card-depth-hover sm:p-8 lg:col-span-2">
             <div>
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-hero">
                 <Users className="h-5 w-5 text-primary-foreground" />

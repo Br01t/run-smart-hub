@@ -33,7 +33,7 @@ const ToolGrid = () => {
           >
             <Link
               to={tool.to}
-              className="group flex items-start gap-4 rounded-lg border border-border bg-card p-5 transition-all hover:shadow-card-hover hover:border-primary/20"
+              className="group flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition-all card-depth card-depth-hover"
             >
               <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${tool.gradient}`}>
                 <tool.icon className="h-5 w-5 text-white" />

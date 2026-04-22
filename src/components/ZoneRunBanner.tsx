@@ -137,7 +137,7 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
       href={ZONERUN_URL}
       target="_blank"
       rel="noopener noreferrer sponsored"
-      className="group relative block overflow-hidden rounded-2xl border border-teal-500/20 bg-gradient-to-br from-[#061a19] via-[#0d2a27] to-[#061a19] transition-all hover:border-teal-400/40 hover:shadow-[0_20px_50px_rgba(6,26,25,0.5)]"
+      className="group relative block overflow-hidden rounded-2xl border border-teal-500/20 bg-gradient-to-br from-[#061a19] via-[#0d2a27] to-[#061a19] transition-all hover:border-teal-400/40 shadow-hero hover:shadow-float hover:-translate-y-1 inner-glow-strong"
     >
       <div className="absolute inset-0 texture-noise opacity-10" />
       <div className="relative p-6 sm:p-8">

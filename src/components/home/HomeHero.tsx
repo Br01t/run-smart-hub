@@ -36,16 +36,16 @@ const HomeHero = () => {
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-primary-foreground/75">
             Free calculators, expert gear reviews and personalized tools — everything a runner needs, backed by science.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/tools"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-accent-foreground shadow-hero transition-all hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-sm font-bold text-accent-foreground btn-depth btn-depth-hover"
             >
               Explore Tools <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/tools/shoes"
-              className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/25 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 btn-depth-hover"
             >
               <Footprints className="h-4 w-4" /> Find Your Shoe
             </Link>

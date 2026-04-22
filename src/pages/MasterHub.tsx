@@ -209,7 +209,7 @@ const MasterHub = () => {
           </div>
         </div>
         
-        <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-lg">
+        <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-hero transition-all hover:shadow-float hover:-translate-y-1 inner-glow-strong">
           <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
           <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
             Take our 2-minute quiz to get personalized recommendations.

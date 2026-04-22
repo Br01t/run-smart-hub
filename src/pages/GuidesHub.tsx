@@ -85,7 +85,7 @@ const GuidesHub = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search guides…"
-                className="w-full rounded-lg border border-border bg-background py-2.5 pl-10 pr-10 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                className="w-full rounded-xl border border-border bg-background py-2.5 pl-10 pr-10 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 inner-glow transition-all"
               />
               {search && (
                 <button onClick={() => setSearch("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
@@ -97,8 +97,8 @@ const GuidesHub = () => {
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setActiveCategory(null)}
-                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
-                  !activeCategory ? "bg-foreground text-background" : "border border-border text-muted-foreground hover:text-foreground"
+                className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all shadow-sm ${
+                  !activeCategory ? "bg-foreground text-background" : "border border-border text-muted-foreground hover:bg-muted/50"
                 }`}
               >
                 All
@@ -110,8 +110,8 @@ const GuidesHub = () => {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(isActive ? null : cat)}
-                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
-                      isActive ? `${s.badge}` : "border border-border text-muted-foreground hover:text-foreground"
+                    className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all shadow-sm ${
+                      isActive ? `${s.badge}` : "border border-border text-muted-foreground hover:bg-muted/50"
                     }`}
                   >
                     <span className={`h-2 w-2 rounded-full ${isActive ? "bg-current opacity-60" : s.dot}`} />
@@ -166,7 +166,7 @@ const GuidesHub = () => {
         )}
 
         {/* Cross-link */}
-        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 rounded-lg border border-border bg-muted/30 p-5">
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 rounded-2xl border border-border bg-muted/30 p-5 shadow-sm inner-glow">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
             <BookOpen className="h-5 w-5 text-primary" />
           </div>

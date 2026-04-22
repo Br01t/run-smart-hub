@@ -46,7 +46,7 @@ const BMICalculator = () => {
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
           {/* Left Column: Inputs & Science */}
           <div className="flex-1 space-y-8">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8 card-depth">
               <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
@@ -67,7 +67,7 @@ const BMICalculator = () => {
             </div>
 
             {/* Science Section */}
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
               <div className="mb-4 flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500">
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115-3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477-2.387a2 2 0 00-.547-1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
@@ -84,9 +84,9 @@ const BMICalculator = () => {
           <div className="space-y-8">
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
+                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8 card-depth">
                   <h3 className="mb-6 font-display text-lg font-bold text-foreground">Your Results</h3>
-                  <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-6 shadow-sm border border-border">
+                  <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-6 border border-border shadow-sm card-depth card-depth-hover">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Body Mass Index</p>
                     <p className={`font-display text-5xl font-black ${result.color}`}>{result.bmi}</p>
                     <p className={`mt-1 text-base font-bold uppercase tracking-tight ${result.color}`}>{result.category}</p>
@@ -105,7 +105,7 @@ const BMICalculator = () => {
                   </div>
 
                   {/* Note Section moved inside results */}
-                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4">
+                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4 inner-glow">
                     <p className="text-xs leading-relaxed text-muted-foreground italic">
                       <strong>Note:</strong> BMI is a basic screening tool and does not account for muscle mass, bone density, or overall body composition.
                     </p>
@@ -113,7 +113,7 @@ const BMICalculator = () => {
                 </div>
 
                 {/* Practice Section moved after results */}
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>

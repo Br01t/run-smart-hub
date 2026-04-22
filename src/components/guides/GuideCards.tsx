@@ -27,7 +27,7 @@ export const FeaturedGuideCard = ({ guide }: { guide: GuideSummary }) => {
     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
       <Link
         to={`/guides/${guide.slug}`}
-        className="group relative block overflow-hidden rounded-xl border border-border bg-card transition-all hover:shadow-card-hover"
+        className="group relative block overflow-hidden rounded-2xl border border-border bg-card transition-all card-depth card-depth-hover"
       >
         <div className="flex flex-col sm:flex-row">
           <div className={`h-1.5 sm:h-auto sm:w-1.5 shrink-0 ${s.badge}`} />
@@ -61,7 +61,7 @@ export const SecondaryGuideCard = ({ guide, index }: { guide: GuideSummary, inde
     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }}>
       <Link
         to={`/guides/${guide.slug}`}
-        className={`group flex h-full flex-col rounded-xl border border-border border-l-4 ${s.border} bg-card p-5 transition-all hover:shadow-card-hover`}
+        className={`group flex h-full flex-col rounded-2xl border border-border border-l-4 ${s.border} bg-card p-5 transition-all card-depth card-depth-hover`}
       >
         <div className="mb-3 flex items-center justify-between">
           <span className={`rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${s.badge}`}>{guide.category}</span>

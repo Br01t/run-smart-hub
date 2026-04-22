@@ -26,7 +26,7 @@ const GearHubLinks = () => {
             <Link
               key={hub.label}
               to={hub.to}
-              className={`group flex items-center gap-4 rounded-lg border border-border border-l-4 ${hub.border} bg-card p-4 transition-all hover:shadow-card-hover`}
+              className={`group flex items-center gap-4 rounded-xl border border-border border-l-4 ${hub.border} bg-card p-4 transition-all card-depth card-depth-hover`}
             >
               <span className="text-2xl">{hub.emoji}</span>
               <div className="min-w-0">

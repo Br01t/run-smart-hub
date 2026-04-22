@@ -103,9 +103,9 @@ const ShoeFinder = () => {
                   <button
                     key={opt.value}
                     onClick={() => handleAnswer(opt.value)}
-                    className={`group flex items-center gap-3 rounded-xl border-2 p-4 text-left transition-all hover:border-primary hover:shadow-card-hover ${
+                    className={`group flex items-center gap-3 rounded-xl border-2 p-4 text-left transition-all card-depth card-depth-hover ${
                       answers[currentStep] === opt.value
-                        ? "border-primary bg-primary/5"
+                        ? "border-primary bg-primary/5 ring-2 ring-primary/10"
                         : "border-border bg-card"
                     }`}
                   >
@@ -135,7 +135,7 @@ const ShoeFinder = () => {
               className="space-y-8"
             >
               {/* Result Header */}
-              <div className="rounded-2xl border-2 border-primary bg-primary/5 p-8 text-center shadow-hero">
+              <div className="rounded-2xl border-2 border-primary bg-primary/5 p-8 text-center shadow-hero card-depth inner-glow-strong">
                 <CheckCircle2 className="mx-auto h-12 w-12 text-primary mb-4" />
                 <h2 className="mb-2 font-display text-2xl font-black text-foreground sm:text-3xl">
                   {results.categoryName}
@@ -155,7 +155,7 @@ const ShoeFinder = () => {
 
               {/* Science & Practice Sections */}
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115 3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477 2.387a2 2 0 00.547 1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
@@ -167,7 +167,7 @@ const ShoeFinder = () => {
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
@@ -191,7 +191,7 @@ const ShoeFinder = () => {
               <div className="flex justify-center pt-4">
                 <button
                   onClick={reset}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 text-sm font-bold text-foreground shadow-sm transition-all hover:bg-secondary hover:shadow-md"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 text-sm font-bold text-foreground transition-all btn-depth btn-depth-hover"
                 >
                   <RotateCcw className="h-4 w-4" /> Start New Search
                 </button>

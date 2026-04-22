@@ -60,10 +60,22 @@
     --gradient-subtle: linear-gradient(180deg, hsl(48 25% 96%), hsl(42 20% 93%));
     --gradient-editorial: linear-gradient(160deg, hsl(200 18% 14%), hsl(200 12% 22%));
 
-    --shadow-card: 0 1px 2px hsl(200 18% 14% / 0.03), 0 2px 8px hsl(200 18% 14% / 0.05);
-    --shadow-card-hover: 0 4px 16px hsl(200 18% 14% / 0.08), 0 12px 32px hsl(200 18% 14% / 0.06);
-    --shadow-hero: 0 8px 40px hsl(165 45% 28% / 0.15);
-    --shadow-float: 0 20px 60px hsl(200 18% 14% / 0.12);
+    --shadow-card: 
+      0 1px 3px hsl(200 18% 14% / 0.05), 
+      0 4px 12px hsl(200 18% 14% / 0.04);
+    --shadow-card-hover: 
+      0 10px 25px -5px hsl(200 18% 14% / 0.1), 
+      0 8px 10px -6px hsl(200 18% 14% / 0.08);
+    --shadow-hero: 
+      0 20px 40px -12px hsl(165 45% 28% / 0.25),
+      0 12px 16px -8px hsl(165 45% 28% / 0.15);
+    --shadow-float: 
+      0 25px 50px -12px hsl(200 18% 14% / 0.15),
+      0 10px 20px -8px hsl(200 18% 14% / 0.1);
+    
+    /* Reflective light effects */
+    --inner-glow: inset 0 1px 1px hsl(0 0% 100% / 0.1);
+    --inner-glow-strong: inset 0 1px 2px hsl(0 0% 100% / 0.15);
   }
 
   .dark {
@@ -184,6 +196,37 @@
   .shadow-float {
     box-shadow: var(--shadow-float);
   }
+  
+  .inner-glow {
+    box-shadow: var(--inner-glow);
+  }
+
+  .inner-glow-strong {
+    box-shadow: var(--inner-glow-strong);
+  }
+
+  .card-depth {
+    @apply shadow-card transition-all duration-300;
+    box-shadow: var(--shadow-card), var(--inner-glow);
+  }
+
+  .card-depth-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md bg-card/80 border border-white/20;
+    box-shadow: var(--shadow-card), var(--inner-glow);
+  }
+
+  .btn-depth {
+    @apply transition-all duration-200 active:scale-95 active:shadow-inner;
+    box-shadow: var(--shadow-card), var(--inner-glow-strong);
+  }
+
+  .btn-depth-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-0.5;
+  }
 
   /* Editorial decorative line */
   .editorial-line::before {
@@ -214,6 +257,16 @@
     opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  /* Smooth reveal animations */
+  .reveal-in {
+    animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   /* Utility to hide scrollbars while keeping functionality */

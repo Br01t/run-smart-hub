@@ -13,7 +13,7 @@ interface GuidesReferralProps {
 
 const GuidesReferral = ({ guides }: GuidesReferralProps) => {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth">
       <h3 className="mb-4 flex items-center gap-2 font-display text-lg font-bold text-foreground">
         <BookOpen className="h-5 w-5 text-accent" /> Expert Guides
       </h3>
@@ -22,7 +22,7 @@ const GuidesReferral = ({ guides }: GuidesReferralProps) => {
           <Link
             key={guide.path}
             to={guide.path}
-            className="group block rounded-xl border border-transparent bg-secondary/30 p-4 transition-all hover:border-accent/20 hover:bg-card hover:shadow-md"
+            className="group block rounded-xl border border-transparent bg-secondary/30 p-4 transition-all hover:border-accent/20 hover:bg-card card-depth-hover"
           >
             <h4 className="font-display text-sm font-bold text-foreground group-hover:text-accent">
               {guide.title}

@@ -10,7 +10,7 @@ interface ScientificGuideCardProps {
 }
 
 const ScientificGuideCard = ({ guide, accentColor }: ScientificGuideCardProps) => (
-  <div className="mb-12 overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+  <div className="mb-12 overflow-hidden rounded-3xl border border-border bg-card shadow-sm card-depth">
     <div className="grid md:grid-cols-[1fr_1.5fr]">
       <div 
         className="p-8 sm:p-10 transition-colors duration-500"

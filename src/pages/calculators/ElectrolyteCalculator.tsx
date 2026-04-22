@@ -44,7 +44,7 @@ const ElectrolyteCalculator = () => {
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
           {/* Left Column: Inputs & Science */}
           <div className="flex-1 space-y-8">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8 card-depth">
               <h2 className="mb-6 font-display text-lg font-bold text-foreground">Calculator Inputs</h2>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
@@ -74,7 +74,7 @@ const ElectrolyteCalculator = () => {
             </div>
 
             {/* Science Section */}
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
               <div className="mb-4 flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
@@ -91,25 +91,25 @@ const ElectrolyteCalculator = () => {
           <div className="space-y-8">
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8">
+                <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8 card-depth">
                   <h3 className="mb-6 font-display text-xl font-bold text-foreground">Amount to Replenish</h3>
                   <div className="grid gap-3">
-                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 border border-border shadow-sm card-depth card-depth-hover">
                       <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sodium (Na+)</span>
                       <p className="font-display text-2xl font-bold text-primary">{result.sodium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
                     </div>
-                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 border border-border shadow-sm card-depth card-depth-hover">
                       <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Potassium (K+)</span>
                       <p className="font-display text-2xl font-bold text-primary">{result.potassium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
                     </div>
-                    <div className="flex items-center justify-between rounded-xl bg-card p-4 shadow-sm border border-border">
+                    <div className="flex items-center justify-between rounded-xl bg-card p-4 border border-border shadow-sm card-depth card-depth-hover">
                       <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Magnesium (Mg++)</span>
                       <p className="font-display text-2xl font-bold text-primary">{result.magnesium} <span className="text-xs font-bold text-muted-foreground/60">mg</span></p>
                     </div>
                   </div>
 
                   {/* Note Section moved inside results */}
-                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4">
+                  <div className="mt-8 rounded-xl border border-primary/20 bg-background/50 p-4 inner-glow">
                     <p className="text-xs leading-relaxed text-muted-foreground italic">
                       <strong>Note:</strong> Electrolyte loss varies significantly based on sweat rate and individual physiology. Use these as start points.
                     </p>
@@ -117,7 +117,7 @@ const ElectrolyteCalculator = () => {
                 </div>
 
                 {/* Practice Section moved after results */}
-                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500/10 text-teal-500">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>

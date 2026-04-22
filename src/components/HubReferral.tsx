@@ -54,7 +54,7 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
 
   return (
     <div className={cn(
-      "group relative overflow-hidden rounded-2xl border p-1 transition-all hover:shadow-2xl",
+      "group relative overflow-hidden rounded-2xl border p-1 transition-all shadow-hero hover:shadow-float hover:-translate-y-1 inner-glow-strong",
       theme.border,
       className
     )}>

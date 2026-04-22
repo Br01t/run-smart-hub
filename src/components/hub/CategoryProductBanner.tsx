@@ -85,7 +85,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
            <Button 
                 variant="outline" 
                 size="icon" 
-                className={`h-9 w-9 rounded-full border-2 bg-background/50 backdrop-blur-sm transition-all duration-300 ${!canScrollLeft ? 'opacity-10 cursor-not-allowed' : 'active:scale-95 shadow-lg'}`}
+                className={`h-9 w-9 rounded-full border-2 bg-background/50 backdrop-blur-sm transition-all duration-300 ${!canScrollLeft ? 'opacity-10 cursor-not-allowed' : 'btn-depth btn-depth-hover'}`}
                 onClick={() => scroll('left')}
                 disabled={!canScrollLeft}
                 style={{ 
@@ -108,7 +108,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
            <Button 
                 variant="outline" 
                 size="icon" 
-                className={`h-9 w-9 rounded-full border-2 bg-background/50 backdrop-blur-sm transition-all duration-300 ${!canScrollRight ? 'opacity-10 cursor-not-allowed' : 'active:scale-95 shadow-lg'}`}
+                className={`h-9 w-9 rounded-full border-2 bg-background/50 backdrop-blur-sm transition-all duration-300 ${!canScrollRight ? 'opacity-10 cursor-not-allowed' : 'btn-depth btn-depth-hover'}`}
                 onClick={() => scroll('right')}
                 disabled={!canScrollRight}
                 style={{ 
@@ -142,7 +142,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
                 key={product.name + idx}
                 className="flex-none w-[230px] sm:w-[280px] snap-start group"
             >
-                <div className="relative h-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-full overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 card-depth card-depth-hover">
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-white p-4">
                     <img 

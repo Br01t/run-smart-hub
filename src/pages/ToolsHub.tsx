@@ -60,7 +60,7 @@ const ToolCard = ({ tool, index }: { tool: typeof allTools[0], index: number }) 
   >
     <Link
       to={tool.to}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-lg hover:border-primary/20 sm:flex-row"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all sm:flex-row card-depth card-depth-hover"
     >
       <div className={`flex w-full shrink-0 items-center justify-center bg-gradient-to-br ${tool.gradient} p-6 sm:w-32`}>
         <tool.icon className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
@@ -131,7 +131,7 @@ const ToolsHub = () => {
         </div>
 
         {/* Dynamic CTA */}
-        <div className="mt-32 relative overflow-hidden rounded-[40px] bg-foreground p-10 sm:p-20 text-center">
+        <div className="mt-32 relative overflow-hidden rounded-[40px] bg-foreground p-10 sm:p-20 text-center shadow-hero transition-all hover:shadow-float hover:-translate-y-1 inner-glow-strong">
           <div className="absolute inset-0 opacity-10">
              <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-primary blur-[100px]" />
              <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-blue-500 blur-[100px]" />

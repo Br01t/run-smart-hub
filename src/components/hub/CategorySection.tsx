@@ -111,7 +111,7 @@ const CategorySection = ({
               </div>
             </div>
 
-            <div className="mb-6 rounded-xl border-l-4 border-primary bg-secondary/30 p-6 shadow-sm">
+            <div className="mb-6 rounded-xl border-l-4 border-primary bg-secondary/30 p-6 shadow-sm inner-glow">
               <h3 className="mb-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">Scientific Selection Criteria</h3>
               <p className="text-sm leading-relaxed text-muted-foreground italic">
                 {selectionRationale[catKey] || "Our selection process integrates exercise physiology data and product durability testing. We prioritize solutions that offer a measurable impact on performance, safety, and training consistency."}
