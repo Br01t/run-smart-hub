@@ -71,8 +71,6 @@ const Index = () => {
 
       <HomeFAQ />
 
-      <ZoneRunBanner variant="fullwidth" />
-
       {/* Final CTA */}
       <section className="bg-gradient-hero relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 texture-noise" />
@@ -98,6 +96,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ZoneRunBanner variant="fullwidth" />
     </Layout>
   );
 };

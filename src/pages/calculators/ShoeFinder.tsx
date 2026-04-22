@@ -4,9 +4,11 @@ import { Footprints, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2 } from "luci
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import shoeHero from "@/assets/shoes-finder-hero.webp";
+import { Link } from "react-router-dom";
 
 import { shoeFinderSteps as steps, getShoeRecommendations as getRecommendations } from "@/lib/calculators/shoeService";
 import HubReferral from "@/components/HubReferral";
+import GuidesReferral from "@/components/GuidesReferral";
 
 const ShoeFinder = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -180,21 +182,74 @@ const ShoeFinder = () => {
                 </div>
               </div>
 
-              {/* Hub Referral */}
-              <HubReferral 
-                category="shoes"
-                href="/hub#shoes"
-                title="Explore the Best Shoes Hub"
-                description={`View our complete technical comparison of all top-rated ${results.categoryName} models to find your perfect pair with live availability and pricing.`}
-              />
+              {/* Specific Shoe Recommendations */}
+              <div className="space-y-6 pt-4">
+                <div className="flex items-center gap-2">
+                  <div className="h-px flex-1 bg-border" />
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">Expert Recommendations</h3>
+                  <div className="h-px flex-1 bg-border" />
+                </div>
+                
+                <div className="grid gap-6 sm:grid-cols-2">
+                  {results.recommendedShoes.map((shoe) => (
+                    <div key={shoe.model} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-float card-depth">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img src={shoe.image} alt={shoe.model} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-primary">{shoe.brand}</p>
+                        <h4 className="font-display text-lg font-bold text-foreground">{shoe.model}</h4>
+                        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{shoe.why}</p>
+                        
+                        <div className="mt-4 grid grid-cols-3 gap-2 border-t border-border pt-4 text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">
+                          <div className="flex flex-col items-center">
+                            <span>Weight</span>
+                            <span className="text-foreground">{shoe.specs.weight}</span>
+                          </div>
+                          <div className="flex flex-col items-center border-x border-border">
+                            <span>Drop</span>
+                            <span className="text-foreground">{shoe.specs.drop}</span>
+                          </div>
+                          <div className="flex flex-col items-center">
+                            <span>Cushion</span>
+                            <span className="text-foreground">{shoe.specs.cushion}</span>
+                          </div>
+                        </div>
 
-              <div className="flex justify-center pt-4">
+                        <Link to="/hub#shoes" className="mt-6 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
+                          View Full Details <ArrowRight className="h-3 w-3" />
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Gear Recommendation Hub Referral - Immediately after results */}
+                <div className="pt-4">
+                  <HubReferral 
+                    category="shoes"
+                    href="/hub#shoes"
+                    title="Explore the Full Shoes Hub"
+                    description="Didn't find your perfect match? View our complete technical comparison of all top-rated running models with live availability."
+                  />
+                </div>
+              </div>
+
+              <div className="flex justify-center pt-8">
                 <button
                   onClick={reset}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 text-sm font-bold text-foreground transition-all btn-depth btn-depth-hover"
                 >
                   <RotateCcw className="h-4 w-4" /> Start New Search
                 </button>
+              </div>
+
+              {/* Expert Guides consolidated at bottom of results */}
+              <div className="mt-20 space-y-12 border-t border-border pt-16">
+                <GuidesReferral guides={[
+                  { title: "Finding Your Perfect Fit", path: "/guides/choosing-running-shoes", desc: "How body weight and biomechanics dictate your ideal footwear requirements." },
+                  { title: "Running Form Guide", path: "/guides/running-form", desc: "Optimize your efficiency and reduce impact." }
+                ]} />
               </div>
             </motion.div>
           )}

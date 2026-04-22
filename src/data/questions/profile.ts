@@ -14,9 +14,21 @@ export const profileQuestions: QuizQuestion[] = [
     ],
   },
   {
+    id: "terrain",
+    label: "Where do you run most often?",
+    subtitle: "Terrain choice dictates gear and specialized training needs.",
+    icon: "Navigation",
+    options: [
+      { value: "road", label: "Road & Pavement", icon: "Navigation", description: "Concrete, asphalt, city streets" },
+      { value: "trail", label: "Trails & Nature", icon: "Footprints", description: "Dirt paths, mountains, technical terrain" },
+      { value: "mixed", label: "Mixed Surface", icon: "Layers", description: "A blend of road, park, and light trail" },
+      { value: "track", label: "Athletic Track", icon: "RotateCcw", description: "Focus on intervals and pure speed" },
+    ],
+  },
+  {
     id: "distance",
-    label: "What distance do you focus on?",
-    subtitle: "Different distances require different strategies.",
+    label: "What's your primary distance?",
+    subtitle: "Different distances require different metabolic strategies.",
     icon: "Target",
     options: [
       { value: "5k-10k", label: "5K – 10K", icon: "Zap", description: "Speed-focused shorter distances" },
@@ -27,14 +39,25 @@ export const profileQuestions: QuizQuestion[] = [
   },
   {
     id: "frequency",
-    label: "How many times per week do you run?",
-    subtitle: "Training volume affects nutrition and recovery needs.",
+    label: "Weekly training frequency?",
+    subtitle: "Volume is the biggest driver of recovery requirements.",
     icon: "Activity",
     options: [
       { value: "1-2", label: "1-2 times", icon: "Heart", description: "Casual or just getting started" },
       { value: "3-4", label: "3-4 times", icon: "Activity", description: "Consistent recreational runner" },
       { value: "5-6", label: "5-6 times", icon: "Zap", description: "Dedicated training schedule" },
       { value: "7+", label: "Daily+", icon: "Trophy", description: "High volume, sometimes doubles" },
+    ],
+  },
+  {
+    id: "biomechanics",
+    label: "How would you describe your gait?",
+    subtitle: "Knowing your arch and pronation helps us pick the right shoes.",
+    icon: "Activity",
+    options: [
+      { value: "neutral", label: "Neutral / High Arch", icon: "Footprints", description: "Natural alignment, minimal foot roll" },
+      { value: "overpronation", label: "Overpronation / Flat", icon: "ArrowDown", description: "Foot rolls inward, low arch" },
+      { value: "unknown", label: "Not Sure", icon: "HelpCircle", description: "I haven't had a gait analysis yet" },
     ],
   },
   {

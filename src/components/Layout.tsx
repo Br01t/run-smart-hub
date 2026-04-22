@@ -162,7 +162,7 @@ const Layout = ({ children, className = "" }: { children: React.ReactNode, class
           </div>
 
           <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Runners Hub. For informational purposes only.
+            © {new Date().getFullYear()} Runners Hub.
           </div>
         </div>
       </footer>

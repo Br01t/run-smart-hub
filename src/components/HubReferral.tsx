@@ -53,11 +53,14 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
   const theme = themeConfig[category];
 
   return (
-    <div className={cn(
-      "group relative overflow-hidden rounded-2xl border p-1 transition-all shadow-hero hover:shadow-float hover:-translate-y-1 inner-glow-strong",
-      theme.border,
-      className
-    )}>
+    <Link 
+      to={href}
+      className={cn(
+        "group relative block overflow-hidden rounded-2xl border p-1 transition-all shadow-hero hover:shadow-float hover:-translate-y-1 inner-glow-strong",
+        theme.border,
+        className
+      )}
+    >
       {/* Background Gradient */}
       <div className={cn("absolute inset-0 bg-gradient-to-br transition-opacity group-hover:opacity-80", theme.gradient)} />
       
@@ -81,16 +84,15 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
           </p>
         </div>
 
-        <Link 
-          to={href}
+        <div 
           className={cn(
-            "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-extrabold text-white shadow-lg transition-all hover:scale-105 active:scale-95 sm:w-auto",
+            "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-extrabold text-white shadow-lg transition-all group-hover:scale-105 active:scale-95 sm:w-auto",
             theme.button
           )}
         >
           Explore the Hub
           <ArrowRight className="h-4 w-4" />
-        </Link>
+        </div>
       </div>
 
       {/* Decorative Glow */}
@@ -98,7 +100,7 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
         "absolute -right-20 -top-20 h-64 w-64 rounded-full blur-[80px] transition-opacity opacity-0 group-hover:opacity-20",
         theme.gradient.split(' ')[1]
       )} />
-    </div>
+    </Link>
   );
 };
 

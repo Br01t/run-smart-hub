@@ -30,7 +30,7 @@ const GuidesReferral = ({ guides }: GuidesReferralProps) => {
             <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">
               {guide.desc}
             </p>
-            <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent opacity-0 transition-opacity group-hover:opacity-100">
+            <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent transition-all group-hover:gap-2.5">
               Read Deep Dive <ArrowRight className="h-3 w-3" />
             </div>
           </Link>

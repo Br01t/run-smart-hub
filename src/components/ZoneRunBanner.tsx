@@ -110,7 +110,7 @@ const ZoneRunBanner = ({ variant = "inline" }: ZoneRunBannerProps) => {
                 <span className="rounded-full bg-teal-500/10 border border-teal-500/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-400">Official Partner</span>
               </div>
               <h3 className="font-display text-2xl font-bold text-white sm:text-3xl tracking-tight">
-                ZoneRun — <span className="text-teal-400">The Future of Running</span>
+                ZoneRun — <span className="text-teal-400">Give other value to your runs</span>
               </h3>
               <p className="mt-2 text-sm text-teal-100/60 sm:text-base max-w-xl">
                 The leading move-to-earn experience. Turn your daily runs into real rewards, unlock cyber-challenges, and dominate the digital leaderboard.
