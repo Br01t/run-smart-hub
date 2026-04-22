@@ -107,19 +107,6 @@ export const supplementSpecs: SupplementSpec[] = [
     image: "/images/products/onnit-alpha-brain.webp"
   },
   { 
-    name: "Alpha BRAIN® (60ct)", 
-    brand: "Onnit",
-    absorption: "Fast", 
-    timing: "Pre-workout", 
-    ingredients: "L-Theanine, Bacopa, Cat's Claw", 
-    bestFor: "Daily cognitive support and focus",
-    effect: "Mental processing speed",
-    recommendedFor: "Daily Focus",
-    price: "€55-60",
-    link: "https://www.onnit.com/products/alpha-brain-60-ct",
-    image: "/images/products/onnit-alpha-brain.webp"
-  },
-  { 
     name: "Alpha BRAIN Black Label", 
     brand: "Onnit",
     absorption: "Fast", 

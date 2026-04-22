@@ -14,7 +14,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Moisture management reference to avoid irritation",
     usage: "Daily Training",
     price: "€20-30",
-    link: "https://www.amazon.it/Under-Armour-Tech-T-Shirt-Uomo/dp/B0D17ZTY7M",
+    link: "https://www.amazon.com/s?k=Under+Armour+Tech+2.0+t-shirt",
     image: "/images/products/amazon-ua-tech-shirt.webp",
     emphasized: true
   },
@@ -31,7 +31,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Industry standard for keeping skin dry",
     usage: "Intensity / Performance",
     price: "€25-35",
-    link: "https://www.amazon.it/Nike-Maglietta-Dri-Fit-Horizon-HF6142-370/dp/B0DN1PM19Z",
+    link: "https://www.amazon.com/s?k=Nike+Dri-FIT+running+shirt",
     image: "/images/products/amazon-nike-dri-fit.webp",
     emphasized: true
   },
@@ -48,7 +48,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Essential ventilation during long runs",
     usage: "Road / Long Runs",
     price: "€25-40",
-    link: "https://www.amazon.it/adidas-Camo-SHO-Pantaloncini-Uomo/dp/B096KLC2SH",
+    link: "https://www.amazon.com/s?k=Adidas+AEROREADY+running+shorts",
     image: "/images/products/amazon-adidas-shorts.webp"
   },
   { 
@@ -64,7 +64,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Running in adverse conditions (Rain/Wind)",
     usage: "Trail / Winter",
     price: "€150-220",
-    link: "https://www.amazon.it/GORE-WEAR-Giacca-Running-Cappuccio/dp/B07G4M6VYF",
+    link: "https://www.amazon.com/s?k=Gore+Wear+R3+running+jacket",
     image: "/images/products/apparel-gore-wear-r3.webp",
     emphasized: true
   },
@@ -81,7 +81,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Reducing muscle vibration and improved comfort",
     usage: "Recovery / Support",
     price: "€30-50",
-    link: "https://www.amazon.it/Under-Armour-HeatGear-Armour-Leggings/dp/B08726P4C8",
+    link: "https://www.amazon.com/s?k=Under+Armour+HeatGear+leggings",
     image: "/images/products/apparel-leggings.webp"
   },
   { 
@@ -97,7 +97,7 @@ export const apparelSpecs: ApparelSpec[] = [
     bestFor: "Versatile protection from cold, sun, and sweat",
     usage: "All Conditions",
     price: "€15-20",
-    link: "https://www.amazon.it/BUFF-Original-Scaldacollo-Multifunzionale-Unisex/dp/B07P6Z1Z6L",
+    link: "https://www.amazon.com/s?k=Buff+Original+tubular+headwear",
     image: "/images/products/apparel-headwear.webp"
   }
 ];

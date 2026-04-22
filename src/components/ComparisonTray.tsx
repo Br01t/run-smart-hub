@@ -60,7 +60,7 @@ export const ComparisonTray = ({
               <ArrowRightLeft className="mr-2 h-4 w-4" /> Compare Now
             </Button>
           </DialogTrigger>
-          <DialogContent className="z-[150] w-[95vw] sm:max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl sm:rounded-[4rem] border-white/10 bg-background/95 backdrop-blur-3xl shadow-2xl p-4 sm:p-12">
+          <DialogContent className="z-[150] w-[95vw] sm:max-w-5xl rounded-3xl sm:rounded-[4rem] border-white/10 bg-background/95 backdrop-blur-3xl shadow-2xl p-4 sm:p-12">
             <DialogHeader className="mb-6 sm:mb-10 text-center sm:text-left">
               <DialogTitle className="font-display text-2xl sm:text-5xl font-black text-foreground flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center sm:justify-start">
                 <div className="h-14 w-14 sm:h-20 sm:w-20 rounded-2xl sm:rounded-3xl bg-primary/10 flex items-center justify-center text-primary shadow-inner text-left">
@@ -72,7 +72,7 @@ export const ComparisonTray = ({
                 </div>
               </DialogTitle>
             </DialogHeader>
-            <div className="relative">
+            <div className="relative max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
               {renderComparisonTable()}
             </div>
           </DialogContent>

@@ -10,7 +10,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Beginners needing reliable GPS and basic metrics",
     usage: "Road / Track",
     price: "€160-190",
-    link: "https://www.amazon.it/Garmin-Forerunner-55-Smartwatch-GPS/dp/B09579MVN4",
+    link: "https://www.amazon.com/s?k=Garmin+Forerunner+55",
     image: "/images/products/amazon-garmin-forerunner-55.webp",
     emphasized: true
   },
@@ -23,7 +23,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Serious runners looking for advanced training data",
     usage: "Road / Marathon",
     price: "€300-350",
-    link: "https://www.amazon.it/Garmin-Forerunner-255-Smartwatch-Corsa/dp/B09WTV9FJN",
+    link: "https://www.amazon.com/s?k=Garmin+Forerunner+255",
     image: "/images/products/gear-forerunner-255.webp",
     emphasized: true
   },
@@ -36,7 +36,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Trail and ultra runners seeking offline mapping",
     usage: "Trail / Ultra",
     price: "€500-750",
-    link: "https://www.amazon.it/Garmin-Fenix-7-Sapphire-Solar/dp/B09NMK4XRP",
+    link: "https://www.amazon.com/s?k=Garmin+Fenix+7",
     image: "/images/products/amazon-garmin-fenix.webp"
   },
   { 
@@ -48,7 +48,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Long training runs and self-supported marathons",
     usage: "Long Runs / Ultra",
     price: "€40-60",
-    link: "https://www.amazon.it/s?k=zaino+idratazione+10l",
+    link: "https://www.amazon.com/s?k=10L+hydration+vest+running",
     image: "/images/products/amazon-azarxis-10l.webp"
   },
   { 
@@ -60,7 +60,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Maximum safety and path lighting for night runs",
     usage: "Night Running",
     price: "€25-40",
-    link: "https://www.amazon.it/s?k=luce+led+pettorale",
+    link: "https://www.amazon.com/s?k=LED+chest+light+running",
     image: "/images/products/amazon-luce-running.webp",
     emphasized: true
   },
@@ -73,7 +73,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Carrying smartphone and keys without bounce",
     usage: "Daily / Road",
     price: "€15-20",
-    link: "https://www.amazon.it/dp/B07F3M6VYF",
+    link: "https://www.amazon.com/s?k=Fitgriff+running+belt",
     image: "/images/products/amazon-marsupio-fitgriff.webp"
   },
   { 
@@ -85,7 +85,7 @@ export const gearSpecs: GearSpec[] = [
     bestFor: "Avoiding blisters during long runs or ultras",
     usage: "All Terrain",
     price: "€15-25 (3pk)",
-    link: "https://www.amazon.it/dp/B07TX8G5H6",
+    link: "https://www.amazon.com/s?k=Danish+Endurance+running+socks",
     image: "/images/products/amazon-calze-danish.webp"
   },
 ];

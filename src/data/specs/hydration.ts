@@ -15,43 +15,9 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Salt balance and rapid rehydration",
     usage: "Training / Recovery",
     price: "€15-25",
-    link: "https://www.myprotein.com/sports-nutrition/electrolyte-powder/10529707.html",
+    link: "https://www.myprotein.com/p/sports-nutrition/the-eaa/13457131/",
     image: "/images/products/hydration-electrolyte-powder.webp",
     emphasized: true
-  },
-  { 
-    name: "Clear Whey Electrolyte", 
-    brand: "Myprotein", 
-    category: "Hydration", 
-    metric1: "Protein + Salts", 
-    metric2: "Light / Refreshing",
-    format: "Powder",
-    sodium: "150mg",
-    sugar: "0.2g",
-    timing: "During / Post-run",
-    effect: "Muscle Recovery",
-    bestFor: "Light juice-like hydration",
-    usage: "Hydration Only / Recovery",
-    price: "€25-35",
-    link: "https://www.myprotein.com/sports-nutrition/clear-whey-electrolyte/12553188.html",
-    image: "/images/products/myprotein-clear-whey.webp"
-  },
-  { 
-    name: "HydrateTech", 
-    brand: "Onnit", 
-    category: "Hydration", 
-    metric1: "Max Absorption", 
-    metric2: "Cellular Performance",
-    format: "Powder",
-    sodium: "250mg",
-    sugar: "1g",
-    timing: "Pre / During",
-    effect: "Cellular Hydration",
-    bestFor: "Maintaining cellular performance under stress",
-    usage: "Advanced Training / Race",
-    price: "€30-40",
-    link: "https://www.onnit.com/hydrate/",
-    image: "/images/products/hydration-onnit-hydrate.webp"
   },
   { 
     name: "Liquid I.V.", 
@@ -67,6 +33,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Those seeking a rapid energy and hydration boost",
     usage: "Race / Intense Effort",
     price: "€25-45",
+    link: "https://www.amazon.com/s?k=Liquid+IV+hydration+multiplier",
     image: "/images/products/hydration-liquid-iv.webp",
     emphasized: true
   },
@@ -84,6 +51,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "On-the-go convenience (bottles / trail)",
     usage: "Race / Trail / Daily",
     price: "€7-12",
+    link: "https://www.amazon.com/s?k=Nuun+Sport+electrolyte+tablets",
     image: "/images/products/hydration-nuun.webp"
   },
   { 
@@ -100,6 +68,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Endurance athletes prone to cramping",
     usage: "Race / Ultra / Extreme Heat",
     price: "€45-60 (30pk)",
+    link: "https://www.amazon.com/s?k=LMNT+electrolyte+drink+mix",
     image: "/images/products/hydration-lmnt.webp",
     emphasized: true
   },

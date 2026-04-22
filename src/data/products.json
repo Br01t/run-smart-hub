@@ -37,24 +37,6 @@
     "rating": 5
   },
   {
-    "id": "myprotein-clear-whey",
-    "nome": "Clear Whey Protein Powder",
-    "category": "supplements",
-    "brand": "Myprotein",
-    "tag": [
-      "protein",
-      "recovery",
-      "hydration",
-      "supplements",
-      "electrolytes"
-    ],
-    "prezzoRange": "€25–€35",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/clear-whey-protein-powder/12081395/",
-    "immagine": "/images/products/myprotein-clear-whey.webp",
-    "descrizione": "Light, refreshing juice-like protein drink. 20g protein per serving with zero milky texture. Perfect for summer training hydration and recovery.",
-    "rating": 5
-  },
-  {
     "id": "myprotein-eaa",
     "nome": "Impact EAA",
     "category": "supplements",
@@ -83,7 +65,7 @@
       "carbohydrates"
     ],
     "prezzoRange": "€20–€30",
-    "linkAffiliato": "https://www.myprotein.it/sports-nutrition/impact-protein-bar/10852498.html",
+    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-protein-bar/10852498/",
     "immagine": "/images/products/myprotein-protein-bar.webp",
     "descrizione": "20g protein per bar with low sugar. Convenient on-the-go snack for runners needing quick fuel before or after training.",
     "rating": 4
@@ -118,7 +100,7 @@
       "muscles"
     ],
     "prezzoRange": "€12–€18",
-    "linkAffiliato": "https://www.myprotein.it/sports-nutrition/bcaa/10530036.html",
+    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/bcaa/10530036/",
     "immagine": "/images/products/myprotein-bcaa.webp",
     "descrizione": "Branched-chain amino acids in optimal 2:1:1 ratio. Supports muscle preservation and reduces breakdown during high-mileage training weeks.",
     "rating": 4
@@ -175,21 +157,6 @@
     "linkAffiliato": "https://www.onnit.com/products/alpha-brain-90-ct",
     "immagine": "/images/products/onnit-alpha-brain.webp",
     "descrizione": "Clinically studied nootropic for mental clarity and focus. Helps maintain concentration during long races and demanding training sessions.",
-    "rating": 5
-  },
-  {
-    "id": "onnit-alpha-brain-60",
-    "nome": "Alpha BRAIN® (60ct)",
-    "category": "supplements",
-    "brand": "Onnit",
-    "tag": [
-      "supplements",
-      "energy"
-    ],
-    "prezzoRange": "$57.95",
-    "linkAffiliato": "https://www.onnit.com/products/alpha-brain-60-ct",
-    "immagine": "/images/products/onnit-alpha-brain-60.webp",
-    "descrizione": "Cognitive support for memory, focus and mental processing speed. Ideal for runners seeking sharper race-day performance.",
     "rating": 5
   },
   {
@@ -269,7 +236,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€15–€20",
-    "linkAffiliato": "https://www.amazon.it/dp/B07F3M6VYF",
+    "linkAffiliato": "https://www.amazon.com/s?k=Fitgriff+running+belt",
     "immagine": "/images/products/amazon-marsupio-fitgriff.webp",
     "descrizione": "Lightweight running belt with adjustable fit. Holds phone, keys, and gels securely with zero bounce. Water-resistant and comfortable on long runs.",
     "rating": 4
@@ -286,7 +253,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€20–€25",
-    "linkAffiliato": "https://www.amazon.it/dp/B07TX8G5H6",
+    "linkAffiliato": "https://www.amazon.com/s?k=Danish+Endurance+running+socks",
     "immagine": "/images/products/amazon-calze-danish.webp",
     "descrizione": "Merino wool running socks with arch support and blister prevention. Moisture-wicking, breathable, and designed with pro runners for maximum comfort.",
     "rating": 5
@@ -303,7 +270,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€18–€24",
-    "linkAffiliato": "https://www.amazon.it/Rockay-Ignite-Socks-Compression/dp/B07F3M6VYF",
+    "linkAffiliato": "https://www.amazon.com/s?k=Rockay+Ignite+running+socks",
     "immagine": "/images/products/amazon-rockay-ignite.webp",
     "descrizione": "Eco-sustainable, high-performance running socks made from recycled materials. Anti-blister technology and targeted compression.",
     "rating": 5
@@ -320,7 +287,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€140–€180",
-    "linkAffiliato": "https://www.amazon.it/Garmin-Forerunner-55-Smartwatch-GPS/dp/B09579MVN4",
+    "linkAffiliato": "https://www.amazon.com/s?k=Garmin+Forerunner+55",
     "immagine": "/images/products/amazon-garmin-forerunner-55.webp",
     "descrizione": "Best value-for-money GPS watch for beginners and intermediate runners. Accurate HR monitoring, PacePro™ guidance, and daily suggested workouts.",
     "rating": 5
@@ -338,7 +305,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€500–€800",
-    "linkAffiliato": "https://www.amazon.it/Garmin-Fenix-7-Sapphire-Solar/dp/B09NMK4XRP",
+    "linkAffiliato": "https://www.amazon.com/s?k=Garmin+Fenix+7",
     "immagine": "/images/products/amazon-garmin-fenix.webp",
     "descrizione": "The ultimate multisport watch for trail and ultra runners. TOPO maps, extreme battery life with solar charging, and robust design.",
     "rating": 5
@@ -356,7 +323,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€40–€60",
-    "linkAffiliato": "https://www.amazon.it/Azarxis-Zaino-Idratazione-10L-Maratona/dp/B07TX8G5H6",
+    "linkAffiliato": "https://www.amazon.com/s?k=10L+hydration+running+vest",
     "immagine": "/images/products/amazon-azarxis-10l.webp",
     "descrizione": "Affordable and highly functional hydration vest for long-distance runs. Includes multiple pockets and space for a 2L bladder.",
     "rating": 4
@@ -374,7 +341,7 @@
       "top-gear-2026"
     ],
     "prezzoRange": "€120–€160",
-    "linkAffiliato": "https://www.amazon.it/Salomon-Adv-Skin-12-Set-Hydration/dp/B09VPRB9K4",
+    "linkAffiliato": "https://www.amazon.com/s?k=Salomon+ADV+Skin+12+hydration+vest",
     "immagine": "/images/products/amazon-salomon-adv-skin.webp",
     "descrizione": "The reference standard for hydration vests. SensiFit™ construction for a bounce-free, snug fit. Ideal for high-level trail and ultra running.",
     "rating": 5
@@ -389,7 +356,7 @@
       "running"
     ],
     "prezzoRange": "€15–€22",
-    "linkAffiliato": "https://www.amazon.it/dp/B089Y4R3L1",
+    "linkAffiliato": "https://www.amazon.com/s?k=LED+chest+running+light",
     "immagine": "/images/products/amazon-luce-running.webp",
     "descrizione": "Rechargeable LED chest light for night running. 360° visibility, adjustable strap, and multiple brightness modes. Essential safety gear for evening runners.",
     "rating": 4
@@ -405,7 +372,7 @@
       "hydration"
     ],
     "prezzoRange": "€30–€45",
-    "linkAffiliato": "https://www.amazon.it/dp/B08L5VYQFZ",
+    "linkAffiliato": "https://www.amazon.com/s?k=trail+running+hydration+backpack+10L",
     "immagine": "/images/products/amazon-zaino-trail.webp",
     "descrizione": "Lightweight 10L trail running vest with 2L hydration bladder. Multiple pockets for gels and gear. Breathable mesh for long-distance comfort.",
     "rating": 4
@@ -420,7 +387,7 @@
       "running"
     ],
     "prezzoRange": "€10–€15",
-    "linkAffiliato": "https://www.amazon.it/dp/B07V6Q8ZMN",
+    "linkAffiliato": "https://www.amazon.com/s?k=running+phone+armband",
     "immagine": "/images/products/amazon-bracciale-phone.webp",
     "descrizione": "Universal smartphone armband for running. Sweat-proof, touchscreen-compatible, with key pocket and earphone port. Fits all phones up to 6.8 inches.",
     "rating": 4
@@ -437,7 +404,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$45–$75",
-    "linkAffiliato": "https://www.amazon.com/s?k=Nike+Revolution+6&crid=1QCZCET4MTN88&sprefix=nike+revolution+6%2Caps%2C228&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2FAdidas-Duramo%2Fs%3Fk%3DAdidas%2BDuramo&ref=nb_sb_noss_1",
+    "linkAffiliato": "https://www.amazon.com/s?k=Nike+Revolution+6+running+shoes",
     "immagine": "/images/products/amazon-nike-revolution.webp",
     "descrizione": "The reference for entry-level running. Link leads to latest Amazon search results for various colors and sizes.",
     "rating": 4.5
@@ -454,7 +421,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$50–$85",
-    "linkAffiliato": "https://www.amazon.com/Adidas-Duramo/s?k=Adidas+Duramo",
+    "linkAffiliato": "https://www.amazon.com/s?k=Adidas+Duramo+Speed+running+shoes",
     "immagine": "/images/products/amazon-adidas-duramo-speed.webp",
     "descrizione": "Lightweight and reactive performance trainer. Link leads to the latest Amazon search results for current models.",
     "rating": 4.5
@@ -471,7 +438,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$55–$80",
-    "linkAffiliato": "https://www.amazon.com/s?k=ASICS+Gel-Contend+8&crid=3N1SJ0EKA86J9&sprefix=asics+gel-contend+8%2Caps%2C173&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3Damazonsconti%26adgrpid%3D51442954526%26hvadid%3D710614866156%26hvdev%3Dc%26hvexpln%3D0%26hvlocphy%3D1008488%26hvnetw%3Dg%26hvocijid%3D3071120304652489279--%26hvqmt%3Db%26hvrand%3D3071120304652489279%26hvtargid%3Dkwd-918942475818%26hydadcr%3D28434_2518838%26mcid%3D48f8d36166bc3e0caaefa01d28da8a78%26tag%3Dslhyin-21%26ref%3Dpd_sl_rsyace34v_b&ref=nb_sb_noss_1",
+    "linkAffiliato": "https://www.amazon.com/s?k=ASICS+Gel-Contend+8+running+shoes",
     "immagine": "/images/products/amazon-asics-gel-contend.webp",
     "descrizione": "Classic stable trainer with GEL cushioning. Link leads to current Amazon search results and offers.",
     "rating": 4.5
@@ -488,7 +455,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$60–$95",
-    "linkAffiliato": "https://www.amazon.com/s?k=Puma+Electrify+Nitro&crid=2UCZUEVB36UF5&sprefix=puma+electrify+nitro%2Caps%2C227&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2FAdidas-Duramo%2Fs%3Fk%3DAdidas%2BDuramo&ref=nb_sb_noss_1",
+    "linkAffiliato": "https://www.amazon.com/s?k=Puma+Electrify+Nitro+running+shoes",
     "immagine": "/images/products/amazon-puma-electrify.webp",
     "descrizione": "Responsive NITRO foam for speed sessions. Link leads to latest Amazon search results and availability.",
     "rating": 4.5
@@ -505,7 +472,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$55–$85",
-    "linkAffiliato": "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+Arishi+v4&crid=10I65449R5R9M&sprefix=new+balance+fresh+foam+arishi+v4%2Caps%2C211&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2FAdidas-Duramo%2Fs%3Fk%3DAdidas%2BDuramo&ref=nb_sb_noss_1",
+    "linkAffiliato": "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+Arishi+v4",
     "immagine": "/images/products/amazon-nb-fresh-foam-arishi.webp",
     "descrizione": "Versatile Fresh Foam cushioning for road or gym. Link leads to current Amazon search results.",
     "rating": 4.5
@@ -521,7 +488,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$110–$160",
-    "linkAffiliato": "https://www.amazon.com/s?k=Brooks+Cascadia&crid=HV13NYUZ4WB3&sprefix=brooks+cascadia+%2Caps%2C204&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2FAdidas-Duramo%2Fs%3Fk%3DAdidas%2BDuramo&ref=nb_sb_noss_2",
+    "linkAffiliato": "https://www.amazon.com/s?k=Brooks+Cascadia+trail+running+shoes",
     "immagine": "/images/products/amazon-brooks-cascadia.webp",
     "descrizione": "The durability standard for technical trails. Link leads to latest Amazon search results and offers.",
     "rating": 4.5
@@ -537,7 +504,7 @@
       "top-picks-2026"
     ],
     "prezzoRange": "$110–$170",
-    "linkAffiliato": "https://www.amazon.com/s?k=Salomon+Speedcross&crid=3D9QZ1QL6TEB2&sprefix=salomon+speedcross%2Caps%2C216&web_form_name=site-search&web_form_page=https%3A%2F%2Fwww.amazon.com%2FAdidas-Duramo%2Fs%3Fk%3DAdidas%2BDuramo&ref=nb_sb_noss_1",
+    "linkAffiliato": "https://www.amazon.com/s?k=Salomon+Speedcross+trail+running",
     "immagine": "/images/products/amazon-salomon-speedcross.webp",
     "descrizione": "Maximum grip on soft and muddy terrain. Link leads to current Amazon search results for Speedcross models.",
     "rating": 4.5
@@ -553,7 +520,7 @@
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€30",
-    "linkAffiliato": "https://www.amazon.it/Nike-Maglietta-Dri-Fit-Horizon-HF6142-370/dp/B0DN1PM19Z",
+    "linkAffiliato": "https://www.amazon.com/s?k=Nike+Dri-FIT+running+shirt",
     "immagine": "/images/products/amazon-nike-dri-fit.webp",
     "descrizione": "The classic choice for daily training. Moisture-wicking Dri-FIT technology keeps you dry and comfortable.",
     "rating": 4
@@ -569,7 +536,7 @@
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€35",
-    "linkAffiliato": "https://www.amazon.it/adidas-Camo-SHO-Pantaloncini-Uomo/dp/B096KLC2SH",
+    "linkAffiliato": "https://www.amazon.com/s?k=Adidas+AEROREADY+running+shorts",
     "immagine": "/images/products/amazon-adidas-shorts.webp",
     "descrizione": "Lightweight AEROREADY running shorts with moisture management. Built-in brief liner to prevent chafing.",
     "rating": 4
@@ -585,7 +552,7 @@
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€30",
-    "linkAffiliato": "https://www.amazon.it/Under-Armour-Tech-T-Shirt-Uomo/dp/B0D17ZTY7M",
+    "linkAffiliato": "https://www.amazon.com/s?k=Under+Armour+Tech+2.0+t-shirt",
     "immagine": "/images/products/amazon-ua-tech-shirt.webp",
     "descrizione": "Quick-drying, ultra-soft fabric with a natural feel. The most-reviewed shirt on Amazon for a reason.",
     "rating": 4
@@ -603,7 +570,7 @@
       "top-apparel-2026"
     ],
     "prezzoRange": "€160–€220",
-    "linkAffiliato": "https://www.amazon.it/GORE-WEAR-Giacca-Running-Cappuccio/dp/B07G4M6VYF",
+    "linkAffiliato": "https://www.amazon.com/s?k=Gore+Wear+R3+running+jacket",
     "immagine": "/images/products/amazon-gore-tex-jacket.webp",
     "descrizione": "Premium GORE-TEX® protection for running in the rain. High breathability and absolute waterproofness for serious training.",
     "rating": 5
@@ -621,7 +588,7 @@
       "top-recovery-2026"
     ],
     "prezzoRange": "€18–€25",
-    "linkAffiliato": "https://www.amazon.it/UYN-Compression-Onepiece-Socks-RUNNING/dp/B09GG5V9NV",
+    "linkAffiliato": "https://www.amazon.com/s?k=UYN+compression+running+socks",
     "immagine": "/images/products/amazon-calze-compressione.webp",
     "descrizione": "Graduated compression socks for improved blood circulation and faster recovery. Reduce muscle fatigue and swelling during and after long runs.",
     "rating": 4
@@ -638,7 +605,7 @@
       "top-recovery-2026"
     ],
     "prezzoRange": "€35–€45",
-    "linkAffiliato": "https://www.amazon.it/Trigger-Point-Performance-Rullo-Massaggio/dp/B0040EGNIU",
+    "linkAffiliato": "https://www.amazon.com/s?k=TriggerPoint+GRID+foam+roller",
     "immagine": "/images/products/amazon-triggerpoint-grid.webp",
     "descrizione": "The original grid foam roller for myofascial release. Durable, multi-density surface for professional-grade massage at home.",
     "rating": 5
@@ -655,7 +622,7 @@
       "top-recovery-2026"
     ],
     "prezzoRange": "€50–€80",
-    "linkAffiliato": "https://www.amazon.it/Mini-Pistola-Massaggio-Muscolare-Portatile/dp/B08L5VYQFZ",
+    "linkAffiliato": "https://www.amazon.com/s?k=mini+massage+gun+percussion",
     "immagine": "/images/products/amazon-massage-gun-mini.webp",
     "descrizione": "Ultra-portable percussion massager. Small enough for a gym bag but powerful enough to relieve muscle tension and improve circulation.",
     "rating": 5
@@ -672,7 +639,7 @@
       "top-recovery-2026"
     ],
     "prezzoRange": "€15–€25",
-    "linkAffiliato": "https://www.amazon.it/Physix-Gear-Sport-Compressione-Graduata/dp/B01J4ME6L4",
+    "linkAffiliato": "https://www.amazon.com/s?k=Physix+Gear+compression+socks",
     "immagine": "/images/products/amazon-physix-gear-socks.webp",
     "descrizione": "High-quality compression socks perfect for post-race recovery, long flights, and preventing spider veins.",
     "rating": 5
@@ -689,7 +656,7 @@
       "top-recovery-2026"
     ],
     "prezzoRange": "€8–€12",
-    "linkAffiliato": "https://www.amazon.it/Palla-Massaggio-Lacrosse-Trigger-Point/dp/B07V6Q8ZMN",
+    "linkAffiliato": "https://www.amazon.com/s?k=lacrosse+massage+ball",
     "immagine": "/images/products/amazon-lacrosse-ball.webp",
     "descrizione": "Dense rubber ball for targeted trigger point massage. Perfect for the plantar fascia and hard-to-reach muscle knots.",
     "rating": 5

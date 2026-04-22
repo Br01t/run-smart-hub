@@ -14,7 +14,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Deep myofascial release after intense workouts",
     recommendedFor: "Pro Recovery",
     price: "€70-100",
-    link: "https://www.amazon.it/RENPHO-Pistola-Massaggio-Muscolare-Massaggiatore/dp/B0868K7HLH",
+    link: "https://www.amazon.com/s?k=Renpho+massage+gun",
     image: "/images/products/amazon-massage-gun-mini.webp",
     emphasized: true
   },
@@ -31,7 +31,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Calves and IT band maintenance",
     recommendedFor: "All Runners",
     price: "€35-45",
-    link: "https://www.amazon.it/Trigger-Point-Performance-Rullo-Massaggio/dp/B0040EGNIU",
+    link: "https://www.amazon.com/s?k=TriggerPoint+GRID+foam+roller",
     image: "/images/products/amazon-triggerpoint-grid.webp",
     emphasized: true
   },
@@ -48,7 +48,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Post-race inflammation and long travel",
     recommendedFor: "Recovery / Travel",
     price: "€10-15",
-    link: "https://www.amazon.it/Physix-Gear-Sport-Compressione-Graduata/dp/B01J4ME6L4",
+    link: "https://www.amazon.com/s?k=Physix+Gear+compression+socks",
     image: "/images/products/amazon-physix-gear-socks.webp"
   },
   { 
@@ -64,7 +64,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Glute activation and hip stability",
     recommendedFor: "Injury Prevention",
     price: "€10-15",
-    link: "https://www.amazon.it/s?k=fasce+elastiche+loop+bands",
+    link: "https://www.amazon.com/s?k=mini+loop+resistance+bands+set",
     image: "/images/products/recovery-loop-bands.webp"
   },
   { 
@@ -80,7 +80,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Plantar fasciitis and stubborn trigger points",
     recommendedFor: "Specific Maintenance",
     price: "€5-10",
-    link: "https://www.amazon.it/Palla-Massaggio-Lacrosse-Trigger-Point/dp/B07V6Q8ZMN",
+    link: "https://www.amazon.com/s?k=lacrosse+massage+ball",
     image: "/images/products/amazon-lacrosse-ball.webp"
   },
   { 
@@ -96,7 +96,7 @@ export const recoverySpecs: RecoverySpec[] = [
     bestFor: "Acute inflammation and muscle stiffness",
     recommendedFor: "First Aid / Therapy",
     price: "€10-15",
-    link: "https://www.amazon.it/s?k=gel+pack+reusable",
+    link: "https://www.amazon.com/s?k=reusable+gel+ice+pack+hot+cold",
     image: "/images/products/recovery-gel-pack.webp"
   }
 ];
