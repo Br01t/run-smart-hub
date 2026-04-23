@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 interface SEOProps {
   title: string;
   description: string;
+  keywords?: string[];
   path?: string;
   ogType?: string;
   ogImage?: string;
@@ -13,6 +14,7 @@ interface SEOProps {
 const SEO = ({
   title,
   description,
+  keywords,
   path = "",
   ogType = "website",
   ogImage = "https://www.runners-hub.org/og-image.png",
@@ -32,6 +34,7 @@ const SEO = ({
       {/* Standard Metadata */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords.join(", ")} />}
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph / Facebook */}

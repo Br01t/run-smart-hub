@@ -10,6 +10,9 @@ export interface GuideSection {
 export interface GuideContent {
   title: string;
   description: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
   tags: string[];
   heroImage: string;
   readTime: string;

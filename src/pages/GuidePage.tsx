@@ -38,9 +38,10 @@ const GuidePage = () => {
   return (
     <Layout>
       <SEO 
-        title={`${guide.title}`} 
-        description={guide.description}
+        title={guide.seoTitle || guide.title} 
+        description={guide.seoDescription || guide.description}
         path={`/guides/${slug}`}
+        keywords={guide.keywords}
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",

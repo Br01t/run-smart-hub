@@ -3,14 +3,18 @@ import guideCadence from "@/assets/guide-cadence.webp";
 
 export const runningCadence: GuideContent = {
   title: "Running Cadence: Why Steps Per Minute Matter",
-  description: "Learn why cadence impacts performance, the 180 spm benchmark, and how to safely increase yours.",
+  seoTitle: "Running Cadence Guide 2026: Why 180 SPM is a Benchmark",
+  seoDescription: "Unlock running efficiency with the science of cadence. Learn how increasing steps per minute reduces injury risk, vertical oscillation, and braking forces.",
+  keywords: ["running cadence", "180 spm running", "increase steps per minute", "running vertical oscillation", "overstriding injury", "running efficiency"],
+  description: "Learn why cadence impacts performance, the 180 spm benchmark, and how to safely increase your turnover.",
   tags: ["running", "accessories"],
   heroImage: guideCadence,
-  readTime: "6 min read",
+  readTime: "12 min read",
   keyTakeaways: [
-    "Higher cadence reduces impact forces on joints",
-    "Optimal cadence is individual — 170-190 spm for most runners",
-    "Increase by no more than 5% at a time",
+    "Increasing cadence shortens your stride, bringing your foot strike closer to your center of mass",
+    "High cadence (170-190 spm) reduces peak impact forces on the knee by up to 20%",
+    "Vertical Oscillation (wasted upward energy) is significantly lower at higher cadences",
+    "The 'Achilles Spring' is most efficient when ground contact time is minimized",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calories Calculator" },
@@ -22,36 +26,46 @@ export const runningCadence: GuideContent = {
   ],
   sections: [
     { 
-      heading: "The Science: Stride Frequency & Impact Loading", 
-      body: "Cadence is the number of steps per minute (spm). It is the primary lever for reducing 'Vertical Oscillation'. High vertical oscillation is wasted energy. Increasing cadence naturally shortens the stride, which brings the foot strike closer to the center of mass, reducing peak impact forces on the knee by up to 20%.\n\nGround Contact Time (GCT): Higher cadence reduces GCT. Elite runners spend less time on the ground, utilizing the 'natural springiness' of the Achilles tendon rather than slow muscle contraction.", 
+      heading: "The Science: Stride Frequency", 
+      body: "Cadence, or Stride Frequency, is the number of steps you take per minute (spm). It is the primary lever for reducing 'Vertical Oscillation'—the amount of 'bounce' in your stride. \n\n**Vertical Oscillation:** Every centimeter you move upward is energy that isn't moving you forward. High-cadence runners move more horizontally and less vertically, which dramatically improves Running Economy. By taking more steps, you reduce the 'impact transient' (the sharp spike of force) that travels through your skeleton with every landing.", 
       variant: "highlight" 
     },
     { 
-      heading: "The 180 SPM Benchmark", 
-      body: "While 180 spm is a common benchmark, it is individual. Optimal cadence is a function of leg length and pace. However, most recreational runners overstride at 150-160 spm, which increases injury risk.\n\nEnergy Conservation: Overstriding causes a 'braking' effect with every step. Moving your cadence from 160 to 170 spm can reduce the load on your hip and knee joints by millions of kilograms over a full marathon training cycle.", 
+      heading: "The Braking Force Effect", 
+      body: "When you run with a low cadence, you are likely 'overstriding'—landing your heel far in front of your knee. This creates a 'Braking Force' that sends a shockwave up your leg and literally slows you down. \n\n- **Center of Mass:** Increasing your cadence naturally pulls your foot landing underneath your hips. This converts the vertical impact into forward momentum, turning a 'clunky' stride into a smooth, rolling motion.", 
+      variant: "default" 
+    },
+    { 
+      heading: "The Achilles 'Natural Spring'", 
+      body: "Your Achilles tendon is the most efficient 'energy return' system in the human body. However, it only works if your ground contact time is short. \n\n- **Ground Contact Time (GCT):** High-cadence runners spend less time on the ground. This allows the tendon to act like a spring, storing and releasing elastic energy. If your cadence is too low, you 'sink' into the ground, forcing your muscles to do the work that your tendons should be doing for free.", 
       variant: "default", 
       listItems: [
-        "Stride Length vs. Frequency: Speed = Stride Length x Frequency. Frequency is safer to increase than length.", 
-        "Braking Forces: Shorter strides eliminate the 'heel-strike' braking effect.", 
-        "Neuromuscular Adaptations: High turnover trains the brain to coordinate faster leg movement.",
-        "Metronomic Pacing: Using auditory cues helps 'reset' the brain's internal rhythm."
+        "Metabolic Cost: Overstriding increases the oxygen cost of running by ~5-8%", 
+        "Injury Protection: Higher cadence is the #1 fix for 'Runner's Knee' (PFPS)", 
+        "SPM Benchmark: Elite runners rarely drop below 175 spm, even at 'easy' paces",
+        "Watch Data: Use your GPS watch to track 'Vertical Ratio' alongside Cadence."
       ] 
     },
     {
-      heading: "The 5% Rule",
-      body: "Never increase your cadence by more than 5% at once. Sudden jumps can cause calf and Achilles strain as the body adjusts to the different loading patterns.",
+      heading: "The 180 SPM Myth",
+      body: "180 spm is not a 'magic number' that applies to everyone. Taller runners with longer legs naturally have a slightly lower cadence, while shorter runners may be closer to 190. The goal is not a specific number, but a **range** (170-190) that feels efficient for your unique anatomy.",
+      variant: "tip"
+    },
+    {
+      heading: "Transition Warning: The 5% Rule",
+      body: "Do not try to jump from 155 to 180 in one week. This will overwork your calves and Achilles, leading to tendonitis. Increase your average cadence by only **5% every 3-4 weeks** to allow your neuromuscular system to adapt.",
       variant: "warning"
     },
     { 
-      heading: "The Practical Guide: What Should I Do?", 
-      body: "Increase your turnover safely with these drills.", 
+      heading: "Cadence Improvement Checklist", 
+      body: "How to safely and effectively increase your turnover.", 
       variant: "checklist", 
       listItems: [
-        "Measure First: Use your watch to find your current average cadence on a flat, easy run.", 
-        "Metronome Drills: Use a metronome app set to 5% higher than your current avg for 1-minute intervals.", 
-        "Focus on 'Quick Feet': Think about lifting your feet off the ground faster, rather than pushing off harder.", 
-        "Treadmill Training: Treadmills provide a constant speed, making it easier to focus purely on cadence changes.",
-        "Downhill Cadence: Focus on high turnover when running downhill to avoid heavy impact."
+        "Measure Baseline: Find your average spm on a flat 5km run at Zone 2 effort.", 
+        "Use a Metronome: Set a metronome app to 5 spm above your baseline for short blocks.", 
+        "Shorten the Stride: Focus on taking 'smaller, quieter' steps rather than moving faster.", 
+        "Uphill Sprints: Running up steep hills naturally forces a high cadence and proper form.",
+        "Check Your Shoes: Heavy, stiff shoes can make high cadence feel more difficult; lighter trainers help."
       ] 
     },
   ],

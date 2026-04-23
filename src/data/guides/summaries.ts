@@ -1,21 +1,123 @@
 import { GuideSummary } from "@/components/guides/GuideCards";
 
 export const guidesList: GuideSummary[] = [
-  { slug: "choosing-running-shoes", title: "How to Choose Running Shoes", excerpt: "Complete guide to choosing the right running shoes: cushioning, drop, foot strike and terrain.", readTime: "8 min read", category: "Gear" },
-  { slug: "supplements-for-runners", title: "Essential Supplements for Runners", excerpt: "Which supplements actually work? From vitamin D to magnesium, here's what the science says.", readTime: "10 min read", category: "Nutrition" },
-  { slug: "muscle-recovery", title: "Muscle Recovery After Running", excerpt: "Stretching, foam rolling, nutrition and sleep: strategies to recover faster.", readTime: "7 min read", category: "Recovery" },
-  { slug: "running-nutrition", title: "Running Nutrition: What to Eat Before, During & After", excerpt: "A complete guide to fueling your runs properly for optimal performance and recovery.", readTime: "9 min read", category: "Nutrition" },
-  { slug: "injury-prevention", title: "Runner's Guide to Injury Prevention", excerpt: "Stay injury-free with the 10% rule, strength training and proper recovery techniques.", readTime: "8 min read", category: "Health" },
-  { slug: "marathon-training", title: "Marathon Training Guide for Beginners", excerpt: "Everything you need to know for your first 42K: training plans, pacing and race day tips.", readTime: "12 min read", category: "Training" },
-  { slug: "trail-running-beginners", title: "Getting Started with Trail Running", excerpt: "From gear to technique: a beginner's guide to hitting the trails safely and confidently.", readTime: "9 min read", category: "Trail" },
-  { slug: "running-heart-rate-zones", title: "Heart Rate Zone Training for Runners", excerpt: "Use heart rate zones to train smarter: the 80/20 rule, max HR testing and more.", readTime: "8 min read", category: "Training" },
-  { slug: "stretching-for-runners", title: "The Runner's Stretching Guide", excerpt: "Dynamic vs static stretching, when to stretch, and the best routines for injury prevention.", readTime: "7 min read", category: "Recovery" },
-  { slug: "running-form", title: "How to Improve Your Running Form", excerpt: "Fix your posture, arm swing and foot strike to run more efficiently and avoid injuries.", readTime: "8 min read", category: "Training" },
-  { slug: "running-cadence", title: "Running Cadence: Why Steps Per Minute Matter", excerpt: "Learn why 180 spm is the magic number and how to increase your cadence safely.", readTime: "6 min read", category: "Training" },
-  { slug: "hill-training", title: "Hill Training for Runners", excerpt: "Uphill repeats, downhill technique and strength gains: the complete guide to hill workouts.", readTime: "8 min read", category: "Training" },
-  { slug: "best-running-watches", title: "Best GPS Running Watches: Buyer's Guide", excerpt: "From budget to premium: how to choose the right GPS watch for your training needs and goals.", readTime: "10 min read", category: "Gear" },
-  { slug: "winter-running", title: "How to Run Safely in Cold Weather", excerpt: "Layering strategies, gear essentials and safety tips for running through winter.", readTime: "8 min read", category: "Gear" },
-  { slug: "interval-training", title: "Interval Training for Runners: The Complete Guide", excerpt: "Fartlek, tempo, VO2max repeats — how to structure speed sessions for maximum gains.", readTime: "9 min read", category: "Training" },
-  { slug: "sleep-and-running", title: "Sleep & Running Performance: The Science", excerpt: "How sleep quality directly impacts your running performance, recovery and injury risk.", readTime: "7 min read", category: "Recovery" },
-  { slug: "running-shoe-rotation", title: "How to Build a Running Shoe Rotation", excerpt: "The science of mechanical variation: how rotating shoes reduces injury risk and improves performance.", readTime: "9 min read", category: "Gear" },
+  { 
+    slug: "choosing-running-shoes", 
+    title: "How to Choose Running Shoes", 
+    excerpt: "The biomechanical guide to footwear. From PEBA vs EVA foam science to the 'Comfort Filter' theory and heel-to-toe drop mechanics.", 
+    readTime: "14 min read", 
+    category: "Gear" 
+  },
+  { 
+    slug: "supplements-for-runners", 
+    title: "Essential Supplements for Runners", 
+    excerpt: "Evidence-based analysis of ergogenic aids. Discover the dosage protocols for Creatine, Beta-Alanine, and the science of the Leucine Threshold.", 
+    readTime: "15 min read", 
+    category: "Nutrition" 
+  },
+  { 
+    slug: "muscle-recovery", 
+    title: "Muscle Recovery After Running", 
+    excerpt: "Master the Supercompensation cycle. Learn the science of parasympathetic reset, glycogen resaturation, and active recovery protocols.", 
+    readTime: "12 min read", 
+    category: "Recovery" 
+  },
+  { 
+    slug: "running-nutrition", 
+    title: "Running Nutrition: Fueling & Metabolism", 
+    excerpt: "Optimize your substrate utilization. From the 2:1 glucose-to-fructose ratio to gut training protocols and glycogen super-loading.", 
+    readTime: "14 min read", 
+    category: "Nutrition" 
+  },
+  { 
+    slug: "injury-prevention", 
+    title: "Runner's Guide to Injury Prevention", 
+    excerpt: "Bulletproof your body using the ACWR model, isometric tendon loading, and the science of structural integrity and RED-S prevention.", 
+    readTime: "14 min read", 
+    category: "Health" 
+  },
+  { 
+    slug: "marathon-training", 
+    title: "Marathon Training Guide for Beginners", 
+    excerpt: "The 42.2K blueprint. Scientific training blocks, tapering for supercompensation, and physiological strategies to avoid 'The Wall'.", 
+    readTime: "16 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "trail-running-beginners", 
+    title: "Getting Started with Trail Running", 
+    excerpt: "Master the multi-dimensional load. Science of proprioceptive neural activation, power hiking efficiency, and lug depth traction mechanics.", 
+    readTime: "14 min read", 
+    category: "Trail" 
+  },
+  { 
+    slug: "running-heart-rate-zones", 
+    title: "Heart Rate Zone Training for Runners", 
+    excerpt: "Stop guessing your intensity. The 80/20 polarized model, metabolic thresholds (AeT/LT), and the science of cardiac drift.", 
+    readTime: "12 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "stretching-for-runners", 
+    title: "The Runner's Stretching Guide", 
+    excerpt: "Optimize your stretch-shortening cycle. Why tendon stiffness matters, the science of 'creep', and neural flossing techniques.", 
+    readTime: "12 min read", 
+    category: "Recovery" 
+  },
+  { 
+    slug: "running-form", 
+    title: "How to Improve Your Running Form", 
+    excerpt: "Kinetic chain optimization. Master the ankle lean, pelvic tilt mechanics, and arm swing torque for maximum oxygen economy.", 
+    readTime: "12 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "running-cadence", 
+    title: "Running Cadence: Why SPM Matters", 
+    excerpt: "Eliminate braking forces. The science of vertical oscillation, ground contact time, and utilizing the Achilles 'Natural Spring'.", 
+    readTime: "12 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "hill-training", 
+    title: "Hill Training for Runners", 
+    excerpt: "Strength training in disguise. Master Type II fiber recruitment, eccentric downhill loading, and explosive power mechanics.", 
+    readTime: "12 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "best-running-watches", 
+    title: "Best GPS Running Watches: Buyer's Guide", 
+    excerpt: "GNSS technology and training metrics. From L1+L5 multi-band accuracy to HRV readiness scores and Running Power (Watts).", 
+    readTime: "14 min read", 
+    category: "Gear" 
+  },
+  { 
+    slug: "winter-running", 
+    title: "How to Run Safely in Cold Weather", 
+    excerpt: "Thermoregulation science. Mastering the 3-layer microclimate, cold-induced diuresis, and bronchospasm prevention.", 
+    readTime: "12 min read", 
+    category: "Gear" 
+  },
+  { 
+    slug: "interval-training", 
+    title: "Interval Training for Runners", 
+    excerpt: "Manipulation of energy systems. Work-to-rest ratios for Phosphocreatine resynthesis, VO2 Max repeats, and lactate shuttle efficiency.", 
+    readTime: "14 min read", 
+    category: "Training" 
+  },
+  { 
+    slug: "sleep-and-running", 
+    title: "Sleep & Running Performance: The Science", 
+    excerpt: "The ultimate anabolic window. Hormonal reset, the glymphatic flush system, and the science of sleep extension for athletes.", 
+    readTime: "12 min read", 
+    category: "Recovery" 
+  },
+  { 
+    slug: "running-shoe-rotation", 
+    title: "How to Build a Running Shoe Rotation", 
+    excerpt: "Mechanical variation science. Preventing repetitive stress via foam recovery, varying geometries, and the 'Monotony of Load' theory.", 
+    readTime: "12 min read", 
+    category: "Gear" 
+  },
 ];

@@ -3,14 +3,18 @@ import guideTrail from "@/assets/guide-trail.webp";
 
 export const trailRunning: GuideContent = {
   title: "Getting Started with Trail Running",
+  seoTitle: "Trail Running Guide 2026: Gear & Technique Science",
+  seoDescription: "Escape the pavement. Master the science of trail running, from proprioceptive neural load to 'Power Hiking' efficiency and lug depth mechanics.",
+  keywords: ["trail running for beginners", "trail running shoes guide", "power hiking technique", "trail running safety", "uphill running trails", "trail vs road running"],
   description: "A beginner's guide to trail running: gear, technique, safety and finding the right trails.",
   tags: ["shoes", "running", "accessories", "hydration", "top-gear-2026"],
   heroImage: guideTrail,
-  readTime: "9 min read",
+  readTime: "14 min read",
   keyTakeaways: [
-    "Expect to be 20-40% slower on trails — that's normal",
-    "Trail shoes with aggressive lugs are essential",
-    "Always tell someone your route and expected return",
+    "Trail running requires 3x more neural activation due to proprioceptive demand",
+    "On grades steeper than 15%, 'Power Hiking' is more metabolically efficient than running",
+    "Lug depth and rubber compound determine shear resistance on loose or wet surfaces",
+    "Expect to be 20-50% slower on trails—focus on time on feet rather than mileage",
   ],
   relatedTools: [
     { to: "/tools/hydration", label: "Hydration Calculator" },
@@ -22,36 +26,46 @@ export const trailRunning: GuideContent = {
   ],
   sections: [
     { 
-      heading: "The Science: Terrain Variability & Vertical Displacement", 
-      body: "Trail running is a multi-dimensional sport. Unlike road running, which focuses on sagittal plane efficiency, trails require frontal plane stability and high eccentric strength for descending. Every 100m of climb is roughly equivalent to 1km of flat running in terms of energy expenditure.\n\Proprioceptive Demand: Technical trails require 3x more neural activation as the brain must process foot placement, balance, and obstacle avoidance simultaneously. This increases 'Perceived Exertion' (RPE) even if the cardiovascular load remains moderate.", 
+      heading: "The Science: Neural Proprioception", 
+      body: "Trail running is a multi-dimensional sport. Unlike road running, which focuses on sagittal plane efficiency (forward-back), trails require constant **Frontal Plane stability** and lateral control. \n\n**The Proprioceptive Load:** Technical trails force the brain to process foot placement, balance, and obstacle avoidance simultaneously. This increases your 'Neural Fatigue' significantly faster than road running, even if your heart rate remains in an easy zone. This is why trail runners often feel 'mentally drained' after a long mountain session.", 
       variant: "highlight" 
     },
     { 
-      heading: "Traction Mechanics & Rock Protection", 
-      body: "Trail footwear is a safety tool. Lug depth determines shear resistance on loose surfaces. 'Rock Plates' (hard TPU inserts) protect the metatarsals from sharp impacts.\n\nAltitude vs. Sea Level: If your trails involve elevation gain into the alpine, the partial pressure of oxygen drops. Even at 1,500m, your VO2 max can drop by 5-7%, requiring a significant reduction in pace to maintain an aerobic state.", 
+      heading: "Vertical Displacement & Energy Cost", 
+      body: "Gravity is the primary variable on the trails. Every 100 meters of vertical gain is roughly equivalent to 1 kilometer of flat running in terms of energy expenditure. \n\n- **Power Hiking:** Elite trail runners 'power hike' on steep inclines to preserve glycogen. By leaning forward and pushing off their thighs, they maintain a consistent heart rate, avoiding the 'Redline' that occurs when trying to run a 20% grade. Master the transition from running to hiking to dominate long trail races.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Traction Mechanics: Lugs & Rubber", 
+      body: "Your shoes are your primary safety equipment. \n\n- **Lug Depth:** 3-4mm lugs are for hard-pack trails; 5-8mm lugs are for deep mud and loose scree. \n- **Shear Resistance:** The compound of the rubber (e.g. Vibram Megagrip) is designed to create friction on wet rock. A road shoe lacks both the lug depth and the specialized compound, making it dangerous on technical descents. \n- **Rock Protection:** TPU rock plates protect the delicate metatarsals from 'bruising' caused by sharp stones.", 
       variant: "default", 
       listItems: [
-        "Descending Mechanics: High eccentric load causes microscopic muscle tears; trail runners need higher protein.", 
-        "Ankle Stability: Lateral movement on trails requires strong peroneal muscles to prevent inversion sprains.", 
-        "Trekking Poles: Can reduce the load on leg joints by 25% on steep (>15%) climbs.",
-        "Surface Compliance: Softer trails (mud/pine needles) absorb more energy than road, increasing metabolic cost."
+        "Descending Form: Use short, quick steps and 'soft knees' to absorb impact", 
+        "Ankle Strength: Single-leg balance drills are essential for preventing sprains", 
+        "Hydration Shift: Mountain environments are often drier; increase fluid intake",
+        "Altitude Drop: At 2,000m+, your VO2 max can drop by 10% due to lower oxygen pressure."
       ] 
     },
     {
-      heading: "The 'Hiking' Efficiency",
-      body: "In trail running, hiking is a strategic skill, not a sign of weakness. On grades steeper than 12-15%, hiking is often more metabolically efficient than running, preserving your 'matchbook' for the runnable sections.",
+      heading: "The 'Look Ahead' Rule",
+      body: "Do not stare at your feet. Your brain needs to 'pre-process' the trail 3-5 meters ahead. By the time your feet reach a rock, your nervous system should already have a plan for how to step over or around it.",
       variant: "tip"
     },
+    {
+      heading: "Safety: The 10% Rule",
+      body: "Never attempt a technical mountain trail alone without a whistle, a space blanket, and an offline map (like GPX on your watch). Mountain weather can change in minutes, and a minor ankle sprain can quickly become a life-threatening situation if you are unprepared.",
+      variant: "warning"
+    },
     { 
-      heading: "The Practical Guide: What Should I Do?", 
-      body: "Transition to the trails safely and efficiently with this tactical guide.", 
+      heading: "Trail Transition Checklist", 
+      body: "Tactical steps for your first off-road adventures.", 
       variant: "checklist", 
       listItems: [
-        "Ditch the Pace: Run by effort (Heart Rate or RPE). Expect to be 20-50% slower than on the road.", 
-        "Lookup Cue: Keep your eyes 3-5 meters ahead to pre-process terrain; don't just stare at your feet.", 
-        "Step Lightly: Use shorter, quicker steps on technical sections to maintain balance and avoid 'locking' the knee.", 
-        "Carry the Essentials: Always have a lightweight waterproof shell, whistle, and mobile phone with offline maps.",
-        "Eco-Ethics: Stay on the trail to prevent erosion and respect local wildlife habitats."
+        "Ignore the Pace: Your 5:00/km road pace might be 8:00/km on a technical trail.", 
+        "Equip the Grip: Invest in trail-specific shoes with a protective toe cap.", 
+        "Learn to Hike: Practice the transition from running to hiking on steep local hills.", 
+        "Carry Water: Trails are slower; you will be 'out there' longer than you think.",
+        "Leave No Trace: Always pack out your gel wrappers and stay on the designated paths."
       ] 
     },
   ],

@@ -3,14 +3,18 @@ import guideIntervalTraining from "@/assets/guide-interval-training.webp";
 
 export const intervalTraining: GuideContent = {
   title: "Interval Training for Runners: The Complete Guide",
-  description: "Master every type of speed workout — from fartlek to VO2max repeats. Learn how to structure intervals, set target paces, and periodize speed work for race-day results.",
+  seoTitle: "Interval Training Guide 2026: Speed Work Science",
+  seoDescription: "Master the art of speed. Learn how to structure VO2 Max repeats, Tempo runs, and Fartleks using scientific work-to-rest ratios for maximum performance.",
+  keywords: ["interval training running", "VO2 max intervals", "tempo run vs threshold", "fartlek training guide", "speed work for marathon", "running energy systems"],
+  description: "Master every type of speed workout — from fartlek to VO2 max repeats. Learn how to structure intervals and set target paces.",
   tags: ["running", "energy", "muscles"],
   heroImage: guideIntervalTraining,
-  readTime: "9 min read",
+  readTime: "14 min read",
   keyTakeaways: [
-    "Speed work should be max 20% of weekly volume (80/20 rule)",
-    "Different interval types target different energy systems",
-    "Always warm up 10-15 min before any speed session",
+    "Interval training manipulates work-to-rest ratios to target specific energy systems",
+    "VO2 Max repeats (3-5 mins) improve your maximal oxygen processing capacity",
+    "Tempo runs (Threshold) increase the pace you can sustain without 'redlining'",
+    "Active recovery (jogging) between sets clears lactate faster than standing still",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calories Calculator" },
@@ -22,36 +26,46 @@ export const intervalTraining: GuideContent = {
   ],
   sections: [
     { 
-      heading: "The Science: Energy Systems & Lactate Clearance", 
-      body: "Interval training is the manipulation of work-to-rest ratios to target specific metabolic pathways. \n\nLactate Shuttle Efficiency: High-intensity intervals (VO2 Max repeats) train the body to 'shuttle' lactate from fast-twitch fibers to slow-twitch fibers and the heart to be used as fuel. This increases your 'Redline'—the pace you can maintain before catastrophic muscle fatigue occurs.", 
+      heading: "The Science: Energy Systems", 
+      body: "Interval training is the strategic manipulation of intensity and recovery to stress the body's three energy systems: the Phosphagen (ATP-PC), Glycolytic (Anaerobic), and Oxidative (Aerobic) pathways. \n\n**Lactate Shuttle Efficiency:** High-intensity intervals train your body to 'shuttle' lactate out of the working muscles to be used as fuel by the heart and liver. This physiological adaptation allows you to sustain 'race pace' with significantly less perceived exertion.", 
       variant: "highlight" 
     },
     { 
-      heading: "Structuring the Speed Microcycle", 
-      body: "A successful interval session requires a structured warm-up to 'unlock' the neuromuscular system. The recovery period between intervals is purely functional—it allows for the partial resynthesis of Phosphocreatine (PCr).\n\nPeripheral Adaptations: Speed work increases the diameter of the aorta and the stroke volume of the heart, allowing more oxygen-rich blood to reach the quadriceps and glutes with every beat.", 
+      heading: "The Work-to-Rest Ratio Matrix", 
+      body: "The magic of intervals lies in the recovery. \n\n- **VO2 Max Repeats (1:1 Ratio):** If you run for 4 minutes hard, you rest for 4 minutes easy. This allows for partial Phosphocreatine (PCr) resynthesis, so you can repeat the high-intensity effort. \n- **Anaerobic Capacity (1:3 Ratio):** Short, explosive bursts (e.g., 200m sprints) require long rest to allow the nervous system to recover. \n- **Threshold/Tempo (Short Rest):** 1-mile repeats with only 60-90 seconds of rest keep the heart rate elevated, forcing the body to deal with continuous lactate accumulation.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Types of Speed Work", 
+      body: "Every runner's plan should rotate through these three 'Pillars of Speed'. \n\n1. **Fartlek ('Speed Play'):** Unstructured intervals based on landmarks (e.g., 'sprint to that tree'). Best for building mental grit and variety. \n2. **Tempo Runs:** Sustained efforts at 85-90% of Max HR. This is the 'glue' that holds your marathon pace together. \n3. **VO2 Max Repeats:** Efforts of 800m to 1600m that leave you gasping for air. These build the 'aerobic ceiling' that dictates your ultimate potential.", 
       variant: "default", 
       listItems: [
-        "VO2 Max Repeats: 3-5 minute efforts at 95% Max HR to maximize oxygen uptake ceiling.", 
-        "Tempo/Threshold: 20-40 minute sustained efforts at 'comfortably hard' pace to build endurance.", 
-        "Fartlek: 'Speed play' intervals to build mental adaptability to changing paces.",
-        "Anaerobic Capacity: Short (30-60 sec) max-effort bursts to train the body to handle high acidity."
+        "Strides: 80-100m accelerations to improve running economy and neuromuscular 'pop'", 
+        "Stroke Volume: Speed work increases the amount of blood pumped per heartbeat", 
+        "Capillarization: Intense efforts create new microscopic blood vessels in the muscles",
+        "Mental Taper: Intervals teach the brain that 'uncomfortable' is not 'dangerous'."
       ] 
     },
     {
-      heading: "The 20% Speed Ceiling",
-      body: "To prevent injury, speed training (intensity > Zone 3) should never exceed 20% of your total weekly mileage. For a 50km/week runner, that's a maximum of 10km of high-intensity work.",
+      heading: "The 20% Intensity Rule",
+      body: "To avoid the 'Overtraining Syndrome', high-intensity work (Zone 4/5) should never exceed 20% of your total weekly mileage. If you run 50km a week, keep your 'hard' miles under 10km.",
+      variant: "warning"
+    },
+    {
+      heading: "Pacing by Data, Not Ego",
+      body: "Use a recent 5K or 10K race result to calculate your training paces. Running your intervals 'as fast as possible' is often counter-productive. If a session calls for 'Threshold Pace' and you run 'Mile Pace', you are targeting the wrong energy system and accumulating unnecessary fatigue.",
       variant: "tip"
     },
     { 
-      heading: "The Practical Guide: What Should I Do?", 
-      body: "Execute your speed work with precision.", 
+      heading: "Interval Session Checklist", 
+      body: "How to execute a perfect speed session from start to finish.", 
       variant: "checklist", 
       listItems: [
-        "Warm-Up Protocol: 15 mins of easy jogging + 4x 100m 'strides' before the main set.", 
-        "Pacing Target: Use a recent race result to calculate your 'Target Paces'; don't run by hope, run by data.", 
-        "Active Recovery: Keep your recovery intervals moving at a very slow jog to facilitate lactate clearance.", 
-        "Listen to the 'Pop': If you feel a sharp, sudden muscle pain, stop the session immediately. Speed work is high-risk.",
-        "Cool Down: Perform at least 10 mins of very easy running post-intervals to return the CNS to a baseline state."
+        "Warm-Up: 15 mins easy + dynamic drills (high knees, butt kicks).", 
+        "The Main Set: Focus on consistency—your last interval should be as fast as your first.", 
+        "Active Recovery: Keep the legs moving at a 'shuffle' pace to prevent blood pooling.", 
+        "Refuel: Consume high-quality carbs and protein within 45 mins of finishing.",
+        "Surface Selection: Use a flat road or track for VO2 Max work to ensure accurate pacing."
       ] 
     },
   ],
