@@ -1,7 +1,7 @@
 import { GuideContent } from "@/types/guide";
 import { choosingRunningShoes } from "./choosing-shoes";
 import { supplementsForRunners } from "./supplements";
-import { muscleRecovery } from "./recovery";
+import { recovery } from "./recovery";
 import { runningNutrition } from "./nutrition";
 import { injuryPrevention } from "./injury-prevention";
 import { marathonTraining } from "./marathon-training";
@@ -20,7 +20,7 @@ import { runningShoeRotation } from "./shoe-rotation";
 export const guidesContent: Record<string, GuideContent> = {
   "choosing-running-shoes": choosingRunningShoes,
   "supplements-for-runners": supplementsForRunners,
-  "muscle-recovery": muscleRecovery,
+  "muscle-recovery": recovery,
   "running-nutrition": runningNutrition,
   "injury-prevention": injuryPrevention,
   "marathon-training": marathonTraining,
