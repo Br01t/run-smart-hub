@@ -120,12 +120,10 @@ const CookieConsent = () => {
 
           {/* Actions */}
           <div className="flex flex-wrap items-center gap-2">
-            <Button onClick={acceptAll} size="sm" className="flex-1 sm:flex-none">
+            <Button onClick={acceptAll} size="sm" className="flex-1 sm:flex-none shadow-sm">
               Accetta Tutti
             </Button>
-            <Button onClick={rejectAll} variant="outline" size="sm" className="flex-1 sm:flex-none">
-              Rifiuta Tutti
-            </Button>
+            
             {showDetails ? (
               <Button onClick={saveCustom} variant="secondary" size="sm" className="flex-1 sm:flex-none">
                 Salva Preferenze
@@ -141,6 +139,15 @@ const CookieConsent = () => {
                 Personalizza
               </Button>
             )}
+
+            <Button 
+              onClick={rejectAll} 
+              variant="ghost" 
+              size="sm" 
+              className="flex-1 sm:flex-none text-[10px] text-muted-foreground/50 hover:text-muted-foreground hover:bg-transparent"
+            >
+              Rifiuta Tutti
+            </Button>
           </div>
         </div>
       </div>
