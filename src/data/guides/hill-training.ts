@@ -9,12 +9,13 @@ export const hillTraining: GuideContent = {
   description: "Padroneggia le ripetute in salita, la tecnica in discesa e costruisci una forza esplosiva con allenamenti mirati.",
   tags: ["running", "muscles", "energy"],
   heroImage: guideHillTraining,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "Le salite sono 'allenamento della forza travestito'—costruiscono potenza senza palestra",
-    "La corsa in salita recluta più fibre muscolari di Tipo II (a contrazione rapida)",
-    "La corsa in discesa fornisce un carico eccentrico che rinforza tendini e ossa",
-    "Il lavoro in salita corregge naturalmente l'overstriding e migliora la tecnica di corsa",
+    "Le salite sono 'allenamento della forza travestito': potenziano glutei e polpacci senza pesi",
+    "La corsa in salita corregge naturalmente l'overstriding, migliorando la biomeccanica",
+    "Le salite brevi (sotto i 60s) reclutano le fibre veloci di Tipo II e aumentano la potenza",
+    "La discesa allena la capacità eccentrica dei quadricipiti, vitale per le fasi finali della maratona",
+    "Il costo di ossigeno aumenta esponenzialmente con la pendenza: impara a gestire l'RPE",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calcolatore Calorie" },
@@ -26,48 +27,53 @@ export const hillTraining: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Reclutamento delle Fibre e Potenza", 
-      body: "L'allenamento in salita è uno dei modi più efficienti per aumentare la tua 'Potenza di Uscita'. Quando corri in salita, il tuo corpo deve vincere la forza di gravità, il che richiede una produzione di forza maggiore per ogni passo. Questo forza il reclutamento delle fibre muscolari di Tipo II (a contrazione rapida) che sono spesso trascurate durante le corse facili in pianura. \n\n**Biogenesi Mitocondriale:** Le ripetute in salita ad alta intensità innescano rapidi adattamenti in quadricipiti, glutei e polpacci, aumentando sia la tua capacità anaerobica che il tuo 'soffitto aerobico' (VO2 Max).", 
+      heading: "La Scienza: Reclutamento delle Fibre e Potenza Esplosiva", 
+      body: "L'allenamento in salita è uno dei modi più efficienti per aumentare la tua 'Potenza di Uscita'. Quando corri contro la forza di gravità, il corpo deve produrre una forza di spinta maggiore per ogni singolo passo. Questo attiva massicciamente le fibre muscolari di Tipo II (a contrazione rapida), che solitamente rimangono 'dormienti' durante le corse facili in pianura. \n\n**Efficienza Neuromuscolare:** Correre in salita migliora la comunicazione tra cervello e muscoli. Il sistema nervoso impara a reclutare più unità motorie simultaneamente e a farle contrarre più velocemente. Il risultato è un aumento della velocità massima e una migliore Economia di Corsa anche in pianura, poiché ogni passo richiederà una percentuale minore della tua forza massima.", 
       variant: "highlight" 
     },
     { 
-      heading: "Dinamica Concentrica vs Eccentrica", 
-      body: "La corsa coinvolge due fasi primarie di contrazione muscolare. \n\n- **Salita (Concentrica):** Si concentra sulla potenza e sulla spinta. Rafforza la catena posteriore (glutei, femorali, polpacci) con un impatto minore sulle articolazioni. \n- **Discesa (Eccentrica):** Si concentra sulla stabilità e sulla frenata. I muscoli si allungano sotto carico, il che causa micro-danni significativi (DOMS). Sebbene doloroso, questo stress eccentrico è ciò che rende le tue gambe 'a prova di proiettile' per gli ultimi 10 km di una maratona.", 
+      heading: "Fisiologia: VO2 Max e Capacità Anaerobica", 
+      body: "Le salite permettono di raggiungere intensità cardiache vicine al massimo (Zona 5) con un impatto meccanico sulle articolazioni inferiore rispetto alla corsa veloce in piano. \n\n- **Saturazione di Ossigeno:** Durante ripetute in salita lunghe (2-3 minuti), la richiesta di ossigeno supera la capacità di fornitura, forzando il corpo a migliorare il meccanismo di tamponamento dell'acido lattico. Questo sposta verso l'alto la tua Soglia Anaerobica, permettendoti di mantenere ritmi di gara più elevati prima che il 'bruciore' muscolare ti costringa a rallentare.", 
       variant: "default" 
     },
     { 
-      heading: "Biomeccanica della Scalata", 
-      body: "La corsa in salita è un naturale 'correttore di forma'. A causa della pendenza, è biomeccanicamente impossibile fare passi troppo lunghi (overstriding, ovvero atterrare con il piede troppo davanti al corpo). Questo favorisce un appoggio di mesopiede e una maggiore spinta delle ginocchia. \n\n**Meccanica Chiave:** \n1. **Accorcia la Falcata:** Punta a una cadenza più alta piuttosto che a passi più lunghi. \n2. **Spinta delle Braccia:** Il movimento delle braccia fornisce la coppia necessaria per tirare il tuo centro di gravità su per la collina. \n3. **Postura:** Mantieni il petto aperto e lo sguardo all'orizzonte (non ai piedi) per mantenere un'espansione polmonare ottimale.", 
-      variant: "default", 
-      listItems: [
-        "VO2 Max: le ripetute in salita mantengono il 90-95% della FC max più comodamente delle sessioni in pianura", 
-        "Economia di Corsa: il miglioramento della potenza si traduce in ritmi 'più facili' in pianura", 
-        "Resilienza Tendinea: le elevate forze del lavoro in salita rafforzano i tendini d'Achille e rotuleo",
-        "Via Neuromuscolare: le salite migliorano la velocità di comunicazione 'cervello-muscolo'."
-      ] 
-    },
-    {
-      heading: "Avviso di Sicurezza per la Discesa",
-      body: "L'allenamento specifico della velocità in discesa può portare a fratture da stress o gravi lesioni muscolari se eccessivo. Limita gli sforzi in discesa ad alta velocità a una volta ogni 14 giorni e assicurati sempre di atterrare dolcemente con le ginocchia leggermente flesse per assorbire l'impatto.",
-      variant: "warning"
-    },
-    {
-      heading: "Variazione: Sprint Brevi vs Scalate Lunghe",
-      body: "Le salite brevi (30-60s) si concentrano sulla potenza pura e sulla velocità neuromuscolare. Le salite lunghe (2-5 min) si concentrano sulla capacità aerobica e sulla forza 'di soglia'. Entrambe dovrebbero avere spazio in un programma di allenamento per la maratona bilanciato.",
-      variant: "tip"
+      heading: "Meccanica della Scalata: Un Correttore Naturale", 
+      body: "La pendenza è un 'coach' silenzioso che corregge i difetti di forma più comuni. \n\n- **Eliminazione dell'Overstriding:** In salita è fisicamente impossibile atterrare con il piede troppo davanti al corpo. Questo obbliga il runner ad atterrare di mesopiede, riducendo le forze frenanti. \n- **Drive delle Ginocchia:** La salita richiede una spinta delle ginocchia più alta per superare l'ostacolo del terreno. Questo rinforza i flessori dell'anca e migliora la fluidità della falcata generale. \n- **Postura e Braccia:** Per salire con efficienza, devi mantenere il petto aperto e le braccia che oscillano con decisione. Questo crea una coppia di forza che facilita il superamento della gravità.", 
+      variant: "default" 
     },
     { 
-      heading: "Checklist per l'Allenamento in Salita", 
-      body: "Integra queste sessioni specifiche nel tuo piano di allenamento mensile.", 
-      variant: "checklist", 
+      heading: "L'Allenamento Eccentrico in Discesa", 
+      body: "Mentre la salita è un lavoro concentrico (il muscolo si accorcia mentre produce forza), la discesa è un lavoro **eccentrico**. \n\n- **Rafforzamento dei Tessuti:** I quadricipiti lavorano per frenare l'impatto della gravità. Questo stress controllato causa micro-lesioni alle fibre muscolari che, una volta riparate, diventano incredibilmente resistenti alla fatica. Gli atleti che includono la corsa in discesa nel loro programma soffrono meno di crampi e cedimenti muscolari negli ultimi 10 km della maratona, dove le fibre iniziano a cedere per fatica meccanica.", 
+      variant: "default", 
       listItems: [
-        "Scelta della Pendenza: trova una collina con pendenza tra il 4% e l'8%; pendenze superiori compromettono la tecnica.", 
-        "Recupero: torna giù camminando o con una corsa molto lenta. Il recupero dovrebbe essere almeno il doppio della durata dello sforzo.", 
-        "Il Punto di Partenza: 6 ripetute da 45 secondi in salita al 90% dell'impegno.", 
-        "Progressione: aggiungi 1-2 ripetute ogni due settimane man mano che diventi più forte.",
-        "La Sessione 'Segreta': corri 5 km su un percorso collinare a un impegno 'costante' (Zona 3) per costruire il ritmo."
+        "Inclinazione Ottimale: Per gli sprint di potenza, cerca pendenze del 6-10%; per il ritmo, il 3-5%.", 
+        "Cadenza: In salita, punta ad aumentare la frequenza dei passi invece di allungarli.", 
+        "Recupero: Il ritorno alla base deve essere camminato o corso molto piano per smaltire il lattato.",
+        "Respirazione: Non guardare i piedi; tieni lo sguardo 20 metri avanti per aprire il torace."
       ] 
     },
+    {
+      heading: "Consiglio: Le Salite Brevi per la Tecnica",
+      body: "Inserisci 6-8 scatti da 15 secondi in salita ripida al termine di una corsa facile una volta a settimana. Questo 'resetta' la tua tecnica di corsa, attiva i glutei e migliora la reattività del piede senza accumulare troppa fatica per il giorno successivo.",
+      variant: "tip"
+    },
+    {
+      heading: "Attenzione al Carico sul Tendine d'Achille",
+      body: "Correre in salita mette in massima tensione il tendine d'Achille e la fascia plantare. Se hai una storia di infortuni in queste zone, inizia con pendenze molto lievi e non superare mai il 10% di inclinazione finché i tessuti non si sono adattati al nuovo stimolo meccanico.",
+      variant: "warning"
+    },
+    { 
+      heading: "Checklist: Programma il Tuo Hill Training", 
+      body: "Esempi di sessioni per ogni obiettivo.", 
+      variant: "checklist", 
+      listItems: [
+        "Power Development: 8 x 30 secondi sprint massimali su pendenza 8%, recupero 2 minuti camminando.", 
+        "Aerobic Strength: 5 x 3 minuti a ritmo soglia su pendenza 4%, recupero corsa lenta in discesa.", 
+        "Hill Fartlek: 45 minuti su percorso collinare correndo forte ogni salita e piano le pianure.", 
+        "Forza delle Gambe: Allunghi in discesa controllata (max 4% pendenza) per la stabilità del ginocchio.",
+        "Costanza: Una sessione in salita ogni 10-14 giorni è sufficiente per vedere miglioramenti drastici."
+      ] 
+    }
   ],
   hubCategory: "shoes",
 };

@@ -9,12 +9,13 @@ export const choosingRunningShoes: GuideContent = {
   description: "Guida completa per scegliere le scarpe da corsa giuste in base al tipo di piede, al terreno e agli obiettivi di performance.",
   tags: ["scarpe", "corsa", "ammortizzazione", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "7 min di lettura",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Il 'Comfort Filter' è il miglior predittore di efficienza e prevenzione infortuni",
-    "Le moderne schiume PEBA restituiscono fino all'87% di energia rispetto al 60% dell'EVA standard",
-    "Il drop (0-12mm) sposta il carico meccanico tra ginocchia e polpacci",
-    "Ruotare almeno due paia di scarpe riduce gli infortuni da stress ripetitivo del 39%",
+    "Il 'Comfort Filter' è il miglior predittore di efficienza e prevenzione infortuni secondo la biomeccanica moderna",
+    "Le moderne schiume PEBA restituiscono fino all'87% di energia, riducendo il costo metabolico fino al 4%",
+    "Il drop (differenziale tacco-punta) determina la distribuzione del carico tra ginocchia e caviglie",
+    "La rotazione delle scarpe (almeno 2 paia) riduce il rischio di infortuni da sovraccarico del 39%",
+    "La stabilità moderna si basa sulla geometria della base (flare) piuttosto che su inserti rigidi mediali",
   ],
   relatedTools: [
     { to: "/tools/bmi", label: "Calcolatore BMI" },
@@ -27,51 +28,56 @@ export const choosingRunningShoes: GuideContent = {
   sections: [
     { 
       heading: "La Scienza: Biomeccanica e Dinamica dell'Energia", 
-      body: "La moderna scienza delle scarpe da corsa è passata dal 'controllo del movimento' alla 'gestione dell'energia'. Quando corri, il tuo corpo sperimenta forze d'impatto tra 2,5 e 3,0 volte il tuo peso corporeo. L'obiettivo di una scarpa da performance è gestire queste forze attraverso specifiche proprietà dei materiali.\n\n**Efficienza del Ritorno di Energia:** La schiuma EVA tradizionale (Etilene Vinil Acetato) restituisce circa il 60-65% dell'energia immagazzinata durante la compressione. Al contrario, le schiume avanzate in PEBA (Poliere Blocco Ammide) — presenti nelle moderne 'Super Shoes' — possono restituire oltre l'85%. Ciò riduce il costo metabolico della corsa (Economia di Corsa) dall'1,8% all'1,9%, permettendo velocità più elevate a parità di sforzo cardiovascolare.", 
+      body: "La moderna scienza delle scarpe da corsa è passata dal paradigma del 'controllo del movimento' alla 'gestione dell'energia'. Quando corri, il tuo corpo sperimenta forze d'impatto tra 2,5 e 3,0 volte il tuo peso corporeo. L'obiettivo di una scarpa da performance è gestire queste forze attraverso specifiche proprietà dei materiali e geometrie.\n\n**Efficienza del Ritorno di Energia:** La schiuma EVA tradizionale (Etilene Vinil Acetato) restituisce circa il 60-65% dell'energia immagazzinata durante la compressione. Al contrario, le schiume avanzate in PEBA (Poliere Blocco Ammide) — presenti nelle moderne 'Super Shoes' — possono restituire oltre l'85-87%. Questo non è solo un dato numerico: riduce il costo metabolico della corsa (Economia di Corsa) in modo significativo, permettendo velocità più elevate a parità di sforzo cardiovascolare. Tuttavia, queste schiume sono altamente compresse e richiedono una piastra (spesso in carbonio) per mantenere la stabilità strutturale e la corretta flessione metatarsale.", 
       variant: "highlight" 
     },
     { 
-      heading: "Tecnologia delle Schiume: EVA vs. PEBA vs. TPU", 
-      body: "Non tutte le ammortizzazioni sono uguali. Comprendere la chimica dell'intersuola ti aiuta a scegliere lo strumento giusto per il lavoro. \n\n- **EVA (Standard):** Affidabile, durevole e soda. Ideale per l'allenamento quotidiano e la stabilità. \n- **TPU (Iniettato):** Più durevole dell'EVA, migliore resistenza alla temperatura e maggiore ritorno di energia. Spesso si trova nelle scarpe da allenamento quotidiano premium. \n- **PEBA (Super Foam):** Ultraleggera e iper-reattiva. Fornisce il massimo ritorno di energia ma ha una durata più breve (circa 400-500 km).", 
+      heading: "Tecnologia delle Schiume: Dalla Chimica alla Performance", 
+      body: "Non tutte le ammortizzazioni sono uguali. Comprendere la chimica dell'intersuola ti aiuta a scegliere lo strumento giusto per il lavoro. \n\n- **EVA (Etilene Vinil Acetato):** È stata lo standard per 40 anni. È affidabile, relativamente economica e offre una sensazione di compattezza ('firm'). È ideale per chi cerca stabilità o per chi preferisce sentire il terreno senza l'effetto 'rimbalzo'.\n- **TPU (Poliuretano Termoplastico):** Materiali come il Boost di Adidas o l'Everun di Saucony. Il TPU è più pesante dell'EVA ma quasi indistruttibile. Non perde le sue proprietà con il freddo e mantiene l'ammortizzazione per oltre 1000 km.\n- **PEBA (Poliere Blocco Ammide):** Il materiale delle scarpe da record. È incredibilmente leggero (permette intersuole altissime senza peso eccessivo) e ha una resilienza altissima. Lo svantaggio? La durabilità limitata (400-500 km) e il costo elevato.\n- **Super-EVA (S-EVA):** Schiume EVA trattate con azoto (Nitrogen-Infused) per renderle più leggere e reattive, cercando un compromesso tra EVA e PEBA.", 
       variant: "default" 
     },
     { 
-      heading: "Stack Height, Propriocezione e Stabilità", 
-      body: "Le altezze elevate dello stack (>35mm) forniscono una protezione superiore dagli impatti ma possono ridurre la sensibilità al suolo o propriocezione. Gli studi dimostrano che stack estremamente alti possono aumentare l'instabilità della caviglia in alcuni runner a causa dell'effetto 'braccio di leva' della schiuma.\n\n**La Teoria del Comfort Filter:** Ideata dal Dr. Benno Nigg, questa teoria suggerisce che la scarpa che risulta più comoda e meno restrittiva per la tua andatura naturale sia statisticamente la più efficiente e la meno probabile a causare infortuni. Le scarpe neutre permettono il movimento naturale del piede, mentre le scarpe stabili usano schiume a doppia densità per rallentare il tasso di pronazione.", 
+      heading: "Geometrie Rocker e Ciclo del Passo", 
+      body: "Oltre al materiale, la forma della suola (geometria) gioca un ruolo cruciale. Il 'Rocker' è la curvatura della scarpa che facilita il rotolamento del piede.\n\n- **Forefoot Rocker:** La curvatura inizia sotto i metatarsi. Aiuta la fase di stacco (toe-off), riducendo il lavoro dei muscoli del polpaccio e del tendine d'Achille. È fondamentale nelle scarpe da gara.\n- **Rearfoot Rocker:** La curvatura è sul tallone. Facilita una transizione fluida per chi atterra di tallone (heel strikers), riducendo la 'fase di frenata' iniziale.\n- **Full Rocker:** Una curvatura continua che trasforma il movimento in un rotolamento fluido. Ideale per risparmiare energia nelle corse lunghe e ridurre la flessione dell'articolazione dell'alluce, utile per chi soffre di alluce rigido.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Stack Height, Propriocezione e Stabilità Moderna", 
+      body: "Lo 'Stack Height' indica lo spessore totale di schuola e intersuola. Le altezze elevate (>35mm) forniscono una protezione superiore dagli impatti ma possono ridurre la sensibilità al suolo. \n\n**Il Paradosso della Stabilità:** In passato, per la pronazione si usavano inserti rigidi mediali (durometri più duri). Oggi, la stabilità si ottiene con il 'Flare' (intersuola che si allarga verso la base) e le 'Sidewalls' (pareti di schiuma che avvolgono il piede come un sedile da corsa). Questo approccio guida il piede senza bloccarlo in modo innaturale.\n\n**La Teoria del Comfort Filter:** Ideata dal Dr. Benno Nigg, suggerisce che la scarpa che risulta più comoda sia statisticamente la più efficiente. Il tuo corpo riconosce istintivamente quale calzatura minimizza le oscillazioni muscolari parassite.", 
       variant: "default", 
       listItems: [
-        "Compression Set: Le schiume EVA perdono circa il 10% della loro ammortizzazione ogni 100 km", 
-        "Geometria di Stabilità: La stabilità moderna deriva da basi più larghe piuttosto che da inserti rigidi mediali", 
-        "Percorso dell'Andatura: Le scarpe stabili dovrebbero supportare, non sovrastare, il tuo naturale 'percorso di movimento preferito'",
-        "Heel Drop: Un drop più alto (10-12mm) sposta il carico sulle ginocchia; un drop più basso (0-4mm) sposta il carico su polpacci e tendine d'Achille."
+        "Compression Set: L'EVA perde il 10% dell'ammortizzazione ogni 100km; il TPU è molto più resiliente.", 
+        "Heel Drop: Un drop alto (>8mm) favorisce chi ha problemi al tendine d'Achille; un drop basso (<4mm) riduce il carico sul ginocchio.", 
+        "Ground Contact Time: Le scarpe più reattive tendono a ridurre il tempo di contatto, aumentando la cadenza.",
+        "Articolazione Metatarsale: Le piastre rigide richiedono una geometria rocker per permettere la propulsione senza flettere le dita."
       ] 
     },
     { 
-      heading: "La Rivoluzione della Piastra in Carbonio", 
-      body: "Le piastre in carbonio non agiscono come 'molle'. Invece, funzionano come un 'agente irrigidente' che stabilizza la schiuma PEBA iper-morbida e agisce come una leva per ridurre il lavoro richiesto dalle articolazioni dell'alluce e della caviglia. Questo spostamento di carico significa che devi avere polpacci e fianchi forti per gestire l'aumentato stress eccentrico delle scarpe da gara con piastra.", 
-      variant: "tip" 
+      heading: "Specificità di Genere nella Biomeccanica", 
+      body: "Non esiste una scarpa 'unisex' perfetta. La biomeccanica femminile differisce per diversi fattori:\n\n- **Angolo Q:** Le donne tendono ad avere un bacino più largo, il che aumenta l'angolo Q (l'angolo tra anca e ginocchio). Questo può portare a una maggiore necessità di supporto alla stabilità laterale.\n- **Densità Ossea e Massa Muscolare:** Le scarpe da donna hanno spesso intersuole leggermente meno dense per permettere una compressione adeguata anche con pesi corporei mediamente inferiori.\n- **Morfologia del Piede:** Tipicamente, il piede femminile ha un tallone più stretto rispetto all'avampiede. Le marche migliori utilizzano forme specifiche per genere invece di ridurre semplicemente le dimensioni dei modelli maschili.", 
+      variant: "default" 
     },
     { 
-      heading: "Miti Comuni sulla Taglia", 
-      body: "Molti runner comprano scarpe troppo piccole. I piedi si gonfiano significativamente durante la corsa, specialmente con il caldo. \n\n- **La Regola del Pollice:** Hai bisogno di almeno 1 cm di spazio tra il dito più lungo e la fine della scarpa. \n- **La Larghezza Conta:** Se vedi il piede 'traboccare' dall'intersuola, hai bisogno di una versione larga (2E/4E). Un piede costretto non può attivare correttamente il meccanismo di verricello (il supporto naturale dell'arco del piede).", 
-      variant: "warning" 
+      heading: "La Tomaia: Non solo Estetica", 
+      body: "La parte superiore della scarpa (Upper) deve bilanciare supporto, elasticità e traspirabilità.\n\n- **Engineered Mesh:** Tessuto tecnico a zone differenziate. Offre struttura dove serve e fori più larghi per la ventilazione sopra le dita.\n- **Knit (Maglia):** Estremamente confortevole, si adatta come una calza. Tuttavia, può mancare di supporto laterale nelle curve strette o su terreni irregolari.\n- **Contenimento del Tallone:** Una conchiglia rigida stabilizza il calcagno, mentre un colletto imbottito protegge il tendine d'Achille.\n- **Volume dell'Avampiede (Toe Box):** Fondamentale per permettere alle dita di allargarsi (splay) durante l'impatto, attivando il supporto naturale dell'arco plantare.", 
+      variant: "default" 
     },
     { 
-      heading: "Checklist per la Scelta: Come Acquistare", 
-      body: "Segui questo protocollo quando provi nuove calzature per assicurarti un abbinamento perfetto.", 
+      heading: "Sostenibilità e Ciclo di Vita della Scarpa", 
+      body: "Quando sostituire le scarpe? Non guardare solo il battistrada. Il segnale critico è il 'collasso' della schiuma intersuola. Se senti dolori insoliti alle ginocchia o ai tendini dopo la corsa, o se vedi rughe profonde e permanenti nella schiuma, è ora di cambiarle.\n\n**Impatto Ambientale:** La produzione di scarpe da corsa è ad alta intensità di carbonio. Molti brand stanno introducendo schiume derivate da fonti biologiche (come i semi di ricino) o poliestere riciclato. Ricorda: il modo più sostenibile di correre è far durare le tue scarpe il più a lungo possibile, pulendole correttamente (mai in lavatrice!) e lasciandole riposare tra una corsa e l'altra per permettere alla schiuma di decomprimersi.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Checklist Avanzata per l'Acquisto", 
+      body: "Segui questo protocollo professionale per evitare errori costosi.", 
       variant: "checklist", 
       listItems: [
-        "Acquista nel Pomeriggio: I tuoi piedi sono più grandi dopo una giornata di cammino.", 
-        "Indossa le tue Calze da Corsa: Lo spessore delle calze cambia la vestibilità di mezza taglia.", 
-        "Rimuovi la Soletta: Alzati sopra di essa. Se il tuo piede trabocca dai bordi, la scarpa è troppo stretta.", 
-        "Il Test della Camminata: Se senti un 'punto caldo' o attrito mentre cammini, diventerà una vescica mentre corri.",
-        "Piano di Rotazione: Prevedi una scarpa 'soda' per corse brevi/veloci e una 'morbida' per corse lunghe/lente."
+        "Acquista la Sera: Il piede si espande fino al 10% durante la giornata, simulando l'effetto della corsa.", 
+        "Porta le Tue Calze: Una calza invernale spessa può rendere stretta una scarpa perfetta.", 
+        "Il Test della Soletta: Estrai la soletta e stacci sopra. Se il piede esce dai bordi, la scarpa è troppo stretta.", 
+        "Prova Entrambi i Piedi: Quasi tutti hanno un piede leggermente più grande dell'altro; compra per il più grande.",
+        "Non Fidarti del Numero: Ogni marca (e modello) calza in modo diverso. Guarda i centimetri (CM/JP) sulla targhetta."
       ] 
-    },
-    {
-      heading: "Propriocezione e Stabilità del Terreno",
-      body: "La stabilità non è solo per chi iper-prona. Ogni runner ha bisogno di una scarpa che comunichi correttamente con il terreno. La sensibilità al suolo (propriocezione) permette al sistema nervoso di pre-attivare i muscoli stabilizzatori prima dell'impatto. Uno stack height eccessivo senza una base larga può compromettere questa comunicazione, portando a un aumento del carico sulle ginocchia per compensare l'instabilità della caviglia.",
-      variant: "default"
     }
   ],
   hubCategory: "shoes",

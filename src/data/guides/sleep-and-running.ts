@@ -9,65 +9,71 @@ export const sleepAndRunning: GuideContent = {
   description: "Perché il sonno è il più potente (e gratuito) potenziatore di prestazioni per i runner. Scopri come la qualità del sonno influisce sul recupero, sul rischio di infortuni e sulla performance in gara.",
   tags: ["recovery", "protein", "muscles"],
   heroImage: guideSleepRecovery,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "L'Ormone della Crescita (GH) viene rilasciato quasi esclusivamente durante il sonno profondo N3",
-    "La privazione del sonno aumenta lo sforzo percepito (RPE)—rendendo lo stesso ritmo più faticoso",
-    "Il sistema glinfatico pulisce i rifiuti metabolici dal cervello durante il sonno",
-    "Accumulare ore di sonno (9+ ore) prima di una gara mitiga gli effetti dell'insonnia pre-gara",
+    "Il sonno profondo (N3) è l'unica fase in cui avviene il rilascio massiccio di Ormone della Crescita (GH)",
+    "La privazione del sonno riduce la risintesi del glicogeno muscolare fino al 20%",
+    "Il sistema glinfatico 'lava' il cervello dai sottoprodotti metabolici della fatica durante la notte",
+    "Dormire meno di 7 ore aumenta il rischio di infortuni da sovraccarico del 1.7x",
+    "L'estensione del sonno (9+ ore) è una strategia di performance superiore a qualsiasi integratore",
   ],
   relatedTools: [
     { to: "/tools/protein", label: "Calcolatore Proteine" },
     { to: "/tools/hydration", label: "Calcolatore Idratazione" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Recupero Muscolare dopo la Corsa" },
+    { slug: "recovery", label: "Recupero Muscolare dopo la Corsa" },
     { slug: "running-nutrition", label: "Nutrizione Corsa: Cosa Mangiare" },
   ],
   sections: [
     { 
-      heading: "La Scienza: La Finestra Anabolica", 
-      body: "Il sonno non è passivo; è uno stato attivo di ricostruzione fisiologica. Durante il sonno a 'onde lente' (N3), il tuo corpo entra nel suo stato anabolico più potente. L'ipofisi rilascia massicci impulsi di Ormone della Crescita (GH) e Testosterone, essenziali per la riparazione delle fibre muscolari, il rimodellamento osseo e la riduzione dell'infiammazione sistemica. \n\n**Il Lavaggio Glinfatico:** Durante il sonno, lo spazio tra le cellule cerebrali aumenta, permettendo al liquido cerebrospinale di lavare via i rifiuti metabolici (come la beta-amiloide). Per un runner, questa 'pulizia del cervello' è fondamentale per mantenere il focus mentale e i tempi di reazione necessari per il trail running tecnico o le gare ad alta velocità.", 
+      heading: "La Scienza: La Finestra Anabolica Notturna", 
+      body: "Il sonno non è un tempo di inattività, ma il periodo di massima attività anabolica. Per un runner, è l'unico momento in cui il corpo ripara effettivamente i micro-danni causati dall'allenamento. \n\n**Il Picco di GH e Testosterone:** Durante la fase di sonno a onde lente (SWS), l'ipofisi rilascia impulsi di Ormone della Crescita (GH). Questo ormone è il principale responsabile della sintesi proteica e del rimodellamento dei tessuti connettivi e ossei. Se accorci la durata del sonno, tagli drasticamente questa finestra di riparazione, rendendo vani i benefici dell'allenamento del giorno precedente.", 
       variant: "highlight" 
     },
     { 
-      heading: "Equilibrio Ormonale: Cortisolo vs Recupero", 
-      body: "La perdita cronica di sonno (sotto le 7 ore) sposta il tuo profilo ormonale da 'Costruzione' a 'Demolizione'. \n\n- **Picco di Cortisolo:** La mancanza di sonno eleva il cortisolo notturno, che blocca l'assorbimento del glucosio nei muscoli. \n- **Compromissione del Glicogeno:** Ricerche suggeriscono che anche una sola notte di sonno limitato può compromettere la risintesi del glicogeno fino al 20%. Ciò significa che anche se fai il 'carico di carboidrati' correttamente, il tuo corpo non può immagazzinare quell'energia in modo efficiente senza un sonno adeguato.", 
+      heading: "Fisiologia: Risintesi del Glicogeno e Metabolismo", 
+      body: "La qualità del sonno influisce direttamente sulla tua capacità di immagazzinare carburante. \n\n- **Resistenza Insulinica Temporanea:** La privazione di sonno induce uno stato di insulino-resistenza simile a quello del diabete di tipo 2. Questo impedisce ai muscoli di assorbire efficacemente il glucosio dal sangue. \n- **Glicogeno Compromesso:** Gli studi dimostrano che i runner privati di sonno non riescono a ricaricare completamente le scorte di glicogeno muscolare, anche seguendo un protocollo di carbo-loading. Questo porta a 'colpire il muro' molto prima durante la maratona o gli allenamenti lunghi.", 
       variant: "default" 
     },
     { 
-      heading: "Architettura del Sonno per Atleti", 
-      body: "Gli atleti di endurance hanno esigenze di sonno superiori alla media a causa del carico cognitivo e fisico dell'allenamento. \n\n- **Riparazione Fisica (N3):** Avviene principalmente nella prima metà della notte. Se vai a letto tardi, perdi la tua principale finestra di recupero fisico. \n- **Consolidamento Mentale (REM):** Avviene principalmente nella seconda metà della notte. Se ti svegli troppo presto per correre, tagli fuori il tuo recupero mentale, portando a nebbia cerebrale e scarse strategie di ritmo.", 
+      heading: "Il Sistema Glinfatico: La Pulizia del Cervello", 
+      body: "La corsa di endurance produce un alto carico cognitivo e metabolico nel sistema nervoso centrale. \n\n- **Il Lavaggio Notturno:** Durante il sonno profondo, gli spazi tra i neuroni si allargano e il liquido cerebrospinale fluisce con forza tra le cellule (Sistema Glinfatico). Questo processo elimina la beta-amiloide e altri metaboliti della fatica. Senza questa pulizia, si avverte la tipica 'nebbia cerebrale' (brain fog), che riduce la capacità di mantenere il focus e aumenta la percezione dello sforzo (RPE) durante la corsa.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Architettura del Sonno ed Endurance", 
+      body: "Il sonno è diviso in cicli di circa 90 minuti. \n\n- **Fase N3 (Fisica):** Predomina nella prima metà della notte. Saltare le prime ore di sonno significa perdere la riparazione muscolare. \n- **Fase REM (Mentale):** Predomina nell'ultima parte della notte. È fondamentale per il consolidamento della memoria motoria (la tecnica di corsa) e la regolazione dell'umore. Svegliarsi bruscamente con la sveglia per una corsa all'alba spesso sacrifica questa fase cruciale per la resilienza mentale.", 
       variant: "default", 
       listItems: [
-        "Sintesi Proteica: i muscoli si riparano 3 volte più velocemente durante il sonno profondo rispetto a quando sei sveglio", 
-        "Rischio Infortuni: i runner che dormono <7 ore hanno 1,7 volte più probabilità di subire un infortunio", 
-        "Soffitto di Endurance: la perdita di sonno riduce il 'Tempo all'Esaurimento' in media dell'11%",
-        "Termoregolazione: la temperatura corporea deve calare di 1°C per innescare il ciclo del sonno."
+        "Sforzo Percepito: A parità di ritmo, correre stanchi sembra il 15% più duro a livello neurale.", 
+        "Rischio Infortuni: La coordinazione motoria cala drasticamente con meno di 7 ore di sonno.", 
+        "Immunità: Una sola notte di 4 ore di sonno riduce le cellule natural killer del sistema immunitario del 70%.",
+        "Termoregolazione: Il sonno scarso peggiora la capacità del corpo di sudare e raffreddarsi sotto sforzo."
       ] 
     },
     {
-      heading: "Estensione del Sonno: Il Doping Legale",
-      body: "Ricerche su atleti universitari mostrano che estendere il sonno a 9-10 ore a notte per diverse settimane porta a tempi di scatto più veloci, migliore precisione e un RPE (Sforzo Percepito) significativamente più basso. Se vuoi correre più veloce, vai a letto prima.",
+      heading: "Consiglio: Il 'Banking del Sonno'",
+      body: "Se sai che la notte prima della gara non dormirai bene per l'ansia, puoi 'accumulare' sonno nei 7 giorni precedenti. Dormire 9 ore a notte per una settimana prima dell'evento crea una riserva di recupero che protegge la tua prestazione anche in caso di una notte quasi insonne pre-gara.",
       variant: "tip"
     },
     {
-      heading: "La Trappola di Alcol e Sonno",
-      body: "Sebbene l'alcol possa aiutare ad addormentarsi più velocemente, distrugge completamente la qualità del sonno sopprimendo il sonno REM e aumentando lo stress della variabilità della frequenza cardiaca (HRV). Una birra post-corsa può ritardare il tuo recupero fisiologico di diverse ore.",
+      heading: "Attenzione: Caffeina e Emivita",
+      body: "La caffeina ha un'emivita di circa 6 ore. Se prendi un caffè alle 16:00, alle 22:00 metà della caffeina è ancora nel tuo sistema, impedendo al cervello di entrare nelle fasi profonde del sonno (N3), anche se riesci ad addormentarti.",
       variant: "warning"
     },
     { 
-      heading: "Checklist per l'Ottimizzazione del Sonno", 
-      body: "Usa queste abitudini basate sulla scienza per massimizzare il tuo recupero notturno.", 
+      heading: "Checklist: Igiene del Sonno per Runner", 
+      body: "Ottimizza il tuo ambiente per un recupero da atleta d'élite.", 
       variant: "checklist", 
       listItems: [
-        "La Stanza Buia: usa tende oscuranti; anche una piccola quantità di luce può sopprimere la melatonina.", 
-        "Protocollo Magnesio: 300 mg di Magnesio Biglicinato prima di dormire per aiutare il rilassamento muscolare.", 
-        "Costanza: vai a letto e svegliati alla stessa ora ogni giorno, fine settimana inclusi.", 
-        "Tramonto Digitale: niente luce blu nei 60 minuti prima di dormire per permettere la produzione naturale di melatonina.",
-        "Scienza del Pisolino: un 'Power Nap' di 20 minuti tra le 13:00 e le 15:00 può ripristinare la vigilanza senza causare intontimento."
+        "Temperatura: Mantieni la camera a 18-19°C; il corpo deve raffreddarsi per iniziare il sonno profondo.", 
+        "Luce Blu: Spegni schermi e smartphone 90 minuti prima di coricarti.", 
+        "Magnesio Biglicinato: Un integratore utile per rilassare il sistema nervoso centrale post-corsa.", 
+        "Esposizione Solare: Prendi luce naturale entro 30 minuti dal risveglio per regolare il ritmo circadiano.",
+        "Routine di Rilassamento: 10 minuti di stretching leggero o lettura per segnalare al corpo la fine della giornata."
       ] 
-    },
+    }
   ],
   hubCategory: "recovery",
 };

@@ -1,77 +1,82 @@
 import { GuideContent } from "@/types/guide";
 import guideRecovery from "@/assets/guide-recovery.webp";
 
-export const muscleRecovery: GuideContent = {
-  title: "Recupero Muscolare dopo la Corsa",
-  seoTitle: "Recupero Muscolare per Runner: Guida Scientifica 2026",
-  seoDescription: "Massimizza i guadagni dell'allenamento con il recupero basato sulle evidenze. Scopri HRV, SMR, sintesi proteica e la scienza del sonno profondo.",
-  keywords: ["recupero muscolare", "recupero runner", "allenamento HRV", "scienza foam rolling", "nutrizione post-corsa", "prevenzione DOMS"],
-  description: "Strategie scientifiche per recuperare più velocemente: stretching, foam rolling, nutrizione e sonno.",
-  tags: ["recupero", "massaggio", "proteine", "top-recovery-2026"],
+export const recovery: GuideContent = {
+  title: "Recupero Muscolare Dopo la Corsa: Scienza e Strategia",
+  seoTitle: "Recupero Muscolare Runner 2026: La Guida Scientifica Definitiva",
+  seoDescription: "Ottimizza la supercompensazione con il recupero basato sulle evidenze. Dalla nutrizione post-corsa al monitoraggio HRV e alla scienza del sonno profondo.",
+  keywords: ["recupero muscolare corsa", "supercompensazione runner", "nutrizione post corsa", "monitoraggio HRV runner", "crioterapia corsa", "massaggio sportivo benefici"],
+  description: "Padroneggia l'arte del recupero per tornare a correre più forte. Scopri come il tuo corpo si ripara e come ottimizzare ogni ora dopo l'allenamento.",
+  tags: ["recupero", "muscoli", "protein", "top-recovery-2026"],
   heroImage: guideRecovery,
-  readTime: "6 min di lettura",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Il recupero è il momento in cui il corpo si adatta e diventa più forte (Supercompensazione)",
-    "Il sonno a onde lente (N3/N4) è responsabile del 95% del rilascio dell'ormone della crescita",
-    "Il foam rolling (SMR) riduce i DOMS e migliora il range di movimento senza perdita di forza",
-    "La Variabilità della Frequenza Cardiaca (HRV) è la metrica più oggettiva per il recupero sistemico",
+    "Il recupero è il momento in cui avvengono effettivamente gli adattamenti fisiologici",
+    "La supercompensazione trasforma lo stress dell'allenamento in nuove capacità di performance",
+    "Il passaggio allo stato parasimpatico è necessario per avviare la sintesi proteica muscolare",
+    "Il monitoraggio dell'HRV permette di personalizzare il carico di allenamento giornaliero",
+    "La nutrizione post-corsa (rapporto 4:1 carboidrati/proteine) è la chiave per il recupero rapido",
   ],
   relatedTools: [
     { to: "/tools/protein", label: "Calcolatore Proteine" },
-    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
   ],
   relatedGuides: [
-    { slug: "supplements-for-runners", label: "Integratori Essenziali per Runner" },
+    { slug: "running-nutrition", label: "Nutrizione per la Corsa: Cosa Mangiare" },
     { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "Il Principio della Supercompensazione", 
-      body: "L'allenamento è un processo catabolico (demolisce i tessuti). Il progresso avviene solo durante la fase di recupero anabolico. Il modello della 'Supercompensazione' illustra che se applichi uno stress e consenti un recupero adeguato, il corpo ritorna a un livello di fitness superiore. Se ti alleni troppo presto, scendi nell'overtraining; se aspetti troppo, i guadagni svaniscono.", 
+      heading: "La Scienza del Recupero: Supercompensazione", 
+      body: "L'allenamento non ti rende più forte; è il recupero dall'allenamento che lo fa. Quando corri, crei micro-lesioni muscolari e deplezione ormonale. Il corpo risponde con la **supercompensazione**: non solo ripara il danno, ma ricostruisce i tessuti rendendoli leggermente più resistenti di prima.\n\n**Il Sistema Parasimpatico:** Per avviare la riparazione, devi passare dallo stato 'Fight or Flight' (Simpatico) allo stato 'Rest and Digest' (Parasimpatico). Senza questo switch neurologico, il corpo rimane in uno stato catabolico (di demolizione), rendendo vani anche gli allenamenti più duri. Il recupero è un processo attivo che richiede intenzione e precisione biologica.", 
       variant: "highlight" 
     },
     { 
-      heading: "Architettura del Sonno: Il Miglior Potenziatore di Performance", 
-      body: "Ricerche pubblicate sul Journal of Science and Medicine in Sport suggeriscono che la privazione del sonno riduce il tempo all'esaurimento fino al 10%. \n\n- **Stadi Non-REM 3 e 4:** È qui che avviene la magia. Il flusso sanguigno viene reindirizzato dal cervello ai muscoli, portando ossigeno e nutrienti che facilitano la riparazione dei tessuti. \n- **Regolazione Ormonale:** Durante il sonno profondo, i livelli di cortisolo calano e l'ormone della crescita ha dei picchi. Interrompere questo ciclo porta a insulino-resistenza e compromette lo stoccaggio del glicogeno.", 
+      heading: "Sintesi del Glicogeno e Finestra Metabolica", 
+      body: "Nelle prime 2 ore post-corsa, la sensibilità all'insulina è ai massimi livelli. Questo è il momento critico per ripristinare le scorte di glicogeno epatico e muscolare. \n\n- **Il Rapporto 4:1:** Consumare un mix di carboidrati e proteine in un rapporto di 4:1 accelera la risintesi del glicogeno rispetto ai soli carboidrati. \n- **Riparazione Strutturale:** Le proteine forniscono gli aminoacidi (leucina in particolare) necessari per innescare la sintesi proteica muscolare via mTOR, riparando le fibre danneggiate dagli impatti eccentrici della corsa.", 
       variant: "default" 
     },
     { 
-      heading: "Rilascio Miofasciale e Drenaggio Linfatico", 
-      body: "Il foam rolling (Self-Myofascial Release) non 'scioglie' effettivamente i nodi (la fascia è troppo forte). Invece, comunica con il sistema nervoso per diminuire la tensione muscolare (inibizione autogena). \n\n**Recupero Attivo vs Passivo:** \n- **Attivo:** 20 minuti di ciclismo in Zona 1 o camminata aumentano il flusso sanguigno e aiutano la rimozione del lattato più efficacemente del riposo completo. \n- **Crioterapia:** L'uso di bagni di ghiaccio post-allenamento può smorzare l'infiammazione. Nota: l'infiammazione acuta è un segnale di adattamento. Per guadagni di forza, limita il ghiaccio; per eventi di endurance di più giorni, usalo per gestire il dolore.", 
-      variant: "default", 
-      listItems: [
-        "Terapia a Compressione: riduce il gonfiore e migliora il ritorno venoso", 
-        "Monitoraggio HRV: usa una fascia cardio per monitorare l'equilibrio tra sistema nervoso simpatico e parasimpatico",
-        "Carico Tendineo: a differenza dei muscoli, i tendini hanno bisogno di 48-72 ore di 'tempo di scarico' per rimodellare il collagene dopo corse ad alto impatto.",
-        "Sauna e Calore: aumentano il volume plasmatico e le proteine da shock termico, migliorando l'efficienza cardiovascolare."
-      ] 
+      heading: "Monitoraggio HRV: La Finestra sul Sistema Nervoso", 
+      body: "La Variabilità della Frequenza Cardiaca (HRV) è il miglior indicatore del tuo stato di recupero neurale. \n\n- **Cosa misura:** L'HRV misura la variazione di tempo tra i battiti cardiaci. Un'alta variabilità indica un sistema nervoso flessibile e pronto (dominanza parasimpatica). \n- **Applicazione Pratica:** Se la tua HRV è significativamente sotto la tua media basale per due giorni consecutivi, il tuo corpo sta combattendo uno stress sistemico (overtraining, malattia imminente o scarso sonno). In questi giorni, ridurre l'intensità o riposare è più produttivo che forzare un allenamento di qualità.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Fisiologia del Recupero Attivo", 
+      body: "Stare seduti sul divano non è sempre il modo migliore per recuperare. \n\n- **Effetto Pompa:** Una camminata leggera o una pedalata agile aumentano il flusso sanguigno verso i muscoli senza aggiungere stress meccanico. Questo facilita la rimozione dei sottoprodotti metabolici e apporta nutrienti freschi e ossigeno ai tessuti in riparazione. \n- **Il Limite:** Il recupero attivo deve rimanere in Zona 1 (sotto il 60% della FC Max). Se superi questa soglia, inizi a produrre nuova fatica invece di smaltire quella esistente.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Crioterapia e Gestione dell'Infiammazione", 
+      body: "L'uso del ghiaccio (CWI - Cold Water Immersion) è uno strumento potente ma va usato con cautela. \n\n- **Benefici:** Riduce la percezione del dolore e l'edema muscolare, permettendoti di sentirti 'fresco' più velocemente. \n- **Il Paradosso:** L'infiammazione acuta post-allenamento è il segnale che innesca l'adattamento. Se usi il ghiaccio sistematicamente dopo ogni sessione di forza o velocità, potresti 'spegnere' i segnali che portano ai miglioramenti a lungo termine. Usa la crioterapia solo durante blocchi di gare ravvicinate o quando il recupero immediato è prioritario rispetto all'adattamento cronico.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Drenaggio Linfatico e Compressione", 
+      body: "A differenza del sistema circolatorio, il sistema linfatico non ha una pompa (il cuore). Si affida alla contrazione muscolare per muovere i liquidi. \n\n- **Abbigliamento a Compressione:** Calze e gambali esercitano una pressione graduata che facilita il ritorno venoso e il drenaggio dei fluidi interstiziali dalle gambe. \n- **Pressoterapia:** L'uso di stivali a compressione pneumatica simula questo processo in modo potenziato, riducendo drasticamente la sensazione di gambe pesanti e accelerando il turnover dei metaboliti della fatica.", 
+      variant: "default" 
     },
     {
-      heading: "Finestra Nutrizionale per l'Iper-Recupero",
-      body: "La 'Finestra Metabolica' è più ampia di quanto si pensasse, ma i primi 45-60 minuti rimangono critici per la risintesi del glicogeno. \n\n- **Il Rapporto 3:1:** Consuma 1,2 g di carboidrati per kg di peso corporeo per reintegrare il glicogeno muscolare, abbinati a 0,4 g/kg di proteine ad alto contenuto di leucina per innescare la Sintesi Proteica Muscolare (MPS). \n- **Idratazione:** Per ogni kg di peso perso durante una corsa, consuma 1,5 L di acqua arricchita con sodio per garantire la reidratazione cellulare.",
+      heading: "Il Sonno: Il Doping Naturale",
+      body: "Il 90% della riparazione fisica avviene durante il sonno profondo (fase N3). In questa fase, l'ipofisi rilascia il picco massimo di Ormone della Crescita (GH). Se dormi meno di 7-8 ore, stai sabotando attivamente il tuo allenamento. Nessun integratore o massaggio può sostituire i benefici ormonali di una notte di sonno di qualità.",
       variant: "tip"
     },
-    { 
-      heading: "Errori Comuni nel Recupero", 
-      body: "Molti runner scambiano il 'riposo' con il 'recupero'. Il vero recupero è proattivo. \n\n- **Abuso di FANS:** Assumere ibuprofene dopo ogni corsa inibisce il processo di riparazione guidato dalle prostaglandine, indebolendo potenzialmente l'adattamento a lungo termine. \n- **Trascurare la Mente:** Lo stress psicologico (lavoro, famiglia) utilizza le stesse risorse fisiologiche dello stress fisico. Se la vita è stressante, il tuo corpo ha bisogno di più tempo per recuperare dalle corse.", 
-      variant: "warning" 
+    {
+      heading: "Attenzione: Anti-infiammatori e Guarigione",
+      body: "Evita l'uso sistematico di FANS (Ibuprofene, Aspirina) per gestire i doms. Questi farmaci bloccano le prostaglandine, fondamentali per la riparazione dei tessuti e l'adattamento muscolare. Il dolore muscolare del giorno dopo è un segnale, non un nemico da mettere a tacere a ogni costo.",
+      variant: "warning"
     },
     { 
-      heading: "Protocollo Professionale: Checklist Passo-Passo", 
-      body: "Segui questa sequenza dopo ogni sessione intensa o corsa lunga per massimizzare il tuo ritorno sull'investimento.", 
+      heading: "Checklist: Protocollo di Recupero Pro", 
+      body: "Massimizza ogni ora post-allenamento.", 
       variant: "checklist", 
       listItems: [
-        "Defaticamento Post-Corsa: 5-10 minuti di camminata molto leggera subito dopo essersi fermati.", 
-        "Rifornimento entro 60 Minuti: shake o pasto con rapporto Carboidrati:Proteine di 3:1.", 
-        "Lavoro sui Tessuti Molli: 10 minuti di SMR concentrandosi su polpacci, quadricipiti e glutei.",
-        "Contrasto Termico: doccia alternata caldo/freddo per stimolare la circolazione periferica.",
-        "La Stanza Buia: 8+ ore di sonno in una stanza sotto i 19°C."
+        "Reidratazione: Bevi 1.5L di acqua per ogni kg di peso perso durante la corsa.", 
+        "Alimentazione: Consuma 20-30g di proteine e 60-80g di carboidrati entro 45 minuti.", 
+        "Mobilità: 10 minuti di foam rolling per ridurre la tensione fasciale, non il dolore muscolare.", 
+        "Mindfulness: 5 minuti di respirazione diaframmatica per attivare il nervo vago.",
+        "Compressione: Indossa calze a compressione per 2-4 ore dopo i lunghi o gli allenamenti intensi."
       ] 
-    },
-    {
-      heading: "HRV: Il tuo Pannello di Controllo Interno",
-      body: "La Variabilità della Frequenza Cardiaca (HRV) è lo strumento più preciso per misurare lo stato del tuo sistema nervoso autonomo. Un HRV alto indica che il sistema parasimpatico (riposo e digestione) è dominante, segnalando che sei pronto per un allenamento intenso. Un HRV basso o in calo costante suggerisce uno stress sistemico accumulato, indicando la necessità di un giorno di scarico o di riposo totale per prevenire l'overtraining.",
-      variant: "highlight"
     }
   ],
   hubCategory: "recovery",

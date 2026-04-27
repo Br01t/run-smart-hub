@@ -9,12 +9,13 @@ export const winterRunning: GuideContent = {
   description: "Una guida pratica alla corsa invernale: sistemi a strati, attrezzatura essenziale e precauzioni di sicurezza per allenarsi nei mesi più freddi.",
   tags: ["accessories", "running", "apparel", "top-apparel-2026"],
   heroImage: guideWinterRunning,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "Vestiti per una temperatura di 10°C superiore a quella reale per compensare il calore corporeo prodotto",
-    "Un sistema a 3 strati (Base, Mid, Shell) crea un microclima regolato vicino alla pelle",
-    "La lana merino è il gold standard per la regolazione termica e la gestione dell'umidità",
-    "L'aria fredda innesca la diuresi: un'idratazione corretta è fondamentale anche senza sudore percepito",
+    "Vestiti per una temperatura di 10°C superiore a quella reale per compensare il calore endogeno",
+    "Il sistema a 3 strati (Base, Mid, Shell) è l'unico modo per gestire il sudore senza gelare",
+    "La diuresi indotta dal freddo aumenta la perdita di liquidi: non scordare gli elettroliti",
+    "Proteggi le vie respiratorie con un buff per prevenire il broncospasmo da aria secca",
+    "Il cambio immediato post-corsa è critico per prevenire l'ipotermia da post-esercizio",
   ],
   relatedTools: [
     { to: "/tools/hydration", label: "Calcolatore Idratazione" },
@@ -26,48 +27,53 @@ export const winterRunning: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Termoregolazione", 
-      body: "Con il freddo, il corpo dà priorità alla temperatura interna restringendo il flusso sanguigno alle estremità (vasocostrizione). Questo protegge gli organi vitali ma lascia mani e piedi vulnerabili. \n\n**Diuresi Indotta dal Freddo:** L'esposizione al freddo aumenta la pressione sanguigna centrale, segnalando ai reni di filtrare i liquidi in eccesso. Ecco perché senti il bisogno di urinare di più in inverno. Poiché non 'senti' di sudare molto, i runner spesso trascurano l'idratazione, portando a un sangue più denso che compromette il trasporto di ossigeno ai muscoli.", 
+      heading: "La Scienza: Termoregolazione e Vasocostrizione", 
+      body: "Quando corri con temperature vicine allo zero, il corpo attiva un protocollo di emergenza per proteggere gli organi vitali. La vasocostrizione periferica riduce il flusso sanguigno verso la pelle e le estremità per minimizzare la dispersione di calore. \n\n**Costo Energetico del Freddo:** Correre al freddo può bruciare leggermente più calorie (glicogeno) perché il corpo deve generare calore interno attraverso i brividi o l'attivazione del grasso bruno. Tuttavia, la performance muscolare pura cala: le fibre muscolari fredde sono meno efficienti e più inclini a micro-lesioni. Per questo, un riscaldamento progressivo è molto più critico in inverno che in estate.", 
       variant: "highlight" 
     },
     { 
-      heading: "Scienza dei Materiali: Merino vs Sintetico", 
-      body: "Il cotone è il tuo peggior nemico in inverno. Assorbe l'umidità e perde ogni proprietà isolante quando è bagnato, portando a una rapida perdita di calore per conduzione. \n\n- **Lana Merino:** può assorbire fino al 35% del suo peso in acqua prima di sembrare 'bagnata'. Mantiene il calore anche se umida ed è naturalmente antimicrobica. \n- **Sintetici (Poliestere/Nylon):** progettati per la massima traspirazione. Asciugano più velocemente della lana ma forniscono meno calore statico. Il sistema ideale prevede spesso una base sintetica per le corse intense e una base merino per i lunghi lenti.", 
+      heading: "Fisiologia: La Diuresi Indotta dal Freddo", 
+      body: "Ti sei mai chiesto perché devi urinare più spesso durante le corse invernali? \n\n- **Meccanismo:** Il freddo causa lo spostamento del volume sanguigno dalle estremità verso il centro del corpo. Questo aumento della pressione centrale viene interpretato dai recettori come un eccesso di liquidi. Il corpo risponde eliminando acqua attraverso i reni. \n- **Il Pericolo Disidratazione:** Molti runner smettono di bere perché non 'sentono' la sete. In realtà, perdi grandi quantità di liquidi attraverso la respirazione (l'aria fredda deve essere umidificata dai polmoni) e la diuresi. Sangue più denso significa cuore che lavora di più e recupero più lento.", 
       variant: "default" 
     },
     { 
-      heading: "Gestire il Microclima", 
-      body: "Un kit invernale vincente è un sistema modulare a 3 strati. \n\n1. **Base Layer (Intimo):** allontana il sudore dalla pelle. \n2. **Mid Layer (Isolamento):** intrappola uno strato di aria calda. I pile a griglia (come il Polartec Power Grid) sono superiori perché isolano permettendo al calore in eccesso di uscire. \n3. **Outer Layer (Protezione):** un guscio resistente al vento. Evita giacche totalmente impermeabili a meno che non piova, poiché intrappolano il sudore all'interno, creando un 'effetto sauna' che finisce per farti gelare.", 
-      variant: "default", 
-      listItems: [
-        "Testa e Mani: il 30-40% della perdita totale di calore può avvenire attraverso le estremità", 
-        "Trazione: ramponcini o scarpe chiodate sono necessari per correre sul ghiaccio vivo", 
-        "Visibilità: la riflettività è più importante del colore in condizioni di bassa luce invernale",
-        "Durata Batteria: le basse temperature possono ridurre la durata della batteria dell'orologio GPS fino al 50%."
-      ] 
-    },
-    {
-      heading: "Broncospasmo e Salute Polmonare",
-      body: "L'aria fredda e secca può innescare il 'Broncospasmo indotto dall'esercizio' (EIB). Indossare uno scaldacollo (buff) davanti alla bocca crea uno 'scambio di calore e umidità' (HME), preriscaldando e umidificando l'aria prima che raggiunga i bronchi.",
-      variant: "warning"
-    },
-    {
-      heading: "La Regola del 'Partenza Fredda'",
-      body: "Dovresti sentirti leggermente infreddolito appena metti piede fuori casa. Se sei perfettamente al caldo alla partenza, finirai per surriscaldarti pericolosamente entro 15 minuti. Vestiti per la temperatura che il tuo corpo raggiungerà al 5° km, non per quella della linea di partenza.",
-      variant: "tip"
+      heading: "Il Sistema a Tre Strati: Ingegneria del Clima", 
+      body: "Padroneggiare gli strati è l'unica difesa contro l'ipotermia da sudore. \n\n1. **Base Layer (Traspirazione):** Deve essere aderente e sintetico o in lana merino. Il suo unico compito è allontanare il sudore dalla pelle. Il cotone è proibito: assorbe acqua e ti raffredda 25 volte più velocemente dell'aria.\n2. **Mid Layer (Isolamento):** Intrappola l'aria calda. I tessuti 'waffle' o a griglia sono ideali perché offrono calore senza ingombro, permettendo al vapore acqueo di continuare il suo viaggio verso l'esterno.\n3. **Outer Shell (Protezione):** Deve bloccare il vento ma restare traspirante. Una giacca totalmente impermeabile è spesso controproducente perché intrappola il sudore all'interno, bagnando gli strati sottostanti.", 
+      variant: "default" 
     },
     { 
-      heading: "Checklist Corsa Invernale", 
-      body: "Protocolli di sicurezza e attrezzatura per l'allenamento sotto zero.", 
-      variant: "checklist", 
+      heading: "Salute Respiratoria e Aria Secca", 
+      body: "L'aria invernale ha un'umidità bassissima. Quando inali aria fredda a 170 battiti al minuto, i tuoi bronchi subiscono uno shock termico.\n\n- **HME (Heat and Moisture Exchange):** Indossare uno scaldacollo (buff) sopra bocca e naso agisce come uno scambiatore di calore. L'umidità del tuo respiro in uscita rimane nel tessuto e umidifica l'aria secca in entrata. Questo riduce drasticamente il rischio di tosse post-corsa e broncospasmo indotto dall'esercizio.", 
+      variant: "default", 
       listItems: [
-        "Riscaldamento: fai 5 minuti di drill dinamici *dentro* casa prima di uscire.", 
-        "Controllo Attrezzatura: testa le batterie della lampada frontale; si scaricano più velocemente al freddo.", 
-        "Idratazione: bevi elettroliti a temperatura ambiente prima e dopo la corsa.", 
-        "Protezione Pelle: usa un balsamo anti-sfregamento o vaselina sulla pelle del viso esposta per prevenire bruciature da vento.",
-        "Protocollo Post-Corsa: togliti i vestiti bagnati entro 5 minuti dalla fine per evitare un crollo della temperatura corporea."
+        "Estremità: Indossa guanti tecnici; le mani sono le prime a perdere destrezza per la vasocostrizione.", 
+        "Visibilità: In inverno le ore di luce sono ridotte; elementi riflettenti e luci sono obbligatori.", 
+        "Trazione: Su neve o ghiaccio, riduci la lunghezza del passo e aumenta la cadenza per la stabilità.",
+        "Batteria GPS: Il freddo rallenta le reazioni chimiche delle batterie; tieni l'orologio coperto dalla manica."
       ] 
     },
+    {
+      heading: "Consiglio: La Regola del +10°C",
+      body: "La regola d'oro per non soffrire il freddo (né il caldo eccessivo) è vestirsi come se ci fossero 10 gradi in più rispetto alla temperatura reale. Se fuori ci sono 2°C, vestiti come se dovessi fare una passeggiata a 12°C. Sentirai freddo nei primi 5 minuti, masarai perfetto per il resto dell'allenamento.",
+      variant: "tip"
+    },
+    {
+      heading: "Attenzione: Il Pericolo post-corsa",
+      body: "Il momento più pericoloso per l'ipotermia è *dopo* la corsa. Appena smetti di produrre calore, i vestiti umidi iniziano a sottrarre calore al tuo corpo a una velocità impressionante. Non fermarti a chiacchierare; entra in un luogo caldo e cambia il primo strato immediatamente.",
+      variant: "warning"
+    },
+    { 
+      heading: "Checklist: Preparazione Invernale", 
+      body: "Non farti trovare impreparato dal gelo.", 
+      variant: "checklist", 
+      listItems: [
+        "Riscaldamento Indoor: Esegui 5 minuti di mobilità in casa prima di uscire per non partire con muscoli 'congelati'.", 
+        "Cura della Pelle: Usa creme barriera o vaselina su zigomi e naso per evitare bruciature da vento.", 
+        "Controllo Meteo: Controlla sempre la velocità del vento (Wind Chill); 0°C con vento forte sembrano -10°C.", 
+        "Idratazione Tiepida: Porta borracce con acqua tiepida per evitare che gelino durante i lunghi.",
+        "Cambio Rapido: Prepara i vestiti asciutti e una bevanda calda da consumare subito dopo l'allenamento."
+      ] 
+    }
   ],
   hubCategory: "apparel",
 };

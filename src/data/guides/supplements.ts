@@ -9,12 +9,13 @@ export const supplementsForRunners: GuideContent = {
   description: "Quali integratori funzionano davvero per la corsa? Una guida basata sulle evidenze scientifiche per la performance e la salute.",
   tags: ["supplements", "electrolytes", "protein", "top-supplements-2026"],
   heroImage: guideSupplements,
-  readTime: "8 min di lettura",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Dai priorità al cibo vero—gli integratori colmano le lacune lasciate da allenamenti ad alto volume",
-    "Creatina e Beta-Alanina migliorano la capacità ad alta intensità e il tamponamento dell'acido lattico",
-    "I Nitrati (Barbabietola) riducono il costo di ossigeno della corsa",
-    "Ferro e Vitamina D sono le carenze più comuni nei runner",
+    "L'integrazione è efficace solo se la base nutrizionale (calorie e macro) è solida",
+    "La Caffeina (3-6mg/kg) è l'aiuto ergogenico con le prove scientifiche più solide per l'endurance",
+    "I Nitrati (Barbabietola) migliorano l'efficienza mitocondriale riducendo il costo di ossigeno",
+    "La Creatina Monoidrato è utile anche per l'endurance per la risintesi rapida di ATP negli sprint",
+    "Ferro e Vitamina D sono i micronutrienti critici che richiedono monitoraggio ematico costante",
   ],
   relatedTools: [
     { to: "/tools/protein", label: "Calcolatore Proteine" },
@@ -27,53 +28,63 @@ export const supplementsForRunners: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Gerarchia delle Performance", 
-      body: "L'integrazione è la 'punta della piramide'. Prima di considerare pillole e polveri, assicurati che l'apporto calorico, il bilancio dei macronutrienti e il sonno siano ottimizzati. Tuttavia, per gli atleti che si allenano più di 5 ore a settimana, specifici micronutrienti possono diventare fattori limitanti sia per la performance che per il recupero.", 
+      heading: "La Gerarchia delle Performance: Scienza vs. Marketing", 
+      body: "L'integrazione sportiva è spesso percepita come una scorciatoia, ma scientificamente rappresenta solo la 'punta della piramide'. Prima di considerare pillole e polveri, è fondamentale che l'apporto calorico totale, il bilancio dei macronutrienti e la qualità del sonno siano ottimizzati. Tuttavia, per gli atleti che superano le 5-7 ore di allenamento settimanale, alcuni micronutrienti e aiuti ergogenici possono diventare fattori limitanti critici.\n\n**Perché integrare?** Durante la corsa di endurance, il corpo subisce stress ossidativo, micro-lesioni muscolari e deplezione di elettroliti. Gli integratori corretti aiutano a mitigare questi danni, permettendo volumi di allenamento più elevati con un rischio ridotto di infortuni e sindrome da sovrallenamento (Overtraining).", 
       variant: "highlight" 
     },
     { 
-      heading: "Potenziatori di Performance: I Magnifici Tre", 
-      body: "Solo una manciata di integratori ha evidenze di 'Livello A' per migliorare le prestazioni di endurance. \n\n- **Nitrati (Succo di Barbabietola):** Aumentano l'ossido nitrico, migliorando l'efficienza mitocondriale. Dosaggio: 400-800 mg 2-3 ore prima di una gara. \n- **Beta-Alanina:** Aumenta i livelli di carnosina muscolare, che tampona il 'bruciore' (ioni H+) durante gli sforzi VO2 max. Dosaggio: 3,2-6,4 g al giorno (dosi frazionate per evitare il formicolio). \n- **Creatina Monoidrato:** Migliora la risintesi della fosfocreatina per gli sprint in salita e le volate finali. Contrariamente ai miti, non causa gonfiore se assunta in basse dosi (3-5 g al giorno).", 
+      heading: "Potenziatori di Performance: Il 'Livello A' dell'Endurance", 
+      body: "Solo una manciata di sostanze ha evidenze di 'Livello A' (il massimo grado di certezza scientifica) per migliorare le prestazioni di endurance. \n\n- **Nitrati (Succo di Barbabietola):** Agiscono come precursori dell'ossido nitrico, che dilata i vasi sanguigni e migliora l'efficienza mitocondriale. Gli studi mostrano una riduzione del costo di ossigeno fino al 5% a intensità submassimali. Dosaggio: 400-800 mg di nitrati (circa 500ml di succo o shot concentrati) 2-3 ore prima dell'attività.\n- **Beta-Alanina:** Un aminoacido che aumenta i livelli di carnosina nei muscoli. La carnosina agisce come un tampone intracellulare, neutralizzando gli ioni idrogeno (H+) che causano l'acidosi e il bruciore durante gli sforzi ad alta intensità (es. sprint finale o salite). Dosaggio: 3,2-6,4 g al giorno per almeno 4 settimane per saturare i tessuti.\n- **Bicarbonato di Sodio:** Agisce come un tampone extracellulare. È estremamente efficace ma rischioso per i disturbi gastrointestinali. Molti runner professionisti usano ora capsule a rilascio ritardato per mitigare gli effetti collaterali.", 
       variant: "default" 
     },
+    {
+      heading: "Caffeina: Il Gold Standard Strategico",
+      body: "La caffeina è l'integratore con le prove più solide per l'endurance. Non agisce solo come stimolante del sistema nervoso centrale, ma riduce la percezione dello sforzo (RPE), permettendoti di mantenere un'intensità maggiore per più tempo. \n\n**Il Protocollo Ottimale:** Il dosaggio standard è di 3-6 mg per kg di peso corporeo (circa 2-3 caffè per un runner medio), assunto 45-60 minuti prima dello start. \n**Strategie Ultra-Endurance:** In gare superiori alle 4-5 ore, dosi massicce iniziali possono portare a un 'crash'. La strategia vincente è l'assunzione di micro-dosi (50mg, circa mezzo caffè o un gel caffeinato) ogni ora per mantenere i livelli ematici costanti senza picchi di ansia o tachicardia.",
+      variant: "tip"
+    },
     { 
-      heading: "Salute e Resilienza: Lo Stack del Recupero", 
-      body: "La corsa di endurance è uno stress infiammatorio e ossidativo. Mantenere la salute sistemica è la chiave per un allenamento costante. \n\n- **Vitamina D3 + K2:** Fondamentale per l'assorbimento del calcio e la funzione immunitaria. Molti runner sono carenti. Punta a 2000-5000 UI al giorno. \n- **Magnesio (Bisglicinato/Citrato):** Coinvolto in oltre 300 reazioni. La carenza di magnesio è legata ai crampi muscolari e a una scarsa qualità del sonno. \n- **Omega-3 (EPA/DHA):** Riduce l'infiammazione sistemica indotta dall'esercizio e migliora la salute del cuore.", 
+      heading: "Salute e Resilienza: Lo Stack del Recupero Sistemico", 
+      body: "La corsa è un'attività catabolica. Mantenere la salute dei tessuti è fondamentale per la longevità sportiva. \n\n- **Vitamina D3 + K2:** Cruciale non solo per le ossa (prevenzione fratture da stress), ma anche per la forza muscolare e la funzione immunitaria. La Vitamina K2 assicura che il calcio venga depositato nelle ossa e non nelle arterie.\n- **Magnesio (Bisglicinato o Citrato):** Fondamentale per il rilassamento muscolare e la qualità del sonno. Il bisglicinato è la forma con la migliore biodisponibilità e il minor effetto lassativo.\n- **Omega-3 (EPA/DHA):** Potenti anti-infiammatori naturali. Aiutano a ridurre i DOMS (dolori muscolari post-allenamento) e migliorano la fluidità delle membrane cellulari, facilitando lo scambio di nutrienti.", 
       variant: "default", 
       listItems: [
-        "Ferro (Ferritina): i runner perdono ferro con il sudore e l'emolisi da impatto. Controlla i livelli regolarmente.", 
-        "Probiotici: riducono l'incidenza di disturbi gastrointestinali durante i lunghi sforzi.", 
-        "Collagene + Vitamina C: assunti 45 minuti prima di una sessione di forza, possono migliorare la riparazione di tendini e legamenti.",
-        "Zinco: essenziale per la salute ormonale e la funzione enzimatica negli atleti ad alto chilometraggio."
+        "Ferro e Ferritina: Fondamentali per il trasporto di ossigeno. I runner perdono ferro per l'impatto dei piedi (emolisi) e la sudorazione.", 
+        "Collagene + Vitamina C: Assunti 45-60 min prima di un allenamento di forza, possono migliorare la sintesi di nuovo collagene nei tendini.", 
+        "Zinco e Selenio: Supportano la funzione tiroidea e il sistema immunitario, spesso compromessi durante i blocchi di allenamento intensi.",
+        "Probiotici: Essenziali per chi soffre di disturbi gastrici in corsa; migliorano la barriera intestinale contro lo stress da calore."
       ] 
     },
     {
-      heading: "Il Paradosso degli Antiossidanti",
-      body: "Gli studi dimostrano che dosi elevate di Vitamina C (>1000 mg) e Vitamina E durante la fase di costruzione della base possono effettivamente **smorzare** gli adattamenti mitocondriali. Il tuo corpo ha bisogno dello 'stress' dell'ossidazione per segnalare la necessità di diventare più forte. Riserva gli antiossidanti ad alte dosi per i 3 giorni post-maratona o durante periodi di viaggio intensi.",
+      heading: "Elettroliti e Cinetica dell'Idratazione",
+      body: "L'acqua da sola non basta per corse superiori ai 60 minuti. Il Sodio è l'elettrolita principale perso con il sudore (da 500mg a 2000mg per litro). Una carenza di sodio porta a una riduzione del volume plasmatico, aumentando la frequenza cardiaca e il rischio di crampi.\n\n**L'importanza del Magnesio e Potassio:** Sebbene persi in quantità minori, giocano un ruolo chiave nella conduzione nervosa. Un integratore di elettroliti bilanciato dovrebbe contenere un rapporto sodio-potassio di circa 3:1 per mantenere l'equilibrio osmotico cellulare.",
+      variant: "default"
+    },
+    {
+      heading: "Creatina Monoidrato: Non solo per i Bodybuilder",
+      body: "Molti runner evitano la creatina per paura del guadagno di peso. In realtà, la creatina è un potente aiuto per l'endurance. Aiuta nella risintesi rapida dell'ATP, fondamentale per gli scatti, le salite e il cambio di ritmo. Inoltre, la ritenzione idrica associata (circa 0,5-1kg) è intracellulare (dentro il muscolo), il che può effettivamente aiutare la termoregolazione in condizioni di caldo estremo. Dosaggio: 3-5 g al giorno fissi, senza fase di carico.",
+      variant: "default"
+    },
+    {
+      heading: "Il Paradosso degli Antiossidanti ad Alto Dosaggio",
+      body: "Attenzione all'uso cronico di Vitamina C (>1000mg) e Vitamina E subito dopo l'allenamento. La scienza suggerisce che dosi eccessive di antiossidanti possono 'spegnere' i segnali di adattamento mitocondriale. In breve: se elimini tutto lo stress ossidativo con gli integratori, il tuo corpo non riceve il segnale che deve diventare più forte. Riserva gli antiossidanti per i periodi di gara intensa o quando senti i primi sintomi di un raffreddore.",
       variant: "warning"
     },
     {
       heading: "Cinetica di Proteine e Aminoacidi",
-      body: "La Sintesi Proteica Muscolare (MPS) è guidata dalla 'Soglia di Leucina'. Punta a 20-30 g di proteine ogni 3-4 ore, assicurando almeno 2,5 g di Leucina per porzione (presente in whey, soia o uova) per attivare la via mTOR per la riparazione muscolare.",
+      body: "La Sintesi Proteica Muscolare (MPS) è attivata principalmente dalla Leucina. Per un runner, l'apporto proteico ideale è tra 1,4 e 1,8 g per kg di peso. \n\n- **Proteine Whey:** Rapido assorbimento, ideali post-corsa per fermare il catabolismo.\n- **Caseina:** Assorbimento lento, ottima prima di dormire per riparare i tessuti durante il digiuno notturno.\n- **BCAA/EAA:** Utili solo se l'apporto proteico totale è basso. In generale, una polvere proteica completa è sempre preferibile agli aminoacidi isolati.",
       variant: "tip"
     },
     { 
-      heading: "Checklist Integratori per il Runner", 
-      body: "Come integrare in modo sicuro ed efficace gli integratori nella tua routine.", 
+      heading: "Checklist per un'Integrazione Sicura", 
+      body: "Il mercato degli integratori non è regolamentato come quello dei farmaci. Segui queste regole per la tua sicurezza.", 
       variant: "checklist", 
       listItems: [
-        "Cerca i loghi 'Informed Sport' o 'NSF' per garantire l'assenza di sostanze vietate.", 
-        "Beta-Alanina: assumi 1,6 g due volte al giorno per minimizzare la 'parestesia' (formicolio cutaneo).", 
-        "Creatina: non c'è bisogno di fasi di carico. 5 g al giorno costanti sono sufficienti per la saturazione in 21 giorni.", 
-        "Vitamina D: assumila con un pasto contenente grassi per massimizzare l'assorbimento.",
-        "Magnesio: assumilo prima di dormire per sfruttare i suoi effetti rilassanti e favorenti il sonno."
+        "Verifica Certificazioni: Cerca i marchi 'Informed Sport' o 'NSF' per escludere contaminazioni da sostanze dopanti.", 
+        "Testa in Allenamento: Mai provare un nuovo integratore (specialmente gel o caffeina) il giorno della gara.", 
+        "Analisi del Sangue: Prima di integrare ferro o vitamina D, verifica i tuoi livelli reali con un medico.", 
+        "Qualità del Brand: Scegli marche trasparenti (es. Myprotein, Onnit) che pubblicano i risultati dei test di laboratorio.",
+        "Ciclicizzazione: Sospendi periodicamente gli stimolanti (caffeina) per resettare la sensibilità dei recettori."
       ] 
     },
-    {
-      heading: "Caffeina: Il Gold Standard della Performance",
-      body: "La caffeina è l'integratore con le prove più solide per l'endurance. Agisce riducendo la percezione dello sforzo (RPE) e migliorando il reclutamento delle fibre muscolari. Il dosaggio ottimale è di 3-6 mg per kg di peso corporeo, assunto 45-60 minuti prima dell'attività. Per sforzi ultra-endurance, dosi minori e frequenti (es. 50mg ogni ora) possono mantenere i livelli di vigilanza costanti senza causare disturbi gastrici.",
-      variant: "tip"
-    }
   ],
   hubCategory: "supplements",
 };

@@ -9,12 +9,13 @@ export const intervalTraining: GuideContent = {
   description: "Padroneggia ogni tipo di allenamento di velocità — dal fartlek alle ripetute VO2 max. Impara come strutturare gli intervalli e impostare i ritmi target.",
   tags: ["running", "energy", "muscles"],
   heroImage: guideIntervalTraining,
-  readTime: "5 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "L'allenamento a intervalli manipola i rapporti lavoro-riposo per colpire specifici sistemi energetici",
-    "Le ripetute VO2 Max (3-5 min) migliorano la tua capacità massima di elaborazione dell'ossigeno",
-    "Le Tempo run (Soglia) aumentano il ritmo che puoi sostenere senza andare fuori giri",
-    "Il recupero attivo (corsa lenta) tra le serie rimuove il lattato più velocemente del riposo da fermi",
+    "Gli intervalli migliorano l'efficienza del 'Lactate Shuttle', usando il lattato come carburante",
+    "Il rapporto lavoro-riposo determina quale sistema energetico stai allenando",
+    "Le ripetute VO2 Max espandono il tuo soffitto aerobico e la gittata cardiaca",
+    "Le Tempo Run (Soglia) insegnano al corpo a correre veloce senza accumulare fatica precoce",
+    "L'effetto EPOC post-intervalli aumenta il metabolismo basale per ore dopo la sessione",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calcolatore Calorie" },
@@ -26,48 +27,53 @@ export const intervalTraining: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Sistemi Energetici", 
-      body: "L'allenamento a intervalli è la manipolazione strategica di intensità e recupero per sollecitare i tre sistemi energetici del corpo: le vie Fosfagena (ATP-PC), Glicolitica (Anaerobica) e Ossidativa (Aerobica). \n\n**Efficienza del Lactate Shuttle:** Gli intervalli ad alta intensità allenano il tuo corpo a 'trasportare' il lattato fuori dai muscoli impegnati per essere usato come carburante dal cuore e dal fegato. Questo adattamento fisiologico ti permette di sostenere il 'ritmo gara' con uno sforzo percepito significativamente inferiore.", 
+      heading: "La Scienza: Sistemi Energetici e Lactate Shuttle", 
+      body: "L'allenamento a intervalli è la manipolazione strategica di intensità e recupero per sollecitare i tre sistemi energetici: Fosfagena (ATP-PC), Glicolitica (Anaerobica) e Ossidativa (Aerobica). \n\n**Efficienza del Lactate Shuttle:** Contrariamente alla credenza popolare, il lattato non è un rifiuto tossico, ma una fonte di energia. Gli intervalli ad alta intensità allenano il tuo corpo a 'trasportare' efficacemente il lattato dai muscoli impegnati verso il cuore e il fegato, dove viene riconvertito in carburante. Questo processo ti permette di mantenere un ritmo di gara elevato per tempi prolungati, riducendo l'acidosi muscolare che causa il rallentamento.", 
       variant: "highlight" 
     },
     { 
-      heading: "La Matrice del Rapporto Lavoro-Riposo", 
-      body: "La magia degli intervalli risiede nel recupero. \n\n- **Ripetute VO2 Max (Rapporto 1:1):** Se corri per 4 minuti intensamente, riposi per 4 minuti lentamente. Questo permette una risintesi parziale della fosfocreatina (PCr), così da poter ripetere lo sforzo ad alta intensità. \n- **Capacità Anaerobica (Rapporto 1:3):** Scatti brevi ed esplosivi (es. 200 m) richiedono un riposo lungo per permettere al sistema nervoso di recuperare. \n- **Soglia/Tempo (Riposo Breve):** Ripetute di 1,5-2 km con solo 60-90 secondi di riposo mantengono elevata la frequenza cardiaca, forzando il corpo a gestire l'accumulo continuo di lattato.", 
+      heading: "Fisiologia: VO2 Max e Gittata Sistolica", 
+      body: "Le ripetute ad alta intensità (sopra il 90% della FC Max) sono l'unico modo per migliorare significativamente il VO2 Max. \n\n- **Adattamenti Cardiaci:** Durante uno sforzo intenso, le pareti del cuore si rinforzano e la capacità dei ventricoli aumenta. Questo porta a una maggiore **gittata sistolica** (più sangue ossigenato pompato ad ogni battito). \n- **Effetto EPOC:** Dopo una sessione di intervalli, il corpo consuma ossigeno extra per riparare i tessuti e ripristinare le scorte di glicogeno. Questo 'debito di ossigeno' (Excess Post-exercise Oxygen Consumption) mantiene il metabolismo basale elevato per diverse ore dopo la doccia, favorendo la ricomposizione corporea.", 
       variant: "default" 
     },
     { 
-      heading: "Tipi di Lavori di Velocità", 
-      body: "Il piano di ogni runner dovrebbe ruotare attraverso questi tre 'Pilastri della Velocità'. \n\n1. **Fartlek ('Gioco di Velocità'):** Intervalli non strutturati basati su punti di riferimento (es. 'scatto fino a quell'albero'). Ottimo per costruire resilienza mentale e varietà. \n2. **Tempo Run:** Sforzi sostenuti all'85-90% della FC Max. È il 'collante' che tiene insieme il tuo ritmo maratona. \n3. **Ripetute VO2 Max:** Sforzi da 800 m a 1600 m che ti lasciano con il fiato corto. Costruiscono il 'soffitto aerobico' che detta il tuo potenziale ultimo.", 
+      heading: "La Matrice dei Rapporti Lavoro-Riposo", 
+      body: "La magia degli intervalli risiede nella gestione del riposo, non solo nella velocità. \n\n- **VO2 Max (Rapporto 1:1):** Ad esempio, 3 minuti di corsa intensa seguiti da 3 minuti di corsa lentissima. Questo tempo permette una risintesi parziale della fosfocreatina muscolare, così da poter ripetere lo sforzo mantenendo un'alta qualità tecnica. \n- **Capacità Anaerobica (Rapporto 1:3):** Sprint brevi (es. 200m) richiedono un recupero lungo per permettere al sistema nervoso centrale di 'resettarsi' e produrre di nuovo la massima potenza. \n- **Soglia del Lattato (Riposo Breve):** Ripetute di 1000m-2000m con solo 60-90 secondi di pausa. Il riposo breve impedisce lo smaltimento totale del lattato, forzando il corpo a imparare a correre in uno stato di acidosi moderata.", 
+      variant: "default" 
+    },
+    { 
+      heading: "I Tre Pilastri della Velocità", 
+      body: "Una programmazione bilanciata deve includere queste tre varianti.\n\n1. **Fartlek:** Gioco di velocità su terreni variabili. Allena l'adattabilità e la forza mentale senza lo stress del cronometro.\n2. **Tempo Run:** Sforzo sostenuto (di solito 20-40 minuti) al ritmo che potresti mantenere per un'ora. È il miglior allenamento per la resistenza specifica.\n3. **Intervalli Brevi:** Ripetute da 200m-400m per migliorare la meccanica della falcata, la cadenza e l'economia di corsa.", 
       variant: "default", 
       listItems: [
-        "Allunghi: accelerazioni di 80-100 m per migliorare l'economia di corsa e la reattività neuromuscolare", 
-        "Gittata Sistolica: il lavoro di velocità aumenta la quantità di sangue pompata per ogni battito", 
-        "Capillarizzazione: gli sforzi intensi creano nuovi vasi sanguigni microscopici nei muscoli",
-        "Taper Mentale: gli intervalli insegnano al cervello che 'disagio' non significa 'pericolo'."
+        "Economia di Corsa: Gli intervalli migliorano la comunicazione tra cervello e fibre muscolari, rendendo la corsa 'più facile'.", 
+        "Capillarizzazione: L'intensità stimola la crescita di nuovi capillari nei muscoli, migliorando il trasporto di ossigeno.", 
+        "Enzimi Ossidativi: Aumenta l'attività degli enzimi che bruciano grassi e zuccheri nei mitocondri.",
+        "Resilienza: Superare intervalli duri costruisce il 'buffer' mentale necessario per i chilometri finali della gara."
       ] 
     },
     {
-      heading: "La Regola del 20% di Intensità",
-      body: "Per evitare la 'Sindrome da Sovrallenamento', il lavoro ad alta intensità (Zona 4/5) non dovrebbe mai superare il 20% del tuo chilometraggio settimanale totale. Se corri 50 km a settimana, mantieni i chilometri 'duri' sotto i 10 km.",
+      heading: "Attenzione al Carico: La Regola del 20%",
+      body: "Il lavoro ad alta intensità è estremamente tassante per il sistema nervoso e per i tessuti connettivi. Per prevenire infortuni e burnout, non dedicare più del 20% del tuo volume settimanale totale agli intervalli veloci. Se corri 40 km a settimana, non fare più di 8 km di intensità (escluso riscaldamento e defaticamento).",
       variant: "warning"
     },
     {
-      heading: "Ritmo basato sui Dati, non sull'Ego",
-      body: "Usa un recente risultato di gara di 5 km o 10 km per calcolare i tuoi ritmi di allenamento. Correre gli intervalli 'il più veloce possibile' è spesso controproducente. Se una sessione richiede il 'Ritmo Soglia' e tu corri al 'Ritmo Miglio', stai colpendo il sistema energetico sbagliato e accumulando fatica non necessaria.",
+      heading: "Consiglio: Recupero Attivo vs Passivo",
+      body: "Durante le ripetute di soglia, preferisci sempre il recupero attivo (corsa molto lenta). Questo mantiene attiva la 'pompa muscolare', aiutando il cuore a far circolare il sangue e facilitando lo smaltimento metabolico dei prodotti di scarto dell'intensità appena conclusa.",
       variant: "tip"
     },
     { 
-      heading: "Checklist per la Sessione a Intervalli", 
-      body: "Come eseguire una sessione di velocità perfetta dall'inizio alla fine.", 
+      heading: "Checklist per una Sessione Perfetta", 
+      body: "Segui questi passi per massimizzare ogni singolo allenamento di velocità.", 
       variant: "checklist", 
       listItems: [
-        "Riscaldamento: 15 minuti facili + drill dinamici (ginocchia alte, calciata).", 
-        "Il Set Principale: punta alla costanza—il tuo ultimo intervallo dovrebbe essere veloce quanto il primo.", 
-        "Recupero Attivo: mantieni le gambe in movimento a un ritmo lentissimo per evitare il ristagno di sangue.", 
-        "Rifornimento: consuma carboidrati e proteine di alta qualità entro 45 minuti dalla fine.",
-        "Scelta della Superficie: usa una strada pianeggiante o una pista per i lavori VO2 Max per garantire ritmi precisi."
+        "Riscaldamento Progressivo: 15 minuti di corsa facile che culmina con 4-6 allunghi da 80m.", 
+        "Controllo del Ritmo: Non 'sparare' tutto nel primo intervallo; punta alla costanza o a un leggero crescendo.", 
+        "Analisi Post-Lavoro: Confronta i tuoi dati (FC e Passo) per vedere se hai colpito l'obiettivo metabolico.", 
+        "Nutrizione Post-Sforzo: Carboidrati liquidi e proteine entro 30 minuti per fermare il catabolismo muscolare.",
+        "Riposo Successivo: Assicurati che il giorno dopo un lavoro a intervalli sia di riposo totale o di corsa rigenerativa brevissima."
       ] 
-    },
+    }
   ],
   hubCategory: "recovery",
 };

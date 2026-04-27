@@ -20,5 +20,5 @@ export interface GuideContent {
   sections: GuideSection[];
   relatedTools: { to: string; label: string }[];
   relatedGuides: { slug: string; label: string }[];
-  hubCategory?: "shoes" | "supplements" | "hydration" | "recovery" | "apparel";
+  hubCategory?: "shoes" | "supplements" | "hydration" | "recovery" | "apparel" | "gear" | "nutrition";
 }

@@ -44,6 +44,7 @@ const CookieConsent = () => {
   const accept = (preferences: CookiePreferences) => {
     storePreferences(preferences);
     setVisible(false);
+    window.dispatchEvent(new Event("cookieConsentChanged"));
   };
 
   const acceptAll = () => accept({ essential: true, analytics: true, marketing: true });
@@ -70,10 +71,9 @@ const CookieConsent = () => {
           </div>
 
           <p className="mb-4 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-            Utilizziamo i cookie per migliorare la tua esperienza, analizzare il traffico del sito e supportare i nostri partner di affiliazione.
-            Puoi personalizzare le tue preferenze o accettare/rifiutare tutto.{" "}
+            Aiutaci a mantenere gratuiti i nostri calcolatori e le guide scientifiche. Accettando i cookie, ci permetti di mostrarti offerte personalizzate e sostenere i costi di gestione di Runners Hub, senza alcun costo aggiuntivo per te.{" "}
             <Link to="/privacy" className="text-primary underline underline-offset-2 hover:text-primary/80">
-              Informativa sulla Privacy
+              Scopri di più
             </Link>
           </p>
 
@@ -103,8 +103,10 @@ const CookieConsent = () => {
 
               <label className="flex cursor-pointer items-center justify-between">
                 <div>
-                  <span className="text-xs font-medium text-foreground sm:text-sm">Marketing</span>
-                  <p className="text-[11px] text-muted-foreground">Utilizzati dai partner di affiliazione per il tracciamento dei rinvii</p>
+                  <span className="text-xs font-medium text-foreground sm:text-sm">Marketing e Affiliazione</span>
+                  <p className="text-[11px] text-muted-foreground">
+                    Supporta il progetto permettendoci di ricevere commissioni dai partner senza costi per te
+                  </p>
                 </div>
                 <input
                   type="checkbox"

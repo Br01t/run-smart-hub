@@ -11,6 +11,7 @@ const categoryMap: Record<string, string> = {
   abbigliamento: "Abbigliamento",
   apparel: "Abbigliamento",
   gear: "Attrezzatura",
+  nutrition: "Nutrizione",
 };
 
 const sportMap: Record<string, string> = {

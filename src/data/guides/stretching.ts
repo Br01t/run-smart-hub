@@ -9,12 +9,13 @@ export const stretchingForRunners: GuideContent = {
   description: "Stretching dinamico vs statico: quando farlo, le migliori routine e come la flessibilità influisce sull'efficienza della corsa.",
   tags: ["recovery", "muscles", "running"],
   heroImage: guideStretching,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "Lo stretching dinamico (potenziamento) è obbligatorio prima della corsa per preparare il sistema nervoso",
-    "Lo stretching statico prima della corsa riduce la 'Rigidità Tendinea', diminuendo il ritorno elastico",
-    "Lo stretching statico post-corsa attiva il Sistema Nervoso Parasimpatico per un recupero più rapido",
-    "La mobilità mirata di caviglia e anca è la base di una falcata efficiente",
+    "Lo stretching dinamico pre-corsa aumenta la temperatura tissutale e la velocità di conduzione nervosa",
+    "La rigidità tendinea è necessaria per l'economia di corsa: lo statico pre-gara la riduce",
+    "La fascia richiede idratazione e carichi lenti (Creep) per cambiare struttura a lungo termine",
+    "Il PNF (Proprioceptive Neuromuscular Facilitation) è il metodo più efficace per guadagni rapidi di ROM",
+    "La mobilità dell'alluce e della caviglia sono i predittori primari della prevenzione infortuni al piede",
   ],
   relatedTools: [
     { to: "/tools/bmi", label: "Calcolatore BMI" },
@@ -26,48 +27,53 @@ export const stretchingForRunners: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Il Ciclo Allungamento-Accorciamento", 
-      body: "La corsa è una serie di salti esplosivi. I tuoi tendini agiscono come elastici, immagazzinando e rilasciando energia elastica tramite il Ciclo Allungamento-Accorciamento (SSC). \n\n**Il Paradosso della Rigidità Tendinea:** Per essere un runner efficiente, in realtà vuoi tendini *rigidi*. Un'elevata rigidità tendinea permette un trasferimento di energia più veloce e una migliore Economia di Corsa. Lo stretching statico (mantenere una posizione) prima di correre 'ammorbidisce' queste molle, riducendo misurabilmente la tua potenza e velocità. La mobilità pre-corsa deve essere **Dinamica** per aumentare il flusso sanguigno senza smorzare il ritorno elastico.", 
+      heading: "La Scienza: Ciclo Allungamento-Accorciamento e Stiffness", 
+      body: "La corsa è biomeccanicamente una successione di balzi. I tuoi tendini agiscono come elastici che immagazzinano energia nella fase di impatto e la rilasciano nella fase di stacco (Ciclo Allungamento-Accorciamento). \n\n**Il Paradosso della Rigidità (Stiffness):** Per essere un runner efficiente, hai bisogno di tendini *rigidi*. Una stiffness elevata permette un trasferimento di forza istantaneo e una migliore Economia di Corsa. Lo stretching statico prolungato prima di correre 'ammorbidisce' queste molle biologiche, riducendo la potenza esplosiva e aumentando il tempo di contatto al suolo. La mobilità pre-corsa deve quindi essere **Dinamica**: oscillazioni, andature e rotazioni che preparano il sistema nervoso senza compromettere la tensione elastica dei tendini.", 
       variant: "highlight" 
     },
     { 
-      heading: "Creep e Deformazione Plastica", 
-      body: "Per aumentare effettivamente la lunghezza a riposo di un muscolo o della fascia, è necessario applicare uno stress a basso carico nel tempo. Questo fenomeno è noto come 'Creep'. \n\n- **La Regola dei 30-60 Secondi:** Lo stretching statico per meno di 20 secondi fornisce solo un rilassamento neurale temporaneo. Per ottenere una 'Deformazione Plastica' (cambiamento permanente nella lunghezza del tessuto), è necessario mantenere lo stretch per almeno 45-60 secondi in uno stato rilassato post-corsa. È in questo momento che le fibre di collagene nella fascia iniziano a riallinearsi.", 
+      heading: "Neurofisiologia: Il Riflesso da Stiramento", 
+      body: "Ogni muscolo contiene dei sensori chiamati 'fusi musaddominali'. Quando allunghi un muscolo bruscamente, questi sensori inviano un segnale al midollo spinale che risponde ordinando al muscolo di contrarsi per proteggersi (riflesso miotatico). \n\n**Il Metodo PNF:** Per 'aggirare' questo sistema, gli atleti usano la Facilitazione Neuromuscolare Propriocettiva. Contraendo il muscolo che stai cercando di allungare per 6-10 secondi e poi rilassandolo, sfrutti l'organo tendineo del Golgi per indurre un rilassamento profondo (inibizione autogena), permettendo di raggiungere nuovi range di movimento che lo stretching passivo non può toccare.", 
       variant: "default" 
     },
     { 
-      heading: "Neural Flossing e Inibizione Reciproca", 
-      body: "Molti runner sentono i 'femorali contratti' che sembrano non allentarsi mai. Spesso non è un problema muscolare, ma di **Tensione Neurale**. \n\n- **Neural Flossing:** Tecniche che fanno 'scivolare' il nervo sciatico attraverso il tessuto molle possono risolvere una 'tensione' che lo stretching tradizionale non può toccare. \n- **Inibizione Reciproca:** Contraendo i glutei durante uno stretch dei flessori dell'anca, costringi il cervello a inviare un segnale di 'rilassamento' allo psoas, rendendo l'allungamento significativamente più efficace.", 
-      variant: "default", 
-      listItems: [
-        "Dorsiflessione della Caviglia: essenziale per prevenire periostite e tendinite d'Achille", 
-        "Mobilità Toracica: un torace aperto permette la massima espansione polmonare durante gli sforzi intensi", 
-        "Idratazione Fasciale: il movimento e lo stretching aiutano a muovere i fluidi attraverso la matrice extracellulare",
-        "Passaggio al Parasimpatico: lo stretching post-corsa segnala al corpo di smettere di produrre cortisolo."
-      ] 
-    },
-    {
-      heading: "Avviso Pre-Corsa: Niente Tenute Statiche",
-      body: "Ricerche mostrano che lo stretching statico per più di 60 secondi per gruppo muscolare prima di un'attività esplosiva può ridurre la forza del 5-10%. Riserva le tenute lunghe per la sera o per il defaticamento post-corsa.",
-      variant: "warning"
-    },
-    {
-      heading: "Il Deep Squat di 2 Minuti",
-      body: "Il miglior esercizio singolo per la mobilità del runner è il 'Deep Squat'. Passare 2 minuti al giorno in uno squat profondo e rilassato apre le anche, allunga la zona lombare e migliora simultaneamente la dorsiflessione della caviglia.",
-      variant: "tip"
+      heading: "Fascia e Creep: Il Rimodellamento a Lungo Termine", 
+      body: "La fascia è una rete di tessuto connettivo che avvolge ogni muscolo. Non è elastica come il muscolo, ma è viscoelastica. \n\n- **Il Fenomeno del Creep:** Per indurre un cambiamento permanente nella fascia (deformazione plastica), è necessario applicare una tensione costante e moderata per almeno 60-90 secondi. Sotto questo carico lento, le fibre di collagene iniziano a scivolare e a riorganizzarsi. Questo è il motivo per cui lo stretching 'mordi e fuggi' di 10 secondi non produce benefici strutturali a lungo termine, ma fornisce solo un sollievo neurale temporaneo.", 
+      variant: "default" 
     },
     { 
-      heading: "Checklist Mobilità Quotidiana", 
-      body: "Una routine strutturata per mantenere la tua catena cinetica libera di muoversi.", 
-      variant: "checklist", 
+      heading: "Neural Flossing: Liberare i Nervi", 
+      body: "Molti runner soffrono di una sensazione di 'femorali corti' che non migliora mai. Spesso non è tensione muscolare, ma scarsa mobilità del nervo sciatico (tensione neurale). I nervi devono poter scivolare liberamente attraverso i canali muscolari. Le tecniche di 'Neural Flossing' o 'Slumping' permettono di far scorrere il nervo senza metterlo in tensione eccessiva, risolvendo spesso dolori cronici che lo stretching tradizionale non riesce a trattare.", 
+      variant: "default", 
       listItems: [
-        "Dinamico (Pre-Corsa): 10 slanci gambe (Avanti/Lat), 10 affondi camminati, 20 rimbalzi sui polpacci.", 
-        "Statico (Post-Corsa): 60s Couch Stretch (Anche), 60s Pigeon Pose (Glutei), 60s stretch polpacci.", 
-        "Neurale (Sera): 10 'scivolamenti' del nervo sciatico per gamba per mantenere la mobilità nervosa.", 
-        "Respirazione: espira sempre *durante* l'allungamento per abbassare la sensibilità dei fusi muscolari.",
-        "Costanza: 5 minuti ogni giorno sono 100 volte meglio di 60 minuti una volta al mese."
+        "Dorsiflessione della Caviglia: Un ROM limitato è la causa numero uno di periostite e fascite plantare.", 
+        "Mobilità Toracica: Fondamentale per una respirazione profonda e un'oscillazione delle braccia efficiente.", 
+        "Idratazione: La fascia disidratata diventa 'appiccicosa'; bevi acqua per mantenere i tessuti scorrevoli.",
+        "Inibizione Reciproca: Contrai il muscolo opposto (es. il quadricipite) per forzare il rilassamento del muscolo target (femorale)."
       ] 
     },
+    {
+      heading: "Stretching Post-Corsa e Sistema Parasimpatico",
+      body: "Lo stretching statico e rilassato dopo l'allenamento ha un beneficio che va oltre la flessibilità: segnala al cervello che l'emergenza (l'allenamento) è finita. Questo attiva il sistema nervoso parasimpatico, abbassa i livelli di cortisolo e accelera l'inizio dei processi di riparazione tissutale. È il ponte tra la fase di stress e la fase di recupero.",
+      variant: "tip"
+    },
+    {
+      heading: "Avviso: Quando lo Stretching è Dannoso",
+      body: "Mai fare stretching intenso su una lesione muscolare acuta (strappo o stiramento). Le fibre danneggiate hanno bisogno di riavvicinarsi per guarire; allungarle con forza può separare i margini della lesione e aumentare il tessuto cicatriziale, peggiorando la situazione a lungo termine.",
+      variant: "warning"
+    },
+    { 
+      heading: "Checklist: La Tua Routine di Mobilità", 
+      body: "Struttura il tuo approccio per risultati duraturi.", 
+      variant: "checklist", 
+      listItems: [
+        "Pre-Corsa Dinamico: 10 minuti di leg swings, affondi e rotazioni del tronco.", 
+        "Post-Corsa Statico: Focus su Flessori dell'anca (psoas) e polpacci, tenute da 60 secondi.", 
+        "Sera (Opzionale): 2 minuti di 'Deep Squat' per resettare la mobilità di bacino e caviglie.", 
+        "Respirazione Diaframmatica: Espira profondamente mentre entri nella fase di allungamento.",
+        "Ascolto: Non forzare mai fino al dolore acuto; cerca una sensazione di 'tensione piacevole'."
+      ] 
+    }
   ],
   hubCategory: "recovery",
 };

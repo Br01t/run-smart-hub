@@ -9,12 +9,13 @@ export const runningShoeRotation: GuideContent = {
   description: "La guida scientifica e pratica alla rotazione di più paia di scarpe per ridurre il rischio di infortuni e migliorare le prestazioni.",
   tags: ["shoes", "gear", "injury-prevention", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "Alternare tra più di 2 modelli riduce il rischio di infortuni da stress ripetitivo del 39%",
-    "Variare il drop (es. 10 mm e 4 mm) sposta il carico su diverse articolazioni",
-    "Le schiume dell'intersuola richiedono 24-48 ore per decomprimersi completamente e recuperare il ritorno di energia",
-    "Una rotazione a 3 scarpe (Daily, Speed, Recovery) massimizza sia la durata delle scarpe che le prestazioni",
+    "Alternare 2 o più modelli riduce il rischio di infortuni da stress ripetitivo del 39%",
+    "Le schiume richiedono 24-48 ore per recuperare le proprietà elastiche dopo la compressione",
+    "Variare il drop delle scarpe distribuisce il carico tra ginocchia, polpacci e tendini",
+    "Una rotazione specializzata (Daily, Speed, Race) prolunga la vita utile di ogni paio",
+    "La monotonia meccanica è il nemico numero uno della salute del piede del runner",
   ],
   relatedTools: [
     { to: "/tools/bmi", label: "Calcolatore BMI" },
@@ -26,48 +27,53 @@ export const runningShoeRotation: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Variazione Meccanica", 
-      body: "Gli infortuni da sovraccarico nella corsa sono spesso causati dalla 'monotonia del carico'—ovvero applicare lo stesso identico stress ai medesimi tessuti migliaia di volte per chilometro. Alternando scarpe con diverse altezze, densità di schiuma e geometrie, sposti sottilmente lo stress su diverse articolazioni e gruppi muscolari. \n\n**Stimolazione Propriocettiva:** Scarpe diverse inviano segnali diversi al cervello. Questo impedisce al sistema neuromuscolare di diventare 'pigro' e rafforza i muscoli intrinseci del piede e gli stabilizzatori della caviglia.", 
+      heading: "La Scienza: Variabilità Biomeccanica e Carico", 
+      body: "La rotazione delle scarpe non è solo un modo per possedere più calzature; è una strategia basata sulla biomeccanica per prevenire gli infortuni. Ogni volta che corri con lo stesso paio, applichi esattamente lo stesso stress meccanico ai medesimi tessuti (tendini, ossa, muscoli) per migliaia di volte.\n\n**Interrompere la Monotonia:** Alternando scarpe con diverse densità di schiuma, geometrie (rocker vs flat) e altezze, costringi il corpo a modificare leggermente la cinematica della falcata. Questi micro-aggiustamenti sono fondamentali per evitare l'accumulo di stress localizzato, riducendo significativamente l'incidenza di patologie da sovraccarico come la fascite plantare o la periostite tibiale.", 
       variant: "highlight" 
     },
     { 
-      heading: "Recupero della Schiuma: Il Livello Molecolare", 
-      body: "Le moderne schiume per intersuole (EVA, TPU e PEBA) sono composte da strutture a celle chiuse che si comprimono per assorbire l'urto. Le ricerche mostrano che possono essere necessarie fino a **48 ore** affinché queste celle si 'decomprimano' completamente e tornino alla loro forma originale dopo una corsa di 10 km. \n\n- **Il Cedimento Prematuro:** Se corri con lo stesso paio ogni giorno, stai effettivamente correndo su una schiuma parzialmente collassata. Questo fornisce meno protezione alle articolazioni e causa la 'morte' della scarpa (perdita di reattività) il 20-30% più velocemente.", 
+      heading: "Recupero Viscoelastico delle Schiume", 
+      body: "Le intersuole moderne (EVA, TPU, PEBA) sono materiali viscoelastici. Durante la corsa, le micro-bolle d'aria all'interno della schiuma si comprimono per dissipare l'energia dell'impatto. \n\n- **Il Tempo di Riposo:** Gli studi sui materiali mostrano che una schiuma può impiegare fino a **48 ore** affinché queste celle si 'decomprimano' completamente e tornino alla loro forma originale dopo una corsa di 10 km. \n- **Il Cedimento Prematuro:** Se corri con lo stesso paio ogni giorno, la schiuma non ha il tempo di 'respirare'. Questo porta a una corsa più 'secca', aumentando le forze di impatto che risalgono lungo la tibia e il femore, accelerando anche l'usura strutturale della scarpa.", 
       variant: "default" 
     },
     { 
-      heading: "La Matrice Ideale a 4 Scarpe", 
-      body: "Per il runner dedicato, una rotazione in quattro categorie assicura di avere sempre lo strumento giusto per ogni lavoro. \n\n1. **La Daily Trainer:** Affidabile e durevole (drop 8-10 mm). Il tuo 'mulo' per il 60% delle corse. \n2. **La Scarpa da Velocità/Intervalli:** Leggera e flessibile con un'altezza inferiore per una migliore sensazione del terreno. \n3. **La Scarpa da Recupero/Massima Ammortizzazione:** Molta schiuma sotto il piede con geometria 'rocker' per scaricare polpacci e tendine d'Achille nelle corse facili. \n4. **La 'Super Shoe' da Gara:** Schiuma a base PEBA con piastra in carbonio per il massimo ritorno energetico.", 
+      heading: "L'Effetto del Drop sulla Catena Cinetica", 
+      body: "Il 'drop' è la differenza di altezza tra il tallone e l'avampiede. Modificare questo parametro è la chiave per una rotazione efficace. \n\n- **Drop Alto (8-12 mm):** Sposta il carico verso le ginocchia e il femore, scaricando il tendine d'Achille e i polpacci. Ideale se hai una storia di tendiniti o fascite.\n- **Drop Basso (0-5 mm):** Favorisce un appoggio di mesopiede e carica maggiormente la catena posteriore (polpacci e Achille), riducendo però lo stress sull'articolazione del ginocchio. \nAlternare queste due tipologie permette di allenare in modo completo tutte le strutture del piede e della gamba.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Categorie di Rotazione: Gli Strumenti Giusti", 
+      body: "Per massimizzare i benefici, la tua rotazione dovrebbe includere tre tipi di scarpe:\n\n1. **Daily Trainer:** La scarpa tuttofare, ammortizzata ma non troppo pesante, per il 70% dei tuoi chilometri.\n2. **Speed Shoe:** Una scarpa più leggera e reattiva (spesso con piastra in carbonio o nylon) per le ripetute e il tempo run.\n3. **Recovery Shoe:** Massima ammortizzazione e geometrie rocker per i giorni in cui le gambe sono stanche e hanno bisogno di protezione extra.", 
       variant: "default", 
       listItems: [
-        "De-loading Meccanico: le scarpe con drop alto salvano l'Achille; quelle con drop basso salvano le ginocchia", 
-        "Vita Economica: ruotare 3 paia dura di più che comprare 3 paia in sequenza", 
-        "Specificità della Superficie: usa scarpe da trail dedicate per proteggere la suola delle tue scarpe da strada",
-        "Lo Switch della Stabilità: usa una scarpa neutra per i giorni veloci e una stabile per i giorni in cui sei stanco."
+        "Durata: Una scarpa ruotata può durare fino a 100-200 km in più rispetto a una usata quotidianamente.", 
+        "Adattamento: La rotazione prepara il piede a diverse superfici (strada, sterrato, pista).", 
+        "Prevenzione: Il 39% di infortuni in meno è un dato derivante da studi su runner amatoriali.",
+        "Equilibrio: Aiuta a identificare squilibri nell'appoggio analizzando l'usura su modelli diversi."
       ] 
     },
     {
-      heading: "Il Mito della Longevità",
-      body: "Ruotare le scarpe non 'costa' di più nel lungo periodo. Poiché distribuisci il chilometraggio su più paia, ogni paio dura per una distanza totale maggiore perché la schiuma non è soggetta al cedimento da uso quotidiano. Alla fine, comprerai scarpe meno spesso.",
+      heading: "Consiglio: Quando Sostituire le Scarpe",
+      body: "Non basarti solo sul chilometraggio. Se inizi ad avvertire piccoli dolori alle articolazioni che prima non avevi, o se senti che la scarpa è diventata 'muta' (non restituisce energia), è ora di cambiarla. Una scarpa scarica è una delle cause principali di infortuni evitabili.",
       variant: "tip"
     },
     {
-      heading: "La Zona di Pericolo delle 'Scarpe Vecchie'",
-      body: "Una volta che una scarpa perde la sua reattività, i tuoi muscoli devono lavorare di più per stabilizzare l'andatura. Se avverti un dolore insolito all'arco plantare o periostite con un paio che ha più di 600 km, è probabile che la schiuma sia 'scarica' anche se la suola sembra nuova. Falle andare in pensione immediatamente per evitare infortuni.",
+      heading: "Attenzione alla Transizione al Drop Basso",
+      body: "Se hai sempre corso con drop di 10-12 mm, non passare improvvisamente a una scarpa 'Zero Drop'. Questo causerebbe un sovraccarico immediato ai polpacci. Inserisci la scarpa a drop basso gradualmente, partendo da sessioni di 15-20 minuti una volta a settimana.",
       variant: "warning"
     },
     { 
-      heading: "Checklist per Costruire la Rotazione", 
-      body: "Come aggiungere strategicamente scarpe al tuo armadio.", 
+      heading: "Checklist: Crea la Tua Rotazione Perfetta", 
+      body: "Passi pratici per gestire il tuo armadio tecnico.", 
       variant: "checklist", 
       listItems: [
-        "Analizza l'Attrezzatura Attuale: identifica se hai un 'vuoto' (es. ti manca una scarpa leggera da velocità).", 
-        "Varia il Drop: se la tua scarpa attuale è da 10 mm, cerca un'opzione da 5 mm o 6 mm per il prossimo paio.", 
-        "Sincronizza con il tuo Piano: abbina le scarpe ai tuoi prossimi blocchi di allenamento (es. preparazione maratona).", 
-        "Traccia i Chilometri: usa un registro digitale per sapere esattamente quando una scarpa sta raggiungendo il suo limite.",
-        "Introduzione Graduale: indossa i nuovi modelli per brevi corse di 5 km prima di affrontarci una corsa lunga."
+        "Identifica il Modello Base: Quello con cui ti trovi meglio per le corse lunghe.", 
+        "Aggiungi una Scarpa Opposta: Se hai una scarpa neutra, prova un modello leggermente più stabile per i giorni di fatica.", 
+        "Usa un'App di Tracciamento: Segna i km per ogni paio separatamente su Strava o Garmin Connect.", 
+        "Rotazione Climatica: Tieni un paio specifico per la pioggia (magari in Gore-Tex) per preservare gli altri.",
+        "Test delle Sensazioni: Una volta al mese, fai una corsa corta con ogni paio per sentire le differenze di risposta."
       ] 
-    },
+    }
   ],
   hubCategory: "shoes",
 };

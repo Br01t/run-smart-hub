@@ -9,12 +9,13 @@ export const runningCadence: GuideContent = {
   description: "Scopri perché la cadenza influisce sulle prestazioni, il riferimento dei 180 spm e come aumentare in sicurezza il numero di passi.",
   tags: ["running", "accessories"],
   heroImage: guideCadence,
-  readTime: "4 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "L'aumento della cadenza accorcia la falcata, portando l'appoggio del piede più vicino al centro di massa",
-    "Un'alta cadenza (170-190 spm) riduce le forze d'impatto sul ginocchio fino al 20%",
-    "L'oscillazione verticale (energia sprecata verso l'alto) è significativamente inferiore a cadenze elevate",
-    "La 'Molla dell'Achille' è più efficiente quando il tempo di contatto con il suolo è ridotto al minimo",
+    "La cadenza elevata (170-190 spm) riduce l'oscillazione verticale e lo spreco energetico",
+    "Aumentare i passi del 5-10% riduce il carico sulle ginocchia fino al 20%",
+    "Il tempo di contatto al suolo (GCT) è il miglior indicatore di efficienza elastica",
+    "Non esiste un numero magico universale, ma una zona di efficienza basata sull'altezza",
+    "La transizione verso una cadenza più alta deve essere graduale per proteggere i polpacci",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calcolatore Calorie" },
@@ -26,48 +27,53 @@ export const runningCadence: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Frequenza della Falcata", 
-      body: "La cadenza, o frequenza della falcata, è il numero di passi compiuti in un minuto (spm). È la leva principale per ridurre l'oscillazione verticale—ovvero la quantità di 'rimbalzo' nella tua falcata. \n\n**Oscillazione Verticale:** Ogni centimetro che ti sposti verso l'alto è energia che non ti sta muovendo in avanti. I runner con una cadenza elevata si muovono in modo più orizzontale e meno verticale, il che migliora drasticamente l'economia di corsa. Aumentando i passi, riduci il 'transiente d'impatto' (il picco di forza) che attraversa il tuo scheletro ad ogni appoggio.", 
+      heading: "La Scienza: Frequenza della Falcata ed Economia di Corsa", 
+      body: "La cadenza, o frequenza della falcata, è il numero di passi compiuti in un minuto (spm). Biomeccanicamente, è la variabile più potente per ottimizzare l'Economia di Corsa. \n\n**Oscillazione Verticale e Duty Factor:** Ogni centimetro che ti sposti verso l'alto durante il volo è energia cinetica sprecata che non ti muove verso il traguardo. I runner con una cadenza elevata hanno un 'Duty Factor' (il rapporto tra tempo di contatto e tempo di volo) più bilanciato. Questo riduce il picco di forza d'impatto (Impact Transient) che attraversa le tue articolazioni ad ogni appoggio, distribuendo lo stress su una frequenza maggiore ma con intensità minore per ogni singolo colpo.", 
       variant: "highlight" 
     },
     { 
-      heading: "L'Effetto della Forza Frenante", 
-      body: "Quando corri con una cadenza bassa, è probabile che tu stia facendo 'overstriding'—ovvero atterri con il tallone molto davanti al ginocchio. Questo crea una 'Forza Frenante' che invia un'onda d'urto lungo la gamba e, letteralmente, ti rallenta. \n\n- **Centro di Massa:** Aumentare la cadenza porta naturalmente l'appoggio del piede sotto le anche. Questo converte l'impatto verticale in slancio in avanti, trasformando una falcata 'pesante' in un movimento fluido e scorrevole.", 
+      heading: "Il Problema dell'Overstriding e la Forza Frenante", 
+      body: "Una cadenza bassa (sotto i 160 spm) è quasi sempre associata all'overstriding. Questo accade quando il piede atterra troppo avanti rispetto al baricentro del corpo. \n\n- **Effetto Freno:** Atterrare davanti al centro di massa crea una forza di reazione al suolo che punta all'indietro, frenando letteralmente il tuo slancio. \n- **Soluzione Neuromuscolare:** Aumentando la cadenza, costringi il sistema nervoso ad accorciare la leva della gamba. Il piede atterra più vicino sotto l'anca, trasformando l'impatto verticale in una transizione fluida verso la spinta posteriore.", 
       variant: "default" 
     },
     { 
-      heading: "La 'Molla Naturale' dell'Achille", 
-      body: "Il tendine d'Achille è il sistema di 'ritorno elastico' più efficiente del corpo umano. Tuttavia, funziona solo se il tempo di contatto con il suolo è breve. \n\n- **Tempo di Contatto (GCT):** I runner ad alta cadenza trascorrono meno tempo a terra. Questo permette al tendine di agire come una molla, immagazzinando e rilasciando energia elastica. Se la cadenza è troppo bassa, 'affondi' nel terreno, costringendo i muscoli a fare il lavoro che i tendini dovrebbero fare gratuitamente.", 
+      heading: "La Molla Naturale: Accumulo di Energia Elastica", 
+      body: "I tendini umani, in particolare l'Achille e la fascia plantare, sono progettati per agire come molle. Tuttavia, per funzionare come tali, richiedono un tempo di contatto al suolo (Ground Contact Time) estremamente breve. \n\n- **Ritorno Elastico:** A 180 spm, il tempo di contatto è solitamente sotto i 240 millisecondi. In questa finestra temporale, il tendine riesce a catturare l'energia dell'impatto e a restituirla nella fase di stacco senza che i muscoli debbano generare tutta la forza da zero. Se corri a 150 spm, il tempo di contatto aumenta, l'energia elastica si dissipa sotto forma di calore e la corsa diventa un lavoro puramente muscolare, portando a una fatica precoce.", 
+      variant: "default" 
+    },
+    { 
+      heading: "Il Mito dei 180 SPM: Realtà vs Medie", 
+      body: "Il numero '180' deriva dalle osservazioni del leggendario allenatore Jack Daniels durante le Olimpiadi del 1984. \n\n- **Variabilità Individuale:** La cadenza ottimale è influenzata dall'altezza e dalla lunghezza degli arti. Un runner di 1.90m potrebbe essere efficiente a 172 spm, mentre uno di 1.60m potrebbe aver bisogno di 185 spm. \n- **Relazione con il Ritmo:** La cadenza non è fissa; aumenta naturalmente all'aumentare della velocità. Tuttavia, l'obiettivo è evitare che scenda drasticamente durante le corse lente (Easy Runs), dove il rischio di infortunio da overstriding è paradossalmente più alto.", 
       variant: "default", 
       listItems: [
-        "Costo Metabolico: l'overstriding aumenta il costo di ossigeno della corsa del 5-8% circa", 
-        "Protezione Infortuni: una cadenza più alta è la soluzione numero 1 per il 'Ginocchio del Corridore' (PFPS)", 
-        "Riferimento SPM: i runner d'élite scendono raramente sotto i 175 spm, anche a ritmi facili",
-        "Dati dell'Orologio: usa il tuo GPS per monitorare il 'Rapporto Verticale' insieme alla cadenza."
+        "Costo Metabolico: L'overstriding può aumentare il consumo di ossigeno fino all'8% a parità di velocità.", 
+        "Prevenzione: Il 5% di aumento della cadenza riduce lo stress sull'articolazione femoro-rotulea del 15%.", 
+        "Feedback: Molti orologi moderni misurano il 'Rapporto Verticale'; punta a tenerlo sotto l'8%.",
+        "Cadence Lock: Attenzione ai cardiofrequenzimetri da polso che a volte confondono i passi con i battiti."
       ] 
     },
     {
-      heading: "Il Mito dei 180 SPM",
-      body: "180 spm non è un 'numero magico' universale. I runner più alti con gambe più lunghe hanno naturalmente una cadenza leggermente più bassa, mentre quelli più bassi potrebbero essere più vicini a 190. L'obiettivo non è un numero specifico, ma un **intervallo** (170-190) che risulti efficiente per la tua anatomia unica.",
+      heading: "Consiglio: Usa la Musica o un Metronomo",
+      body: "Il cervello è molto bravo a seguire i ritmi uditivi. Esistono playlist specifiche su Spotify divise per BPM (es. 'Running 175 BPM'). Inizialmente sembrerà di fare 'passi da formica', ma nel giro di 4-6 settimane questa diventerà la tua nuova normale, riducendo la fatica percepita.",
       variant: "tip"
     },
     {
-      heading: "Avviso di Transizione: La Regola del 5%",
-      body: "Non provare a passare da 155 a 180 in una settimana. Questo sovraccaricherà polpacci e tendine d'Achille, portando a tendiniti. Aumenta la tua cadenza media solo del **5% ogni 3-4 settimane** per permettere al sistema neuromuscolare di adattarsi.",
+      heading: "Attenzione ai Polpacci durante la Transizione",
+      body: "Passare a una cadenza più alta sposta il carico dalle ginocchia verso i polpacci e il tendine d'Achille. Se aumenti troppo velocemente, rischi tendiniti. Segui la regola del 5%: aumenta la tua cadenza media di soli 5 passi alla volta, mantenendo il nuovo ritmo per almeno un mese prima di aumentare ancora.",
       variant: "warning"
     },
     { 
-      heading: "Checklist per il Miglioramento della Cadenza", 
-      body: "Come aumentare in modo sicuro ed efficace la tua frequenza di passi.", 
+      heading: "Checklist: Come Aumentare la Cadenza", 
+      body: "Un piano d'azione per una falcata più efficiente.", 
       variant: "checklist", 
       listItems: [
-        "Misura la Base: trova la tua cadenza media su una corsa in pianura di 5 km a un impegno di Zona 2.", 
-        "Usa un Metronomo: imposta un'app metronomo a 5 spm sopra la tua base per brevi tratti.", 
-        "Accorcia la Falcata: concentrati sul fare passi 'più piccoli e silenziosi' piuttosto che muoverti più velocemente.", 
-        "Sprint in Salita: correre su salite ripide forza naturalmente un'alta cadenza e una tecnica corretta.",
-        "Controlla le Scarpe: scarpe pesanti e rigide possono rendere più difficile una cadenza alta; scarpe più leggere aiutano."
+        "Analisi Iniziale: Verifica i tuoi dati medi degli ultimi 3 mesi sull'app dell'orologio.", 
+        "Il Test del Metronomo: Durante una corsa facile, prova a seguire un battito di 175 bpm per 1 km.", 
+        "Postura Alta: È più facile mantenere un'alta cadenza se corri 'alto' e inclinato in avanti.", 
+        "Forza dei Piedi: Esegui esercizi di saltelli sul posto per migliorare la reattività del piede.",
+        "Monitoraggio: Controlla se a fine mese la tua frequenza cardiaca media è scesa a parità di ritmo."
       ] 
-    },
+    }
   ],
   hubCategory: "shoes",
 };

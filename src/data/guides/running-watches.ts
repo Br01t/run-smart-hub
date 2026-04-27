@@ -9,12 +9,13 @@ export const runningWatches: GuideContent = {
   description: "Una guida completa e indipendente per scegliere l'orologio GPS da corsa giusto. Analizziamo caratteristiche, precisione, batteria e rapporto qualità-prezzo per ogni budget.",
   tags: ["accessories", "running", "watches", "top-gear-2026"],
   heroImage: guideRunningWatches,
-  readTime: "5 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
-    "Il GNSS Multi-Band (L1+L5) è essenziale per un ritmo preciso in città e nei boschi",
-    "La Variabilità della Frequenza Cardiaca (HRV) è il gold standard per monitorare la prontezza all'allenamento",
-    "La durata della batteria è la specifica più importante per gli ultra e i trail runner",
-    "La Potenza nella Corsa (Watt) è una metrica di sforzo più costante del ritmo su terreni collinari",
+    "Il GNSS Multi-Band (L1+L5) garantisce la massima precisione del ritmo in città e boschi",
+    "La Variabilità della Frequenza Cardiaca (HRV) è il miglior indicatore di recupero del sistema nervoso",
+    "I sensori ottici da polso sono soggetti a 'cadence lock': usa la fascia per gli intervalli",
+    "La Potenza di Corsa (Watt) è una metrica di sforzo istantanea, superiore al ritmo in salita",
+    "Le stime del VO2 Max e del Tempo di Recupero si basano su algoritmi Firstbeat scientificamente validati",
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calcolatore Calorie" },
@@ -26,48 +27,53 @@ export const runningWatches: GuideContent = {
   ],
   sections: [
     { 
-      heading: "La Scienza: Dinamiche GNSS", 
-      body: "I moderni orologi GPS utilizzano il GNSS Multi-Band (Global Navigation Satellite System) per tracciare la posizione. Utilizzando due frequenze (L1 e L5), gli orologi possono eliminare l'errore 'multipath'—ovvero il rimbalzo del segnale causato da edifici alti o fitta vegetazione. \n\n**Frequenza Cardiaca Ottica (PPG):** I sensori da polso utilizzano la luce verde per misurare il flusso sanguigno. Sebbene comodi, sono soggetti al 'cadence lock' (l'orologio confonde i tuoi passi con il battito cardiaco). Per un allenamento serio, una fascia cardio elettrica (ECG) rimane l'unico modo per ottenere una precisione di grado clinico.", 
+      heading: "La Scienza: Dinamiche GNSS e Precisione Satellitare", 
+      body: "I moderni orologi GPS utilizzano il GNSS Multi-Band (Global Navigation Satellite System) per tracciare la posizione. Mentre i vecchi orologi usavano solo la frequenza L1, i nuovi modelli si agganciano anche alla L5. \n\n**Perché è importante?** La frequenza L5 è in grado di distinguere tra il segnale diretto dal satellite e quello riflesso da edifici alti o alberi (errore multipath). Questo permette di avere un ritmo istantaneo (Pace) estremamente stabile anche durante le corse nelle 'giungle urbane' o nei trail più fitti, dove il segnale rimbalza ovunque. Un orologio che si connette simultaneamente a GPS, GLONASS e Galileo garantisce una copertura globale senza zone d'ombra.", 
       variant: "highlight" 
     },
     { 
-      heading: "Prontezza all'Allenamento e HRV", 
-      body: "Gli orologi moderni sono ora dei 'coach del recupero'. Analizzano la Variabilità della Frequenza Cardiaca (HRV)—il tempo in millisecondi tra i battiti—per determinare lo stato del tuo sistema nervoso autonomo. \n\n- **Stato Simpatico:** Una HRV bassa indica che sei stressato o non hai recuperato a sufficienza. L'orologio suggerirà un giorno di riposo. \n- **Stato Parasimpatico:** Una HRV alta indica che sei pronto per una sessione di intervalli intensa. L'uso di questi dati aiuta a prevenire la Sindrome da Sovrallenamento prima che inizi.", 
+      heading: "Fisiologia: HRV e Prontezza all'Allenamento", 
+      body: "L'orologio non misura solo i passi; monitora lo stato del tuo Sistema Nervoso Autonomo attraverso la Variabilità della Frequenza Cardiaca (HRV). \n\n- **Equilibrio Simpatico/Parasimpatico:** La HRV è il tempo millimetrico che intercorre tra ogni battito cardiaco. Una HRV alta e variabile indica un sistema nervoso 'fresco' e pronto (Parasimpatico dominante). Una HRV bassa e piatta indica stress fisico o psicologico (Simpatico dominante). \n- **Algoritmi di Recupero:** Integrando HRV, qualità del sonno e carico di allenamento recente, l'orologio genera un 'Punteggio di Prontezza'. Seguire questo dato aiuta a evitare il sovrallenamento (Overtraining), suggerendo quando è il momento di spingere e quando è meglio fare una sessione di scarico o riposo.", 
       variant: "default" 
     },
     { 
-      heading: "Potenza vs Ritmo", 
-      body: "Il ritmo (pace) è un indicatore 'ritardato' dello sforzo in salita. La Potenza di Corsa (misurata in Watt) è una metrica 'istantanea' che ti dice esattamente quanto lavoro stai facendo indipendentemente dalla pendenza. \n\n- **Costanza dell'Intensità:** Puntando a un Wattaggio specifico, puoi assicurarti che il tuo sforzo rimanga costante durante la salita, prevenendo l'esaurimento precoce del glicogeno che deriva dall''attaccare' una salita troppo duramente.", 
-      variant: "default", 
-      listItems: [
-        "Sistemi GNSS Completi: si connette simultaneamente a GPS, GLONASS, Galileo e BeiDou", 
-        "Mappe e Navigazione: essenziali per i trail runner per evitare di perdersi in aree remote", 
-        "Ricarica Solare: estende la durata della batteria del 10-15% in condizioni di forte luce",
-        "Architettura del Sonno: monitorare il sonno profondo rispetto a quello REM è fondamentale per il recupero a lungo termine."
-      ] 
-    },
-    {
-      heading: "Avviso sul Lag del Cardio Ottico",
-      body: "I sensori ottici da polso hanno un ritardo di 10-20 secondi durante i rapidi cambiamenti della frequenza cardiaca (come gli sprint in salita). Se stai facendo intervalli brevi e ad alta intensità, l'orologio non mostrerà il tuo picco di FC fino alla fine della ripetizione. Usa una fascia cardio per dati in tempo reale nei lavori di velocità.",
-      variant: "warning"
-    },
-    {
-      heading: "Fascia Media vs Premium: Il Punto di Equilibrio",
-      body: "Per il 90% dei runner, un orologio di fascia media (250€-400€) fornisce ogni metrica necessaria, inclusi GPS Multi-Band e HRV. Gli orologi premium (600€+) aggiungono materiali specializzati (Titanio/Zaffiro) e una durata della batteria estrema necessaria per ultramaratone da 160 km.",
-      variant: "tip"
+      heading: "Cardio Ottico vs Fascia Cardio: La Verità Tecnologica", 
+      body: "La tecnologia PPG (fotopletismografia) usa luci LED verdi per misurare il volume di sangue che scorre nei capillari del polso. \n\n- **Il Limite del Polso:** Durante la corsa, il movimento del braccio e la cadenza possono creare interferenze. Il 'Cadence Lock' è un errore comune dove l'orologio aggancia il ritmo dei tuoi passi (es. 170 spm) invece dei battiti cardiaci (es. 150 bpm). \n- **Il Gold Standard:** Per sessioni di qualità o intervalli brevi, la fascia cardio toracica (che misura l'attività elettrica del cuore, ECG) rimane insuperabile. La fascia è istantanea, mentre il sensore al polso ha un ritardo di 10-15 secondi nel rilevare le variazioni rapide di intensità.", 
+      variant: "default" 
     },
     { 
-      heading: "Checklist per l'Acquirente", 
-      body: "Come scegliere e configurare il tuo nuovo compagno di allenamento.", 
-      variant: "checklist", 
+      heading: "Metriche Avanzate: Potenza e VO2 Max", 
+      body: "Oltre alla frequenza cardiaca, gli orologi moderni stimano parametri fisiologici complessi.\n\n- **Running Power (Watt):** Misura il lavoro meccanico istantaneo. A differenza della FC, che richiede tempo per salire, la potenza risponde immediatamente se acceleri o se incontri una salita. \n- **Stima VO2 Max:** Utilizzando la relazione tra ritmo e battiti (Algoritmi Firstbeat), l'orologio stima la tua massima capacità di consumo di ossigeno. Sebbene non sia precisa come un test di laboratorio con maschera, è una metrica eccellente per monitorare i trend di fitness nel lungo periodo.", 
+      variant: "default", 
       listItems: [
-        "Valuta le Esigenze della Batteria: assicurati che la durata della batteria con 'GNSS completo' superi la tua corsa più lunga prevista del 25%.", 
-        "Controlla la Misura del Polso: un orologio troppo grande sobbalzerà, distruggendo la precisione del cardio ottico.", 
-        "Configura le Schermate Dati: limita le schermate a 4 metriche chiave: Ritmo, Distanza, Tempo e Frequenza Cardiaca.", 
-        "Attendi il 'Segnale Verde' del GPS: non iniziare mai una corsa finché l'orologio non indica un segnale satellitare stabile.",
-        "Sincronizza Regolarmente: la sincronizzazione regolare aggiorna l'almanacco satellitare, permettendo agganci in 5 secondi."
+        "Durata Batteria: I modelli Ultra raggiungono le 60-100 ore in modalità GPS costante.", 
+        "Mappe Offline: Fondamentali per esplorare nuovi percorsi senza dipendere dal telefono.", 
+        "Saturazione Ossigeno (SpO2): Utile per chi si allena in quota o per monitorare apnee notturne.",
+        "Dinamiche di Corsa: Misurano tempo di contatto al suolo e oscillazione verticale."
       ] 
     },
+    {
+      heading: "Consiglio: La Regola del 'Segnale GPS'",
+      body: "Non premere mai 'Start' finché l'icona del GPS non è fissa e verde. Iniziare a correre mentre l'orologio sta ancora cercando i satelliti causerà errori di tracciamento e ritmi sballati per i primi 2-3 chilometri della tua sessione.",
+      variant: "tip"
+    },
+    {
+      heading: "Attenzione alla Vestibilità",
+      body: "Per una precisione cardio accettabile, l'orologio deve essere stretto a sufficienza da non scivolare sul polso, ma non così tanto da bloccare la circolazione. Posizionalo circa due dita sopra l'osso del polso per evitare che le ossa interferiscano con la luce dei sensori.",
+      variant: "warning"
+    },
+    { 
+      heading: "Checklist: Scegli l'Orologio Giusto", 
+      body: "Parametri da valutare prima dell'acquisto.", 
+      variant: "checklist", 
+      listItems: [
+        "Budget: La fascia media (250-400€) è il miglior compromesso tra funzioni e prezzo.", 
+        "Autonomia: Se corri trail o ultra, punta a modelli con almeno 40 ore di GPS attivo.", 
+        "Ecosistema App: Verifica la facilità d'uso di Garmin Connect, Coros App o Suunto App.", 
+        "Design: Schermi AMOLED per la visibilità urbana, MIP per la leggibilità sotto il sole diretto.",
+        "Compatibilità: Assicurati che supporti sensori esterni Bluetooth e ANT+."
+      ] 
+    }
   ],
-  hubCategory: "apparel",
+  hubCategory: "gear",
 };
