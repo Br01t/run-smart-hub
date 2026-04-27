@@ -3,121 +3,121 @@ import { GuideSummary } from "@/components/guides/GuideCards";
 export const guidesList: GuideSummary[] = [
   { 
     slug: "choosing-running-shoes", 
-    title: "How to Choose Running Shoes", 
-    excerpt: "The biomechanical guide to footwear. From PEBA vs EVA foam science to the 'Comfort Filter' theory and heel-to-toe drop mechanics.", 
-    readTime: "14 min read", 
-    category: "Gear" 
+    title: "Come Scegliere le Scarpe da Corsa", 
+    excerpt: "La guida biomeccanica alle calzature. Dalla scienza delle schiume PEBA vs EVA alla teoria del 'Comfort Filter' e la meccanica del drop.", 
+    readTime: "14 min di lettura", 
+    category: "Attrezzatura" 
   },
   { 
     slug: "supplements-for-runners", 
-    title: "Essential Supplements for Runners", 
-    excerpt: "Evidence-based analysis of ergogenic aids. Discover the dosage protocols for Creatine, Beta-Alanine, and the science of the Leucine Threshold.", 
-    readTime: "15 min read", 
-    category: "Nutrition" 
+    title: "Integratori Essenziali per i Runner", 
+    excerpt: "Analisi basata sulle evidenze degli aiuti ergogenici. Scopri i protocolli di dosaggio per Creatina, Beta-Alanina e la scienza della Soglia di Leucina.", 
+    readTime: "15 min di lettura", 
+    category: "Nutrizione" 
   },
   { 
     slug: "muscle-recovery", 
-    title: "Muscle Recovery After Running", 
-    excerpt: "Master the Supercompensation cycle. Learn the science of parasympathetic reset, glycogen resaturation, and active recovery protocols.", 
-    readTime: "12 min read", 
-    category: "Recovery" 
+    title: "Recupero Muscolare Dopo la Corsa", 
+    excerpt: "Padroneggia il ciclo di Supercompensazione. Impara la scienza del reset parasimpatico, la resaturazione del glicogeno e i protocolli di recupero attivo.", 
+    readTime: "12 min di lettura", 
+    category: "Recupero" 
   },
   { 
     slug: "running-nutrition", 
-    title: "Running Nutrition: Fueling & Metabolism", 
-    excerpt: "Optimize your substrate utilization. From the 2:1 glucose-to-fructose ratio to gut training protocols and glycogen super-loading.", 
-    readTime: "14 min read", 
-    category: "Nutrition" 
+    title: "Nutrizione per la Corsa: Rifornimento e Metabolismo", 
+    excerpt: "Ottimizza l'utilizzo dei substrati. Dal rapporto glucosio-fruttosio 2:1 ai protocolli di allenamento intestinale e al super-caricamento di glicogeno.", 
+    readTime: "14 min di lettura", 
+    category: "Nutrizione" 
   },
   { 
     slug: "injury-prevention", 
-    title: "Runner's Guide to Injury Prevention", 
-    excerpt: "Bulletproof your body using the ACWR model, isometric tendon loading, and the science of structural integrity and RED-S prevention.", 
-    readTime: "14 min read", 
-    category: "Health" 
+    title: "Guida per Runner alla Prevenzione Infortuni", 
+    excerpt: "Rendi il tuo corpo a prova di proiettile usando il modello ACWR, il caricamento tendineo isometrico e la scienza dell'integrità strutturale.", 
+    readTime: "14 min di lettura", 
+    category: "Salute" 
   },
   { 
     slug: "marathon-training", 
-    title: "Marathon Training Guide for Beginners", 
-    excerpt: "The 42.2K blueprint. Scientific training blocks, tapering for supercompensation, and physiological strategies to avoid 'The Wall'.", 
-    readTime: "16 min read", 
-    category: "Training" 
+    title: "Guida alla Maratona per Principianti", 
+    excerpt: "Il progetto per i 42,2K. Blocchi di allenamento scientifici, tapering per la supercompensazione e strategie fisiologiche per evitare 'Il Muro'.", 
+    readTime: "16 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "trail-running-beginners", 
-    title: "Getting Started with Trail Running", 
-    excerpt: "Master the multi-dimensional load. Science of proprioceptive neural activation, power hiking efficiency, and lug depth traction mechanics.", 
-    readTime: "14 min read", 
+    title: "Iniziare con il Trail Running", 
+    excerpt: "Padroneggia il carico multi-dimensionale. Scienza dell'attivazione neurale propriocettiva, efficienza del power hiking e meccanica della trazione.", 
+    readTime: "14 min di lettura", 
     category: "Trail" 
   },
   { 
     slug: "running-heart-rate-zones", 
-    title: "Heart Rate Zone Training for Runners", 
-    excerpt: "Stop guessing your intensity. The 80/20 polarized model, metabolic thresholds (AeT/LT), and the science of cardiac drift.", 
-    readTime: "12 min read", 
-    category: "Training" 
+    title: "Allenamento con le Zone Cardio", 
+    excerpt: "Smetti di indovinare la tua intensità. Il modello polarizzato 80/20, le soglie metaboliche (AeT/LT) e la scienza del drift cardiaco.", 
+    readTime: "12 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "stretching-for-runners", 
-    title: "The Runner's Stretching Guide", 
-    excerpt: "Optimize your stretch-shortening cycle. Why tendon stiffness matters, the science of 'creep', and neural flossing techniques.", 
-    readTime: "12 min read", 
-    category: "Recovery" 
+    title: "La Guida allo Stretching per Runner", 
+    excerpt: "Ottimizza il tuo ciclo di allungamento-accorciamento. Perché la rigidità tendinea conta, la scienza del 'creep' e tecniche di flossing neurale.", 
+    readTime: "12 min di lettura", 
+    category: "Recupero" 
   },
   { 
     slug: "running-form", 
-    title: "How to Improve Your Running Form", 
-    excerpt: "Kinetic chain optimization. Master the ankle lean, pelvic tilt mechanics, and arm swing torque for maximum oxygen economy.", 
-    readTime: "12 min read", 
-    category: "Training" 
+    title: "Come Migliorare la Tua Tecnica di Corsa", 
+    excerpt: "Ottimizzazione della catena cinetica. Padroneggia l'inclinazione della caviglia, la meccanica del tilt pelvico e l'oscillazione delle braccia.", 
+    readTime: "12 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "running-cadence", 
-    title: "Running Cadence: Why SPM Matters", 
-    excerpt: "Eliminate braking forces. The science of vertical oscillation, ground contact time, and utilizing the Achilles 'Natural Spring'.", 
-    readTime: "12 min read", 
-    category: "Training" 
+    title: "Cadenza di Corsa: Perché gli SPM Contano", 
+    excerpt: "Elimina le forze frenanti. La scienza dell'oscillazione verticale, il tempo di contatto al suolo e l'utilizzo della 'Molla Naturale' di Achille.", 
+    readTime: "12 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "hill-training", 
-    title: "Hill Training for Runners", 
-    excerpt: "Strength training in disguise. Master Type II fiber recruitment, eccentric downhill loading, and explosive power mechanics.", 
-    readTime: "12 min read", 
-    category: "Training" 
+    title: "Allenamento in Salita per Runner", 
+    excerpt: "Allenamento di forza sotto mentite spoglie. Padroneggia il reclutamento delle fibre di Tipo II, il carico eccentrico in discesa e la meccanica della potenza.", 
+    readTime: "12 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "best-running-watches", 
-    title: "Best GPS Running Watches: Buyer's Guide", 
-    excerpt: "GNSS technology and training metrics. From L1+L5 multi-band accuracy to HRV readiness scores and Running Power (Watts).", 
-    readTime: "14 min read", 
-    category: "Gear" 
+    title: "I Migliori Orologi GPS: Guida all'Acquisto", 
+    excerpt: "Tecnologia GNSS e metriche di allenamento. Dalla precisione multi-banda L1+L5 ai punteggi di prontezza HRV e alla Potenza di Corsa (Watt).", 
+    readTime: "14 min di lettura", 
+    category: "Attrezzatura" 
   },
   { 
     slug: "winter-running", 
-    title: "How to Run Safely in Cold Weather", 
-    excerpt: "Thermoregulation science. Mastering the 3-layer microclimate, cold-induced diuresis, and bronchospasm prevention.", 
-    readTime: "12 min read", 
-    category: "Gear" 
+    title: "Correre in Inverno in Sicurezza", 
+    excerpt: "Scienza della termoregolazione. Padroneggiare il microclima a 3 strati, la diuresi indotta dal freddo e la prevenzione del broncospasmo.", 
+    readTime: "12 min di lettura", 
+    category: "Attrezzatura" 
   },
   { 
     slug: "interval-training", 
-    title: "Interval Training for Runners", 
-    excerpt: "Manipulation of energy systems. Work-to-rest ratios for Phosphocreatine resynthesis, VO2 Max repeats, and lactate shuttle efficiency.", 
-    readTime: "14 min read", 
-    category: "Training" 
+    title: "Allenamento a Intervalli per Runner", 
+    excerpt: "Manipolazione dei sistemi energetici. Rapporti lavoro-riposo per la risintesi della fosfocreatina, ripetute VO2 Max ed efficienza dello shuttle lattacido.", 
+    readTime: "14 min di lettura", 
+    category: "Allenamento" 
   },
   { 
     slug: "sleep-and-running", 
-    title: "Sleep & Running Performance: The Science", 
-    excerpt: "The ultimate anabolic window. Hormonal reset, the glymphatic flush system, and the science of sleep extension for athletes.", 
-    readTime: "12 min read", 
-    category: "Recovery" 
+    title: "Sonno e Performance: La Scienza", 
+    excerpt: "La finestra anabolica definitiva. Reset ormonale, il sistema di lavaggio glinfatico e la scienza dell'estensione del sonno per gli atleti.", 
+    readTime: "12 min di lettura", 
+    category: "Recupero" 
   },
   { 
     slug: "running-shoe-rotation", 
-    title: "How to Build a Running Shoe Rotation", 
-    excerpt: "Mechanical variation science. Preventing repetitive stress via foam recovery, varying geometries, and the 'Monotony of Load' theory.", 
-    readTime: "12 min read", 
-    category: "Gear" 
+    title: "Come Costruire una Rotazione di Scarpe", 
+    excerpt: "Scienza della variazione meccanica. Prevenire lo stress ripetitivo tramite il recupero delle schiume e la teoria della 'Monotonia del Carico'.", 
+    readTime: "12 min di lettura", 
+    category: "Attrezzatura" 
   },
 ];

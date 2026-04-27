@@ -25,13 +25,13 @@ import { apparelSpecs } from "@/data/specs/apparel";
 import { gearSpecs } from "@/data/specs/gear";
 
 const selectionRationale: Record<string, string> = {
-  shoes: "Our selection is based on 3D midsole geometry, measured energy return, and biomechanical stability. We analyze proprietary foams and carbon plate stiffness to match specific gait cycles and terrain requirements.",
-  supplements: "Selected based on clinical dosage transparency and ingredient bioavailability. We prioritize products with third-party testing (Informed Sport) and evidence-based ratios of essential minerals and ergogenic aids.",
-  hydration: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on BPA-free solutions that minimize sloshing and optimize fluid delivery efficiency.",
-  gear: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on solutions that minimize sloshing and optimize delivery efficiency.",
-  accessories: "Evaluated for ergonomic weight distribution, ease of access during high intensity, and material durability. We focus on solutions that minimize sloshing and optimize delivery efficiency.",
-  recovery: "Chosen for their impact on muscle protein synthesis and inflammatory response modulation. We analyze mechanical compression, thermal consistency, and portability for optimal supercompensation.",
-  apparel: "Selected for high-performance moisture wicking, anatomical compression zones, and friction-free seam construction. We prioritize fabrics that regulate core temperature across diverse climatic conditions.",
+  shoes: "La nostra selezione si basa sulla geometria dell'intersuola 3D, sul ritorno di energia misurato e sulla stabilità biomeccanica. Analizziamo le schiume proprietarie e la rigidità delle piastre in carbonio per adattarle a specifici cicli di andatura e requisiti del terreno.",
+  supplements: "Selezionati in base alla trasparenza del dosaggio clinico e alla biodisponibilità degli ingredienti. Prioritizziamo prodotti con test di terze parti (Informed Sport) e rapporti basati sull'evidenza di minerali essenziali e aiuti ergogenici.",
+  hydration: "Valutati per la distribuzione ergonomica del peso, la facilità di accesso durante l'alta intensità e la durata dei materiali. Ci concentriamo su soluzioni prive di BPA che riducono al minimo lo sballottamento e ottimizzano l'efficienza di erogazione dei liquidi.",
+  gear: "Valutati per la distribuzione ergonomica del peso, la facilità di accesso durante l'alta intensità e la durata dei materiali. Ci concentriamo su soluzioni che riducono al minimo lo sballottamento e ottimizzano l'efficienza di erogazione.",
+  accessories: "Valutati per la distribuzione ergonomica del peso, la facilità di accesso durante l'alta intensità e la durata dei materiali. Ci concentriamo su soluzioni che riducono al minimo lo sballottamento e ottimizzano l'efficienza di erogazione.",
+  recovery: "Scelti per il loro impatto sulla sintesi proteica muscolare e sulla modulazione della risposta infiammatoria. Analizziamo la compressione meccanica, la consistenza termica e la portabilità per una supercompensazione ottimale.",
+  apparel: "Selezionati per l'evacuazione dell'umidità ad alte prestazioni, le zone di compressione anatomica e la costruzione delle cuciture senza sfregamento. Prioritizziamo tessuti che regolano la temperatura corporea in diverse condizioni climatiche.",
 };
 
 interface CategorySectionProps {
@@ -91,11 +91,11 @@ const CategorySection = ({
           {guide && <ScientificGuideCard guide={guide} accentColor={accentColor} />}
 
           {/* Comparison Tables Section */}
-          <div className="space-y-12 mb-20">
+          <div id={`${catKey}-comparison`} className="space-y-12 mb-20 scroll-mt-40">
             <div className="flex items-center justify-between border-b border-border pb-4">
               <div className="flex items-center gap-2">
                 <h3 className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
-                    <BarChart3 className="h-5 w-5 opacity-40" /> Technical Comparison
+                    <BarChart3 className="h-5 w-5 opacity-40" /> Confronto Tecnico
                 </h3>
                 
                 <Popover>
@@ -105,16 +105,16 @@ const CategorySection = ({
                         </button>
                     </PopoverTrigger>
                     <PopoverContent className="max-w-[240px] text-xs leading-relaxed p-4 bg-popover/95 backdrop-blur-md shadow-xl border-border">
-                        Select products for specific side-by-side comparison and use filters to customize the technical data view.
+                        Seleziona i prodotti per un confronto fianco a fianco specifico e usa i filtri per personalizzare la vista dei dati tecnici.
                     </PopoverContent>
                 </Popover>
               </div>
             </div>
 
             <div className="mb-6 rounded-xl border-l-4 border-primary bg-secondary/30 p-6 shadow-sm inner-glow">
-              <h3 className="mb-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">Scientific Selection Criteria</h3>
+              <h3 className="mb-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">Criteri di Selezione Scientifica</h3>
               <p className="text-sm leading-relaxed text-muted-foreground italic">
-                {selectionRationale[catKey] || "Our selection process integrates exercise physiology data and product durability testing. We prioritize solutions that offer a measurable impact on performance, safety, and training consistency."}
+                {selectionRationale[catKey] || "Il nostro processo di selezione integra i dati della fisiologia dell'esercizio e i test di durata del prodotto. Prioritizziamo soluzioni che offrono un impatto misurabile su performance, sicurezza e costanza dell'allenamento."}
               </p>
             </div>
 
@@ -128,12 +128,14 @@ const CategorySection = ({
           </div>
 
           {/* Product Banner Section */}
-          <CategoryProductBanner 
-            products={getProductSelection()} 
-            accentColor={accentColor}
-            accentHsl={accentHsl}
-            title={`The Runners Hub ${guide?.title || catKey} Selection`}
-          />
+          <div className="mt-12">
+            <CategoryProductBanner 
+                products={getProductSelection()} 
+                accentColor={accentColor}
+                accentHsl={accentHsl}
+                title={`Selezione Runners Hub: ${guide?.title || catKey}`}
+            />
+          </div>
         </div>
 
         {/* Right Column: Sidebar Resources (Stacks on Mobile) */}

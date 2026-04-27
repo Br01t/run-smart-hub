@@ -78,7 +78,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
                 style={{ backgroundColor: themedMain }}
             />
             <h3 className="font-display text-lg font-bold text-foreground">
-                {title || "Featured Selection"}
+                {title || "Selezione in primo piano"}
             </h3>
         </div>
         <div className="hidden sm:flex gap-2">
@@ -156,7 +156,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
                         className="absolute right-4 top-4 border-none shadow-lg text-[9px] font-bold uppercase tracking-widest px-2"
                         style={{ backgroundColor: themedMain, color: 'white' }}
                     >
-                        <Star className="mr-1 h-3 w-3 fill-current" /> Expert Choice
+                        <Star className="mr-1 h-3 w-3 fill-current" /> Scelta Esperti
                     </Badge>
                     )}
                     
@@ -183,7 +183,7 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
                         style={{ backgroundColor: themedMain, color: 'white' }}
                     >
                         <a href={product.link} target="_blank" rel="noopener noreferrer">
-                        Shop Now <ShoppingCart className="h-3.5 w-3.5" />
+                        Acquista Ora <ShoppingCart className="h-3.5 w-3.5" />
                         </a>
                     </Button>
                     <Button 

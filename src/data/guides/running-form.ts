@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideRunningForm from "@/assets/guide-running-form.webp";
 
 export const runningForm: GuideContent = {
-  title: "How to Improve Your Running Form",
-  seoTitle: "Running Form Guide 2026: Efficiency & Posture Science",
-  seoDescription: "Run faster with less effort. Master the science of running form, including pelvic tilt, arm swing torque, and the 'ankle lean' for maximum efficiency.",
-  keywords: ["running form guide", "running posture", "improve running efficiency", "midfoot strike running", "running arm swing", "proper running technique"],
-  description: "Fix your posture, arm swing, foot strike and breathing for more efficient, injury-free running.",
+  title: "Come Migliorare la Tecnica di Corsa",
+  seoTitle: "Guida Tecnica di Corsa 2026: Scienza della Postura ed Efficienza",
+  seoDescription: "Corri più veloce con meno sforzo. Padroneggia la scienza della tecnica di corsa, inclusa l'inclinazione pelvica, il movimento delle braccia e l'inclinazione delle caviglie per la massima efficienza.",
+  keywords: ["guida tecnica corsa", "postura corsa", "migliorare efficienza corsa", "appoggio mesopiede", "movimento braccia corsa", "tecnica corretta corsa"],
+  description: "Correggi la postura, il movimento delle braccia, l'appoggio del piede e la respirazione per una corsa più efficiente e senza infortuni.",
   tags: ["running", "muscles", "shoes"],
   heroImage: guideRunningForm,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Run 'tall' with a slight lean from the ankles, not the hips",
-    "Land with your foot directly under your center of mass to eliminate braking forces",
-    "Arm swing should be compact and sagittal (forward-back), preventing rotational waste",
-    "A stable, neutral pelvis is the foundation of a powerful stride",
+    "Corri 'alto' con una leggera inclinazione dalle caviglie, non dalle anche",
+    "Atterra con il piede direttamente sotto il tuo centro di massa per eliminare le forze frenanti",
+    "Il movimento delle braccia deve essere compatto e sagittale (avanti-dietro), evitando dispersioni rotazionali",
+    "Un bacino stabile e neutro è la base per una falcata potente",
   ],
   relatedTools: [
-    { to: "/tools/bmi", label: "BMI Calculator" },
-    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
   ],
   relatedGuides: [
-    { slug: "running-cadence", label: "Running Cadence: Why Steps Per Minute Matter" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "running-cadence", label: "Cadenza nella Corsa: Perché i Passi Contano" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: Kinetic Chain Alignment", 
-      body: "Running form is the optimization of the 'Kinetic Chain'. Every inefficiency—like overstriding or crossing the midline—creates 'braking forces' that the body must overcome. \n\n**Energy Leakage:** Lateral 'wobbling' of the hips or shoulders represents energy that should be moving you forward but is being lost to the sides. A rigid, stable core and a neutral pelvis allow your limbs to produce power from a solid platform, significantly improving your Running Economy (the oxygen cost of a given pace).", 
+      heading: "La Scienza: Allineamento della Catena Cinetica", 
+      body: "La tecnica di corsa è l'ottimizzazione della 'Catena Cinetica'. Ogni inefficienza—come l'overstriding o l'incrocio della linea mediana—crea 'forze frenanti' che il corpo deve superare. \n\n**Dispersione di Energia:** L'oscillazione laterale delle anche o delle spalle rappresenta energia che dovrebbe muoverti in avanti ma viene persa lateralmente. Un core rigido e stabile e un bacino neutro permettono ai tuoi arti di produrre potenza da una piattaforma solida, migliorando significativamente la tua Economia di Corsa (il costo di ossigeno a un dato ritmo).", 
       variant: "highlight" 
     },
     { 
-      heading: "Postural Pillars: The Ankle Lean", 
-      body: "Effective running is essentially a 'controlled fall'. Instead of leaning from the waist (which puts stress on the lower back and limits hip extension), you should lean from the **ankles**. \n\n- **The Gravity Assist:** This slight forward tilt uses gravity to pull your center of mass forward, reducing the muscular work required to initiate each step. \n- **The Tall Cue:** Imagine a string pulling the crown of your head toward the sky. This lengthens the spine and opens up the thoracic cavity for better breathing capacity.", 
+      heading: "Pilastri Posturali: L'Inclinazione dalla Caviglia", 
+      body: "Correre in modo efficace è essenzialmente una 'caduta controllata'. Invece di inclinarti dalla vita (cosa che mette stress sulla zona lombare e limita l'estensione dell'anca), dovresti inclinarti dalle **caviglie**. \n\n- **L'Assist della Gravità:** Questa leggera inclinazione in avanti usa la gravità per tirare il tuo centro di massa in avanti, riducendo il lavoro muscolare necessario per iniziare ogni passo. \n- **Il Segnale 'Corri Alto':** Immagina un filo che tira la cima della tua testa verso il cielo. Questo allunga la colonna vertebrale e apre la cavità toracica per una migliore capacità respiratoria.", 
       variant: "default" 
     },
     { 
-      heading: "Arm Swing & Rotational Torque", 
-      body: "Your arms are not just passengers; they are essential for counterbalancing the rotational torque of your legs. \n\n- **Sagittal Plane:** Arms should move primarily forward and back. If your hands cross the midline of your chest, your upper body rotates excessively, forcing your core and hips to work harder to keep you straight. \n- **The 90-Degree Rule:** Keep your elbows bent at 90 degrees or slightly less. A long, swinging arm is a longer 'lever', which requires more energy to move back and forth.", 
+      heading: "Movimento delle Braccia e Coppia Rotazionale", 
+      body: "Le tue braccia non sono solo passeggeri; sono essenziali per bilanciare la coppia rotazionale delle gambe. \n\n- **Piano Sagittale:** Le braccia dovrebbero muoversi principalmente avanti e indietro. Se le mani incrociano la linea mediana del petto, la parte superiore del corpo ruota eccessivamente, costringendo core e anche a lavorare di più per tenerti dritto. \n- **La Regola dei 90 Gradi:** Tieni i gomiti piegati a 90 gradi o leggermente meno. Un braccio lungo che oscilla è una 'leva' più lunga, che richiede più energia per muoversi avanti e indietro.", 
       variant: "default", 
       listItems: [
-        "Shoulder Relaxation: High, tense shoulders restrict lung expansion and waste glycogen", 
-        "Foot Strike: Don't 'reach' with your foot; let it land naturally underneath your hips", 
-        "Pelvic Tilt: Avoid 'butt-out' (anterior tilt) as it inhibits glute engagement",
-        "Knee Drive: A moderate knee drive creates the necessary space for an efficient stride."
+        "Rilassamento delle Spalle: spalle alte e tese limitano l'espansione polmonare e sprecano glicogeno", 
+        "Appoggio del Piede: non 'cercare' il terreno con il piede; lascialo atterrare naturalmente sotto le anche", 
+        "Inclinazione Pelvica: evita l'antiversione (sedere all'infuori) poiché inibisce il coinvolgimento dei glutei",
+        "Spinta delle Ginocchia: una spinta moderata delle ginocchia crea lo spazio necessario per una falcata efficiente."
       ] 
     },
     {
-      heading: "The 'Quiet Feet' Rule",
-      body: "A loud 'slap' on the pavement is a sign of wasted energy and high impact loading. Focus on 'quiet feet'. If you can hear your footsteps over your breathing, you are likely landing too heavily or overstriding. Quiet feet naturally encourage a mid-foot strike and better shock absorption.",
+      heading: "La Regola dei 'Piedi Silenziosi'",
+      body: "Un forte 'schiaffo' sull'asfalto è segno di energia sprecata e alto carico d'impatto. Concentrati sui 'piedi silenziosi'. Se riesci a sentire i tuoi passi sopra il respiro, probabilmente stai atterrando troppo pesantemente o facendo overstriding. I piedi silenziosi favoriscono naturalmente l'appoggio di mesopiede e un migliore assorbimento degli urti.",
       variant: "tip"
     },
     {
-      heading: "Avoid the 'Seated' Position",
-      body: "When runners get tired, they often 'sink' into their hips, appearing as if they are sitting in a chair while running. This disables the glutes and puts massive pressure on the lower back and knees. Every 10 minutes, perform a 'form reset': straighten the spine, engage the core, and pick up the cadence.",
+      heading: "Evita la Posizione 'Seduta'",
+      body: "Quando i runner si stancano, spesso 'affondano' nelle anche, apparendo come se fossero seduti su una sedia mentre corrono. Questo disattiva i glutei e mette una pressione enorme sulla zona lombare e sulle ginocchia. Ogni 10 minuti, fai un 'reset della forma': raddrizza la colonna, attiva il core e aumenta la cadenza.",
       variant: "warning"
     },
     { 
-      heading: "Form Correction Checklist", 
-      body: "Practice these cues during your easy runs to build the muscle memory for race day.", 
+      heading: "Checklist per la Correzione della Tecnica", 
+      body: "Esercita questi accorgimenti durante le tue corse facili per costruire la memoria muscolare per il giorno della gara.", 
       variant: "checklist", 
       listItems: [
-        "Head Position: Look 20-30 meters ahead, not at your feet, to keep your neck neutral.", 
-        "Hand Grip: Imagine holding a delicate egg in each hand—relaxed hands equal relaxed shoulders.", 
-        "The 'Pull' Drill: Focus on pulling your heel up toward your glute rather than pushing off the ground.", 
-        "Belly Breathing: Ensure your stomach expands on the inhale to maximize oxygen intake.",
-        "Post-Run Strides: Perform 4x 100m fast 'form focus' runs to lock in good habits while tired."
+        "Posizione della Testa: guarda 20-30 metri avanti, non ai tuoi piedi, per mantenere il collo neutro.", 
+        "Impugnatura delle Mani: immagina di tenere un uovo delicato in ogni mano—mani rilassate significano spalle rilassate.", 
+        "Il Drill di 'Tiro': concentrati sul tirare il tallone verso il gluteo piuttosto che spingere via dal terreno.", 
+        "Respirazione Addominale: assicurati che la pancia si espanda durante l'inspirazione per massimizzare l'apporto di ossigeno.",
+        "Allunghi Post-Corsa: esegui 4 allunghi da 100 m concentrandoti sulla tecnica per fissare le buone abitudini anche da stanchi."
       ] 
     },
   ],

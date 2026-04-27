@@ -32,8 +32,8 @@ export const ComparisonTray = ({
     }`}>
       <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-4 border-b sm:border-b-0 sm:border-r border-white/10 pb-3 sm:pb-0 sm:pr-8">
         <div className="flex flex-col">
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/80">Selected</span>
-          <span className="text-sm font-bold text-primary">{selectedNames.length} Products</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/80">Selezionati</span>
+          <span className="text-sm font-bold text-primary">{selectedNames.length} Prodotti</span>
         </div>
         <div className="flex -space-x-2 sm:-space-x-3">
           {selectedNames.map((name, i) => (
@@ -57,7 +57,7 @@ export const ComparisonTray = ({
             <Button 
               className="flex-1 sm:flex-none h-12 px-10 rounded-2xl font-black text-sm uppercase tracking-wider shadow-[0_10px_20px_rgba(var(--primary-rgb),0.3)] transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 border-none text-white overflow-hidden whitespace-nowrap"
             >
-              <ArrowRightLeft className="mr-2 h-4 w-4" /> Compare Now
+              <ArrowRightLeft className="mr-2 h-4 w-4" /> Confronta Ora
             </Button>
           </DialogTrigger>
           <DialogContent className="z-[150] w-[95vw] sm:max-w-5xl rounded-3xl sm:rounded-[4rem] border-white/10 bg-background/95 backdrop-blur-3xl shadow-2xl p-4 sm:p-12">
@@ -67,8 +67,8 @@ export const ComparisonTray = ({
                   <ArrowRightLeft className="h-8 w-8 sm:h-10 sm:w-10" />
                 </div>
                 <div>
-                  <span className="block text-primary text-sm uppercase tracking-[0.3em] font-black mb-1">Analysis Mode</span>
-                  Head-to-Head
+                  <span className="block text-primary text-sm uppercase tracking-[0.3em] font-black mb-1">Modalità Analisi</span>
+                  Testa-a-Testa
                 </div>
               </DialogTitle>
             </DialogHeader>

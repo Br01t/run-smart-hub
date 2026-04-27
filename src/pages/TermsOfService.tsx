@@ -5,138 +5,138 @@ const TermsOfService = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Terms of Service – Runners Hub",
-    description: "Terms and conditions for using Runners Hub's website and tools.",
+    name: "Termini di Servizio – Runners Hub",
+    description: "Termini e condizioni per l'utilizzo del sito web e degli strumenti di Runners Hub.",
     url: "https://www.runners-hub.org/terms",
   };
 
   return (
     <Layout>
       <SEO
-        title="Terms of Service"
-        description="Terms and conditions governing the use of Runners Hub's website, tools, and content."
+        title="Termini di Servizio"
+        description="Termini e condizioni che regolano l'uso del sito web, degli strumenti e dei contenuti di Runners Hub."
         path="/terms"
         schema={schema}
       />
 
       <div className="container mx-auto max-w-3xl px-4 py-10 sm:py-14">
         <h1 className="mb-6 font-display text-xl font-bold text-foreground sm:text-2xl">
-          Terms of Service
+          Termini di Servizio
         </h1>
-        <p className="mb-6 text-xs text-muted-foreground">Last updated: April 2, 2026</p>
+        <p className="mb-6 text-xs text-muted-foreground">Ultimo aggiornamento: 2 aprile 2026</p>
 
         <div className="space-y-8 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">1. Acceptance of Terms</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">1. Accettazione dei Termini</h2>
             <p>
-              By accessing and using Runners Hub (www.runners-hub.org), you agree to be bound by these Terms of Service.
-              If you do not agree to these terms, please do not use our website.
+              Accedendo e utilizzando Runners Hub (www.runners-hub.org), accetti di essere vincolato dai presenti Termini di Servizio.
+              Se non accetti questi termini, ti preghiamo di non utilizzare il nostro sito web.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">2. Description of Service</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">2. Descrizione del Servizio</h2>
             <p>
-              Runners Hub provides free, science-based running tools, calculators, gear reviews, and educational
-              content. Our services are designed for informational purposes only and do not constitute
-              medical, nutritional, or professional training advice.
+              Runners Hub fornisce gratuitamente strumenti per la corsa basati sulla scienza, calcolatori, recensioni di attrezzatura e contenuti
+              educativi. I nostri servizi sono progettati esclusivamente a scopo informativo e non costituiscono
+              consulenza medica, nutrizionale o professionale per l'allenamento.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">3. Use of Tools & Calculators</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">3. Utilizzo degli Strumenti e dei Calcolatori</h2>
             <ul className="ml-4 list-disc space-y-1">
-              <li>All calculator results are estimates based on general scientific formulas.</li>
-              <li>Results may vary based on individual factors not accounted for by our tools.</li>
-              <li>You should consult a qualified healthcare professional before making changes to your diet, training, or health regimen based on our tools.</li>
-              <li>All data entered into our calculators is processed locally in your browser and is not stored on our servers.</li>
+              <li>Tutti i risultati dei calcolatori sono stime basate su formule scientifiche generali.</li>
+              <li>I risultati possono variare in base a fattori individuali non considerati dai nostri strumenti.</li>
+              <li>È necessario consultare un professionista sanitario qualificato prima di apportare modifiche alla propria dieta, allenamento o regime di salute basandosi sui nostri strumenti.</li>
+              <li>Tutti i dati inseriti nei nostri calcolatori vengono elaborati localmente nel tuo browser e non vengono memorizzati sui nostri server.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">4. Affiliate Links & Product Reviews</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">4. Link di Affiliazione e Recensioni Prodotti</h2>
             <p className="mb-2">
-              Runners Hub participates in affiliate marketing programs. This means:
+              Runners Hub partecipa a programmi di marketing di affiliazione. Questo significa:
             </p>
             <ul className="ml-4 list-disc space-y-1">
-              <li>Some links on our site are affiliate links that may earn us a commission if you make a purchase.</li>
-              <li>Affiliate relationships do not influence our editorial content or product ratings.</li>
-              <li>We clearly disclose affiliate relationships in accordance with FTC guidelines.</li>
-              <li>Product availability and prices are subject to change and are determined by the retailer.</li>
+              <li>Alcuni link sul nostro sito sono link di affiliazione che potrebbero farci guadagnare una commissione se effettui un acquisto.</li>
+              <li>I rapporti di affiliazione non influenzano i nostri contenuti editoriali o le valutazioni dei prodotti.</li>
+              <li>Dichiariamo chiaramente i rapporti di affiliazione in conformità con le linee guida internazionali.</li>
+              <li>La disponibilità dei prodotti e i prezzi sono soggetti a modifiche e sono determinati dal rivenditore.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">5. Intellectual Property</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">5. Proprietà Intellettuale</h2>
             <p>
-              All content on Runners Hub — including text, graphics, logos, images, and software — is the
-              property of Runners Hub and is protected by international copyright laws. You may not reproduce,
-              distribute, or create derivative works without our explicit written permission.
+              Tutti i contenuti di Runners Hub — inclusi testi, grafiche, loghi, immagini e software — sono di
+              proprietà di Runners Hub e sono protetti dalle leggi internazionali sul copyright. Non è consentito riprodurre,
+              distribuire o creare opere derivate senza il nostro esplicito permesso scritto.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">6. User Conduct</h2>
-            <p>When using Runners Hub, you agree not to:</p>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">6. Condotta dell'Utente</h2>
+            <p>Utilizzando Runners Hub, accetti di non:</p>
             <ul className="ml-4 list-disc space-y-1 mt-2">
-              <li>Use automated systems (bots, scrapers) to access the site without permission.</li>
-              <li>Attempt to interfere with the website's functionality or security.</li>
-              <li>Reproduce or redistribute our content without authorization.</li>
-              <li>Use the site for any unlawful purpose.</li>
+              <li>Utilizzare sistemi automatizzati (bot, scraper) per accedere al sito senza autorizzazione.</li>
+              <li>Tentare di interferire con la funzionalità o la sicurezza del sito web.</li>
+              <li>Riprodurre o ridistribuire i nostri contenuti senza autorizzazione.</li>
+              <li>Utilizzare il sito per scopi illeciti.</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">7. Disclaimer of Warranties</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">7. Esclusione di Garanzia</h2>
             <p>
-              Runners Hub is provided "as is" and "as available" without warranties of any kind, either express
-              or implied. We do not guarantee that the site will be uninterrupted, error-free, or free of
-              harmful components. We make no warranties regarding the accuracy or completeness of any
-              content or calculator results.
+              Runners Hub viene fornito "così com'è" e "come disponibile" senza garanzie di alcun tipo, esplicite
+              o implicite. Non garantiamo che il sito sarà ininterrotto, privo di errori o privo di
+              componenti dannosi. Non forniamo garanzie riguardo all'accuratezza o alla completezza di qualsiasi
+              contenuto o risultato dei calcolatori.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">8. Limitation of Liability</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">8. Limitazione di Responsabilità</h2>
             <p>
-              To the fullest extent permitted by law, Runners Hub shall not be liable for any indirect,
-              incidental, special, or consequential damages arising from your use of, or inability to use,
-              our website, tools, or content. This includes damages for loss of profits, data, or other
-              intangible losses.
+              Nella misura massima consentita dalla legge, Runners Hub non sarà responsabile per eventuali danni indiretti,
+              incidentali, speciali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare
+              il nostro sito web, gli strumenti o i contenuti. Ciò include danni per perdita di profitti, dati o altre
+              perdite intangibili.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">9. Third-Party Links</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">9. Link di Terze Parti</h2>
             <p>
-              Our website contains links to third-party websites and services. We are not responsible for
-              the content, privacy practices, or terms of any third-party sites. Visiting these links is
-              at your own risk.
+              Il nostro sito web contiene link a siti web e servizi di terze parti. Non siamo responsabili per
+              il contenuto, le pratiche sulla privacy o i termini di siti di terze parti. La visita di questi link è
+              a tuo rischio esclusivo.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">10. Modifications</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">10. Modifiche</h2>
             <p>
-              We reserve the right to modify these Terms of Service at any time. Changes will be effective
-              immediately upon posting. Your continued use of Runners Hub after changes constitutes acceptance
-              of the updated terms.
+              Ci riserviamo il diritto di modificare i presenti Termini di Servizio in qualsiasi momento. Le modifiche saranno efficaci
+              immediatamente dopo la pubblicazione. L'uso continuato di Runners Hub dopo le modifiche costituisce accettazione
+              dei termini aggiornati.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">11. Governing Law</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">11. Legge Applicabile</h2>
             <p>
-              These Terms shall be governed by and construed in accordance with the laws of the European
-              Union and the applicable national laws. Any disputes shall be resolved in the competent
-              courts of our registered jurisdiction.
+              I presenti Termini saranno regolati e interpretati in conformità con le leggi dell'Unione Europea
+              e le leggi nazionali applicabili. Eventuali controversie saranno risolte nei tribunali competenti
+              della nostra giurisdizione registrata.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">12. Contact</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">12. Contatti</h2>
             <p>
-              For questions about these Terms of Service, please contact us at{" "}
+              Per domande su questi Termini di Servizio, contattaci all'indirizzo{" "}
               <span className="text-primary">info@runners-hub.org</span>.
             </p>
           </section>

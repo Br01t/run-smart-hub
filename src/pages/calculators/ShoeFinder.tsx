@@ -38,14 +38,14 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEO 
-        title="Best Running Shoes Finder 2026" 
-        description="Answer 5 quick questions and get personalized running shoe recommendations based on your terrain, goals and biomechanics."
+        title="Trova le Migliori Scarpe da Corsa 2026" 
+        description="Rispondi a 5 rapide domande e ricevi raccomandazioni personalizzate per le tue scarpe da corsa in base a terreno, obiettivi e biomeccanica."
         path="/tools/shoes"
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Personalized Running Shoe Finder",
-          "description": "Expert recommendation engine for matching runners with the perfect footwear.",
+          "name": "Trova Scarpe da Corsa Personalizzato",
+          "description": "Motore di raccomandazione esperto per abbinare i runner alla calzatura perfetta.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}
@@ -54,7 +54,7 @@ const ShoeFinder = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={shoeHero} alt="Running shoes lineup" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
+          <img src={shoeHero} alt="Gamma di scarpe da corsa" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 to-foreground/50" />
         </div>
         <div className="relative container mx-auto px-4 py-10 sm:py-16">
@@ -64,9 +64,9 @@ const ShoeFinder = () => {
             </div>
             <div>
               <h1 className="font-display text-2xl font-bold text-primary-foreground sm:text-3xl">
-                Best Shoes Finder
+                Trova Scarpe Ideali
               </h1>
-              <p className="text-sm text-primary-foreground/70">5 questions • Personalized results</p>
+              <p className="text-sm text-primary-foreground/70">5 domande • Risultati personalizzati</p>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ const ShoeFinder = () => {
         {/* Progress */}
         <div className="mb-6">
           <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
-            <span>{showResults ? "Complete!" : `Question ${currentStep + 1} of ${steps.length}`}</span>
+            <span>{showResults ? "Completato!" : `Domanda ${currentStep + 1} di ${steps.length}`}</span>
             <span>{Math.round(progress)}%</span>
           </div>
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
@@ -124,7 +124,7 @@ const ShoeFinder = () => {
                   onClick={() => setCurrentStep(currentStep - 1)}
                   className="mt-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
                 >
-                  <ArrowLeft className="h-4 w-4" /> Previous
+                  <ArrowLeft className="h-4 w-4" /> Precedente
                 </button>
               )}
             </motion.div>
@@ -160,9 +160,9 @@ const ShoeFinder = () => {
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth card-depth-hover">
                   <div className="mb-4 flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115 3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477 2.387a2 2 0 00.547 1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86 1.43l-1.008.806a1 1 0 01-1.217.108l-5.115-3.41a1 1 0 01-.108-1.217l.806-1.008a6 6 0 001.43-3.86l-.477-2.387a2 2 0 00-.547-1.022L7.572 2.572a2 2 0 00-2.828 0L2.572 4.744a2 2 0 000 2.828l1.172 1.172a2 2 0 001.022.547l2.387.477a6 6 0 003.86-1.43l1.008-.806a1 1 0 011.217-.108l5.115-3.41a1 1 0 01.108 1.217l-.806 1.008a6 6 0 00-1.43 3.86l.477-2.387a2 2 0 00.547-1.022l1.172 1.172a2 2 0 002.828 0l2.172-2.172a2 2 0 000-2.828l-1.172-1.172z" /></svg>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-foreground">The Science</h3>
+                    <h3 className="font-display text-lg font-bold text-foreground">La Scienza</h3>
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {results.science}
@@ -174,7 +174,7 @@ const ShoeFinder = () => {
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-foreground">The Practice</h3>
+                    <h3 className="font-display text-lg font-bold text-foreground">In Pratica</h3>
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {results.practice}
@@ -186,7 +186,7 @@ const ShoeFinder = () => {
               <div className="space-y-6 pt-4">
                 <div className="flex items-center gap-2">
                   <div className="h-px flex-1 bg-border" />
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">Expert Recommendations</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">Raccomandazioni Esperti</h3>
                   <div className="h-px flex-1 bg-border" />
                 </div>
                 
@@ -203,7 +203,7 @@ const ShoeFinder = () => {
                         
                         <div className="mt-4 grid grid-cols-3 gap-2 border-t border-border pt-4 text-[10px] font-bold text-muted-foreground uppercase tracking-tighter">
                           <div className="flex flex-col items-center">
-                            <span>Weight</span>
+                            <span>Peso</span>
                             <span className="text-foreground">{shoe.specs.weight}</span>
                           </div>
                           <div className="flex flex-col items-center border-x border-border">
@@ -211,13 +211,13 @@ const ShoeFinder = () => {
                             <span className="text-foreground">{shoe.specs.drop}</span>
                           </div>
                           <div className="flex flex-col items-center">
-                            <span>Cushion</span>
+                            <span>Ammort.</span>
                             <span className="text-foreground">{shoe.specs.cushion}</span>
                           </div>
                         </div>
 
                         <Link to="/hub#shoes" className="mt-6 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
-                          View Full Details <ArrowRight className="h-3 w-3" />
+                          Dettagli Completi <ArrowRight className="h-3 w-3" />
                         </Link>
                       </div>
                     </div>
@@ -229,8 +229,8 @@ const ShoeFinder = () => {
                   <HubReferral 
                     category="shoes"
                     href="/hub#shoes"
-                    title="Explore the Full Shoes Hub"
-                    description="Didn't find your perfect match? View our complete technical comparison of all top-rated running models with live availability."
+                    title="Esplora l'Hub Completo Scarpe"
+                    description="Non hai trovato il modello perfetto? Visualizza il nostro confronto tecnico completo di tutti i migliori modelli con disponibilità in tempo reale."
                   />
                 </div>
               </div>
@@ -240,15 +240,15 @@ const ShoeFinder = () => {
                   onClick={reset}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-8 py-4 text-sm font-bold text-foreground transition-all btn-depth btn-depth-hover"
                 >
-                  <RotateCcw className="h-4 w-4" /> Start New Search
+                  <RotateCcw className="h-4 w-4" /> Inizia Nuova Ricerca
                 </button>
               </div>
 
               {/* Expert Guides consolidated at bottom of results */}
               <div className="mt-20 space-y-12 border-t border-border pt-16">
                 <GuidesReferral guides={[
-                  { title: "Finding Your Perfect Fit", path: "/guides/choosing-running-shoes", desc: "How body weight and biomechanics dictate your ideal footwear requirements." },
-                  { title: "Running Form Guide", path: "/guides/running-form", desc: "Optimize your efficiency and reduce impact." }
+                  { title: "Trovare la Calzata Perfetta", path: "/guides/choosing-running-shoes", desc: "Come il peso corporeo e la biomeccanica dettano i requisiti ideali delle calzature." },
+                  { title: "Guida alla Tecnica di Corsa", path: "/guides/running-form", desc: "Ottimizza la tua efficienza e riduci l'impatto." }
                 ]} />
               </div>
             </motion.div>

@@ -2,71 +2,71 @@ import { GuideContent } from "@/types/guide";
 import guideSupplements from "@/assets/guide-supplements.webp";
 
 export const supplementsForRunners: GuideContent = {
-  title: "Essential Supplements for Runners",
-  seoTitle: "Best Running Supplements 2026: Evidence-Based Dosage Guide",
-  seoDescription: "Which supplements actually improve running performance? Scientific analysis of Creatine, Nitrates, Beta-Alanine, and Vitamin D for endurance athletes.",
-  keywords: ["running supplements", "endurance performance", "creatine for runners", "beetroot juice nitrates", "magnesium for cramps", "protein for endurance"],
-  description: "Which supplements actually work for running? An evidence-based guide to performance and health.",
+  title: "Integratori Essenziali per il Runner",
+  seoTitle: "Migliori Integratori Corsa 2026: Guida Scientifica ai Dosaggi",
+  seoDescription: "Quali integratori migliorano davvero le prestazioni nella corsa? Analisi scientifica di Creatina, Nitrati, Beta-Alanina e Vitamina D per atleti di endurance.",
+  keywords: ["integratori corsa", "performance endurance", "creatina per runner", "nitrati succo barbabietola", "magnesio per crampi", "proteine per endurance"],
+  description: "Quali integratori funzionano davvero per la corsa? Una guida basata sulle evidenze scientifiche per la performance e la salute.",
   tags: ["supplements", "electrolytes", "protein", "top-supplements-2026"],
   heroImage: guideSupplements,
-  readTime: "14 min read",
+  readTime: "14 min di lettura",
   keyTakeaways: [
-    "Prioritize 'Food First'—supplements fill the gaps left by high-volume training",
-    "Creatine and Beta-Alanine improve high-intensity capacity and buffering",
-    "Nitrates (Beetroot) reduce the oxygen cost of running",
-    "Iron and Vitamin D are the most common deficiencies in runners",
+    "Dai priorità al cibo vero—gli integratori colmano le lacune lasciate da allenamenti ad alto volume",
+    "Creatina e Beta-Alanina migliorano la capacità ad alta intensità e il tamponamento dell'acido lattico",
+    "I Nitrati (Barbabietola) riducono il costo di ossigeno della corsa",
+    "Ferro e Vitamina D sono le carenze più comuni nei runner",
   ],
   relatedTools: [
-    { to: "/tools/protein", label: "Protein Calculator" },
-    { to: "/tools/electrolytes", label: "Electrolyte Calculator" },
-    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
+    { to: "/tools/electrolytes", label: "Calcolatore Elettroliti" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
-    { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
+    { slug: "muscle-recovery", label: "Recupero Muscolare dopo la Corsa" },
+    { slug: "running-nutrition", label: "Nutrizione Corsa: Cosa Mangiare" },
   ],
   sections: [
     { 
-      heading: "The Performance Hierarchy", 
-      body: "Supplementation is the 'tip of the pyramid'. Before considering pills, ensure your caloric intake, macronutrient balance, and sleep are optimized. However, for athletes training 5+ hours per week, specific micronutrients become rate-limiting factors for both performance and recovery.", 
+      heading: "La Gerarchia delle Performance", 
+      body: "L'integrazione è la 'punta della piramide'. Prima di considerare pillole e polveri, assicurati che l'apporto calorico, il bilancio dei macronutrienti e il sonno siano ottimizzati. Tuttavia, per gli atleti che si allenano più di 5 ore a settimana, specifici micronutrienti possono diventare fattori limitanti sia per la performance che per il recupero.", 
       variant: "highlight" 
     },
     { 
-      heading: "Performance Enhancers: The Big Three", 
-      body: "Only a handful of supplements have 'Level A' evidence for improving endurance performance. \n\n- **Nitrates (Beetroot Juice):** Increases Nitric Oxide, improving mitochondrial efficiency. Dose: 400-800mg 2-3 hours before a race. \n- **Beta-Alanine:** Increases muscle carnosine levels, which buffers the 'burn' (H+ ions) during VO2 max efforts. Dose: 3.2-6.4g daily (split doses to avoid tingling). \n- **Creatine Monohydrate:** Improves phosphocreatine resynthesis for hill sprints and finishing kicks. Contrary to myth, it doesn't cause bloating if taken in low doses (3-5g/day).", 
+      heading: "Potenziatori di Performance: I Magnifici Tre", 
+      body: "Solo una manciata di integratori ha evidenze di 'Livello A' per migliorare le prestazioni di endurance. \n\n- **Nitrati (Succo di Barbabietola):** Aumentano l'ossido nitrico, migliorando l'efficienza mitocondriale. Dosaggio: 400-800 mg 2-3 ore prima di una gara. \n- **Beta-Alanina:** Aumenta i livelli di carnosina muscolare, che tampona il 'bruciore' (ioni H+) durante gli sforzi VO2 max. Dosaggio: 3,2-6,4 g al giorno (dosi frazionate per evitare il formicolio). \n- **Creatina Monoidrato:** Migliora la risintesi della fosfocreatina per gli sprint in salita e le volate finali. Contrariamente ai miti, non causa gonfiore se assunta in basse dosi (3-5 g al giorno).", 
       variant: "default" 
     },
     { 
-      heading: "Health & Resilience: The Recovery Stack", 
-      body: "Endurance running is an inflammatory and oxidative stressor. Maintaining systemic health is key to consistent training. \n\n- **Vitamin D3 + K2:** Critical for calcium absorption and immune function. Most runners in northern latitudes are deficient. Aim for 2000-5000 IU/day. \n- **Magnesium (Bisglycinate/Citrate):** Involved in 300+ reactions. Magnesium deficiency is linked to muscle cramps and poor sleep quality. \n- **Omega-3 (EPA/DHA):** Reduces exercise-induced systemic inflammation and improves heart health.", 
+      heading: "Salute e Resilienza: Lo Stack del Recupero", 
+      body: "La corsa di endurance è uno stress infiammatorio e ossidativo. Mantenere la salute sistemica è la chiave per un allenamento costante. \n\n- **Vitamina D3 + K2:** Fondamentale per l'assorbimento del calcio e la funzione immunitaria. Molti runner sono carenti. Punta a 2000-5000 UI al giorno. \n- **Magnesio (Bisglicinato/Citrato):** Coinvolto in oltre 300 reazioni. La carenza di magnesio è legata ai crampi muscolari e a una scarsa qualità del sonno. \n- **Omega-3 (EPA/DHA):** Riduce l'infiammazione sistemica indotta dall'esercizio e migliora la salute del cuore.", 
       variant: "default", 
       listItems: [
-        "Iron (Ferritin): Runners lose iron through sweat and 'foot-strike hemolysis'. Check levels regularly.", 
-        "Probiotics: Reduces the incidence of GI distress ('runner's trots') during long efforts.", 
-        "Collagen + Vitamin C: Taken 45 mins before a strength session, it may improve tendon and ligament repair.",
-        "Zinc: Essential for hormonal health and enzyme function in high-mileage athletes."
+        "Ferro (Ferritina): i runner perdono ferro con il sudore e l'emolisi da impatto. Controlla i livelli regolarmente.", 
+        "Probiotici: riducono l'incidenza di disturbi gastrointestinali durante i lunghi sforzi.", 
+        "Collagene + Vitamina C: assunti 45 minuti prima di una sessione di forza, possono migliorare la riparazione di tendini e legamenti.",
+        "Zinco: essenziale per la salute ormonale e la funzione enzimatica negli atleti ad alto chilometraggio."
       ] 
     },
     {
-      heading: "The Antioxidant Paradox",
-      body: "Studies show that high doses of Vitamin C (>1000mg) and Vitamin E during the base-building phase can actually **blunt** mitochondrial adaptations. Your body needs the 'stress' of oxidation to signal it to get stronger. Save high-dose antioxidants for the 3 days post-marathon or during heavy travel blocks.",
+      heading: "Il Paradosso degli Antiossidanti",
+      body: "Gli studi dimostrano che dosi elevate di Vitamina C (>1000 mg) e Vitamina E durante la fase di costruzione della base possono effettivamente **smorzare** gli adattamenti mitocondriali. Il tuo corpo ha bisogno dello 'stress' dell'ossidazione per segnalare la necessità di diventare più forte. Riserva gli antiossidanti ad alte dosi per i 3 giorni post-maratona o durante periodi di viaggio intensi.",
       variant: "warning"
     },
     {
-      heading: "Protein & Amino Acid Kinetics",
-      body: "Muscle Protein Synthesis (MPS) is driven by the 'Leucine Threshold'. Aim for 20-30g of protein every 3-4 hours, ensuring at least 2.5g of Leucine per serving (found in whey, soy, or eggs) to trigger the mTOR pathway for muscle repair.",
+      heading: "Cinetica di Proteine e Aminoacidi",
+      body: "La Sintesi Proteica Muscolare (MPS) è guidata dalla 'Soglia di Leucina'. Punta a 20-30 g di proteine ogni 3-4 ore, assicurando almeno 2,5 g di Leucina per porzione (presente in whey, soia o uova) per attivare la via mTOR per la riparazione muscolare.",
       variant: "tip"
     },
     { 
-      heading: "The Runner's Supplement Checklist", 
-      body: "How to safely and effectively integrate supplements into your routine.", 
+      heading: "Checklist Integratori per il Runner", 
+      body: "Come integrare in modo sicuro ed efficace gli integratori nella tua routine.", 
       variant: "checklist", 
       listItems: [
-        "Look for 'Informed Sport' or 'NSF' labels to ensure no banned substances.", 
-        "Beta-Alanine: Take 1.6g twice daily to minimize 'paresthesia' (skin tingling).", 
-        "Creatine: No need to 'load'. 5g daily consistently is enough for saturation in 21 days.", 
-        "Vitamin D: Take with a meal containing fat to maximize absorption.",
-        "Magnesium: Take before bed to leverage its muscle-relaxing and sleep-promoting effects."
+        "Cerca i loghi 'Informed Sport' o 'NSF' per garantire l'assenza di sostanze vietate.", 
+        "Beta-Alanina: assumi 1,6 g due volte al giorno per minimizzare la 'parestesia' (formicolio cutaneo).", 
+        "Creatina: non c'è bisogno di fasi di carico. 5 g al giorno costanti sono sufficienti per la saturazione in 21 giorni.", 
+        "Vitamina D: assumila con un pasto contenente grassi per massimizzare l'assorbimento.",
+        "Magnesio: assumilo prima di dormire per sfruttare i suoi effetti rilassanti e favorenti il sonno."
       ] 
     },
   ],

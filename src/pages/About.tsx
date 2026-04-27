@@ -10,8 +10,8 @@ const About = () => {
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
-      name: "About Runners Hub",
-      description: "Independent running platform providing evidence-based tools, guides, and product reviews for runners of all levels.",
+      name: "Informazioni su Runners Hub",
+      description: "Piattaforma indipendente per la corsa che fornisce strumenti basati su evidenze scientifiche, guide e recensioni di prodotti per runner di ogni livello.",
       url: "https://www.runners-hub.org/about",
     },
     {
@@ -32,8 +32,8 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="About Us — Our Mission & Story"
-        description="Runners Hub is built by a passionate runner. Learn why this project exists, who's behind it, and how we help runners make smarter decisions."
+        title="Chi Siamo — La Nostra Missione e la Nostra Storia"
+        description="Runners Hub è nato dalla passione per la corsa. Scopri perché esiste questo progetto, chi c'è dietro e come aiutiamo i runner a prendere decisioni più consapevoli."
         path="/about"
         schema={{
           "@context": "https://schema.org",
@@ -45,13 +45,13 @@ const About = () => {
       <section className="bg-gradient-hero py-14 sm:py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="mx-auto flex h-32 w-32 items-center justify-center overflow-hidden mb-6">
-            <img src={logo} alt="Runners Hub logo" width={96} height={96} loading="eager" decoding="async" className="h-24 w-24 object-contain" aria-hidden="true" />
+            <img src={logo} alt="Logo Runners Hub" width={96} height={96} loading="eager" decoding="async" className="h-24 w-24 object-contain" aria-hidden="true" />
           </div>
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            About Runners Hub
+            Su Runners Hub
           </h1>
           <p className="mx-auto max-w-2xl text-base sm:text-lg text-primary-foreground/80">
-            Built by a runner, for runners — because honest advice shouldn't be hard to find.
+            Creato da un runner, per i runner — perché i consigli onesti non dovrebbero essere difficili da trovare.
           </p>
         </div>
       </section>
@@ -59,16 +59,16 @@ const About = () => {
       {/* Personal Story */}
       <section className="py-10 sm:py-14">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Who I Am</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Chi Sono</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Hi, I'm the person behind Runners Hub. I'm an everyday runner — not an elite athlete, not a certified coach, just someone who fell in love with running and couldn't stop learning about it.
+              Ciao, sono la persona dietro Runners Hub. Sono un runner amatoriale — non un atleta d'élite, né un coach certificato, solo qualcuno che si è innamorato della corsa e non ha mai smesso di approfondirne ogni aspetto.
             </p>
             <p>
-              I started running a few years ago to clear my head and get in shape. What began as a casual habit quickly turned into a genuine passion. I went from struggling through my first 5K to training for half marathons, chasing pace goals, and nerding out over nutrition, shoes, and training science.
+              Ho iniziato a correre qualche anno fa per liberare la mente e rimettermi in forma. Quella che era iniziata come un'abitudine occasionale si è trasformata rapidamente in una vera passione. Sono passato dal faticare per finire i miei primi 5 km ad allenarmi per mezze maratone, inseguendo obiettivi di tempo e appassionandomi alla scienza della nutrizione, delle scarpe e dell'allenamento.
             </p>
             <p>
-              Along the way, I realized something frustrating: finding reliable, unbiased running advice online is surprisingly hard. Most sites are either full of sponsored content disguised as reviews, or they're so technical that beginners get lost. I wanted something different — a place where real runners could find practical, honest information without the noise.
+              Lungo la strada, mi sono reso conto di una cosa frustrante: trovare consigli affidabili e imparziali sulla corsa online è sorprendentemente difficile. Molti siti sono pieni di contenuti sponsorizzati travestiti da recensioni, o sono così tecnici da scoraggiare i principianti. Volevo qualcosa di diverso — un posto dove i runner potessero trovare informazioni pratiche e oneste senza troppi giri di parole.
             </p>
           </div>
         </div>
@@ -77,13 +77,13 @@ const About = () => {
       {/* Why Running */}
       <section className="py-10 sm:py-14 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Why Running?</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Perché la Corsa?</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Running changed my life. It gave me discipline, mental clarity, and a community I never expected. It taught me that consistency matters more than talent, and that the right gear and nutrition can make a real difference — not just in performance, but in how much you enjoy the process.
+              La corsa ha cambiato la mia vita. Mi ha dato disciplina, chiarezza mentale e una comunità che non mi aspettavo. Mi ha insegnato che la costanza conta più del talento e che l'attrezzatura e la nutrizione giuste possono fare una reale differenza — non solo nelle prestazioni, ma in quanto ti godi il percorso.
             </p>
             <p>
-              I built Runners Hub because I believe every runner deserves access to the same quality information, whether you're lacing up for the first time or preparing for your tenth marathon. Running is one of the most democratic sports in the world — all you need is a pair of shoes and the will to start.
+              Ho creato Runners Hub perché credo che ogni runner meriti l'accesso a informazioni di qualità, sia che stia allacciando le scarpe per la prima volta o che si stia preparando per la sua decima maratona. La corsa è uno degli sport più democratici al mondo — tutto ciò di cui hai bisogno è un paio di scarpe e la volontà di iniziare.
             </p>
           </div>
         </div>
@@ -92,27 +92,27 @@ const About = () => {
       {/* What This Site Is */}
       <section className="py-10 sm:py-14">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">What Runners Hub Is</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Cos'è Runners Hub</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Runners Hub combines three things I wish I had when I started:
+              Runners Hub unisce tre cose che avrei voluto avere quando ho iniziato:
             </p>
             <ul className="space-y-2 ml-1">
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                <span><strong>Interactive tools</strong> — calculators for hydration, calories, protein, BMI, and more, all based on validated sports science formulas.</span>
+                <span><strong>Strumenti interattivi</strong> — calcolatori per idratazione, calorie, proteine, BMI e altro, tutti basati su formule validate dalla scienza dello sport.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                <span><strong>Honest reviews & comparisons</strong> — real product analysis with pros, cons, and practical recommendations. No pay-to-play rankings.</span>
+                <span><strong>Recensioni e confronti onesti</strong> — analisi reali dei prodotti con pro, contro e raccomandazioni pratiche. Nessun posizionamento a pagamento.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
-                <span><strong>Practical guides</strong> — from choosing your first running shoes to advanced marathon nutrition, written in plain language.</span>
+                <span><strong>Guide pratiche</strong> — dalla scelta delle prime scarpe alla nutrizione avanzata per la maratona, scritte con un linguaggio semplice.</span>
               </li>
             </ul>
             <p>
-              Every piece of content is researched, written, and reviewed with care. I use peer-reviewed studies when available, cross-reference multiple sources, and always prioritize what actually works over what sounds impressive.
+              Ogni contenuto è ricercato, scritto e revisionato con cura. Utilizzo studi peer-reviewed quando disponibili, incrocio più fonti e do sempre priorità a ciò che funziona davvero rispetto a ciò che sembra solo impressionante.
             </p>
           </div>
         </div>
@@ -123,22 +123,22 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="font-display text-2xl sm:text-3xl font-black text-foreground mb-6">What Drives This Project</h2>
+              <h2 className="font-display text-2xl sm:text-3xl font-black text-foreground mb-6">Cosa Guida Questo Progetto</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Runners Hub isn't just a website; it's a commitment to transparency in an industry often clouded by marketing. These six pillars guide every piece of content we produce.
+                Runners Hub non è solo un sito web; è un impegno per la trasparenza in un settore spesso offuscato dal marketing. Questi sei pilastri guidano ogni contenuto che produciamo.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="rounded-full shadow-hero"><Link to="/method">Read Our Methodology</Link></Button>
+                <Button asChild size="lg" className="rounded-full shadow-hero"><Link to="/method">Leggi la Nostra Metodologia</Link></Button>
               </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { icon: Target, title: "Evidence-Based", desc: "Recommendations grounded in sports science and real-world experience." },
-                { icon: Users, title: "For All Levels", desc: "Value for everyone from first-timers to marathon veterans." },
-                { icon: TrendingUp, title: "Honest Reviews", desc: "Full independence. If it doesn't work, we say so." },
-                { icon: Heart, title: "Runner-First", desc: "Tools and guides I actually use in my own training." },
-                { icon: Activity, title: "Data-Driven", desc: "Calculators use validated formulas from exercise physiology." },
-                { icon: Mail, title: "Open to Feedback", desc: "Continuous improvement based on what you actually need." },
+                { icon: Target, title: "Scientifico", desc: "Raccomandazioni basate sulla scienza dello sport e sull'esperienza reale." },
+                { icon: Users, title: "Per Tutti i Livelli", desc: "Valore per chiunque, dai neofiti ai veterani della maratona." },
+                { icon: TrendingUp, title: "Recensioni Oneste", desc: "Indipendenza totale. Se un prodotto non funziona, lo diciamo." },
+                { icon: Heart, title: "Prima il Runner", desc: "Strumenti e guide che uso io stesso nel mio allenamento." },
+                { icon: Activity, title: "Basato sui Dati", desc: "I calcolatori usano formule validate dalla fisiologia dell'esercizio." },
+                { icon: Mail, title: "Aperto ai Feedback", desc: "Miglioramento continuo basato su ciò di cui hai realmente bisogno." },
               ].map((v) => (
                 <div key={v.title} className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-md">
                   <v.icon className="h-6 w-6 text-primary mb-3" />
@@ -154,15 +154,15 @@ const About = () => {
       {/* Transparency */}
       <section className="py-10 sm:py-14">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Transparency & Monetization</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Trasparenza e Monetizzazione</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Runners Hub is a free resource. To sustain it, I participate in affiliate programs with <strong>Amazon Associates</strong>, <strong>Myprotein</strong>, and <strong>Onnit</strong>. When you purchase a product through one of my links, I may earn a small commission — at no extra cost to you.
+              Runners Hub è una risorsa gratuita. Per sostenerla, partecipo a programmi di affiliazione con <strong>Amazon Associates</strong>, <strong>Myprotein</strong> e <strong>Onnit</strong>. Quando acquisti un prodotto tramite uno dei miei link, potrei guadagnare una piccola commissione — senza alcun costo aggiuntivo per te.
             </p>
             <p>
-              These partnerships <strong>never influence my content</strong>. I select products based on quality, relevance, and value — not commission rates. For full details, read my{" "}
-              <Link to="/affiliate-disclosure" className="text-primary hover:underline font-medium">Affiliate Disclosure</Link> and{" "}
-              <Link to="/method" className="text-primary hover:underline font-medium">methodology</Link>.
+              Queste partnership <strong>non influenzano mai i miei contenuti</strong>. Seleziono i prodotti in base alla qualità, alla pertinenza e al valore — non in base alle percentuali di commissione. Per tutti i dettagli, leggi la mia{" "}
+              <Link to="/affiliate-disclosure" className="text-primary hover:underline font-medium">Informativa sulle Affiliazioni</Link> e la mia{" "}
+              <Link to="/method" className="text-primary hover:underline font-medium">metodologia</Link>.
             </p>
           </div>
         </div>
@@ -171,41 +171,41 @@ const About = () => {
       {/* Contact */}
       <section className="py-10 sm:py-14 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Get in Touch</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Contattami</h2>
           <p className="text-muted-foreground mb-6">
-            Have a question, suggestion, or partnership inquiry? I'd love to hear from you.
+            Hai una domanda, un suggerimento o una proposta di collaborazione? Mi farebbe piacere sentirti.
           </p>
           <div className="rounded-xl border border-border bg-card p-6 sm:p-8 space-y-5">
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-primary" />
               <div>
-                <p className="text-sm font-medium text-foreground">General Inquiries</p>
+                <p className="text-sm font-medium text-foreground">Richieste Generali</p>
                 <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-primary" />
               <div>
-                <p className="text-sm font-medium text-foreground">Partnerships & Affiliates</p>
+                <p className="text-sm font-medium text-foreground">Partnership e Affiliazioni</p>
                 <a href="mailto:info@runners-hub.org" className="text-sm text-primary hover:underline">info@runners-hub.org</a>
               </div>
             </div>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">I typically respond within 24–48 hours.</p>
+          <p className="mt-4 text-xs text-muted-foreground">In genere rispondo entro 24–48 ore.</p>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-10 sm:py-14 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground mb-3">Start Exploring</h2>
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-primary-foreground mb-3">Inizia a Esplorare</h2>
           <p className="text-primary-foreground/80 mb-6 max-w-lg mx-auto">
-            Discover the tools, read the latest guides, or find the perfect gear for your next run.
+            Scopri gli strumenti, leggi le ultime guide o trova l'attrezzatura perfetta per la tua prossima corsa.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Button asChild><Link to="/tools">Explore Tools</Link></Button>
-            <Button asChild variant="outline"><Link to="/guides">Read Guides</Link></Button>
-            <Button asChild variant="outline"><Link to="/hub">Product Hubs</Link></Button>
+            <Button asChild><Link to="/tools">Esplora Strumenti</Link></Button>
+            <Button asChild variant="outline"><Link to="/guides">Leggi le Guide</Link></Button>
+            <Button asChild variant="outline"><Link to="/hub">Hub Prodotti</Link></Button>
           </div>
         </div>
       </section>

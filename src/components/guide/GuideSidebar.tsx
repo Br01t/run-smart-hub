@@ -14,10 +14,10 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
     <aside className="shrink-0 lg:w-[320px]">
       <div className="sticky top-24 space-y-10">
         {/* Table of Contents */}
-        <nav className="rounded-2xl border border-border bg-card p-5 shadow-card overflow-hidden" aria-label="Table of contents">
+        <nav className="rounded-2xl border border-border bg-card p-5 shadow-card overflow-hidden" aria-label="Tabella dei contenuti">
           <div className="flex items-center gap-2 mb-4">
-            < BookOpen className="h-4 w-4 text-primary" />
-            <h2 className="font-display text-sm font-bold text-foreground uppercase tracking-wider">In this guide</h2>
+            <BookOpen className="h-4 w-4 text-primary" />
+            <h2 className="font-display text-sm font-bold text-foreground uppercase tracking-wider">In questa guida</h2>
           </div>
           <ol className="space-y-1">
             {guide.sections.map((section, i) => {
@@ -40,7 +40,7 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
         {guide.relatedTools.length > 0 && (
           <section>
             <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
-              <Wrench className="h-4 w-4 text-primary" /> Try These Tools
+              <Wrench className="h-4 w-4 text-primary" /> Prova questi strumenti
             </h3>
             <div className="grid gap-2">
               {guide.relatedTools.map((tool) => (
@@ -61,13 +61,11 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
           </section>
         )}
 
-
-
         {/* Related Guides */}
         {guide.relatedGuides.length > 0 && (
           <section>
             <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
-              <BookOpen className="h-4 w-4 text-primary" /> Keep Reading
+              <BookOpen className="h-4 w-4 text-primary" /> Continua a leggere
             </h3>
             <div className="grid gap-2">
               {guide.relatedGuides.map((g) => (
@@ -92,18 +90,18 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
         {guide.hubCategory && (
           <section className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 p-6 shadow-hero transition-all hover:shadow-xl group">
             <div className="relative z-10">
-              <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Technical Selection</span>
+              <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Selezione Tecnica</span>
               <h3 className="mb-3 font-display text-xl font-bold text-foreground leading-tight">
-                Compare the market's best <span className="text-primary">{translateCategory(guide.hubCategory)}</span>
+                Confronta i migliori prodotti per <span className="text-primary">{translateCategory(guide.hubCategory)}</span>
               </h3>
               <p className="mb-6 text-xs leading-relaxed text-muted-foreground">
-                View our 2026 data-driven comparison tables for {translateCategory(guide.hubCategory)} based on scientific benchmarks.
+                Scopri i nostri confronti tecnici basati su dati per {translateCategory(guide.hubCategory)} con benchmark scientifici.
               </p>
               <Link 
                 to={`/hub#${guide.hubCategory}`}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95"
               >
-                Go to {translateCategory(guide.hubCategory)} Hub <BarChart3 className="h-3.5 w-3.5" />
+                Vai all'Hub {translateCategory(guide.hubCategory)} <BarChart3 className="h-3.5 w-3.5" />
               </Link>
             </div>
             {/* Background elements for premium look */}

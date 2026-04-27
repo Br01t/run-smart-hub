@@ -8,7 +8,6 @@
       "protein",
       "recovery",
       "supplements",
-      "supplements",
       "muscles",
       "top-supplements-2026",
       "injury-prevention",
@@ -17,7 +16,7 @@
     "prezzoRange": "€30.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/",
     "immagine": "/images/products/myprotein-impact-whey.webp",
-    "descrizione": "UK and Europe’s No.1 best-selling whey protein, delivering 23g of high-quality protein per serving for muscle maintenance and growth.",
+    "descrizione": "Le proteine del siero di latte n. 1 in classifica nel Regno Unito e in Europa, forniscono 23g di proteine di alta qualità per porzione per il mantenimento e la crescita muscolare.",
     "rating": 5
   },
   {
@@ -29,13 +28,12 @@
       "protein",
       "recovery",
       "supplements",
-      "supplements",
       "muscles"
     ],
     "prezzoRange": "€27.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/",
     "immagine": "/images/products/myprotein-whey-isolate.webp",
-    "descrizione": "Ultra-filtered whey isolate delivering 26g of fast-absorbing protein per serving, designed for maximum muscle growth and recovery.",
+    "descrizione": "Proteine isolate del siero di latte ultra-filtrate che forniscono 26g di proteine a rapido assorbimento per porzione, progettate per la massima crescita muscolare e il recupero.",
     "rating": 5
   },
   {
@@ -45,7 +43,6 @@
     "brand": "Myprotein",
     "tag": [
       "supplements",
-      "supplements",
       "recovery",
       "muscles",
       "energy"
@@ -53,12 +50,12 @@
     "prezzoRange": "€22.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/",
     "immagine": "/images/products/myprotein-eaa.webp",
-    "descrizione": "The ultimate blend of all nine essential amino acids, providing a superior amino acid profile to support muscle repair and growth.",
+    "descrizione": "La miscela definitiva di tutti i nove aminoacidi essenziali, che fornisce un profilo aminoacidico superiore per supportare la riparazione e la crescita muscolare.",
     "rating": 5
   },
   {
     "id": "myprotein-protein-bar",
-    "nome": "Impact Protein Bar (12 Pack)",
+    "nome": "Barrette Proteiche Impact (12 Pack)",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
@@ -69,16 +66,15 @@
     "prezzoRange": "€20–€30",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-protein-bar/10852498/",
     "immagine": "/images/products/myprotein-protein-bar.webp",
-    "descrizione": "20g protein per bar with low sugar. Convenient on-the-go snack for runners needing quick fuel before or after training.",
+    "descrizione": "20g di proteine per barretta con basso contenuto di zuccheri. Snack comodo per i runner che necessitano di energia rapida prima o dopo l'allenamento.",
     "rating": 4
   },
   {
     "id": "myprotein-creatine",
-    "nome": "Impact Creatine",
+    "nome": "Creatina Impact",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
-      "supplements",
       "supplements",
       "recovery",
       "energy",
@@ -88,12 +84,12 @@
     "prezzoRange": "€4.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/",
     "immagine": "/images/products/myprotein-creatine.webp",
-    "descrizione": "High-quality creatine monohydrate powder designed to increase physical performance in successive bursts of short-term, high-intensity exercise.",
+    "descrizione": "Polvere di creatina monoidrato di alta qualità progettata per aumentare le prestazioni fisiche in serie successive di esercizi a breve termine e ad alta intensità.",
     "rating": 5
   },
   {
     "id": "myprotein-bcaa",
-    "nome": "BCAA Powder",
+    "nome": "BCAA in Polvere",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
@@ -104,30 +100,29 @@
     "prezzoRange": "€12–€18",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/bcaa/10530036/",
     "immagine": "/images/products/myprotein-bcaa.webp",
-    "descrizione": "Branched-chain amino acids in optimal 2:1:1 ratio. Supports muscle preservation and reduces breakdown during high-mileage training weeks.",
+    "descrizione": "Aminoacidi a catena ramificata nel rapporto ottimale 2:1:1. Supporta la preservazione muscolare e riduce la scomposizione durante le settimane di allenamento ad alto chilometraggio.",
     "rating": 4
   },
   {
     "id": "myprotein-maltodextrin",
-    "nome": "100% Maltodextrin Carbs",
+    "nome": "Maltodestrina 100%",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
       "carbohydrates",
       "energy",
       "recovery",
-      "supplements",
       "supplements"
     ],
     "prezzoRange": "€20.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/",
     "immagine": "/images/products/myprotein-maltodextrin.webp",
-    "descrizione": "A convenient energy source to refuel after working out, providing fast-absorbing carbohydrates to replenish muscle glycogen.",
+    "descrizione": "Una comoda fonte di energia per rifornirsi dopo l'allenamento, fornendo carboidrati a rapido assorbimento per reintegrare il glicogeno muscolare.",
     "rating": 5
   },
   {
     "id": "myprotein-oat-flapjack",
-    "nome": "Oat Protein Flapjack",
+    "nome": "Flapjack Proteico all'Avena",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
@@ -136,13 +131,12 @@
       "snack",
       "recovery",
       "supplements",
-      "supplements",
       "energy"
     ],
     "prezzoRange": "€18.99",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/",
     "immagine": "/images/products/myprotein-oat-flapjack.webp",
-    "descrizione": "A soft and sweet protein treat made with rolled oats, perfect for on-the-go snacking and supporting muscle recovery.",
+    "descrizione": "Uno snack proteico morbido e dolce fatto con fiocchi d'avena, perfetto per uno spuntino veloce e per supportare il recupero muscolare.",
     "rating": 5
   },
   {
@@ -159,7 +153,7 @@
     "prezzoRange": "$79.95",
     "linkAffiliato": "https://www.onnit.com/products/alpha-brain-90-ct",
     "immagine": "/images/products/onnit-alpha-brain.webp",
-    "descrizione": "Clinically studied nootropic for mental clarity and focus. Helps maintain concentration during long races and demanding training sessions.",
+    "descrizione": "Nootropico clinicamente studiato per la chiarezza mentale e il focus. Aiuta a mantenere la concentrazione durante le gare lunghe e le sessioni di allenamento impegnative.",
     "rating": 5
   },
   {
@@ -175,7 +169,7 @@
     "prezzoRange": "$55.89",
     "linkAffiliato": "https://www.onnit.com/products/shroom-tech-sport-84-ct",
     "immagine": "/images/products/onnit-shroom-tech.webp",
-    "descrizione": "Cordyceps-based endurance formula for clean, sustained energy without caffeine jitters. Clinically studied for improved cardio performance.",
+    "descrizione": "Formula di resistenza a base di Cordyceps per un'energia pulita e sostenuta senza il nervosismo della caffeina. Clinicamente studiato per migliorare le prestazioni cardio.",
     "rating": 4
   },
   {
@@ -190,7 +184,7 @@
     "prezzoRange": "$124.95",
     "linkAffiliato": "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
     "immagine": "/images/products/onnit-alpha-brain-black.webp",
-    "descrizione": "Premium cognitive formula with enhanced potency. Exotic earth-grown nutrients and nootropics for elite mental performance on race day.",
+    "descrizione": "Formula cognitiva premium con potenza potenziata. Nutrienti esotici coltivati a terra e nootropi per prestazioni mentali d'élite il giorno della gara.",
     "rating": 5
   },
   {
@@ -207,16 +201,15 @@
     "prezzoRange": "$137.95",
     "linkAffiliato": "https://www.onnit.com/products/total-human-30-day-supply",
     "immagine": "/images/products/onnit-total-human.webp",
-    "descrizione": "All-in-one daily supplement stack: vitamins, minerals, omega-3s, and adaptogens. Designed for peak athletic performance and full-body recovery.",
+    "descrizione": "Stack di integratori giornalieri tutto-in-uno: vitamine, minerali, omega-3 e adattogeni. Progettato per le massime prestazioni atletiche e il recupero di tutto il corpo.",
     "rating": 5
   },
   {
     "id": "myprotein-beta-alanine",
-    "nome": "Beta Alanine",
+    "nome": "Beta Alanina",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
-      "supplements",
       "supplements",
       "performance",
       "energy",
@@ -225,12 +218,12 @@
     "prezzoRange": "€18.49",
     "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/",
     "immagine": "/images/products/myprotein-beta-alanine.webp",
-    "descrizione": "A super-convenient amino acid supplement, ideal for anyone taking part in sports that require explosive movements or endurance.",
+    "descrizione": "Un integratore di aminoacidi super conveniente, ideale per chiunque partecipi a sport che richiedono movimenti esplosivi o resistenza.",
     "rating": 5
   },
   {
     "id": "amazon-marsupio-fitgriff",
-    "nome": "Fitgriff® Running Belt",
+    "nome": "Cintura da Corsa Fitgriff®",
     "category": "accessories",
     "brand": "Fitgriff",
     "tag": [
@@ -241,12 +234,12 @@
     "prezzoRange": "€15–€20",
     "linkAffiliato": "https://www.amazon.com/s?k=Fitgriff+running+belt",
     "immagine": "/images/products/amazon-marsupio-fitgriff.webp",
-    "descrizione": "Lightweight running belt with adjustable fit. Holds phone, keys, and gels securely with zero bounce. Water-resistant and comfortable on long runs.",
+    "descrizione": "Cintura da corsa leggera con vestibilità regolabile. Contiene telefono, chiavi e gel in modo sicuro senza rimbalzi. Resistente all'acqua e confortevole nelle corse lunghe.",
     "rating": 4
   },
   {
     "id": "amazon-calze-danish",
-    "nome": "Danish Endurance Running Socks (3 Pack)",
+    "nome": "Calze da Corsa Danish Endurance (3 Pack)",
     "category": "accessories",
     "brand": "Danish Endurance",
     "tag": [
@@ -258,12 +251,12 @@
     "prezzoRange": "€20–€25",
     "linkAffiliato": "https://www.amazon.com/s?k=Danish+Endurance+running+socks",
     "immagine": "/images/products/amazon-calze-danish.webp",
-    "descrizione": "Merino wool running socks with arch support and blister prevention. Moisture-wicking, breathable, and designed with pro runners for maximum comfort.",
+    "descrizione": "Calze da corsa in lana Merino con supporto plantare e prevenzione delle vesciche. Traspiranti e progettate con runner professionisti per il massimo comfort.",
     "rating": 5
   },
   {
     "id": "amazon-rockay-ignite",
-    "nome": "Rockay Ignite Running Socks",
+    "nome": "Calze da Corsa Rockay Ignite",
     "category": "accessories",
     "brand": "Rockay",
     "tag": [
@@ -275,7 +268,7 @@
     "prezzoRange": "€18–€24",
     "linkAffiliato": "https://www.amazon.com/s?k=Rockay+Ignite+running+socks",
     "immagine": "/images/products/amazon-rockay-ignite.webp",
-    "descrizione": "Eco-sustainable, high-performance running socks made from recycled materials. Anti-blister technology and targeted compression.",
+    "descrizione": "Calze da corsa eco-sostenibili e ad alte prestazioni fatte con materiali riciclati. Tecnologia anti-vesciche e compressione mirata.",
     "rating": 5
   },
   {
@@ -293,12 +286,12 @@
     "prezzoRange": "€140–€180",
     "linkAffiliato": "https://www.amazon.com/s?k=Garmin+Forerunner+55",
     "immagine": "/images/products/amazon-garmin-forerunner-55.webp",
-    "descrizione": "Best value-for-money GPS watch for beginners and intermediate runners. Accurate HR monitoring, PacePro™ guidance, and daily suggested workouts.",
+    "descrizione": "Miglior orologio GPS per rapporto qualità-prezzo per principianti e runner intermedi. Monitoraggio accurato della frequenza cardiaca, guida PacePro™ e allenamenti suggeriti.",
     "rating": 5
   },
   {
     "id": "amazon-garmin-fenix",
-    "nome": "Garmin Fenix Series",
+    "nome": "Garmin Serie Fenix",
     "category": "accessories",
     "brand": "Garmin",
     "tag": [
@@ -312,12 +305,12 @@
     "prezzoRange": "€500–€800",
     "linkAffiliato": "https://www.amazon.com/s?k=Garmin+Fenix+7",
     "immagine": "/images/products/amazon-garmin-fenix.webp",
-    "descrizione": "The ultimate multisport watch for trail and ultra runners. TOPO maps, extreme battery life with solar charging, and robust design.",
+    "descrizione": "L'orologio multisport definitivo per trail e ultra runner. Mappe TOPO, durata della batteria estrema con ricarica solare e design robusto.",
     "rating": 5
   },
   {
     "id": "amazon-azarxis-10l",
-    "nome": "Azarxis 10L Hydration Vest",
+    "nome": "Zaino Idrico Azarxis 10L",
     "category": "accessories",
     "brand": "Azarxis",
     "tag": [
@@ -330,7 +323,7 @@
     "prezzoRange": "€40–€60",
     "linkAffiliato": "https://www.amazon.com/s?k=10L+hydration+running+vest",
     "immagine": "/images/products/amazon-azarxis-10l.webp",
-    "descrizione": "Affordable and highly functional hydration vest for long-distance runs. Includes multiple pockets and space for a 2L bladder.",
+    "descrizione": "Zaino idrico economico e altamente funzionale per corse su lunga distanza. Include tasche multiple e spazio per una sacca da 2 litri.",
     "rating": 4
   },
   {
@@ -348,12 +341,12 @@
     "prezzoRange": "€120–€160",
     "linkAffiliato": "https://www.amazon.com/s?k=Salomon+ADV+Skin+12+hydration+vest",
     "immagine": "/images/products/amazon-salomon-adv-skin.webp",
-    "descrizione": "The reference standard for hydration vests. SensiFit™ construction for a bounce-free, snug fit. Ideal for high-level trail and ultra running.",
+    "descrizione": "Il punto di riferimento per gli zaini idrici. Costruzione SensiFit™ per una vestibilità aderente e senza rimbalzi. Ideale per trail di alto livello e ultra running.",
     "rating": 5
   },
   {
     "id": "amazon-luce-running",
-    "nome": "LED Chest Running Light",
+    "nome": "Luce da Corsa LED da Petto",
     "category": "accessories",
     "brand": "Amazon",
     "tag": [
@@ -363,12 +356,12 @@
     "prezzoRange": "€15–€22",
     "linkAffiliato": "https://www.amazon.com/s?k=LED+chest+running+light",
     "immagine": "/images/products/amazon-luce-running.webp",
-    "descrizione": "Rechargeable LED chest light for night running. 360° visibility, adjustable strap, and multiple brightness modes. Essential safety gear for evening runners.",
+    "descrizione": "Luce LED da petto ricaricabile per correre di notte. Visibilità a 360°, cinturino regolabile e diverse modalità di luminosità. Attrezzatura di sicurezza essenziale.",
     "rating": 4
   },
   {
     "id": "amazon-zaino-trail",
-    "nome": "Trail Running Hydration Backpack",
+    "nome": "Zaino Idrico da Trail Running",
     "category": "accessories",
     "brand": "Amazon",
     "tag": [
@@ -379,12 +372,12 @@
     "prezzoRange": "€30–€45",
     "linkAffiliato": "https://www.amazon.com/s?k=trail+running+hydration+backpack+10L",
     "immagine": "/images/products/amazon-zaino-trail.webp",
-    "descrizione": "Lightweight 10L trail running vest with 2L hydration bladder. Multiple pockets for gels and gear. Breathable mesh for long-distance comfort.",
+    "descrizione": "Gilet da trail running leggero da 10L con sacca idrica da 2L. Molteplici tasche per gel e attrezzatura. Mesh traspirante per il comfort sulle lunghe distanze.",
     "rating": 4
   },
   {
     "id": "amazon-bracciale-phone",
-    "nome": "Running Phone Armband",
+    "nome": "Fascia da Braccio per Smartphone",
     "category": "accessories",
     "brand": "Amazon",
     "tag": [
@@ -394,7 +387,7 @@
     "prezzoRange": "€10–€15",
     "linkAffiliato": "https://www.amazon.com/s?k=running+phone+armband",
     "immagine": "/images/products/amazon-bracciale-phone.webp",
-    "descrizione": "Universal smartphone armband for running. Sweat-proof, touchscreen-compatible, with key pocket and earphone port. Fits all phones up to 6.8 inches.",
+    "descrizione": "Fascia da braccio universale per smartphone per la corsa. Resistente al sudore, compatibile con touchscreen, con tasca per chiavi e porta auricolari.",
     "rating": 4
   },
   {
@@ -412,7 +405,7 @@
     "prezzoRange": "$45–$75",
     "linkAffiliato": "https://www.amazon.com/s?k=Nike+Revolution+6+running+shoes",
     "immagine": "/images/products/amazon-nike-revolution.webp",
-    "descrizione": "The reference for entry-level running. Link leads to latest Amazon search results for various colors and sizes.",
+    "descrizione": "Il riferimento per il running entry-level. Ammortizzazione affidabile e design versatile per i primi chilometri.",
     "rating": 4.5
   },
   {
@@ -429,7 +422,7 @@
     "prezzoRange": "$50–$85",
     "linkAffiliato": "https://www.amazon.com/s?k=Adidas+Duramo+Speed+running+shoes",
     "immagine": "/images/products/amazon-adidas-duramo-speed.webp",
-    "descrizione": "Lightweight and reactive performance trainer. Link leads to the latest Amazon search results for current models.",
+    "descrizione": "Scarpa da allenamento leggera e reattiva. Perfetta per chi cerca velocità e comfort senza spendere una fortuna.",
     "rating": 4.5
   },
   {
@@ -446,7 +439,7 @@
     "prezzoRange": "$55–$80",
     "linkAffiliato": "https://www.amazon.com/s?k=ASICS+Gel-Contend+8+running+shoes",
     "immagine": "/images/products/amazon-asics-gel-contend.webp",
-    "descrizione": "Classic stable trainer with GEL cushioning. Link leads to current Amazon search results and offers.",
+    "descrizione": "Classica scarpa da allenamento stabile con ammortizzazione GEL. Ideale per il comfort quotidiano e la durata.",
     "rating": 4.5
   },
   {
@@ -463,7 +456,7 @@
     "prezzoRange": "$60–$95",
     "linkAffiliato": "https://www.amazon.com/s?k=Puma+Electrify+Nitro+running+shoes",
     "immagine": "/images/products/amazon-puma-electrify.webp",
-    "descrizione": "Responsive NITRO foam for speed sessions. Link leads to latest Amazon search results and availability.",
+    "descrizione": "Schiuma NITRO reattiva per sessioni di velocità. Una scarpa moderna e scattante per i tuoi allenamenti più intensi.",
     "rating": 4.5
   },
   {
@@ -480,7 +473,7 @@
     "prezzoRange": "$55–$85",
     "linkAffiliato": "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+Arishi+v4",
     "immagine": "/images/products/amazon-nb-fresh-foam-arishi.webp",
-    "descrizione": "Versatile Fresh Foam cushioning for road or gym. Link leads to current Amazon search results.",
+    "descrizione": "Versatile ammortizzazione Fresh Foam per strada o palestra. Leggera e confortevole per un uso quotidiano.",
     "rating": 4.5
   },
   {
@@ -497,7 +490,7 @@
     "prezzoRange": "$110–$160",
     "linkAffiliato": "https://www.amazon.com/s?k=Brooks+Cascadia+trail+running+shoes",
     "immagine": "/images/products/amazon-brooks-cascadia.webp",
-    "descrizione": "The durability standard for technical trails. Link leads to latest Amazon search results and offers.",
+    "descrizione": "Lo standard di durata per i sentieri tecnici. Protezione eccellente e stabilità su ogni tipo di terreno off-road.",
     "rating": 4.5
   },
   {
@@ -514,64 +507,64 @@
     "prezzoRange": "$110–$170",
     "linkAffiliato": "https://www.amazon.com/s?k=Salomon+Speedcross+trail+running",
     "immagine": "/images/products/amazon-salomon-speedcross.webp",
-    "descrizione": "Maximum grip on soft and muddy terrain. Link leads to current Amazon search results for Speedcross models.",
+    "descrizione": "Grip massimo su terreni morbidi e fangosi. L'iconica scarpa da trail per le condizioni più difficili.",
     "rating": 4.5
   },
   {
     "id": "amazon-nike-dri-fit",
     "nome": "Nike Dri-FIT Academy",
-    "categoria": "abbigliamento",
+    "category": "apparel",
     "brand": "Nike",
     "tag": [
-      "abbigliamento",
+      "apparel",
       "running",
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€30",
     "linkAffiliato": "https://www.amazon.com/s?k=Nike+Dri-FIT+running+shirt",
     "immagine": "/images/products/amazon-nike-dri-fit.webp",
-    "descrizione": "The classic choice for daily training. Moisture-wicking Dri-FIT technology keeps you dry and comfortable.",
+    "descrizione": "La scelta classica per l'allenamento quotidiano. La tecnologia Dri-FIT allontana il sudore mantenendoti asciutto.",
     "rating": 4
   },
   {
     "id": "amazon-adidas-shorts",
-    "nome": "Adidas AEROREADY Shorts",
-    "categoria": "abbigliamento",
+    "nome": "Shorts Adidas AEROREADY",
+    "category": "apparel",
     "brand": "Adidas",
     "tag": [
-      "abbigliamento",
+      "apparel",
       "running",
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€35",
     "linkAffiliato": "https://www.amazon.com/s?k=Adidas+AEROREADY+running+shorts",
     "immagine": "/images/products/amazon-adidas-shorts.webp",
-    "descrizione": "Lightweight AEROREADY running shorts with moisture management. Built-in brief liner to prevent chafing.",
+    "descrizione": "Pantaloncini da corsa leggeri con gestione dell'umidità. Slip interno integrato per prevenire sfregamenti.",
     "rating": 4
   },
   {
     "id": "amazon-ua-tech-shirt",
     "nome": "Under Armour Tech 2.0",
-    "categoria": "abbigliamento",
+    "category": "apparel",
     "brand": "Under Armour",
     "tag": [
-      "abbigliamento",
+      "apparel",
       "running",
       "top-apparel-2026"
     ],
     "prezzoRange": "€20–€30",
     "linkAffiliato": "https://www.amazon.com/s?k=Under+Armour+Tech+2.0+t-shirt",
     "immagine": "/images/products/amazon-ua-tech-shirt.webp",
-    "descrizione": "Quick-drying, ultra-soft fabric with a natural feel. The most-reviewed shirt on Amazon for a reason.",
+    "descrizione": "Tessuto a rapida asciugatura, ultra morbido con una sensazione naturale. Una delle maglie più apprezzate per il running.",
     "rating": 4
   },
   {
     "id": "amazon-gore-tex-jacket",
-    "nome": "Gore Wear R3 Tex Jacket",
-    "categoria": "abbigliamento",
+    "nome": "Giacca Gore Wear R3 Tex",
+    "category": "apparel",
     "brand": "Gore Wear",
     "tag": [
-      "abbigliamento",
+      "apparel",
       "running",
       "inverno",
       "pioggia",
@@ -580,12 +573,12 @@
     "prezzoRange": "€160–€220",
     "linkAffiliato": "https://www.amazon.com/s?k=Gore+Wear+R3+running+jacket",
     "immagine": "/images/products/amazon-gore-tex-jacket.webp",
-    "descrizione": "Premium GORE-TEX® protection for running in the rain. High breathability and absolute waterproofness for serious training.",
+    "descrizione": "Protezione GORE-TEX® premium per correre sotto la pioggia. Alta traspirabilità e impermeabilità assoluta.",
     "rating": 5
   },
   {
     "id": "amazon-calze-compressione",
-    "nome": "UYN Compression Running Socks",
+    "nome": "Calze a Compressione UYN",
     "category": "accessories",
     "brand": "UYN",
     "tag": [
@@ -598,12 +591,12 @@
     "prezzoRange": "€18–€25",
     "linkAffiliato": "https://www.amazon.com/s?k=UYN+compression+running+socks",
     "immagine": "/images/products/amazon-calze-compressione.webp",
-    "descrizione": "Graduated compression socks for improved blood circulation and faster recovery. Reduce muscle fatigue and swelling during and after long runs.",
+    "descrizione": "Calze a compressione graduata per migliorare la circolazione sanguigna e accelerare il recupero. Riducono l'affaticamento muscolare.",
     "rating": 4
   },
   {
     "id": "amazon-triggerpoint-grid",
-    "nome": "TriggerPoint GRID Foam Roller",
+    "nome": "Foam Roller TriggerPoint GRID",
     "category": "accessories",
     "brand": "TriggerPoint",
     "tag": [
@@ -616,14 +609,14 @@
     "prezzoRange": "€35–€45",
     "linkAffiliato": "https://www.amazon.com/s?k=TriggerPoint+GRID+foam+roller",
     "immagine": "/images/products/amazon-triggerpoint-grid.webp",
-    "descrizione": "The original grid foam roller for myofascial release. Durable, multi-density surface for professional-grade massage at home.",
+    "descrizione": "Il foam roller originale per il rilascio miofasciale. Superficie multi-densità durevole per un massaggio professionale a casa.",
     "rating": 5
   },
   {
     "id": "amazon-massage-gun-mini",
-    "nome": "Massage Gun (Mini)",
+    "nome": "Pistola Massaggiante (Mini)",
     "category": "accessories",
-    "brand": "Generic",
+    "brand": "Generico",
     "tag": [
       "accessories",
       "recovery",
@@ -633,12 +626,12 @@
     "prezzoRange": "€50–€80",
     "linkAffiliato": "https://www.amazon.com/s?k=mini+massage+gun+percussion",
     "immagine": "/images/products/amazon-massage-gun-mini.webp",
-    "descrizione": "Ultra-portable percussion massager. Small enough for a gym bag but powerful enough to relieve muscle tension and improve circulation.",
+    "descrizione": "Massaggiatore a percussione ultra-portatile. Abbastanza piccolo da stare nel borsone ma potente per sciogliere le tensioni.",
     "rating": 5
   },
   {
     "id": "amazon-physix-gear-socks",
-    "nome": "Physix Gear Compression Socks",
+    "nome": "Calze a Compressione Physix Gear",
     "category": "accessories",
     "brand": "Physix Gear",
     "tag": [
@@ -650,14 +643,14 @@
     "prezzoRange": "€15–€25",
     "linkAffiliato": "https://www.amazon.com/s?k=Physix+Gear+compression+socks",
     "immagine": "/images/products/amazon-physix-gear-socks.webp",
-    "descrizione": "High-quality compression socks perfect for post-race recovery, long flights, and preventing spider veins.",
+    "descrizione": "Calze a compressione di alta qualità perfette per il recupero post-gara e per ridurre il gonfiore delle gambe.",
     "rating": 5
   },
   {
     "id": "amazon-lacrosse-ball",
-    "nome": "Lacrosse Ball (Massage)",
+    "nome": "Palla Lacrosse (Massaggio)",
     "category": "accessories",
-    "brand": "Generic",
+    "brand": "Generico",
     "tag": [
       "accessories",
       "recovery",
@@ -667,7 +660,7 @@
     "prezzoRange": "€8–€12",
     "linkAffiliato": "https://www.amazon.com/s?k=lacrosse+massage+ball",
     "immagine": "/images/products/amazon-lacrosse-ball.webp",
-    "descrizione": "Dense rubber ball for targeted trigger point massage. Perfect for the plantar fascia and hard-to-reach muscle knots.",
+    "descrizione": "Palla in gomma densa per massaggio mirato dei trigger point. Perfetta per la fascia plantare e nodi muscolari difficili.",
     "rating": 5
   }
 ]

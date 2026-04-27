@@ -1,14 +1,14 @@
 import { ProfileResult } from "@/types/quiz";
 
 export const getRunnerProfile = (answers: Record<string, string>): ProfileResult => {
-  const tags: string[] = []; // Removed generic "running" base tag
+  const tags: string[] = [];
   const tools: { label: string; to: string; icon: string }[] = [];
   const guides: { label: string; slug: string }[] = [];
   const tips: string[] = [];
 
-  let title = "The Balanced Runner";
+  let title = "Il Runner Equilibrato";
   let archetype = "🏃";
-  let description = "You have a well-rounded approach to running. Focus on consistency and progressive overload.";
+  let description = "Hai un approccio equilibrato alla corsa. Concentrati sulla costanza e sul sovraccarico progressivo.";
 
   // 1. Archetype Determination (The Core Identity)
   const exp = answers.experience;
@@ -18,88 +18,88 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   const freq = answers.frequency;
 
   if (exp === "beginner") {
-    title = "The Foundation Builder";
+    title = "Il Costruttore di Fondamenta";
     archetype = "🌱";
-    description = "You're in the most critical phase: building a durable structural foundation. Your focus should be on slow, easy miles to allow tendons and ligaments to adapt before the muscles do. Consistency is your superpower right now.";
+    description = "Sei nella fase più critica: costruire fondamenta strutturali resistenti. Il tuo focus dovrebbe essere su chilometri lenti e facili per permettere a tendini e legamenti di adattarsi prima dei muscoli. La costanza è il tuo superpotere in questo momento.";
     tags.push("daily-trainer", "socks", "accessories", "beginner-kit");
-    tips.push("The 'Talk Test': You should be able to speak in full sentences during 80% of your runs.");
-    tips.push("Consistency beats intensity. It's better to run 20 minutes 3 times a week than 1 hour once a week.");
-    tips.push("Don't skip the warm-up: 5 minutes of dynamic stretching (leg swings, calf raises) prepares your CNS for effort.");
-    guides.push({ label: "How to Start Running", slug: "trail-running-beginners" });
+    tips.push("Il 'Talk Test': Dovresti essere in grado di parlare a frasi intere durante l'80% delle tue corse.");
+    tips.push("La costanza batte l'intensità. È meglio correre 20 minuti 3 volte a settimana che 1 ora una volta a settimana.");
+    tips.push("Non saltare il riscaldamento: 5 minuti di stretching dinamico (oscillazioni gambe, sollevamenti polpacci) preparano il tuo SNC allo sforzo.");
+    guides.push({ label: "Come Iniziare a Correre", slug: "trail-running-beginners" });
   } else if (terrain === "trail" && (dist === "trail-ultra" || dist === "marathon")) {
-    title = "The Technical Trail Master";
+    title = "Il Maestro dei Sentieri Tecnici";
     archetype = "🏔️";
-    description = "You thrive where the pavement ends. Your training requires specialized focus on eccentric leg strength for steep descents and high-precision fueling for long, unpredictable days in the mountains.";
+    description = "Ti esalti dove finisce l'asfalto. Il tuo allenamento richiede un focus specializzato sulla forza eccentrica delle gambe per le discese ripide e un rifornimento di alta precisione per le lunghe e imprevedibili giornate in montagna.";
     tags.push("trail", "hydration", "accessories", "energy", "electrolytes", "trail-elite");
-    tips.push("Practice 'power hiking' on steep inclines to preserve glycogen for runnable sections.");
-    tips.push("Focus on vertical gain, not just mileage. 1000m of climbing equals roughly 10km of flat effort.");
-    tips.push("Test your gear: never use a new pack or shoes on a run longer than 90 minutes for the first time.");
-    guides.push({ label: "Trail Running Guide", slug: "trail-running-beginners" });
+    tips.push("Pratica il 'power hiking' sulle salite ripide per preservare il glicogeno per i tratti corribili.");
+    tips.push("Concentrati sul dislivello, non solo sul chilometraggio. 1000m di salita equivalgono a circa 10km di sforzo in piano.");
+    tips.push("Testa la tua attrezzatura: mai usare uno zaino o scarpe nuove in una corsa più lunga di 90 minuti per la prima volta.");
+    guides.push({ label: "Guida al Trail Running", slug: "trail-running-beginners" });
   } else if (terrain === "trail" && goal === "speed") {
-    title = "The Hybrid Trail-Speedster";
+    title = "L'Ibrido Trail-Velocista";
     archetype = "🦊";
-    description = "You combine the agility of a trail runner with the raw turnover of a road athlete. Your challenge is balancing technical skills with high-intensity VO2max development.";
+    description = "Combini l'agilità di un trail runner con la velocità pura di un atleta stradale. La tua sfida è bilanciare le abilità tecniche con lo sviluppo del VO2max ad alta intensità.";
     tags.push("trail", "performance", "energy", "orologi", "speed-pro");
-    tips.push("Intervals on grass: perform your speed work on soft surfaces to build stabilizers without the impact of asphalt.");
-    tips.push("Hill Sprints: 8-10 reps of 10-second all-out uphill efforts build incredible explosive power.");
+    tips.push("Intervalli sull'erba: esegui i tuoi lavori di velocità su superfici morbide per costruire gli stabilizzatori senza l'impatto dell'asfalto.");
+    tips.push("Sprit in salita: 8-10 ripetute di 10 secondi al massimo sforzo in salita costruiscono un'incredibile potenza esplosiva.");
   } else if (goal === "speed" && (exp === "advanced" || exp === "competitive")) {
-    title = "The Performance Pursuit";
+    title = "L'Inseguitore di Performance";
     archetype = "⚡";
-    description = "You're chasing the clock. Every detail from VO2max intervals to shoe weight and carbohydrate oxidation rates matters to shave seconds off your PR. Precision is your primary training tool.";
+    description = "Insegui il cronometro. Ogni dettaglio, dagli intervalli VO2max al peso delle scarpe e ai tassi di ossidazione dei carboidrati, conta per limare secondi al tuo PB. La precisione è il tuo principale strumento di allenamento.";
     tags.push("performance", "energy", "supplements", "orologi", "abbigliamento", "speed-pro");
-    tips.push("Incorporate strides (20s fast/45s recovery) at the end of easy runs to maintain neuromuscular speed.");
-    tips.push("Optimize your recovery: post-run protein and carbs within 30 minutes are non-negotiable at your level.");
-    tips.push("Threshold focus: your weekly 'Tempo' run is the biggest driver of your race-day performance.");
-    guides.push({ label: "Improving Running Form", slug: "running-form" });
+    tips.push("Incorpora degli allunghi (20s veloci / 45s recupero) alla fine delle corse facili per mantenere la velocità neuromuscolare.");
+    tips.push("Ottimizza il tuo recupero: proteine e carboidrati post-corsa entro 30 minuti sono non negoziabili al tuo livello.");
+    tips.push("Focus sulla soglia: il tuo 'Tempo Run' settimanale è il principale driver della tua performance in gara.");
+    guides.push({ label: "Migliorare la Tecnica di Corsa", slug: "running-form" });
   } else if (dist === "marathon" || dist === "half-marathon") {
-    title = "The Endurance Specialist";
+    title = "Lo Specialista della Resistenza";
     archetype = "♾️";
-    description = "Volume and metabolic efficiency are your weapons. You need to master the art of fat oxidation and gut training to handle the cumulative fatigue of long-distance events.";
+    description = "Il volume e l'efficienza metabolica sono le tue armi. Devi padroneggiare l'arte dell'ossidazione dei grassi e l'allenamento intestinale per gestire la fatica cumulativa degli eventi di lunga distanza.";
     tags.push("carbohydrates", "electrolytes", "recovery", "cushioning", "socks", "endurance-base");
-    tips.push("Train your gut: consume your race-day carb target (60-90g/hr) during your weekly long runs.");
-    tips.push("High-mileage blocks require high-quality sleep (8h+). Recovery is where the fitness happens.");
-    tips.push("Long Run variations: don't just run slow; add 5-10km at race pace at the end of your 25km+ sessions.");
-    guides.push({ label: "Marathon Fueling", slug: "running-nutrition" });
+    tips.push("Allena l'intestino: consuma il tuo target di carboidrati da gara (60-90g/ora) durante le tue corse lunghe settimanali.");
+    tips.push("I blocchi ad alto chilometraggio richiedono un sonno di alta qualità (8h+). Il recupero è dove avviene il miglioramento della forma fisica.");
+    tips.push("Variazioni della Corsa Lunga: non correre solo piano; aggiungi 5-10km a ritmo gara alla fine delle tue sessioni superiori ai 25km.");
+    guides.push({ label: "Alimentazione Maratona", slug: "running-nutrition" });
   } else if (freq === "5-6" || freq === "7+") {
-    title = "The High-Volume Road Warrior";
+    title = "Il Guerriero Stradale ad Alto Volume";
     archetype = "🚜";
-    description = "You are a mileage machine. Your training is defined by high frequency and consistent load. Your biggest challenge is managing systemic inflammation and repetitive stress.";
+    description = "Sei una macchina da chilometri. Il tuo allenamento è definito da alta frequenza e carico costante. La tua sfida più grande è gestire l'infiammazione sistemica e lo stress ripetitivo.";
     tags.push("recovery", "cushioning", "protein", "magnesium", "socks", "high-volume");
-    tips.push("Shoe Rotation: Use 2-3 different models to vary the stress on your feet and extend shoe life.");
-    tips.push("Active Recovery: A 15-minute walk or very slow 'shakeout' run can help clear metabolic waste better than total rest.");
+    tips.push("Rotazione Scarpe: usa 2-3 modelli diversi per variare lo stress sui piedi ed estendere la vita delle scarpe.");
+    tips.push("Recupero Attivo: una camminata di 15 minuti o una corsa 'shakeout' molto lenta può aiutare a smaltire i rifiuti metabolici meglio del riposo totale.");
   } else if (goal === "injury-free" || answers.issue === "injuries") {
-    title = "The Resilient Athlete";
+    title = "L'Atleta Resiliente";
     archetype = "🛡️";
-    description = "Longevity is your priority. By focusing on mobility, strength, and smart load management, you're building a body that can handle the repetitive stress of running for decades.";
+    description = "La longevità è la tua priorità. Focalizzandoti su mobilità, forza e gestione intelligente del carico, stai costruendo un corpo in grado di gestire lo stress ripetitivo della corsa per decenni.";
     tags.push("recovery", "muscles", "protein", "accessories", "daily-trainer", "magnesium", "injury-prevention");
-    tips.push("Prioritize 'Pre-hab': 10 minutes of glute and core activation before every single run.");
-    tips.push("If it hurts more than 3/10, stop. Running through sharp pain leads to 3-month layoffs.");
-    tips.push("Strength Training: Focus on single-leg exercises (split squats, calf raises) to address imbalances.");
-    guides.push({ label: "Injury Prevention", slug: "injury-prevention" });
+    tips.push("Dai priorità alla 'Pre-hab': 10 minuti di attivazione dei glutei e del core prima di ogni singola corsa.");
+    tips.push("Se fa male più di 3/10, fermati. Correre sopra un dolore acuto porta a stop di mesi.");
+    tips.push("Allenamento di Forza: concentrati su esercizi a gamba singola (split squat, sollevamenti polpacci) per correggere gli squilibri.");
+    guides.push({ label: "Prevenzione Infortuni", slug: "injury-prevention" });
   } else if (goal === "weight-loss") {
-    title = "The Metabolic Transformer";
+    title = "Il Trasformatore Metabolico";
     archetype = "🔥";
-    description = "You're using running as a powerful tool for body composition change. Focus on protein intake to protect lean muscle mass while maintaining a sustainable caloric deficit.";
+    description = "Usi la corsa come un potente strumento per il cambiamento della composizione corporea. Concentrati sull'apporto proteico per proteggere la massa muscolare magra mantenendo un deficit calorico sostenibile.";
     tags.push("protein", "energy", "supplements", "abbigliamento", "weight-loss-kit");
-    tips.push("Don't 'run to eat' — focus on high-nutrient density foods that keep you satiated during high-volume weeks.");
-    tips.push("Walking is an underrated tool for fat loss. Add 30 minutes of low-intensity movement on rest days.");
-    tips.push("Pre-run protein: a small protein snack before your run can help prevent muscle breakdown during long efforts.");
-    tools.push({ label: "BMI Calculator", to: "/tools/bmi", icon: "Activity" });
+    tips.push("Non 'correre per mangiare' — concentrati su cibi ad alta densità di nutrienti che ti mantengano sazio durante le settimane ad alto volume.");
+    tips.push("Camminare è uno strumento sottovalutato per la perdita di grasso. Aggiungi 30 minuti di movimento a bassa intensità nei giorni di riposo.");
+    tips.push("Proteine pre-corsa: un piccolo snack proteico prima della corsa può aiutare a prevenire la scomposizione muscolare durante gli sforzi lunghi.");
+    tools.push({ label: "Calcolatore BMI", to: "/tools/bmi", icon: "Activity" });
   } else {
-    title = "The Weekend Warrior";
+    title = "Il Guerriero del Weekend";
     archetype = "🎖️";
-    description = "You balance running with a busy lifestyle. Your plan focuses on maximizing the impact of your limited training time while staying healthy and energized.";
+    description = "Bilanci la corsa con uno stile di vita impegnato. Il tuo piano si concentra sul massimizzare l'impatto del tuo limitato tempo di allenamento rimanendo sano ed energico.";
     tags.push("daily-trainer", "accessories", "protein", "energy", "casual-runner");
-    tips.push("Quality over quantity: if you only run twice a week, make one an easy long run and one a moderate tempo.");
-    tips.push("Hydration isn't just for runs. Maintaining baseline hydration daily improves your energy levels significantly.");
+    tips.push("Qualità sopra la quantità: se corri solo due volte a settimana, fai una corsa lunga facile e una a ritmo tempo moderato.");
+    tips.push("L'idratazione non è solo per le corse. Mantenere un'idratazione di base giornaliera migliora significativamente i tuoi livelli di energia.");
   }
 
   // 2. Specialized Logic (Additions to the Archetype)
   
   // Experience Level Adjustments
   if (exp === "competitive") {
-    tips.push("Monitor Morning Resting HR: An increase of >5 bpm can indicate overtraining or oncoming illness.");
-    guides.push({ label: "Training Zones", slug: "running-heart-rate-zones" });
+    tips.push("Monitora la frequenza cardiaca a riposo al mattino: un aumento > 5 bpm può indicare sovrallenamento o malattia in arrivo.");
+    guides.push({ label: "Zone di Allenamento", slug: "running-heart-rate-zones" });
     tags.push("competitive-pro");
   }
 
@@ -107,38 +107,38 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   if (terrain === "road" || terrain === "track") {
     tags.push("road", "cushioning");
     if (goal === "speed") {
-      guides.push({ label: "Cadence Guide", slug: "running-cadence" });
+      guides.push({ label: "Guida alla Cadenza", slug: "running-cadence" });
       tags.push("performance");
     }
   } else if (terrain === "trail" || terrain === "mixed") {
     tags.push("trail", "hydration");
-    tools.push({ label: "Electrolyte Calculator", to: "/tools/electrolytes", icon: "Zap" });
+    tools.push({ label: "Calcolatore Elettroliti", to: "/tools/electrolytes", icon: "Zap" });
   }
 
   // Biomechanics & Gear Variety
   if (answers.biomechanics === "overpronation") {
-    tips.push("Stability Check: Ensure your shoes have medial support to prevent excessive inward roll.");
+    tips.push("Controllo Stabilità: assicurati che le tue scarpe abbiano un supporto mediale per prevenire l'eccessiva rotazione interna.");
     tags.push("stability");
   }
   
   if (freq === "5-6" || freq === "7+") {
     tags.push("recovery", "muscles");
-    tips.push("Recovery focus: consider compression gear or foam rolling to manage high-volume muscle fatigue.");
+    tips.push("Focus sul recupero: considera l'uso di abbigliamento a compressione o il foam rolling per gestire l'affaticamento muscolare ad alto volume.");
   }
 
   // Issues & Nutrition
   if (answers.issue === "cramps-dehydration") {
     tags.push("electrolytes", "magnesium", "hydration");
-    tools.push({ label: "Electrolyte Calculator", to: "/tools/electrolytes", icon: "Zap" });
-    tips.push("Sweat Test: Weigh yourself before and after an hour-long run to determine your fluid loss rate.");
+    tools.push({ label: "Calcolatore Elettroliti", to: "/tools/electrolytes", icon: "Zap" });
+    tips.push("Sweat Test: pesati prima e dopo una corsa di un'ora per determinare il tuo tasso di perdita di liquidi.");
   } else if (answers.issue === "fatigue-recovery") {
     tags.push("protein", "recovery", "magnesium", "energy");
-    tools.push({ label: "Protein Calculator", to: "/tools/protein", icon: "Dumbbell" });
-    tips.push("Sleep Hygiene: 7-9 hours of quality sleep is more effective than any supplement for recovery.");
+    tools.push({ label: "Calcolatore Proteine", to: "/tools/protein", icon: "Dumbbell" });
+    tips.push("Igiene del Sonno: 7-9 ore di sonno di qualità sono più efficaci di qualsiasi integratore per il recupero.");
   } else if (answers.issue === "nutrition") {
     tags.push("energy", "carbohydrates", "protein", "nutrition");
-    tools.push({ label: "Calories Calculator", to: "/tools/calories", icon: "Zap" });
-    guides.push({ label: "Performance Nutrition", slug: "running-nutrition" });
+    tools.push({ label: "Calcolatore Calorie", to: "/tools/calories", icon: "Zap" });
+    guides.push({ label: "Nutrizione Performance", slug: "running-nutrition" });
   }
 
   // 3. Final Aggregation
@@ -147,8 +147,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   const uniqueGuides = guides.filter((g, i, arr) => arr.findIndex((x) => x.slug === g.slug) === i).slice(0, 4);
 
   // Default fallbacks if lists are empty
-  if (uniqueTools.length === 0) uniqueTools.push({ label: "All Tools", to: "/tools", icon: "Wrench" });
-  if (uniqueGuides.length === 0) uniqueGuides.push({ label: "Form Guide", slug: "running-form" });
+  if (uniqueTools.length === 0) uniqueTools.push({ label: "Tutti gli Strumenti", to: "/tools", icon: "Wrench" });
+  if (uniqueGuides.length === 0) uniqueGuides.push({ label: "Guida Tecnica", slug: "running-form" });
 
   return {
     title, archetype, description,

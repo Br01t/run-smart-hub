@@ -71,7 +71,7 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
               <Sparkles className="h-4 w-4" />
             </div>
             <span className={cn("text-xs font-bold uppercase tracking-widest", theme.iconColor)}>
-              Expert Gear Recommendations
+              Raccomandazioni Esperti
             </span>
           </div>
           
@@ -90,7 +90,7 @@ const HubReferral = ({ href, title, description, category, className }: HubRefer
             theme.button
           )}
         >
-          Explore the Hub
+          Esplora l'Hub
           <ArrowRight className="h-4 w-4" />
         </div>
       </div>

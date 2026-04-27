@@ -32,14 +32,14 @@ const GuidesHub = () => {
   return (
     <Layout>
       <SEO
-        title="Best Runner's Guides 2026"
-        description="Practical, science-backed guides on running shoes, supplements and muscle recovery to improve your performance."
+        title="Le Migliori Guide per Runner 2026"
+        description="Guide pratiche basate sulla scienza su scarpe da corsa, integratori e recupero muscolare per migliorare le tue prestazioni."
         path="/guides"
         schema={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Expert Runner's Guides",
-          "description": "Comprehensive knowledge base for runners covering nutrition, gear, recovery and biomechanics.",
+          "name": "Guide Esperti per Runner",
+          "description": "Base di conoscenza completa per runner che copre nutrizione, attrezzatura, recupero e biomeccanica.",
           "url": "https://www.runners-hub.org/guides",
           "mainEntity": {
             "@type": "ItemList",
@@ -56,19 +56,19 @@ const GuidesHub = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={guidesHeroImg} alt="Running gear flat lay" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
+          <img src={guidesHeroImg} alt="Attrezzatura da corsa" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/40 to-foreground/80" />
         </div>
         <div className="relative container mx-auto px-4 py-16 sm:py-24">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-xl">
             <span className="inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80 backdrop-blur-sm">
-              Evidence-Based
+              Basato sulla Scienza
             </span>
             <h1 className="mt-4 font-display text-display-lg font-bold text-primary-foreground">
-              Runner's Guides
+              Guide per Runner
             </h1>
             <p className="mt-3 text-primary-foreground/70 sm:text-lg">
-              In-depth, science-backed articles to help you run better, recover faster and choose the right gear.
+              Articoli approfonditi e scientifici per aiutarti a correre meglio, recuperare più velocemente e scegliere l'attrezzatura giusta.
             </p>
           </motion.div>
         </div>
@@ -84,7 +84,7 @@ const GuidesHub = () => {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search guides…"
+                placeholder="Cerca guide…"
                 className="w-full rounded-xl border border-border bg-background py-2.5 pl-10 pr-10 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 inner-glow transition-all"
               />
               {search && (
@@ -101,7 +101,7 @@ const GuidesHub = () => {
                   !activeCategory ? "bg-foreground text-background" : "border border-border text-muted-foreground hover:bg-muted/50"
                 }`}
               >
-                All
+                Tutte
               </button>
               {categories.map((cat) => {
                 const s = categoryStyle[cat] || categoryStyle.Gear;
@@ -122,7 +122,7 @@ const GuidesHub = () => {
             </div>
           </div>
           <p className="mt-3 text-xs text-muted-foreground">
-            {filtered.length} {filtered.length === 1 ? "guide" : "guides"} found
+            {filtered.length} {filtered.length === 1 ? "guida trovata" : "guide trovate"}
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ const GuidesHub = () => {
       <section className="container mx-auto px-4 py-12 sm:py-16">
         {filtered.length === 0 && (
           <div className="py-16 text-center">
-            <p className="text-muted-foreground">No guides match your search. Try different keywords.</p>
+            <p className="text-muted-foreground">Nessuna guida corrisponde alla tua ricerca. Prova parole chiave diverse.</p>
           </div>
         )}
 
@@ -149,12 +149,10 @@ const GuidesHub = () => {
               </div>
             )}
 
-
-
             {/* Rest — compact rows */}
             {rest.length > 0 && (
               <div>
-                <h2 className="editorial-line font-display text-display-md font-bold text-foreground">More Guides</h2>
+                <h2 className="editorial-line font-display text-display-md font-bold text-foreground">Altre Guide</h2>
                 <div className="mt-4 divide-y divide-border rounded-lg border border-border bg-card overflow-hidden">
                   {rest.map((guide, i) => (
                     <CompactGuideRow key={guide.slug} guide={guide} index={i} />
@@ -171,10 +169,10 @@ const GuidesHub = () => {
             <BookOpen className="h-5 w-5 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-display text-sm font-bold text-foreground">Looking for product comparisons?</h3>
-            <p className="mt-0.5 text-xs text-muted-foreground">Side-by-side comparisons filtered by sport and goal.</p>
+            <h3 className="font-display text-sm font-bold text-foreground">Cerchi confronti tra prodotti?</h3>
+            <p className="mt-0.5 text-xs text-muted-foreground">Confronti tecnici filtrati per sport e obiettivo.</p>
           </div>
-          <Link to="/hub" className="shrink-0 text-sm font-bold text-primary hover:underline">View →</Link>
+          <Link to="/hub" className="shrink-0 text-sm font-bold text-primary hover:underline">Vedi →</Link>
         </div>
 
         {!isFiltered && (

@@ -64,6 +64,9 @@ const App = () => (
             <Route path="/guides" element={<GuidesHub />} />
             <Route path="/guides/:slug" element={<GuidePage />} />
             <Route path="/hub" element={<MasterHub />} />
+            <Route path="/hub/:category" element={<MasterHub />} />
+            <Route path="/hub/:category/:sport" element={<MasterHub />} />
+            <Route path="/comparison/:category/:sport/:objective" element={<MasterHub />} />
             <Route path="/method" element={<Method />} />
             <Route path="/about" element={<About />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

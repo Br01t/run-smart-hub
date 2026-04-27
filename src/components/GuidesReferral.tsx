@@ -15,7 +15,7 @@ const GuidesReferral = ({ guides }: GuidesReferralProps) => {
   return (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-sm card-depth">
       <h3 className="mb-4 flex items-center gap-2 font-display text-lg font-bold text-foreground">
-        <BookOpen className="h-5 w-5 text-accent" /> Expert Guides
+        <BookOpen className="h-5 w-5 text-accent" /> Guide Esperti
       </h3>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
         {guides.map((guide) => (
@@ -31,7 +31,7 @@ const GuidesReferral = ({ guides }: GuidesReferralProps) => {
               {guide.desc}
             </p>
             <div className="mt-3 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent transition-all group-hover:gap-2.5">
-              Read Deep Dive <ArrowRight className="h-3 w-3" />
+              Leggi l'Approfondimento <ArrowRight className="h-3 w-3" />
             </div>
           </Link>
         ))}

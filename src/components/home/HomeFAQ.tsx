@@ -9,66 +9,66 @@ interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   { 
-    q: "What tools does Runners Hub offer for runners?", 
+    q: "Quali strumenti offre Runners Hub per i corridori?", 
     a: (
       <>
-        Runners Hub offers 6 free science-based calculators: <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Hydration</Link>, <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calories Burned</Link>, <Link to="/tools/bmi" className="text-primary font-medium hover:underline">BMI</Link>, <Link to="/tools/protein" className="text-primary font-medium hover:underline">Protein Needs</Link>, <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Electrolytes</Link>, and a <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Shoe Finder</Link> tool.
+        Runners Hub offre 6 calcolatori gratuiti basati sulla scienza: <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Idratazione</Link>, <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calorie Bruciate</Link>, <Link to="/tools/bmi" className="text-primary font-medium hover:underline">BMI</Link>, <Link to="/tools/protein" className="text-primary font-medium hover:underline">Fabbisogno Proteico</Link>, <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Elettroliti</Link> e uno strumento <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Trova Scarpe</Link>.
       </>
     )
   },
   { 
-    q: "Are Runners Hub's running calculators free?", 
+    q: "I calcolatori di corsa di Runners Hub sono gratuiti?", 
     a: (
       <>
-        Yes, all Runners Hub tools are 100% free with no sign-up required. Every formula is based on <Link to="/hubs" className="text-foreground font-semibold inline-flex items-center gap-0.5 hover:text-primary transition-colors">peer-reviewed research <ArrowUpRight className="h-3 w-3" /></Link>.
+        Sì, tutti gli strumenti di Runners Hub sono gratuiti al 100% e non richiedono alcuna registrazione. Ogni formula si basa su <Link to="/method" className="text-foreground font-semibold inline-flex items-center gap-0.5 hover:text-primary transition-colors">ricerche peer-reviewed <ArrowUpRight className="h-3 w-3" /></Link>.
       </>
     )
   },
   { 
-    q: "How much water should I drink while running?", 
+    q: "Quanta acqua dovrei bere mentre corro?", 
     a: (
       <>
-        On average 400–800 ml per hour, depending on temperature and intensity. Use our <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Hydration Calculator</Link> for a personalized recommendation based on your sweat rate.
+        In media 400–800 ml l'ora, a seconda della temperatura e dell'intensità. Usa il nostro <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Calcolatore di Idratazione</Link> per una raccomandazione personalizzata basata sul tuo tasso di sudorazione.
       </>
     )
   },
   { 
-    q: "How many calories do you burn running a mile?", 
+    q: "Quante calorie si bruciano correndo un chilometro?", 
     a: (
       <>
-        A general estimate is about 80–120 calories per mile. Heavier runners and faster paces burn more. Use the <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calories Burned Calculator</Link> for a personalized figure.
+        Una stima generale è di circa 60–80 calorie per chilometro (circa 100 per miglio). I runner più pesanti e i ritmi più veloci bruciano di più. Usa il <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calcolatore delle Calorie Bruciate</Link> per una cifra personalizzata.
       </>
     )
   },
   { 
-    q: "How much protein do runners need per day?", 
+    q: "Quante proteine servono ai runner ogni giorno?", 
     a: (
       <>
-        Endurance runners typically need 1.2–1.7 g of protein per kg of body weight per day. The <Link to="/tools/protein" className="text-primary font-medium hover:underline">Protein Needs Calculator</Link> can give you a tailored recommendation.
+        I runner di endurance hanno tipicamente bisogno di 1,2–1,7 g di proteine per kg di peso corporeo al giorno. Il <Link to="/tools/protein" className="text-primary font-medium hover:underline">Calcolatore del Fabbisogno Proteico</Link> può darti una raccomandazione su misura.
       </>
     )
   },
   { 
-    q: "What are the best running shoes for beginners?", 
+    q: "Quali sono le migliori scarpe da corsa per principianti?", 
     a: (
       <>
-        Beginners generally benefit from neutral, well-cushioned shoes. Try our <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Shoe Finder</Link> to get matched, or browse our <Link to="/hub#shoes" className="text-primary font-medium hover:underline">Shoe Hub</Link> for expert picks.
+        I principianti generalmente traggono beneficio da scarpe neutre e ben ammortizzate. Prova il nostro <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Trova Scarpe</Link> per trovare il tuo abbinamento, o sfoglia il nostro <Link to="/hub#shoes" className="text-primary font-medium hover:underline">Hub Scarpe</Link> per le selezioni degli esperti.
       </>
     )
   },
   { 
-    q: "How do electrolytes affect running performance?", 
+    q: "In che modo gli elettroliti influenzano le prestazioni?", 
     a: (
       <>
-        Electrolytes like sodium and magnesium help maintain fluid balance and prevent cramps. Use the <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Electrolyte Calculator</Link> to estimate your specific needs.
+        Gli elettroliti come sodio e magnesio aiutano a mantenere il bilancio dei liquidi e a prevenire i crampi. Usa il <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Calcolatore di Elettroliti</Link> per stimare le tue esigenze specifiche.
       </>
     )
   },
   { 
-    q: "What is a healthy BMI for runners?", 
+    q: "Cos'è un BMI salutare per i runner?", 
     a: (
       <>
-        Most competitive runners fall between 18.5 and 24.9 BMI, but it's just one metric. Try the <Link to="/tools/bmi" className="text-primary font-medium hover:underline">BMI Calculator</Link> for context and related performance guides.
+        La maggior parte dei runner competitivi ha un BMI compreso tra 18,5 e 24,9, ma è solo una metrica. Prova il <Link to="/tools/bmi" className="text-primary font-medium hover:underline">Calcolatore BMI</Link> per contestualizzare il dato con le guide alle prestazioni correlate.
       </>
     )
   },
@@ -79,9 +79,9 @@ const HomeFAQ = () => {
     <section className="container mx-auto px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-3xl">
         <div className="editorial-line-center mb-8 text-center">
-          <h2 className="font-display text-display-md font-bold text-foreground">Frequently Asked Questions</h2>
+          <h2 className="font-display text-display-md font-bold text-foreground">Domande Frequenti</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Quick answers to common questions about running, hydration, nutrition and gear.
+            Risposte rapide alle domande comuni su corsa, idratazione, nutrizione e attrezzatura.
           </p>
         </div>
 

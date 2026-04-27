@@ -8,20 +8,20 @@ const GearHubLinks = () => {
       <div className="container mx-auto px-4 py-16 sm:py-20">
         <div className="mb-8 flex items-end justify-between">
           <div className="editorial-line">
-            <h2 className="font-display text-display-md font-bold text-foreground">Hubs</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Curated picks across every category.</p>
+            <h2 className="font-display text-display-md font-bold text-foreground">Hub Prodotti</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Selezioni curate per ogni categoria.</p>
           </div>
           <Link to="/hub" className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex">
-            All hubs <ArrowRight className="h-4 w-4" />
+            Tutti gli hub <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: "Supplements", emoji: "💊", desc: "Magnesium, electrolytes, gels", to: "/hub#supplements", border: "border-l-amber-500" },
-            { label: "Shoes", emoji: "👟", desc: "Road, trail, racing flats", to: "/hub#shoes", border: "border-l-emerald-500" },
-            { label: "Hydration", emoji: "💧", desc: "Bottles, belts, electrolytes", to: "/hub#hydration", border: "border-l-sky-500" },
-            { label: "Recovery", emoji: "🧊", desc: "Foam rollers, massage guns", to: "/hub#recovery", border: "border-l-violet-500" },
+            { label: "Integratori", emoji: "💊", desc: "Magnesio, elettroliti, gel", to: "/hub#supplements", border: "border-l-amber-500" },
+            { label: "Scarpe", emoji: "👟", desc: "Strada, trail, gara", to: "/hub#shoes", border: "border-l-emerald-500" },
+            { label: "Idratazione", emoji: "💧", desc: "Borracce, cinture, sali", to: "/hub#hydration", border: "border-l-sky-500" },
+            { label: "Recupero", emoji: "🧊", desc: "Rulli, pistole massaggianti", to: "/hub#recovery", border: "border-l-violet-500" },
           ].map((hub) => (
             <Link
               key={hub.label}
@@ -39,7 +39,7 @@ const GearHubLinks = () => {
         </div>
 
         <Link to="/hub" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline sm:hidden">
-          View all hubs <ArrowRight className="h-4 w-4" />
+          Vedi tutti gli hub <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
     </section>

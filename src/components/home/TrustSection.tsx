@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import { FlaskConical, ShieldCheck, BarChart3 } from "lucide-react";
 
 const trustItems = [
-  { icon: FlaskConical, title: "Evidence-Based", text: "Every formula is grounded in peer-reviewed research and validated by sports science." },
-  { icon: ShieldCheck, title: "No Sponsorships", text: "We don't accept paid placements. Our recommendations are independent and honest." },
-  { icon: BarChart3, title: "Personalized", text: "Results tailored to your body metrics, training volume and specific goals." },
+  { icon: FlaskConical, title: "Basato sulle Evidenze", text: "Ogni formula è fondata su ricerche peer-reviewed e validata dalla scienza dello sport." },
+  { icon: ShieldCheck, title: "Nessuna Sponsorizzazione", text: "Non accettiamo posizionamenti a pagamento. Le nostre raccomandazioni sono indipendenti e oneste." },
+  { icon: BarChart3, title: "Personalizzato", text: "Risultati su misura per le tue metriche corporee, volume di allenamento e obiettivi specifici." },
 ];
 
 const TrustSection = () => {
   return (
     <section className="container mx-auto px-4 py-16 sm:py-20">
       <div className="editorial-line-center text-center">
-        <h2 className="font-display text-display-md font-bold text-foreground">Why runners trust us</h2>
+        <h2 className="font-display text-display-md font-bold text-foreground">Perché i runner si fidano di noi</h2>
       </div>
 
       <div className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-3">

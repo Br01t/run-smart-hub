@@ -11,7 +11,7 @@ interface SEOProps {
   schema?: object;
 }
 
-const SEO = ({
+  const SEO = ({
   title,
   description,
   keywords,
@@ -44,7 +44,7 @@ const SEO = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={ogUrl} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content="it_IT" />
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />

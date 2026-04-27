@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideWinterRunning from "@/assets/guide-winter-running.webp";
 
 export const winterRunning: GuideContent = {
-  title: "How to Run Safely in Cold Weather",
-  seoTitle: "Winter Running Guide 2026: Gear & Layering Science",
-  seoDescription: "Don't let the cold stop you. Master the 3-layer system, learn about cold-induced diuresis, and discover the best fabrics for winter performance.",
-  keywords: ["winter running gear", "running in the cold", "cold weather running layers", "merino wool vs synthetic", "running on ice safety", "winter hydration for runners"],
-  description: "A practical guide to winter running: layering systems, essential gear, and safety precautions for training through the coldest months.",
+  title: "Come Correre in Sicurezza con il Freddo",
+  seoTitle: "Guida Corsa Invernale 2026: Scienza dell'Abbigliamento e Strati",
+  seoDescription: "Non lasciare che il freddo ti fermi. Padroneggia il sistema a 3 strati, scopri la diuresi indotta dal freddo e i migliori tessuti per la performance invernale.",
+  keywords: ["abbigliamento corsa invernale", "correre con il freddo", "strati corsa inverno", "lana merino vs sintetico", "correre sul ghiaccio sicurezza", "idratazione invernale runner"],
+  description: "Una guida pratica alla corsa invernale: sistemi a strati, attrezzatura essenziale e precauzioni di sicurezza per allenarsi nei mesi più freddi.",
   tags: ["accessories", "running", "apparel", "top-apparel-2026"],
   heroImage: guideWinterRunning,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Dress for 10°C warmer than the actual temperature to account for internal heat production",
-    "A 3-layer system (Base, Mid, Shell) creates a regulated microclimate near the skin",
-    "Merino wool is the gold standard for thermal regulation and moisture management",
-    "Cold air triggers diuresis (increased urination)—proper hydration is critical even without sweat",
+    "Vestiti per una temperatura di 10°C superiore a quella reale per compensare il calore corporeo prodotto",
+    "Un sistema a 3 strati (Base, Mid, Shell) crea un microclima regolato vicino alla pelle",
+    "La lana merino è il gold standard per la regolazione termica e la gestione dell'umidità",
+    "L'aria fredda innesca la diuresi: un'idratazione corretta è fondamentale anche senza sudore percepito",
   ],
   relatedTools: [
-    { to: "/tools/hydration", label: "Hydration Calculator" },
-    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
   ],
   relatedGuides: [
-    { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "choosing-running-shoes", label: "Come Scegliere le Scarpe da Corsa" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: Thermoregulation", 
-      body: "In cold weather, the body prioritizes core temperature by constricting blood flow to the extremities (vasoconstriction). This protects vital organs but leaves hands and feet vulnerable to frostbite. \n\n**Cold-Induced Diuresis:** Exposure to cold increases central blood pressure, which signals the kidneys to filter excess fluid. This is why you feel the need to urinate more in winter. Because you don't 'feel' as sweaty, runners often neglect hydration, leading to thick, viscous blood that impairs oxygen delivery to the muscles.", 
+      heading: "La Scienza: Termoregolazione", 
+      body: "Con il freddo, il corpo dà priorità alla temperatura interna restringendo il flusso sanguigno alle estremità (vasocostrizione). Questo protegge gli organi vitali ma lascia mani e piedi vulnerabili. \n\n**Diuresi Indotta dal Freddo:** L'esposizione al freddo aumenta la pressione sanguigna centrale, segnalando ai reni di filtrare i liquidi in eccesso. Ecco perché senti il bisogno di urinare di più in inverno. Poiché non 'senti' di sudare molto, i runner spesso trascurano l'idratazione, portando a un sangue più denso che compromette il trasporto di ossigeno ai muscoli.", 
       variant: "highlight" 
     },
     { 
-      heading: "The Material Science: Merino vs. Synthetic", 
-      body: "Cotton is your greatest enemy in winter. It absorbs moisture and loses all insulating properties when wet, leading to rapid heat loss via conduction. \n\n- **Merino Wool:** Can absorb up to 35% of its weight in water before feeling 'wet'. It maintains warmth even when damp and is naturally anti-microbial. \n- **Synthetics (Polyester/Nylon):** Designed for maximum wicking. They dry faster than wool but provide less static warmth. The ideal system often uses a synthetic base for high-intensity runs and a merino base for long, easy miles.", 
+      heading: "Scienza dei Materiali: Merino vs Sintetico", 
+      body: "Il cotone è il tuo peggior nemico in inverno. Assorbe l'umidità e perde ogni proprietà isolante quando è bagnato, portando a una rapida perdita di calore per conduzione. \n\n- **Lana Merino:** può assorbire fino al 35% del suo peso in acqua prima di sembrare 'bagnata'. Mantiene il calore anche se umida ed è naturalmente antimicrobica. \n- **Sintetici (Poliestere/Nylon):** progettati per la massima traspirazione. Asciugano più velocemente della lana ma forniscono meno calore statico. Il sistema ideale prevede spesso una base sintetica per le corse intense e una base merino per i lunghi lenti.", 
       variant: "default" 
     },
     { 
-      heading: "Managing the Microclimate", 
-      body: "A successful winter kit is a 3-layer modular system. \n\n1. **Base Layer:** Wicks sweat away from the skin. \n2. **Mid Layer (Insulation):** Traps a layer of warm air. Grid-fleeces (like Polartec Power Grid) are superior because they provide warmth while allowing excess heat to escape. \n3. **Outer Layer (Protection):** A wind-resistant shell. Avoid fully waterproof jackets unless it's raining, as they trap sweat inside, creating a 'sauna effect' that eventually leaves you freezing.", 
+      heading: "Gestire il Microclima", 
+      body: "Un kit invernale vincente è un sistema modulare a 3 strati. \n\n1. **Base Layer (Intimo):** allontana il sudore dalla pelle. \n2. **Mid Layer (Isolamento):** intrappola uno strato di aria calda. I pile a griglia (come il Polartec Power Grid) sono superiori perché isolano permettendo al calore in eccesso di uscire. \n3. **Outer Layer (Protezione):** un guscio resistente al vento. Evita giacche totalmente impermeabili a meno che non piova, poiché intrappolano il sudore all'interno, creando un 'effetto sauna' che finisce per farti gelare.", 
       variant: "default", 
       listItems: [
-        "Head & Hands: 30-40% of total heat loss can occur through the extremities", 
-        "Traction: Carbide-tipped spikes are necessary for running on black ice", 
-        "Visibility: Reflectivity is more important than color in low-winter-sun conditions",
-        "Battery Life: Cold temperatures can drop GPS watch battery life by up to 50%."
+        "Testa e Mani: il 30-40% della perdita totale di calore può avvenire attraverso le estremità", 
+        "Trazione: ramponcini o scarpe chiodate sono necessari per correre sul ghiaccio vivo", 
+        "Visibilità: la riflettività è più importante del colore in condizioni di bassa luce invernale",
+        "Durata Batteria: le basse temperature possono ridurre la durata della batteria dell'orologio GPS fino al 50%."
       ] 
     },
     {
-      heading: "Bronchospasm & Lung Health",
-      body: "Cold, dry air can trigger 'Exercise-Induced Bronchospasm' (EIB). Wearing a buff or neck gaiter over your mouth creates a 'heat and moisture exchange' (HME), pre-warming and humidifying the air before it reaches your bronchial tubes.",
+      heading: "Broncospasmo e Salute Polmonare",
+      body: "L'aria fredda e secca può innescare il 'Broncospasmo indotto dall'esercizio' (EIB). Indossare uno scaldacollo (buff) davanti alla bocca crea uno 'scambio di calore e umidità' (HME), preriscaldando e umidificando l'aria prima che raggiunga i bronchi.",
       variant: "warning"
     },
     {
-      heading: "The 'Bold Start' Rule",
-      body: "You should feel slightly chilly when you first step out of the door. If you are perfectly warm at the start, you will be dangerously overheating within 15 minutes. Plan for the temperature your body will reach at KM 5, not the temp at the start line.",
+      heading: "La Regola del 'Partenza Fredda'",
+      body: "Dovresti sentirti leggermente infreddolito appena metti piede fuori casa. Se sei perfettamente al caldo alla partenza, finirai per surriscaldarti pericolosamente entro 15 minuti. Vestiti per la temperatura che il tuo corpo raggiungerà al 5° km, non per quella della linea di partenza.",
       variant: "tip"
     },
     { 
-      heading: "Winter Running Checklist", 
-      body: "Safety and gear protocols for sub-zero training.", 
+      heading: "Checklist Corsa Invernale", 
+      body: "Protocolli di sicurezza e attrezzatura per l'allenamento sotto zero.", 
       variant: "checklist", 
       listItems: [
-        "Pre-Warm: Do 5 mins of dynamic drills *inside* your house before heading out.", 
-        "Gear Check: Test your headlamp batteries; they drain faster in the cold.", 
-        "Hydrate: Drink room-temperature electrolytes before and after your run.", 
-        "Skin Protection: Use an anti-chafing balm or 'Vaseline' on exposed face skin to prevent windburn.",
-        "Post-Run Protocol: Get out of wet clothes within 5 mins of stopping to prevent a core temp crash."
+        "Riscaldamento: fai 5 minuti di drill dinamici *dentro* casa prima di uscire.", 
+        "Controllo Attrezzatura: testa le batterie della lampada frontale; si scaricano più velocemente al freddo.", 
+        "Idratazione: bevi elettroliti a temperatura ambiente prima e dopo la corsa.", 
+        "Protezione Pelle: usa un balsamo anti-sfregamento o vaselina sulla pelle del viso esposta per prevenire bruciature da vento.",
+        "Protocollo Post-Corsa: togliti i vestiti bagnati entro 5 minuti dalla fine per evitare un crollo della temperatura corporea."
       ] 
     },
   ],

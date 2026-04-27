@@ -8,43 +8,43 @@ import ZoneRunBanner from "@/components/ZoneRunBanner";
 
 const allTools = [
   {
-    title: "Hydration Needs",
-    description: "Calculate how much water to drink before, during and after your run based on duration, weight and temperature.",
+    title: "Idratazione",
+    description: "Calcola quanta acqua bere prima, durante e dopo la corsa in base a durata, peso e temperatura.",
     icon: Droplets,
     to: "/tools/hydration",
     gradient: "from-sky-400 to-cyan-600",
   },
   {
-    title: "Calories Burned",
-    description: "Estimate calories burned during your run based on distance, weight and average pace.",
+    title: "Calorie",
+    description: "Stima le calorie bruciate durante la corsa in base a distanza, peso e ritmo medio.",
     icon: Flame,
     to: "/tools/calories",
     gradient: "from-orange-400 to-red-500",
   },
   {
-    title: "Advanced BMI",
-    description: "Calculate your body mass index with detailed classification and recommendations.",
+    title: "BMI",
+    description: "Calcola il tuo indice di massa corporea con classificazione dettagliata e raccomandazioni.",
     icon: Scale,
     to: "/tools/bmi",
     gradient: "from-violet-400 to-purple-600",
   },
   {
-    title: "Protein Needs",
-    description: "Find out how much protein to consume daily based on your activity level and goals.",
+    title: "Proteine",
+    description: "Scopri quante proteine consumare giornalmente in base al tuo livello di attività e ai tuoi obiettivi.",
     icon: Dumbbell,
     to: "/tools/protein",
     gradient: "from-rose-400 to-pink-500",
   },
   {
-    title: "Electrolyte Needs",
-    description: "Calculate the amount of electrolytes to replenish based on sweat rate and duration.",
+    title: "Elettroliti",
+    description: "Calcola la quantità di elettroliti da reintegrare in base al tasso di sudorazione e alla durata.",
     icon: Zap,
     to: "/tools/electrolytes",
     gradient: "from-amber-400 to-orange-500",
   },
   {
-    title: "Best Shoes Finder",
-    description: "Answer 5 questions and get personalized running shoe recommendations for your terrain and goals.",
+    title: "Trova Scarpe",
+    description: "Rispondi a 5 domande e ricevi raccomandazioni personalizzate per le tue scarpe da corsa.",
     icon: Footprints,
     to: "/tools/shoes",
     gradient: "from-emerald-400 to-teal-600",
@@ -79,7 +79,7 @@ const ToolCard = ({ tool, index }: { tool: typeof allTools[0], index: number }) 
         </p>
         
         <div className="mt-6 flex items-center gap-2">
-          <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover:underline decoration-2 underline-offset-4">Open Calculator</span>
+          <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover:underline decoration-2 underline-offset-4">Apri Calcolatore</span>
         </div>
       </div>
     </Link>
@@ -90,15 +90,15 @@ const ToolsHub = () => {
   return (
     <Layout>
       <SEO 
-        title="Runner's Technical Calculator Suite | Performance Tools" 
-        description="Access our suite of science-based running calculators. Optimize your hydration, nutrition, and gear selection with precision data." 
+        title="Suite di Calcolatori Tecnici per Runner | Performance Tools" 
+        description="Accedi alla nostra suite di calcolatori scientifici per la corsa. Ottimizza idratazione, nutrizione e scelta dell'attrezzatura." 
         path="/tools" 
       />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={toolsHeroImg} alt="Runner on track" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
+          <img src={toolsHeroImg} alt="Corridore su pista" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/80" />
         </div>
         <div className="relative container mx-auto px-4 py-16 sm:py-24">
@@ -110,13 +110,13 @@ const ToolsHub = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-primary" />
-              <span className="text-xs font-black uppercase tracking-[0.4em] text-primary-foreground/80">Analysis Suite</span>
+              <span className="text-xs font-black uppercase tracking-[0.4em] text-primary-foreground/80">Suite di Analisi</span>
             </div>
             <h1 className="font-display text-5xl sm:text-7xl font-bold text-white leading-none tracking-tight">
-              Technical <br/> <span className="text-blue-200 italic">Calculators</span>
+              Calcolatori <br/> <span className="text-blue-200 italic">Tecnici</span>
             </h1>
             <p className="mt-8 text-lg sm:text-xl text-white/70 max-w-xl leading-relaxed">
-              Empower your training with data. Our suite of technical calculators uses the latest exercise physiology research to optimize your performance.
+              Potenzia il tuo allenamento con i dati. La nostra suite di calcolatori tecnici utilizza le ultime ricerche sulla fisiologia dell'esercizio per ottimizzare la tua performance.
             </p>
           </motion.div>
         </div>
@@ -138,15 +138,15 @@ const ToolsHub = () => {
           </div>
           
           <div className="relative max-w-2xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight">Can't decide where to start?</h2>
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight">Non sai da dove iniziare?</h2>
             <p className="mt-6 text-lg text-white/60 leading-relaxed">
-              Take our 2-minute physiological assessment to receive a personalized analysis of your training needs and recommended tools.
+              Fai la nostra valutazione fisiologica di 2 minuti per ricevere un'analisi personalizzata delle tue esigenze di allenamento e degli strumenti raccomandati.
             </p>
             <Link
               to="/quiz"
               className="mt-10 inline-flex items-center gap-3 rounded-2xl bg-primary px-10 py-5 text-sm font-black uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 active:scale-95"
             >
-              Initialize Assessment <ArrowRight className="h-5 w-5" />
+              Inizia Valutazione <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </div>

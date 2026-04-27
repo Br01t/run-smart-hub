@@ -15,13 +15,33 @@ import ZoneRunBanner from "@/components/ZoneRunBanner";
 import CategorySection from "@/components/hub/CategorySection";
 import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 import { categoryGuides } from "@/data/categoryGuides";
+import { translateCategory } from "@/lib/translations";
 
 const categories = ["shoes", "gear", "supplements", "hydration", "recovery", "apparel"];
 
 const MasterHub = () => {
+  const { category: urlCategory, sport, objective } = useParams();
   const [activeCategory, setActiveCategory] = useState("shoes");
   const { hash } = useLocation();
   const observer = useRef<IntersectionObserver | null>(null);
+
+  // Initialize activeCategory and scroll from URL params if present
+  useEffect(() => {
+    if (urlCategory && categories.includes(urlCategory)) {
+      setActiveCategory(urlCategory);
+      
+      const scrollTask = () => {
+        // If objective is present, scroll to the comparison section
+        const targetId = objective ? `${urlCategory}-comparison` : urlCategory;
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      
+      setTimeout(scrollTask, 100);
+    }
+  }, [urlCategory, objective]);
 
   useEffect(() => {
     // Scroll Spy Logic
@@ -111,62 +131,62 @@ const MasterHub = () => {
     const categoryResources = {
       shoes: {
         tools: [
-          { name: "Best Shoes Finder", path: "/tools/shoes" },
-          { name: "BMI Calculator", path: "/tools/bmi" }
+          { name: "Shoe Finder", path: "/tools/shoes" },
+          { name: "Calcolatore BMI", path: "/tools/bmi" }
         ],
         guides: [
-          { name: "Finding Your Perfect Fit", path: "/guides/choosing-running-shoes", desc: "The biomechanics of running footwear." },
-          { name: "Running Form Guide", path: "/guides/running-form", desc: "Optimize your efficiency and reduce impact." }
+          { name: "Scegliere la Scarpa Giusta", path: "/guides/choosing-running-shoes", desc: "La biomeccanica delle calzature da corsa." },
+          { name: "Guida alla Tecnica di Corsa", path: "/guides/running-form", desc: "Ottimizza l'efficienza e riduci l'impatto." }
         ]
       },
       supplements: {
         tools: [
-          { name: "Protein Calculator", path: "/tools/protein" },
-          { name: "Electrolyte Needs", path: "/tools/electrolytes" }
+          { name: "Calcolatore Proteine", path: "/tools/protein" },
+          { name: "Fabbisogno Elettroliti", path: "/tools/electrolytes" }
         ],
         guides: [
-          { name: "Mastering Fueling", path: "/guides/supplements-for-runners", desc: "Long-form deep dive on endurance nutrition." },
-          { name: "Running Nutrition 101", path: "/guides/running-nutrition", desc: "What to eat before, during & after." }
+          { name: "Integrazione per Runner", path: "/guides/supplements-for-runners", desc: "Approfondimento sulla nutrizione di resistenza." },
+          { name: "Nutrizione 101", path: "/guides/running-nutrition", desc: "Cosa mangiare prima, durante e dopo." }
         ]
       },
       hydration: {
         tools: [
-          { name: "Hydration Needs", path: "/tools/hydration" },
-          { name: "Electrolyte Needs", path: "/tools/electrolytes" }
+          { name: "Fabbisogno Idrico", path: "/tools/hydration" },
+          { name: "Fabbisogno Elettroliti", path: "/tools/electrolytes" }
         ],
         guides: [
-          { name: "Fueling & Electrolytes", path: "/guides/supplements-for-runners", desc: "Hydration is half the battle." },
-          { name: "Marathon Nutrition", path: "/guides/marathon-training", desc: "Complete hydration strategies for 42K." }
+          { name: "Energia ed Elettroliti", path: "/guides/supplements-for-runners", desc: "L'idratazione è metà della battaglia." },
+          { name: "Nutrizione Maratona", path: "/guides/marathon-training", desc: "Strategie complete per i 42K." }
         ]
       },
       recovery: {
         tools: [
-          { name: "Protein Needs", path: "/tools/protein" },
-          { name: "Hydration Needs", path: "/tools/hydration" }
+          { name: "Fabbisogno Proteico", path: "/tools/protein" },
+          { name: "Fabbisogno Idrico", path: "/tools/hydration" }
         ],
         guides: [
-          { name: "Muscle Recovery Guide", path: "/guides/muscle-recovery", desc: "Accelerate repair and reduce soreness." },
-          { name: "Injury Prevention", path: "/guides/injury-prevention", desc: "Science-backed techniques for longevity." }
+          { name: "Guida al Recupero Muscolare", path: "/guides/muscle-recovery", desc: "Accelera la riparazione e riduci il dolore." },
+          { name: "Prevenzione Infortuni", path: "/guides/injury-prevention", desc: "Tecniche basate sulla scienza per la longevità." }
         ]
       },
       apparel: {
         tools: [
-          { name: "Hydration Needs", path: "/tools/hydration" },
-          { name: "Calories Burned", path: "/tools/calories" }
+          { name: "Fabbisogno Idrico", path: "/tools/hydration" },
+          { name: "Calorie Bruciate", path: "/tools/calories" }
         ],
         guides: [
-          { name: "Winter Running Guide", path: "/guides/winter-running", desc: "Mastering the technical layering system." },
-          { name: "Running Form Essentials", path: "/guides/running-form", desc: "How fabric weight affects your cadence." }
+          { name: "Correre in Inverno", path: "/guides/winter-running", desc: "Padroneggia il sistema di stratificazione tecnica." },
+          { name: "Essenziali Tecnica di Corsa", path: "/guides/running-form", desc: "Come il peso del tessuto influisce sulla cadenza." }
         ]
       },
       gear: {
         tools: [
-          { name: "Calories Burned", path: "/tools/calories" },
-          { name: "BMI Calculator", path: "/tools/bmi" }
+          { name: "Calorie Bruciate", path: "/tools/calories" },
+          { name: "Calcolatore BMI", path: "/tools/bmi" }
         ],
         guides: [
-          { name: "Best Running Watches", path: "/guides/best-running-watches", desc: "2026 technical analysis of GPS gear." },
-          { name: "Heart Rate Zones", path: "/guides/running-heart-rate-zones", desc: "Train smarter with technical data." }
+          { name: "Migliori Orologi da Corsa", path: "/guides/best-running-watches", desc: "Analisi tecnica 2026 dei dispositivi GPS." },
+          { name: "Zone Cardio", path: "/guides/running-heart-rate-zones", desc: "Allenati meglio con i dati tecnici." }
         ]
       }
     };
@@ -177,7 +197,7 @@ const MasterHub = () => {
       <>
         <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
           <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-            <Wrench className="h-3.5 w-3.5 text-primary" /> Analysis Tools
+            <Wrench className="h-3.5 w-3.5 text-primary" /> Strumenti di Analisi
           </h4>
           <div className="space-y-3">
             {res.tools.map(tool => (
@@ -187,14 +207,14 @@ const MasterHub = () => {
               </Link>
             ))}
             <Link to="/tools" className="mt-4 flex items-center gap-1.5 pt-3 border-t border-border text-[10px] font-bold uppercase tracking-wider text-primary hover:underline">
-              View all tools <ArrowRight className="h-3 w-3" />
+              Vedi tutti gli strumenti <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
         </div>
 
         <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
           <h4 className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground">
-            <BookOpen className="h-3.5 w-3.5 text-accent" /> Expert Guides
+            <BookOpen className="h-3.5 w-3.5 text-accent" /> Guide Esperti
           </h4>
           <div className="space-y-4">
             {res.guides.map(guide => (
@@ -204,18 +224,18 @@ const MasterHub = () => {
               </Link>
             ))}
             <Link to="/guides" className="mt-2 flex items-center gap-1.5 pt-3 border-t border-border text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
-              View all guides <ArrowRight className="h-3 w-3" />
+              Vedi tutte le guide <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
         </div>
         
         <div className="rounded-2xl bg-primary px-6 py-8 text-primary-foreground shadow-hero transition-all hover:shadow-float hover:-translate-y-1 inner-glow-strong">
-          <h4 className="font-display text-lg font-bold leading-tight">Need a custom plan?</h4>
+          <h4 className="font-display text-lg font-bold leading-tight">Vuoi un piano su misura?</h4>
           <p className="mt-2 text-xs text-primary-foreground/80 leading-relaxed">
-            Take our 2-minute quiz to get personalized recommendations.
+            Fai il nostro quiz di 2 minuti per ricevere raccomandazioni personalizzate.
           </p>
           <Link to="/quiz" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-background px-4 py-2.5 text-xs font-bold text-foreground transition-opacity hover:opacity-90">
-            Start Quiz <ArrowRight className="h-3.5 w-3.5" />
+            Inizia il Quiz <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </>
@@ -225,9 +245,9 @@ const MasterHub = () => {
   return (
     <Layout>
       <SEO 
-        title="Best Running Gear Comparisons & Product Hub 2026" 
-        description="Side-by-side technical comparisons of running shoes, supplements, and gear based on scientific principles and biomechanical data."
-        path="/hub"
+        title={urlCategory ? `${translateCategory(urlCategory)} Hub: Migliori Prodotti e Confronti 2026` : "Confronto Migliore Attrezzatura Running e Hub Prodotti 2026"} 
+        description={urlCategory ? `Scopri i migliori prodotti per ${translateCategory(urlCategory)} con analisi tecniche, confronti basati su dati e selezioni scientifiche per runner.` : "Confronti tecnici dettagliati di scarpe da corsa, integratori e attrezzatura basati su principi scientifici e dati biomeccanici."}
+        path={urlCategory ? `/hub/${urlCategory}${sport ? `/${sport}` : ""}` : "/hub"}
       />
 
       {/* Floating Category Nav (Responsive & Multi-level) */}
@@ -243,7 +263,7 @@ const MasterHub = () => {
                 }`}
               >
                 <span className="relative whitespace-nowrap">
-                  {cat}
+                  {translateCategory(cat)}
                   {activeCategory === cat && (
                     <span 
                       className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full transition-all duration-500"
@@ -262,12 +282,13 @@ const MasterHub = () => {
       <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-16">
         <header className="mb-16 editorial-line">
           <h1 className="font-display text-4xl sm:text-display-xl font-bold text-foreground transition-all">
-            Master Gear & <br/>Supplement Guide
+            Guida Maestra ad Attrezzatura <br/>e Integrazione
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            A comprehensive dashboard combining scientific analysis, technical comparisons, and curated product selections to optimize every aspect of your running performance.
+            Una dashboard completa che combina analisi scientifica, confronti tecnici e selezioni curate di prodotti per ottimizzare ogni aspetto della tua performance di corsa.
           </p>
         </header>
+
 
         <div className="space-y-32">
           {categories.map((catKey, index) => {

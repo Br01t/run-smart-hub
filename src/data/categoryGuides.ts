@@ -9,129 +9,129 @@ export interface CategoryGuide {
 export const categoryGuides: Record<string, CategoryGuide> = {
   shoes: {
     id: "shoes",
-    title: "Running Shoes",
-    scientificTitle: "The Science of Support & Propulsion",
-    scientificDescription: "Choosing the right shoe is more than just comfort; it's about biomechanical efficiency and injury prevention. We analyze every shoe based on 4 technical pillars.",
+    title: "Scarpe da Corsa",
+    scientificTitle: "La Scienza del Supporto e della Propulsione",
+    scientificDescription: "Scegliere la scarpa giusta è molto più che una questione di comfort; si tratta di efficienza biomeccanica e prevenzione degli infortuni. Analizziamo ogni scarpa basandoci su 4 pilastri tecnici.",
     pillars: [
       { 
         title: "Drop", 
-        description: "The height difference between heel and toe. 10mm+ for heel strikers, 4-6mm for natural runners." 
+        description: "La differenza di altezza tra tallone e punta. 10mm+ per chi appoggia di tallone, 4-6mm per una corsa naturale." 
       },
       { 
-        title: "Cushioning", 
-        description: "From 'Minimal' for ground feel and speed to 'Maximal' for impact protection on long distances." 
+        title: "Ammortizzazione", 
+        description: "Da 'Minimale' per sensibilità e velocità a 'Massimale' per protezione dagli impatti sulle lunghe distanze." 
       },
       { 
-        title: "Weight", 
-        description: "Fundamental for performance. Sub-250g for racing, slightly more for durable daily training." 
+        title: "Peso", 
+        description: "Fondamentale per la performance. Sotto i 250g per la gara, leggermente di più per un allenamento quotidiano duraturo." 
       },
       { 
-        title: "Propulsion", 
-        description: "The role of midsole foams and carbon plates in energy return and running economy." 
+        title: "Propulsione", 
+        description: "Il ruolo delle schiume nell'intersuola e delle piastre in carbonio nel ritorno di energia e nell'economia di corsa." 
       }
     ]
   },
   supplements: {
     id: "supplements",
-    title: "Performance Supplements",
-    scientificTitle: "Bioavailability & Nutrient Timing",
-    scientificDescription: "Supplements should bridge the gap between training demand and recovery. Our selection focuses on clinically proven ingredients and digestion comfort.",
+    title: "Integratori per la Performance",
+    scientificTitle: "Bioavailability e Nutrient Timing",
+    scientificDescription: "Gli integratori dovrebbero colmare il divario tra la domanda dell'allenamento e il recupero. La nostra selezione si concentra su ingredienti clinicamente testati e comfort digestivo.",
     pillars: [
       { 
         title: "Bioavailability", 
-        description: "How well the supplement is absorbed. We prioritize Isolate proteins and chelated minerals." 
+        description: "Quanto bene l'integratore viene assorbito. Diamo priorità alle proteine Isolate e ai minerali chelati." 
       },
       { 
-        title: "Gastric Transit", 
-        description: "Essential for gels and bars. Optimal ratios of Maltodextrin and Fructose prevent GI distress." 
+        title: "Transito Gastrico", 
+        description: "Essenziale per gel e barrette. Rapporti ottimali di Maltodestrina e Fruttosio prevengono i disturbi gastrointestinali." 
       },
       { 
         title: "Nutrient Timing", 
-        description: "Strategizing 'Pre' for focus, 'During' for fuel, and 'Post' for muscle repair and glycogen refill." 
+        description: "Strategie 'Pre' per il focus, 'During' per l'energia e 'Post' per la riparazione muscolare e il ripristino del glicogeno." 
       },
       { 
-        title: "Cognitive Load", 
-        description: "Using adaptogens (like Cordyceps) to manage fatigue without the 'crash' typical of high-caffeine formulas." 
+        title: "Carico Cognitivo", 
+        description: "Utilizzo di adattogeni (come il Cordyceps) per gestire la fatica senza il 'crash' tipico delle formule ad alta caffeina." 
       }
     ]
   },
   hydration: {
     id: "hydration",
-    title: "Hydration & Electrolytes",
-    scientificTitle: "Maintaining Osmotic Balance",
-    scientificDescription: "Hydration is not just about water; it's about replacing what you lose through sweat. Imbalance leads to cramping and rapid performance decline.",
+    title: "Idratazione ed Elettroliti",
+    scientificTitle: "Mantenere l'Equilibrio Osmotico",
+    scientificDescription: "L'idratazione non riguarda solo l'acqua; si tratta di reintegrare ciò che si perde con il sudore. Uno squilibrio porta a crampi e a un rapido calo delle prestazioni.",
     pillars: [
       { 
-        title: "Sodium-Potassium Ratio", 
-        description: "The primary electrolytes lost. Essential for nerve transmission and muscle contraction." 
+        title: "Rapporto Sodio-Potassio", 
+        description: "I principali elettroliti persi. Essenziali per la trasmissione nervosa e la contrazione muscolare." 
       },
       { 
-        title: "Fluid Transport Gear", 
-        description: "Hydration vests vs belts. Capacity vs mobility depending on race distance and terrain." 
+        title: "Attrezzatura per il Trasporto Fluidi", 
+        description: "Zaini vs cinture di idratazione. Capacità vs mobilità a seconda della distanza di gara e del terreno." 
       },
       { 
-        title: "Isotonicity", 
-        description: "Ensuring your drink matches your blood's concentration for the fastest possible absorption." 
+        title: "Isotonicità", 
+        description: "Assicurarsi che la bevanda corrisponda alla concentrazione del sangue per l'assorbimento più rapido possibile." 
       }
     ]
   },
   recovery: {
     id: "recovery",
-    title: "Recovery & Injury Prevention",
-    scientificTitle: "The Evidence-Based Recovery Curve",
-    scientificDescription: "Muscle damage (DOMS) and inflammation are natural results of training. Recovery tools accelerate the 'Repair' phase to get you back on the road faster.",
+    title: "Recupero e Prevenzione Infortuni",
+    scientificTitle: "La Curva di Recupero Basata sulle Evidenze",
+    scientificDescription: "Il danno muscolare (DOMS) e l'infiammazione sono risultati naturali dell'allenamento. Gli strumenti di recupero accelerano la fase di 'Riparazione' per rimetterti in strada più velocemente.",
     pillars: [
       { 
-        title: "Myofascial Release", 
-        description: "Using foam rollers and massage guns to break up adhesions and improve local blood flow." 
+        title: "Rilascio Miofasciale", 
+        description: "Utilizzo di foam roller e pistole massaggianti per sciogliere le aderenze e migliorare il flusso sanguigno locale." 
       },
       { 
-        title: "Compression Physics", 
-        description: "Graduated pressure to assist venous return and reduce swelling post-race or during long travel." 
+        title: "Fisica della Compressione", 
+        description: "Pressione graduata per favorire il ritorno venoso e ridurre il gonfiore post-gara o durante i lunghi viaggi." 
       },
       { 
-        title: "Targeted Mobility", 
-        description: "Tools for specific trigger points, like the plantar fascia, which are critical for runners." 
+        title: "Mobilità Mirata", 
+        description: "Strumenti per punti trigger specifici, come la fascia plantare, che sono critici per i runner." 
       }
     ]
   },
   apparel: {
     id: "apparel",
-    title: "Technical Apparel",
-    scientificTitle: "Thermoregulation & Friction Management",
-    scientificDescription: "Technical fabrics work with your body to manage heat and moisture, preventing both overheating and hypothermia.",
+    title: "Abbigliamento Tecnico",
+    scientificTitle: "Termoregolazione e Gestione degli Sfregamenti",
+    scientificDescription: "I tessuti tecnici lavorano con il tuo corpo per gestire il calore e l'umidità, prevenendo sia il surriscaldamento che l'ipotermia.",
     pillars: [
       { 
-        title: "Moisture Wicking", 
-        description: "Capillary action of synthetic fibers to move sweat away from the skin to the fabric surface." 
+        title: "Traspirabilità", 
+        description: "Azione capillare delle fibre sintetiche per allontanare il sudore dalla pelle verso la superficie del tessuto." 
       },
       { 
-        title: "Seam Engineering", 
-        description: "Flat-lock seams and laser cutting to eliminate chafing points during repetitive motions." 
+        title: "Ingegneria delle Cuciture", 
+        description: "Cuciture piatte e taglio laser per eliminare i punti di sfregamento durante i movimenti ripetitivi." 
       },
       { 
-        title: "Environmental Shield", 
-        description: "Membranes like GORE-TEX that offer absolute waterproofness with high vapor permeability." 
+        title: "Protezione Ambientale", 
+        description: "Membrane come il GORE-TEX che offrono impermeabilità assoluta con un'alta permeabilità al vapore." 
       }
     ]
   },
   gear: {
     id: "gear",
-    title: "Performance Gear",
-    scientificTitle: "Biomechanical Efficiency & Connectivity",
-    scientificDescription: "Running gear should disappear during the run while providing critical data or infrastructure. We analyze durability, weight-to-utility ratio, and interface speed.",
+    title: "Attrezzatura Performance",
+    scientificTitle: "Efficienza Biomeccanica e Connettività",
+    scientificDescription: "L'attrezzatura da corsa dovrebbe sparire durante la corsa, fornendo al contempo dati critici o infrastruttura. Analizziamo durata, rapporto peso-utilità e velocità dell'interfaccia.",
     pillars: [
       { 
-        title: "Weight/Utility Ratio", 
-        description: "Every gram must justify its presence. Whether it's a 10L vest or a 40g sensor, efficiency is key." 
+        title: "Rapporto Peso/Utilità", 
+        description: "Ogni grammo deve giustificare la sua presenza. Che si tratti di uno zaino da 10L o di un sensore da 40g, l'efficienza è la chiave." 
       },
       { 
-        title: "Connectivity", 
-        description: "Focus on ecosystem compatibility (ANT+, Bluetooth) and data fidelity for precise training metrics." 
+        title: "Connettività", 
+        description: "Focus sulla compatibilità dell'ecosistema (ANT+, Bluetooth) e sulla fedeltà dei dati per metriche di allenamento precise." 
       },
       { 
-        title: "Mechanical Durability", 
-        description: "Resistance to sweat, impact, and extreme weather. Gear that survives the trail is gear that justifies its cost." 
+        title: "Durata Meccanica", 
+        description: "Resistenza al sudore, agli urti e alle condizioni atmosferiche estreme. L'attrezzatura che sopravvive al trail è quella che giustifica il suo costo." 
       }
     ]
   }

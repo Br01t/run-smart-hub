@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideStretching from "@/assets/guide-stretching.webp";
 
 export const stretchingForRunners: GuideContent = {
-  title: "The Runner's Stretching Guide",
-  seoTitle: "Stretching for Runners 2026: Science of Mobility",
-  seoDescription: "Unlock your stride. Learn why static stretching before a run kills performance, the science of tendon stiffness, and the best post-run mobility routines.",
-  keywords: ["stretching for runners", "dynamic vs static stretching", "hip flexor mobility", "running flexibility", "prevent running injuries", "yoga for runners"],
-  description: "Dynamic vs static stretching: when to stretch, the best routines, and how flexibility impacts running efficiency.",
+  title: "La Guida allo Stretching per il Runner",
+  seoTitle: "Stretching per Runner 2026: La Scienza della Mobilità",
+  seoDescription: "Sblocca la tua falcata. Scopri perché lo stretching statico prima della corsa uccide la performance, la scienza della rigidità tendinea e le migliori routine di mobilità post-corsa.",
+  keywords: ["stretching per runner", "stretching dinamico vs statico", "mobilità flessori anca", "flessibilità corsa", "prevenire infortuni corsa", "yoga per runner"],
+  description: "Stretching dinamico vs statico: quando farlo, le migliori routine e come la flessibilità influisce sull'efficienza della corsa.",
   tags: ["recovery", "muscles", "running"],
   heroImage: guideStretching,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Dynamic stretching (potentiation) is mandatory before running to prime the nervous system",
-    "Static stretching before a run reduces 'Tendon Stiffness', which lowers energy return",
-    "Post-run static stretching triggers the Parasympathetic Nervous System for faster recovery",
-    "Targeted ankle and hip mobility are the foundation of an efficient stride",
+    "Lo stretching dinamico (potenziamento) è obbligatorio prima della corsa per preparare il sistema nervoso",
+    "Lo stretching statico prima della corsa riduce la 'Rigidità Tendinea', diminuendo il ritorno elastico",
+    "Lo stretching statico post-corsa attiva il Sistema Nervoso Parasimpatico per un recupero più rapido",
+    "La mobilità mirata di caviglia e anca è la base di una falcata efficiente",
   ],
   relatedTools: [
-    { to: "/tools/bmi", label: "BMI Calculator" },
-    { to: "/tools/protein", label: "Protein Calculator" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "muscle-recovery", label: "Recupero Muscolare dopo la Corsa" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: The Stretch-Shortening Cycle", 
-      body: "Running is a series of explosive jumps. Your tendons act like rubber bands, storing and releasing elastic energy via the Stretch-Shortening Cycle (SSC). \n\n**The Tendon Stiffness Paradox:** To be an efficient runner, you actually want *stiff* tendons. High tendon stiffness allows for faster energy transfer and better Running Economy. Static stretching (holding a position) before a run 'softens' these springs, measurably reducing your power output and speed. Pre-run mobility must be **Dynamic** to increase blood flow without blunting the elastic recoil.", 
+      heading: "La Scienza: Il Ciclo Allungamento-Accorciamento", 
+      body: "La corsa è una serie di salti esplosivi. I tuoi tendini agiscono come elastici, immagazzinando e rilasciando energia elastica tramite il Ciclo Allungamento-Accorciamento (SSC). \n\n**Il Paradosso della Rigidità Tendinea:** Per essere un runner efficiente, in realtà vuoi tendini *rigidi*. Un'elevata rigidità tendinea permette un trasferimento di energia più veloce e una migliore Economia di Corsa. Lo stretching statico (mantenere una posizione) prima di correre 'ammorbidisce' queste molle, riducendo misurabilmente la tua potenza e velocità. La mobilità pre-corsa deve essere **Dinamica** per aumentare il flusso sanguigno senza smorzare il ritorno elastico.", 
       variant: "highlight" 
     },
     { 
-      heading: "Creep & Plastic Deformation", 
-      body: "To actually increase the resting length of a muscle or fascia, you must apply low-load stress over time. This is known as 'Creep'. \n\n- **The 30-60 Second Rule:** Static stretching for less than 20 seconds only provides temporary neural relaxation. To achieve 'Plastic Deformation' (permanent change in tissue length), you must hold a stretch for at least 45-60 seconds in a relaxed, post-run state. This is when the collagen fibers in the fascia begin to realign.", 
+      heading: "Creep e Deformazione Plastica", 
+      body: "Per aumentare effettivamente la lunghezza a riposo di un muscolo o della fascia, è necessario applicare uno stress a basso carico nel tempo. Questo fenomeno è noto come 'Creep'. \n\n- **La Regola dei 30-60 Secondi:** Lo stretching statico per meno di 20 secondi fornisce solo un rilassamento neurale temporaneo. Per ottenere una 'Deformazione Plastica' (cambiamento permanente nella lunghezza del tessuto), è necessario mantenere lo stretch per almeno 45-60 secondi in uno stato rilassato post-corsa. È in questo momento che le fibre di collagene nella fascia iniziano a riallinearsi.", 
       variant: "default" 
     },
     { 
-      heading: "Neural Flossing & Reciprocal Inhibition", 
-      body: "Many runners feel 'tight hamstrings' that never seem to loosen. This is often not a muscle issue, but a **Neural Tension** issue. \n\n- **Neural Flossing:** Techniques that slide the sciatic nerve through the soft tissue can resolve 'tightness' that traditional stretching cannot touch. \n- **Reciprocal Inhibition:** By contracting the glutes during a hip flexor stretch, you force the brain to send a 'relax' signal to the psoas, making the stretch significantly more effective.", 
+      heading: "Neural Flossing e Inibizione Reciproca", 
+      body: "Molti runner sentono i 'femorali contratti' che sembrano non allentarsi mai. Spesso non è un problema muscolare, ma di **Tensione Neurale**. \n\n- **Neural Flossing:** Tecniche che fanno 'scivolare' il nervo sciatico attraverso il tessuto molle possono risolvere una 'tensione' che lo stretching tradizionale non può toccare. \n- **Inibizione Reciproca:** Contraendo i glutei durante uno stretch dei flessori dell'anca, costringi il cervello a inviare un segnale di 'rilassamento' allo psoas, rendendo l'allungamento significativamente più efficace.", 
       variant: "default", 
       listItems: [
-        "Ankle Dorsiflexion: Essential for preventing shin splints and Achilles tendonitis", 
-        "Thoracic Mobility: An open chest allows for maximal lung expansion during hard efforts", 
-        "Fascial Hydration: Movement and stretching help move fluid through the extracellular matrix",
-        "Parasympathetic Shift: Post-run stretching signals the body to stop producing cortisol."
+        "Dorsiflessione della Caviglia: essenziale per prevenire periostite e tendinite d'Achille", 
+        "Mobilità Toracica: un torace aperto permette la massima espansione polmonare durante gli sforzi intensi", 
+        "Idratazione Fasciale: il movimento e lo stretching aiutano a muovere i fluidi attraverso la matrice extracellulare",
+        "Passaggio al Parasimpatico: lo stretching post-corsa segnala al corpo di smettere di produrre cortisolo."
       ] 
     },
     {
-      heading: "Pre-Run Warning: No Static Holds",
-      body: "Research shows that static stretching for more than 60 seconds per muscle group before an explosive activity can reduce strength by up to 5-10%. Save the long holds for the evening or post-run cool down.",
+      heading: "Avviso Pre-Corsa: Niente Tenute Statiche",
+      body: "Ricerche mostrano che lo stretching statico per più di 60 secondi per gruppo muscolare prima di un'attività esplosiva può ridurre la forza del 5-10%. Riserva le tenute lunghe per la sera o per il defaticamento post-corsa.",
       variant: "warning"
     },
     {
-      heading: "The 2-Minute Deep Squat",
-      body: "The single best exercise for runner mobility is the 'Deep Squat' hold. Spending 2 minutes a day in a relaxed squat opens the hips, stretches the lower back, and improves ankle dorsiflexion simultaneously.",
+      heading: "Il Deep Squat di 2 Minuti",
+      body: "Il miglior esercizio singolo per la mobilità del runner è il 'Deep Squat'. Passare 2 minuti al giorno in uno squat profondo e rilassato apre le anche, allunga la zona lombare e migliora simultaneamente la dorsiflessione della caviglia.",
       variant: "tip"
     },
     { 
-      heading: "Daily Mobility Checklist", 
-      body: "A structured routine to keep your kinetic chain moving freely.", 
+      heading: "Checklist Mobilità Quotidiana", 
+      body: "Una routine strutturata per mantenere la tua catena cinetica libera di muoversi.", 
       variant: "checklist", 
       listItems: [
-        "Dynamic (Pre-Run): 10x Leg Swings (Front/Side), 10x Walking Lunges, 20x Calf Bounces.", 
-        "Static (Post-Run): 60s Couch Stretch (Hips), 60s Pigeon Pose (Glutes), 60s Calf Stretch.", 
-        "Neural (Evening): 10x Sciatic Nerve Glides per leg to maintain nerve mobility.", 
-        "Breathing: Always exhale *into* the stretch to lower muscle spindle sensitivity.",
-        "Consistency: 5 minutes every day is 100x better than 60 minutes once a month."
+        "Dinamico (Pre-Corsa): 10 slanci gambe (Avanti/Lat), 10 affondi camminati, 20 rimbalzi sui polpacci.", 
+        "Statico (Post-Corsa): 60s Couch Stretch (Anche), 60s Pigeon Pose (Glutei), 60s stretch polpacci.", 
+        "Neurale (Sera): 10 'scivolamenti' del nervo sciatico per gamba per mantenere la mobilità nervosa.", 
+        "Respirazione: espira sempre *durante* l'allungamento per abbassare la sensibilità dei fusi muscolari.",
+        "Costanza: 5 minuti ogni giorno sono 100 volte meglio di 60 minuti una volta al mese."
       ] 
     },
   ],

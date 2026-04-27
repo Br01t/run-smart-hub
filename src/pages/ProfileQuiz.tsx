@@ -27,11 +27,11 @@ const ProfileQuiz = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Quiz",
-    "name": "Runner Profile Quiz",
-    "description": "Take the Runner Profile Quiz to get personalized recommendations for training, nutrition and gear based on your goals and experience.",
+    "name": "Quiz del Runner",
+    "description": "Fai il Quiz del Runner per ricevere raccomandazioni personalizzate su allenamento, nutrizione e attrezzatura in base ai tuoi obiettivi e alla tua esperienza.",
     "url": "https://www.runners-hub.org/quiz",
     "provider": { "@type": "Organization", "name": "Runners Hub", "url": "https://www.runners-hub.org" },
-    "about": { "@type": "Thing", "name": "Running Training" },
+    "about": { "@type": "Thing", "name": "Allenamento Corsa" },
     "educationalLevel": "beginner",
     "numberOfQuestions": questions.length,
   };
@@ -39,8 +39,8 @@ const ProfileQuiz = () => {
   return (
     <Layout>
       <SEO
-        title="Runner Profile Quiz — Personalized Training & Gear Plan"
-        description="Answer 5 questions to discover your runner archetype and get personalized recommendations for training, nutrition, supplements and gear."
+        title="Quiz del Runner — Piano di Allenamento e Attrezzatura Personalizzato"
+        description="Rispondi a 5 domande per scoprire il tuo archetipo di runner e ricevere raccomandazioni personalizzate per allenamento, nutrizione, integratori e attrezzatura."
         path="/quiz"
         schema={jsonLd}
       />
@@ -53,7 +53,7 @@ const ProfileQuiz = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-primary" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Runner Quiz</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Quiz del Runner</span>
                 </div>
                 <span className="text-xs font-medium text-muted-foreground">
                   {step + 1} / {questions.length}
@@ -89,7 +89,7 @@ const ProfileQuiz = () => {
                       onClick={() => setStep((s) => s - 1)}
                       className="mt-6 inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                     >
-                      <ArrowLeft className="h-4 w-4" /> Back
+                      <ArrowLeft className="h-4 w-4" /> Indietro
                     </motion.button>
                   )}
                 </motion.div>
@@ -98,6 +98,7 @@ const ProfileQuiz = () => {
           </div>
         </div>
       )}
+
 
       {/* Results View */}
       {done && profile && (

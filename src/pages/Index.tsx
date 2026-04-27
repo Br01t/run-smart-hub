@@ -16,8 +16,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Best Running Tools & Shoe Finder 2026"
-        description="Optimize your performance with science-based running calculators for hydration, nutrition, and recovery. Find the best running shoes and gear with our expert guides."
+        title="I Migliori Strumenti per la Corsa e Shoe Finder 2026"
+        description="Ottimizza la tua performance con calcolatori basati sulla scienza per idratazione, nutrizione e recupero. Trova le migliori scarpe e attrezzatura con le nostre guide esperte."
         path="/"
         schema={{
           "@context": "https://schema.org",
@@ -27,7 +27,7 @@ const Index = () => {
               "@id": "https://www.runners-hub.org/#website",
               "url": "https://www.runners-hub.org",
               "name": "Runners Hub",
-              "description": "Science-backed tools and gear recommendations for runners.",
+              "description": "Strumenti basati sulla scienza e raccomandazioni di attrezzatura per runner.",
               "publisher": { "@id": "https://www.runners-hub.org/#organization" }
             },
             {
@@ -36,7 +36,7 @@ const Index = () => {
               "name": "Runners Hub",
               "url": "https://www.runners-hub.org",
               "logo": { "@type": "ImageObject", "url": "https://www.runners-hub.org/favicon.ico" },
-              "description": "Runners Hub provides evidence-based calculators and unbiased gear reviews for runners of all levels."
+              "description": "Runners Hub fornisce calcolatori basati sulle evidenze e recensioni imparziali per runner di ogni livello."
             },
             {
               "@type": "FAQPage",
@@ -64,7 +64,7 @@ const Index = () => {
       <section className="border-t border-border bg-muted/30 px-4 py-6">
         <div className="container mx-auto max-w-3xl text-center">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            <strong className="text-foreground/70">Affiliate Disclosure:</strong> Runners Hub is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. This helps us keep our tools free and independent. Our recommendations are always based on science and performance data, never on sponsorship.
+            <strong className="text-foreground/70">Informativa Affiliazione:</strong> Runners Hub è supportato dal suo pubblico. Quando acquisti tramite i link sul nostro sito, potremmo guadagnare una commissione di affiliazione. Questo ci aiuta a mantenere i nostri strumenti gratuiti e indipendenti. Le nostre raccomandazioni si basano sempre sulla scienza e sui dati di performance, mai su sponsorizzazioni.
           </p>
         </div>
       </section>
@@ -76,28 +76,29 @@ const Index = () => {
         <div className="pointer-events-none absolute inset-0 texture-noise" />
         <div className="relative container mx-auto px-4 py-16 text-center sm:py-20">
           <Compass className="mx-auto mb-4 h-7 w-7 text-primary-foreground/60" />
-          <h2 className="font-display text-display-md font-bold text-primary-foreground">Ready to run smarter?</h2>
+          <h2 className="font-display text-display-md font-bold text-primary-foreground">Pronto a correre meglio?</h2>
           <p className="mx-auto mt-3 max-w-md text-primary-foreground/70">
-            Start with any tool, take the quiz, or browse our product hubs — everything is free, no account required.
+            Inizia con uno strumento, fai il quiz o esplora i nostri hub prodotti: tutto è gratuito, nessun account richiesto.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               to="/tools"
               className="inline-flex items-center gap-2 rounded-lg bg-background px-6 py-3 text-sm font-bold text-foreground transition-all hover:shadow-float"
             >
-              All Tools <ArrowRight className="h-4 w-4" />
+              Tutti gli Strumenti <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/quiz"
               className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/25 px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-foreground/10"
             >
-              Take the Quiz
+              Fai il Quiz
             </Link>
           </div>
         </div>
       </section>
 
       <ZoneRunBanner variant="fullwidth" />
+
     </Layout>
   );
 };

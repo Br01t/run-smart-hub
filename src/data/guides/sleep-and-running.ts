@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideSleepRecovery from "@/assets/guide-sleep-recovery.webp";
 
 export const sleepAndRunning: GuideContent = {
-  title: "Sleep & Running Performance: The Science",
-  seoTitle: "Sleep for Runners 2026: The Ultimate Recovery Guide",
-  seoDescription: "Sleep is the most powerful performance enhancer. Learn how deep sleep repairs muscles, resets hormones, and why 8 hours is the minimum for athletes.",
-  keywords: ["sleep for runners", "running recovery sleep", "deep sleep muscle repair", "glymphatic system running", "sleep deprivation performance", "athletic sleep hygiene"],
-  description: "Why sleep is the most powerful (and free) performance enhancer for runners. Learn how sleep quality affects recovery, injury risk, and race-day performance.",
+  title: "Sonno e Performance nella Corsa: La Scienza",
+  seoTitle: "Sonno per Runner 2026: La Guida Definitiva al Recupero",
+  seoDescription: "Il sonno è il più potente potenziatore di prestazioni. Scopri come il sonno profondo ripara i muscoli, resetta gli ormoni e perché 8 ore sono il minimo per gli atleti.",
+  keywords: ["sonno per runner", "recupero corsa sonno", "riparazione muscolare sonno profondo", "sistema glinfatico corsa", "performance privazione sonno", "igiene del sonno atleti"],
+  description: "Perché il sonno è il più potente (e gratuito) potenziatore di prestazioni per i runner. Scopri come la qualità del sonno influisce sul recupero, sul rischio di infortuni e sulla performance in gara.",
   tags: ["recovery", "protein", "muscles"],
   heroImage: guideSleepRecovery,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Growth Hormone (GH) is almost exclusively released during N3 Deep Sleep",
-    "Sleep deprivation increases perceived exertion (RPE)—making the same pace feel harder",
-    "The Glymphatic System cleanses metabolic waste from the brain during sleep",
-    "Banking sleep (9+ hours) before a race buffers the effects of pre-race insomnia",
+    "L'Ormone della Crescita (GH) viene rilasciato quasi esclusivamente durante il sonno profondo N3",
+    "La privazione del sonno aumenta lo sforzo percepito (RPE)—rendendo lo stesso ritmo più faticoso",
+    "Il sistema glinfatico pulisce i rifiuti metabolici dal cervello durante il sonno",
+    "Accumulare ore di sonno (9+ ore) prima di una gara mitiga gli effetti dell'insonnia pre-gara",
   ],
   relatedTools: [
-    { to: "/tools/protein", label: "Protein Calculator" },
-    { to: "/tools/hydration", label: "Hydration Calculator" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
-    { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
+    { slug: "muscle-recovery", label: "Recupero Muscolare dopo la Corsa" },
+    { slug: "running-nutrition", label: "Nutrizione Corsa: Cosa Mangiare" },
   ],
   sections: [
     { 
-      heading: "The Science: The Anabolic Window", 
-      body: "Sleep is not passive; it is an active state of physiological reconstruction. During 'Slow Wave' sleep (N3), your body enters its most powerful anabolic state. The pituitary gland releases massive pulses of Growth Hormone (GH) and Testosterone, which are essential for muscle fiber repair, bone remodeling, and systemic inflammation reduction. \n\n**The Glymphatic Flush:** During sleep, the space between brain cells increases, allowing cerebrospinal fluid to wash away metabolic waste (like beta-amyloid). For a runner, this 'brain cleaning' is critical for maintaining the mental focus and reaction times needed for technical trail running or high-speed racing.", 
+      heading: "La Scienza: La Finestra Anabolica", 
+      body: "Il sonno non è passivo; è uno stato attivo di ricostruzione fisiologica. Durante il sonno a 'onde lente' (N3), il tuo corpo entra nel suo stato anabolico più potente. L'ipofisi rilascia massicci impulsi di Ormone della Crescita (GH) e Testosterone, essenziali per la riparazione delle fibre muscolari, il rimodellamento osseo e la riduzione dell'infiammazione sistemica. \n\n**Il Lavaggio Glinfatico:** Durante il sonno, lo spazio tra le cellule cerebrali aumenta, permettendo al liquido cerebrospinale di lavare via i rifiuti metabolici (come la beta-amiloide). Per un runner, questa 'pulizia del cervello' è fondamentale per mantenere il focus mentale e i tempi di reazione necessari per il trail running tecnico o le gare ad alta velocità.", 
       variant: "highlight" 
     },
     { 
-      heading: "Hormonal Balance: Cortisol vs. Recovery", 
-      body: "Chronic sleep loss (under 7 hours) flips your hormonal profile from 'Build' to 'Breakdown'. \n\n- **Cortisol Spike:** Lack of sleep elevates nighttime cortisol, which blocks the uptake of glucose into the muscles. \n- **Glycogen Impairment:** Research suggests that even one night of restricted sleep can impair glycogen resynthesis by up to 20%. This means that even if you 'carb-load' correctly, your body cannot efficiently store that energy without adequate sleep.", 
+      heading: "Equilibrio Ormonale: Cortisolo vs Recupero", 
+      body: "La perdita cronica di sonno (sotto le 7 ore) sposta il tuo profilo ormonale da 'Costruzione' a 'Demolizione'. \n\n- **Picco di Cortisolo:** La mancanza di sonno eleva il cortisolo notturno, che blocca l'assorbimento del glucosio nei muscoli. \n- **Compromissione del Glicogeno:** Ricerche suggeriscono che anche una sola notte di sonno limitato può compromettere la risintesi del glicogeno fino al 20%. Ciò significa che anche se fai il 'carico di carboidrati' correttamente, il tuo corpo non può immagazzinare quell'energia in modo efficiente senza un sonno adeguato.", 
       variant: "default" 
     },
     { 
-      heading: "Sleep Architecture for Athletes", 
-      body: "Endurance athletes have higher-than-average sleep needs due to the cognitive and physical load of training. \n\n- **Physical Repair (N3):** Occurs mostly in the first half of the night. If you go to bed late, you miss your primary physical recovery window. \n- **Mental Consolidation (REM):** Occurs mostly in the second half of the night. If you wake up too early for a run, you cut off your mental recovery, leading to brain fog and poor pacing strategy.", 
+      heading: "Architettura del Sonno per Atleti", 
+      body: "Gli atleti di endurance hanno esigenze di sonno superiori alla media a causa del carico cognitivo e fisico dell'allenamento. \n\n- **Riparazione Fisica (N3):** Avviene principalmente nella prima metà della notte. Se vai a letto tardi, perdi la tua principale finestra di recupero fisico. \n- **Consolidamento Mentale (REM):** Avviene principalmente nella seconda metà della notte. Se ti svegli troppo presto per correre, tagli fuori il tuo recupero mentale, portando a nebbia cerebrale e scarse strategie di ritmo.", 
       variant: "default", 
       listItems: [
-        "Protein Synthesis: Muscles repair 3x faster during deep sleep than while awake", 
-        "Injury Risk: Runners sleeping <7h are 1.7x more likely to sustain an injury", 
-        "Endurance Ceiling: Sleep loss reduces 'Time to Exhaustion' by an average of 11%",
-        "Thermoregulation: Your body temp must drop 1°C to trigger the sleep cycle."
+        "Sintesi Proteica: i muscoli si riparano 3 volte più velocemente durante il sonno profondo rispetto a quando sei sveglio", 
+        "Rischio Infortuni: i runner che dormono <7 ore hanno 1,7 volte più probabilità di subire un infortunio", 
+        "Soffitto di Endurance: la perdita di sonno riduce il 'Tempo all'Esaurimento' in media dell'11%",
+        "Termoregolazione: la temperatura corporea deve calare di 1°C per innescare il ciclo del sonno."
       ] 
     },
     {
-      heading: "Sleep Extension: The Legal PED",
-      body: "Research on collegiate athletes shows that extending sleep to 9-10 hours per night for several weeks leads to faster sprint times, better shooting accuracy, and significantly lower RPE (Relative Perceived Exertion). If you want to run faster, go to bed earlier.",
+      heading: "Estensione del Sonno: Il Doping Legale",
+      body: "Ricerche su atleti universitari mostrano che estendere il sonno a 9-10 ore a notte per diverse settimane porta a tempi di scatto più veloci, migliore precisione e un RPE (Sforzo Percepito) significativamente più basso. Se vuoi correre più veloce, vai a letto prima.",
       variant: "tip"
     },
     {
-      heading: "The Alcohol & Sleep Trap",
-      body: "While alcohol may help you fall asleep faster, it completely destroys sleep quality by suppressing REM sleep and increasing heart rate variability (HRV) stress. A post-run beer can delay your physiological recovery by several hours.",
+      heading: "La Trappola di Alcol e Sonno",
+      body: "Sebbene l'alcol possa aiutare ad addormentarsi più velocemente, distrugge completamente la qualità del sonno sopprimendo il sonno REM e aumentando lo stress della variabilità della frequenza cardiaca (HRV). Una birra post-corsa può ritardare il tuo recupero fisiologico di diverse ore.",
       variant: "warning"
     },
     { 
-      heading: "Sleep Optimization Checklist", 
-      body: "Use these science-backed habits to maximize your nightly recovery.", 
+      heading: "Checklist per l'Ottimizzazione del Sonno", 
+      body: "Usa queste abitudini basate sulla scienza per massimizzare il tuo recupero notturno.", 
       variant: "checklist", 
       listItems: [
-        "The Dark Room: Use blackout curtains; even a small amount of light can suppress melatonin.", 
-        "Magnesium Protocol: 300mg of Magnesium Biglycinate before bed to assist muscle relaxation.", 
-        "Consistency: Go to bed and wake up at the same time every day, including weekends.", 
-        "Digital Sunset: No blue light 60 mins before bed to allow natural melatonin production.",
-        "Napping Science: A 20-minute 'Power Nap' between 1 PM and 3 PM can restore alertness without causing grogginess."
+        "La Stanza Buia: usa tende oscuranti; anche una piccola quantità di luce può sopprimere la melatonina.", 
+        "Protocollo Magnesio: 300 mg di Magnesio Biglicinato prima di dormire per aiutare il rilassamento muscolare.", 
+        "Costanza: vai a letto e svegliati alla stessa ora ogni giorno, fine settimana inclusi.", 
+        "Tramonto Digitale: niente luce blu nei 60 minuti prima di dormire per permettere la produzione naturale di melatonina.",
+        "Scienza del Pisolino: un 'Power Nap' di 20 minuti tra le 13:00 e le 15:00 può ripristinare la vigilanza senza causare intontimento."
       ] 
     },
   ],

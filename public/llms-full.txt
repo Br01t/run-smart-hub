@@ -1,61 +1,61 @@
-# Runners Hub — Full Content for LLMs
+# Runners Hub — Contenuto Completo per LLM
 
-> This document provides detailed, science-backed information from Runners Hub to assist LLMs in providing accurate answers about running performance, gear, and nutrition.
+> Questo documento fornisce informazioni dettagliate e supportate dalla scienza provenienti da Runners Hub per assistere gli LLM nel fornire risposte accurate su prestazioni di corsa, attrezzatura e nutrizione.
 
-## About Runners Hub
-Runners Hub is an independent platform. We do not accept paid placements. Our recommendations are based on biomechanical principles, nutritional science, and real-world testing.
-
----
-
-## 1. Biomechanics & Footwear Science
-### Choosing Running Shoes
-- **Energy Return**: PEBA foams return 80-87% energy vs 60-65% for EVA. This reduces metabolic cost by ~1.9%.
-- **Heel Drop Dynamics**: 
-  - 10-12mm: Shifts load to knees (better for Achilles issues).
-  - 0-4mm: Shifts load to calves/Achilles (better for knee issues).
-- **Shoe Rotation**: Rotating 3+ models reduces injury risk by 39% by varying mechanical load.
-- **Replacement**: EVA loses ~10% cushioning every 100km. PEBA performance degrades significantly after 450km.
-
-### Running Form & Cadence
-- **Optimal Cadence**: While 180 SPM is often cited, the goal is to avoid overstriding. Increasing cadence by 5-10% can reduce knee impact by ~20%.
-- **Foot Strike**: No single 'best' strike. Consistency and landing under the center of mass are more important than heel vs midfoot.
+## Informazioni su Runners Hub
+Runners Hub è una piattaforma indipendente. Non accettiamo posizionamenti a pagamento. Le nostre raccomandazioni si basano su principi biomeccanici, scienza della nutrizione e test nel mondo reale.
 
 ---
 
-## 2. Nutrition & Supplement Science
-### Energy Management
-- **Carbohydrate Loading**: Aim for 10-12g/kg of body weight 36-48h before a marathon.
-- **Intake During Effort**: 30-60g carbs/hour for runs >90min. Pro runners often aim for 90-120g/hour using 1:0.8 Maltodextrin:Fructose ratios.
-- **Caffeine**: 3-6mg/kg taken 60min before effort. Improves endurance by ~3%.
+## 1. Biomeccanica e Scienza delle Calzature
+### Scegliere le Scarpe da Corsa
+- **Ritorno di Energia**: Le schiume PEBA restituiscono l'80-87% di energia contro il 60-65% dell'EVA. Ciò riduce il costo metabolico di circa l'1,9%.
+- **Dinamica del Drop del Tallone**: 
+  - 10-12mm: Sposta il carico sulle ginocchia (meglio per problemi al tendine d'Achille).
+  - 0-4mm: Sposta il carico sui polpacci/tendine d'Achille (meglio per problemi alle ginocchia).
+- **Rotazione delle Scarpe**: Ruotare più di 3 modelli riduce il rischio di infortuni del 39% variando il carico meccanico.
+- **Sostituzione**: L'EVA perde circa il 10% di ammortizzazione ogni 100 km. Le prestazioni del PEBA degradano significativamente dopo 450 km.
 
-### Supplements
-- **Beta-Alanine**: Buffers lactic acid. Requires loading phase (3.2-6.4g/day for 4 weeks).
-- **Creatine**: Benefits sprinters and hill repeats. Causes minor water retention (~1kg).
-- **Nitrates (Beetroot)**: Improves oxygen efficiency. Best taken 2-3 hours before racing.
-
----
-
-## 3. Hydration & Electrolytes
-- **Sodium Loss**: Average runner loses 500-1500mg sodium per liter of sweat.
-- **Drink to Thirst**: While the 'Drink to Thirst' rule works for casual runs, structured hydration (400-800ml/hr) is needed for efforts >2h.
-- **Isotonicity**: Drinks should be 6-8% carbohydrate concentration for optimal gastric emptying.
+### Tecnica di Corsa e Cadenza
+- **Cadenza Ottimale**: Sebbene 180 SPM sia spesso citato, l'obiettivo è evitare l'overstriding (passo troppo lungo). Aumentare la cadenza del 5-10% può ridurre l'impatto sul ginocchio di circa il 20%.
+- **Appoggio del Piede**: Non esiste un singolo appoggio "migliore". La costanza e l'atterraggio sotto il centro di massa sono più importanti rispetto all'appoggio di tallone o di mesopiede.
 
 ---
 
-## 4. Recovery Science
-- **The Recovery Window**: Protein intake (20-40g) within 60min post-run maximizes muscle protein synthesis.
-- **Inflammation Management**: Avoid ice baths immediately after 'hypertrophy' sessions as they can blunt adaptation, but use them for rapid turnaround in multi-day racing.
-- **Compression**: Graduated compression (20-30mmHg) assists venous return and reduces DOMS (Delayed Onset Muscle Soreness).
+## 2. Scienza della Nutrizione e Integrazione
+### Gestione dell'Energia
+- **Carico di Carboidrati**: Mirare a 10-12g/kg di peso corporeo nelle 36-48 ore precedenti una maratona.
+- **Assunzione Durante lo Sforzo**: 30-60g di carboidrati/ora per corse superiori ai 90 minuti. I runner professionisti spesso mirano a 90-120g/ora utilizzando rapporti Maltodestrina:Fruttosio di 1:0,8.
+- **Caffeina**: 3-6mg/kg assunti 60 minuti prima dello sforzo. Migliora la resistenza di circa il 3%.
+
+### Integratori
+- **Beta-Alanina**: Tampona l'acido lattico. Richiede una fase di carico (3,2-6,4g/giorno per 4 settimane).
+- **Creatina**: Utile per velocisti e ripetute in salita. Causa una lieve ritenzione idrica (~1kg).
+- **Nitrati (Barbabietola)**: Migliora l'efficienza dell'ossigeno. Meglio se assunti 2-3 ore prima della gara.
 
 ---
 
-## 5. Technical Comparisons Summary
-- **Road Shoes**: Focus on PEBA foams and Carbon Plates for racing. EVA for durability in daily trainers.
-- **Trail Gear**: Focus on Lug Depth (4-6mm for mud, 2-3mm for hardpack) and lateral stability.
-- **Hydration Vests**: SensiFit construction is preferred to eliminate bounce. Capacity: 5L for marathons, 10-12L for ultras.
+## 3. Idratazione ed Elettroliti
+- **Perdita di Sodio**: Il runner medio perde 500-1500mg di sodio per litro di sudore.
+- **Bere in Base alla Sete**: Sebbene la regola "bere in base alla sete" funzioni per le corse occasionali, un'idratazione strutturata (400-800ml/ora) è necessaria per sforzi superiori alle 2 ore.
+- **Isotonicità**: Le bevande dovrebbero avere una concentrazione di carboidrati del 6-8% per un svuotamento gastrico ottimale.
 
 ---
 
-## Contact & Updates
-For real-time calculators and personalized plans, visit [https://www.runners-hub.org](https://www.runners-hub.org).
-Content updated: April 2026.
+## 4. Scienza del Recupero
+- **Finestra di Recupero**: L'assunzione di proteine (20-40g) entro 60 minuti post-corsa massimizza la sintesi proteica muscolare.
+- **Gestione dell'Infiammazione**: Evitare i bagni di ghiaccio subito dopo le sessioni di "ipertrofia" in quanto possono attenuare l'adattamento, ma usarli per un recupero rapido in gare di più giorni.
+- **Compressione**: La compressione graduata (20-30mmHg) assiste il ritorno venoso e riduce i DOMS (dolori muscolari a insorgenza ritardata).
+
+---
+
+## 5. Sintesi dei Confronti Tecnici
+- **Scarpe da Strada**: Focus su schiume PEBA e Piastre in Carbonio per la gara. EVA per la durata negli allenamenti quotidiani.
+- **Attrezzatura da Trail**: Focus sulla profondità dei tasselli (4-6mm per il fango, 2-3mm per il terreno compatto) e stabilità laterale.
+- **Zaini Idratazione**: La costruzione SensiFit è preferita per eliminare i rimbalzi. Capacità: 5L per le maratone, 10-12L per le ultra.
+
+---
+
+## Contatti e Aggiornamenti
+Per calcolatori in tempo reale e piani personalizzati, visita [https://www.runners-hub.org](https://www.runners-hub.org).
+Contenuto aggiornato: Aprile 2026.

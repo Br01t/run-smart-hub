@@ -13,7 +13,7 @@ const GuideHeader = ({ guide }: GuideHeaderProps) => {
       {/* Breadcrumbs */}
       <nav className="mb-8 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground/60 transition-colors hover:text-primary">
         <Link to="/guides" className="flex items-center gap-1.5">
-          <ArrowLeft className="h-3.5 w-3.5" /> Back to Guides
+          <ArrowLeft className="h-3.5 w-3.5" /> Torna alle Guide
         </Link>
       </nav>
 

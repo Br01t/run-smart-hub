@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideInjury from "@/assets/guide-injury.webp";
 
 export const injuryPrevention: GuideContent = {
-  title: "Runner's Guide to Injury Prevention",
-  seoTitle: "Injury Prevention for Runners 2026: The Science of Load",
-  seoDescription: "Stay on the road with evidence-based injury prevention. Learn about the ACWR model, isometric tendon loading, and how to avoid the 'Overtraining Danger Zone'.",
-  keywords: ["running injury prevention", "ACWR model running", "isometric exercises for tendons", "RED-S in runners", "preventing stress fractures", "running biomechanics"],
-  description: "How to stay injury-free with smart training, strength work and proper recovery techniques.",
-  tags: ["recovery", "massage", "muscles", "shoes", "top-recovery-2026"],
+  title: "Guida del Runner alla Prevenzione degli Infortuni",
+  seoTitle: "Prevenzione Infortuni Corsa 2026: La Scienza del Carico",
+  seoDescription: "Resta in strada con la prevenzione infortuni basata sulle evidenze. Scopri il modello ACWR, il carico isometrico dei tendini e come evitare la 'Zona Pericolo Overtraining'.",
+  keywords: ["prevenzione infortuni corsa", "modello ACWR corsa", "esercizi isometrici tendini", "RED-S runner", "prevenire fratture da stress", "biomeccanica corsa"],
+  description: "Come rimanere lontani dagli infortuni con un allenamento intelligente, potenziamento e tecniche di recupero adeguate.",
+  tags: ["recupero", "massaggio", "muscoli", "scarpe", "top-recovery-2026"],
   heroImage: guideInjury,
-  readTime: "14 min read",
+  readTime: "14 min di lettura",
   keyTakeaways: [
-    "Manage your Acute:Chronic Workload Ratio (ACWR) between 0.8 and 1.3",
-    "Strength training (2-3x/week) reduces overuse injuries by nearly 50%",
-    "Tendons need 48-72h of 'low-load' time to remodel after hard efforts",
-    "Early detection of 'niggles' is the key to avoiding long-term layoffs",
+    "Gestisci il tuo Acute:Chronic Workload Ratio (ACWR) tra 0,8 e 1,3",
+    "L'allenamento della forza (2-3 volte/settimana) riduce gli infortuni da sovraccarico di quasi il 50%",
+    "I tendini hanno bisogno di 48-72 ore di tempo a 'basso carico' per rimodellarsi dopo sforzi intensi",
+    "La rilevazione precoce dei piccoli fastidi è la chiave per evitare lunghi stop",
   ],
   relatedTools: [
-    { to: "/tools/bmi", label: "BMI Calculator" },
-    { to: "/tools/protein", label: "Protein Calculator" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
-    { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
+    { slug: "muscle-recovery", label: "Recupero Muscolare dopo la Corsa" },
+    { slug: "choosing-running-shoes", label: "Come Scegliere le Scarpe da Corsa" },
   ],
   sections: [
     { 
-      heading: "The Science: Load-Capacity Balance", 
-      body: "Injury prevention is the science of managing 'Mechanical Load' versus 'Biological Capacity'. Every tissue (bone, tendon, muscle) has a load threshold. Injuries occur when that threshold is breached through sudden volume spikes or poor recovery.\n\n**The ACWR Model:** The 'Acute:Chronic Workload Ratio' is the most robust predictor of injury. Your weekly load (Acute) should be 0.8 to 1.3 times your average load over the last four weeks (Chronic). Ratios above 1.5 indicate a 'Danger Zone' where injury risk increases exponentially.", 
+      heading: "La Scienza: Equilibrio tra Carico e Capacità", 
+      body: "La prevenzione degli infortuni è la scienza della gestione del 'Carico Meccanico' rispetto alla 'Capacità Biologica'. Ogni tessuto (osso, tendine, muscolo) ha una soglia di carico. Gli infortuni si verificano quando tale soglia viene superata a causa di improvvisi picchi di volume o scarso recupero.\n\n**Il Modello ACWR:** L'Acute:Chronic Workload Ratio è il predittore più robusto degli infortuni. Il tuo carico settimanale (Acuto) dovrebbe essere da 0,8 a 1,3 volte il tuo carico medio delle ultime quattro settimane (Cronico). Rapporti superiori a 1,5 indicano una 'Zona di Pericolo' in cui il rischio di infortunio aumenta in modo esponenziale.", 
       variant: "highlight" 
     },
     { 
-      heading: "Tendon Health: Isometric Loading", 
-      body: "Tendons are not like muscles; they have low blood flow and remodel slowly. If you have a 'cranky' Achilles or patellar tendon, complete rest is often the wrong answer. \n\n- **Isometric Holds:** Holding a heavy calf raise or wall sit for 45 seconds creates an analgesic (pain-killing) effect and stimulates collagen alignment without the inflammatory stress of repetitive jumping/running. \n- **Eccentric Focus:** Slowing down the 'lowering' phase of strength exercises builds the structural integrity needed to handle the 3-8x bodyweight forces of running.", 
+      heading: "Salute dei Tendini: Carico Isometrico", 
+      body: "I tendini non sono come i muscoli; hanno un basso flusso sanguigno e si rimodellano lentamente. Se hai un tendine d'Achille o rotuleo infiammato, il riposo completo è spesso la risposta sbagliata. \n\n- **Tenute Isometriche:** Mantenere una posizione di calf raise o wall sit per 45 secondi crea un effetto analgesico e stimola l'allineamento del collagene senza lo stress infiammatorio di salti/corsa ripetitivi. \n- **Focus Eccentrico:** Rallentare la fase di 'discesa' degli esercizi di forza costruisce l'integrità strutturale necessaria per gestire forze pari a 3-8 volte il peso corporeo durante la corsa.", 
       variant: "default" 
     },
     { 
-      heading: "The Kinetic Chain & Muscle Synergies", 
-      body: "Most running injuries are 'referred'. Knee pain is often a hip/glute stability issue; plantar fasciitis is often a calf tightness issue. \n\n- **The Glute Medius:** This muscle controls the lateral stability of your pelvis. If it's weak, your knee collapses inward (Valgus), leading to IT Band Syndrome or Runner's Knee. \n- **Foot Core:** Your foot has intrinsic muscles that support the arch. 'Short foot' exercises and toe yoga are essential for runners using modern, high-stack shoes that may 'lazy' the foot's natural mechanics.", 
+      heading: "La Catena Cinetica e le Sinergie Muscolari", 
+      body: "La maggior parte degli infortuni nella corsa sono 'riflessi'. Il dolore al ginocchio è spesso un problema di stabilità dell'anca/gluteo; la fascite plantare è spesso legata a polpacci contratti. \n\n- **Il Gluteo Medio:** Questo muscolo controlla la stabilità laterale del bacino. Se è debole, il ginocchio collassa verso l'interno (Valgo), portando alla sindrome della bandelletta ileotibiale o al ginocchio del corridore. \n- **Foot Core:** Il piede ha muscoli intrinseci che supportano l'arco. Gli esercizi 'short foot' e lo yoga per le dita dei piedi sono essenziali per i runner che usano scarpe moderne con molta ammortizzazione che potrebbero 'pigrire' la meccanica naturale del piede.", 
       variant: "default", 
       listItems: [
-        "Unilateral Strength: Always train single-leg to fix side-to-side imbalances", 
-        "Cadence Fix: Increasing cadence by 5-10% reduces peak knee loading by ~20%", 
-        "Bone Stress: Ensure adequate Calcium and Vitamin D intake to support remodeling",
-        "Proprioception: Balance work on a foam pad reduces ankle sprain risk significantly."
+        "Forza Unilaterale: allenati sempre su una gamba sola per correggere gli squilibri", 
+        "Correzione della Cadenza: aumentare la cadenza del 5-10% riduce il carico sul ginocchio di circa il 20%", 
+        "Stress Osseo: assicura un apporto adeguato di Calcio e Vitamina D per supportare il rimodellamento",
+        "Propriocezione: il lavoro di equilibrio su pedane instabili riduce significativamente il rischio di distorsioni alla caviglia."
       ] 
     },
     {
-      heading: "RED-S: The Energy Availability Warning",
-      body: "Relative Energy Deficiency in Sport (RED-S) occurs when your caloric intake doesn't match your training output. This shuts down hormonal health, leading to low bone density and frequent stress fractures. If you are constantly fatigued or suffering from repeated bone issues, consult a sports dietitian immediately.",
+      heading: "RED-S: L'Avviso sulla Disponibilità Energetica",
+      body: "La Carenza Energetica Relativa nello Sport (RED-S) si verifica quando l'apporto calorico non corrisponde al dispendio energetico dell'allenamento. Questo compromette la salute ormonale, portando a una bassa densità ossea e a frequenti fratture da stress. Se sei costantemente affaticato o soffri di ripetuti problemi ossei, consulta immediatamente un dietista sportivo.",
       variant: "warning"
     },
     {
-      heading: "Niggle vs. Injury: The 24-Hour Rule",
-      body: "If a pain is 3/10 or higher and is still present the morning after a run, it's an injury. Stop immediately for 48-72 hours. If it disappears after a 10-minute warmup and stays at 1/10, it's likely a niggle that needs targeted mobility work.",
+      heading: "Fastidio vs Infortunio: La Regola delle 24 Ore",
+      body: "Se un dolore è pari a 3/10 o superiore ed è ancora presente il mattino dopo una corsa, è un infortunio. Fermati immediatamente per 48-72 ore. Se scompare dopo 10 minuti di riscaldamento e rimane a 1/10, è probabilmente un fastidio che necessita di mobilità mirata.",
       variant: "tip"
     },
     { 
-      heading: "Prevention Protocol: Actionable Checklist", 
-      body: "Integrate these habits into your weekly routine to stay bulletproof.", 
+      heading: "Protocollo di Prevenzione: Checklist Azionabile", 
+      body: "Integra queste abitudini nella tua routine settimanale per diventare 'a prova di proiettile'.", 
       variant: "checklist", 
       listItems: [
-        "ACWR Tracking: Never increase weekly mileage by more than 10-15%.", 
-        "Strength: 2x 30-min sessions focusing on Glutes, Hamstrings, and Calves.", 
-        "Dynamic Warmup: 5 mins of leg swings and 'zombie walks' before every run.", 
-        "Post-Run Mobility: Focus on Hip Flexors and TFL—the 'tight spots' for most runners.",
-        "Sleep Hygiene: 8+ hours. Tissue repair happens during deep sleep, not on the foam roller."
+        "Monitoraggio ACWR: non aumentare mai il chilometraggio settimanale di oltre il 10-15%.", 
+        "Forza: 2 sessioni da 30 minuti focalizzate su Glutei, Femorali e Polpacci.", 
+        "Riscaldamento Dinamico: 5 minuti di slanci e andature prima di ogni corsa.", 
+        "Mobilità Post-Corsa: focus su Flessori dell'Anca e TFL—i punti critici per molti runner.",
+        "Igiene del Sonno: 8+ ore. La riparazione dei tessuti avviene durante il sonno profondo, non sul foam roller."
       ] 
     },
   ],

@@ -53,7 +53,7 @@ const CookieConsent = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[9999] p-4" role="dialog" aria-label="Cookie consent">
+    <div className="fixed inset-x-0 bottom-0 z-[9999] p-4" role="dialog" aria-label="Consenso cookie">
       <div className="mx-auto max-w-2xl rounded-xl border border-border bg-background/95 shadow-xl backdrop-blur-md">
         <div className="p-4 sm:p-5">
           {/* Header */}
@@ -61,19 +61,19 @@ const CookieConsent = () => {
             <div className="flex items-center gap-2">
               <Cookie className="h-5 w-5 text-primary" aria-hidden="true" />
               <h2 className="font-display text-sm font-semibold text-foreground sm:text-base">
-                We value your privacy
+                Rispettiamo la tua privacy
               </h2>
             </div>
-            <button onClick={rejectAll} className="rounded-md p-1 text-muted-foreground hover:text-foreground" aria-label="Close">
+            <button onClick={rejectAll} className="rounded-md p-1 text-muted-foreground hover:text-foreground" aria-label="Chiudi">
               <X className="h-4 w-4" />
             </button>
           </div>
 
           <p className="mb-4 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-            We use cookies to enhance your experience, analyze site traffic, and support our affiliate partners.
-            You can customize your preferences or accept/reject all.{" "}
+            Utilizziamo i cookie per migliorare la tua esperienza, analizzare il traffico del sito e supportare i nostri partner di affiliazione.
+            Puoi personalizzare le tue preferenze o accettare/rifiutare tutto.{" "}
             <Link to="/privacy" className="text-primary underline underline-offset-2 hover:text-primary/80">
-              Privacy Policy
+              Informativa sulla Privacy
             </Link>
           </p>
 
@@ -82,16 +82,16 @@ const CookieConsent = () => {
             <div className="mb-4 space-y-3 rounded-lg border border-border bg-secondary/30 p-3">
               <label className="flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-medium text-foreground sm:text-sm">Essential</span>
-                  <p className="text-[11px] text-muted-foreground">Required for basic site functionality</p>
+                  <span className="text-xs font-medium text-foreground sm:text-sm">Essenziali</span>
+                  <p className="text-[11px] text-muted-foreground">Necessari per le funzionalità di base del sito</p>
                 </div>
-                <span className="text-xs text-muted-foreground">Always on</span>
+                <span className="text-xs text-muted-foreground">Sempre attivi</span>
               </label>
 
               <label className="flex cursor-pointer items-center justify-between">
                 <div>
-                  <span className="text-xs font-medium text-foreground sm:text-sm">Analytics</span>
-                  <p className="text-[11px] text-muted-foreground">Help us understand how visitors use the site</p>
+                  <span className="text-xs font-medium text-foreground sm:text-sm">Analitici</span>
+                  <p className="text-[11px] text-muted-foreground">Ci aiutano a capire come i visitatori usano il sito</p>
                 </div>
                 <input
                   type="checkbox"
@@ -104,7 +104,7 @@ const CookieConsent = () => {
               <label className="flex cursor-pointer items-center justify-between">
                 <div>
                   <span className="text-xs font-medium text-foreground sm:text-sm">Marketing</span>
-                  <p className="text-[11px] text-muted-foreground">Used by affiliate partners for referral tracking</p>
+                  <p className="text-[11px] text-muted-foreground">Utilizzati dai partner di affiliazione per il tracciamento dei rinvii</p>
                 </div>
                 <input
                   type="checkbox"
@@ -119,14 +119,14 @@ const CookieConsent = () => {
           {/* Actions */}
           <div className="flex flex-wrap items-center gap-2">
             <Button onClick={acceptAll} size="sm" className="flex-1 sm:flex-none">
-              Accept All
+              Accetta Tutti
             </Button>
             <Button onClick={rejectAll} variant="outline" size="sm" className="flex-1 sm:flex-none">
-              Reject All
+              Rifiuta Tutti
             </Button>
             {showDetails ? (
               <Button onClick={saveCustom} variant="secondary" size="sm" className="flex-1 sm:flex-none">
-                Save Preferences
+                Salva Preferenze
               </Button>
             ) : (
               <Button
@@ -136,7 +136,7 @@ const CookieConsent = () => {
                 className="flex-1 gap-1 sm:flex-none"
               >
                 <Settings className="h-3.5 w-3.5" />
-                Customize
+                Personalizza
               </Button>
             )}
           </div>

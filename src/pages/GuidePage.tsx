@@ -22,8 +22,8 @@ const GuidePage = () => {
     return (
       <Layout>
         <div className="container py-20 text-center">
-          <h1 className="text-2xl font-bold">Guide not found</h1>
-          <p className="mt-4 text-muted-foreground">The guide you are looking for does not exist or has been moved.</p>
+          <h1 className="text-2xl font-bold">Guida non trovata</h1>
+          <p className="mt-4 text-muted-foreground">La guida che stai cercando non esiste o è stata spostata.</p>
         </div>
       </Layout>
     );
@@ -85,15 +85,15 @@ const GuidePage = () => {
                     <BarChart3 className="h-10 w-10" />
                   </div>
                   <div>
-                    <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Ready to choose?</h2>
+                    <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">Pronto a scegliere?</h2>
                     <p className="mt-2 text-muted-foreground max-w-xl">
-                      Dive into our <strong>Technical Gear Hub</strong> to compare current market offerings based on the scientific principles discussed in this guide.
+                      Esplora il nostro <strong>Hub Tecnico</strong> per confrontare i prodotti sul mercato basandoti sui principi scientifici discussi in questa guida.
                     </p>
                     <Link 
                       to={`/hub#${guide.hubCategory}`}
                       className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
                     >
-                      View the {translateCategory(guide.hubCategory)} Hub <ArrowRight className="h-4 w-4" />
+                      Vai all'Hub {translateCategory(guide.hubCategory)} <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>

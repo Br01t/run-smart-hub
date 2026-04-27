@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideRecovery from "@/assets/guide-recovery.webp";
 
 export const muscleRecovery: GuideContent = {
-  title: "Muscle Recovery After Running",
-  seoTitle: "Muscle Recovery for Runners: 2026 Scientific Guide",
-  seoDescription: "Maximize training gains with evidence-based recovery. Learn about HRV, SMR, protein synthesis, and the science of deep sleep for elite performance.",
-  keywords: ["muscle recovery", "runner recovery", "HRV training", "foam rolling science", "post-run nutrition", "DOMS prevention"],
-  description: "Scientific strategies to recover faster: stretching, foam rolling, nutrition and sleep.",
-  tags: ["recovery", "massage", "protein", "top-recovery-2026"],
+  title: "Recupero Muscolare dopo la Corsa",
+  seoTitle: "Recupero Muscolare per Runner: Guida Scientifica 2026",
+  seoDescription: "Massimizza i guadagni dell'allenamento con il recupero basato sulle evidenze. Scopri HRV, SMR, sintesi proteica e la scienza del sonno profondo.",
+  keywords: ["recupero muscolare", "recupero runner", "allenamento HRV", "scienza foam rolling", "nutrizione post-corsa", "prevenzione DOMS"],
+  description: "Strategie scientifiche per recuperare più velocemente: stretching, foam rolling, nutrizione e sonno.",
+  tags: ["recupero", "massaggio", "proteine", "top-recovery-2026"],
   heroImage: guideRecovery,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Recovery is when your body adapts and grows stronger (Supercompensation)",
-    "Slow-wave sleep (N3/N4) is responsible for 95% of Growth Hormone release",
-    "Foam rolling (SMR) reduces DOMS and improves range of motion without strength loss",
-    "Heart Rate Variability (HRV) is the most objective metric for systemic recovery",
+    "Il recupero è il momento in cui il corpo si adatta e diventa più forte (Supercompensazione)",
+    "Il sonno a onde lente (N3/N4) è responsabile del 95% del rilascio dell'ormone della crescita",
+    "Il foam rolling (SMR) riduce i DOMS e migliora il range di movimento senza perdita di forza",
+    "La Variabilità della Frequenza Cardiaca (HRV) è la metrica più oggettiva per il recupero sistemico",
   ],
   relatedTools: [
-    { to: "/tools/protein", label: "Protein Calculator" },
-    { to: "/tools/hydration", label: "Hydration Calculator" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
   ],
   relatedGuides: [
-    { slug: "supplements-for-runners", label: "Essential Supplements for Runners" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "supplements-for-runners", label: "Integratori Essenziali per Runner" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Supercompensation Principle", 
-      body: "Training is a catabolic process (it breaks you down). Progress only occurs during the anabolic recovery phase. The 'Supercompensation' model illustrates that if you apply a stressor and allow adequate recovery, the body returns to a higher baseline of fitness. If you train too soon, you descend into overtraining; if you wait too long, the gains dissipate.", 
+      heading: "Il Principio della Supercompensazione", 
+      body: "L'allenamento è un processo catabolico (demolisce i tessuti). Il progresso avviene solo durante la fase di recupero anabolico. Il modello della 'Supercompensazione' illustra che se applichi uno stress e consenti un recupero adeguato, il corpo ritorna a un livello di fitness superiore. Se ti alleni troppo presto, scendi nell'overtraining; se aspetti troppo, i guadagni svaniscono.", 
       variant: "highlight" 
     },
     { 
-      heading: "Sleep Architecture: The Ultimate Performance Enhancer", 
-      body: "Research published in the Journal of Science and Medicine in Sport suggests that sleep deprivation reduces time to exhaustion by up to 10%. \n\n- **Non-REM Stage 3 & 4:** This is where the magic happens. Blood flow is redirected from the brain to the muscles, bringing oxygen and nutrients that facilitate tissue repair. \n- **Hormonal Regulation:** During deep sleep, cortisol levels drop and growth hormone spikes. Disrupting this cycle leads to insulin resistance and impaired glycogen storage.", 
+      heading: "Architettura del Sonno: Il Miglior Potenziatore di Performance", 
+      body: "Ricerche pubblicate sul Journal of Science and Medicine in Sport suggeriscono che la privazione del sonno riduce il tempo all'esaurimento fino al 10%. \n\n- **Stadi Non-REM 3 e 4:** È qui che avviene la magia. Il flusso sanguigno viene reindirizzato dal cervello ai muscoli, portando ossigeno e nutrienti che facilitano la riparazione dei tessuti. \n- **Regolazione Ormonale:** Durante il sonno profondo, i livelli di cortisolo calano e l'ormone della crescita ha dei picchi. Interrompere questo ciclo porta a insulino-resistenza e compromette lo stoccaggio del glicogeno.", 
       variant: "default" 
     },
     { 
-      heading: "Myofascial Release & Lymphatic Clearance", 
-      body: "Foam rolling (Self-Myofascial Release) doesn't actually 'break up' knots (fascia is too strong for that). Instead, it communicates with the nervous system to decrease muscle tension (autogenic inhibition). \n\n**Active vs. Passive Recovery:** \n- **Active:** 20 mins of Zone 1 cycling or walking increases blood flow and aids lactate clearance more effectively than complete rest. \n- **Cryotherapy:** Using ice baths post-workout can blunt inflammation. Note: Acute inflammation is an adaptation signal. For strength gains, limit ice; for multi-day endurance events, use it to manage pain.", 
+      heading: "Rilascio Miofasciale e Drenaggio Linfatico", 
+      body: "Il foam rolling (Self-Myofascial Release) non 'scioglie' effettivamente i nodi (la fascia è troppo forte). Invece, comunica con il sistema nervoso per diminuire la tensione muscolare (inibizione autogena). \n\n**Recupero Attivo vs Passivo:** \n- **Attivo:** 20 minuti di ciclismo in Zona 1 o camminata aumentano il flusso sanguigno e aiutano la rimozione del lattato più efficacemente del riposo completo. \n- **Crioterapia:** L'uso di bagni di ghiaccio post-allenamento può smorzare l'infiammazione. Nota: l'infiammazione acuta è un segnale di adattamento. Per guadagni di forza, limita il ghiaccio; per eventi di endurance di più giorni, usalo per gestire il dolore.", 
       variant: "default", 
       listItems: [
-        "Compression Therapy: Reduces swelling and improves venous return", 
-        "HRV Monitoring: Use a chest strap to track the balance between your sympathetic and parasympathetic nervous systems",
-        "Tendon Loading: Unlike muscles, tendons need 48-72h of 'down time' to remodel collagen after high-impact runs.",
-        "Sauna & Heat: Increases plasma volume and heat-shock proteins, improving cardiovascular efficiency."
+        "Terapia a Compressione: riduce il gonfiore e migliora il ritorno venoso", 
+        "Monitoraggio HRV: usa una fascia cardio per monitorare l'equilibrio tra sistema nervoso simpatico e parasimpatico",
+        "Carico Tendineo: a differenza dei muscoli, i tendini hanno bisogno di 48-72 ore di 'tempo di scarico' per rimodellare il collagene dopo corse ad alto impatto.",
+        "Sauna e Calore: aumentano il volume plasmatico e le proteine da shock termico, migliorando l'efficienza cardiovascolare."
       ] 
     },
     {
-      heading: "Nutritional Window for Hyper-Recovery",
-      body: "The 'Metabolic Window' is wider than once thought, but the first 45-60 minutes remain critical for glycogen resynthesis. \n\n- **The 3:1 Ratio:** Consume 1.2g of carbohydrates per kg of body weight to replenish muscle glycogen, paired with 0.4g/kg of high-leucine protein to trigger Muscle Protein Synthesis (MPS). \n- **Hydration:** For every kg of weight lost during a run, consume 1.5L of water enriched with sodium to ensure cellular rehydration.",
+      heading: "Finestra Nutrizionale per l'Iper-Recupero",
+      body: "La 'Finestra Metabolica' è più ampia di quanto si pensasse, ma i primi 45-60 minuti rimangono critici per la risintesi del glicogeno. \n\n- **Il Rapporto 3:1:** Consuma 1,2 g di carboidrati per kg di peso corporeo per reintegrare il glicogeno muscolare, abbinati a 0,4 g/kg di proteine ad alto contenuto di leucina per innescare la Sintesi Proteica Muscolare (MPS). \n- **Idratazione:** Per ogni kg di peso perso durante una corsa, consuma 1,5 L di acqua arricchita con sodio per garantire la reidratazione cellulare.",
       variant: "tip"
     },
     { 
-      heading: "Common Pitfalls in Recovery", 
-      body: "Many runners mistake 'rest' for 'recovery'. True recovery is proactive. \n\n- **NSAID Overuse:** Taking ibuprofen after every run inhibits the prostaglandin-driven repair process, potentially weakening long-term adaptation. \n- **Neglecting the Mind:** Psychological stress (work, family) uses the same physiological resources as physical stress. If life is stressful, your body needs more time to recover from runs.", 
+      heading: "Errori Comuni nel Recupero", 
+      body: "Molti runner scambiano il 'riposo' con il 'recupero'. Il vero recupero è proattivo. \n\n- **Abuso di FANS:** Assumere ibuprofene dopo ogni corsa inibisce il processo di riparazione guidato dalle prostaglandine, indebolendo potenzialmente l'adattamento a lungo termine. \n- **Trascurare la Mente:** Lo stress psicologico (lavoro, famiglia) utilizza le stesse risorse fisiologiche dello stress fisico. Se la vita è stressante, il tuo corpo ha bisogno di più tempo per recuperare dalle corse.", 
       variant: "warning" 
     },
     { 
-      heading: "The Professional Protocol: A Step-by-Step Checklist", 
-      body: "Follow this sequence after every hard session or long run to maximize your ROI.", 
+      heading: "Protocollo Professionale: Checklist Passo-Passo", 
+      body: "Segui questa sequenza dopo ogni sessione intensa o corsa lunga per massimizzare il tuo ritorno sull'investimento.", 
       variant: "checklist", 
       listItems: [
-        "Post-Run Flush: 5-10 mins of very light walking immediately after stopping.", 
-        "The 60-Minute Fuel: Shake or meal with 3:1 Carb:Protein ratio.", 
-        "Soft Tissue Work: 10 mins SMR focusing on calves, quads, and glutes.",
-        "Temperature Contrast: Alternating hot/cold shower to stimulate peripheral circulation.",
-        "The Dark Room: 8+ hours of sleep in a room below 19°C (66°F)."
+        "Defaticamento Post-Corsa: 5-10 minuti di camminata molto leggera subito dopo essersi fermati.", 
+        "Rifornimento entro 60 Minuti: shake o pasto con rapporto Carboidrati:Proteine di 3:1.", 
+        "Lavoro sui Tessuti Molli: 10 minuti di SMR concentrandosi su polpacci, quadricipiti e glutei.",
+        "Contrasto Termico: doccia alternata caldo/freddo per stimolare la circolazione periferica.",
+        "La Stanza Buia: 8+ ore di sonno in una stanza sotto i 19°C."
       ] 
     },
   ],

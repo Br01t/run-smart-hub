@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideTrail from "@/assets/guide-trail.webp";
 
 export const trailRunning: GuideContent = {
-  title: "Getting Started with Trail Running",
-  seoTitle: "Trail Running Guide 2026: Gear & Technique Science",
-  seoDescription: "Escape the pavement. Master the science of trail running, from proprioceptive neural load to 'Power Hiking' efficiency and lug depth mechanics.",
-  keywords: ["trail running for beginners", "trail running shoes guide", "power hiking technique", "trail running safety", "uphill running trails", "trail vs road running"],
-  description: "A beginner's guide to trail running: gear, technique, safety and finding the right trails.",
+  title: "Iniziare con il Trail Running",
+  seoTitle: "Guida Trail Running 2026: Scienza della Tecnica e Attrezzatura",
+  seoDescription: "Abbandona l'asfalto. Padroneggia la scienza del trail running, dal carico neurale propriocettivo all'efficienza del 'Power Hiking' e alla meccanica dei tasselli.",
+  keywords: ["trail running per principianti", "guida scarpe trail running", "tecnica power hiking", "sicurezza trail running", "corsa in salita sentieri", "trail vs strada"],
+  description: "Una guida per principianti al trail running: attrezzatura, tecnica, sicurezza e come trovare i sentieri giusti.",
   tags: ["shoes", "running", "accessories", "hydration", "top-gear-2026"],
   heroImage: guideTrail,
-  readTime: "14 min read",
+  readTime: "14 min di lettura",
   keyTakeaways: [
-    "Trail running requires 3x more neural activation due to proprioceptive demand",
-    "On grades steeper than 15%, 'Power Hiking' is more metabolically efficient than running",
-    "Lug depth and rubber compound determine shear resistance on loose or wet surfaces",
-    "Expect to be 20-50% slower on trails—focus on time on feet rather than mileage",
+    "Il trail running richiede un'attivazione neurale 3 volte superiore per la richiesta propriocettiva",
+    "Su pendenze superiori al 15%, il 'Power Hiking' è più efficiente dal punto di vista metabolico rispetto alla corsa",
+    "La profondità dei tasselli e la mescola della gomma determinano la resistenza allo scivolamento su superfici morbide o bagnate",
+    "Aspettati di essere dal 20% al 50% più lento sui sentieri: concentrati sul tempo passato a correre invece che sui chilometri",
   ],
   relatedTools: [
-    { to: "/tools/hydration", label: "Hydration Calculator" },
-    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
   ],
   relatedGuides: [
-    { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "choosing-running-shoes", label: "Come Scegliere le Scarpe da Corsa" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: Neural Proprioception", 
-      body: "Trail running is a multi-dimensional sport. Unlike road running, which focuses on sagittal plane efficiency (forward-back), trails require constant **Frontal Plane stability** and lateral control. \n\n**The Proprioceptive Load:** Technical trails force the brain to process foot placement, balance, and obstacle avoidance simultaneously. This increases your 'Neural Fatigue' significantly faster than road running, even if your heart rate remains in an easy zone. This is why trail runners often feel 'mentally drained' after a long mountain session.", 
+      heading: "La Scienza: Proprioccezione Neurale", 
+      body: "Il trail running è uno sport multidimensionale. A differenza della corsa su strada, che si concentra sull'efficienza nel piano sagittale (avanti-dietro), i sentieri richiedono una costante **stabilità nel piano frontale** e controllo laterale. \n\n**Il Carico Propriocettivo:** I sentieri tecnici costringono il cervello a elaborare simultaneamente l'appoggio del piede, l'equilibrio e l'evitamento degli ostacoli. Questo aumenta la tua 'Fatica Neurale' in modo significativamente più rapido rispetto alla corsa su strada, anche se la frequenza cardiaca rimane in una zona facile. Ecco perché i trail runner spesso si sentono 'mentalmente esausti' dopo una lunga sessione in montagna.", 
       variant: "highlight" 
     },
     { 
-      heading: "Vertical Displacement & Energy Cost", 
-      body: "Gravity is the primary variable on the trails. Every 100 meters of vertical gain is roughly equivalent to 1 kilometer of flat running in terms of energy expenditure. \n\n- **Power Hiking:** Elite trail runners 'power hike' on steep inclines to preserve glycogen. By leaning forward and pushing off their thighs, they maintain a consistent heart rate, avoiding the 'Redline' that occurs when trying to run a 20% grade. Master the transition from running to hiking to dominate long trail races.", 
+      heading: "Dislivello Verticale e Costo Energetico", 
+      body: "La gravità è la variabile principale sui sentieri. Ogni 100 metri di dislivello positivo equivalgono approssimativamente a 1 chilometro di corsa in pianura in termini di dispendio energetico. \n\n- **Power Hiking:** I trail runner d'élite usano il 'power hiking' (camminata veloce e potente) sulle salite ripide per preservare il glicogeno. Inclinandosi in avanti e spingendo sulle cosce, mantengono una frequenza cardiaca costante, evitando il 'fuori giri' che si verifica cercando di correre su una pendenza del 20%. Padroneggia la transizione dalla corsa alla camminata per dominare le lunghe gare di trail.", 
       variant: "default" 
     },
     { 
-      heading: "Traction Mechanics: Lugs & Rubber", 
-      body: "Your shoes are your primary safety equipment. \n\n- **Lug Depth:** 3-4mm lugs are for hard-pack trails; 5-8mm lugs are for deep mud and loose scree. \n- **Shear Resistance:** The compound of the rubber (e.g. Vibram Megagrip) is designed to create friction on wet rock. A road shoe lacks both the lug depth and the specialized compound, making it dangerous on technical descents. \n- **Rock Protection:** TPU rock plates protect the delicate metatarsals from 'bruising' caused by sharp stones.", 
+      heading: "Meccanica della Trazione: Tasselli e Gomma", 
+      body: "Le tue scarpe sono il tuo principale equipaggiamento di sicurezza. \n\n- **Profondità dei Tasselli:** Tasselli da 3-4 mm sono per sentieri compatti; tasselli da 5-8 mm sono per fango profondo e ghiaia smossa. \n- **Resistenza allo Scivolamento:** La mescola della gomma (es. Vibram Megagrip) è progettata per creare attrito sulla roccia bagnata. Una scarpa da strada manca sia della profondità dei tasselli che della mescola specializzata, rendendola pericolosa sulle discese tecniche. \n- **Protezione:** Le piastre anti-roccia in TPU proteggono i delicati metatarsi dai 'lividi' causati dalle pietre appuntite.", 
       variant: "default", 
       listItems: [
-        "Descending Form: Use short, quick steps and 'soft knees' to absorb impact", 
-        "Ankle Strength: Single-leg balance drills are essential for preventing sprains", 
-        "Hydration Shift: Mountain environments are often drier; increase fluid intake",
-        "Altitude Drop: At 2,000m+, your VO2 max can drop by 10% due to lower oxygen pressure."
+        "Tecnica in Discesa: usa passi brevi e veloci e 'ginocchia morbide' per assorbire l'impatto", 
+        "Forza della Caviglia: gli esercizi di equilibrio su una gamba sola sono essenziali per prevenire distorsioni", 
+        "Cambio di Idratazione: gli ambienti montani sono spesso più secchi; aumenta l'apporto di liquidi",
+        "Calo con l'Altitudine: sopra i 2.000 m, il tuo VO2 max può calare del 10% a causa della minore pressione di ossigeno."
       ] 
     },
     {
-      heading: "The 'Look Ahead' Rule",
-      body: "Do not stare at your feet. Your brain needs to 'pre-process' the trail 3-5 meters ahead. By the time your feet reach a rock, your nervous system should already have a plan for how to step over or around it.",
+      heading: "La Regola del 'Guarda Avanti'",
+      body: "Non fissarti i piedi. Il tuo cervello ha bisogno di 'pre-elaborare' il sentiero 3-5 metri avanti. Quando i tuoi piedi raggiungono una roccia, il tuo sistema nervoso dovrebbe già avere un piano su come scavalcarla o girarci intorno.",
       variant: "tip"
     },
     {
-      heading: "Safety: The 10% Rule",
-      body: "Never attempt a technical mountain trail alone without a whistle, a space blanket, and an offline map (like GPX on your watch). Mountain weather can change in minutes, and a minor ankle sprain can quickly become a life-threatening situation if you are unprepared.",
+      heading: "Sicurezza: La Regola del 10%",
+      body: "Non affrontare mai un sentiero tecnico di montagna da solo senza un fischietto, una coperta termica e una mappa offline (come un file GPX sull'orologio). Il meteo in montagna può cambiare in pochi minuti e una banale distorsione alla caviglia può trasformarsi rapidamente in una situazione pericolosa se non sei preparato.",
       variant: "warning"
     },
     { 
-      heading: "Trail Transition Checklist", 
-      body: "Tactical steps for your first off-road adventures.", 
+      heading: "Checklist per il Passaggio al Trail", 
+      body: "Passi tattici per le tue prime avventure fuori strada.", 
       variant: "checklist", 
       listItems: [
-        "Ignore the Pace: Your 5:00/km road pace might be 8:00/km on a technical trail.", 
-        "Equip the Grip: Invest in trail-specific shoes with a protective toe cap.", 
-        "Learn to Hike: Practice the transition from running to hiking on steep local hills.", 
-        "Carry Water: Trails are slower; you will be 'out there' longer than you think.",
-        "Leave No Trace: Always pack out your gel wrappers and stay on the designated paths."
+        "Ignora il Ritmo: il tuo passo di 5:00/km su strada potrebbe diventare 8:00/km su un sentiero tecnico.", 
+        "Equipaggiati con il Grip: investi in scarpe specifiche da trail con una protezione sulla punta.", 
+        "Impara a Camminare: pratica il passaggio dalla corsa alla camminata veloce sulle colline locali ripide.", 
+        "Porta Acqua: i sentieri sono più lenti; starai fuori molto più a lungo di quanto pensi.",
+        "Non Lasciare Tracce: porta sempre via gli involucri dei gel e rimani sui sentieri tracciati."
       ] 
     },
   ],

@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideShoes from "@/assets/guide-shoes.webp";
 
 export const runningShoeRotation: GuideContent = {
-  title: "How to Build a Running Shoe Rotation",
-  seoTitle: "Running Shoe Rotation Guide 2026: Injury Prevention Science",
-  seoDescription: "Reduce injury risk by 39% with a strategic shoe rotation. Learn about foam recovery, mechanical variation, and how to build the perfect 3-shoe rotation.",
-  keywords: ["running shoe rotation", "prevent running injuries", "running shoe foam recovery", "daily trainer vs speed shoe", "carbon plated shoe rotation", "running gear guide"],
-  description: "The scientific and practical guide to rotating multiple pairs of shoes to reduce injury risk and improve performance.",
+  title: "Come Costruire una Rotazione di Scarpe da Corsa",
+  seoTitle: "Guida Rotazione Scarpe Corsa 2026: Scienza della Prevenzione Infortuni",
+  seoDescription: "Riduci il rischio di infortuni del 39% con una rotazione strategica delle scarpe. Scopri il recupero del foam, la variazione meccanica e come creare la rotazione perfetta.",
+  keywords: ["rotazione scarpe corsa", "prevenire infortuni corsa", "recupero foam scarpe corsa", "scarpa daily trainer vs speed", "rotazione scarpe in carbonio", "guida attrezzatura corsa"],
+  description: "La guida scientifica e pratica alla rotazione di più paia di scarpe per ridurre il rischio di infortuni e migliorare le prestazioni.",
   tags: ["shoes", "gear", "injury-prevention", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Rotating between 2+ models reduces repetitive stress injury risk by 39%",
-    "Varying heel-to-toe drops (e.g. 10mm and 4mm) shifts load across different joints",
-    "Midsole foams require 24-48 hours to fully decompress and recover their energy return",
-    "A 3-shoe rotation (Daily, Speed, Recovery) maximizes both shoe life and performance",
+    "Alternare tra più di 2 modelli riduce il rischio di infortuni da stress ripetitivo del 39%",
+    "Variare il drop (es. 10 mm e 4 mm) sposta il carico su diverse articolazioni",
+    "Le schiume dell'intersuola richiedono 24-48 ore per decomprimersi completamente e recuperare il ritorno di energia",
+    "Una rotazione a 3 scarpe (Daily, Speed, Recovery) massimizza sia la durata delle scarpe che le prestazioni",
   ],
   relatedTools: [
-    { to: "/tools/bmi", label: "BMI Calculator" },
-    { to: "/tools/protein", label: "Protein Calculator" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/protein", label: "Calcolatore Proteine" },
   ],
   relatedGuides: [
-    { slug: "choosing-running-shoes", label: "How to Choose Running Shoes" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "choosing-running-shoes", label: "Come Scegliere le Scarpe da Corsa" },
+    { slug: "injury-prevention", label: "Guida alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: Mechanical Variation", 
-      body: "Overuse injuries in running are often caused by the 'monotony of load'—applying the exact same stress to the same tissues thousands of times per mile. By rotating between shoes with different stack heights, foam densities, and geometries, you subtly shift the stress across different joints and muscle groups. \n\n**Proprioceptive Stimulation:** Different shoes provide different signals to your brain. This prevents the neuromuscular system from becoming 'lazy' and strengthens the intrinsic muscles of the foot and the stabilizers of the ankle.", 
+      heading: "La Scienza: Variazione Meccanica", 
+      body: "Gli infortuni da sovraccarico nella corsa sono spesso causati dalla 'monotonia del carico'—ovvero applicare lo stesso identico stress ai medesimi tessuti migliaia di volte per chilometro. Alternando scarpe con diverse altezze, densità di schiuma e geometrie, sposti sottilmente lo stress su diverse articolazioni e gruppi muscolari. \n\n**Stimolazione Propriocettiva:** Scarpe diverse inviano segnali diversi al cervello. Questo impedisce al sistema neuromuscolare di diventare 'pigro' e rafforza i muscoli intrinseci del piede e gli stabilizzatori della caviglia.", 
       variant: "highlight" 
     },
     { 
-      heading: "Foam Recovery: The Molecular Level", 
-      body: "Modern midsole foams (EVA, TPU, and PEBA) are composed of closed-cell structures that compress to absorb shock. Research shows that it can take up to **48 hours** for these cells to fully 'decompress' and return to their original shape after a 10km run. \n\n- **The Premature Failure:** If you run in the same pair every day, you are effectively running on partially collapsed foam. This provides less protection for your joints and causes the shoe to 'die' (lose its responsiveness) up to 20-30% faster.", 
+      heading: "Recupero della Schiuma: Il Livello Molecolare", 
+      body: "Le moderne schiume per intersuole (EVA, TPU e PEBA) sono composte da strutture a celle chiuse che si comprimono per assorbire l'urto. Le ricerche mostrano che possono essere necessarie fino a **48 ore** affinché queste celle si 'decomprimano' completamente e tornino alla loro forma originale dopo una corsa di 10 km. \n\n- **Il Cedimento Prematuro:** Se corri con lo stesso paio ogni giorno, stai effettivamente correndo su una schiuma parzialmente collassata. Questo fornisce meno protezione alle articolazioni e causa la 'morte' della scarpa (perdita di reattività) il 20-30% più velocemente.", 
       variant: "default" 
     },
     { 
-      heading: "The Ideal 4-Shoe Matrix", 
-      body: "For the dedicated runner, a four-category rotation ensures you always have the right tool for the job. \n\n1. **The Daily Trainer:** Reliable and durable (8-10mm drop). Your workhorse for 60% of runs. \n2. **The Speed/Interval Shoe:** Lightweight and flexible with a lower stack height for better ground feel. \n3. **The Recovery/Max-Cushion Shoe:** High stack height with a 'rocker' geometry to take the load off your calves and Achilles during easy miles. \n4. **The Race Day 'Super Shoe':** PEBA-based foam with a carbon plate for maximal energy return.", 
+      heading: "La Matrice Ideale a 4 Scarpe", 
+      body: "Per il runner dedicato, una rotazione in quattro categorie assicura di avere sempre lo strumento giusto per ogni lavoro. \n\n1. **La Daily Trainer:** Affidabile e durevole (drop 8-10 mm). Il tuo 'mulo' per il 60% delle corse. \n2. **La Scarpa da Velocità/Intervalli:** Leggera e flessibile con un'altezza inferiore per una migliore sensazione del terreno. \n3. **La Scarpa da Recupero/Massima Ammortizzazione:** Molta schiuma sotto il piede con geometria 'rocker' per scaricare polpacci e tendine d'Achille nelle corse facili. \n4. **La 'Super Shoe' da Gara:** Schiuma a base PEBA con piastra in carbonio per il massimo ritorno energetico.", 
       variant: "default", 
       listItems: [
-        "Mechanical De-loading: High-drop shoes save the Achilles; low-drop shoes save the knees", 
-        "Economic Life: Rotating 3 pairs lasts longer than buying 3 pairs sequentially", 
-        "Surface Specificity: Keep dedicated trail shoes to protect the outsole of your road trainers",
-        "The Stability Shift: Use a neutral shoe for fast days and a stable shoe for tired days."
+        "De-loading Meccanico: le scarpe con drop alto salvano l'Achille; quelle con drop basso salvano le ginocchia", 
+        "Vita Economica: ruotare 3 paia dura di più che comprare 3 paia in sequenza", 
+        "Specificità della Superficie: usa scarpe da trail dedicate per proteggere la suola delle tue scarpe da strada",
+        "Lo Switch della Stabilità: usa una scarpa neutra per i giorni veloci e una stabile per i giorni in cui sei stanco."
       ] 
     },
     {
-      heading: "The Longevity Myth",
-      body: "Rotating shoes doesn't 'cost' more in the long run. Since you are spreading your mileage across multiple pairs, each pair lasts for a higher total distance because the foam isn't subject to 'compressive creep' from daily use. You buy shoes less often over time.",
+      heading: "Il Mito della Longevità",
+      body: "Ruotare le scarpe non 'costa' di più nel lungo periodo. Poiché distribuisci il chilometraggio su più paia, ogni paio dura per una distanza totale maggiore perché la schiuma non è soggetta al cedimento da uso quotidiano. Alla fine, comprerai scarpe meno spesso.",
       variant: "tip"
     },
     {
-      heading: "The 'Old Shoe' Danger Zone",
-      body: "Once a shoe loses its responsiveness, your muscles have to work harder to stabilize your gait. If you feel unusual arch pain or shin splints in a pair with 600km+, the foam is likely dead even if the outsole looks new. Retire them immediately to avoid an injury layoff.",
+      heading: "La Zona di Pericolo delle 'Scarpe Vecchie'",
+      body: "Una volta che una scarpa perde la sua reattività, i tuoi muscoli devono lavorare di più per stabilizzare l'andatura. Se avverti un dolore insolito all'arco plantare o periostite con un paio che ha più di 600 km, è probabile che la schiuma sia 'scarica' anche se la suola sembra nuova. Falle andare in pensione immediatamente per evitare infortuni.",
       variant: "warning"
     },
     { 
-      heading: "Building Your Rotation Checklist", 
-      body: "How to strategically add to your gear closet.", 
+      heading: "Checklist per Costruire la Rotazione", 
+      body: "Come aggiungere strategicamente scarpe al tuo armadio.", 
       variant: "checklist", 
       listItems: [
-        "Audit Current Gear: Identify if you have a 'gap' (e.g. you lack a light speed shoe).", 
-        "Vary the Drop: If your current shoe is 10mm, look for an 5mm or 6mm option for your next pair.", 
-        "Sync with Your Plan: Match your shoes to your upcoming training blocks (e.g. Marathon prep).", 
-        "Track Individual Miles: Use a digital log to know exactly when a shoe is reaching its limit.",
-        "Gradual Introduction: Wear new models for short 5km runs before taking them on a long run."
+        "Analizza l'Attrezzatura Attuale: identifica se hai un 'vuoto' (es. ti manca una scarpa leggera da velocità).", 
+        "Varia il Drop: se la tua scarpa attuale è da 10 mm, cerca un'opzione da 5 mm o 6 mm per il prossimo paio.", 
+        "Sincronizza con il tuo Piano: abbina le scarpe ai tuoi prossimi blocchi di allenamento (es. preparazione maratona).", 
+        "Traccia i Chilometri: usa un registro digitale per sapere esattamente quando una scarpa sta raggiungendo il suo limite.",
+        "Introduzione Graduale: indossa i nuovi modelli per brevi corse di 5 km prima di affrontarci una corsa lunga."
       ] 
     },
   ],

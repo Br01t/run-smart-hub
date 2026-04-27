@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideHeartrate from "@/assets/guide-heartrate.webp";
 
 export const heartRateZones: GuideContent = {
-  title: "Heart Rate Zone Training for Runners",
-  seoTitle: "Heart Rate Zone Training 2026: 80/20 Rule & Max HR Science",
-  seoDescription: "Stop guessing your intensity. Learn the science of Heart Rate Zones, how to find your true Max HR, and why the 80/20 rule is the secret to elite performance.",
-  keywords: ["heart rate zones running", "80/20 running rule", "calculate heart rate zones", "lactate threshold running", "zone 2 training benefits", "max heart rate test"],
-  description: "How to use heart rate zones to train smarter, avoid overtraining and improve running performance.",
+  title: "Allenamento con le Zone di Frequenza Cardiaca",
+  seoTitle: "Allenamento Zone Cardio 2026: Regola 80/20 e Scienza della FC Max",
+  seoDescription: "Smetti di indovinare l'intensità. Scopri la scienza delle zone cardio, come trovare la tua vera FC Max e perché la regola 80/20 è il segreto delle prestazioni d'élite.",
+  keywords: ["zone frequenza cardiaca corsa", "regola 80/20 corsa", "calcolare zone cardio", "soglia anaerobica corsa", "benefici zona 2", "test frequenza cardiaca massima"],
+  description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
   tags: ["accessories", "running"],
   heroImage: guideHeartrate,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "Spend 80% of your volume in Zone 2 to build a massive aerobic base",
-    "Max HR formulas (220-age) can be off by up to 15-20 beats per minute",
-    "Lactate Threshold (Zone 4) is the best predictor of race performance",
-    "Chest straps are mandatory for accuracy during high-intensity intervals",
+    "Trascorri l'80% del tuo volume in Zona 2 per costruire una base aerobica massiccia",
+    "Le formule per la FC Max (220-età) possono sbagliare fino a 15-20 battiti al minuto",
+    "La Soglia del Lattato (Zona 4) è il miglior predittore della performance in gara",
+    "Le fasce cardio sono obbligatorie per la precisione durante gli intervalli ad alta intensità",
   ],
   relatedTools: [
-    { to: "/tools/calories", label: "Calories Calculator" },
-    { to: "/tools/bmi", label: "BMI Calculator" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
   ],
   relatedGuides: [
-    { slug: "marathon-training", label: "Marathon Training Guide for Beginners" },
-    { slug: "running-nutrition", label: "Running Nutrition: What to Eat Before, During & After" },
+    { slug: "marathon-training", label: "Guida alla Maratona per Principianti" },
+    { slug: "running-nutrition", label: "Nutrizione Corsa: Cosa Mangiare" },
   ],
   sections: [
     { 
-      heading: "The Science: Metabolic Stress Hub", 
-      body: "Heart rate (HR) is the most objective window into your internal metabolic stress. Unlike pace, which is an external metric, HR tells you how hard your heart and lungs are working to meet the demand. \n\n**The 80/20 Polarization:** Elite endurance athletes follow a 'Polarized' model. They spend 80% of their time at low intensity (Zone 2) to build mitochondrial density and 20% at high intensity. Most recreational runners make the 'Gray Zone' mistake—running everything at a 'moderate' effort that is too hard for recovery but too easy for significant adaptation.", 
+      heading: "La Scienza: Hub dello Stress Metabolico", 
+      body: "La frequenza cardiaca (FC) è la finestra più oggettiva sul tuo stress metabolico interno. A differenza del ritmo (pace), che è una metrica esterna, la FC ti dice quanto cuore e polmoni stiano lavorando per soddisfare la richiesta. \n\n**La Polarizzazione 80/20:** Gli atleti di endurance d'élite seguono un modello 'Polarizzato'. Trascorrono l'80% del tempo a bassa intensità (Zona 2) per aumentare la densità mitocondriale e il 20% ad alta intensità. Molti runner amatoriali commettono l'errore della 'Zona Grigia'—correndo tutto a un impegno 'moderato' che è troppo faticoso per il recupero ma troppo blando per un adattamento significativo.", 
       variant: "highlight" 
     },
     { 
-      heading: "Thresholds: Aerobic vs. Lactate", 
-      body: "Training zones are defined by two physiological 'break points'. \n\n1. **Aerobic Threshold (AeT):** The point where blood lactate begins to rise above baseline. This is the top of Zone 2. \n2. **Lactate Threshold (LT):** The intensity where lactate production equals clearance. This is the top of Zone 4. Improving your LT allows you to run faster for longer before the 'burn' forces you to slow down.", 
+      heading: "Soglie: Aerobica vs Lattato", 
+      body: "Le zone di allenamento sono definite da due 'punti di rottura' fisiologici. \n\n1. **Soglia Aerobica (AeT):** Il punto in cui il lattato nel sangue inizia a salire sopra il valore basale. È il limite superiore della Zona 2. \n2. **Soglia del Lattato (LT):** L'intensità in cui la produzione di lattato eguaglia la sua rimozione. È il limite superiore della Zona 4. Migliorare la tua LT ti permette di correre più veloce più a lungo prima che il 'bruciore' ti costringa a rallentare.", 
       variant: "default" 
     },
     { 
-      heading: "Calculating Your Zones: Beyond the Formulas", 
-      body: "The '220 - Age' formula is a population average and is often dangerously inaccurate for individual athletes. \n\n- **The Karvonen Method:** This formula uses your Resting Heart Rate (RHR) to calculate 'Heart Rate Reserve', which is a more personalized way to set zones. \n- **Field Testing:** The gold standard is a 30-minute time trial or a step test. Your average HR for the final 20 minutes of a 30-minute 'all-out' effort is a very close approximation of your Lactate Threshold HR.", 
+      heading: "Calcolare le Zone: Oltre le Formule", 
+      body: "La formula '220 - Età' è una media della popolazione ed è spesso pericolosamente imprecisa per i singoli atleti. \n\n- **Il Metodo Karvonen:** Questa formula utilizza la tua Frequenza Cardiaca a Riposo (FCR) per calcolare la 'Riserva di Frequenza Cardiaca', un modo più personalizzato per impostare le zone. \n- **Test sul Campo:** Il gold standard è una prova a cronometro di 30 minuti. La tua FC media degli ultimi 20 minuti di uno sforzo massimo di 30 minuti è un'approssimazione molto vicina alla tua FC di soglia del lattato.", 
       variant: "default", 
       listItems: [
-        "Cardiac Drift: Your HR will rise 5-10% during a long run as core temperature increases", 
-        "External Factors: Caffeine, heat, and stress can raise your HR by 10+ BPM independently of effort", 
-        "Wrist vs. Chest: Optical wrist sensors often 'cadence lock' (mimic your steps instead of your heart)",
-        "Recovery HR: How fast your HR drops in 1 minute after a hard effort is a sign of fitness."
+        "Deriva Cardiaca: la tua FC salirà del 5-10% durante una corsa lunga all'aumentare della temperatura corporea", 
+        "Fattori Esterni: caffeina, caldo e stress possono alzare la FC di oltre 10 BPM indipendentemente dall'impegno", 
+        "Polso vs Fascia: i sensori ottici da polso spesso soffrono di 'cadence lock' (mimano i passi invece dei battiti)",
+        "FC di Recupero: quanto velocemente cala la FC in 1 minuto dopo uno sforzo intenso è un segno di fitness."
       ] 
     },
     {
-      heading: "Zone 2: The Engine Room",
-      body: "Zone 2 training (60-70% of Max HR) stimulates the growth of mitochondria and improves 'Metabolic Flexibility'—the body's ability to burn fat at higher speeds. If you can't speak in full sentences while running, you aren't in Zone 2.",
+      heading: "Zona 2: La Sala Macchine",
+      body: "L'allenamento in Zona 2 (60-70% della FC Max) stimola la crescita dei mitocondri e migliora la 'Flessibilità Metabolica'—la capacità del corpo di bruciare grassi a velocità più elevate. Se non riesci a parlare a frasi intere mentre corri, non sei in Zona 2.",
       variant: "tip"
     },
     {
-      heading: "The Danger of 'Gray Zone' Training",
-      body: "Running in Zone 3 (the 'Moderate' zone) for every run is a recipe for stagnation. It provides enough stress to cause fatigue but not enough specific stimulus to drive elite-level aerobic or anaerobic gains. Either go slow or go fast; don't live in the middle.",
+      heading: "Il Pericolo della 'Zona Grigia'",
+      body: "Correre in Zona 3 (la zona 'Moderata') in ogni sessione è una ricetta per la stagnazione. Fornisce abbastanza stress da causare fatica ma non uno stimolo specifico sufficiente per guidare guadagni aerobici o anaerobici di alto livello. O vai piano o vai veloce; non vivere nel mezzo.",
       variant: "warning"
     },
     { 
-      heading: "Practical Application Checklist", 
-      body: "How to use HR data to guide your weekly training schedule.", 
+      heading: "Checklist per l'Applicazione Pratica", 
+      body: "Come usare i dati cardio per guidare il tuo programma settimanale.", 
       variant: "checklist", 
       listItems: [
-        "Conduct a field test every 8-12 weeks to update your zones as you get fitter.", 
-        "Invest in a quality chest strap (Bluetooth/ANT+) for all interval sessions.", 
-        "Set an 'HR Alert' on your watch for Zone 2 runs to prevent 'ego-pacing'.", 
-        "Check your Resting HR upon waking; a spike of >5 BPM suggests you need a rest day.",
-        "On hill days, allow your HR to peak in Zone 5, but ensure it returns to Zone 2 before the next rep."
+        "Esegui un test sul campo ogni 8-12 settimane per aggiornare le zone man mano che migliori.", 
+        "Investi in una fascia cardio di qualità (Bluetooth/ANT+) per tutte le sessioni di intervalli.", 
+        "Imposta un 'Allarme FC' sul tuo orologio per le corse in Zona 2 per evitare ritmi eccessivi.", 
+        "Controlla la FC a riposo al risveglio; un aumento di >5 BPM suggerisce la necessità di un giorno di riposo.",
+        "Nelle giornate di salita, lascia che la FC raggiunga la Zona 5, ma assicurati che torni in Zona 2 prima della ripetizione success."
       ] 
     },
   ],

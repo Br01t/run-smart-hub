@@ -5,143 +5,143 @@ export const comparisonsList: ComparisonData[] = [
     "sport": "running",
     "objective": "performance",
     "category": "supplements",
-    "intro": "Discover the best supplements to boost your running performance. From caffeine to energy gels, here's an evidence-based selection.",
-    "tags": ["energy", "carbohydrates", "supplements"],
+    "intro": "Scopri i migliori integratori per aumentare le tue prestazioni di corsa. Dalla caffeina ai gel energetici, ecco una selezione basata sulle evidenze scientifiche.",
+    "tags": ["energia", "carboidrati", "integratori"],
     "faq": [
-      { "q": "What supplements help you run faster?", "a": "Caffeine, beta-alanine and maltodextrin-based gels are among the most research-backed for improving running performance." },
-      { "q": "When should you take running supplements?", "a": "Energy gels should be taken during runs (every 45-60 min), caffeine 30-60 minutes before." }
+      { "q": "Quali integratori aiutano a correre più veloce?", "a": "Caffeina, beta-alanina e gel a base di maltodestrine sono tra i più supportati dalla ricerca per migliorare le prestazioni nella corsa." },
+      { "q": "Quando si dovrebbero assumere gli integratori per la corsa?", "a": "I gel energetici dovrebbero essere assunti durante la corsa (ogni 45-60 min), la caffeina 30-60 minuti prima." }
     ]
   },
   {
     "sport": "running",
     "objective": "recovery",
     "category": "supplements",
-    "intro": "Recovery is fundamental for every runner. Here are the products that can help you bounce back faster after training.",
-    "tags": ["protein", "recovery", "magnesium"],
+    "intro": "Il recupero è fondamentale per ogni runner. Ecco i prodotti che possono aiutarti a riprenderti più velocemente dopo l'allenamento.",
+    "tags": ["proteine", "recupero", "magnesio"],
     "faq": [
-      { "q": "What should you take after running for recovery?", "a": "Whey protein within 30 minutes, magnesium to prevent cramps and a foam roller for myofascial release." },
-      { "q": "Does magnesium help muscle recovery?", "a": "Yes, magnesium contributes to normal muscle function and can reduce cramps and fatigue." }
+      { "q": "Cosa prendere dopo la corsa per il recupero?", "a": "Proteine del siero di latte entro 30 minuti, magnesio per prevenire i crampi e un foam roller per il rilascio miofasciale." },
+      { "q": "Il magnesio aiuta il recupero muscolare?", "a": "Sì, il magnesio contribuisce alla normale funzione muscolare e può ridurre i crampi e l'affaticamento." }
     ]
   },
   {
     "sport": "running",
     "objective": "hydration",
     "category": "hydration",
-    "intro": "Proper hydration is essential for every runner. Discover the best accessories to stay hydrated during your runs.",
-    "tags": ["hydration", "electrolytes", "accessories"],
+    "intro": "Una corretta idratazione è essenziale per ogni runner. Scopri i migliori accessori per mantenerti idratato durante le tue corse.",
+    "tags": ["idratazione", "elettroliti", "accessori"],
     "faq": [
-      { "q": "How much water should you drink while running?", "a": "On average 400-800ml per hour, depending on temperature, intensity and individual sweat rate." },
-      { "q": "Do you need electrolyte tablets?", "a": "For runs over 60 minutes or in hot conditions, yes. They replenish sodium and potassium lost through sweat." }
+      { "q": "Quanta acqua si dovrebbe bere durante la corsa?", "a": "In media 400-800ml all'ora, a seconda della temperatura, dell'intensità e del tasso di sudorazione individuale." },
+      { "q": "Servono le compresse di elettroliti?", "a": "Per corse oltre i 60 minuti o in condizioni di caldo, sì. Reintegrano il sodio e il potassio persi con il sudore." }
     ]
   },
   {
     "sport": "running",
     "objective": "weight-loss",
     "category": "supplements",
-    "intro": "Want to lose weight through running? Here are the products that can support your weight loss journey in a healthy, science-backed way.",
-    "tags": ["energy", "protein", "supplements"],
+    "intro": "Vuoi perdere peso correndo? Ecco i prodotti che possono supportare il tuo percorso di dimagrimento in modo sano e supportato dalla scienza.",
+    "tags": ["energia", "proteine", "integratori"],
     "faq": [
-      { "q": "Does running help you lose weight?", "a": "Yes, running burns approximately 1 kcal/kg/km. Combined with a moderate calorie deficit, it's one of the most effective activities." },
-      { "q": "Do proteins help with weight loss?", "a": "Proteins increase satiety and preserve muscle mass during a calorie deficit." }
+      { "q": "Correre aiuta a perdere peso?", "a": "Sì, la corsa brucia circa 1 kcal/kg/km. Combinata con un moderato deficit calorico, è una delle attività più efficaci." },
+      { "q": "Le proteine aiutano a perdere peso?", "a": "Le proteine aumentano il senso di sazietà e preservano la massa muscolare durante un deficit calorico." }
     ]
   },
   {
     "sport": "trail",
     "objective": "performance",
     "category": "shoes",
-    "intro": "The right shoes make all the difference in trail running. Discover how to choose and the recommended models for your off-road adventures.",
-    "tags": ["shoes", "running", "cushioning"],
+    "intro": "Le scarpe giuste fanno la differenza nel trail running. Scopri come scegliere e i modelli consigliati per le tue avventure fuori strada.",
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
     "faq": [
-      { "q": "What's the difference between trail and road shoes?", "a": "Trail shoes have lugged soles for grip on uneven terrain, rock protection and often a more durable upper." },
-      { "q": "How often should you replace trail shoes?", "a": "On average every 500-800 km, depending on terrain and model." }
+      { "q": "Qual è la differenza tra scarpe da trail e da strada?", "a": "Le scarpe da trail hanno suole tassellate per il grip su terreni irregolari, protezione dalle rocce e spesso una tomaia più resistente." },
+      { "q": "Ogni quanto si dovrebbero sostituire le scarpe da trail?", "a": "In media ogni 500-800 km, a seconda del terreno e del modello." }
     ]
   },
   {
     "sport": "running",
     "objective": "injury-prevention",
     "category": "recovery",
-    "intro": "Preventing injuries is key to running long-term. Here are the best tools and products for recovery and injury prevention.",
-    "tags": ["recovery", "massage", "muscles"],
+    "intro": "Prevenire gli infortuni è la chiave per correre a lungo termine. Ecco i migliori strumenti e prodotti per il recupero e la prevenzione degli infortuni.",
+    "tags": ["recupero", "massaggio", "muscoli"],
     "faq": [
-      { "q": "How to prevent running injuries?", "a": "Stretching, foam rolling, gradual volume progression and shoes suited to your foot strike." },
-      { "q": "Does foam rolling really work?", "a": "Yes, studies show foam rolling reduces DOMS and improves joint mobility." }
+      { "q": "Come prevenire gli infortuni nella corsa?", "a": "Stretching, foam rolling, progressione graduale del volume e scarpe adatte al proprio appoggio." },
+      { "q": "Il foam rolling funziona davvero?", "a": "Sì, gli studi dimostrano che il foam rolling riduce i DOMS e migliora la mobilità articolare." }
     ]
   },
   {
     "sport": "running",
     "objective": "performance",
     "category": "shoes",
-    "intro": "Your running shoes are the most important piece of gear. Compare the best performance road running shoes for speed and comfort.",
-    "tags": ["shoes", "running", "cushioning"],
+    "intro": "Le tue scarpe da corsa sono l'attrezzatura più importante. Confronta le migliori scarpe da corsa su strada ad alte prestazioni per velocità e comfort.",
+    "tags": ["scarpe", "corsa", "ammortizzazione"],
     "faq": [
-      { "q": "Are carbon-plated shoes worth it?", "a": "For race day and tempo runs, carbon plates can improve running economy by 2-4%. They're best for distances 10K and above." },
-      { "q": "How much drop should a performance shoe have?", "a": "Most modern performance shoes have 6-10mm drop. Lower drop suits midfoot strikers, higher drop for heel strikers." }
+      { "q": "Le scarpe con piastra in carbonio valgono la pena?", "a": "Per il giorno della gara e le corse veloci (tempo run), le piastre in carbonio possono migliorare l'economia di corsa del 2-4%. Sono ideali per distanze dai 10 km in su." },
+      { "q": "Quanto drop dovrebbe avere una scarpa performante?", "a": "La maggior parte delle scarpe performanti moderne ha un drop di 6-10mm. Un drop più basso si adatta a chi appoggia di mesopiede, un drop più alto per chi appoggia di tallone." }
     ]
   },
   {
     "sport": "trail",
     "objective": "hydration",
     "category": "hydration",
-    "intro": "Trail runs often take you far from water sources. The right hydration gear is critical for safety and performance on the trails.",
-    "tags": ["hydration", "electrolytes", "accessories"],
+    "intro": "Le corse sui sentieri ti portano spesso lontano dalle fonti d'acqua. L'attrezzatura giusta per l'idratazione è fondamentale per la sicurezza e la performance sui sentieri.",
+    "tags": ["idratazione", "elettroliti", "accessori"],
     "faq": [
-      { "q": "What's the best hydration system for trail running?", "a": "Hydration vests with soft flasks are the most popular choice. They distribute weight evenly and allow hands-free drinking." },
-      { "q": "How much water should you carry on a trail run?", "a": "As a rule of thumb, carry 500ml per hour of running. In hot conditions or long distances, increase to 750ml-1L per hour." }
+      { "q": "Qual è il miglior sistema di idratazione per il trail running?", "a": "I gilet idrici (zaini) con borracce morbide (soft flask) sono la scelta più popolare. Distribuiscono il peso in modo uniforme e permettono di bere senza usare le mani." },
+      { "q": "Quanta acqua si dovrebbe portare in una corsa trail?", "a": "Come regola generale, porta 500ml per ogni ora di corsa. In condizioni di caldo o lunghe distanze, aumenta a 750ml-1L all'ora." }
     ]
   },
   {
     "sport": "trail",
     "objective": "recovery",
     "category": "supplements",
-    "intro": "Trail running is especially demanding on muscles and joints. The right recovery supplements can help you bounce back from tough mountain sessions.",
-    "tags": ["protein", "recovery", "magnesium"],
+    "intro": "Il trail running è particolarmente impegnativo per muscoli e articolazioni. I giusti integratori per il recupero possono aiutarti a riprenderti dalle dure sessioni in montagna.",
+    "tags": ["proteine", "recupero", "magnesio"],
     "faq": [
-      { "q": "Why is recovery harder after trail runs?", "a": "Trail running involves more eccentric muscle contractions from downhill running, causing greater muscle damage and longer recovery times." },
-      { "q": "What supplements help with trail running recovery?", "a": "Whey protein for muscle repair, tart cherry juice for inflammation, magnesium for cramps and electrolytes for rehydration." }
+      { "q": "Perché il recupero è più difficile dopo le corse trail?", "a": "Il trail running comporta più contrazioni muscolari eccentriche durante la corsa in discesa, causando maggiori danni muscolari e tempi di recupero più lunghi." },
+      { "q": "Quali integratori aiutano il recupero nel trail running?", "a": "Proteine del siero di latte per la riparazione muscolare, succo di amarena per l'infiammazione, magnesio per i crampi ed elettroliti per la reidratazione." }
     ]
   },
   {
     "sport": "running",
     "objective": "endurance",
     "category": "supplements",
-    "intro": "Building endurance requires smart nutrition. Discover the supplements that help you run longer and stronger during marathon training.",
-    "tags": ["energy", "carbohydrates", "electrolytes", "supplements"],
+    "intro": "Costruire la resistenza richiede una nutrizione intelligente. Scopri gli integratori che ti aiutano a correre più a lungo e più forte durante l'allenamento per la maratona.",
+    "tags": ["energia", "carboidrati", "elettroliti", "integratori"],
     "faq": [
-      { "q": "What supplements improve running endurance?", "a": "Beetroot juice (nitrates), caffeine, sodium bicarbonate and proper carbohydrate loading are the most evidence-based endurance boosters." },
-      { "q": "Should long-distance runners take iron supplements?", "a": "Only if blood tests show low ferritin levels. Runners are prone to iron deficiency due to foot-strike hemolysis and sweat losses." }
+      { "q": "Quali integratori migliorano la resistenza alla corsa?", "a": "Succo di barbabietola (nitrati), caffeina, bicarbonato di sodio e un corretto carico di carboidrati sono i potenziatori della resistenza più supportati dalle evidenze." },
+      { "q": "I corridori di lunga distanza dovrebbero assumere integratori di ferro?", "a": "Solo se gli esami del sangue mostrano bassi livelli di ferritina. I corridori sono inclini alla carenza di ferro a causa dell'emolisi da impatto del piede e della perdita di sudore." }
     ]
   },
   {
     "sport": "trail",
     "objective": "injury-prevention",
     "category": "recovery",
-    "intro": "Trail running puts unique stress on ankles, knees and stabilizer muscles. Here are the best tools to prevent trail-specific injuries.",
-    "tags": ["recovery", "massage", "muscles"],
+    "intro": "Il trail running esercita uno stress unico su caviglie, ginocchia e muscoli stabilizzatori. Ecco i migliori strumenti per prevenire gli infortuni specifici del trail.",
+    "tags": ["recupero", "massaggio", "muscoli"],
     "faq": [
-      { "q": "What are the most common trail running injuries?", "a": "Ankle sprains, IT band syndrome, patellofemoral pain and plantar fasciitis are the most common. Strength training and proper shoes help prevent them." },
-      { "q": "How to strengthen ankles for trail running?", "a": "Single-leg balance exercises, resistance band work and proprioception training on unstable surfaces are highly effective." }
+      { "q": "Quali sono gli infortuni più comuni nel trail running?", "a": "Distorsioni della caviglia, sindrome della bandelletta ileotibiale, dolore femoro-rotuleo e fascite plantare sono i più comuni. L'allenamento della forza e scarpe adatte aiutano a prevenirli." },
+      { "q": "Come rafforzare le caviglie per il trail running?", "a": "Esercizi di equilibrio su una gamba sola, lavoro con fasce di resistenza e allenamento della propriocezione su superfici instabili sono altamente efficaci." }
     ]
   },
   {
     "sport": "running",
     "objective": "performance",
     "category": "gear",
-    "intro": "From GPS watches to heart rate monitors, the right accessories can transform your training data and help you reach new PRs.",
-    "tags": ["accessories", "running"],
+    "intro": "Dagli orologi GPS ai cardiofrequenzimetri, i giusti accessori possono trasformare i tuoi dati di allenamento e aiutarti a raggiungere nuovi record personali.",
+    "tags": ["accessori", "running"],
     "faq": [
-      { "q": "Do I need a running watch?", "a": "A GPS watch helps track pace, distance and heart rate zones. It's valuable for structured training but not essential for casual runners." },
-      { "q": "What running accessories improve performance?", "a": "GPS watches for pacing, heart rate straps for zone training, and compression socks for reduced fatigue on long runs." }
+      { "q": "Ho bisogno di un orologio da corsa?", "a": "Un orologio GPS aiuta a monitorare il ritmo, la distanza e le zone di frequenza cardiaca. È prezioso per l'allenamento strutturato ma non essenziale per i corridori occasionali." },
+      { "q": "Quali accessori per il running migliorano le prestazioni?", "a": "Orologi GPS per il ritmo, fasce cardio per l'allenamento a zone e calze a compressione per ridurre l'affaticamento nelle corse lunghe." }
     ]
   },
   {
     "sport": "running",
     "objective": "performance",
     "category": "apparel",
-    "intro": "Technical apparel is your first line of defense against the elements. Discover the best fabrics for thermoregulation and comfort.",
+    "intro": "L'abbigliamento tecnico è la tua prima linea di difesa contro gli elementi. Scopri i migliori tessuti per la termoregolazione e il comfort.",
     "tags": ["abbigliamento", "running", "top-apparel-2026"],
     "faq": [
-      { "q": "Why avoid cotton for running?", "a": "Cotton absorbs moisture and stays wet, leading to chafing, blisters, and hypothermia in cold conditions." },
-      { "q": "What are the benefits of compression apparel?", "a": "Compression can reduce muscle oscillation and improve proprioception, though its recovery benefits are more scientifically significant." }
+      { "q": "Perché evitare il cotone per correre?", "a": "Il cotone assorbe l'umidità e rimane bagnato, causando sfregamenti, vesciche e ipotermia in condizioni di freddo." },
+      { "q": "Quali sono i vantaggi dell'abbigliamento a compressione?", "a": "La compressione può ridurre l'oscillazione muscolare e migliorare la propriocezione, sebbene i suoi benefici nel recupero siano scientificamente più significativi." }
     ]
   }
 ];

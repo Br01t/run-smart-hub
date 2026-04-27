@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import { ArrowRight, Droplets, Flame, Scale, Dumbbell, Zap, Footprints } from "lucide-react";
 
 const tools = [
-  { title: "Hydration", desc: "How much to drink per run", icon: Droplets, to: "/tools/hydration", gradient: "from-sky-400 to-cyan-600" },
-  { title: "Calories", desc: "Burned per session", icon: Flame, to: "/tools/calories", gradient: "from-orange-400 to-red-500" },
-  { title: "BMI", desc: "Body composition analysis", icon: Scale, to: "/tools/bmi", gradient: "from-violet-400 to-purple-600" },
-  { title: "Protein", desc: "Daily intake target", icon: Dumbbell, to: "/tools/protein", gradient: "from-rose-400 to-pink-500" },
-  { title: "Electrolytes", desc: "Mineral loss estimate", icon: Zap, to: "/tools/electrolytes", gradient: "from-amber-400 to-orange-500" },
-  { title: "Shoe Finder", desc: "Matched to your profile", icon: Footprints, to: "/tools/shoes", gradient: "from-emerald-400 to-teal-600" },
+  { title: "Idratazione", desc: "Quanto bere per ogni corsa", icon: Droplets, to: "/tools/hydration", gradient: "from-sky-400 to-cyan-600" },
+  { title: "Calorie", desc: "Bruciate per sessione", icon: Flame, to: "/tools/calories", gradient: "from-orange-400 to-red-500" },
+  { title: "BMI", desc: "Analisi della composizione corporea", icon: Scale, to: "/tools/bmi", gradient: "from-violet-400 to-purple-600" },
+  { title: "Proteine", desc: "Target di assunzione giornaliera", icon: Dumbbell, to: "/tools/protein", gradient: "from-rose-400 to-pink-500" },
+  { title: "Elettroliti", desc: "Stima della perdita di minerali", icon: Zap, to: "/tools/electrolytes", gradient: "from-amber-400 to-orange-500" },
+  { title: "Trova Scarpe", desc: "Abbinate al tuo profilo", icon: Footprints, to: "/tools/shoes", gradient: "from-emerald-400 to-teal-600" },
 ];
 
 const ToolGrid = () => {
   return (
     <section className="container mx-auto px-4 pt-8 pb-16 sm:pt-12 sm:pb-20">
       <div className="editorial-line">
-        <h2 className="font-display text-display-md font-bold text-foreground">The Toolkit</h2>
+        <h2 className="font-display text-display-md font-bold text-foreground">Gli Strumenti</h2>
         <p className="mt-2 max-w-md text-muted-foreground">
-          Six calculators built on peer-reviewed formulas. No fluff, no sign-up.
+          Sei calcolatori basati su formule validate. Niente fronzoli, nessuna registrazione.
         </p>
       </div>
 

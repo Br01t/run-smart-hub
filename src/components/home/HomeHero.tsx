@@ -10,7 +10,7 @@ const HomeHero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Runner at sunrise on a trail" 
+          alt="Runner all'alba su un sentiero" 
           width={1440} height={900} 
           fetchPriority="high" 
           loading="eager" 
@@ -27,35 +27,35 @@ const HomeHero = () => {
           className="max-w-2xl"
         >
           <span className="inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-foreground/90 backdrop-blur-sm">
-            Science Meets Performance
+            La Scienza Incontra la Performance
           </span>
           <h1 className="mt-6 font-display text-display-xl font-bold text-primary-foreground">
-            Run smarter.
-            <span className="block text-accent">Run farther.</span>
+            Corri meglio.
+            <span className="block text-accent">Corri più lontano.</span>
           </h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-primary-foreground/75">
-            Free calculators, expert gear reviews and personalized tools — everything a runner needs, backed by science.
+            Calcolatori gratuiti, recensioni esperte di attrezzatura e strumenti personalizzati — tutto ciò di cui un runner ha bisogno, basato sulla scienza.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/tools"
               className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-sm font-bold text-accent-foreground btn-depth btn-depth-hover"
             >
-              Explore Tools <ArrowRight className="h-4 w-4" />
+              Esplora Strumenti <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/tools/shoes"
               className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 btn-depth-hover"
             >
-              <Footprints className="h-4 w-4" /> Find Your Shoe
+              <Footprints className="h-4 w-4" /> Trova la tua Scarpa
             </Link>
           </div>
 
           <div className="mt-12 flex gap-8 border-t border-primary-foreground/15 pt-6">
             {[
-              { val: "6", label: "Free Tools" },
-              { val: "100%", label: "Evidence-Based" },
-              { val: "0", label: "Sign-ups Needed" },
+              { val: "6", label: "Strumenti Gratuiti" },
+              { val: "100%", label: "Basato sulle Evidenze" },
+              { val: "0", label: "Account Necessari" },
             ].map(s => (
               <div key={s.label}>
                 <p className="font-display text-2xl font-bold text-primary-foreground">{s.val}</p>

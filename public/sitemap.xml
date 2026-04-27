@@ -50,17 +50,17 @@
   <url><loc>https://www.runners-hub.org/hub/recovery/trail-running</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.runners-hub.org/hub/recovery/half-marathon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.runners-hub.org/hub/supplements/5k</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements-for-running-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements-for-running-recovery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/hydration-for-running-hydration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements-for-running-weight-loss</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/shoes-for-trail-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/recovery-for-running-injury-prevention</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/shoes-for-running-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/hydration-for-trail-hydration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements-for-trail-recovery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements-for-running-endurance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/recovery-for-trail-injury-prevention</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/gear-for-running-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/apparel-for-running-performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/recovery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/hydration/running/hydration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/weight-loss</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/shoes/trail/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recovery/running/injury-prevention</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/shoes/running/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/hydration/trail/hydration</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/trail/recovery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/endurance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recovery/trail/injury-prevention</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/gear/running/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/apparel/running/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

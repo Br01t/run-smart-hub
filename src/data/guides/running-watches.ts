@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideRunningWatches from "@/assets/guide-running-watches.webp";
 
 export const runningWatches: GuideContent = {
-  title: "Best GPS Running Watches: Buyer's Guide",
-  seoTitle: "Best Running Watches 2026: GPS & Tech Guide",
-  seoDescription: "Choose the right running watch. We analyze Multi-Band GNSS, HRV readiness, battery life, and the science of optical heart rate for runners.",
-  keywords: ["best running watches 2026", "GPS watch accuracy", "multi-band GNSS running", "HRV readiness score", "running power meter", "Garmin vs Coros vs Suunto"],
-  description: "A comprehensive, independent guide to choosing the right GPS running watch. We break down features, accuracy, battery life and value across every budget.",
+  title: "Migliori Orologi GPS per la Corsa: Guida all'Acquisto",
+  seoTitle: "Migliori Orologi Corsa 2026: Guida a GPS e Tecnologia",
+  seoDescription: "Scegli l'orologio da corsa giusto. Analizziamo il GNSS Multi-Band, la prontezza all'allenamento HRV, la durata della batteria e la scienza del cardio ottico per i runner.",
+  keywords: ["migliori orologi corsa 2026", "precisione orologio GPS", "GNSS multi-band corsa", "punteggio prontezza HRV", "misuratore potenza corsa", "Garmin vs Coros vs Suunto"],
+  description: "Una guida completa e indipendente per scegliere l'orologio GPS da corsa giusto. Analizziamo caratteristiche, precisione, batteria e rapporto qualità-prezzo per ogni budget.",
   tags: ["accessories", "running", "watches", "top-gear-2026"],
   heroImage: guideRunningWatches,
-  readTime: "14 min read",
+  readTime: "14 min di lettura",
   keyTakeaways: [
-    "Multi-Band GNSS (L1+L5) is essential for accurate pacing in cities and forests",
-    "Heart Rate Variability (HRV) is the gold standard for tracking training readiness",
-    "Battery life is the most important spec for ultra and trail runners",
-    "Running Power (Watts) is a more consistent effort metric than pace on hilly terrain",
+    "Il GNSS Multi-Band (L1+L5) è essenziale per un ritmo preciso in città e nei boschi",
+    "La Variabilità della Frequenza Cardiaca (HRV) è il gold standard per monitorare la prontezza all'allenamento",
+    "La durata della batteria è la specifica più importante per gli ultra e i trail runner",
+    "La Potenza nella Corsa (Watt) è una metrica di sforzo più costante del ritmo su terreni collinari",
   ],
   relatedTools: [
-    { to: "/tools/calories", label: "Calories Calculator" },
-    { to: "/tools/hydration", label: "Hydration Calculator" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
   ],
   relatedGuides: [
-    { slug: "running-heart-rate-zones", label: "Heart Rate Zone Training for Runners" },
-    { slug: "trail-running-beginners", label: "Getting Started with Trail Running" },
+    { slug: "running-heart-rate-zones", label: "Allenamento con le Zone Cardio" },
+    { slug: "trail-running-beginners", label: "Iniziare con il Trail Running" },
   ],
   sections: [
     { 
-      heading: "The Science: GNSS Dynamics", 
-      body: "Modern GPS watches use Multi-Band GNSS (Global Navigation Satellite System) to track position. By using two frequencies (L1 and L5), watches can eliminate 'multipath error'—the signal bounce caused by tall buildings or dense tree cover. \n\n**Optical Heart Rate (PPG):** Wrist-based sensors use green light to measure blood flow. While convenient, they are subject to 'cadence lock' (the watch confusing your steps for your heart rate). For serious training, an electrical chest strap (ECG) remains the only way to get clinical-grade accuracy.", 
+      heading: "La Scienza: Dinamiche GNSS", 
+      body: "I moderni orologi GPS utilizzano il GNSS Multi-Band (Global Navigation Satellite System) per tracciare la posizione. Utilizzando due frequenze (L1 e L5), gli orologi possono eliminare l'errore 'multipath'—ovvero il rimbalzo del segnale causato da edifici alti o fitta vegetazione. \n\n**Frequenza Cardiaca Ottica (PPG):** I sensori da polso utilizzano la luce verde per misurare il flusso sanguigno. Sebbene comodi, sono soggetti al 'cadence lock' (l'orologio confonde i tuoi passi con il battito cardiaco). Per un allenamento serio, una fascia cardio elettrica (ECG) rimane l'unico modo per ottenere una precisione di grado clinico.", 
       variant: "highlight" 
     },
     { 
-      heading: "Training Readiness & HRV", 
-      body: "Modern watches are now 'recovery coaches'. They analyze Heart Rate Variability (HRV)—the millisecond-level timing between beats—to determine the state of your Autonomic Nervous System. \n\n- **Sympathetic State:** Low HRV indicates you are stressed or under-recovered. The watch will suggest a rest day. \n- **Parasympathetic State:** High HRV indicates you are ready for a hard interval session. Using this data helps prevent Overtraining Syndrome before it starts.", 
+      heading: "Prontezza all'Allenamento e HRV", 
+      body: "Gli orologi moderni sono ora dei 'coach del recupero'. Analizzano la Variabilità della Frequenza Cardiaca (HRV)—il tempo in millisecondi tra i battiti—per determinare lo stato del tuo sistema nervoso autonomo. \n\n- **Stato Simpatico:** Una HRV bassa indica che sei stressato o non hai recuperato a sufficienza. L'orologio suggerirà un giorno di riposo. \n- **Stato Parasimpatico:** Una HRV alta indica che sei pronto per una sessione di intervalli intensa. L'uso di questi dati aiuta a prevenire la Sindrome da Sovrallenamento prima che inizi.", 
       variant: "default" 
     },
     { 
-      heading: "Running Power vs. Pace", 
-      body: "Pace is a 'lagging' indicator of effort on hills. Running Power (measured in Watts) is an 'instantaneous' metric that tells you exactly how much work you are doing regardless of the incline. \n\n- **Intensity Consistency:** By targeting a specific Wattage, you can ensure your effort remains steady while climbing, preventing the premature glycogen depletion that comes from 'attacking' a hill too hard.", 
+      heading: "Potenza vs Ritmo", 
+      body: "Il ritmo (pace) è un indicatore 'ritardato' dello sforzo in salita. La Potenza di Corsa (misurata in Watt) è una metrica 'istantanea' che ti dice esattamente quanto lavoro stai facendo indipendentemente dalla pendenza. \n\n- **Costanza dell'Intensità:** Puntando a un Wattaggio specifico, puoi assicurarti che il tuo sforzo rimanga costante durante la salita, prevenendo l'esaurimento precoce del glicogeno che deriva dall''attaccare' una salita troppo duramente.", 
       variant: "default", 
       listItems: [
-        "All-Systems GNSS: Connects to GPS, GLONASS, Galileo, and BeiDou simultaneously", 
-        "Mapping & Navigation: Essential for trail runners to avoid getting lost in remote areas", 
-        "Solar Charging: Extends battery life by 10-15% in high-light conditions",
-        "Sleep Architecture: Tracking Deep vs. REM sleep is critical for long-term recovery."
+        "Sistemi GNSS Completi: si connette simultaneamente a GPS, GLONASS, Galileo e BeiDou", 
+        "Mappe e Navigazione: essenziali per i trail runner per evitare di perdersi in aree remote", 
+        "Ricarica Solare: estende la durata della batteria del 10-15% in condizioni di forte luce",
+        "Architettura del Sonno: monitorare il sonno profondo rispetto a quello REM è fondamentale per il recupero a lungo termine."
       ] 
     },
     {
-      heading: "The Optical HR Lag Warning",
-      body: "Optical wrist sensors have a 10-20 second lag during rapid heart rate changes (like hill sprints). If you are doing short, high-intensity intervals, the watch will not show your peak HR until the rep is over. Use a chest strap for real-time speed work data.",
+      heading: "Avviso sul Lag del Cardio Ottico",
+      body: "I sensori ottici da polso hanno un ritardo di 10-20 secondi durante i rapidi cambiamenti della frequenza cardiaca (come gli sprint in salita). Se stai facendo intervalli brevi e ad alta intensità, l'orologio non mostrerà il tuo picco di FC fino alla fine della ripetizione. Usa una fascia cardio per dati in tempo reale nei lavori di velocità.",
       variant: "warning"
     },
     {
-      heading: "Mid-Range vs. Premium: The Sweet Spot",
-      body: "For 90% of runners, a mid-range watch ($250-$400) provides every necessary metric, including Multi-Band GPS and HRV. Premium watches ($600+) add specialized materials (Titanium/Sapphire) and extreme battery life needed for 100-mile ultramarathons.",
+      heading: "Fascia Media vs Premium: Il Punto di Equilibrio",
+      body: "Per il 90% dei runner, un orologio di fascia media (250€-400€) fornisce ogni metrica necessaria, inclusi GPS Multi-Band e HRV. Gli orologi premium (600€+) aggiungono materiali specializzati (Titanio/Zaffiro) e una durata della batteria estrema necessaria per ultramaratone da 160 km.",
       variant: "tip"
     },
     { 
-      heading: "Buyer's Protocol: Actionable Checklist", 
-      body: "How to choose and set up your new training partner.", 
+      heading: "Checklist per l'Acquirente", 
+      body: "Come scegliere e configurare il tuo nuovo compagno di allenamento.", 
       variant: "checklist", 
       listItems: [
-        "Assess Battery Needs: Ensure 'Full GNSS' battery life exceeds your longest expected run by 25%.", 
-        "Check Wrist Sizing: A watch that is too large will bounce, destroying optical HR accuracy.", 
-        "Set Up Data Screens: Limit screens to 4 key metrics: Pace, Distance, Time, and Heart Rate.", 
-        "Wait for 'GPS Green': Never start a run until the watch indicates a solid satellite lock.",
-        "Sync Regularly: Regular syncing updates the 'Satellite Almanac', allowing for 5-second locks."
+        "Valuta le Esigenze della Batteria: assicurati che la durata della batteria con 'GNSS completo' superi la tua corsa più lunga prevista del 25%.", 
+        "Controlla la Misura del Polso: un orologio troppo grande sobbalzerà, distruggendo la precisione del cardio ottico.", 
+        "Configura le Schermate Dati: limita le schermate a 4 metriche chiave: Ritmo, Distanza, Tempo e Frequenza Cardiaca.", 
+        "Attendi il 'Segnale Verde' del GPS: non iniziare mai una corsa finché l'orologio non indica un segnale satellitare stabile.",
+        "Sincronizza Regolarmente: la sincronizzazione regolare aggiorna l'almanacco satellitare, permettendo agganci in 5 secondi."
       ] 
     },
   ],

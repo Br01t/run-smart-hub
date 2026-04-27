@@ -111,7 +111,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Your Runner Profile</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Il Tuo Profilo Runner</p>
             <h1 className="font-display text-display-lg font-extrabold text-foreground">
               {profile.title}
             </h1>
@@ -127,7 +127,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
         {/* Summary Cards */}
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
           <h2 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-            <User className="h-5 w-5 text-primary" /> Your Answers
+            <User className="h-5 w-5 text-primary" /> Le Tue Risposte
           </h2>
           <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
             {questions.map((q, i) => {
@@ -143,7 +143,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
                   className={`rounded-xl border border-border bg-card p-3 border-l-4 ${colors[i % colors.length]}`}
                 >
                   <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{q.label}</p>
-                  <p className="mt-0.5 text-sm font-bold text-foreground">{opt?.label || "Unknown"}</p>
+                  <p className="mt-0.5 text-sm font-bold text-foreground">{opt?.label || "Sconosciuto"}</p>
                 </motion.div>
               );
             })}
@@ -155,7 +155,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.55 }}>
             <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card to-accent/5 p-5 sm:p-7 shadow-sm">
               <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-bold text-foreground">
-                <Sparkles className="h-5 w-5 text-primary" /> Your Personalized Plan
+                <Sparkles className="h-5 w-5 text-primary" /> Il Tuo Piano Personalizzato
               </h2>
               <div className="space-y-4">
                 {profile.tips.map((tip, i) => (
@@ -176,13 +176,13 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.6 }}>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-border" />
-              <h2 className="font-display text-xs font-bold uppercase tracking-widest text-muted-foreground">Expert Selection</h2>
+              <h2 className="font-display text-xs font-bold uppercase tracking-widest text-muted-foreground">Selezione Esperti</h2>
               <div className="h-px flex-1 bg-border" />
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
               {topPicks.map((product) => (
                 <div key={product.id} className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-primary/10 bg-card transition-all hover:border-primary/30 hover:shadow-float card-depth">
-                  <div className="absolute top-4 right-4 z-10 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary uppercase tracking-tighter">Top Pick</div>
+                  <div className="absolute top-4 right-4 z-10 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary uppercase tracking-tighter">Scelta Top</div>
                   <div className="aspect-video overflow-hidden bg-muted">
                     <img src={product.immagine} alt={product.nome} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   </div>
@@ -196,7 +196,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
                       <div className="mt-4 grid grid-cols-2 gap-2 border-t border-border pt-4">
                         {product.specs.weight && (
                           <div className="flex flex-col">
-                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Weight</span>
+                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Peso</span>
                             <span className="text-xs font-bold text-foreground">{product.specs.weight}</span>
                           </div>
                         )}
@@ -208,13 +208,13 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
                         )}
                         {product.specs.absorption && (
                           <div className="flex flex-col">
-                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Absorption</span>
+                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Assorbimento</span>
                             <span className="text-xs font-bold text-foreground">{product.specs.absorption}</span>
                           </div>
                         )}
                         {product.specs.timing && (
                           <div className="flex flex-col">
-                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Timing</span>
+                            <span className="text-[9px] uppercase tracking-wider text-muted-foreground">Tempismo</span>
                             <span className="text-xs font-bold text-foreground">{product.specs.timing}</span>
                           </div>
                         )}
@@ -224,7 +224,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
                     <div className="mt-auto pt-5 flex items-center justify-between border-t border-border">
                       <span className="text-sm font-bold text-foreground">{product.prezzoRange}</span>
                       <a href={product.linkAffiliato} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90">
-                        Official Store <ArrowRight className="h-3 w-3" />
+                        Store Ufficiale <ArrowRight className="h-3 w-3" />
                       </a>
                     </div>
                   </div>
@@ -241,7 +241,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
             className="rounded-2xl border border-border bg-card p-5 sm:p-6"
           >
             <h2 className="mb-4 flex items-center gap-2 font-display text-base font-bold text-card-foreground sm:text-lg">
-              <Wrench className="h-5 w-5 text-primary" /> Recommended Tools
+              <Wrench className="h-5 w-5 text-primary" /> Strumenti Raccomandati
             </h2>
             <div className="space-y-2">
               {profile.tools.map((tool) => (
@@ -266,7 +266,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
               className="rounded-2xl border border-border bg-card p-5 sm:p-6"
             >
               <h2 className="mb-4 flex items-center gap-2 font-display text-base font-bold text-card-foreground sm:text-lg">
-                <BookOpen className="h-5 w-5 text-primary" /> Recommended Reading
+                <BookOpen className="h-5 w-5 text-primary" /> Letture Consigliate
               </h2>
               <div className="space-y-2">
                 {profile.guides.map((guide) => (
@@ -289,7 +289,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
 
         {/* Full Recommended Products Section */}
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.85 }}>
-          <RecommendedProducts tags={profile.tags} title="Personalized Gear Hub" maxProducts={6} />
+          <RecommendedProducts tags={profile.tags} title="Hub Attrezzatura Personalizzato" maxProducts={6} />
         </motion.div>
 
         {/* Retake */}
@@ -298,7 +298,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
             onClick={onRetake}
             className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-muted-foreground transition-all hover:text-foreground hover:shadow-md hover:-translate-y-0.5"
           >
-            <RotateCcw className="h-4 w-4" /> Retake Quiz
+            <RotateCcw className="h-4 w-4" /> Rifai il Quiz
           </button>
         </div>
 
@@ -307,6 +307,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
           <ZoneRunBanner variant="inline" />
         </motion.div>
       </div>
+
     </motion.div>
   );
 };

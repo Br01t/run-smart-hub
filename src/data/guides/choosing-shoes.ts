@@ -2,70 +2,70 @@ import { GuideContent } from "@/types/guide";
 import guideShoes from "@/assets/guide-shoes.webp";
 
 export const choosingRunningShoes: GuideContent = {
-  title: "How to Choose Running Shoes",
-  seoTitle: "How to Choose Running Shoes 2026: Biomechanics & Foam Guide",
-  seoDescription: "The ultimate scientific guide to running shoes. Learn about PEBA foams, stack heights, heel drop, and how to find the perfect pair using the Comfort Filter theory.",
-  keywords: ["choosing running shoes", "running shoe science", "PEBA foam vs EVA", "carbon plated shoes", "heel to toe drop", "running shoe rotation"],
-  description: "Complete guide to choosing the right running shoes for your foot type, terrain and performance goals.",
-  tags: ["shoes", "running", "cushioning", "top-picks-2026"],
+  title: "Come Scegliere le Scarpe da Corsa",
+  seoTitle: "Come Scegliere le Scarpe da Corsa 2026: Guida a Biomeccanica e Schiume",
+  seoDescription: "La guida scientifica definitiva alle scarpe da corsa. Scopri le schiume PEBA, l'altezza dello stack, il drop e come trovare il paio perfetto usando la teoria del Comfort Filter.",
+  keywords: ["scelta scarpe corsa", "scienza scarpe running", "schiuma PEBA vs EVA", "scarpe piastra carbonio", "drop scarpe corsa", "rotazione scarpe"],
+  description: "Guida completa per scegliere le scarpe da corsa giuste in base al tipo di piede, al terreno e agli obiettivi di performance.",
+  tags: ["scarpe", "corsa", "ammortizzazione", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "12 min read",
+  readTime: "12 min di lettura",
   keyTakeaways: [
-    "The 'Comfort Filter' is the best predictor of efficiency and injury prevention",
-    "Modern PEBA foams return up to 87% of energy compared to 60% for standard EVA",
-    "Heel drop (0-12mm) shifts the mechanical load between your knees and calves",
-    "Rotate at least two pairs of shoes to reduce repetitive stress injuries by 39%",
+    "Il 'Comfort Filter' è il miglior predittore di efficienza e prevenzione infortuni",
+    "Le moderne schiume PEBA restituiscono fino all'87% di energia rispetto al 60% dell'EVA standard",
+    "Il drop (0-12mm) sposta il carico meccanico tra ginocchia e polpacci",
+    "Ruotare almeno due paia di scarpe riduce gli infortuni da stress ripetitivo del 39%",
   ],
   relatedTools: [
-    { to: "/tools/bmi", label: "BMI Calculator" },
-    { to: "/tools/calories", label: "Calories Calculator" },
+    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/calories", label: "Calcolatore Calorie" },
   ],
   relatedGuides: [
-    { slug: "muscle-recovery", label: "Muscle Recovery After Running" },
-    { slug: "injury-prevention", label: "Runner's Guide to Injury Prevention" },
+    { slug: "muscle-recovery", label: "Recupero Muscolare Dopo la Corsa" },
+    { slug: "injury-prevention", label: "Guida per Runner alla Prevenzione Infortuni" },
   ],
   sections: [
     { 
-      heading: "The Science: Biomechanics & Energy Dynamics", 
-      body: "Modern running shoe science has transitioned from 'motion control' to 'energy management'. When you run, your body experiences impact forces between 2.5x and 3.0x your body weight. The goal of a performance shoe is to manage these forces through specific material properties.\n\n**Energy Return Efficiency:** Traditional EVA (Ethylene-Vinyl Acetate) foam returns approximately 60-65% of the energy stored during compression. In contrast, advanced PEBA (Polyether Block Amide) foams — found in modern 'Super Shoes' — can return over 85%. This reduces the metabolic cost of running (Running Economy) by 1.8% to 1.9%, allowing for higher speeds at the same cardiovascular effort.", 
+      heading: "La Scienza: Biomeccanica e Dinamica dell'Energia", 
+      body: "La moderna scienza delle scarpe da corsa è passata dal 'controllo del movimento' alla 'gestione dell'energia'. Quando corri, il tuo corpo sperimenta forze d'impatto tra 2,5 e 3,0 volte il tuo peso corporeo. L'obiettivo di una scarpa da performance è gestire queste forze attraverso specifiche proprietà dei materiali.\n\n**Efficienza del Ritorno di Energia:** La schiuma EVA tradizionale (Etilene Vinil Acetato) restituisce circa il 60-65% dell'energia immagazzinata durante la compressione. Al contrario, le schiume avanzate in PEBA (Poliere Blocco Ammide) — presenti nelle moderne 'Super Shoes' — possono restituire oltre l'85%. Ciò riduce il costo metabolico della corsa (Economia di Corsa) dall'1,8% all'1,9%, permettendo velocità più elevate a parità di sforzo cardiovascolare.", 
       variant: "highlight" 
     },
     { 
-      heading: "Foam Technology: EVA vs. PEBA vs. TPU", 
-      body: "Not all cushions are created equal. Understanding the midsole chemistry helps you choose the right tool for the job. \n\n- **EVA (Standard):** Reliable, durable, and firm. Best for daily training and stability. \n- **TPU (Injected):** More durable than EVA, better temperature resistance, and higher energy return. Often found in premium daily trainers. \n- **PEBA (Super Foam):** Ultralight and hyper-responsive. It provides the highest energy return but has a shorter lifespan (approx. 400-500km).", 
+      heading: "Tecnologia delle Schiume: EVA vs. PEBA vs. TPU", 
+      body: "Non tutte le ammortizzazioni sono uguali. Comprendere la chimica dell'intersuola ti aiuta a scegliere lo strumento giusto per il lavoro. \n\n- **EVA (Standard):** Affidabile, durevole e soda. Ideale per l'allenamento quotidiano e la stabilità. \n- **TPU (Iniettato):** Più durevole dell'EVA, migliore resistenza alla temperatura e maggiore ritorno di energia. Spesso si trova nelle scarpe da allenamento quotidiano premium. \n- **PEBA (Super Foam):** Ultraleggera e iper-reattiva. Fornisce il massimo ritorno di energia ma ha una durata più breve (circa 400-500 km).", 
       variant: "default" 
     },
     { 
-      heading: "Stack Height, Proprioception & Stability", 
-      body: "High stack heights (>35mm) provide superior impact protection but can reduce 'ground feel' or proprioception. Studies show that extremely high stacks can increase ankle instability in certain runners due to the 'lever arm' effect of the foam.\n\n**The Comfort Filter Theory:** Pioneered by Dr. Benno Nigg, this theory suggests that the shoe that feels most comfortable and least restrictive to your natural gait is statistically the most efficient and least likely to cause injury. Neutral shoes allow for natural foot movement, while stability shoes use dual-density foams to slow the rate of pronation.", 
+      heading: "Stack Height, Propriocezione e Stabilità", 
+      body: "Le altezze elevate dello stack (>35mm) forniscono una protezione superiore dagli impatti ma possono ridurre la sensibilità al suolo o propriocezione. Gli studi dimostrano che stack estremamente alti possono aumentare l'instabilità della caviglia in alcuni runner a causa dell'effetto 'braccio di leva' della schiuma.\n\n**La Teoria del Comfort Filter:** Ideata dal Dr. Benno Nigg, questa teoria suggerisce che la scarpa che risulta più comoda e meno restrittiva per la tua andatura naturale sia statisticamente la più efficiente e la meno probabile a causare infortuni. Le scarpe neutre permettono il movimento naturale del piede, mentre le scarpe stabili usano schiume a doppia densità per rallentare il tasso di pronazione.", 
       variant: "default", 
       listItems: [
-        "Compression Set: EVA foams lose ~10% of their cushioning every 100km", 
-        "Stability Geometry: Modern stability comes from wider 'netsol' bases rather than hard medial posts", 
-        "Gait Path: Stability shoes should support, not override, your natural 'preferred movement path'",
-        "Heel Drop: Higher drop (10-12mm) shifts load to the knees; lower drop (0-4mm) shifts load to the calves and Achilles."
+        "Compression Set: Le schiume EVA perdono circa il 10% della loro ammortizzazione ogni 100 km", 
+        "Geometria di Stabilità: La stabilità moderna deriva da basi più larghe piuttosto che da inserti rigidi mediali", 
+        "Percorso dell'Andatura: Le scarpe stabili dovrebbero supportare, non sovrastare, il tuo naturale 'percorso di movimento preferito'",
+        "Heel Drop: Un drop più alto (10-12mm) sposta il carico sulle ginocchia; un drop più basso (0-4mm) sposta il carico su polpacci e tendine d'Achille."
       ] 
     },
     { 
-      heading: "The Carbon Plate Revolution", 
-      body: "Carbon plates don't act like 'springs'. Instead, they work as a 'stiffening agent' that stabilizes the hyper-soft PEBA foam and acts as a lever to reduce the work required by the big toe and ankle joints. This shift in load means you must have strong calves and hips to handle the increased eccentric stress of plate-based racers.", 
+      heading: "La Rivoluzione della Piastra in Carbonio", 
+      body: "Le piastre in carbonio non agiscono come 'molle'. Invece, funzionano come un 'agente irrigidente' che stabilizza la schiuma PEBA iper-morbida e agisce come una leva per ridurre il lavoro richiesto dalle articolazioni dell'alluce e della caviglia. Questo spostamento di carico significa che devi avere polpacci e fianchi forti per gestire l'aumentato stress eccentrico delle scarpe da gara con piastra.", 
       variant: "tip" 
     },
     { 
-      heading: "Common Sizing Myths", 
-      body: "Many runners buy shoes that are too small. Your feet swell significantly during a run, especially in the heat. \n\n- **The Thumbnail Rule:** You need at least 1cm of space between your longest toe and the end of the shoe. \n- **Width Matters:** If you see 'muffin topping' over the midsole, you need a wide (2E/4E) version. A constricted foot cannot properly engage the windlass mechanism (the foot's natural arch support).", 
+      heading: "Miti Comuni sulla Taglia", 
+      body: "Molti runner comprano scarpe troppo piccole. I piedi si gonfiano significativamente durante la corsa, specialmente con il caldo. \n\n- **La Regola del Pollice:** Hai bisogno di almeno 1 cm di spazio tra il dito più lungo e la fine della scarpa. \n- **La Larghezza Conta:** Se vedi il piede 'traboccare' dall'intersuola, hai bisogno di una versione larga (2E/4E). Un piede costretto non può attivare correttamente il meccanismo di verricello (il supporto naturale dell'arco del piede).", 
       variant: "warning" 
     },
     { 
-      heading: "The Shoefinder Checklist: How to Buy", 
-      body: "Follow this protocol when testing new footwear to ensure a perfect match.", 
+      heading: "Checklist per la Scelta: Come Acquistare", 
+      body: "Segui questo protocollo quando provi nuove calzature per assicurarti un abbinamento perfetto.", 
       variant: "checklist", 
       listItems: [
-        "Shop in the Afternoon: Your feet are at their largest after a day of walking.", 
-        "Wear Your Running Socks: Sock thickness changes the fit by half a size.", 
-        "Remove the Insole: Stand on it. If your foot overflows the edges, the shoe is too narrow.", 
-        "The Walk Test: If you feel a 'hot spot' or friction while walking, it will become a blister while running.",
-        "Rotation Plan: Have one 'firm' shoe for short/fast runs and one 'soft' shoe for long/easy runs."
+        "Acquista nel Pomeriggio: I tuoi piedi sono più grandi dopo una giornata di cammino.", 
+        "Indossa le Tue Calze da Corsa: Lo spessore delle calze cambia la vestibilità di mezza taglia.", 
+        "Rimuovi la Soletta: Alzati sopra di essa. Se il tuo piede trabocca dai bordi, la scarpa è troppo stretta.", 
+        "Il Test della Camminata: Se senti un 'punto caldo' o attrito mentre cammini, diventerà una vescica mentre corri.",
+        "Piano di Rotazione: Prevedi una scarpa 'soda' per corse brevi/veloci e una 'morbida' per corse lunghe/lente."
       ] 
     },
   ],
