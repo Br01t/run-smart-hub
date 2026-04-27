@@ -38,6 +38,7 @@ const SectionBlock = ({ section, index }: SectionBlockProps) => {
         {icon && <div className="mt-0.5 shrink-0">{icon}</div>}
         <div className="flex-1 min-w-0">
           <h2 className="font-display text-lg font-bold text-foreground sm:text-xl lg:text-2xl">
+            <span className="mr-2 text-primary/40 font-mono text-sm sm:text-base">0{index + 1}.</span>
             {section.heading}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-[17px] lg:leading-relaxed">

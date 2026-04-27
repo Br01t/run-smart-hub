@@ -9,7 +9,7 @@ export const runningCadence: GuideContent = {
   description: "Scopri perché la cadenza influisce sulle prestazioni, il riferimento dei 180 spm e come aumentare in sicurezza il numero di passi.",
   tags: ["running", "accessories"],
   heroImage: guideCadence,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "L'aumento della cadenza accorcia la falcata, portando l'appoggio del piede più vicino al centro di massa",
     "Un'alta cadenza (170-190 spm) riduce le forze d'impatto sul ginocchio fino al 20%",

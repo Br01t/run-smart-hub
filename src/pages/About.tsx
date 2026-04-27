@@ -157,7 +157,7 @@ const About = () => {
           <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4">Trasparenza e Monetizzazione</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              Runners Hub è una risorsa gratuita. Per sostenerla, partecipo a programmi di affiliazione con <strong>Amazon Associates</strong>, <strong>Myprotein</strong> e <strong>Onnit</strong>. Quando acquisti un prodotto tramite uno dei miei link, potrei guadagnare una piccola commissione — senza alcun costo aggiuntivo per te.
+              Runners Hub è una risorsa gratuita. Per sostenerla, partecipo a vari programmi di affiliazione. Quando acquisti un prodotto tramite uno dei miei link, potrei guadagnare una piccola commissione — senza alcun costo aggiuntivo per te.
             </p>
             <p>
               Queste partnership <strong>non influenzano mai i miei contenuti</strong>. Seleziono i prodotti in base alla qualità, alla pertinenza e al valore — non in base alle percentuali di commissione. Per tutti i dettagli, leggi la mia{" "}

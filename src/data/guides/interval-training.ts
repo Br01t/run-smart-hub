@@ -9,7 +9,7 @@ export const intervalTraining: GuideContent = {
   description: "Padroneggia ogni tipo di allenamento di velocità — dal fartlek alle ripetute VO2 max. Impara come strutturare gli intervalli e impostare i ritmi target.",
   tags: ["running", "energy", "muscles"],
   heroImage: guideIntervalTraining,
-  readTime: "14 min di lettura",
+  readTime: "5 min di lettura",
   keyTakeaways: [
     "L'allenamento a intervalli manipola i rapporti lavoro-riposo per colpire specifici sistemi energetici",
     "Le ripetute VO2 Max (3-5 min) migliorano la tua capacità massima di elaborazione dell'ossigeno",

@@ -9,7 +9,7 @@ export const sleepAndRunning: GuideContent = {
   description: "Perché il sonno è il più potente (e gratuito) potenziatore di prestazioni per i runner. Scopri come la qualità del sonno influisce sul recupero, sul rischio di infortuni e sulla performance in gara.",
   tags: ["recovery", "protein", "muscles"],
   heroImage: guideSleepRecovery,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "L'Ormone della Crescita (GH) viene rilasciato quasi esclusivamente durante il sonno profondo N3",
     "La privazione del sonno aumenta lo sforzo percepito (RPE)—rendendo lo stesso ritmo più faticoso",

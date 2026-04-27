@@ -9,7 +9,7 @@ export const muscleRecovery: GuideContent = {
   description: "Strategie scientifiche per recuperare più velocemente: stretching, foam rolling, nutrizione e sonno.",
   tags: ["recupero", "massaggio", "proteine", "top-recovery-2026"],
   heroImage: guideRecovery,
-  readTime: "12 min di lettura",
+  readTime: "6 min di lettura",
   keyTakeaways: [
     "Il recupero è il momento in cui il corpo si adatta e diventa più forte (Supercompensazione)",
     "Il sonno a onde lente (N3/N4) è responsabile del 95% del rilascio dell'ormone della crescita",
@@ -68,6 +68,11 @@ export const muscleRecovery: GuideContent = {
         "La Stanza Buia: 8+ ore di sonno in una stanza sotto i 19°C."
       ] 
     },
+    {
+      heading: "HRV: Il tuo Pannello di Controllo Interno",
+      body: "La Variabilità della Frequenza Cardiaca (HRV) è lo strumento più preciso per misurare lo stato del tuo sistema nervoso autonomo. Un HRV alto indica che il sistema parasimpatico (riposo e digestione) è dominante, segnalando che sei pronto per un allenamento intenso. Un HRV basso o in calo costante suggerisce uno stress sistemico accumulato, indicando la necessità di un giorno di scarico o di riposo totale per prevenire l'overtraining.",
+      variant: "highlight"
+    }
   ],
   hubCategory: "recovery",
 };

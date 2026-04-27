@@ -19,7 +19,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Monetizzazione Trasparente",
-    body: "Runners Hub si sostiene attraverso link di affiliazione (Amazon, Myprotein, Onnit). Quando acquisti tramite i nostri link, riceviamo una piccola commissione senza costi aggiuntivi per te.",
+    body: "Runners Hub si sostiene attraverso link di affiliazione. Quando acquisti tramite i nostri link, riceviamo una piccola commissione senza costi aggiuntivi per te.",
     accent: "bg-accent/10 text-accent",
   },
   {
@@ -33,14 +33,14 @@ const steps = [
 const Method = () => {
   return (
     <Layout>
-      <SEO title="Il Nostro Metodo" description="Trasparenza totale su come funziona Runners Hub e perché puoi fidarti dei nostri strumenti." path="/method" />
+      <SEO title="Il nostro Metodo" description="Trasparenza totale su come funziona Runners Hub e perché puoi fidarti dei nostri strumenti." path="/method" />
 
       {/* Header */}
       <section className="border-b border-border bg-secondary/30">
         <div className="container mx-auto max-w-7xl px-4 py-12 sm:py-16 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Trasparenza Operativa</p>
-            <h1 className="font-display text-3xl font-black text-foreground sm:text-4xl lg:text-5xl">Il Nostro Metodo</h1>
+            <h1 className="font-display text-3xl font-black text-foreground sm:text-4xl lg:text-5xl">Il nostro Metodo</h1>
             <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground sm:text-lg lg:text-xl">
               Scopri i rigorosi standard scientifici ed etici dietro i nostri strumenti e le nostre raccomandazioni.
             </p>

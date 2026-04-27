@@ -104,7 +104,7 @@ const GuidesHub = () => {
                 Tutte
               </button>
               {categories.map((cat) => {
-                const s = categoryStyle[cat] || categoryStyle.Gear;
+                const s = categoryStyle[cat] || categoryStyle.Attrezzatura;
                 const isActive = activeCategory === cat;
                 return (
                   <button

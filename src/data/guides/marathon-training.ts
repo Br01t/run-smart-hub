@@ -9,7 +9,7 @@ export const marathonTraining: GuideContent = {
   description: "Tutto quello che devi sapere per allenarti per la tua prima maratona: piani, ritmo, nutrizione e attrezzatura.",
   tags: ["energia", "carboidrati", "scarpe", "abbigliamento", "top-apparel-2026"],
   heroImage: guideMarathon,
-  readTime: "16 min di lettura",
+  readTime: "6 min di lettura",
   keyTakeaways: [
     "Struttura il tuo allenamento in quattro blocchi distinti: Base, Forza, Specifico e Taper",
     "Il 'Muro' è un evento fisiologico in cui il glicogeno si esaurisce: previenilo con 60-90g di carboidrati/ora",

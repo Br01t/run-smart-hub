@@ -9,7 +9,7 @@ export const choosingRunningShoes: GuideContent = {
   description: "Guida completa per scegliere le scarpe da corsa giuste in base al tipo di piede, al terreno e agli obiettivi di performance.",
   tags: ["scarpe", "corsa", "ammortizzazione", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "12 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
     "Il 'Comfort Filter' è il miglior predittore di efficienza e prevenzione infortuni",
     "Le moderne schiume PEBA restituiscono fino all'87% di energia rispetto al 60% dell'EVA standard",
@@ -62,12 +62,17 @@ export const choosingRunningShoes: GuideContent = {
       variant: "checklist", 
       listItems: [
         "Acquista nel Pomeriggio: I tuoi piedi sono più grandi dopo una giornata di cammino.", 
-        "Indossa le Tue Calze da Corsa: Lo spessore delle calze cambia la vestibilità di mezza taglia.", 
+        "Indossa le tue Calze da Corsa: Lo spessore delle calze cambia la vestibilità di mezza taglia.", 
         "Rimuovi la Soletta: Alzati sopra di essa. Se il tuo piede trabocca dai bordi, la scarpa è troppo stretta.", 
         "Il Test della Camminata: Se senti un 'punto caldo' o attrito mentre cammini, diventerà una vescica mentre corri.",
         "Piano di Rotazione: Prevedi una scarpa 'soda' per corse brevi/veloci e una 'morbida' per corse lunghe/lente."
       ] 
     },
+    {
+      heading: "Propriocezione e Stabilità del Terreno",
+      body: "La stabilità non è solo per chi iper-prona. Ogni runner ha bisogno di una scarpa che comunichi correttamente con il terreno. La sensibilità al suolo (propriocezione) permette al sistema nervoso di pre-attivare i muscoli stabilizzatori prima dell'impatto. Uno stack height eccessivo senza una base larga può compromettere questa comunicazione, portando a un aumento del carico sulle ginocchia per compensare l'instabilità della caviglia.",
+      variant: "default"
+    }
   ],
   hubCategory: "shoes",
 };

@@ -3,7 +3,7 @@ import { ExternalLink, Star } from "lucide-react";
 interface Product {
   id: string;
   nome: string;
-  categoria: string;
+  category: string;
   brand: string;
   tag: string[];
   prezzoRange: string;

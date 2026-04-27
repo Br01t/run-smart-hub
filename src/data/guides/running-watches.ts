@@ -9,7 +9,7 @@ export const runningWatches: GuideContent = {
   description: "Una guida completa e indipendente per scegliere l'orologio GPS da corsa giusto. Analizziamo caratteristiche, precisione, batteria e rapporto qualità-prezzo per ogni budget.",
   tags: ["accessories", "running", "watches", "top-gear-2026"],
   heroImage: guideRunningWatches,
-  readTime: "14 min di lettura",
+  readTime: "5 min di lettura",
   keyTakeaways: [
     "Il GNSS Multi-Band (L1+L5) è essenziale per un ritmo preciso in città e nei boschi",
     "La Variabilità della Frequenza Cardiaca (HRV) è il gold standard per monitorare la prontezza all'allenamento",

@@ -9,7 +9,7 @@ export const injuryPrevention: GuideContent = {
   description: "Come rimanere lontani dagli infortuni con un allenamento intelligente, potenziamento e tecniche di recupero adeguate.",
   tags: ["recupero", "massaggio", "muscoli", "scarpe", "top-recovery-2026"],
   heroImage: guideInjury,
-  readTime: "14 min di lettura",
+  readTime: "5 min di lettura",
   keyTakeaways: [
     "Gestisci il tuo Acute:Chronic Workload Ratio (ACWR) tra 0,8 e 1,3",
     "L'allenamento della forza (2-3 volte/settimana) riduce gli infortuni da sovraccarico di quasi il 50%",

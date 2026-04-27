@@ -9,7 +9,7 @@ export const runningNutrition: GuideContent = {
   description: "Una guida completa per alimentare correttamente le tue corse. Impara cosa, quando e quanto mangiare per performance e salute ottimali.",
   tags: ["energia", "carboidrati", "integratori", "proteine"],
   heroImage: guideNutrition,
-  readTime: "14 min di lettura",
+  readTime: "7 min di lettura",
   keyTakeaways: [
     "Punta a 60-90g di carboidrati l'ora per sforzi superiori ai 90 minuti",
     "Usa un rapporto Glucosio-Fruttosio di 1:0,8 per massimizzare l'assorbimento e ridurre i disturbi gastrici",
@@ -68,6 +68,11 @@ export const runningNutrition: GuideContent = {
         "Sera Dopo: Pasto ricco di sodio per reintegrare gli elettroliti persi col sudore."
       ] 
     },
+    {
+      heading: "Protocollo di Allenamento Intestinale",
+      body: "Proprio come i muscoli e il sistema cardiovascolare, il sistema digestivo può essere allenato. Gli atleti d'élite praticano regolarmente il rifornimento ad alto carico (90g+ carboidrati/ora) durante gli allenamenti in Zona 2 e nelle sessioni a ritmo maratona. Questo aumenta la densità dei trasportatori di glucosio e fruttosio, riducendo il tempo di svuotamento gastrico e rendendo l'intestino resiliente agli stress meccanici della corsa.",
+      variant: "highlight"
+    }
   ],
   hubCategory: "supplements",
 };

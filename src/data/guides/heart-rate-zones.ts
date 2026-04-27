@@ -9,7 +9,7 @@ export const heartRateZones: GuideContent = {
   description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
   tags: ["accessories", "running"],
   heroImage: guideHeartrate,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Trascorri l'80% del tuo volume in Zona 2 per costruire una base aerobica massiccia",
     "Le formule per la FC Max (220-età) possono sbagliare fino a 15-20 battiti al minuto",

@@ -9,7 +9,7 @@ export const runningShoeRotation: GuideContent = {
   description: "La guida scientifica e pratica alla rotazione di più paia di scarpe per ridurre il rischio di infortuni e migliorare le prestazioni.",
   tags: ["shoes", "gear", "injury-prevention", "top-picks-2026"],
   heroImage: guideShoes,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Alternare tra più di 2 modelli riduce il rischio di infortuni da stress ripetitivo del 39%",
     "Variare il drop (es. 10 mm e 4 mm) sposta il carico su diverse articolazioni",

@@ -46,7 +46,7 @@ const FeatureBanners = () => {
               <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-md bg-accent">
                 <BookOpen className="h-4 w-4 text-accent-foreground" />
               </div>
-              <h3 className="font-display text-xl font-bold text-primary-foreground sm:text-2xl">Guide Esperte</h3>
+              <h3 className="font-display text-xl font-bold text-primary-foreground sm:text-2xl">Manuali del Runner</h3>
               <p className="mt-1 text-sm text-primary-foreground/60">Scarpe, nutrizione, recupero — approfondimenti basati sulla scienza.</p>
               <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent transition-all group-hover:gap-2">
                 Sfoglia tutte le guide <ArrowRight className="h-4 w-4" />

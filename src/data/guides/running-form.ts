@@ -9,7 +9,7 @@ export const runningForm: GuideContent = {
   description: "Correggi la postura, il movimento delle braccia, l'appoggio del piede e la respirazione per una corsa più efficiente e senza infortuni.",
   tags: ["running", "muscles", "shoes"],
   heroImage: guideRunningForm,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Corri 'alto' con una leggera inclinazione dalle caviglie, non dalle anche",
     "Atterra con il piede direttamente sotto il tuo centro di massa per eliminare le forze frenanti",

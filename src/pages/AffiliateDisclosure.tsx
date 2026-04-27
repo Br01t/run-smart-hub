@@ -53,7 +53,7 @@ const AffiliateDisclosure = () => {
           </div>
 
           <div>
-            <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">Il Tuo Supporto è Importante</h2>
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3">Il tuo Supporto è Importante</h2>
             <p>
               Acquistando tramite i nostri link, sostieni direttamente il tempo e lo sforzo necessari per creare strumenti gratuiti, scrivere guide approfondite e mantenere questa piattaforma. Grazie per aiutarci a mantenere Runners Hub gratuito e indipendente.
             </p>
@@ -66,7 +66,7 @@ const AffiliateDisclosure = () => {
               Puoi anche leggere il nostro{" "}
               <Link to="/disclaimer" className="text-primary hover:underline font-medium">Disclaimer</Link>, l'{" "}
               <Link to="/privacy" className="text-primary hover:underline font-medium">Informativa sulla Privacy</Link> e{" "}
-              <Link to="/method" className="text-primary hover:underline font-medium">Il Nostro Metodo</Link>{" "}
+              <Link to="/method" className="text-primary hover:underline font-medium">Il nostro Metodo</Link>{" "}
               per ulteriori informazioni su come operiamo.
             </p>
           </div>

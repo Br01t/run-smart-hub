@@ -9,7 +9,7 @@ export const trailRunning: GuideContent = {
   description: "Una guida per principianti al trail running: attrezzatura, tecnica, sicurezza e come trovare i sentieri giusti.",
   tags: ["shoes", "running", "accessories", "hydration", "top-gear-2026"],
   heroImage: guideTrail,
-  readTime: "14 min di lettura",
+  readTime: "5 min di lettura",
   keyTakeaways: [
     "Il trail running richiede un'attivazione neurale 3 volte superiore per la richiesta propriocettiva",
     "Su pendenze superiori al 15%, il 'Power Hiking' è più efficiente dal punto di vista metabolico rispetto alla corsa",

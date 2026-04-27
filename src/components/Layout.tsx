@@ -147,7 +147,7 @@ const Layout = ({ children, className = "" }: { children: React.ReactNode, class
               <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-primary-foreground/40">Azienda</h4>
               <ul className="space-y-2 text-sm text-primary-foreground/70">
                 <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Chi Siamo</Link></li>
-                <li><Link to="/method" className="hover:text-primary-foreground transition-colors">Il Nostro Metodo</Link></li>
+                <li><Link to="/method" className="hover:text-primary-foreground transition-colors">Il nostro Metodo</Link></li>
                 <li><Link to="/privacy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-primary-foreground transition-colors">Termini di Servizio</Link></li>
                 <li><Link to="/disclaimer" className="hover:text-primary-foreground transition-colors">Disclaimer</Link></li>
@@ -161,8 +161,8 @@ const Layout = ({ children, className = "" }: { children: React.ReactNode, class
             </div>
           </div>
 
-          <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-[10px] text-primary-foreground/30">
-            <p className="mb-2 italic">In qualità di Affiliato Amazon, ricevo un guadagno per ciascun acquisto idoneo.</p>
+          <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center text-[10px] text-primary-foreground/20">
+            <p className="mb-1.5 italic">In qualità di Affiliato Amazon, ricevo un guadagno per ciascun acquisto idoneo.</p>
             <p>© {new Date().getFullYear()} Runners Hub.</p>
           </div>
         </div>

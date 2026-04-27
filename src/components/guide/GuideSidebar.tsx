@@ -26,8 +26,9 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
                 <li key={i}>
                   <a
                     href={`#${sectionId}`}
-                    className="block rounded-lg px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary"
+                    className="flex items-center rounded-lg px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:bg-primary/5 hover:text-primary"
                   >
+                    <span className="mr-2 text-[10px] font-mono opacity-40">0{i + 1}</span>
                     {section.heading}
                   </a>
                 </li>

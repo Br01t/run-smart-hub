@@ -85,7 +85,7 @@ const BMICalculator = () => {
             {result ? (
               <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                 <div className="rounded-2xl border-2 border-primary bg-primary/5 p-6 shadow-hero sm:p-8 card-depth">
-                  <h3 className="mb-6 font-display text-lg font-bold text-foreground">I Tuoi Risultati</h3>
+                  <h3 className="mb-6 font-display text-lg font-bold text-foreground">I tuoi Risultati</h3>
                   <div className="flex flex-col items-center gap-1 rounded-2xl bg-card p-6 border border-border shadow-sm card-depth card-depth-hover">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Indice di Massa Corporea</p>
                     <p className={`font-display text-5xl font-black ${result.color}`}>{result.bmi}</p>
@@ -154,7 +154,7 @@ const BMICalculator = () => {
           <HubReferral 
             category="shoes"
             href="/hub#shoes"
-            title="Migliori Scarpe per il Tuo Profilo"
+            title="Migliori Scarpe per il tuo Profilo"
             description="Trova il paio di scarpe giusto con il livello di ammortizzazione appropriato in base alla tua massa corporea e ai tuoi obiettivi di corsa."
           />
         </div>

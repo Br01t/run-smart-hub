@@ -38,6 +38,16 @@ const goalMap: Record<string, string> = {
   muscle: "Massa Muscolare",
 };
 
+const quizMap: Record<string, string> = {
+  experience: "Esperienza",
+  terrain: "Terreno",
+  distance: "Distanza",
+  frequency: "Frequenza",
+  biomechanics: "Appoggio",
+  goal: "Obiettivo",
+  issue: "Sfida",
+};
+
 export const translateCategory = (key: string): string =>
   categoryMap[key] || key.charAt(0).toUpperCase() + key.slice(1);
 
@@ -46,3 +56,6 @@ export const translateSport = (key: string): string =>
 
 export const translateGoal = (key: string): string =>
   goalMap[key] || key.charAt(0).toUpperCase() + key.slice(1);
+
+export const translateQuizLabel = (key: string): string =>
+  quizMap[key] || key.charAt(0).toUpperCase() + key.slice(1);

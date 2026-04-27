@@ -72,7 +72,7 @@ const ProteinCalculator = () => {
               </div>
               <button onClick={calculate}
                 className="mt-8 w-full rounded-xl bg-gradient-hero px-6 py-4 text-sm font-extrabold text-primary-foreground shadow-hero transition-all hover:opacity-90 active:scale-[0.98] sm:w-auto">
-                Scopri il Tuo Fabbisogno
+                Scopri il tuo Fabbisogno
               </button>
             </div>
 

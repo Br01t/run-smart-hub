@@ -9,7 +9,7 @@ export const hillTraining: GuideContent = {
   description: "Padroneggia le ripetute in salita, la tecnica in discesa e costruisci una forza esplosiva con allenamenti mirati.",
   tags: ["running", "muscles", "energy"],
   heroImage: guideHillTraining,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Le salite sono 'allenamento della forza travestito'—costruiscono potenza senza palestra",
     "La corsa in salita recluta più fibre muscolari di Tipo II (a contrazione rapida)",

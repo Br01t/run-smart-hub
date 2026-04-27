@@ -9,7 +9,7 @@ export const stretchingForRunners: GuideContent = {
   description: "Stretching dinamico vs statico: quando farlo, le migliori routine e come la flessibilità influisce sull'efficienza della corsa.",
   tags: ["recovery", "muscles", "running"],
   heroImage: guideStretching,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Lo stretching dinamico (potenziamento) è obbligatorio prima della corsa per preparare il sistema nervoso",
     "Lo stretching statico prima della corsa riduce la 'Rigidità Tendinea', diminuendo il ritorno elastico",

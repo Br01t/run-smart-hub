@@ -13,16 +13,16 @@ export interface GuideSummary {
 }
 
 export const categoryStyle: Record<string, { dot: string; badge: string; border: string }> = {
-  Gear:      { dot: "bg-primary", badge: "bg-primary text-primary-foreground", border: "border-l-primary" },
-  Nutrition: { dot: "bg-accent", badge: "bg-accent text-accent-foreground", border: "border-l-accent" },
-  Recovery:  { dot: "bg-violet-500", badge: "bg-violet-600 text-white", border: "border-l-violet-500" },
-  Health:    { dot: "bg-rose-500", badge: "bg-rose-600 text-white", border: "border-l-rose-500" },
-  Training:  { dot: "bg-sky-500", badge: "bg-sky-600 text-white", border: "border-l-sky-500" },
-  Trail:     { dot: "bg-emerald-600", badge: "bg-emerald-700 text-white", border: "border-l-emerald-600" },
+  Attrezzatura: { dot: "bg-blue-500", badge: "bg-blue-600 text-white", border: "border-l-blue-500" },
+  Nutrizione:   { dot: "bg-purple-500", badge: "bg-purple-600 text-white", border: "border-l-purple-500" },
+  Recupero:     { dot: "bg-emerald-500", badge: "bg-emerald-600 text-white", border: "border-l-emerald-500" },
+  Salute:       { dot: "bg-rose-500", badge: "bg-rose-600 text-white", border: "border-l-rose-500" },
+  Allenamento:  { dot: "bg-orange-500", badge: "bg-orange-600 text-white", border: "border-l-orange-500" },
+  Trail:        { dot: "bg-cyan-500", badge: "bg-cyan-600 text-white", border: "border-l-cyan-500" },
 };
 
 export const FeaturedGuideCard = ({ guide }: { guide: GuideSummary }) => {
-  const s = categoryStyle[guide.category] || categoryStyle.Gear;
+  const s = categoryStyle[guide.category] || categoryStyle.Attrezzatura;
   return (
     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
       <Link
@@ -56,7 +56,7 @@ export const FeaturedGuideCard = ({ guide }: { guide: GuideSummary }) => {
 };
 
 export const SecondaryGuideCard = ({ guide, index }: { guide: GuideSummary, index: number }) => {
-  const s = categoryStyle[guide.category] || categoryStyle.Gear;
+  const s = categoryStyle[guide.category] || categoryStyle.Attrezzatura;
   return (
     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }}>
       <Link

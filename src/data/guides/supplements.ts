@@ -9,7 +9,7 @@ export const supplementsForRunners: GuideContent = {
   description: "Quali integratori funzionano davvero per la corsa? Una guida basata sulle evidenze scientifiche per la performance e la salute.",
   tags: ["supplements", "electrolytes", "protein", "top-supplements-2026"],
   heroImage: guideSupplements,
-  readTime: "14 min di lettura",
+  readTime: "8 min di lettura",
   keyTakeaways: [
     "Dai priorità al cibo vero—gli integratori colmano le lacune lasciate da allenamenti ad alto volume",
     "Creatina e Beta-Alanina migliorano la capacità ad alta intensità e il tamponamento dell'acido lattico",
@@ -69,6 +69,11 @@ export const supplementsForRunners: GuideContent = {
         "Magnesio: assumilo prima di dormire per sfruttare i suoi effetti rilassanti e favorenti il sonno."
       ] 
     },
+    {
+      heading: "Caffeina: Il Gold Standard della Performance",
+      body: "La caffeina è l'integratore con le prove più solide per l'endurance. Agisce riducendo la percezione dello sforzo (RPE) e migliorando il reclutamento delle fibre muscolari. Il dosaggio ottimale è di 3-6 mg per kg di peso corporeo, assunto 45-60 minuti prima dell'attività. Per sforzi ultra-endurance, dosi minori e frequenti (es. 50mg ogni ora) possono mantenere i livelli di vigilanza costanti senza causare disturbi gastrici.",
+      variant: "tip"
+    }
   ],
   hubCategory: "supplements",
 };

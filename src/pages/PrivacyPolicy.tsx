@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">3. Come Utilizziamo i Tuoi Dati</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">3. Come Utilizziamo i tuoi Dati</h2>
             <ul className="ml-4 list-disc space-y-1">
               <li>Per migliorare i contenuti del nostro sito web e l'esperienza dell'utente attraverso analisi aggregate.</li>
               <li>Per rispondere alle tue richieste e fornire supporto.</li>
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section>
-            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">6. I Tuoi Diritti</h2>
+            <h2 className="mb-2 font-display text-lg font-semibold text-foreground">6. I tuoi Diritti</h2>
             <p className="mb-2">Ai sensi del GDPR e delle leggi sulla privacy applicabili, hai il diritto di:</p>
             <ul className="ml-4 list-disc space-y-1">
               <li>Accedere ai dati personali che conserviamo su di te.</li>

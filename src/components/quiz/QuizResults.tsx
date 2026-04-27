@@ -13,6 +13,7 @@ import RecommendedProducts from "@/components/RecommendedProducts";
 import ZoneRunBanner from "@/components/ZoneRunBanner";
 import { shoeSpecs } from "@/data/specs/shoes";
 import { supplementSpecs } from "@/data/specs/supplements";
+import { translateQuizLabel } from "@/lib/translations";
 
 interface QuizResultsProps {
   profile: ProfileResult;
@@ -38,7 +39,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
       .map(p => {
         const matchCount = p.tag.filter(t => profile.tags.includes(t)).length;
         const priceValue = getPriceValue(p.prezzoRange);
-        const category = p.category || (p as any).categoria;
+        const category = p.category;
         
         // Boost factor for high-impact categories (shoes, watches/electronics)
         let importanceBoost = 1;
@@ -68,7 +69,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
     const usedCategories = new Set<string>();
 
     for (const p of scored) {
-      const category = p.category || (p as any).categoria;
+      const category = p.category;
       if (!usedCategories.has(category)) {
         picks.push(p);
         usedCategories.add(category);
@@ -111,7 +112,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Il Tuo Profilo Runner</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Il tuo Profilo Runner</p>
             <h1 className="font-display text-display-lg font-extrabold text-foreground">
               {profile.title}
             </h1>
@@ -127,7 +128,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
         {/* Summary Cards */}
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
           <h2 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-            <User className="h-5 w-5 text-primary" /> Le Tue Risposte
+            <User className="h-5 w-5 text-primary" /> Le tue Risposte
           </h2>
           <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
             {questions.map((q, i) => {
@@ -142,7 +143,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
                   transition={{ delay: 0.4 + i * 0.05 }}
                   className={`rounded-xl border border-border bg-card p-3 border-l-4 ${colors[i % colors.length]}`}
                 >
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{q.label}</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{translateQuizLabel(q.id)}</p>
                   <p className="mt-0.5 text-sm font-bold text-foreground">{opt?.label || "Sconosciuto"}</p>
                 </motion.div>
               );
@@ -155,7 +156,7 @@ const QuizResults = ({ profile, questions, answers, onRetake }: QuizResultsProps
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.55 }}>
             <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-card to-accent/5 p-5 sm:p-7 shadow-sm">
               <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-bold text-foreground">
-                <Sparkles className="h-5 w-5 text-primary" /> Il Tuo Piano Personalizzato
+                <Sparkles className="h-5 w-5 text-primary" /> Il tuo Piano Personalizzato
               </h2>
               <div className="space-y-4">
                 {profile.tips.map((tip, i) => (

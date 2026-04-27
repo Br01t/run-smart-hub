@@ -9,7 +9,7 @@ export const winterRunning: GuideContent = {
   description: "Una guida pratica alla corsa invernale: sistemi a strati, attrezzatura essenziale e precauzioni di sicurezza per allenarsi nei mesi più freddi.",
   tags: ["accessories", "running", "apparel", "top-apparel-2026"],
   heroImage: guideWinterRunning,
-  readTime: "12 min di lettura",
+  readTime: "4 min di lettura",
   keyTakeaways: [
     "Vestiti per una temperatura di 10°C superiore a quella reale per compensare il calore corporeo prodotto",
     "Un sistema a 3 strati (Base, Mid, Shell) crea un microclima regolato vicino alla pelle",
