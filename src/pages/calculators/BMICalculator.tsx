@@ -30,9 +30,13 @@ const BMICalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolatore BMI per Runner" 
-        description="Calcola il tuo indice di massa corporea con un contesto specifico per la corsa. Capisci come il tuo peso influisce sul carico articolare e sulla scelta delle scarpe."
+        title="Peso Ideale Runner e Calcolo BMI: Ottimizza la tua Corsa" 
+        description="Calcola il tuo BMI e scopri il peso ideale per la maratona. Capisci come il rapporto peso-potenza influisce sulla performance e sul rischio infortuni."
         path="/tools/bmi"
+        faq={[
+          { q: "Qual è il BMI ideale per un runner?", a: "Per la maggior parte dei runner, un BMI tra 19 e 24 è ottimale. Atleti d'élite spesso si avvicinano a 19-21 per massimizzare il rapporto peso-potenza senza compromettere la salute." },
+          { q: "Il BMI conta per la corsa?", a: "Sì, il BMI influisce sul carico articolare. Un BMI più elevato richiede scarpe con maggiore ammortizzazione per prevenire infortuni da stress osseo." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

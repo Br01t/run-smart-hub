@@ -9,6 +9,7 @@ interface SEOProps {
   ogImage?: string;
   twitterCard?: string;
   schema?: object;
+  faq?: { q: string; a: string }[];
 }
 
   const SEO = ({
@@ -20,8 +21,9 @@ interface SEOProps {
   ogImage = "https://www.runners-hub.org/og-image.png",
   twitterCard = "summary_large_image",
   schema,
+  faq,
 }: SEOProps) => {
-  const SITE_NAME = "Runners Hub";
+  const SITE_NAME = "Run Smart Hub";
   const BASE_URL = "https://www.runners-hub.org";
   
   const fullTitle = `${title} | ${SITE_NAME}`;
@@ -57,9 +59,25 @@ interface SEOProps {
       <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
       {/* JSON-LD Structured Data */}
-      {schema && (
+      {(schema || faq) && (
         <script type="application/ld+json">
-          {JSON.stringify(schema)}
+          {JSON.stringify(
+            faq 
+              ? {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": faq.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": item.a
+                    }
+                  })),
+                  ...(schema || {})
+                }
+              : schema
+          )}
         </script>
       )}
     </Helmet>

@@ -52,20 +52,20 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
 
   const getMethodIcon = (method: string) => {
     switch (method) {
-      case 'Deep Massage': return <Zap className="h-4 w-4" />;
-      case 'Circulatory Support': return <Droplets className="h-4 w-4" />;
-      case 'Active Prevention': return <ShieldCheck className="h-4 w-4" />;
-      case 'Thermal Therapy': return <Thermometer className="h-4 w-4" />;
+      case 'Massaggio Profondo': return <Zap className="h-4 w-4" />;
+      case 'Supporto Circolatorio': return <Droplets className="h-4 w-4" />;
+      case 'Prevenzione Attiva': return <ShieldCheck className="h-4 w-4" />;
+      case 'Terapia Termica': return <Thermometer className="h-4 w-4" />;
       default: return <Activity className="h-4 w-4" />;
     }
   };
 
   const getMethodColorClass = (method: string) => {
     switch (method) {
-      case 'Deep Massage': return 'bg-violet-50 text-violet-700 border-violet-100';
-      case 'Circulatory Support': return 'bg-sky-50 text-sky-700 border-sky-100';
-      case 'Active Prevention': return 'bg-emerald-50 text-emerald-700 border-emerald-100';
-      case 'Thermal Therapy': return 'bg-rose-50 text-rose-700 border-rose-100';
+      case 'Massaggio Profondo': return 'bg-violet-50 text-violet-700 border-violet-100';
+      case 'Supporto Circolatorio': return 'bg-sky-50 text-sky-700 border-sky-100';
+      case 'Prevenzione Attiva': return 'bg-emerald-50 text-emerald-700 border-emerald-100';
+      case 'Terapia Termica': return 'bg-rose-50 text-rose-700 border-rose-100';
       default: return 'bg-slate-50 text-slate-700';
     }
   };
@@ -81,19 +81,19 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
-          title="Recovery comparison"
+          title="Confronto Recupero"
         >
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Application Method</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Metodo di Applicazione</label>
             <SelectFilter 
               value={activeFilters.method || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, method: v})}
               options={[
-                { label: "All Methods", value: "all" },
-                { label: "Deep Massage", value: "Deep Massage" },
-                { label: "Circulatory Support", value: "Circulatory Support" },
-                { label: "Active Prevention", value: "Active Prevention" },
-                { label: "Thermal Therapy", value: "Thermal Therapy" },
+                { label: "Tutti i Metodi", value: "all" },
+                { label: "Massaggio Profondo", value: "Massaggio Profondo" },
+                { label: "Supporto Circolatorio", value: "Supporto Circolatorio" },
+                { label: "Prevenzione Attiva", value: "Prevenzione Attiva" },
+                { label: "Terapia Termica", value: "Terapia Termica" },
               ]}
             />
           </div>
@@ -105,42 +105,42 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
                 <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
-                    Product
+                    Prodotto
                 </TableHead>
                 <TableHead className="w-[140px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Zap className="h-3 w-3 opacity-50" />
-                        Method
+                        Metodo
                     </div>
                 </TableHead>
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Crosshair className="h-3 w-3 opacity-50" />
-                        Target Area
+                        Area Target
                     </div>
                 </TableHead>
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <LayoutGrid className="h-3 w-3 opacity-50" />
-                        Strategy
+                        Strategia
                     </div>
                 </TableHead>
                 <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Activity className="h-3 w-3 opacity-50" />
-                        Intensity
+                        Intensità
                     </div>
                 </TableHead>
                 <TableHead className="w-[160px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <HeartPulse className="h-3 w-3 opacity-50" />
-                        Key Benefit
+                        Beneficio Chiave
                     </div>
                 </TableHead>
                 <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Target className="h-3 w-3 opacity-50 text-left w-full" />
-                        Best For
+                        Ideale per
                     </div>
                 </TableHead>
               </TableRow>
@@ -219,8 +219,8 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
                   <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
-                      <p className="font-medium">No recovery tools found matching these criteria.</p>
-                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Clear all filters</Button>
+                      <p className="font-medium">Nessun strumento di recupero trovato.</p>
+                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Cancella tutti i filtri</Button>
                     </div>
                   </TableCell>
                 </TableRow>
@@ -239,7 +239,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Feature</th>
+                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Caratteristica</th>
                   {selectedProducts.map(p => (
                     <th 
                       key={p.name} 
@@ -253,7 +253,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
               </thead>
               <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Prezzo</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
                       {p.price || "€---"}
@@ -261,7 +261,7 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
                   ))}
                 </tr>
                 <tr className="hover:bg-muted/5 transition-colors border-t border-border">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Immagine</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
                       <div className="flex justify-center">
@@ -277,13 +277,13 @@ export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: 
                   ))}
                 </tr>
                 {[
-                  { label: "Application Method", key: "method", isBadge: true },
-                  { label: "Target Area", key: "targetArea" },
-                  { label: "Strategy", key: "strategy" },
-                  { label: "Intensity / Power", key: "intensity" },
-                  { label: "Key Benefit", key: "benefit" },
-                  { label: "Technical Specs", key: "techDetails" },
-                  { label: "Best For", key: "bestFor", isItalic: true },
+                  { label: "Metodo di Applicazione", key: "method", isBadge: true },
+                  { label: "Area Target", key: "targetArea" },
+                  { label: "Strategia", key: "strategy" },
+                  { label: "Intensità / Potenza", key: "intensity" },
+                  { label: "Beneficio Chiave", key: "benefit" },
+                  { label: "Specifiche Tecniche", key: "techDetails" },
+                  { label: "Ideale per", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
                     <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>

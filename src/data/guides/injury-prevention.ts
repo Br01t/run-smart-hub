@@ -3,9 +3,9 @@ import guideInjury from "@/assets/guide-injury.webp";
 
 export const injuryPrevention: GuideContent = {
   title: "Guida del Runner alla Prevenzione degli Infortuni",
-  seoTitle: "Prevenzione Infortuni Corsa 2026: La Scienza del Carico",
-  seoDescription: "Resta in strada con la prevenzione infortuni basata sulle evidenze. Scopri il modello ACWR, il carico isometrico dei tendini e come evitare la 'Zona Pericolo Overtraining'.",
-  keywords: ["prevenzione infortuni corsa", "modello ACWR corsa", "esercizi isometrici tendini", "RED-S runner", "prevenire fratture da stress", "biomeccanica corsa"],
+  seoTitle: "Prevenzione Infortuni Corsa Over 50 e Longevità Atletica 2026",
+  seoDescription: "Guida alla prevenzione infortuni per runner. Scopri come gestire il carico (ACWR), rinforzare i tendini e mantenere la salute ossea per correre a lungo.",
+  keywords: ["prevenzione infortuni corsa over 50", "modello ACWR corsa", "esercizi isometrici tendini", "longevità atletica runner", "prevenire fratture da stress", "biomeccanica corsa prevenzione"],
   description: "Come rimanere lontani dagli infortuni con un allenamento intelligente, potenziamento e tecniche di recupero adeguate.",
   tags: ["recupero", "massaggio", "muscoli", "scarpe", "top-recovery-2026"],
   heroImage: guideInjury,

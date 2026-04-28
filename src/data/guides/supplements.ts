@@ -3,9 +3,9 @@ import guideSupplements from "@/assets/guide-supplements.webp";
 
 export const supplementsForRunners: GuideContent = {
   title: "Integratori Essenziali per il Runner",
-  seoTitle: "Migliori Integratori Corsa 2026: Guida Scientifica ai Dosaggi",
-  seoDescription: "Quali integratori migliorano davvero le prestazioni nella corsa? Analisi scientifica di Creatina, Nitrati, Beta-Alanina e Vitamina D per atleti di endurance.",
-  keywords: ["integratori corsa", "performance endurance", "creatina per runner", "nitrati succo barbabietola", "magnesio per crampi", "proteine per endurance"],
+  seoTitle: "Integrazione Maratona e Gut Training: Guida Carboidrati 2026",
+  seoDescription: "Come allenare l'intestino per assorbire 90g/h di carboidrati. Guida scientifica all'integrazione di gel, elettroliti e caffeina per evitare il muro.",
+  keywords: ["gut training maratona come fare", "integrazione carboidrati 90g/h corsa", "migliori gel per maratona 2026", "idratazione corsa scienza", "magnesio e crampi evidenze", "caffeina performance endurance"],
   description: "Quali integratori funzionano davvero per la corsa? Una guida basata sulle evidenze scientifiche per la performance e la salute.",
   tags: ["supplements", "electrolytes", "protein", "top-supplements-2026"],
   heroImage: guideSupplements,

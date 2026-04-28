@@ -245,8 +245,8 @@ const MasterHub = () => {
   return (
     <Layout>
       <SEO 
-        title={urlCategory ? `${translateCategory(urlCategory)} Hub: Migliori Prodotti e Confronti 2026` : "Confronto Migliore Attrezzatura Running e Hub Prodotti 2026"} 
-        description={urlCategory ? `Scopri i migliori prodotti per ${translateCategory(urlCategory)} con analisi tecniche, confronti basati su dati e selezioni scientifiche per runner.` : "Confronti tecnici dettagliati di scarpe da corsa, integratori e attrezzatura basati su principi scientifici e dati biomeccanici."}
+        title={urlCategory ? `Migliori ${translateCategory(urlCategory)} 2026: Confronti e Guida Acquisto` : "Migliore Attrezzatura Running 2026: Confronti Tecnici e Scelte Esperti"} 
+        description={urlCategory ? `Classifica e confronto delle migliori ${translateCategory(urlCategory)} per runner. Analisi tecnica dei prodotti top per performance e durata.` : "Confronta le migliori scarpe, integratori e accessori per la corsa. Selezioni basate sulla scienza per aiutarti a scegliere l'attrezzatura giusta."}
         path={urlCategory ? `/hub/${urlCategory}${sport ? `/${sport}` : ""}` : "/hub"}
       />
 

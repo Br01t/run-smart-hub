@@ -39,20 +39,20 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
-          title="Hydration comparison"
+          title="Confronto Idratazione"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Format</label>
+              <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground text-left block">Formato</label>
               <select 
                 value={activeFilters.format || "all"} 
                 onChange={(e) => setActiveFilters({...activeFilters, format: e.target.value})}
                 className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
-                <option value="all">All Formats</option>
-                <option value="Polvere">Powder</option>
-                <option value="Bustine">Sachets</option>
-                <option value="Compresse">Tablets</option>
+                <option value="all">Tutti i Formati</option>
+                <option value="Polvere">Polvere</option>
+                <option value="Bustine">Bustine</option>
+                <option value="Compresse">Compresse</option>
               </select>
             </div>
           </div>
@@ -64,30 +64,30 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
                 <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
-                    Product
+                    Prodotto
                 </TableHead>
                 <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Box className="h-3 w-3 opacity-50" />
-                        Format
+                        Formato
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Zap className="h-3 w-3 opacity-50 text-blue-500" />
-                        Sodium
+                        Sodio
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Apple className="h-3 w-3 opacity-50 text-emerald-500" />
-                        Sugar
+                        Zucchero
                     </div>
                 </TableHead>
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Activity className="h-3 w-3 opacity-50" />
-                        Primary Focus
+                        Focus Principale
                     </div>
                 </TableHead>
                 <TableHead className="w-[110px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
@@ -99,7 +99,7 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
                 <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Target className="h-3 w-3 opacity-50 text-left w-full" />
-                        Best For
+                        Ideale per
                     </div>
                 </TableHead>
               </TableRow>
@@ -169,8 +169,8 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
                   <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
-                      <p className="font-medium">No hydration products found.</p>
-                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Clear all filters</Button>
+                      <p className="font-medium">Nessun prodotto per l'idratazione trovato.</p>
+                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Cancella tutti i filtri</Button>
                     </div>
                   </TableCell>
                 </TableRow>
@@ -189,7 +189,7 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Feature</th>
+                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground text-left">Caratteristica</th>
                   {selectedProducts.map(p => (
                     <th 
                       key={p.name} 
@@ -203,7 +203,7 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
               </thead>
               <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Prezzo</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
                       {p.price || "€---"}
@@ -211,7 +211,7 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
                   ))}
                 </tr>
                 <tr className="hover:bg-muted/5 transition-colors border-t border-border">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Immagine</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
                       <div className="flex justify-center">
@@ -227,13 +227,13 @@ export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }:
                   ))}
                 </tr>
                 {[
-                  { label: "Usage", key: "usage" },
-                  { label: "Format", key: "format" },
-                  { label: "Sodium", key: "sodium" },
-                  { label: "Sugar", key: "sugar" },
+                  { label: "Utilizzo", key: "usage" },
+                  { label: "Formato", key: "format" },
+                  { label: "Sodio", key: "sodium" },
+                  { label: "Zucchero", key: "sugar" },
                   { label: "Timing", key: "timing" },
                   { label: "Focus", key: "effect" },
-                  { label: "Best For", key: "bestFor", isItalic: true },
+                  { label: "Ideale per", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
                     <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>

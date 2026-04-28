@@ -27,9 +27,13 @@ const ProteinCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolatore Fabbisogno Proteico per Runner" 
-        description="Calcola il tuo fabbisogno proteico giornaliero in base al peso corporeo, all'intensità dell'allenamento e agli obiettivi di performance utilizzando le linee guida ISSN."
+        title="Fabbisogno Proteico Runner: Quante Proteine per la Corsa?" 
+        description="Calcola quante proteine assumere per il recupero muscolare post-corsa. Guida al fabbisogno proteico per runner e atleti di endurance basata sulla scienza."
         path="/tools/protein"
+        faq={[
+          { q: "Quante proteine servono a un runner?", a: "Per chi corre, il fabbisogno varia da 1.2 a 2.0g per kg di peso corporeo. Le proteine sono essenziali non solo per i muscoli, ma per riparare i tessuti e supportare il sistema immunitario." },
+          { q: "Quando assumere le proteine post-corsa?", a: "Assumere 20-30g di proteine entro 2 ore dalla fine della corsa massimizza la sintesi proteica e accelera il recupero dei tessuti danneggiati dall'impatto." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

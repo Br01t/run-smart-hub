@@ -3,9 +3,9 @@ import guideShoes from "@/assets/guide-shoes.webp";
 
 export const choosingRunningShoes: GuideContent = {
   title: "Come Scegliere le Scarpe da Corsa",
-  seoTitle: "Come Scegliere le Scarpe da Corsa 2026: Guida a Biomeccanica e Schiume",
-  seoDescription: "La guida scientifica definitiva alle scarpe da corsa. Scopri le schiume PEBA, l'altezza dello stack, il drop e come trovare il paio perfetto usando la teoria del Comfort Filter.",
-  keywords: ["scelta scarpe corsa", "scienza scarpe running", "schiuma PEBA vs EVA", "scarpe piastra carbonio", "drop scarpe corsa", "rotazione scarpe"],
+  seoTitle: "Scarpe Running Piastra Carbonio vs Tradizionali: Guida Biomeccanica 2026",
+  seoDescription: "Confronto tecnico tra Super Shoes e scarpe tradizionali. Vantaggi delle piastre in carbonio, schiume PEBA e come scegliere per evitare infortuni.",
+  keywords: ["scarpe running piastra carbonio pro e contro", "biomeccanica super shoes", "schiuma PEBA vs EVA corsa", "vantaggi scarpe carbonio amatori", "drop scarpe corsa scienza", "rotazione scarpe infortuni"],
   description: "Guida completa per scegliere le scarpe da corsa giuste in base al tipo di piede, al terreno e agli obiettivi di performance.",
   tags: ["scarpe", "corsa", "ammortizzazione", "top-picks-2026"],
   heroImage: guideShoes,

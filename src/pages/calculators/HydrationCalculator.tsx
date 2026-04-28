@@ -20,18 +20,22 @@ const HydrationCalculator = () => {
 
     const tempFactor = t > 25 ? 1.3 : t > 20 ? 1.1 : 1;
     const before = Math.round(w * 5);
-    const during = Math.round(((w * 0.5 * d) / 60) * tempFactor * 100) / 100;
+    const during = Math.round(((w * 8 * d) / 60) * tempFactor);
     const after = Math.round(w * 7);
 
-    setResult({ before, during: Math.round(during * 1000), after });
+    setResult({ before, during, after });
   };
 
   return (
     <Layout>
       <SEO 
-        title="Calcolatore Idratazione per la Corsa" 
-        description="Calcola il tuo fabbisogno personalizzato di idratazione prima, durante e dopo la corsa in base a peso corporeo, durata e temperatura."
+        title="Quanta Acqua Bere Corsa? Calcolo Idratazione Maratona" 
+        description="Calcola il tuo fabbisogno idrico personalizzato per la corsa. Scopri quanta acqua bere prima, durante e dopo l'allenamento in base a peso e temperatura."
         path="/tools/hydration"
+        faq={[
+          { q: "Quanta acqua bere durante la corsa?", a: "Punta a 400-800ml all'ora, sorseggiando ogni 15-20 minuti. La quantità esatta dipende dal tuo peso, dal ritmo e dalla temperatura esterna." },
+          { q: "Come capire se sono disidratato?", a: "Il colore dell'urina è il miglior indicatore: punta a un giallo paglierino chiaro. Se è scuro, aumenta l'apporto di liquidi ed elettroliti." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

@@ -61,30 +61,30 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
-          title="Shoes comparison"
+          title="Confronto Scarpe"
         >
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Terrain</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Terreno</label>
             <SelectFilter 
               value={activeFilters.terrain || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, terrain: v})}
               options={[
-                { label: "All Terrains", value: "all" },
-                { label: "Road", value: "Road" },
+                { label: "Tutti i Terreni", value: "all" },
+                { label: "Strada", value: "Road" },
                 { label: "Trail", value: "Trail" },
               ]}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Cushioning</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Ammortizzazione</label>
             <SelectFilter 
               value={activeFilters.cushion || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, cushion: v})}
               options={[
-                { label: "All Levels", value: "all" },
-                { label: "Minimal", value: "Minimal" },
-                { label: "Balanced", value: "Balanced" },
-                { label: "Maximum", value: "Maximum" },
+                { label: "Tutti i Livelli", value: "all" },
+                { label: "Minimale", value: "Minimal" },
+                { label: "Bilanciata", value: "Balanced" },
+                { label: "Massima", value: "Maximum" },
               ]}
             />
           </div>
@@ -96,18 +96,18 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
                 <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
-                    Model
+                    Modello
                 </TableHead>
                 <TableHead className="w-[100px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Mountain className="h-3 w-3 opacity-50" />
-                        Terrain
+                        Terreno
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Scale className="h-3 w-3 opacity-50" />
-                        Weight
+                        Peso
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
@@ -119,19 +119,19 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Cloud className="h-3 w-3 opacity-50 text-sky-400" />
-                        Cushioning
+                        Ammortizzazione
                     </div>
                 </TableHead>
                 <TableHead className="w-[110px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Shield className="h-3 w-3 opacity-50" />
-                        Stability
+                        Stabilità
                     </div>
                 </TableHead>
                 <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Activity className="h-3 w-3 opacity-50 text-left w-full" />
-                        Best For
+                        Ideale per
                     </div>
                 </TableHead>
               </TableRow>
@@ -206,8 +206,8 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                   <TableCell colSpan={8} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
-                      <p className="font-medium">No shoes found matching these criteria.</p>
-                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Clear all filters</Button>
+                      <p className="font-medium">Nessuna scarpa trovata con questi criteri.</p>
+                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Cancella tutti i filtri</Button>
                     </div>
                   </TableCell>
                 </TableRow>
@@ -226,7 +226,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Feature</th>
+                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Caratteristica</th>
                   {selectedProducts.map(p => (
                     <th 
                       key={p.name} 
@@ -240,7 +240,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
               </thead>
               <tbody className="divide-y divide-border text-foreground">
                 <tr className="hover:bg-muted/5 transition-colors">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Prezzo</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
                       {p.price}
@@ -248,7 +248,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                   ))}
                 </tr>
                 <tr className="hover:bg-muted/5 transition-colors border-t border-border">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Immagine</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
                       <div className="flex justify-center">
@@ -264,12 +264,12 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                   ))}
                 </tr>
                 {[
-                  { label: "Terrain", key: "terrain", isBadge: true },
-                  { label: "Weight", key: "weight" },
+                  { label: "Terreno", key: "terrain", isBadge: true },
+                  { label: "Peso", key: "weight" },
                   { label: "Drop", key: "drop" },
-                  { label: "Cushion", key: "cushion", isBadge: true },
-                  { label: "Support", key: "support", isBadge: true },
-                  { label: "Best For", key: "bestFor", isItalic: true },
+                  { label: "Ammortizzazione", key: "cushion", isBadge: true },
+                  { label: "Stabilità", key: "support", isBadge: true },
+                  { label: "Ideale per", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
                     <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">{row.label}</td>

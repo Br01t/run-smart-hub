@@ -16,8 +16,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="I Migliori Strumenti per la Corsa e Shoe Finder 2026"
-        description="Ottimizza la tua performance con calcolatori basati sulla scienza per idratazione, nutrizione e recupero. Trova le migliori scarpe e attrezzatura con le nostre guide esperte."
+        title="I Migliori Strumenti Corsa: Calcoli Scientifici e Shoe Finder 2026"
+        description="Ottimizza la performance con calcolatori basati sulla scienza: idratazione, Zone 2, nutrizione e recupero. Trova le migliori scarpe con i dati del nostro hub."
         path="/"
         schema={{
           "@context": "https://schema.org",

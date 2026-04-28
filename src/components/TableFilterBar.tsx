@@ -23,7 +23,7 @@ export const TableFilterBar = ({
   activeFiltersCount,
   onClearFilters,
   children,
-  title = "Technical Comparison",
+  title = "Confronto Tecnico",
   accentColor = "hsl(var(--primary))"
 }: TableFilterBarProps) => {
   return (
@@ -52,7 +52,7 @@ export const TableFilterBar = ({
           className="flex items-center gap-2 h-9 rounded-xl border-border hover:bg-muted transition-all"
         >
           <SlidersHorizontal className="h-3.5 w-3.5" />
-          <span className="font-semibold">{showFilters ? "Hide Filters" : "Filters & Search"}</span>
+          <span className="font-semibold">{showFilters ? "Nascondi Filtri" : "Filtri e Ricerca"}</span>
           {(searchTerm || activeFiltersCount > 0) && (
             <Badge 
               className="ml-1 h-5 min-w-[20px] p-0 flex items-center justify-center rounded-full text-[10px] font-bold border-none"
@@ -68,11 +68,11 @@ export const TableFilterBar = ({
         <div className="border-b border-border bg-card/50 p-6 animate-in fade-in slide-in-from-top-4 duration-300 relative z-10 backdrop-blur-md">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-2">
-              <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 px-1">Search</label>
+              <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 px-1">Cerca</label>
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground/50" />
                 <Input 
-                  placeholder="Type to find..." 
+                  placeholder="Scrivi per cercare..." 
                   className="pl-9 h-10 bg-background/50 border-border/50 focus:border-primary/50 transition-all rounded-xl" 
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -89,7 +89,7 @@ export const TableFilterBar = ({
                 className="text-xs font-bold text-muted-foreground hover:bg-primary/5 hover:text-primary w-fit h-10 px-4 rounded-xl transition-all" 
                 onClick={onClearFilters}
               >
-                Clear all filters
+                Cancella tutti i filtri
               </Button>
             </div>
           </div>

@@ -28,9 +28,13 @@ const ElectrolyteCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolatore Reintegro Elettroliti per Runner" 
-        description="Calcola la quantità precisa di sodio, potassio e magnesio da reintegrare in base al tasso di sudorazione, intensità e durata."
+        title="Calcolo Sali Corsa: Quanti Elettroliti in Maratona?" 
+        description="Calcola sodio, potassio e magnesio da reintegrare durante la corsa. Previeni crampi e disidratazione con il calcolo elettroliti basato sulla scienza."
         path="/tools/electrolytes"
+        faq={[
+          { q: "Quanti sali dovrei prendere correndo?", a: "Punta a 500-700mg di sodio per litro di liquidi se sudi molto o se corri per oltre 90 minuti. Magnesio e potassio sono fondamentali per prevenire i crampi." },
+          { q: "Come prevenire i crampi in maratona?", a: "I crampi sono spesso causati da fatica muscolare e squilibrio elettrolitico. Un reintegro costante di sodio fin dai primi km può aiutare a ritardarne la comparsa." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

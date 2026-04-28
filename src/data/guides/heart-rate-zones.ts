@@ -3,9 +3,9 @@ import guideHeartrate from "@/assets/guide-heartrate.webp";
 
 export const heartRateZones: GuideContent = {
   title: "Allenamento con le Zone di Frequenza Cardiaca",
-  seoTitle: "Allenamento Zone Cardio 2026: Regola 80/20 e Scienza della FC Max",
-  seoDescription: "Smetti di indovinare l'intensità. Scopri la scienza delle zone cardio, come trovare la tua vera FC Max e perché la regola 80/20 è il segreto delle prestazioni d'élite.",
-  keywords: ["zone frequenza cardiaca corsa", "regola 80/20 corsa", "calcolare zone cardio", "soglia anaerobica corsa", "benefici zona 2", "test frequenza cardiaca massima"],
+  seoTitle: "Allenamento Zone 2 Running: Come Calcolare e Benefici Longevità",
+  seoDescription: "Guida completa all'allenamento in Zona 2 per runner. Come calcolare le zone cardio, migliorare l'economia di corsa e la biogenesi mitocondriale 2026.",
+  keywords: ["allenamento zone 2 corsa", "calcolo zone cardio 2026", "benefici corsa bassa intensità", "frequenza cardiaca longevità", "soglia aerobica runner", "test zone cardio"],
   description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
   tags: ["accessories", "running"],
   heroImage: guideHeartrate,

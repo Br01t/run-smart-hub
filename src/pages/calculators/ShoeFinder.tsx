@@ -38,9 +38,13 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEO 
-        title="Trova le Migliori Scarpe da Corsa 2026" 
-        description="Rispondi a 5 rapide domande e ricevi raccomandazioni personalizzate per le tue scarpe da corsa in base a terreno, obiettivi e biomeccanica."
+        title="Migliori Scarpe Running 2026: Shoe Finder Personalizzato" 
+        description="Quali scarpe da corsa scegliere? Rispondi a 5 domande e trova il modello perfetto per il tuo piede, terreno e obiettivi di performance."
         path="/tools/shoes"
+        faq={[
+          { q: "Quali sono le migliori scarpe per iniziare a correre?", a: "Per chi inizia, consigliamo scarpe con ammortizzazione bilanciata e un buon supporto. Modelli come la Brooks Ghost o la Nike Pegasus sono ottimi punti di partenza." },
+          { q: "Ogni quanto cambiare le scarpe da corsa?", a: "In media ogni 600-800 km. Se senti dolori insoliti alle ginocchia o se la suola è visibilmente usurata, è tempo di un nuovo paio." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

@@ -23,9 +23,13 @@ const CaloriesCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolatore Calorie Bruciate nella Corsa" 
-        description="Stima le calorie totali bruciate durante la tua corsa in base a distanza, peso e ritmo medio utilizzando i coefficienti MET scientifici."
+        title="Calcolo Calorie Corsa km: Quante Calorie Brucio Correndo?" 
+        description="Stima precisa delle calorie bruciate durante la corsa in base a distanza e peso. Scopri il tuo consumo energetico reale basato sulla scienza dello sport."
         path="/tools/calories"
+        faq={[
+          { q: "Quante calorie brucio correndo 10 km?", a: "In media, bruci circa 1 kcal per kg di peso corporeo per ogni km percorso. Un runner di 70 kg brucia circa 700-725 kcal in 10 km." },
+          { q: "Correre aiuta a perdere peso?", a: "Sì, la corsa è una delle attività a più alto dispendio energetico. Per perdere peso, abbina la corsa a un moderato deficit calorico e a un apporto proteico adeguato." }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",

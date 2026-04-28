@@ -61,35 +61,35 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
           activeFiltersCount={Object.keys(activeFilters).length}
           onClearFilters={clearFilters}
           accentColor={accentColor}
-          title="Apparel comparison"
+          title="Confronto Abbigliamento"
         >
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Category</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Categoria</label>
             <SelectFilter 
               value={activeFilters.category || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, category: v})}
               options={[
-                { label: "All Gear", value: "all" },
-                { label: "Shirt", value: "Shirt" },
-                { label: "Shorts", value: "Shorts" },
-                { label: "Jacket", value: "Jacket" },
+                { label: "Tutto l'Abbigliamento", value: "all" },
+                { label: "Maglia", value: "Maglia" },
+                { label: "Pantaloncini", value: "Pantaloncini" },
+                { label: "Giacca", value: "Giacca" },
                 { label: "Leggings", value: "Leggings" },
-                { label: "Accessory", value: "Accessory" },
+                { label: "Accessorio", value: "Accessorio" },
               ]}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Fit</label>
+            <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground block text-left">Vestibilità</label>
             <SelectFilter 
               value={activeFilters.fit || "all"} 
               onValueChange={(v) => setActiveFilters({...activeFilters, fit: v})}
               options={[
-                { label: "All Fits", value: "all" },
-                { label: "Compression", value: "Compression" },
-                { label: "Fitted", value: "Fitted" },
-                { label: "Loose", value: "Loose" },
-                { label: "Regular", value: "Regular" },
-                { label: "One Size", value: "One Size" },
+                { label: "Tutte le Vestibilità", value: "all" },
+                { label: "Compressione", value: "Compressione" },
+                { label: "Aderente", value: "Aderente" },
+                { label: "Ampio", value: "Ampio" },
+                { label: "Regolare", value: "Regolare" },
+                { label: "Taglia unica", value: "Taglia unica" },
               ]}
             />
           </div>
@@ -101,42 +101,42 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
               <TableRow className="bg-muted/30 hover:bg-muted/30">
                 <TableHead className="sticky left-0 z-30 w-[50px] px-4 bg-muted/50 backdrop-blur-sm shadow-[1px_0_0_0_rgba(255,255,255,0.05)]"></TableHead>
                 <TableHead className="sm:sticky sm:left-[50px] z-30 w-[140px] px-2 font-bold text-foreground text-xs sm:bg-muted/50 sm:backdrop-blur-sm sm:border-r sm:shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
-                    Product
+                    Prodotto
                 </TableHead>
                 <TableHead className="w-[100px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <LayoutGrid className="h-3 w-3 opacity-50" />
-                        Usage
+                        Utilizzo
                     </div>
                 </TableHead>
                 <TableHead className="w-[140px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Wind className="h-3 w-3 opacity-50" />
-                        Breathability
+                        Traspirabilità
                     </div>
                 </TableHead>
                 <TableHead className="w-[120px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Layers className="h-3 w-3 opacity-50" />
-                        Anti-Chafing
+                        Anti-Sfregamento
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-[10px] uppercase tracking-tight text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Sun className="h-3 w-3 opacity-50" />
-                        Visibility
+                        Visibilità
                     </div>
                 </TableHead>
                 <TableHead className="w-[90px] px-2 font-bold text-foreground text-xs text-center whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Ruler className="h-3 w-3 opacity-50" />
-                        Fit
+                        Vestibilità
                     </div>
                 </TableHead>
                 <TableHead className="px-4 font-bold text-foreground text-[10px] uppercase tracking-tight whitespace-nowrap">
                     <div className="flex flex-col items-center gap-1">
                         <Target className="h-3 w-3 opacity-50 text-left w-full" />
-                        Best For
+                        Ideale per
                     </div>
                 </TableHead>
               </TableRow>
@@ -222,8 +222,8 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
                   <TableCell colSpan={7} className="h-40 text-center">
                     <div className="flex flex-col items-center justify-center text-muted-foreground">
                       <Search className="h-8 w-8 mb-2 opacity-20" />
-                      <p className="font-medium">No apparel found matching these criteria.</p>
-                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Clear all filters</Button>
+                      <p className="font-medium">Nessun capo d'abbigliamento trovato.</p>
+                      <Button variant="link" size="sm" onClick={clearFilters} className="mt-1">Cancella tutti i filtri</Button>
                     </div>
                   </TableCell>
                 </TableRow>
@@ -242,7 +242,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground">Feature</th>
+                  <th className="p-4 bg-muted/50 font-bold text-sm uppercase tracking-wider text-muted-foreground text-left">Caratteristica</th>
                   {selectedProducts.map(p => (
                     <th 
                       key={p.name} 
@@ -256,7 +256,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
               </thead>
               <tbody className="divide-y divide-border">
                 <tr className="hover:bg-muted/5 transition-colors">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Price</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Prezzo</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border font-display text-base font-bold text-foreground">
                       {p.price || "€---"}
@@ -264,7 +264,7 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
                   ))}
                 </tr>
                 <tr className="hover:bg-muted/5 transition-colors border-t border-border">
-                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Visual</td>
+                  <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32 align-middle">Immagine</td>
                   {selectedProducts.map(p => (
                     <td key={p.name} className="p-4 text-center border-l border-border bg-white/50">
                       <div className="flex justify-center">
@@ -280,21 +280,21 @@ export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: {
                   ))}
                 </tr>
                 {[
-                  { label: "Category", key: "category", isBadge: true },
-                  { label: "Breathability", key: "breathability" },
-                  { label: "Anti-Chafing", key: "antiChafing" },
-                  { label: "Visibility", key: "visibility", isBadge: true },
-                  { label: "Seasonal", key: "seasonal" },
-                  { label: "Fit", key: "fit", isBadge: true },
-                  { label: "Details", key: "details" },
-                  { label: "Best For", key: "bestFor", isItalic: true },
+                  { label: "Categoria", key: "category", isBadge: true },
+                  { label: "Traspirabilità", key: "breathability" },
+                  { label: "Anti-Sfregamento", key: "antiChafing" },
+                  { label: "Visibilità", key: "visibility", isBadge: true },
+                  { label: "Stagionalità", key: "seasonal" },
+                  { label: "Vestibilità", key: "fit", isBadge: true },
+                  { label: "Dettagli", key: "details" },
+                  { label: "Ideale per", key: "bestFor", isItalic: true },
                 ].map((row) => (
                   <tr key={row.label} className="hover:bg-muted/5 transition-colors">
                     <td className="p-4 font-bold text-[10px] uppercase tracking-widest text-muted-foreground bg-muted/5 w-32">{row.label}</td>
                     {selectedProducts.map(p => (
                       <td key={p.name} className={`p-4 text-center text-sm border-l border-border ${row.isItalic ? 'italic leading-relaxed' : ''}`}>
                         {row.isBadge ? (
-                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${p.visibility.includes('High') && row.key === 'visibility' ? 'bg-amber-50 text-amber-600' : ''}`}>
+                          <Badge variant="outline" className={`text-[10px] uppercase font-bold ${p.visibility.includes('Alta') && row.key === 'visibility' ? 'bg-amber-50 text-amber-600' : ''}`}>
                             {p[row.key as keyof ApparelSpec]}
                           </Badge>
                         ) : (
