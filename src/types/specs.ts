@@ -16,11 +16,11 @@ export interface SupplementSpec {
 export interface ShoeSpec {
   name: string;
   brand: string;
-  terrain: "Road" | "Trail";
+  terrain: "Road" | "Trail" | "Strada";
   weight: string;
   drop: string;
-  cushion: "Minimal" | "Balanced" | "Maximum";
-  support: "Neutral" | "Stable";
+  cushion: "Minimal" | "Balanced" | "Maximum" | "Minima" | "Bilanciata" | "Massima";
+  support: "Neutral" | "Stable" | "Neutro" | "Stabile";
   bestFor: string;
   price: string;
   link?: string;

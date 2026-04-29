@@ -183,8 +183,8 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                     <TableCell className="px-2 text-[11px] text-center text-muted-foreground font-mono font-bold italic">{spec.drop}</TableCell>
                     <TableCell className="px-2 text-center">
                       <Badge variant="outline" className={`text-[9px] uppercase font-bold tracking-tighter px-1 ${
-                        spec.cushion === 'Maximum' ? 'bg-sky-50 text-sky-700 border-sky-100' : 
-                        spec.cushion === 'Minimal' ? 'bg-amber-50 text-amber-700 border-amber-100' : 
+                        (spec.cushion === 'Maximum' || spec.cushion === 'Massima') ? 'bg-sky-50 text-sky-700 border-sky-100' : 
+                        (spec.cushion === 'Minimal' || spec.cushion === 'Minima') ? 'bg-amber-50 text-amber-700 border-amber-100' : 
                         'bg-slate-50 text-slate-700'
                       }`}>
                         {spec.cushion}
@@ -192,7 +192,7 @@ export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { a
                     </TableCell>
                     <TableCell className="px-2 text-center">
                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-foreground">
-                         <div className={`h-2 w-2 rounded-full ${spec.support === 'Stable' ? 'bg-indigo-500' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]'}`} />
+                        <div className={`h-2 w-2 rounded-full ${(spec.support === 'Stable' || spec.support === 'Stabile') ? 'bg-indigo-500' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]'}`} />
                          {spec.support}
                        </span>
                     </TableCell>

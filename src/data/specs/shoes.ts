@@ -94,4 +94,58 @@ export const shoeSpecs: ShoeSpec[] = [
     link: "https://www.amazon.com/s?k=Salomon+Speedcross",
     emphasized: true
   },
+  { 
+    name: "Adizero Adios Pro Evo 1", 
+    brand: "Adidas",
+    terrain: "Strada",
+    weight: "138g", 
+    drop: "6mm", 
+    cushion: "Massima", 
+    support: "Neutro",
+    bestFor: "Elite - Record del mondo in Maratona",
+    price: "€500",
+    image: "/images/products/adidas-adios-pro-evo.webp",
+    link: "https://www.amazon.it/s?k=adidas+adizero+adios+pro+evo+1",
+    emphasized: true
+  },
+  { 
+    name: "Adizero Adios Pro 3", 
+    brand: "Adidas",
+    terrain: "Strada",
+    weight: "218g", 
+    drop: "6.5mm", 
+    cushion: "Massima", 
+    support: "Neutro",
+    bestFor: "Gare competitive dai 10km alla Maratona",
+    price: "€250",
+    image: "/images/products/adidas-adios-pro-3.webp",
+    link: "https://www.amazon.it/s?k=adidas+adizero+adios+pro+3"
+  },
+  { 
+    name: "Alphafly 3", 
+    brand: "Nike",
+    terrain: "Strada",
+    weight: "218g", 
+    drop: "8mm", 
+    cushion: "Massima", 
+    support: "Neutro",
+    bestFor: "Maratona e Mezza Maratona ad alta velocità",
+    price: "€310",
+    image: "/images/products/nike-alphafly-3.webp",
+    link: "https://www.amazon.it/s?k=nike+alphafly+3",
+    emphasized: true
+  },
+  { 
+    name: "Vaporfly 3", 
+    brand: "Nike",
+    terrain: "Strada",
+    weight: "184g", 
+    drop: "8mm", 
+    cushion: "Massima", 
+    support: "Neutro",
+    bestFor: "Gare veloci dai 5km alla Maratona",
+    price: "€260",
+    image: "/images/products/nike-vaporfly-3.webp",
+    link: "https://www.amazon.it/s?k=nike+vaporfly+3"
+  },
 ];
