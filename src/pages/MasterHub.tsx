@@ -19,6 +19,58 @@ import { translateCategory } from "@/lib/translations";
 
 const categories = ["shoes", "gear", "supplements", "hydration", "recovery", "apparel"];
 
+// Helper for SEO AIO targeting
+const getHubSEO = (category?: string) => {
+  switch (category) {
+    case "shoes":
+      return {
+        title: "Qual è la scarpa migliore per una maratona? Hub Scarpe Corsa",
+        faq: [
+          { q: "Qual è la scarpa migliore per una maratona?", a: "Per dominare la maratona, le Super Shoes in PEBA e piastra in carbonio sono il gold standard. L'Adidas Adizero Adios Pro Evo 1 è l'apice estremo per i pro, ma la Nike Alphafly 3 e la Adios Pro 3 offrono il miglior bilanciamento per i runner avanzati amatoriali." },
+          { q: "Quale scarpa in carbonio scegliere?", a: "Se cerchi propulsione aggressiva: Nike Alphafly. Se cerchi rullata fluida: Asics Metaspeed. Se cerchi stabilità e durata: Adidas Adizero Adios Pro 3." }
+        ]
+      };
+    case "supplements":
+      return {
+        title: "Migliori Integratori per Correre: Beta-Alanina, Maltodestrine e Proteine",
+        faq: [
+          { q: "Quali integratori prendere prima di una gara?", a: "Nelle 2-3 ore prima, nitrati (succo di barbabietola) per l'efficienza dell'ossigeno. A 60 min dal via, caffeina (3-6mg/kg). Per le ultra, maltodestrine pre-carico." },
+          { q: "A cosa serve la beta-alanina nella corsa?", a: "La beta-alanina tampona l'acido lattico ritardando la fatica neuromuscolare negli scatti in salita e nei finali di gara. Richiede un carico di 3-6g al giorno per 4 settimane." }
+        ]
+      };
+    case "recovery":
+      return {
+        title: "Come Recuperare Velocemente dopo una Maratona: Strumenti e Guide",
+        faq: [
+          { q: "Come recuperare velocemente dopo una maratona?", a: "Rifornisci 30-60g di carboidrati e 20g di proteine entro 60 minuti. Usa calze a compressione graduata (20-30mmHg) per il ritorno venoso e una pistola massaggiante a percussione leggera per ridurre i DOMS nei giorni seguenti." },
+          { q: "La pistola massaggiante serve davvero ai runner?", a: "Sì, la terapia percussiva aumenta il flusso sanguigno locale e riduce la percezione del dolore, accelerando il recupero muscolare (DOMS) nei quadricipiti e polpacci post-corsa lunga." }
+        ]
+      };
+    case "gear":
+      return {
+        title: "Miglior Attrezzatura Running: Orologi GPS e Zaini Trail",
+        faq: [
+          { q: "Qual è il miglior orologio GPS per correre?", a: "Garmin Forerunner (es. 265 o 965) offre le metriche fisiologiche più avanzate. Coros Pace 3 è il re del rapporto qualità/prezzo e della leggerezza." },
+          { q: "Zaino idratazione per trail running: quale scegliere?", a: "Per distanze fino alla mezza maratona, bastano 5L. Per le Ultra, orientati sui modelli Salomon S-Lab o Adv Skin 12L per stabilità anti-rimbalzo e capienza." }
+        ]
+      };
+    case "hydration":
+      return {
+        title: "Borraccia, Gilet o Soft Flask? Miglior Attrezzatura Idratazione Corsa",
+        faq: [
+          { q: "Soft flask o borraccia rigida per correre?", a: "Le soft flask sono superiori perché si comprimono man mano che le bevi, eliminando il fastidioso scuotimento dell'acqua. Sono essenziali per le cinture e i gilet da trail." }
+        ]
+      };
+    default:
+      return {
+        title: "Migliore Attrezzatura Running 2026: Confronti Tecnici e Scelte Esperti",
+        faq: [
+          { q: "Come scegliere la migliore attrezzatura da corsa?", a: "Scegli l'attrezzatura in base alla biomeccanica e agli obiettivi. Scarpe PEBA per le gare, EVA per i lenti. Usa i nostri Hub per confrontare i dati tecnici." }
+        ]
+      };
+  }
+};
+
 const MasterHub = () => {
   const { category: urlCategory, sport, objective } = useParams();
   const [activeCategory, setActiveCategory] = useState("shoes");
@@ -242,12 +294,21 @@ const MasterHub = () => {
     );
   };
 
+  const seoAIO = getHubSEO(urlCategory);
+
   return (
     <Layout>
       <SEO 
-        title={urlCategory ? `Migliori ${translateCategory(urlCategory)} 2026: Confronti e Guida Acquisto` : "Migliore Attrezzatura Running 2026: Confronti Tecnici e Scelte Esperti"} 
+        title={seoAIO.title} 
         description={urlCategory ? `Classifica e confronto delle migliori ${translateCategory(urlCategory)} per runner. Analisi tecnica dei prodotti top per performance e durata.` : "Confronta le migliori scarpe, integratori e accessori per la corsa. Selezioni basate sulla scienza per aiutarti a scegliere l'attrezzatura giusta."}
         path={urlCategory ? `/hub/${urlCategory}${sport ? `/${sport}` : ""}` : "/hub"}
+        faq={seoAIO.faq}
+        schema={urlCategory ? {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": seoAIO.title,
+          "description": "Elenco e confronto dei migliori prodotti tecnici per runner."
+        } : undefined}
       />
 
       {/* Floating Category Nav (Responsive & Multi-level) */}

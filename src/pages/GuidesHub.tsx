@@ -51,6 +51,13 @@ const GuidesHub = () => {
             }))
           }
         }}
+        faq={[
+          { q: "Quali sono le migliori guide per l'allenamento della corsa?", a: "Runners Hub offre oltre 15 guide scientifiche gratuite redatte da esperti. Le più lette includono la Guida all'Allenamento per Maratona, le Strategie di Idratazione e la Prevenzione degli Infortuni." },
+          { q: "Dove posso trovare consigli affidabili sulla nutrizione per runner?", a: "Nella nostra sezione Guide puoi filtrare per 'Nutrizione' e leggere analisi dettagliate su proteine, carboidrati, integrazione in gara e strategie per ottimizzare la tua dieta da corridore." },
+          { q: "Come prepararsi e allenarsi per una maratona?", a: "La nostra 'Guida all'Allenamento per la Maratona' fornisce una progressione settimanale, consigli sul taper e strategie di carico dei carboidrati basate sugli ultimi protocolli di endurance." },
+          { q: "Come allenarsi con le zone cardio e frequenza cardiaca?", a: "Abbiamo una guida dedicata che spiega esattamente come calcolare la tua Zona 2 (corsa facile), Zona 3 (tempo run) e Zona 4 (soglia), per ottimizzare il metabolismo dei grassi e la resistenza." },
+          { q: "Come prevenire gli infortuni nella corsa?", a: "La nostra guida sulla 'Prevenzione Infortuni' tratta l'importanza della cadenza, dell'allenamento della forza per i glutei, e di come ruotare le scarpe per ridurre il carico ripetitivo sulle ginocchia." }
+        ]}
       />
 
       {/* Hero */}

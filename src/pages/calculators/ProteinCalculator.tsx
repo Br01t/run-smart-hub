@@ -27,18 +27,19 @@ const ProteinCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Fabbisogno Proteico Runner: Quante Proteine per la Corsa?" 
-        description="Calcola quante proteine assumere per il recupero muscolare post-corsa. Guida al fabbisogno proteico per runner e atleti di endurance basata sulla scienza."
+        title="Quante Proteine per la Corsa? Calcolatore Fabbisogno Post-Allenamento" 
+        description="Scopri quante proteine reintegrare dopo la corsa e la maratona. Calcolatore del fabbisogno proteico per atleti di endurance, massimizza il recupero muscolare."
         path="/tools/protein"
         faq={[
-          { q: "Quante proteine servono a un runner?", a: "Per chi corre, il fabbisogno varia da 1.2 a 2.0g per kg di peso corporeo. Le proteine sono essenziali non solo per i muscoli, ma per riparare i tessuti e supportare il sistema immunitario." },
-          { q: "Quando assumere le proteine post-corsa?", a: "Assumere 20-30g di proteine entro 2 ore dalla fine della corsa massimizza la sintesi proteica e accelera il recupero dei tessuti danneggiati dall'impatto." }
+          { q: "Quante proteine devo reintegrare dopo la corsa / maratona?", a: "Per ottimizzare la sintesi proteica muscolare e accelerare il recupero, assumi 20-30g di proteine a rapido assorbimento (come le Whey) entro 60 minuti dal termine della gara o dell'allenamento intenso." },
+          { q: "Quante proteine servono a un runner al giorno?", a: "I runner di endurance hanno un fabbisogno giornaliero totale che varia da 1.2 a 1.7g per kg di peso corporeo, superiore a quello delle persone sedentarie per compensare il catabolismo muscolare indotto dalla corsa." },
+          { q: "È meglio assumere proteine prima o dopo la corsa?", a: "Dopo la corsa è il momento critico (finestra anabolica). Assumerle prima può causare problemi gastrointestinali durante lo sforzo. Pre-corsa, concentrati sui carboidrati semplici." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Calcolatore Proteine per Runner",
-          "description": "Stimatore dell'apporto proteico basato su evidenze scientifiche per runner e atleti di resistenza.",
+          "name": "Calcolatore Proteine Post-Corsa",
+          "description": "Stimatore dell'apporto proteico per il reintegro e il recupero muscolare dei runner.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}

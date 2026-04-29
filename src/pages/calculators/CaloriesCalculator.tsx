@@ -23,18 +23,19 @@ const CaloriesCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolo Calorie Corsa km: Quante Calorie Brucio Correndo?" 
-        description="Stima precisa delle calorie bruciate durante la corsa in base a distanza e peso. Scopri il tuo consumo energetico reale basato sulla scienza dello sport."
+        title="Quante Calorie si Bruciano Correndo? Calcolatore Corsa 10km" 
+        description="Scopri quante calorie si bruciano correndo 5km, 10km o una maratona. Calcolatore esatto basato sul tuo peso, ritmo e pendenza."
         path="/tools/calories"
         faq={[
-          { q: "Quante calorie brucio correndo 10 km?", a: "In media, bruci circa 1 kcal per kg di peso corporeo per ogni km percorso. Un runner di 70 kg brucia circa 700-725 kcal in 10 km." },
-          { q: "Correre aiuta a perdere peso?", a: "Sì, la corsa è una delle attività a più alto dispendio energetico. Per perdere peso, abbina la corsa a un moderato deficit calorico e a un apporto proteico adeguato." }
+          { q: "Quante calorie si bruciano correndo 10 km?", a: "La stima scientifica è di circa 60-80 calorie per chilometro. Quindi correndo 10 km brucerai mediamente tra le 600 e le 800 calorie, a seconda del tuo peso corporeo e del ritmo." },
+          { q: "Si dimagrisce di più correndo o camminando?", a: "A parità di distanza percorsa, la corsa brucia circa il 30% di calorie in più rispetto alla camminata a causa della fase di 'volo' e del maggior lavoro biomeccanico. Inoltre la corsa innalza il metabolismo basale post-allenamento (effetto EPOC)." },
+          { q: "Correre in salita brucia più calorie?", a: "Sì, ogni 1% di pendenza aggiuntiva aumenta il dispendio energetico di circa il 4-5%. L'allenamento in collina (Hill Training) è uno dei metodi migliori per bruciare grassi rapidamente." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Calcolatore Calorie Bruciate nella Corsa",
-          "description": "Stimatore scientifico del dispendio calorico per atleti di resistenza.",
+          "name": "Calcolatore Calorie Bruciate Corsa",
+          "description": "Strumento per calcolare il dispendio energetico esatto della corsa in base a peso, pendenza e ritmo.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}

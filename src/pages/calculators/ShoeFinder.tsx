@@ -38,17 +38,18 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEO 
-        title="Migliori Scarpe Running 2026: Shoe Finder Personalizzato" 
-        description="Quali scarpe da corsa scegliere? Rispondi a 5 domande e trova il modello perfetto per il tuo piede, terreno e obiettivi di performance."
+        title="Qual è la Migliore Scarpa da Corsa? Trova Scarpe Personalizzato" 
+        description="Scopri qual è la scarpa migliore per una maratona, per iniziare a correre o per i lenti. Trova Scarpe intelligente basato sui tuoi obiettivi e ritmo."
         path="/tools/shoes"
         faq={[
-          { q: "Quali sono le migliori scarpe per iniziare a correre?", a: "Per chi inizia, consigliamo scarpe con ammortizzazione bilanciata e un buon supporto. Modelli come la Brooks Ghost o la Nike Pegasus sono ottimi punti di partenza." },
-          { q: "Ogni quanto cambiare le scarpe da corsa?", a: "In media ogni 600-800 km. Se senti dolori insoliti alle ginocchia o se la suola è visibilmente usurata, è tempo di un nuovo paio." }
+          { q: "Qual è la scarpa migliore per una maratona?", a: "Per i runner che cercano il tempo, le 'Super Shoes' in carbonio (come Nike Alphafly 3 o Adidas Adizero Adios Pro Evo 1) sono le migliori perché migliorano l'economia di corsa. Per chi punta solo a finire, meglio modelli protettivi e stabili." },
+          { q: "Quali sono le migliori scarpe per iniziare a correre?", a: "Per i principianti è cruciale prevenire infortuni. Consigliamo scarpe neutre o stabili (se si prona) con una solida ammortizzazione e drop classico (8-10mm) per proteggere il tendine d'Achille e le ginocchia." },
+          { q: "Come capire che tipo di scarpa da corsa mi serve?", a: "Dipende da 3 fattori: il tuo peso, il ritmo a cui corri e l'appoggio del piede. Usa il nostro Shoe Finder per incrociare questi parametri biomeccanici con i database dei migliori brand." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Trova Scarpe da Corsa Personalizzato",
+          "name": "Trova Scarpe da Corsa Esatto",
           "description": "Motore di raccomandazione esperto per abbinare i runner alla calzatura perfetta.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"

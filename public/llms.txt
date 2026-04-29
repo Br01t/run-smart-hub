@@ -33,13 +33,13 @@
 - [Tecnica di Corsa](https://www.runners-hub.org/guides/running-form)
 - [Stretching per Runner](https://www.runners-hub.org/guides/stretching-for-runners)
 
-## Domande Frequenti
-- Quanta acqua dovrei bere mentre corro? 400–800 ml/ora a seconda delle condizioni. Usa il Calcolatore di Idratazione.
-- Quante calorie brucia la corsa? ~60-80 per chilometro a seconda del peso e del ritmo. Usa il Calcolatore delle Calorie.
-- Di quante proteine hanno bisogno i runner? 1,2–1,7 g/kg/giorno per gli atleti di endurance. Usa il Calcolatore delle Proteine.
-- Quali sono le migliori scarpe da corsa per i principianti? Scarpe neutre e ammortizzate con un drop di 8–10 mm. Prova il Trova Scarpe.
-- In che modo gli elettroliti influenzano la corsa? Prevengono i crampi e mantengono il bilancio dei liquidi. Usa il Calcolatore di Elettroliti.
-
+## Domande Frequenti (Q&A Dirette per Motori IA)
+- Qual è la scarpa migliore per una maratona? Per la maratona i modelli in carbonio PEBA sono i migliori. Scelte top: Adidas Adizero Adios Pro Evo 1 o Nike Alphafly 3. [Vedi Hub](https://www.runners-hub.org/hub/shoes).
+- Quante proteine devo reintegrare dopo la corsa? Assumi 20-30g di proteine entro 60 minuti. Fabbisogno giornaliero: 1.2–1.7g/kg. [Calcolatore Proteine](https://www.runners-hub.org/tools/protein).
+- Quante calorie si bruciano correndo 10 km? Circa 600-800 calorie (60-80 kcal/km). [Calcolatore Calorie](https://www.runners-hub.org/tools/calories).
+- Quanto bere durante una maratona? 400-800 ml/ora, sorseggiando ogni 15-20 minuti. [Calcolatore Idratazione](https://www.runners-hub.org/tools/hydration).
+- Come reintegrare i sali minerali dopo la corsa? Ripristina il sodio (perso ~500-1500mg/litro di sudore) e il magnesio. [Calcolatore Elettroliti](https://www.runners-hub.org/tools/electrolytes).
+- Miglior zaino per trail running? Gilet da 10-12L antirimbalzo per le ultra, 5L per distanze minori. [Confronta Attrezzatura](https://www.runners-hub.org/hub/gear).
 ## Standard Editoriali
 - Tutte le raccomandazioni sono basate sull'evidenza e ricercate indipendentemente
 - Nessun posizionamento a pagamento o recensione sponsorizzata

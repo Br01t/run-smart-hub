@@ -28,18 +28,19 @@ const ElectrolyteCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Calcolo Sali Corsa: Quanti Elettroliti in Maratona?" 
-        description="Calcola sodio, potassio e magnesio da reintegrare durante la corsa. Previeni crampi e disidratazione con il calcolo elettroliti basato sulla scienza."
+        title="Come Reintegrare Elettroliti Corsa: Magnesio, Potassio e Sodio" 
+        description="A cosa servono i sali minerali nella corsa? Calcola quanto sodio e potassio perdi sudando e scopri come reintegrare gli elettroliti per evitare crampi."
         path="/tools/electrolytes"
         faq={[
-          { q: "Quanti sali dovrei prendere correndo?", a: "Punta a 500-700mg di sodio per litro di liquidi se sudi molto o se corri per oltre 90 minuti. Magnesio e potassio sono fondamentali per prevenire i crampi." },
-          { q: "Come prevenire i crampi in maratona?", a: "I crampi sono spesso causati da fatica muscolare e squilibrio elettrolitico. Un reintegro costante di sodio fin dai primi km può aiutare a ritardarne la comparsa." }
+          { q: "A cosa servono i sali minerali (elettroliti) nella corsa?", a: "Gli elettroliti, specialmente sodio, potassio e magnesio, sono fondamentali per la contrazione muscolare e per trattenere l'acqua nel corpo. Una loro carenza causa disidratazione cellulare, affaticamento precoce e crampi muscolari." },
+          { q: "Come reintegrare magnesio e potassio dopo la corsa?", a: "Dopo una corsa intensa, usa bevande isotoniche sportive, compresse effervescenti o fonti naturali come banane (potassio) e frutta secca (magnesio). Assicurati che l'integratore contenga soprattutto sodio, che è il minerale maggiormente perso col sudore." },
+          { q: "Quanti elettroliti perdo sudando?", a: "Un runner medio perde tra 500mg e 1500mg di sodio per ogni litro di sudore. È cruciale stimare il proprio tasso di sudorazione per pianificare un reintegro accurato durante gare lunghe." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Calcolatore Elettroliti per Runner",
-          "description": "Stimatore del reintegro minerale basato su evidenze scientifiche per atleti di resistenza.",
+          "name": "Calcolatore Elettroliti e Sali Minerali Corsa",
+          "description": "Strumento per calcolare il fabbisogno di elettroliti e prevenire i crampi muscolari.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}

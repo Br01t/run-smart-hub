@@ -29,18 +29,19 @@ const HydrationCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Quanta Acqua Bere Corsa? Calcolo Idratazione Maratona" 
-        description="Calcola il tuo fabbisogno idrico personalizzato per la corsa. Scopri quanta acqua bere prima, durante e dopo l'allenamento in base a peso e temperatura."
+        title="Quanto Bere Durante una Maratona? Calcolo Idratazione Corsa" 
+        description="Calcola quanta acqua bere durante la corsa, la mezza maratona o la maratona. Strumento esatto per prevenire la disidratazione e ottimizzare le prestazioni."
         path="/tools/hydration"
         faq={[
-          { q: "Quanta acqua bere durante la corsa?", a: "Punta a 400-800ml all'ora, sorseggiando ogni 15-20 minuti. La quantità esatta dipende dal tuo peso, dal ritmo e dalla temperatura esterna." },
-          { q: "Come capire se sono disidratato?", a: "Il colore dell'urina è il miglior indicatore: punta a un giallo paglierino chiaro. Se è scuro, aumenta l'apporto di liquidi ed elettroliti." }
+          { q: "Quanto bere durante una maratona?", a: "L'obiettivo è assumere tra 400 e 800 ml di liquidi all'ora, a seconda del proprio tasso di sudorazione e della temperatura. Consigliamo di sorseggiare piccole quantità (100-150 ml) ogni 15-20 minuti." },
+          { q: "Quanta acqua bere prima di una 10km o mezza maratona?", a: "Bevi circa 500 ml di acqua 2 ore prima della gara per dare ai reni il tempo di processare i liquidi. Poi, assumi altri 200 ml circa 15 minuti prima della partenza." },
+          { q: "Come capire se sono disidratato correndo?", a: "Segnali primari includono sete intensa, battito cardiaco inspiegabilmente alto a ritmi lenti, brividi, labbra secche e urina scura post-corsa. La disidratazione al 2% del peso corporeo causa un calo drastico delle prestazioni." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Calcolatore Idratazione per la Corsa",
-          "description": "Strumento di pianificazione dell'idratazione basato su evidenze scientifiche per i runner.",
+          "name": "Calcolatore Idratazione Maratona e Corsa",
+          "description": "Strumento di pianificazione dell'idratazione e del tasso di sudorazione basato su evidenze scientifiche per i runner.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}

@@ -30,18 +30,19 @@ const BMICalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Peso Ideale Runner e Calcolo BMI: Ottimizza la tua Corsa" 
-        description="Calcola il tuo BMI e scopri il peso ideale per la maratona. Capisci come il rapporto peso-potenza influisce sulla performance e sul rischio infortuni."
+        title="Qual è il peso ideale per correre? Calcolo BMI Runner" 
+        description="Scopri il tuo peso ideale per correre forte. Calcola il BMI ottimizzato per atleti, riduci il rischio di infortuni e massimizza le prestazioni in maratona."
         path="/tools/bmi"
         faq={[
-          { q: "Qual è il BMI ideale per un runner?", a: "Per la maggior parte dei runner, un BMI tra 19 e 24 è ottimale. Atleti d'élite spesso si avvicinano a 19-21 per massimizzare il rapporto peso-potenza senza compromettere la salute." },
-          { q: "Il BMI conta per la corsa?", a: "Sì, il BMI influisce sul carico articolare. Un BMI più elevato richiede scarpe con maggiore ammortizzazione per prevenire infortuni da stress osseo." }
+          { q: "Qual è il peso ideale per correre una maratona?", a: "Non esiste un peso universale, ma i runner competitivi solitamente mantengono un BMI tra 18,5 e 24,9. Un rapporto peso-potenza ottimizzato migliora l'economia di corsa e abbassa i tempi in gara." },
+          { q: "Un BMI alto impedisce di correre?", a: "No, ma un BMI più elevato aumenta il carico meccanico sulle articolazioni (ginocchia e caviglie). È consigliabile iniziare con scarpe a massima ammortizzazione e incrementare il chilometraggio gradualmente." },
+          { q: "Perché il BMI dei runner è diverso?", a: "Il BMI standard non distingue tra massa grassa e massa muscolare. I runner professionisti spesso tendono ai limiti inferiori del normopeso per ridurre il dispendio energetico su lunghe distanze." }
         ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Calcolatore BMI per Runner",
-          "description": "Calcolatore dell'indice di massa corporea ottimizzato per gli atleti di resistenza.",
+          "name": "Calcolatore BMI per Corsa e Maratona",
+          "description": "Strumento per calcolare l'indice di massa corporea e l'impatto del peso sulle prestazioni di corsa.",
           "applicationCategory": "HealthApplication",
           "operatingSystem": "All"
         }}

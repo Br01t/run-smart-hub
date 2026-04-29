@@ -43,7 +43,7 @@ const Index = () => {
               "mainEntity": faqItems.map(faq => ({
                 "@type": "Question",
                 "name": faq.q,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+                "acceptedAnswer": { "@type": "Answer", "text": faq.plainText || faq.q }
               }))
             }
           ]

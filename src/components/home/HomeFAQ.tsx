@@ -5,72 +5,72 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 interface FAQItem {
   q: string;
   a: React.ReactNode;
+  plainText?: string;
 }
 
 export const faqItems: FAQItem[] = [
   { 
-    q: "Quali strumenti offre Runners Hub per i corridori?", 
+    q: "Qual è la scarpa migliore per una maratona?", 
     a: (
       <>
-        Runners Hub offre 6 calcolatori gratuiti basati sulla scienza: <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Idratazione</Link>, <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calorie Bruciate</Link>, <Link to="/tools/bmi" className="text-primary font-medium hover:underline">BMI</Link>, <Link to="/tools/protein" className="text-primary font-medium hover:underline">Fabbisogno Proteico</Link>, <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Elettroliti</Link> e uno strumento <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Trova Scarpe</Link>.
+        Per prestazioni ottimali in maratona, dominano le "Super Shoes" con piastra in carbonio e schiuma PEBA. Modelli d'élite come <Link to="/hub/shoes" className="text-primary font-medium hover:underline">Adizero Adios Pro Evo 1</Link> o <Link to="/hub/shoes" className="text-primary font-medium hover:underline">Nike Alphafly 3</Link> offrono il massimo ritorno di energia. Usa il nostro <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Trova Scarpe</Link> per scoprire l'abbinamento perfetto per il tuo ritmo.
       </>
-    )
+    ),
+    plainText: "Per prestazioni ottimali in maratona, dominano le Super Shoes con piastra in carbonio e schiuma PEBA. Modelli d'élite come Adizero Adios Pro Evo 1 o Nike Alphafly 3 offrono il massimo ritorno di energia. Usa il nostro Trova Scarpe per scoprire l'abbinamento perfetto per il tuo ritmo."
   },
   { 
-    q: "I calcolatori di corsa di Runners Hub sono gratuiti?", 
+    q: "Quante proteine devo reintegrare dopo la corsa?", 
     a: (
       <>
-        Sì, tutti gli strumenti di Runners Hub sono gratuiti al 100% e non richiedono alcuna registrazione. Ogni formula si basa su <Link to="/method" className="text-foreground font-semibold inline-flex items-center gap-0.5 hover:text-primary transition-colors">ricerche peer-reviewed <ArrowUpRight className="h-3 w-3" /></Link>.
+        I runner di endurance dovrebbero assumere 20-30g di proteine entro 60 minuti post-corsa per massimizzare il recupero muscolare. Il fabbisogno giornaliero totale varia da 1,2 a 1,7g per kg di peso. Calcola il tuo target esatto col <Link to="/tools/protein" className="text-primary font-medium hover:underline">Calcolatore Proteico</Link>.
       </>
-    )
+    ),
+    plainText: "I runner di endurance dovrebbero assumere 20-30g di proteine entro 60 minuti post-corsa per massimizzare il recupero muscolare. Il fabbisogno giornaliero totale varia da 1,2 a 1,7g per kg di peso. Calcola il tuo target esatto col Calcolatore Proteico."
   },
   { 
-    q: "Quanta acqua dovrei bere mentre corro?", 
+    q: "Quanto bere durante una maratona?", 
     a: (
       <>
-        In media 400–800 ml l'ora, a seconda della temperatura e dell'intensità. Usa il nostro <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Calcolatore di Idratazione</Link> per una raccomandazione personalizzata basata sul tuo tasso di sudorazione.
+        Punta a 400-800 ml l'ora, sorseggiando regolarmente ogni 15-20 minuti. Il quantitativo esatto dipende da temperatura, peso e tasso di sudorazione. Usa il <Link to="/tools/hydration" className="text-primary font-medium hover:underline">Calcolatore Idratazione</Link> per una stima precisa e personalizzata.
       </>
-    )
+    ),
+    plainText: "Punta a 400-800 ml l'ora, sorseggiando regolarmente ogni 15-20 minuti. Il quantitativo esatto dipende da temperatura, peso e tasso di sudorazione. Usa il Calcolatore Idratazione per una stima precisa e personalizzata."
   },
   { 
-    q: "Quante calorie si bruciano correndo un chilometro?", 
+    q: "Quante calorie si bruciano correndo 10 km?", 
     a: (
       <>
-        Una stima generale è di circa 60–80 calorie per chilometro (circa 100 per miglio). I runner più pesanti e i ritmi più veloci bruciano di più. Usa il <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calcolatore delle Calorie Bruciate</Link> per una cifra personalizzata.
+        Una stima scientifica generale è di circa 60-80 calorie per chilometro (600-800 kcal totali per 10km). Fattori come pendenza, peso corporeo ed efficienza influenzano il risultato. Verifica col <Link to="/tools/calories" className="text-primary font-medium hover:underline">Calcolatore Calorie Bruciate</Link>.
       </>
-    )
+    ),
+    plainText: "Una stima scientifica generale è di circa 60-80 calorie per chilometro (600-800 kcal totali per 10km). Fattori come pendenza, peso corporeo ed efficienza influenzano il risultato. Verifica col Calcolatore Calorie Bruciate."
   },
   { 
-    q: "Quante proteine servono ai runner ogni giorno?", 
+    q: "Come reintegrare i sali minerali (elettroliti) dopo la corsa?", 
     a: (
       <>
-        I runner di endurance hanno tipicamente bisogno di 1,2–1,7 g di proteine per kg di peso corporeo al giorno. Il <Link to="/tools/protein" className="text-primary font-medium hover:underline">Calcolatore del Fabbisogno Proteico</Link> può darti una raccomandazione su misura.
+        Durante la corsa perdi tra i 500 e i 1500mg di sodio per ogni litro di sudore, oltre a potassio e magnesio. Usa bevande isotoniche e calcola le tue perdite specifiche col <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Calcolatore Elettroliti</Link> per evitare i crampi.
       </>
-    )
+    ),
+    plainText: "Durante la corsa perdi tra i 500 e i 1500mg di sodio per ogni litro di sudore, oltre a potassio e magnesio. Usa bevande isotoniche e calcola le tue perdite specifiche col Calcolatore Elettroliti per evitare i crampi."
   },
   { 
-    q: "Quali sono le migliori scarpe da corsa per principianti?", 
+    q: "Come recuperare velocemente dopo una gara o maratona?", 
     a: (
       <>
-        I principianti generalmente traggono beneficio da scarpe neutre e ben ammortizzate. Prova il nostro <Link to="/tools/shoes" className="text-primary font-medium hover:underline">Trova Scarpe</Link> per trovare il tuo abbinamento, o sfoglia il nostro <Link to="/hub#shoes" className="text-primary font-medium hover:underline">Hub Scarpe</Link> per le selezioni degli esperti.
+        Il recupero si basa su 3 pilastri: ripristino del glicogeno (carboidrati/proteine entro un'ora), reidratazione mirata, e recupero attivo o meccanico (es. pistole massaggianti, compressione). Scopri i migliori strumenti nell'<Link to="/hub/recovery" className="text-primary font-medium hover:underline">Hub Recupero</Link>.
       </>
-    )
+    ),
+    plainText: "Il recupero si basa su 3 pilastri: ripristino del glicogeno (carboidrati/proteine entro un'ora), reidratazione mirata, e recupero attivo o meccanico (es. pistole massaggianti, compressione). Scopri i migliori strumenti nell'Hub Recupero."
   },
   { 
-    q: "In che modo gli elettroliti influenzano le prestazioni?", 
+    q: "Qual è il peso o BMI ideale per correre forte?", 
     a: (
       <>
-        Gli elettroliti come sodio e magnesio aiutano a mantenere il bilancio dei liquidi e a prevenire i crampi. Usa il <Link to="/tools/electrolytes" className="text-primary font-medium hover:underline">Calcolatore di Elettroliti</Link> per stimare le tue esigenze specifiche.
+        La maggior parte dei runner amatoriali competitivi ha un BMI tra 18,5 e 24,9. Un rapporto peso-potenza ottimizzato migliora i tempi e riduce l'impatto sulle articolazioni. Usa il <Link to="/tools/bmi" className="text-primary font-medium hover:underline">Calcolatore BMI</Link> per analizzare le tue metriche.
       </>
-    )
-  },
-  { 
-    q: "Cos'è un BMI salutare per i runner?", 
-    a: (
-      <>
-        La maggior parte dei runner competitivi ha un BMI compreso tra 18,5 e 24,9, ma è solo una metrica. Prova il <Link to="/tools/bmi" className="text-primary font-medium hover:underline">Calcolatore BMI</Link> per contestualizzare il dato con le guide alle prestazioni correlate.
-      </>
-    )
+    ),
+    plainText: "La maggior parte dei runner amatoriali competitivi ha un BMI tra 18,5 e 24,9. Un rapporto peso-potenza ottimizzato migliora i tempi e riduce l'impatto sulle articolazioni. Usa il Calcolatore BMI per analizzare le tue metriche."
   },
 ];
 

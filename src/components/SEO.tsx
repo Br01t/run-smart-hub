@@ -61,23 +61,46 @@ interface SEOProps {
       {/* JSON-LD Structured Data */}
       {(schema || faq) && (
         <script type="application/ld+json">
-          {JSON.stringify(
-            faq 
-              ? {
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": faq.map(item => ({
-                    "@type": "Question",
-                    "name": item.q,
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": item.a
-                    }
-                  })),
-                  ...(schema || {})
+          {JSON.stringify((() => {
+            const faqSchema = faq ? {
+              "@type": "FAQPage",
+              "mainEntity": faq.map(item => ({
+                "@type": "Question",
+                "name": item.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.a
                 }
-              : schema
-          )}
+              }))
+            } : null;
+
+            if (!schema && faqSchema) {
+              return {
+                "@context": "https://schema.org",
+                ...faqSchema
+              };
+            }
+
+            if (schema && faqSchema) {
+              // Verifica se lo schema fornito è già un @graph
+              if ((schema as any)["@graph"]) {
+                return {
+                  ...schema,
+                  "@graph": [
+                    ...(schema as any)["@graph"],
+                    faqSchema
+                  ]
+                };
+              } else {
+                return {
+                  "@context": "https://schema.org",
+                  "@graph": [schema, faqSchema]
+                };
+              }
+            }
+
+            return schema;
+          })())}
         </script>
       )}
     </Helmet>

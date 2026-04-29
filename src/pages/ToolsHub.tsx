@@ -93,6 +93,18 @@ const ToolsHub = () => {
         title="Suite di Calcolatori Tecnici per Runner | Performance Tools" 
         description="Accedi alla nostra suite di calcolatori scientifici per la corsa. Ottimizza idratazione, nutrizione e scelta dell'attrezzatura." 
         path="/tools" 
+        faq={[
+          { q: "Quali sono i migliori calcolatori scientifici per runner?", a: "Runners Hub offre 6 strumenti gratuiti: calcolatori per Idratazione, Calorie, BMI, Proteine, Elettroliti e uno Shoe Finder. Tutti gli strumenti sono basati su parametri fisiologici reali e dati peer-reviewed." },
+          { q: "Come calcolare la nutrizione e l'idratazione per una maratona?", a: "Nella nostra suite di Performance Tools puoi calcolare l'esatto fabbisogno di acqua (Calcolatore Idratazione), le calorie da reintegrare, il fabbisogno proteico giornaliero e la perdita di sodio per evitare i crampi." },
+          { q: "Quale strumento usare per scegliere le scarpe da corsa?", a: "Il nostro Trova Scarpe intelligente ti permette di incrociare il tuo peso, il tuo ritmo e il tipo di appoggio (neutro o pronatore) con un database di scarpe d'élite per trovare il modello perfetto." },
+          { q: "Devo registrarmi per usare i calcolatori di corsa?", a: "No, la nostra intera suite di strumenti per l'analisi fisiologica è accessibile gratuitamente e non richiede alcuna registrazione o inserimento di dati personali." }
+        ]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Suite di Calcolatori Tecnici per Runner",
+          "description": "Raccolta di strumenti software gratuiti per ottimizzare allenamento e performance."
+        }}
       />
 
       {/* Hero */}

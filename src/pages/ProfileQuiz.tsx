@@ -43,6 +43,10 @@ const ProfileQuiz = () => {
         description="Rispondi a 5 domande per scoprire il tuo archetipo di runner e ricevere raccomandazioni personalizzate per allenamento, nutrizione, integratori e attrezzatura."
         path="/quiz"
         schema={jsonLd}
+        faq={[
+          { q: "Come avere una tabella di allenamento per la maratona personalizzata?", a: "Fai il nostro Quiz del Runner gratuito. In 2 minuti analizzeremo la tua biomeccanica e i tuoi obiettivi per creare un piano su misura per scarpe, nutrizione e recupero." },
+          { q: "Quale tipologia di runner sono?", a: "Esistono 4 archetipi principali: Velocista, Atleta di Endurance (Maratoneta), Trail Runner e Fitness Runner. Usa la nostra Valutazione Gratuita per scoprire il tuo profilo fisiologico e l'attrezzatura ideale." }
+        ]}
       />
 
       {!done && (
