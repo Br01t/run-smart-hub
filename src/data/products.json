@@ -14,7 +14,7 @@
       "high-volume"
     ],
     "prezzoRange": "€30.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-whey-protein-powder/10530943/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fimpact-whey-protein%2F10530943%2F",
     "immagine": "/images/products/myprotein-impact-whey.webp",
     "descrizione": "Le proteine del siero di latte n. 1 in classifica nel Regno Unito e in Europa, forniscono 23g di proteine di alta qualità per porzione per il mantenimento e la crescita muscolare.",
     "rating": 5
@@ -31,7 +31,7 @@
       "muscles"
     ],
     "prezzoRange": "€27.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-whey-isolate-powder/10530911/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fimpact-whey-isolate%2F10530911%2F",
     "immagine": "/images/products/myprotein-whey-isolate.webp",
     "descrizione": "Proteine isolate del siero di latte ultra-filtrate che forniscono 26g di proteine a rapido assorbimento per porzione, progettate per la massima crescita muscolare e il recupero.",
     "rating": 5
@@ -48,7 +48,7 @@
       "energy"
     ],
     "prezzoRange": "€22.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-eaa/11985042/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fimpact-eaa%2F11985042%2F",
     "immagine": "/images/products/myprotein-eaa.webp",
     "descrizione": "La miscela definitiva di tutti i nove aminoacidi essenziali, che fornisce un profilo aminoacidico superiore per supportare la riparazione e la crescita muscolare.",
     "rating": 5
@@ -64,7 +64,7 @@
       "carbohydrates"
     ],
     "prezzoRange": "€20–€30",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/impact-protein-bar/10852498/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fimpact-protein-bar%2F13103437%2F",
     "immagine": "/images/products/myprotein-protein-bar.webp",
     "descrizione": "20g di proteine per barretta con basso contenuto di zuccheri. Snack comodo per i runner che necessitano di energia rapida prima o dopo l'allenamento.",
     "rating": 4
@@ -82,26 +82,26 @@
       "top-supplements-2026"
     ],
     "prezzoRange": "€4.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/creatine-monohydrate-powder/10530050/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fcreatina-monoidrato%2F10530050%2F",
     "immagine": "/images/products/myprotein-creatine.webp",
     "descrizione": "Polvere di creatina monoidrato di alta qualità progettata per aumentare le prestazioni fisiche in serie successive di esercizi a breve termine e ad alta intensità.",
     "rating": 5
   },
   {
-    "id": "myprotein-bcaa",
-    "nome": "BCAA in Polvere",
+    "id": "myprotein-l-carnitina",
+    "nome": "L-Carnitina Amminoacido",
     "category": "supplements",
     "brand": "Myprotein",
     "tag": [
       "supplements",
-      "recovery",
-      "muscles"
+      "energy",
+      "performance"
     ],
-    "prezzoRange": "€12–€18",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/bcaa/10530036/",
-    "immagine": "/images/products/myprotein-bcaa.webp",
-    "descrizione": "Aminoacidi a catena ramificata nel rapporto ottimale 2:1:1. Supporta la preservazione muscolare e riduce la scomposizione durante le settimane di allenamento ad alto chilometraggio.",
-    "rating": 4
+    "prezzoRange": "€10–€15",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fl-carnitina-amminoacido-100%2F10529729%2F",
+    "immagine": "/images/products/myprotein-l-carnitina.webp",
+    "descrizione": "Un amminoacido fondamentale per il metabolismo dei grassi e la produzione di energia. Supporta le prestazioni di endurance durante le corse lunghe.",
+    "rating": 4.5
   },
   {
     "id": "myprotein-maltodextrin",
@@ -115,7 +115,7 @@
       "supplements"
     ],
     "prezzoRange": "€20.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/100-maltodextrin-carbs/10530114/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fmaltodestrina-carboidrato-100%2F10530114%2F",
     "immagine": "/images/products/myprotein-maltodextrin.webp",
     "descrizione": "Una comoda fonte di energia per rifornirsi dopo l'allenamento, fornendo carboidrati a rapido assorbimento per reintegrare il glicogeno muscolare.",
     "rating": 5
@@ -134,75 +134,76 @@
       "energy"
     ],
     "prezzoRange": "€18.99",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/oat-protein-flapjack/11147245/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fbarretta-proteica-di-avena%2F11147245%2F",
     "immagine": "/images/products/myprotein-oat-flapjack.webp",
     "descrizione": "Uno snack proteico morbido e dolce fatto con fiocchi d'avena, perfetto per uno spuntino veloce e per supportare il recupero muscolare.",
     "rating": 5
   },
   {
-    "id": "onnit-alpha-brain",
-    "nome": "Alpha BRAIN® (90ct)",
+    "id": "myvitamins-ashwagandha",
+    "nome": "Ashwagandha KSM66 in Capsule",
     "category": "supplements",
-    "brand": "Onnit",
+    "brand": "Myvitamins",
     "tag": [
       "supplements",
       "energy",
       "top-supplements-2026",
       "speed-pro"
     ],
-    "prezzoRange": "$79.95",
-    "linkAffiliato": "https://www.onnit.com/products/alpha-brain-90-ct",
-    "immagine": "/images/products/onnit-alpha-brain.webp",
-    "descrizione": "Nootropico clinicamente studiato per la chiarezza mentale e il focus. Aiuta a mantenere la concentrazione durante le gare lunghe e le sessioni di allenamento impegnative.",
+    "prezzoRange": "€14.99",
+    "linkAffiliato": "https://www.myvitamins.it/p/myvitamins-ashwagandha-ksm66-capsules/12335319/",
+    "immagine": "/images/products/myvitamins-ashwagandha.webp",
+    "descrizione": "Estratto di radice intera a spettro completo per la chiarezza mentale e il focus. Aiuta a mantenere la concentrazione e a gestire lo stress durante le gare.",
     "rating": 5
   },
   {
-    "id": "onnit-shroom-tech",
-    "nome": "Shroom TECH™ Sport (84ct)",
+    "id": "myvitamins-caffeina",
+    "nome": "Caffeina Pura",
     "category": "supplements",
-    "brand": "Onnit",
+    "brand": "Myvitamins",
     "tag": [
       "energy",
       "supplements",
       "top-supplements-2026"
     ],
-    "prezzoRange": "$55.89",
-    "linkAffiliato": "https://www.onnit.com/products/shroom-tech-sport-84-ct",
-    "immagine": "/images/products/onnit-shroom-tech.webp",
-    "descrizione": "Formula di resistenza a base di Cordyceps per un'energia pulita e sostenuta senza il nervosismo della caffeina. Clinicamente studiato per migliorare le prestazioni cardio.",
-    "rating": 4
-  },
-  {
-    "id": "onnit-alpha-brain-black",
-    "nome": "Alpha BRAIN® Black Label",
-    "category": "supplements",
-    "brand": "Onnit",
-    "tag": [
-      "supplements",
-      "energy"
-    ],
-    "prezzoRange": "$124.95",
-    "linkAffiliato": "https://www.onnit.com/products/alpha-brain-black-label-80-ct",
-    "immagine": "/images/products/onnit-alpha-brain-black.webp",
-    "descrizione": "Formula cognitiva premium con potenza potenziata. Nutrienti esotici coltivati a terra e nootropi per prestazioni mentali d'élite il giorno della gara.",
+    "prezzoRange": "€9.99",
+    "linkAffiliato": "https://www.myvitamins.it/p/nutrizione-sportiva/caffeina-pura/10529801/",
+    "immagine": "/images/products/myvitamins-caffeina.webp",
+    "descrizione": "Una potente spinta di energia per migliorare la resistenza e l'attenzione. Ideale prima di una gara o di una sessione di allenamento impegnativa.",
     "rating": 5
   },
   {
-    "id": "onnit-total-human",
-    "nome": "Total Human® Day & Night Packs",
+    "id": "myvitamins-zma",
+    "nome": "ZMA in capsule",
     "category": "supplements",
-    "brand": "Onnit",
+    "brand": "Myvitamins",
+    "tag": [
+      "supplements",
+      "recovery",
+      "muscles"
+    ],
+    "prezzoRange": "€19.99",
+    "linkAffiliato": "https://www.myvitamins.it/p/nutrizione-sportiva/zma-in-capsule/10529452/",
+    "immagine": "/images/products/myvitamins-zma.webp",
+    "descrizione": "Miscela premium di Zinco, Magnesio e Vitamina B6. Progettato per ottimizzare il recupero muscolare e favorire un sonno riposante.",
+    "rating": 5
+  },
+  {
+    "id": "myvitamins-omega",
+    "nome": "Omega 3 6 9 in capsule molli",
+    "category": "supplements",
+    "brand": "Myvitamins",
     "tag": [
       "supplements",
       "recovery",
       "energy",
       "top-supplements-2026"
     ],
-    "prezzoRange": "$137.95",
-    "linkAffiliato": "https://www.onnit.com/products/total-human-30-day-supply",
-    "immagine": "/images/products/onnit-total-human.webp",
-    "descrizione": "Stack di integratori giornalieri tutto-in-uno: vitamine, minerali, omega-3 e adattogeni. Progettato per le massime prestazioni atletiche e il recupero di tutto il corpo.",
-    "rating": 5
+    "prezzoRange": "€15.99",
+    "linkAffiliato": "https://www.myvitamins.it/p/nutrizione-sportiva/omega-3-6-9-in-capsule-molli/10529442/",
+    "immagine": "/images/products/myvitamins-omega.webp",
+    "descrizione": "Equilibrio ottimale di acidi grassi essenziali per la salute cardiovascolare e il benessere generale. Supporta le prestazioni atletiche e il recupero.",
+    "rating": 4.5
   },
   {
     "id": "myprotein-beta-alanine",
@@ -216,7 +217,7 @@
       "top-supplements-2026"
     ],
     "prezzoRange": "€18.49",
-    "linkAffiliato": "https://www.myprotein.com/p/sports-nutrition/beta-alanine/10529809/",
+    "linkAffiliato": "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Famminoacido-beta-alanina-100%2F10529809%2F",
     "immagine": "/images/products/myprotein-beta-alanine.webp",
     "descrizione": "Un integratore di aminoacidi super conveniente, ideale per chiunque partecipi a sport che richiedono movimenti esplosivi o resistenza.",
     "rating": 5

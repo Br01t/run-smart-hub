@@ -81,7 +81,7 @@ export const supplementsForRunners: GuideContent = {
         "Verifica Certificazioni: Cerca i marchi 'Informed Sport' o 'NSF' per escludere contaminazioni da sostanze dopanti.", 
         "Testa in Allenamento: Mai provare un nuovo integratore (specialmente gel o caffeina) il giorno della gara.", 
         "Analisi del Sangue: Prima di integrare ferro o vitamina D, verifica i tuoi livelli reali con un medico.", 
-        "Qualità del Brand: Scegli marche trasparenti (es. Myprotein, Onnit) che pubblicano i risultati dei test di laboratorio.",
+        "Qualità del Brand: Scegli marche trasparenti (es. Myprotein, Myvitamins) che pubblicano i risultati dei test di laboratorio.",
         "Ciclicizzazione: Sospendi periodicamente gli stimolanti (caffeina) per resettare la sensibilità dei recettori."
       ] 
     },

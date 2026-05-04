@@ -15,7 +15,7 @@ export const hydrationSpecs: GearSpec[] = [
     bestFor: "Bilancio salino e reidratazione rapida",
     usage: "Allenamento / Recupero",
     price: "€15-25",
-    link: "https://www.myprotein.com/p/sports-nutrition/the-eaa/13457131/",
+    link: "https://www.awin1.com/cread.php?awinmid=7614&awinaffid=2875985&ued=https%3A%2F%2Fwww.myprotein.it%2Fp%2Fnutrizione-sportiva%2Fthe-eaa%2F13457131%2F",
     image: "/images/products/myprotein-eaa.webp",
     emphasized: true
   },

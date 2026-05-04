@@ -7,7 +7,7 @@ const AffiliateDisclosure = () => {
     <Layout>
       <SEO
         title="Informativa sulle Affiliazioni"
-        description="Trasparenza totale su come Runners Hub genera entrate attraverso partnership di affiliazione con Amazon, Myprotein e Onnit."
+        description="Trasparenza totale su come Runners Hub genera entrate attraverso partnership di affiliazione con Amazon, Myprotein e Myvitamins."
         path="/affiliate-disclosure"
       />
 
