@@ -4,7 +4,7 @@ export const hydrationSpecs: GearSpec[] = [
   { 
     name: "Polvere Elettrolitica", 
     brand: "Myprotein", 
-    category: "Idratazione", 
+    category: "Hydration", 
     metric1: "Alto Sodio", 
     metric2: "Zero Zuccheri",
     format: "Polvere",
@@ -22,7 +22,7 @@ export const hydrationSpecs: GearSpec[] = [
   { 
     name: "Liquid I.V.", 
     brand: "Liquid I.V.", 
-    category: "Idratazione", 
+    category: "Hydration", 
     metric1: "Tecnologia CTT", 
     metric2: "Idratazione Istantanea",
     format: "Bustine",
@@ -40,7 +40,7 @@ export const hydrationSpecs: GearSpec[] = [
   { 
     name: "Nuun Sport", 
     brand: "Nuun", 
-    category: "Idratazione", 
+    category: "Hydration", 
     metric1: "Effervescente", 
     metric2: "Zero Calorie",
     format: "Compresse",
@@ -57,7 +57,7 @@ export const hydrationSpecs: GearSpec[] = [
   { 
     name: "LMNT Elettroliti", 
     brand: "LMNT", 
-    category: "Idratazione", 
+    category: "Hydration", 
     metric1: "Sodio Max (1g)", 
     metric2: "Sollievo Crampi",
     format: "Bustine",

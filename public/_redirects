@@ -1,1 +1,10 @@
-/* /index.html 200
+# Forza HTTPS e www (HTTP 301 server-side – sostituisce lo script JS in index.html)
+http://runners-hub.org/*          https://www.runners-hub.org/:splat  301
+http://www.runners-hub.org/*      https://www.runners-hub.org/:splat  301
+https://runners-hub.org/*         https://www.runners-hub.org/:splat  301
+
+# Redirect slug italiano (Soft 404 segnalato in GSC)
+/comparison/integratori-per-corsa-resistenza  /comparison/supplements/running/endurance  301
+
+# SPA fallback – deve rimanere ultima
+/*  /index.html  200

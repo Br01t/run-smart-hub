@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams, useSearchParams, Navigate } from "react-router-dom";
 import { 
   ArrowRight, 
   ChevronRight, 
@@ -76,6 +76,13 @@ const MasterHub = () => {
   const [activeCategory, setActiveCategory] = useState("shoes");
   const { hash } = useLocation();
   const observer = useRef<IntersectionObserver | null>(null);
+
+  // Redirect legacy ?cat= query param (e.g. /hub?cat=recovery → /hub/recovery)
+  const [searchParams] = useSearchParams();
+  const legacyCat = searchParams.get("cat");
+  if (legacyCat && categories.includes(legacyCat)) {
+    return <Navigate to={`/hub/${legacyCat}`} replace />;
+  }
 
   // Initialize activeCategory and scroll from URL params if present
   useEffect(() => {
@@ -301,7 +308,7 @@ const MasterHub = () => {
       <SEO 
         title={seoAIO.title} 
         description={urlCategory ? `Classifica e confronto delle migliori ${translateCategory(urlCategory)} per runner. Analisi tecnica dei prodotti top per performance e durata.` : "Confronta le migliori scarpe, integratori e accessori per la corsa. Selezioni basate sulla scienza per aiutarti a scegliere l'attrezzatura giusta."}
-        path={urlCategory ? `/hub/${urlCategory}${sport ? `/${sport}` : ""}` : "/hub"}
+        path="/hub"
         faq={seoAIO.faq}
         schema={urlCategory ? {
           "@context": "https://schema.org",
