@@ -156,7 +156,7 @@ const ProteinCalculator = () => {
 
           <HubReferral 
             category="supplements"
-            href="/hub#supplements"
+            href="/hub/supplements"
             title="Miglior Hub Proteine e Recupero"
             description="Confronta purezza, profili aminoacidici e tassi di assorbimento delle migliori proteine whey, vegane e per il recupero."
           />

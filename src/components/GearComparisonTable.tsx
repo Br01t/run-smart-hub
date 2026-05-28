@@ -39,7 +39,15 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { GearSpec } from "@/types/specs";
 import { gearSpecs } from "@/data/specs/gear";
 
-export const GearComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const GearComparisonTable = ({ 
+  accentColor = "hsl(var(--primary))",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 

@@ -158,7 +158,7 @@ const BMICalculator = () => {
 
           <HubReferral 
             category="shoes"
-            href="/hub#shoes"
+            href="/hub/shoes"
             title="Migliori Scarpe per il tuo Profilo"
             description="Trova il paio di scarpe giusto con il livello di ammortizzazione appropriato in base alla tua massa corporea e ai tuoi obiettivi di corsa."
           />

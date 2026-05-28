@@ -162,7 +162,7 @@ const ElectrolyteCalculator = () => {
 
           <HubReferral 
             category="hydration"
-            href="/hub#hydration"
+            href="/hub/hydration"
             title="Migliori Soluzioni Elettrolitiche"
             description="Confronta le specifiche tecniche, i rapporti di sali e la biodisponibilità dei principali marchi di elettroliti sul mercato."
           />

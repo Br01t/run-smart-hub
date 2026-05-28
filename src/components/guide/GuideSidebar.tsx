@@ -101,7 +101,7 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
                 Scopri i nostri confronti tecnici basati su dati per {translateCategory(guide.hubCategory)} con benchmark scientifici.
               </p>
               <Link 
-                to={`/hub#${guide.hubCategory}`}
+                to={`/hub/${guide.hubCategory}`}
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95"
               >
                 Vai all'Hub {translateCategory(guide.hubCategory)} <BarChart3 className="h-3.5 w-3.5" />

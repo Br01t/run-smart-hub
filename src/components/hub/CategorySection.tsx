@@ -43,6 +43,8 @@ interface CategorySectionProps {
   matchedComparisons: any[];
   categoryProductTags: Record<string, string[]>;
   sidebar?: React.ReactNode;
+  sport?: string;
+  objective?: string;
 }
 
 const CategorySection = ({ 
@@ -53,7 +55,9 @@ const CategorySection = ({
   accentHsl,
   matchedComparisons, 
   categoryProductTags,
-  sidebar
+  sidebar,
+  sport,
+  objective
 }: CategorySectionProps) => {
 
   const getProductSelection = () => {
@@ -119,12 +123,12 @@ const CategorySection = ({
             </div>
 
             {/* Render appropriate table based on category */}
-            {catKey === "shoes" && <ShoeComparisonTable accentColor={accentColor} />}
-            {catKey === "supplements" && <SupplementComparisonTable accentColor={accentColor} />}
-            {catKey === "hydration" && <HydrationComparisonTable accentColor={accentColor} />}
-            {catKey === "gear" && <GearComparisonTable accentColor={accentColor} />}
-            {catKey === "recovery" && <RecoveryComparisonTable accentColor={accentColor} />}
-            {catKey === "apparel" && <ApparelComparisonTable accentColor={accentColor} />}
+            {catKey === "shoes" && <ShoeComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
+            {catKey === "supplements" && <SupplementComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
+            {catKey === "hydration" && <HydrationComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
+            {catKey === "gear" && <GearComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
+            {catKey === "recovery" && <RecoveryComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
+            {catKey === "apparel" && <ApparelComparisonTable accentColor={accentColor} sport={sport} objective={objective} />}
           </div>
 
           {/* Product Banner Section */}

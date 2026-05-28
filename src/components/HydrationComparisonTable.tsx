@@ -17,7 +17,15 @@ import { Button } from "@/components/ui/button";
 import { hydrationSpecs } from "@/data/specs/hydration";
 import { GearSpec } from "@/types/specs";
 
-export const HydrationComparisonTable = ({ accentColor = "hsl(190, 90%, 45%)" }: { accentColor?: string }) => {
+export const HydrationComparisonTable = ({ 
+  accentColor = "hsl(190, 90%, 45%)",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 

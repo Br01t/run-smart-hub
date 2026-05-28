@@ -221,7 +221,7 @@ const ShoeFinder = () => {
                           </div>
                         </div>
 
-                        <Link to="/hub#shoes" className="mt-6 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
+                        <Link to="/hub/shoes" className="mt-6 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent hover:underline">
                           Dettagli Completi <ArrowRight className="h-3 w-3" />
                         </Link>
                       </div>
@@ -233,7 +233,7 @@ const ShoeFinder = () => {
                 <div className="pt-4">
                   <HubReferral 
                     category="shoes"
-                    href="/hub#shoes"
+                    href="/hub/shoes"
                     title="Esplora l'Hub Completo Scarpe"
                     description="Non hai trovato il modello perfetto? Visualizza il nostro confronto tecnico completo di tutti i migliori modelli con disponibilità in tempo reale."
                   />

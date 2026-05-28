@@ -176,7 +176,7 @@ const HydrationCalculator = () => {
 
           <HubReferral 
             category="hydration"
-            href="/hub#hydration"
+            href="/hub/hydration"
             title="Miglior Attrezzatura per Idratazione"
             description="Esplora il nostro confronto tecnico di zaini idrici, borracce a mano e soft flask per trasportare i tuoi liquidi senza rimbalzi."
           />

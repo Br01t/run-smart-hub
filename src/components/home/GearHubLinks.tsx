@@ -18,10 +18,10 @@ const GearHubLinks = () => {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: "Integratori", emoji: "💊", desc: "Magnesio, elettroliti, gel", to: "/hub#supplements", border: "border-l-amber-500" },
-            { label: "Scarpe", emoji: "👟", desc: "Strada, trail, gara", to: "/hub#shoes", border: "border-l-emerald-500" },
-            { label: "Idratazione", emoji: "💧", desc: "Borracce, cinture, sali", to: "/hub#hydration", border: "border-l-sky-500" },
-            { label: "Recupero", emoji: "🧊", desc: "Rulli, pistole massaggianti", to: "/hub#recovery", border: "border-l-violet-500" },
+            { label: "Integratori", emoji: "💊", desc: "Magnesio, elettroliti, gel", to: "/hub/supplements", border: "border-l-amber-500" },
+            { label: "Scarpe", emoji: "👟", desc: "Strada, trail, gara", to: "/hub/shoes", border: "border-l-emerald-500" },
+            { label: "Idratazione", emoji: "💧", desc: "Borracce, cinture, sali", to: "/hub/hydration", border: "border-l-sky-500" },
+            { label: "Recupero", emoji: "🧊", desc: "Rulli, pistole massaggianti", to: "/hub/recovery", border: "border-l-violet-500" },
           ].map((hub) => (
             <Link
               key={hub.label}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { 
   Table, 
   TableBody, 
@@ -38,16 +38,41 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { SupplementSpec } from "@/types/specs";
 import { supplementSpecs } from "@/data/specs/supplements";
 
-export const SupplementComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const SupplementComparisonTable = ({ 
+  accentColor = "hsl(var(--primary))",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
+
+  const filteredSpecs = useMemo(() => {
+    let list = supplementSpecs;
+    if (objective) {
+      if (objective === "performance") {
+        list = list.filter(s => s.recommendedFor === "Intensità" || s.recommendedFor === "Potenza / Forza" || ["Beta Alanina", "Caffeina Pura", "Impact Creatina"].includes(s.name));
+      } else if (objective === "recovery") {
+        list = list.filter(s => s.recommendedFor === "Recupero" || ["Impact Whey Protein", "Impact Whey Isolate", "Impact EAA", "ZMA in capsule", "Oat Protein Flapjack"].includes(s.name));
+      } else if (objective === "weight-loss") {
+        list = list.filter(s => ["Impact Whey Isolate", "Impact EAA", "ZMA in capsule", "Omega 3 6 9"].includes(s.name));
+      } else if (objective === "endurance") {
+        list = list.filter(s => s.recommendedFor === "Endurance" || ["100% Maltodestrina", "Beta Alanina", "Caffeina Pura", "Omega 3 6 9"].includes(s.name));
+      }
+    }
+    return list;
+  }, [sport, objective]);
+
   const { 
     searchTerm, setSearchTerm, 
     activeFilters, setActiveFilters,
     selectedNames, toggleSelection, setSelectedNames,
     filteredData, clearFilters 
-  } = useProductTable(supplementSpecs, ["name", "ingredients", "effect"]);
+  } = useProductTable(filteredSpecs, ["name", "ingredients", "effect"]);
 
-  const selectedProducts = supplementSpecs.filter(p => selectedNames.includes(p.name));
+  const selectedProducts = filteredSpecs.filter(p => selectedNames.includes(p.name));
 
   return (
     <div className="my-8 space-y-4">

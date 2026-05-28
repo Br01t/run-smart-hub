@@ -90,7 +90,7 @@ const GuidePage = () => {
                       Esplora il nostro <strong>Hub Tecnico</strong> per confrontare i prodotti sul mercato basandoti sui principi scientifici discussi in questa guida.
                     </p>
                     <Link 
-                      to={`/hub#${guide.hubCategory}`}
+                      to={`/hub/${guide.hubCategory}`}
                       className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
                     >
                       Vai all'Hub {translateCategory(guide.hubCategory)} <ArrowRight className="h-4 w-4" />

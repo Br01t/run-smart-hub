@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { 
   Table, 
   TableBody, 
@@ -39,16 +39,42 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { ShoeSpec } from "@/types/specs";
 import { shoeSpecs } from "@/data/specs/shoes";
 
-export const ShoeComparisonTable = ({ accentColor = "hsl(var(--primary))" }: { accentColor?: string }) => {
+export const ShoeComparisonTable = ({ 
+  accentColor = "hsl(var(--primary))",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
+
+  const filteredSpecs = useMemo(() => {
+    let list = shoeSpecs;
+    if (sport) {
+      if (sport === "trail" || sport === "trail-running") {
+        list = list.filter(s => s.terrain === "Trail");
+      } else if (["running", "marathon", "half-marathon", "5k", "10k"].includes(sport)) {
+        list = list.filter(s => s.terrain === "Strada");
+      }
+    }
+    if (objective) {
+      if (objective === "performance") {
+        list = list.filter(s => ["Alphafly 3", "Vaporfly 3", "Adizero Adios Pro 3", "Adizero Adios Pro Evo 1", "Puma Electrify Nitro", "Adidas Duramo Speed"].includes(s.name));
+      }
+    }
+    return list;
+  }, [sport, objective]);
+
   const { 
     searchTerm, setSearchTerm, 
     activeFilters, setActiveFilters,
     selectedNames, toggleSelection, setSelectedNames,
     filteredData, clearFilters 
-  } = useProductTable(shoeSpecs, ["name", "bestFor"]);
+  } = useProductTable(filteredSpecs, ["name", "bestFor"]);
 
-  const selectedProducts = shoeSpecs.filter(p => selectedNames.includes(p.name));
+  const selectedProducts = filteredSpecs.filter(p => selectedNames.includes(p.name));
 
   return (
     <div className="my-8 space-y-4">

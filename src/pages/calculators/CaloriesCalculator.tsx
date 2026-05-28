@@ -144,7 +144,7 @@ const CaloriesCalculator = () => {
 
           <HubReferral 
             category="supplements"
-            href="/hub#supplements"
+            href="/hub/supplements"
             title="Miglior Hub per l'Integrazione"
             description="Visualizza le specifiche tecniche di gel energetici e mix di carboidrati per trovare il carburante perfetto per il tuo prossimo sforzo lungo."
           />

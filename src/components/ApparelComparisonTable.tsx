@@ -39,7 +39,15 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { ApparelSpec } from "@/types/specs";
 import { apparelSpecs } from "@/data/specs/apparel";
 
-export const ApparelComparisonTable = ({ accentColor = "hsl(230, 80%, 60%)" }: { accentColor?: string }) => {
+export const ApparelComparisonTable = ({ 
+  accentColor = "hsl(230, 80%, 60%)",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 

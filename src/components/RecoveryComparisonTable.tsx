@@ -39,7 +39,15 @@ const SelectFilter = ({ value, onValueChange, options }: { value: string, onValu
 import { RecoverySpec } from "@/types/specs";
 import { recoverySpecs } from "@/data/specs/recovery";
 
-export const RecoveryComparisonTable = ({ accentColor = "hsl(150, 80%, 35%)" }: { accentColor?: string }) => {
+export const RecoveryComparisonTable = ({ 
+  accentColor = "hsl(150, 80%, 35%)",
+  sport,
+  objective
+}: { 
+  accentColor?: string;
+  sport?: string;
+  objective?: string;
+}) => {
   const [showFilters, setShowFilters] = useState(false);
   const { 
     searchTerm, setSearchTerm, 
