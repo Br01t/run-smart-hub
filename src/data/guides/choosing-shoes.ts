@@ -81,4 +81,20 @@ export const choosingRunningShoes: GuideContent = {
     }
   ],
   hubCategory: "shoes",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-03",
+  faq: [
+    {
+      q: "Quali sono le differenze principali tra schiume PEBA e EVA?",
+      a: "La schiuma PEBA (utilizzata nelle Super Shoes) offre una leggerezza eccezionale e un ritorno energetico fino all'85-87%, riducendo il costo metabolico della corsa. La schiuma EVA è invece più economica, solida e stabile, ideale per allenamenti quotidiani in cui non è richiesta la massima velocità."
+    },
+    {
+      q: "Che cos'è la teoria del Comfort Filter per le scarpe da corsa?",
+      a: "La teoria del Comfort Filter, ideata dal Dr. Benno Nigg, suggerisce che la scarpa da corsa percepita come più comoda dal runner sia biologicamente quella più efficiente e in grado di ridurre maggiormente il rischio di infortuni da sovraccarico."
+    },
+    {
+      q: "A cosa serve la rotazione delle scarpe da corsa?",
+      a: "Alternare l'uso di almeno due paia di scarpe da corsa diverse riduce il rischio di infortuni fino al 39% poiché varia lo stress meccanico applicato alle articolazioni e permette alle schiume dell'intersuola di decomprimersi completamente tra gli allenamenti."
+    }
+  ]
 };

@@ -42,15 +42,27 @@ const GuidePage = () => {
         description={guide.seoDescription || guide.description}
         path={`/guides/${slug}`}
         keywords={guide.keywords}
+        faq={guide.faq}
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",
           "headline": guide.title,
           "description": guide.description,
           "image": guide.heroImage,
+          "datePublished": guide.datePublished || "2026-05-18",
+          "dateModified": guide.dateModified || "2026-06-03",
           "author": {
             "@type": "Organization",
-            "name": "Runners Hub"
+            "name": "Runners Hub",
+            "url": "https://www.runners-hub.org"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Runners Hub",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.runners-hub.org/favicon.ico"
+            }
           }
         }}
       />

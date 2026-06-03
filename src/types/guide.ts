@@ -21,4 +21,7 @@ export interface GuideContent {
   relatedTools: { to: string; label: string }[];
   relatedGuides: { slug: string; label: string }[];
   hubCategory?: "shoes" | "supplements" | "hydration" | "recovery" | "apparel" | "gear" | "nutrition";
+  datePublished?: string;
+  dateModified?: string;
+  faq?: { q: string; a: string }[];
 }

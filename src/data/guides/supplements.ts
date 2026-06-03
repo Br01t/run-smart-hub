@@ -82,9 +82,24 @@ export const supplementsForRunners: GuideContent = {
         "Testa in Allenamento: Mai provare un nuovo integratore (specialmente gel o caffeina) il giorno della gara.", 
         "Analisi del Sangue: Prima di integrare ferro o vitamina D, verifica i tuoi livelli reali con un medico.", 
         "Qualità del Brand: Scegli marche trasparenti (es. Myprotein, Myvitamins) che pubblicano i risultati dei test di laboratorio.",
-        "Ciclicizzazione: Sospendi periodicamente gli stimolanti (caffeina) per resettare la sensibilità dei recettori."
-      ] 
-    },
+      ]
+    }
   ],
   hubCategory: "supplements",
+  datePublished: "2026-05-18",
+  dateModified: "2026-06-03",
+  faq: [
+    {
+      q: "Quali integratori hanno le migliori prove scientifiche di efficacia per la corsa?",
+      a: "La caffeina (migliora la concentrazione e riduce la fatica percepita), i nitrati del succo di barbabietola (migliorano l'efficienza dell'ossigeno) e la beta-alanina (tampona l'acido lattico) sono gli integratori con il più alto livello di evidenza scientifica (Livello A) per la corsa di resistenza."
+    },
+    {
+      q: "Come si esegue il 'Gut Training' o allenamento intestinale?",
+      a: "Il Gut Training consiste nell'assumere quantità progressive di carboidrati (fino a 90g all'ora in rapporto glucosio-fruttosio 2:1) durante gli allenamenti lunghi per abituare l'intestino ad assorbirli ed evitare disturbi gastrici il giorno della gara."
+    },
+    {
+      q: "Gli antiossidanti come la Vitamina C sono utili dopo l'allenamento?",
+      a: "Dosi elevate di antiossidanti (come >1000mg di Vitamina C) assunte subito dopo l'allenamento possono inibire gli adattamenti mitocondriali. È preferibile consumarli lontano dagli allenamenti per permettere al corpo di adattarsi allo stress ossidativo naturale."
+    }
+  ]
 };

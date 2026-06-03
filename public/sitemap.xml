@@ -2,60 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core pages -->
-  <url><loc>https://www.runners-hub.org/</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.runners-hub.org/hub</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.runners-hub.org/tools</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.runners-hub.org/guides</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.runners-hub.org/quiz</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.runners-hub.org/method</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.runners-hub.org/about</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.runners-hub.org/hub</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/tools</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/guides</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.runners-hub.org/quiz</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.runners-hub.org/method</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.runners-hub.org/about</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Product Category Hubs -->
+  <url><loc>https://www.runners-hub.org/hub/shoes</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/gear</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/apparel</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+
+  <!-- Product Category + Sport Sub-Hubs -->
+  <url><loc>https://www.runners-hub.org/hub/shoes/trail-running</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/half-marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/10k</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/shoes/5k</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <url><loc>https://www.runners-hub.org/hub/supplements/marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/trail-running</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/half-marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/10k</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/supplements/5k</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <url><loc>https://www.runners-hub.org/hub/hydration/marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration/trail-running</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/hydration/half-marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <url><loc>https://www.runners-hub.org/hub/recovery/marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery/trail-running</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/hub/recovery/half-marathon</loc><lastmod>2026-06-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Tools / Calcolatori -->
-  <url><loc>https://www.runners-hub.org/tools/hydration</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/tools/calories</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/tools/bmi</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/tools/protein</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/tools/electrolytes</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/tools/shoes</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/hydration</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/calories</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/bmi</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/protein</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/electrolytes</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/tools/shoes</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Guide -->
-  <url><loc>https://www.runners-hub.org/guides/choosing-running-shoes</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/supplements-for-runners</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/muscle-recovery</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/running-nutrition</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/injury-prevention</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/marathon-training</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/trail-running-beginners</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/running-heart-rate-zones</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/stretching-for-runners</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/running-form</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/running-cadence</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/hill-training</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/best-running-watches</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/winter-running</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/interval-training</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/sleep-and-running</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/guides/running-shoe-rotation</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/choosing-running-shoes</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/supplements-for-runners</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/muscle-recovery</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-nutrition</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/injury-prevention</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/marathon-training</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/trail-running-beginners</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-heart-rate-zones</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/stretching-for-runners</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-form</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-cadence</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/hill-training</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/best-running-watches</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/winter-running</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/interval-training</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/sleep-and-running</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/guides/running-shoe-rotation</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Comparison pages – contenuto unico, alta intenzione commerciale -->
-  <url><loc>https://www.runners-hub.org/comparison/shoes/running/performance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/shoes/trail/performance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements/running/performance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements/running/recovery</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements/running/weight-loss</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements/running/endurance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/supplements/trail/recovery</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/hydration/running/hydration</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/hydration/trail/hydration</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/recovery/running/injury-prevention</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/recovery/trail/injury-prevention</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/gear/running/performance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.runners-hub.org/comparison/apparel/running/performance</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/shoes/running/performance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/shoes/trail/performance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/performance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/recovery</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/weight-loss</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/running/endurance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/supplements/trail/recovery</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/hydration/running/hydration</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/hydration/trail/hydration</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recovery/running/injury-prevention</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/recovery/trail/injury-prevention</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/gear/running/performance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.runners-hub.org/comparison/apparel/running/performance</loc><lastmod>2026-06-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Pagine legali -->
-  <url><loc>https://www.runners-hub.org/affiliate-disclosure</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.runners-hub.org/privacy</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.runners-hub.org/terms</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.runners-hub.org/disclaimer</loc><lastmod>2026-05-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/affiliate-disclosure</loc><lastmod>2026-06-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/privacy</loc><lastmod>2026-06-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/terms</loc><lastmod>2026-06-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.runners-hub.org/disclaimer</loc><lastmod>2026-06-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>
