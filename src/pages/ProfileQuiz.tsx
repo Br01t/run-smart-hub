@@ -39,8 +39,8 @@ const ProfileQuiz = () => {
   return (
     <Layout>
       <SEO
-        title="Quiz del Runner — Piano di Allenamento e Attrezzatura Personalizzato"
-        description="Rispondi a 5 domande per scoprire il tuo archetipo di runner e ricevere raccomandazioni personalizzate per allenamento, nutrizione, integratori e attrezzatura."
+        title="Quiz Runner Gratis: Scopri il Tuo Profilo in 2 Minuti"
+        description="Rispondi a 5 domande e ricevi un piano personalizzato: scarpe, integratori, allenamento e recupero su misura per i tuoi obiettivi di corsa. Test gratuito."
         path="/quiz"
         schema={jsonLd}
         faq={[
