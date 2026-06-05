@@ -31,7 +31,7 @@ export interface ShoeSpec {
 export interface GearSpec {
   name: string;
   brand: string;
-  category: "Watch" | "Hydration" | "Lighting" | "Socks" | "Belt" | "Gear";
+  category: "Watch" | "Hydration" | "Lighting" | "Socks" | "Belt" | "Gear" | "Orologio" | "Attrezzatura" | "Illuminazione" | "Cintura" | "Calze";
   metric1: string; // Battery / Capacity / Lumens / Fit
   metric2: string; // Maps / Pockets / Charging / Material
   bestFor: string;
@@ -50,9 +50,9 @@ export interface GearSpec {
 export interface ApparelSpec {
   name: string;
   brand: string;
-  category: "Shirt" | "Shorts" | "Jacket" | "Leggings" | "Accessory";
+  category: "Shirt" | "Shorts" | "Jacket" | "Leggings" | "Accessory" | "Maglia" | "Pantaloncini" | "Giacca" | "Accessorio";
   breathability: string; 
-  fit: "Compression" | "Fitted" | "Loose" | "Regular" | "One Size";
+  fit: "Compression" | "Fitted" | "Loose" | "Regular" | "One Size" | "Compressione" | "Aderente" | "Ampio" | "Regolare" | "Taglia unica";
   antiChafing: string; // e.g. "Flatlock", "Seamless"
   visibility: string; // e.g. "360 Reflex", "Standard"
   seasonal: string; // e.g. "Summer", "All Season", "Rain/Wind"
@@ -68,13 +68,13 @@ export interface ApparelSpec {
 export interface RecoverySpec {
   name: string;
   brand: string;
-  method?: "Deep Massage" | "Circulatory Support" | "Active Prevention" | "Thermal Therapy";
+  method?: "Deep Massage" | "Circulatory Support" | "Active Prevention" | "Thermal Therapy" | "Massaggio Profondo" | "Supporto Circolatorio" | "Prevenzione Attiva" | "Terapia Termica";
   benefit?: string;
   targetArea?: string; // e.g. "Muscles", "Circulation", "IT Band"
   strategy?: string; // e.g. "Release", "Activation", "Therapy"
   intensity: string; // High / Medium / Low / Temp-based
   techDetails: string;
-  useType: "Rest" | "Race";
+  useType: "Rest" | "Race" | "Riposo" | "Gara";
   bestFor: string;
   recommendedFor: string;
   price?: string;

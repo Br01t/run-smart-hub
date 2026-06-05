@@ -7,7 +7,7 @@ export const heartRateZones: GuideContent = {
   seoDescription: "Guida completa all'allenamento in Zona 2 per runner. Come calcolare le zone cardio, migliorare l'economia di corsa e la biogenesi mitocondriale 2026.",
   keywords: ["allenamento zone 2 corsa", "calcolo zone cardio 2026", "benefici corsa bassa intensità", "frequenza cardiaca longevità", "soglia aerobica runner", "test zone cardio"],
   description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
-  tags: ["accessories", "running"],
+  tags: ["accessories", "running", "gear"],
   heroImage: guideHeartrate,
   readTime: "7 min di lettura",
   keyTakeaways: [
@@ -19,12 +19,25 @@ export const heartRateZones: GuideContent = {
   ],
   relatedTools: [
     { to: "/tools/calories", label: "Calcolatore Calorie" },
-    { to: "/tools/bmi", label: "Calcolatore BMI" },
+    { to: "/tools/hydration", label: "Calcolatore Idratazione" },
+    { to: "/tools/shoes", label: "Shoe Finder Personalizzato" },
+    { to: "/quiz", label: "Quiz Profilo Runner" },
   ],
   relatedGuides: [
     { slug: "marathon-training", label: "Guida alla Maratona per Principianti" },
     { slug: "running-nutrition", label: "Nutrizione Corsa: Cosa Mangiare" },
+    { slug: "best-running-watches", label: "Migliori Orologi GPS Corsa" },
+    { slug: "interval-training", label: "Interval Training: Guida Completa" },
   ],
+  faq: [
+    { q: "Come calcolare la mia frequenza cardiaca massima reale?", a: "Il metodo più preciso è il test sul campo: dopo riscaldamento, corri al massimo sforzo costante per 30 minuti. La FC media degli ultimi 20 minuti rappresenta la tua Soglia del Lattato (LTHR). La FC max è circa LTHR + 10-12 bpm. Le formule (220-età, Tanaka) hanno ±15% di errore." },
+    { q: "Qual è la frequenza cardiaca giusta per la Zona 2?", a: "Indicativamente tra il 60% e il 70% della Riserva Cardiaca (Karvonen). Il test 'parla-canta': in Zona 2 devi riuscire a fare frasi complete senza affanno. Se l'altro ti capisce ma ti senti in affanno, sei già in Zona 3." },
+    { q: "Perché in Zona 2 il mio ritmo è così lento?", a: "È normale all'inizio. La Zona 2 sviluppa la base aerobica e la densità mitocondriale; dopo 8-12 settimane di lavoro costante il ritmo in Zona 2 migliora di 20-40 secondi/km a parità di battiti." },
+    { q: "Quanto tempo a settimana devo correre in Zona 2?", a: "Per il modello polarizzato 80/20, circa l'80% del volume settimanale: se corri 4 ore a settimana, almeno 3 dovrebbero essere facili in Zona 1-2 e solo 45-60 minuti ad alta intensità." },
+    { q: "Posso fidarmi dei battiti misurati dal polso?", a: "Per corse lente e continue sì. Per ripetute, intervalli brevi o salite serve la fascia toracica: il sensore ottico ha 10-15 secondi di ritardo e tende ad agganciare la cadenza dei passi invece dei battiti reali ('cadence lock')." },
+  ],
+  datePublished: "2026-03-20",
+  dateModified: "2026-06-05",
   sections: [
     { 
       heading: "La Scienza: Hub dello Stress Metabolico", 
@@ -75,5 +88,5 @@ export const heartRateZones: GuideContent = {
       ] 
     }
   ],
-  hubCategory: "apparel",
+  hubCategory: "gear",
 };

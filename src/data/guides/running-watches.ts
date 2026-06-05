@@ -18,13 +18,26 @@ export const runningWatches: GuideContent = {
     "Le stime del VO2 Max e del Tempo di Recupero si basano su algoritmi Firstbeat scientificamente validati",
   ],
   relatedTools: [
+    { to: "/tools/shoes", label: "Shoe Finder Personalizzato" },
     { to: "/tools/calories", label: "Calcolatore Calorie" },
     { to: "/tools/hydration", label: "Calcolatore Idratazione" },
+    { to: "/quiz", label: "Quiz Profilo Runner" },
   ],
   relatedGuides: [
     { slug: "running-heart-rate-zones", label: "Allenamento con le Zone Cardio" },
     { slug: "trail-running-beginners", label: "Iniziare con il Trail Running" },
+    { slug: "marathon-training", label: "Guida alla Maratona" },
+    { slug: "running-cadence", label: "Cadenza di Corsa Ottimale" },
   ],
+  faq: [
+    { q: "Qual è il miglior orologio GPS per la corsa nel 2026?", a: "Per la maggior parte dei runner amatoriali Garmin Forerunner 255 e Coros Pace 3 offrono il miglior rapporto qualità-prezzo: GNSS multi-band, HRV, autonomia 30+ ore in GPS. Per il trail e ultra il Garmin Fenix 7 o Suunto Vertical con mappe topografiche." },
+    { q: "Garmin o Coros: quale scegliere?", a: "Garmin ha l'ecosistema software più ricco (Garmin Connect, Training Readiness, mappe). Coros è più leggero, costa meno e dura più a lungo in batteria. Se vuoi metriche e community: Garmin. Se vuoi essenzialità e prezzo: Coros." },
+    { q: "Servono davvero le piastre cardio toraciche se ho l'orologio?", a: "Sì, per le ripetute e gli intervalli brevi. Il sensore ottico al polso ha un ritardo di 10-15 secondi e soffre di 'cadence lock'. La fascia toracica (Polar H10, Garmin HRM-Pro) misura l'attività elettrica del cuore ed è istantanea." },
+    { q: "Quanti satelliti GPS sono necessari per una traccia precisa?", a: "Almeno 4 per il fix base, ma per precisione sub-metrica servono 8+ satelliti su frequenze multiple (L1+L5). Aspetta che l'icona GPS sia fissa verde prima di premere Start." },
+    { q: "Il VO2 Max stimato dall'orologio è affidabile?", a: "È utile per monitorare i trend nel tempo (±3-5 ml/kg/min vs test di laboratorio). Non usarlo come valore assoluto, ma come indicatore di miglioramento o calo di forma." },
+  ],
+  datePublished: "2026-04-15",
+  dateModified: "2026-06-05",
   sections: [
     { 
       heading: "La Scienza: Dinamiche GNSS e Precisione Satellitare", 

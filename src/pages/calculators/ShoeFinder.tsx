@@ -38,8 +38,8 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEO 
-        title="Qual è la Migliore Scarpa da Corsa? Trova Scarpe Personalizzato" 
-        description="Scopri qual è la scarpa migliore per una maratona, per iniziare a correre o per i lenti. Trova Scarpe intelligente basato sui tuoi obiettivi e ritmo."
+        title="Shoe Finder Gratis: Trova la Tua Scarpa da Corsa in 5 Domande" 
+        description="Configuratore scarpe running personalizzato: incrocia peso, ritmo e appoggio per ricevere il modello giusto fra Nike, Adidas, Brooks, Asics, Hoka e Saucony."
         path="/tools/shoes"
         faq={[
           { q: "Qual è la scarpa migliore per una maratona?", a: "Per i runner che cercano il tempo, le 'Super Shoes' in carbonio (come Nike Alphafly 3 o Adidas Adizero Adios Pro Evo 1) sono le migliori perché migliorano l'economia di corsa. Per chi punta solo a finire, meglio modelli protettivi e stabili." },
