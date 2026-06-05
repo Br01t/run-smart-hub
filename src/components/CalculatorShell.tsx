@@ -20,7 +20,7 @@ const CalculatorShell = ({ title, description, icon: Icon, children, keywords }:
       <SEO
         title={title}
         description={description}
-        canonical={canonicalUrl}
+        path={location.pathname}
         schema={{
           "@context": "https://schema.org",
           "@graph": [
