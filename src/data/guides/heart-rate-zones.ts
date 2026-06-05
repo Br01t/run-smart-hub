@@ -88,5 +88,5 @@ export const heartRateZones: GuideContent = {
       ] 
     }
   ],
-  hubCategory: "apparel",
+  hubCategory: "gear",
 };
