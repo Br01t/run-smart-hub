@@ -19,7 +19,7 @@
     "inlineCss": false,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "skipThirdPartyRequests": true,
-    "waitFor": 5000,
+    "waitFor": 10000,
     "fixWebpackChunksIssue": false,
     "removeStyleTags": false,
 
