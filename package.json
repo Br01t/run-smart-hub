@@ -18,11 +18,11 @@
     "destination": "dist",
     "inlineCss": false,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
-    "skipThirdPartyRequests": false,
+    "skipThirdPartyRequests": true,
     "waitFor": 5000,
     "fixWebpackChunksIssue": false,
     "removeStyleTags": false,
-    "cacheAjaxRequests": false,
+
     "include": [
       "/",
       "/hub",
