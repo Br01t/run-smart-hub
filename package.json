@@ -19,6 +19,10 @@
     "inlineCss": false,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "skipThirdPartyRequests": true,
+    "waitFor": 3000,
+    "fixWebpackChunksIssue": false,
+    "removeStyleTags": false,
+
     "include": [
       "/",
       "/hub",
