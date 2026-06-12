@@ -18,10 +18,12 @@
     "destination": "dist",
     "inlineCss": false,
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
-    "skipThirdPartyRequests": true,
-    "waitFor": 8000,
+    "skipThirdPartyRequests": false,
+    "waitFor": 5000,
     "fixWebpackChunksIssue": false,
     "removeStyleTags": false,
+    "cacheAjaxRequests": false,
+
 
     "include": [
       "/",
