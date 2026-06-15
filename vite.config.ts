@@ -20,6 +20,9 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    noExternal: ["react-helmet-async"],
+  },
   build: {
     rollupOptions: isSsrBuild ? undefined : {
       output: {
