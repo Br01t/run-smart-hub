@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   // Use /run-smart-hub/ base only for GitHub Pages production builds
   base: "/",
   server: {
@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    rollupOptions: {
+    rollupOptions: isSsrBuild ? undefined : {
       output: {
         manualChunks: {
           "vendor-react": ["react", "react-dom", "react-router-dom"],
