@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, MemoryRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Analytics from "./components/Analytics";
@@ -38,18 +38,37 @@ const PageLoader = () => (
 
 const basename = "/";
 
-const App = () => (
+type AppProps = {
+  prerenderUrl?: string;
+};
+
+const Router = ({ children, prerenderUrl }: { children: React.ReactNode; prerenderUrl?: string }) => {
+  const future = {
+    v7_startTransition: true,
+    v7_relativeSplatPath: true,
+  };
+
+  if (prerenderUrl) {
+    return (
+      <MemoryRouter initialEntries={[prerenderUrl]} future={future}>
+        {children}
+      </MemoryRouter>
+    );
+  }
+
+  return (
+    <BrowserRouter basename={basename} future={future}>
+      {children}
+    </BrowserRouter>
+  );
+};
+
+const App = ({ prerenderUrl }: AppProps) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter 
-        basename={basename}
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
+      <Router prerenderUrl={prerenderUrl}>
         <ScrollToTop />
         <Analytics />
         <Suspense fallback={<PageLoader />}>
@@ -78,7 +97,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );

@@ -10,7 +10,7 @@ const tree = (
   </HelmetProvider>
 );
 
-// react-snap pre-renders HTML at build time → hydrate instead of fresh render
+// Static prerendering writes HTML at build time → hydrate instead of fresh render
 if (rootEl.hasChildNodes()) {
   hydrateRoot(rootEl, tree);
 } else {
