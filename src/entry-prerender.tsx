@@ -9,7 +9,7 @@ type PrerenderResult = {
 };
 
 export const render = (url: string): Promise<PrerenderResult> => {
-  const helmetContext: { helmet?: Record<string, { toString: () => string }> } = {};
+  const helmetContext = {} as any;
   const chunks: Buffer[] = [];
 
   return new Promise((resolve, reject) => {
