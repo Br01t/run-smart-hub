@@ -59,7 +59,7 @@ const ShoeFinder = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={shoeHero} alt="Gamma di scarpe da corsa" width={1440} height={600} fetchPriority="high" loading="eager" decoding="async" className="h-full w-full object-cover" />
+          <img src={shoeHero} alt="Gamma di scarpe da corsa" width={1440} height={600} {...{ fetchpriority: "high" }} loading="eager" decoding="async" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 to-foreground/50" />
         </div>
         <div className="relative container mx-auto px-4 py-10 sm:py-16">

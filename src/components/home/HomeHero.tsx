@@ -12,7 +12,7 @@ const HomeHero = () => {
           src={heroImage} 
           alt="Runner all'alba su un sentiero" 
           width={1440} height={900} 
-          fetchPriority="high" 
+          {...{ fetchpriority: "high" }}
           loading="eager" 
           decoding="async" 
           className="h-full w-full object-cover object-top" 
