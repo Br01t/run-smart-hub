@@ -148,6 +148,10 @@ export const CategoryProductBanner = ({ products, accentColor, accentHsl, title 
                     <img 
                     src={product.image} 
                     alt={product.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={320}
+                    height={240}
                     className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-110"
                     />
                     
