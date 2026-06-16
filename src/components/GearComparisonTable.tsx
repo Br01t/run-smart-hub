@@ -270,6 +270,10 @@ export const GearComparisonTable = ({
                           <img 
                             src={p.image} 
                             alt={p.name} 
+                            loading="lazy"
+                            decoding="async"
+                            width={96}
+                            height={96}
                             className="h-full w-full object-contain"
                           />
                         </div>
