@@ -24,6 +24,65 @@ import { comparisonsList as comparisonsData } from "@/data/comparisons/list";
 import { categoryGuides } from "@/data/categoryGuides";
 import { translateCategory } from "@/lib/translations";
 import hubsData from "@/data/hubs.json";
+import { shoeSpecs } from "@/data/specs/shoes";
+import { supplementSpecs } from "@/data/specs/supplements";
+import { hydrationSpecs } from "@/data/specs/hydration";
+import { recoverySpecs } from "@/data/specs/recovery";
+import { apparelSpecs } from "@/data/specs/apparel";
+import { gearSpecs } from "@/data/specs/gear";
+
+const SITE_URL = "https://www.runners-hub.org";
+
+const specsByCategory: Record<string, any[]> = {
+  shoes: shoeSpecs,
+  supplements: supplementSpecs,
+  hydration: hydrationSpecs,
+  recovery: recoverySpecs,
+  apparel: apparelSpecs,
+  gear: gearSpecs,
+};
+
+const parsePriceLow = (price?: string): number | undefined => {
+  if (!price) return undefined;
+  const m = price.match(/(\d+(?:[.,]\d+)?)/);
+  return m ? parseFloat(m[1].replace(",", ".")) : undefined;
+};
+
+const buildProductListSchema = (category: string, listName: string, listUrl: string) => {
+  const items = (specsByCategory[category] || []).slice(0, 12);
+  if (!items.length) return null;
+  return {
+    "@type": "ItemList",
+    "name": listName,
+    "url": listUrl,
+    "numberOfItems": items.length,
+    "itemListElement": items.map((p, i) => {
+      const price = parsePriceLow(p.price || p.prezzoRange);
+      const product: any = {
+        "@type": "Product",
+        "name": p.name,
+        "brand": p.brand ? { "@type": "Brand", "name": p.brand } : undefined,
+        "image": p.image ? (p.image.startsWith("http") ? p.image : `${SITE_URL}${p.image}`) : undefined,
+        "description": p.bestFor || p.descrizione || `${p.name} — selezione Runners Hub`,
+      };
+      if (price) {
+        product.offers = {
+          "@type": "Offer",
+          "price": price.toFixed(2),
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": p.link || listUrl,
+        };
+      }
+      return {
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": product,
+      };
+    }),
+  };
+};
+
 
 const categories = ["shoes", "gear", "supplements", "hydration", "recovery", "apparel"];
 
@@ -484,6 +543,34 @@ const MasterHub = () => {
     ? (hubsData as any[]).find(h => h.category === urlCategory && h.sport === normalizeSportForHub(sport)) 
     : null;
 
+  // Build structured data graph: CollectionPage + BreadcrumbList + Product ItemList
+  const canonicalUrl = `${SITE_URL}${seoPath}`;
+  const breadcrumbItems: any[] = [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Hub", "item": `${SITE_URL}/hub` },
+  ];
+  if (urlCategory) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": translateCategory(urlCategory), "item": `${SITE_URL}/hub/${urlCategory}` });
+  }
+  if (urlCategory && sport && objective) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": `${sport} · ${objective}`, "item": canonicalUrl });
+  } else if (urlCategory && sport) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": sport, "item": canonicalUrl });
+  }
+
+  const graph: any[] = [];
+  if (urlCategory) {
+    graph.push({
+      "@type": "CollectionPage",
+      "name": seoAIO.title,
+      "description": seoAIO.description,
+      "url": canonicalUrl,
+    });
+    const productList = buildProductListSchema(urlCategory, seoAIO.title, canonicalUrl);
+    if (productList) graph.push(productList);
+  }
+  graph.push({ "@type": "BreadcrumbList", "itemListElement": breadcrumbItems });
+
   return (
     <Layout>
       <SEO 
@@ -491,13 +578,9 @@ const MasterHub = () => {
         description={seoAIO.description}
         path={seoPath}
         faq={seoAIO.faq}
-        schema={urlCategory ? {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": seoAIO.title,
-          "description": seoAIO.description
-        } : undefined}
+        schema={{ "@context": "https://schema.org", "@graph": graph }}
       />
+
 
       {/* Floating Category Nav (Responsive & Multi-level) */}
       <nav className="sticky top-[64px] z-30 border-b border-border bg-background/80 backdrop-blur-md">
