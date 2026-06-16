@@ -543,6 +543,34 @@ const MasterHub = () => {
     ? (hubsData as any[]).find(h => h.category === urlCategory && h.sport === normalizeSportForHub(sport)) 
     : null;
 
+  // Build structured data graph: CollectionPage + BreadcrumbList + Product ItemList
+  const canonicalUrl = `${SITE_URL}${seoPath}`;
+  const breadcrumbItems: any[] = [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+    { "@type": "ListItem", "position": 2, "name": "Hub", "item": `${SITE_URL}/hub` },
+  ];
+  if (urlCategory) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": translateCategory(urlCategory), "item": `${SITE_URL}/hub/${urlCategory}` });
+  }
+  if (urlCategory && sport && objective) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": `${sport} · ${objective}`, "item": canonicalUrl });
+  } else if (urlCategory && sport) {
+    breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": sport, "item": canonicalUrl });
+  }
+
+  const graph: any[] = [];
+  if (urlCategory) {
+    graph.push({
+      "@type": "CollectionPage",
+      "name": seoAIO.title,
+      "description": seoAIO.description,
+      "url": canonicalUrl,
+    });
+    const productList = buildProductListSchema(urlCategory, seoAIO.title, canonicalUrl);
+    if (productList) graph.push(productList);
+  }
+  graph.push({ "@type": "BreadcrumbList", "itemListElement": breadcrumbItems });
+
   return (
     <Layout>
       <SEO 
@@ -550,13 +578,9 @@ const MasterHub = () => {
         description={seoAIO.description}
         path={seoPath}
         faq={seoAIO.faq}
-        schema={urlCategory ? {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": seoAIO.title,
-          "description": seoAIO.description
-        } : undefined}
+        schema={{ "@context": "https://schema.org", "@graph": graph }}
       />
+
 
       {/* Floating Category Nav (Responsive & Multi-level) */}
       <nav className="sticky top-[64px] z-30 border-b border-border bg-background/80 backdrop-blur-md">
