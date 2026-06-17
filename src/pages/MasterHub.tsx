@@ -42,11 +42,6 @@ const specsByCategory: Record<string, any[]> = {
   gear: gearSpecs,
 };
 
-const parsePriceLow = (price?: string): number | undefined => {
-  if (!price) return undefined;
-  const m = price.match(/(\d+(?:[.,]\d+)?)/);
-  return m ? parseFloat(m[1].replace(",", ".")) : undefined;
-};
 
 const buildProductListSchema = (category: string, listName: string, listUrl: string) => {
   const items = (specsByCategory[category] || []).slice(0, 12);
