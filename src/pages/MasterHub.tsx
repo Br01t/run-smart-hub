@@ -57,24 +57,14 @@ const buildProductListSchema = (category: string, listName: string, listUrl: str
     "url": listUrl,
     "numberOfItems": items.length,
     "itemListElement": items.map((p, i) => {
-      const price = parsePriceLow(p.price || p.prezzoRange);
       const product: any = {
         "@type": "Product",
         "name": p.name,
         "brand": p.brand ? { "@type": "Brand", "name": p.brand } : undefined,
         "image": p.image ? (p.image.startsWith("http") ? p.image : `${SITE_URL}${p.image}`) : undefined,
         "description": p.bestFor || p.descrizione || `${p.name} — selezione Runners Hub`,
+        "url": p.link || listUrl,
       };
-      if (price) {
-        product.offers = {
-          "@type": "Offer",
-          "price": price.toFixed(2),
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": p.link || listUrl,
-          "priceValidUntil": `${new Date().getFullYear() + 1}-12-31`,
-        };
-      }
 
       return {
         "@type": "ListItem",
@@ -84,6 +74,7 @@ const buildProductListSchema = (category: string, listName: string, listUrl: str
     }),
   };
 };
+
 
 
 const categories = ["shoes", "gear", "supplements", "hydration", "recovery", "apparel"];
