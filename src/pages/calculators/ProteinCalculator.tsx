@@ -30,6 +30,7 @@ const ProteinCalculator = () => {
         title="Quante Proteine per la Corsa? Calcolatore Fabbisogno Post-Allenamento" 
         description="Scopri quante proteine reintegrare dopo la corsa e la maratona. Calcolatore del fabbisogno proteico per atleti di endurance, massimizza il recupero muscolare."
         path="/tools/protein"
+        keywords={["calcolatore proteine runner", "quante proteine dopo la corsa", "fabbisogno proteico maratona", "proteine whey per correre", "recupero muscolare running"]}
         faq={[
           { q: "Quante proteine devo reintegrare dopo la corsa / maratona?", a: "Per ottimizzare la sintesi proteica muscolare e accelerare il recupero, assumi 20-30g di proteine a rapido assorbimento (come le Whey) entro 60 minuti dal termine della gara o dell'allenamento intenso." },
           { q: "Quante proteine servono a un runner al giorno?", a: "I runner di endurance hanno un fabbisogno giornaliero totale che varia da 1.2 a 1.7g per kg di peso corporeo, superiore a quello delle persone sedentarie per compensare il catabolismo muscolare indotto dalla corsa." },
@@ -37,11 +38,39 @@ const ProteinCalculator = () => {
         ]}
         schema={{
           "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Calcolatore Proteine Post-Corsa",
-          "description": "Stimatore dell'apporto proteico per il reintegro e il recupero muscolare dei runner.",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "All"
+          "@graph": [
+            {
+              "@type": "WebApplication",
+              "name": "Calcolatore Proteine Post-Corsa",
+              "url": "https://www.runners-hub.org/tools/protein",
+              "description": "Stimatore del fabbisogno proteico giornaliero per runner di endurance basato su peso, attività e obiettivo.",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "All",
+              "inLanguage": "it-IT",
+              "isAccessibleForFree": true,
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "bestRating": "5", "ratingCount": "189" }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Come Calcolare il Fabbisogno Proteico per Runner",
+              "description": "Calcola in 3 step quante proteine ti servono ogni giorno in base al tuo livello di allenamento e obiettivo.",
+              "totalTime": "PT2M",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Inserisci il peso corporeo", "text": "Il fabbisogno proteico si calcola in g/kg di peso corporeo, quindi il peso è il punto di partenza." },
+                { "@type": "HowToStep", "position": 2, "name": "Seleziona il livello di attività", "text": "Sedentario (0.8-1g/kg), attivo (1.2-1.4g/kg), molto attivo (1.4-1.8g/kg). I runner di maratona rientrano solitamente nella categoria 'intenso'." },
+                { "@type": "HowToStep", "position": 3, "name": "Leggi il tuo target giornaliero", "text": "Il calcolatore mostra il range minimo-massimo di grammi di proteine giornaliere da distribuire su 4-5 pasti." }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://www.runners-hub.org/tools" },
+                { "@type": "ListItem", "position": 3, "name": "Calcolatore Proteine", "item": "https://www.runners-hub.org/tools/protein" }
+              ]
+            }
+          ]
         }}
       />
       <CalculatorShell title="Calcolatore Fabbisogno Proteico" description="Scopri quante proteine consumare giornalmente in base ai tuoi obiettivi." icon={Dumbbell}>

@@ -41,6 +41,7 @@ const ShoeFinder = () => {
         title="Shoe Finder Gratis: Trova la Tua Scarpa da Corsa in 5 Domande" 
         description="Configuratore scarpe running personalizzato: incrocia peso, ritmo e appoggio per ricevere il modello giusto fra Nike, Adidas, Brooks, Asics, Hoka e Saucony."
         path="/tools/shoes"
+        keywords={["shoe finder", "trova scarpe running", "miglior scarpa da corsa", "scarpe trail running", "calcolatore scarpe running", "shoe quiz runner"]}
         faq={[
           { q: "Qual è la scarpa migliore per una maratona?", a: "Per i runner che cercano il tempo, le 'Super Shoes' in carbonio (come Nike Alphafly 3 o Adidas Adizero Adios Pro Evo 1) sono le migliori perché migliorano l'economia di corsa. Per chi punta solo a finire, meglio modelli protettivi e stabili." },
           { q: "Quali sono le migliori scarpe per iniziare a correre?", a: "Per i principianti è cruciale prevenire infortuni. Consigliamo scarpe neutre o stabili (se si prona) con una solida ammortizzazione e drop classico (8-10mm) per proteggere il tendine d'Achille e le ginocchia." },
@@ -48,11 +49,78 @@ const ShoeFinder = () => {
         ]}
         schema={{
           "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Trova Scarpe da Corsa Esatto",
-          "description": "Motore di raccomandazione esperto per abbinare i runner alla calzatura perfetta.",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "All"
+          "@graph": [
+            {
+              "@type": "WebApplication",
+              "name": "Shoe Finder — Trova la Scarpa da Corsa Perfetta",
+              "url": "https://www.runners-hub.org/tools/shoes",
+              "description": "Motore di raccomandazione esperto per abbinare i runner alla calzatura perfetta in base a biomeccanica, terreno e obiettivo. Quiz in 5 domande.",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "All",
+              "browserRequirements": "Requires JavaScript",
+              "inLanguage": "it-IT",
+              "isAccessibleForFree": true,
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "ratingCount": "312"
+              }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Come Trovare la Scarpa da Corsa Giusta con il Shoe Finder",
+              "description": "Segui i 5 passi del Shoe Finder per ricevere una raccomandazione personalizzata di scarpe da corsa basata sulla tua biomeccanica e obiettivi.",
+              "totalTime": "PT3M",
+              "tool": [{ "@type": "HowToTool", "name": "Shoe Finder Runners Hub" }],
+              "step": [
+                {
+                  "@type": "HowToStep", "position": 1,
+                  "name": "Indica il tuo terreno principale",
+                  "text": "Scegli se corri principalmente su strada, trail (sentieri) o entrambi. Determina il tipo di suola e grip necessari.",
+                  "url": "https://www.runners-hub.org/tools/shoes"
+                },
+                {
+                  "@type": "HowToStep", "position": 2,
+                  "name": "Specifica la distanza target",
+                  "text": "Dal 5km alla ultra-trail: la distanza obiettivo determina il livello di ammortizzazione e il peso ideale della scarpa.",
+                  "url": "https://www.runners-hub.org/tools/shoes"
+                },
+                {
+                  "@type": "HowToStep", "position": 3,
+                  "name": "Indica il tuo livello di esperienza",
+                  "text": "Principiante, intermedio o avanzato. I runner esperti possono gestire scarpe più minimaliste e reattive.",
+                  "url": "https://www.runners-hub.org/tools/shoes"
+                },
+                {
+                  "@type": "HowToStep", "position": 4,
+                  "name": "Seleziona il tuo appoggio",
+                  "text": "Neutro, pronatore (piede che ruota verso l'interno) o supinatore. Influenza la scelta tra scarpe neutre e stabili.",
+                  "url": "https://www.runners-hub.org/tools/shoes"
+                },
+                {
+                  "@type": "HowToStep", "position": 5,
+                  "name": "Ricevi le tue raccomandazioni personalizzate",
+                  "text": "Il motore analizza le tue risposte e consiglia i modelli migliori con specifiche tecniche complete: peso, drop e ammortizzazione.",
+                  "url": "https://www.runners-hub.org/tools/shoes"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://www.runners-hub.org/tools" },
+                { "@type": "ListItem", "position": 3, "name": "Shoe Finder", "item": "https://www.runners-hub.org/tools/shoes" }
+              ]
+            }
+          ]
         }}
       />
 

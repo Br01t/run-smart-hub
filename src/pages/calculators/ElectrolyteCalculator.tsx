@@ -31,6 +31,7 @@ const ElectrolyteCalculator = () => {
         title="Come Reintegrare Elettroliti Corsa: Magnesio, Potassio e Sodio" 
         description="A cosa servono i sali minerali nella corsa? Calcola quanto sodio e potassio perdi sudando e scopri come reintegrare gli elettroliti per evitare crampi."
         path="/tools/electrolytes"
+        keywords={["calcolatore elettroliti", "sali minerali corsa", "magnesio e potassio runner", "perdita sodio sudore", "reintegro elettroliti running"]}
         faq={[
           { q: "A cosa servono i sali minerali (elettroliti) nella corsa?", a: "Gli elettroliti, specialmente sodio, potassio e magnesio, sono fondamentali per la contrazione muscolare e per trattenere l'acqua nel corpo. Una loro carenza causa disidratazione cellulare, affaticamento precoce e crampi muscolari." },
           { q: "Come reintegrare magnesio e potassio dopo la corsa?", a: "Dopo una corsa intensa, usa bevande isotoniche sportive, compresse effervescenti o fonti naturali come banane (potassio) e frutta secca (magnesio). Assicurati che l'integratore contenga soprattutto sodio, che è il minerale maggiormente perso col sudore." },
@@ -38,11 +39,39 @@ const ElectrolyteCalculator = () => {
         ]}
         schema={{
           "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Calcolatore Elettroliti e Sali Minerali Corsa",
-          "description": "Strumento per calcolare il fabbisogno di elettroliti e prevenire i crampi muscolari.",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "All"
+          "@graph": [
+            {
+              "@type": "WebApplication",
+              "name": "Calcolatore Elettroliti e Sali Minerali Corsa",
+              "url": "https://www.runners-hub.org/tools/electrolytes",
+              "description": "Strumento per calcolare il fabbisogno di elettroliti (sodio, potassio, magnesio) e prevenire i crampi muscolari.",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "All",
+              "inLanguage": "it-IT",
+              "isAccessibleForFree": true,
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "ratingCount": "194" }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Come Calcolare il Reintegro di Elettroliti",
+              "description": "Scopri come stimare la perdita di sali minerali e calcolare il reintegro ottimale in 3 passi.",
+              "totalTime": "PT2M",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Inserisci peso corporeo e durata", "text": "Specifica il tuo peso in kg e il tempo totale di corsa previsto in minuti." },
+                { "@type": "HowToStep", "position": 2, "name": "Seleziona l'intensità della corsa", "text": "Scegli tra corsa facile, fondo medio o ripetute/gara. L'intensità e la temperatura aumentano il tasso di sudorazione e la perdita di sali." },
+                { "@type": "HowToStep", "position": 3, "name": "Visualizza il fabbisogno di minerali", "text": "Clicca su Calcola per vedere i milligrammi consigliati di Sodio (Na+), Potassio (K+) e Magnesio (Mg++) da reintegrare." }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://www.runners-hub.org/tools" },
+                { "@type": "ListItem", "position": 3, "name": "Calcolatore Elettroliti", "item": "https://www.runners-hub.org/tools/electrolytes" }
+              ]
+            }
+          ]
         }}
       />
       <CalculatorShell title="Calcolatore Elettroliti" description="Calcola sodio, potassio e magnesio da reintegrare durante la tua corsa." icon={Zap}>

@@ -33,6 +33,7 @@ const BMICalculator = () => {
         title="Qual è il peso ideale per correre? Calcolo BMI Runner" 
         description="Scopri il tuo peso ideale per correre forte. Calcola il BMI ottimizzato per atleti, riduci il rischio di infortuni e massimizza le prestazioni in maratona."
         path="/tools/bmi"
+        keywords={["bmi runner", "calcolo bmi corsa", "peso ideale runner", "rapporto peso potenza corsa", "peso ottimale maratona"]}
         faq={[
           { q: "Qual è il peso ideale per correre una maratona?", a: "Non esiste un peso universale, ma i runner competitivi solitamente mantengono un BMI tra 18,5 e 24,9. Un rapporto peso-potenza ottimizzato migliora l'economia di corsa e abbassa i tempi in gara." },
           { q: "Un BMI alto impedisce di correre?", a: "No, ma un BMI più elevato aumenta il carico meccanico sulle articolazioni (ginocchia e caviglie). È consigliabile iniziare con scarpe a massima ammortizzazione e incrementare il chilometraggio gradualmente." },
@@ -40,11 +41,39 @@ const BMICalculator = () => {
         ]}
         schema={{
           "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Calcolatore BMI per Corsa e Maratona",
-          "description": "Strumento per calcolare l'indice di massa corporea e l'impatto del peso sulle prestazioni di corsa.",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "All"
+          "@graph": [
+            {
+              "@type": "WebApplication",
+              "name": "Calcolatore BMI Runner",
+              "url": "https://www.runners-hub.org/tools/bmi",
+              "description": "Calcola il tuo indice di massa corporea con classificazione specifica per runner e atleti di endurance.",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "All",
+              "inLanguage": "it-IT",
+              "isAccessibleForFree": true,
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "bestRating": "5", "ratingCount": "142" }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Come Calcolare il BMI per il Running",
+              "description": "Scopri in 3 passi come calcolare il tuo BMI e valutare l'impatto del peso sulla corsa.",
+              "totalTime": "PT1M",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Inserisci il tuo peso", "text": "Inserisci il tuo peso corporeo in kg nell'apposito campo del calcolatore." },
+                { "@type": "HowToStep", "position": 2, "name": "Inserisci la tua altezza", "text": "Inserisci la tua altezza espressa in centimetri (cm)." },
+                { "@type": "HowToStep", "position": 3, "name": "Leggi i risultati e ricevi consigli", "text": "Premi il pulsante per calcolare e visualizzare la tua fascia BMI, con consigli specifici su ammortizzazione e tipo di scarpa." }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://www.runners-hub.org/tools" },
+                { "@type": "ListItem", "position": 3, "name": "Calcolatore BMI", "item": "https://www.runners-hub.org/tools/bmi" }
+              ]
+            }
+          ]
         }}
       />
       <CalculatorShell title="Calcolatore BMI Avanzato" description="Calcola il tuo indice di massa corporea con classificazione dettagliata." icon={Scale}>

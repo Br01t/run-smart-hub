@@ -45,25 +45,71 @@ const GuidePage = () => {
         faq={guide.faq}
         schema={{
           "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": guide.title,
-          "description": guide.description,
-          "image": guide.heroImage,
-          "datePublished": guide.datePublished || "2026-05-18",
-          "dateModified": guide.dateModified || "2026-06-03",
-          "author": {
-            "@type": "Organization",
-            "name": "Runners Hub",
-            "url": "https://www.runners-hub.org"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Runners Hub",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.runners-hub.org/favicon.ico"
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": `https://www.runners-hub.org/guides/${slug}#article`,
+              "headline": guide.seoTitle || guide.title,
+              "description": guide.seoDescription || guide.description,
+              "image": guide.heroImage
+                ? (guide.heroImage.startsWith("http") ? guide.heroImage : `https://www.runners-hub.org${guide.heroImage}`)
+                : "https://www.runners-hub.org/og-image.png",
+              "datePublished": guide.datePublished || "2026-05-18",
+              "dateModified": guide.dateModified || "2026-06-12",
+              "inLanguage": "it-IT",
+              "author": {
+                "@type": "Organization",
+                "@id": "https://www.runners-hub.org/#organization",
+                "name": "Runners Hub",
+                "url": "https://www.runners-hub.org",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.runners-hub.org/og-image.png",
+                  "width": 1200,
+                  "height": 630
+                },
+                "sameAs": [
+                  "https://www.runners-hub.org"
+                ]
+              },
+              "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.runners-hub.org/#organization",
+                "name": "Runners Hub",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.runners-hub.org/og-image.png"
+                }
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://www.runners-hub.org/guides/${slug}`
+              },
+              "wordCount": guide.sections
+                ? guide.sections.reduce((acc: number, s: any) => acc + (s.content ? Math.ceil(s.content.length / 5) : 0), 0) + 500
+                : 1200,
+              "articleSection": guide.tags?.[0] || "Running",
+              "keywords": guide.keywords?.join(", ") || guide.tags?.join(", "),
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["h1", "h2", ".guide-intro"]
+              },
+              "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://www.runners-hub.org/#website",
+                "name": "Runners Hub",
+                "url": "https://www.runners-hub.org"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://www.runners-hub.org/guides" },
+                { "@type": "ListItem", "position": 3, "name": guide.title, "item": `https://www.runners-hub.org/guides/${slug}` }
+              ]
             }
-          }
+          ]
         }}
       />
 

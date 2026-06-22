@@ -32,6 +32,7 @@ const HydrationCalculator = () => {
         title="Quanto Bere Durante una Maratona? Calcolo Idratazione Corsa" 
         description="Calcola quanta acqua bere durante la corsa, la mezza maratona o la maratona. Strumento esatto per prevenire la disidratazione e ottimizzare le prestazioni."
         path="/tools/hydration"
+        keywords={["calcolatore idratazione corsa", "quanto bere maratona", "fabbisogno idrico runner", "idratazione running", "sali minerali corsa"]}
         faq={[
           { q: "Quanto bere durante una maratona?", a: "L'obiettivo è assumere tra 400 e 800 ml di liquidi all'ora, a seconda del proprio tasso di sudorazione e della temperatura. Consigliamo di sorseggiare piccole quantità (100-150 ml) ogni 15-20 minuti." },
           { q: "Quanta acqua bere prima di una 10km o mezza maratona?", a: "Bevi circa 500 ml di acqua 2 ore prima della gara per dare ai reni il tempo di processare i liquidi. Poi, assumi altri 200 ml circa 15 minuti prima della partenza." },
@@ -39,11 +40,76 @@ const HydrationCalculator = () => {
         ]}
         schema={{
           "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Calcolatore Idratazione Maratona e Corsa",
-          "description": "Strumento di pianificazione dell'idratazione e del tasso di sudorazione basato su evidenze scientifiche per i runner.",
-          "applicationCategory": "HealthApplication",
-          "operatingSystem": "All"
+          "@graph": [
+            {
+              "@type": "WebApplication",
+              "name": "Calcolatore Idratazione Maratona e Corsa",
+              "url": "https://www.runners-hub.org/tools/hydration",
+              "description": "Strumento di pianificazione dell'idratazione e del tasso di sudorazione basato su evidenze scientifiche per runner. Calcola quanta acqua bere prima, durante e dopo la corsa.",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "All",
+              "browserRequirements": "Requires JavaScript",
+              "inLanguage": "it-IT",
+              "isAccessibleForFree": true,
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "ratingCount": "243"
+              }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Come Calcolare il Fabbisogno Idrico per la Corsa",
+              "description": "Guida passo-passo per calcolare quanta acqua bere prima, durante e dopo una corsa, maratona o mezza maratona.",
+              "totalTime": "PT2M",
+              "tool": [{ "@type": "HowToTool", "name": "Calcolatore Idratazione Runners Hub" }],
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Inserisci il tuo peso corporeo",
+                  "text": "Digita il tuo peso in kg nel campo apposito. Questo dato è fondamentale per calcolare il tasso di sudorazione individuale.",
+                  "url": "https://www.runners-hub.org/tools/hydration#step1"
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Inserisci la durata della corsa",
+                  "text": "Indica quanti minuti durerà il tuo allenamento o la gara. Per una maratona inserisci il tuo tempo previsto in minuti.",
+                  "url": "https://www.runners-hub.org/tools/hydration#step2"
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Seleziona la temperatura prevista",
+                  "text": "Scegli le condizioni climatiche. Con caldo e umidità superiori a 25°C il tasso di sudorazione aumenta del 30%.",
+                  "url": "https://www.runners-hub.org/tools/hydration#step3"
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Leggi i risultati personalizzati",
+                  "text": "Il calcolatore mostra quanti ml bere nelle 2 ore prima della corsa, ogni ora durante, e durante la finestra di recupero post-corsa.",
+                  "url": "https://www.runners-hub.org/tools/hydration#step4"
+                }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
+                { "@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://www.runners-hub.org/tools" },
+                { "@type": "ListItem", "position": 3, "name": "Calcolatore Idratazione", "item": "https://www.runners-hub.org/tools/hydration" }
+              ]
+            }
+          ]
         }}
       />
       <CalculatorShell

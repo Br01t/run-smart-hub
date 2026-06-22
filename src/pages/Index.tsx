@@ -19,6 +19,7 @@ const Index = () => {
         title="Runners Hub: Calcolatori, Shoe Finder e Guide Corsa Gratis"
         description="Tool gratuiti per runner: trova le scarpe ideali in 5 domande, calcola Zone 2, idratazione, proteine e ritmo gara. Recensioni indipendenti e guide scientifiche."
         path="/"
+        keywords={["calcolatore corsa", "shoe finder", "scarpe running", "zone frequenza cardiaca", "calcolatore idratazione", "guida maratona", "integratori runner", "trail running"]}
         schema={{
           "@context": "https://schema.org",
           "@graph": [
@@ -27,16 +28,42 @@ const Index = () => {
               "@id": "https://www.runners-hub.org/#website",
               "url": "https://www.runners-hub.org",
               "name": "Runners Hub",
-              "description": "Strumenti basati sulla scienza e raccomandazioni di attrezzatura per runner.",
-              "publisher": { "@id": "https://www.runners-hub.org/#organization" }
+              "alternateName": "Run Smart Hub",
+              "description": "Strumenti basati sulla scienza e raccomandazioni di attrezzatura per runner italiani.",
+              "inLanguage": "it-IT",
+              "publisher": { "@id": "https://www.runners-hub.org/#organization" },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.runners-hub.org/hub?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
             },
             {
               "@type": "Organization",
               "@id": "https://www.runners-hub.org/#organization",
               "name": "Runners Hub",
+              "alternateName": "Run Smart Hub",
               "url": "https://www.runners-hub.org",
-              "logo": { "@type": "ImageObject", "url": "https://www.runners-hub.org/favicon.ico" },
-              "description": "Runners Hub fornisce calcolatori basati sulle evidenze e recensioni imparziali per runner di ogni livello."
+              "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.runners-hub.org/#logo",
+                "url": "https://www.runners-hub.org/og-image.png",
+                "contentUrl": "https://www.runners-hub.org/og-image.png",
+                "width": 1200,
+                "height": 630,
+                "caption": "Runners Hub — Guide e strumenti per runner"
+              },
+              "image": { "@id": "https://www.runners-hub.org/#logo" },
+              "description": "Runners Hub fornisce calcolatori basati sulle evidenze e recensioni imparziali per runner di ogni livello. Dal principiante al maratoneta, guidiamo le tue scelte di attrezzatura con la scienza.",
+              "foundingDate": "2026",
+              "areaServed": "IT",
+              "knowsLanguage": "it",
+              "sameAs": [
+                "https://www.runners-hub.org"
+              ]
             },
             {
               "@type": "FAQPage",
