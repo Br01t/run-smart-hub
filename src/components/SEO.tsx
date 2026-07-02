@@ -27,13 +27,12 @@ interface SEOProps {
   const BASE_URL = "https://www.runners-hub.org";
   
   const fullTitle = `${title} | ${SITE_NAME}`;
-  // Normalizza il path: aggiunge slash iniziale se manca e slash finale per evitare
-  // duplicazione dei canonical (Google indicizzava sia /tools/protein sia /tools/protein/).
+  // Canonical + og:url puntano allo STESSO URL (senza trailing slash, tranne root).
+  // Prima og:url e canonical potevano differire, dividendo il signal.
   const rawPath = path.startsWith("/") ? path : `/${path}`;
-  const cleanPath =
-    rawPath === "/" ? "/" : rawPath.endsWith("/") ? rawPath : `${rawPath}/`;
+  const cleanPath = rawPath === "/" ? "/" : rawPath.replace(/\/+$/, "");
   const canonicalUrl = `${BASE_URL}${cleanPath}`;
-  const ogUrl = `${BASE_URL}${cleanPath}`;
+  const ogUrl = canonicalUrl;
 
   return (
     <Helmet>
