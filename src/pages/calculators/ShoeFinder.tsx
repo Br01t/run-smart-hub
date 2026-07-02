@@ -37,6 +37,12 @@ const ShoeFinder = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Trova la Scarpa Running Giusta: Shoe Finder Gratuito in 5 Domande"
+        description="Trova la scarpa da running perfetta per te in 60 secondi: rispondi a 5 domande su peso, appoggio, terreno e chilometraggio. Consigli imparziali dei migliori modelli 2026."
+        path="/tools/shoes"
+        keywords={["trova scarpa running", "shoe finder", "quale scarpa running comprare", "scarpa running giusta", "consigli scarpe corsa", "scarpe running per principianti"]}
+      />
       <SEO 
         title="Shoe Finder Gratis: Trova la Tua Scarpa da Corsa in 5 Domande" 
         description="Configuratore scarpe running personalizzato: incrocia peso, ritmo e appoggio per ricevere il modello giusto fra Nike, Adidas, Brooks, Asics, Hoka e Saucony."

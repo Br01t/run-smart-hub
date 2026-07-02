@@ -27,9 +27,13 @@ interface SEOProps {
   const BASE_URL = "https://www.runners-hub.org";
   
   const fullTitle = `${title} | ${SITE_NAME}`;
-  const cleanPath = path.startsWith("/") ? path : `/${path}`;
-  const canonicalUrl = `${BASE_URL}${cleanPath === "/" ? "/" : cleanPath}`;
-  const ogUrl = `${BASE_URL}${cleanPath === "/" ? "" : cleanPath}`;
+  // Normalizza il path: aggiunge slash iniziale se manca e slash finale per evitare
+  // duplicazione dei canonical (Google indicizzava sia /tools/protein sia /tools/protein/).
+  const rawPath = path.startsWith("/") ? path : `/${path}`;
+  const cleanPath =
+    rawPath === "/" ? "/" : rawPath.endsWith("/") ? rawPath : `${rawPath}/`;
+  const canonicalUrl = `${BASE_URL}${cleanPath}`;
+  const ogUrl = `${BASE_URL}${cleanPath}`;
 
   return (
     <Helmet>

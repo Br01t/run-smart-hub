@@ -1,0 +1,33 @@
+# Google Search Console — Disavow file for runners-hub.org
+# Genera domini spam/PBN identificati tramite Semrush Backlink Audit.
+# Upload manuale su: https://search.google.com/search-console/disavow-links
+#
+# Motivazione: la quasi totalità dei referring domains proviene da network Fiverr/PBN
+# con anchor text manipolativi ("buy backlinks", "rank first page google"), tipici
+# di link building spam. Rischio penalizzazione manuale Google.
+#
+# Ultima revisione: 2026-07-02
+
+# --- PBN / spam domains identificati da Semrush ---
+domain:anchorurl.cloud
+domain:8coint.com
+domain:blogsphere.top
+domain:bye.fyi
+domain:byteshort.xyz
+
+# --- Network Fiverr fake-review PBN ---
+domain:fiverr-affordable-seo-services.site
+domain:fiverr-cost-effective-seo.site
+domain:fiverr-quality-seo-at-affordable-rates.site
+domain:fiverr-seo-for-business-growth.site
+domain:fiverr-seo-for-small-businesses.site
+domain:fiverr-seo-services.site
+domain:fiverr-seo-solutions.site
+domain:fiverr-professional-seo.site
+domain:fiverr-seo-experts.site
+domain:fiverr-seo-agency.site
+domain:fiverr-seo-consulting.site
+domain:fiverr-seo-packages.site
+domain:fiverr-cheap-seo.site
+domain:fiverr-best-seo.site
+domain:fiverr-premium-seo.site
