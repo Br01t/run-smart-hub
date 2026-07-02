@@ -2,10 +2,10 @@ import { GuideContent } from "@/types/guide";
 import guideRunningWatches from "@/assets/guide-running-watches.webp";
 
 export const runningWatches: GuideContent = {
-  title: "Migliori Orologi GPS per la Corsa: Guida all'Acquisto",
-  seoTitle: "Migliori Orologi Corsa 2026: Guida a GPS e Tecnologia",
-  seoDescription: "Scegli l'orologio da corsa giusto. Analizziamo il GNSS Multi-Band, la prontezza all'allenamento HRV, la durata della batteria e la scienza del cardio ottico per i runner.",
-  keywords: ["migliori orologi corsa 2026", "precisione orologio GPS", "GNSS multi-band corsa", "punteggio prontezza HRV", "misuratore potenza corsa", "Garmin vs Coros vs Suunto"],
+  title: "Migliori Orologi Running 2026: Guida GPS per la Corsa",
+  seoTitle: "Miglior Orologio Running 2026: Guida GPS per Correre",
+  seoDescription: "Guida ai migliori orologi per la corsa 2026: confronto GPS multi-band, cardio HRV, batteria e potenza. Trova l'orologio running giusto per te fra Garmin, Coros, Suunto.",
+  keywords: ["orologi per la corsa", "orologio running", "orologi per correre", "miglior orologio running", "migliore orologio per correre", "migliori orologi per running", "orologio corsa gps", "orologio gps running"],
   description: "Una guida completa e indipendente per scegliere l'orologio GPS da corsa giusto. Analizziamo caratteristiche, precisione, batteria e rapporto qualità-prezzo per ogni budget.",
   tags: ["accessories", "running", "watches", "top-gear-2026"],
   heroImage: guideRunningWatches,
