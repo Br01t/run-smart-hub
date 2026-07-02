@@ -38,10 +38,10 @@ const ShoeFinder = () => {
   return (
     <Layout>
       <SEO 
-        title="Shoe Finder Gratis: Trova la Tua Scarpa da Corsa in 5 Domande" 
-        description="Configuratore scarpe running personalizzato: incrocia peso, ritmo e appoggio per ricevere il modello giusto fra Nike, Adidas, Brooks, Asics, Hoka e Saucony."
+        title="Trova la Scarpa Running Giusta: Shoe Finder Gratuito in 5 Domande" 
+        description="Trova scarpa running perfetta in 60 secondi: rispondi a 5 domande su peso, appoggio, terreno e chilometraggio. Consigli imparziali su Nike, Adidas, Brooks, Asics, Hoka, Saucony."
         path="/tools/shoes"
-        keywords={["shoe finder", "trova scarpe running", "miglior scarpa da corsa", "scarpe trail running", "calcolatore scarpe running", "shoe quiz runner"]}
+        keywords={["trova scarpa running", "shoe finder", "quale scarpa running comprare", "scarpa running giusta", "consigli scarpe corsa", "calcolatore scarpe running", "shoe quiz runner"]}
         faq={[
           { q: "Qual è la scarpa migliore per una maratona?", a: "Per i runner che cercano il tempo, le 'Super Shoes' in carbonio (come Nike Alphafly 3 o Adidas Adizero Adios Pro Evo 1) sono le migliori perché migliorano l'economia di corsa. Per chi punta solo a finire, meglio modelli protettivi e stabili." },
           { q: "Quali sono le migliori scarpe per iniziare a correre?", a: "Per i principianti è cruciale prevenire infortuni. Consigliamo scarpe neutre o stabili (se si prona) con una solida ammortizzazione e drop classico (8-10mm) per proteggere il tendine d'Achille e le ginocchia." },

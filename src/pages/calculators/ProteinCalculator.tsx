@@ -27,10 +27,10 @@ const ProteinCalculator = () => {
   return (
     <Layout>
       <SEO 
-        title="Quante Proteine per la Corsa? Calcolatore Fabbisogno Post-Allenamento" 
-        description="Scopri quante proteine reintegrare dopo la corsa e la maratona. Calcolatore del fabbisogno proteico per atleti di endurance, massimizza il recupero muscolare."
+        title="Calcolo Proteine Giornaliere: Calcolatore Fabbisogno Proteico Runner"
+        description="Calcolatore proteine giornaliere gratuito: scopri quante proteine ti servono al giorno in base a peso, attività e obiettivo. Formula scientifica per runner e sportivi."
         path="/tools/protein"
-        keywords={["calcolatore proteine runner", "quante proteine dopo la corsa", "fabbisogno proteico maratona", "proteine whey per correre", "recupero muscolare running"]}
+        keywords={["calcolo proteine giornaliere", "calcolatore proteine", "calcolatore proteine giornaliere", "fabbisogno proteico calcolo", "calcolare proteine giornaliere", "calcolo delle proteine", "quante proteine al giorno"]}
         faq={[
           { q: "Quante proteine devo reintegrare dopo la corsa / maratona?", a: "Per ottimizzare la sintesi proteica muscolare e accelerare il recupero, assumi 20-30g di proteine a rapido assorbimento (come le Whey) entro 60 minuti dal termine della gara o dell'allenamento intenso." },
           { q: "Quante proteine servono a un runner al giorno?", a: "I runner di endurance hanno un fabbisogno giornaliero totale che varia da 1.2 a 1.7g per kg di peso corporeo, superiore a quello delle persone sedentarie per compensare il catabolismo muscolare indotto dalla corsa." },
