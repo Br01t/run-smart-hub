@@ -1,6 +1,41 @@
 import { GuideSummary } from "@/components/guides/GuideCards";
 
 export const guidesList: GuideSummary[] = [
+  {
+    slug: "integratori-per-chi-corre",
+    title: "Integratori per Chi Corre: Guida Scientifica 2026",
+    excerpt: "Quali integratori funzionano davvero per chi corre: carboidrati, caffeina, elettroliti, ferro e vitamina D con dosaggi e prove.",
+    readTime: "10 min di lettura",
+    category: "Nutrizione",
+  },
+  {
+    slug: "gel-energetici-corsa",
+    title: "Gel Energetici per la Corsa: Quando Prenderli",
+    excerpt: "Quando prendere il primo gel, quanti servono per 10K/mezza/maratona e come evitare i disturbi gastrici in gara.",
+    readTime: "9 min di lettura",
+    category: "Nutrizione",
+  },
+  {
+    slug: "ginocchio-del-corridore",
+    title: "Ginocchio del Corridore: Sintomi, Cause e Rimedi",
+    excerpt: "Sindrome femoro-rotulea e bandelletta ileotibiale: come distinguerle, gli esercizi che funzionano e i tempi di recupero.",
+    readTime: "11 min di lettura",
+    category: "Salute",
+  },
+  {
+    slug: "tabella-corsa-principianti",
+    title: "Tabella Corsa Principianti: da Zero a 5K in 8 Settimane",
+    excerpt: "Programma completo settimana per settimana per arrivare a correre 5 km continui partendo dal divano.",
+    readTime: "10 min di lettura",
+    category: "Allenamento",
+  },
+  {
+    slug: "scarpe-running-pronazione",
+    title: "Scarpe da Running per Pronazione: Guida alla Scelta",
+    excerpt: "Cosa dice la scienza aggiornata sulla pronazione, quando serve una scarpa stabile e come sceglierla con il comfort filter.",
+    readTime: "9 min di lettura",
+    category: "Attrezzatura",
+  },
   { 
     slug: "choosing-running-shoes", 
     title: "Come Scegliere le Scarpe da Corsa", 
