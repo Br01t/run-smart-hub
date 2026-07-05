@@ -16,6 +16,13 @@ import { winterRunning } from "./winter-running";
 import { intervalTraining } from "./interval-training";
 import { sleepAndRunning } from "./sleep-and-running";
 import { runningShoeRotation } from "./shoe-rotation";
+import { integratoriPerChiCorre } from "./integratori-per-chi-corre";
+import { gelEnergeticiCorsa } from "./gel-energetici-corsa";
+import { ginocchioDelCorridore } from "./ginocchio-del-corridore";
+import { tabellaCorsaPrincipianti } from "./tabella-corsa-principianti";
+import { scarpeRunningPronazione } from "./scarpe-running-pronazione";
+
+
 
 export const guidesContent: Record<string, GuideContent> = {
   "choosing-running-shoes": choosingRunningShoes,
@@ -35,4 +42,9 @@ export const guidesContent: Record<string, GuideContent> = {
   "interval-training": intervalTraining,
   "sleep-and-running": sleepAndRunning,
   "running-shoe-rotation": runningShoeRotation,
+  "integratori-per-chi-corre": integratoriPerChiCorre,
+  "gel-energetici-corsa": gelEnergeticiCorsa,
+  "ginocchio-del-corridore": ginocchioDelCorridore,
+  "tabella-corsa-principianti": tabellaCorsaPrincipianti,
+  "scarpe-running-pronazione": scarpeRunningPronazione,
 };
