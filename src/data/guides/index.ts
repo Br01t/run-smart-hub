@@ -21,6 +21,15 @@ import { gelEnergeticiCorsa } from "./gel-energetici-corsa";
 import { ginocchioDelCorridore } from "./ginocchio-del-corridore";
 import { tabellaCorsaPrincipianti } from "./tabella-corsa-principianti";
 import { scarpeRunningPronazione } from "./scarpe-running-pronazione";
+import { doloreGinocchioDopoCorsa } from "./dolore-ginocchio-dopo-corsa";
+import { scarpeRunningSupinazione } from "./scarpe-running-supinazione";
+import { cosaMangiareDopoCorsa } from "./cosa-mangiare-dopo-corsa";
+import { iniziareCorrere40Anni } from "./iniziare-correre-40-anni";
+import { iniziareCorrere50Anni } from "./iniziare-correre-50-anni";
+import { correrePerDimagrire } from "./correre-per-dimagrire";
+import { mezzaMaratona2Mesi } from "./mezza-maratona-2-mesi";
+import { quantiKmMezzaMaratona } from "./quanti-km-mezza-maratona";
+import { doloreGinocchioCorsa } from "./dolore-ginocchio-corsa";
 
 
 
@@ -47,4 +56,13 @@ export const guidesContent: Record<string, GuideContent> = {
   "ginocchio-del-corridore": ginocchioDelCorridore,
   "tabella-corsa-principianti": tabellaCorsaPrincipianti,
   "scarpe-running-pronazione": scarpeRunningPronazione,
+  "dolore-ginocchio-dopo-corsa": doloreGinocchioDopoCorsa,
+  "scarpe-running-supinazione": scarpeRunningSupinazione,
+  "cosa-mangiare-dopo-corsa": cosaMangiareDopoCorsa,
+  "iniziare-correre-40-anni": iniziareCorrere40Anni,
+  "iniziare-correre-50-anni": iniziareCorrere50Anni,
+  "correre-per-dimagrire": correrePerDimagrire,
+  "mezza-maratona-2-mesi": mezzaMaratona2Mesi,
+  "quanti-km-mezza-maratona": quantiKmMezzaMaratona,
+  "dolore-ginocchio-corsa": doloreGinocchioCorsa,
 };

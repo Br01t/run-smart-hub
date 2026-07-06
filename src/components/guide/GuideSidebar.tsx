@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 import { BookOpen, Wrench, BarChart3 } from "lucide-react";
 import { GuideContent } from "@/types/guide";
 import { translateCategory } from "@/lib/translations";
+import { mergeRelatedGuides } from "@/lib/guides/relatedGuides";
 
 interface GuideSidebarProps {
   guide: GuideContent;
   relatedComparisons: any[];
+  slug?: string;
 }
 
-const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
+const GuideSidebar = ({ guide, relatedComparisons, slug }: GuideSidebarProps) => {
+  const relatedGuides = slug
+    ? mergeRelatedGuides(slug, guide.relatedGuides, 6)
+    : guide.relatedGuides;
   return (
     <aside className="shrink-0 lg:w-[320px]">
       <div className="sticky top-24 space-y-10">
@@ -65,13 +70,13 @@ const GuideSidebar = ({ guide, relatedComparisons }: GuideSidebarProps) => {
         )}
 
         {/* Related Guides */}
-        {guide.relatedGuides.length > 0 && (
+        {relatedGuides.length > 0 && (
           <section>
             <h3 className="mb-4 flex items-center gap-2 font-display text-sm font-bold text-foreground uppercase tracking-wider">
               <BookOpen className="h-4 w-4 text-primary" /> Continua a leggere
             </h3>
             <div className="grid gap-2">
-              {guide.relatedGuides.map((g) => (
+              {relatedGuides.map((g) => (
                 <Link
                   key={g.slug}
                   to={`/guides/${g.slug}`}

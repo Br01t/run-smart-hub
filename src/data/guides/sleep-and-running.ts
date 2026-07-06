@@ -76,4 +76,24 @@ export const sleepAndRunning: GuideContent = {
     }
   ],
   hubCategory: "recovery",
+  datePublished: "2026-05-20",
+  dateModified: "2026-07-06",
+  faq: [
+    {
+      q: "Quante ore dovrebbe dormire un runner?",
+      a: "Minimo 7 ore, ideale 8-9. Nei periodi di carico o preparazione a una gara lunga (mezza/maratona) puntare a 9 ore è la strategia di recupero con il ROI più alto in assoluto — superiore a qualsiasi integratore.",
+    },
+    {
+      q: "Perché dormo male la notte prima della gara?",
+      a: "L'ansia da prestazione aumenta cortisolo e adrenalina, impedendo l'ingresso nel sonno profondo. Buona notizia: se hai dormito bene nei 7 giorni precedenti (banking del sonno), una singola notte scarsa NON compromette la performance.",
+    },
+    {
+      q: "Il sonno pomeridiano (nap) aiuta il recupero da corsa?",
+      a: "Sì: 20-30 minuti aumentano vigilanza e riducono lo stress ossidativo. Nap più lunghi (90 min) completano un ciclo di sonno e favoriscono il rilascio di GH, ma vanno fatti entro le 15:00 per non compromettere il sonno notturno.",
+    },
+    {
+      q: "Correre la sera peggiora il sonno?",
+      a: "Solo se l'allenamento è molto intenso e termina meno di 90 minuti prima di coricarsi. Corse aerobiche moderate finite entro le 20:00 in genere migliorano la qualità del sonno grazie all'aumento del sonno profondo (N3).",
+    },
+  ],
 };
