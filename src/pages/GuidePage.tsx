@@ -13,6 +13,8 @@ import GuideHeader from "@/components/guide/GuideHeader";
 import GuideSidebar from "@/components/guide/GuideSidebar";
 import SectionBlock from "@/components/guide/SectionBlock";
 import KeyTakeaways from "@/components/guide/KeyTakeaways";
+import { mergeRelatedGuides } from "@/lib/guides/relatedGuides";
+import { BookOpen } from "lucide-react";
 
 const GuidePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -158,6 +160,46 @@ const GuidePage = () => {
               </div>
             )}
 
+            {/* Auto-generated internal linking block: boosts crawl paths + indexing */}
+            {slug && (() => {
+              const deepRelated = mergeRelatedGuides(slug, guide.relatedGuides, 8);
+              if (deepRelated.length === 0) return null;
+              return (
+                <section className="mt-20 pt-10 border-t border-border" aria-labelledby="approfondimenti-correlati">
+                  <div className="flex items-center gap-3 mb-6">
+                    <BookOpen className="h-5 w-5 text-primary" />
+                    <h2 id="approfondimenti-correlati" className="font-display text-2xl font-bold text-foreground">
+                      Approfondimenti correlati
+                    </h2>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+                    Continua ad approfondire con altre guide selezionate automaticamente in base agli argomenti trattati.
+                  </p>
+                  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
+                    {deepRelated.map((g) => (
+                      <Link
+                        key={g.slug}
+                        to={`/guides/${g.slug}`}
+                        className="group flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/30 hover:shadow-md"
+                      >
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                          <BookOpen className="h-4 w-4 text-primary" />
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className="text-sm font-bold text-card-foreground group-hover:text-primary leading-snug">
+                            {g.label}
+                          </h3>
+                          <span className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-primary/80">
+                            Leggi la guida <ArrowRight className="h-3 w-3" />
+                          </span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              );
+            })()}
+
             {/* ZoneRun Banner */}
             <div className="mt-20 pt-10 border-t border-border">
               <ZoneRunBanner variant="inline" />
@@ -165,7 +207,7 @@ const GuidePage = () => {
           </article>
 
           {/* Sidebar */}
-          <GuideSidebar guide={guide} relatedComparisons={relatedComparisons} />
+          <GuideSidebar guide={guide} relatedComparisons={relatedComparisons} slug={slug} />
         </div>
       </div>
     </Layout>
