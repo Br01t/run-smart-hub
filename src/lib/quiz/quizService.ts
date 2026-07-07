@@ -82,6 +82,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Se fa male più di 3/10, fermati. Correre sopra un dolore acuto porta a stop di mesi.");
     tips.push("Allenamento di Forza: concentrati su esercizi a gamba singola (split squat, sollevamenti polpacci) per correggere gli squilibri.");
     guides.push({ label: "Prevenzione Infortuni", slug: "injury-prevention" });
+    guides.push({ label: "Ginocchio del Corridore: Cause e Rimedi", slug: "ginocchio-del-corridore" });
+    guides.push({ label: "Dolore al Ginocchio Durante la Corsa", slug: "dolore-ginocchio-corsa" });
   } else if (goal === "weight-loss") {
     title = "Il Trasformatore Metabolico";
     archetype = "🔥";
