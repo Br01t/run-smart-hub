@@ -320,10 +320,7 @@ const ShoeFinder = () => {
 
               {/* Expert Guides consolidated at bottom of results */}
               <div className="mt-20 space-y-12 border-t border-border pt-16">
-                <GuidesReferral guides={[
-                  { title: "Trovare la Calzata Perfetta", path: "/guides/choosing-running-shoes", desc: "Come il peso corporeo e la biomeccanica dettano i requisiti ideali delle calzature." },
-                  { title: "Guida alla Tecnica di Corsa", path: "/guides/running-form", desc: "Ottimizza la tua efficienza e riduci l'impatto." }
-                ]} />
+                <GuidesReferral guides={getContextualGuides("shoe", { categoryName: results.categoryName })} />
               </div>
             </motion.div>
           )}
