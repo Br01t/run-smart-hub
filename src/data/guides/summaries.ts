@@ -218,4 +218,10 @@ export const guidesList: GuideSummary[] = [
     readTime: "7 min di lettura", 
     category: "Attrezzatura" 
   },
+  { slug: "gel-carboidrati", title: "Gel di Carboidrati: Dosaggi e Marche Migliori", excerpt: "Quanti g/h di carboidrati assumere, mix maltodestrine:fruttosio e marche più tollerate.", readTime: "8 min di lettura", category: "Nutrizione" },
+  { slug: "corsa-e-integratori", title: "Corsa e Integratori: Cosa Serve Davvero", excerpt: "I 5 integratori con evidenza forte e i 6 prodotti popolari da cui puoi risparmiare.", readTime: "10 min di lettura", category: "Nutrizione" },
+  { slug: "recupero-muscolare-corsa", title: "Recupero Muscolare Dopo la Corsa: Metodo Completo", excerpt: "Priorità evidence-based: sonno, nutrizione, foam roller, ghiaccio. Cosa funziona davvero.", readTime: "10 min di lettura", category: "Recupero" },
+  { slug: "programma-corsa-principianti", title: "Programma Corsa Principianti: 12 Settimane per 10 Km", excerpt: "Piano progressivo per arrivare a correre 10 km continui da zero, in 12 settimane.", readTime: "11 min di lettura", category: "Allenamento" },
+  { slug: "riprendere-correre-dopo-pausa", title: "Riprendere a Correre Dopo Anni di Pausa", excerpt: "Piano in 6 settimane per tornare alla corsa senza infortuni. La regola del 30%.", readTime: "9 min di lettura", category: "Allenamento" },
+  { slug: "mezza-maratona-1-mese", title: "Mezza Maratona in 1 Mese: Guida di Emergenza", excerpt: "Piano di 4 settimane per finire una mezza con base minima, senza infortunarsi.", readTime: "10 min di lettura", category: "Allenamento" },
 ];
