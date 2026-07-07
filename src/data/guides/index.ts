@@ -71,4 +71,10 @@ export const guidesContent: Record<string, GuideContent> = {
   "mezza-maratona-2-mesi": mezzaMaratona2Mesi,
   "quanti-km-mezza-maratona": quantiKmMezzaMaratona,
   "dolore-ginocchio-corsa": doloreGinocchioCorsa,
+  "gel-carboidrati": gelCarboidrati,
+  "corsa-e-integratori": corsaEIntegratori,
+  "recupero-muscolare-corsa": recuperoMuscolareCorsa,
+  "programma-corsa-principianti": programmaCorsaPrincipianti,
+  "riprendere-correre-dopo-pausa": riprendereCorrereDopoPausa,
+  "mezza-maratona-1-mese": mezzaMaratona1Mese,
 };
