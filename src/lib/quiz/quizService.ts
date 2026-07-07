@@ -130,6 +130,9 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   if (answers.biomechanics === "overpronation") {
     tips.push("Controllo Stabilità: assicurati che le tue scarpe abbiano un supporto mediale per prevenire l'eccessiva rotazione interna.");
     tags.push("stability");
+    guides.push({ label: "Scarpe da Running per Pronazione", slug: "scarpe-running-pronazione" });
+  } else if (answers.biomechanics === "supination" || answers.biomechanics === "underpronation") {
+    guides.push({ label: "Scarpe da Running per Supinazione", slug: "scarpe-running-supinazione" });
   }
   
   if (freq === "5-6" || freq === "7+") {
