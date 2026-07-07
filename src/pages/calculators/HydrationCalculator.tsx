@@ -236,10 +236,7 @@ const HydrationCalculator = () => {
 
         {/* Referrals Section consolidated at bottom */}
         <div className="mt-16 space-y-12 border-t border-border pt-16">
-          <GuidesReferral guides={[
-            { title: "Integrazione ed Elettroliti", path: "/guides/supplements-for-runners", desc: "L'idratazione è metà della battaglia. Padroneggia l'equilibrio tecnico dei minerali." },
-            { title: "Alimentazione Maratona", path: "/guides/marathon-training", desc: "Strategie di idratazione complete per lo sforzo di 42,2 km." }
-          ]} />
+          <GuidesReferral guides={getContextualGuides("hydration", { temp, duration })} />
 
           <HubReferral 
             category="hydration"
