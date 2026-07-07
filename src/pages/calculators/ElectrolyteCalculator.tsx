@@ -5,6 +5,7 @@ import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
 import SEO from "@/components/SEO";
 import GuidesReferral from "@/components/GuidesReferral";
+import { getContextualGuides } from "@/lib/guides/contextualGuides";
 
 const ElectrolyteCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -184,10 +185,7 @@ const ElectrolyteCalculator = () => {
 
         {/* Referrals Section consolidated at bottom */}
         <div className="mt-16 space-y-12 border-t border-border pt-16">
-          <GuidesReferral guides={[
-            { title: "Integrazione ed Elettroliti", path: "/guides/supplements-for-runners", desc: "Il delicato equilibrio del reintegro minerale per la massima performance atletica." },
-            { title: "Alimentazione Maratona", path: "/guides/marathon-training", desc: "Evitare il 'muro' attraverso una gestione strategica di sale e liquidi." }
-          ]} />
+          <GuidesReferral guides={getContextualGuides("electrolyte", { intensity })} />
 
           <HubReferral 
             category="hydration"

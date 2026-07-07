@@ -5,6 +5,7 @@ import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
 import SEO from "@/components/SEO";
 import GuidesReferral from "@/components/GuidesReferral";
+import { getContextualGuides } from "@/lib/guides/contextualGuides";
 
 const ProteinCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -178,10 +179,7 @@ const ProteinCalculator = () => {
 
         {/* Referrals Section consolidated at bottom */}
         <div className="mt-16 space-y-12 border-t border-border pt-16">
-          <GuidesReferral guides={[
-            { title: "Guida al Recupero Muscolare", path: "/guides/muscle-recovery", desc: "Tecniche scientifiche per accelerare la riparazione e ridurre l'indolenzimento post-corsa." },
-            { title: "Nutrizione per la Corsa 101", path: "/guides/running-nutrition", desc: "I requisiti di macro e micronutrienti per il runner ad alto volume." }
-          ]} />
+          <GuidesReferral guides={getContextualGuides("protein", { goal, activity })} />
 
           <HubReferral 
             category="supplements"

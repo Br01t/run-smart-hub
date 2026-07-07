@@ -25,7 +25,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Il 'Talk Test': Dovresti essere in grado di parlare a frasi intere durante l'80% delle tue corse.");
     tips.push("La costanza batte l'intensità. È meglio correre 20 minuti 3 volte a settimana che 1 ora una volta a settimana.");
     tips.push("Non saltare il riscaldamento: 5 minuti di stretching dinamico (oscillazioni gambe, sollevamenti polpacci) preparano il tuo SNC allo sforzo.");
-    guides.push({ label: "Come Iniziare a Correre", slug: "trail-running-beginners" });
+    guides.push({ label: "Tabella Corsa Principianti (8 settimane)", slug: "tabella-corsa-principianti" });
+    guides.push({ label: "Come Iniziare a Correre a 40 Anni", slug: "iniziare-correre-40-anni" });
   } else if (terrain === "trail" && (dist === "trail-ultra" || dist === "marathon")) {
     title = "Il Maestro dei Sentieri Tecnici";
     archetype = "🏔️";
@@ -60,6 +61,11 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("I blocchi ad alto chilometraggio richiedono un sonno di alta qualità (8h+). Il recupero è dove avviene il miglioramento della forma fisica.");
     tips.push("Variazioni della Corsa Lunga: non correre solo piano; aggiungi 5-10km a ritmo gara alla fine delle tue sessioni superiori ai 25km.");
     guides.push({ label: "Alimentazione Maratona", slug: "running-nutrition" });
+    if (dist === "half-marathon") {
+      guides.push({ label: "Mezza Maratona in 2 Mesi", slug: "mezza-maratona-2-mesi" });
+      guides.push({ label: "Quanti Km alla Settimana per la Mezza", slug: "quanti-km-mezza-maratona" });
+    }
+    guides.push({ label: "Gel Energetici per la Corsa", slug: "gel-energetici-corsa" });
   } else if (freq === "5-6" || freq === "7+") {
     title = "Il Guerriero Stradale ad Alto Volume";
     archetype = "🚜";
@@ -76,6 +82,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Se fa male più di 3/10, fermati. Correre sopra un dolore acuto porta a stop di mesi.");
     tips.push("Allenamento di Forza: concentrati su esercizi a gamba singola (split squat, sollevamenti polpacci) per correggere gli squilibri.");
     guides.push({ label: "Prevenzione Infortuni", slug: "injury-prevention" });
+    guides.push({ label: "Ginocchio del Corridore: Cause e Rimedi", slug: "ginocchio-del-corridore" });
+    guides.push({ label: "Dolore al Ginocchio Durante la Corsa", slug: "dolore-ginocchio-corsa" });
   } else if (goal === "weight-loss") {
     title = "Il Trasformatore Metabolico";
     archetype = "🔥";
@@ -85,6 +93,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Camminare è uno strumento sottovalutato per la perdita di grasso. Aggiungi 30 minuti di movimento a bassa intensità nei giorni di riposo.");
     tips.push("Proteine pre-corsa: un piccolo snack proteico prima della corsa può aiutare a prevenire la scomposizione muscolare durante gli sforzi lunghi.");
     tools.push({ label: "Calcolatore BMI", to: "/tools/bmi", icon: "Activity" });
+    guides.push({ label: "Correre per Dimagrire: Programma Realistico", slug: "correre-per-dimagrire" });
+    guides.push({ label: "Cosa Mangiare Dopo la Corsa", slug: "cosa-mangiare-dopo-corsa" });
   } else {
     title = "Il Guerriero del Weekend";
     archetype = "🎖️";
@@ -100,6 +110,7 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   if (exp === "competitive") {
     tips.push("Monitora la frequenza cardiaca a riposo al mattino: un aumento > 5 bpm può indicare sovrallenamento o malattia in arrivo.");
     guides.push({ label: "Zone di Allenamento", slug: "running-heart-rate-zones" });
+    guides.push({ label: "Integratori per Chi Corre", slug: "integratori-per-chi-corre" });
     tags.push("competitive-pro");
   }
 
@@ -119,6 +130,9 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   if (answers.biomechanics === "overpronation") {
     tips.push("Controllo Stabilità: assicurati che le tue scarpe abbiano un supporto mediale per prevenire l'eccessiva rotazione interna.");
     tags.push("stability");
+    guides.push({ label: "Scarpe da Running per Pronazione", slug: "scarpe-running-pronazione" });
+  } else if (answers.biomechanics === "supination" || answers.biomechanics === "underpronation") {
+    guides.push({ label: "Scarpe da Running per Supinazione", slug: "scarpe-running-supinazione" });
   }
   
   if (freq === "5-6" || freq === "7+") {
@@ -131,14 +145,21 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tags.push("electrolytes", "magnesium", "hydration");
     tools.push({ label: "Calcolatore Elettroliti", to: "/tools/electrolytes", icon: "Zap" });
     tips.push("Sweat Test: pesati prima e dopo una corsa di un'ora per determinare il tuo tasso di perdita di liquidi.");
+    guides.push({ label: "Gel Energetici per la Corsa", slug: "gel-energetici-corsa" });
   } else if (answers.issue === "fatigue-recovery") {
     tags.push("protein", "recovery", "magnesium", "energy");
     tools.push({ label: "Calcolatore Proteine", to: "/tools/protein", icon: "Dumbbell" });
     tips.push("Igiene del Sonno: 7-9 ore di sonno di qualità sono più efficaci di qualsiasi integratore per il recupero.");
+    guides.push({ label: "Recupero Muscolare Dopo la Corsa", slug: "muscle-recovery" });
+    guides.push({ label: "Sonno e Corsa", slug: "sleep-and-running" });
   } else if (answers.issue === "nutrition") {
     tags.push("energy", "carbohydrates", "protein", "nutrition");
     tools.push({ label: "Calcolatore Calorie", to: "/tools/calories", icon: "Zap" });
     guides.push({ label: "Nutrizione Performance", slug: "running-nutrition" });
+    guides.push({ label: "Cosa Mangiare Dopo la Corsa", slug: "cosa-mangiare-dopo-corsa" });
+  } else if (answers.issue === "injuries") {
+    guides.push({ label: "Ginocchio del Corridore", slug: "ginocchio-del-corridore" });
+    guides.push({ label: "Dolore al Ginocchio Dopo la Corsa", slug: "dolore-ginocchio-dopo-corsa" });
   }
 
   // 3. Final Aggregation

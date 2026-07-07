@@ -5,6 +5,7 @@ import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
 import SEO from "@/components/SEO";
 import GuidesReferral from "@/components/GuidesReferral";
+import { getContextualGuides } from "@/lib/guides/contextualGuides";
 
 const CaloriesCalculator = () => {
   const [weight, setWeight] = useState("");
@@ -166,10 +167,7 @@ const CaloriesCalculator = () => {
 
         {/* Referrals Section consolidated at bottom */}
         <div className="mt-16 space-y-12 border-t border-border pt-16">
-          <GuidesReferral guides={[
-            { title: "Nutrizione per la Corsa 101", path: "/guides/running-nutrition", desc: "Una guida completa su cosa mangiare prima, durante e dopo i tuoi sforzi." },
-            { title: "Padroneggiare il Rifornimento", path: "/guides/supplements-for-runners", desc: "Approfondimento scientifico sull'ottimizzazione delle riserve di glicogeno per la lunga distanza." }
-          ]} />
+          <GuidesReferral guides={getContextualGuides("calories", { distance })} />
 
           <HubReferral 
             category="supplements"
