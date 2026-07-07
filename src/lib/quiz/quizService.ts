@@ -93,6 +93,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Camminare è uno strumento sottovalutato per la perdita di grasso. Aggiungi 30 minuti di movimento a bassa intensità nei giorni di riposo.");
     tips.push("Proteine pre-corsa: un piccolo snack proteico prima della corsa può aiutare a prevenire la scomposizione muscolare durante gli sforzi lunghi.");
     tools.push({ label: "Calcolatore BMI", to: "/tools/bmi", icon: "Activity" });
+    guides.push({ label: "Correre per Dimagrire: Programma Realistico", slug: "correre-per-dimagrire" });
+    guides.push({ label: "Cosa Mangiare Dopo la Corsa", slug: "cosa-mangiare-dopo-corsa" });
   } else {
     title = "Il Guerriero del Weekend";
     archetype = "🎖️";
