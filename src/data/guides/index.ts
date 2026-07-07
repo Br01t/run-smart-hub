@@ -30,6 +30,12 @@ import { correrePerDimagrire } from "./correre-per-dimagrire";
 import { mezzaMaratona2Mesi } from "./mezza-maratona-2-mesi";
 import { quantiKmMezzaMaratona } from "./quanti-km-mezza-maratona";
 import { doloreGinocchioCorsa } from "./dolore-ginocchio-corsa";
+import { gelCarboidrati } from "./gel-carboidrati";
+import { corsaEIntegratori } from "./corsa-e-integratori";
+import { recuperoMuscolareCorsa } from "./recupero-muscolare-corsa";
+import { programmaCorsaPrincipianti } from "./programma-corsa-principianti";
+import { riprendereCorrereDopoPausa } from "./riprendere-correre-dopo-pausa";
+import { mezzaMaratona1Mese } from "./mezza-maratona-1-mese";
 
 
 
