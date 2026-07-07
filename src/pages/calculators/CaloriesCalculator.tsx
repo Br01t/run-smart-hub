@@ -5,6 +5,7 @@ import CalculatorShell from "@/components/CalculatorShell";
 import HubReferral from "@/components/HubReferral";
 import SEO from "@/components/SEO";
 import GuidesReferral from "@/components/GuidesReferral";
+import { getContextualGuides } from "@/lib/guides/contextualGuides";
 
 const CaloriesCalculator = () => {
   const [weight, setWeight] = useState("");
