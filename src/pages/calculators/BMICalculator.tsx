@@ -181,10 +181,7 @@ const BMICalculator = () => {
 
         {/* Referrals Section consolidated at bottom */}
         <div className="mt-16 space-y-12 border-t border-border pt-16">
-          <GuidesReferral guides={[
-            { title: "Trovare la Calzata Perfetta", path: "/guides/choosing-running-shoes", desc: "Come il peso corporeo e la biomeccanica dettano i requisiti ideali delle calzature." },
-            { title: "Prevenzione Infortuni", path: "/guides/injury-prevention", desc: "Tecniche scientifiche per gestire efficacemente l'aumento del carico articolare." }
-          ]} />
+          <GuidesReferral guides={getContextualGuides("bmi", { category: result?.category })} />
 
           <HubReferral 
             category="shoes"
