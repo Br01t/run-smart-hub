@@ -25,7 +25,8 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("Il 'Talk Test': Dovresti essere in grado di parlare a frasi intere durante l'80% delle tue corse.");
     tips.push("La costanza batte l'intensità. È meglio correre 20 minuti 3 volte a settimana che 1 ora una volta a settimana.");
     tips.push("Non saltare il riscaldamento: 5 minuti di stretching dinamico (oscillazioni gambe, sollevamenti polpacci) preparano il tuo SNC allo sforzo.");
-    guides.push({ label: "Come Iniziare a Correre", slug: "trail-running-beginners" });
+    guides.push({ label: "Tabella Corsa Principianti (8 settimane)", slug: "tabella-corsa-principianti" });
+    guides.push({ label: "Come Iniziare a Correre a 40 Anni", slug: "iniziare-correre-40-anni" });
   } else if (terrain === "trail" && (dist === "trail-ultra" || dist === "marathon")) {
     title = "Il Maestro dei Sentieri Tecnici";
     archetype = "🏔️";
