@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { shoeFinderSteps as steps, getShoeRecommendations as getRecommendations } from "@/lib/calculators/shoeService";
 import HubReferral from "@/components/HubReferral";
 import GuidesReferral from "@/components/GuidesReferral";
+import { getContextualGuides } from "@/lib/guides/contextualGuides";
 
 const ShoeFinder = () => {
   const [currentStep, setCurrentStep] = useState(0);
