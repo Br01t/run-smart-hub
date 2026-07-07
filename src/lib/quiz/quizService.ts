@@ -145,14 +145,21 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tags.push("electrolytes", "magnesium", "hydration");
     tools.push({ label: "Calcolatore Elettroliti", to: "/tools/electrolytes", icon: "Zap" });
     tips.push("Sweat Test: pesati prima e dopo una corsa di un'ora per determinare il tuo tasso di perdita di liquidi.");
+    guides.push({ label: "Gel Energetici per la Corsa", slug: "gel-energetici-corsa" });
   } else if (answers.issue === "fatigue-recovery") {
     tags.push("protein", "recovery", "magnesium", "energy");
     tools.push({ label: "Calcolatore Proteine", to: "/tools/protein", icon: "Dumbbell" });
     tips.push("Igiene del Sonno: 7-9 ore di sonno di qualità sono più efficaci di qualsiasi integratore per il recupero.");
+    guides.push({ label: "Recupero Muscolare Dopo la Corsa", slug: "muscle-recovery" });
+    guides.push({ label: "Sonno e Corsa", slug: "sleep-and-running" });
   } else if (answers.issue === "nutrition") {
     tags.push("energy", "carbohydrates", "protein", "nutrition");
     tools.push({ label: "Calcolatore Calorie", to: "/tools/calories", icon: "Zap" });
     guides.push({ label: "Nutrizione Performance", slug: "running-nutrition" });
+    guides.push({ label: "Cosa Mangiare Dopo la Corsa", slug: "cosa-mangiare-dopo-corsa" });
+  } else if (answers.issue === "injuries") {
+    guides.push({ label: "Ginocchio del Corridore", slug: "ginocchio-del-corridore" });
+    guides.push({ label: "Dolore al Ginocchio Dopo la Corsa", slug: "dolore-ginocchio-dopo-corsa" });
   }
 
   // 3. Final Aggregation
