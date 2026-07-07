@@ -110,6 +110,7 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
   if (exp === "competitive") {
     tips.push("Monitora la frequenza cardiaca a riposo al mattino: un aumento > 5 bpm può indicare sovrallenamento o malattia in arrivo.");
     guides.push({ label: "Zone di Allenamento", slug: "running-heart-rate-zones" });
+    guides.push({ label: "Integratori per Chi Corre", slug: "integratori-per-chi-corre" });
     tags.push("competitive-pro");
   }
 
