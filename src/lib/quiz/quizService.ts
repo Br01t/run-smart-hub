@@ -61,6 +61,11 @@ export const getRunnerProfile = (answers: Record<string, string>): ProfileResult
     tips.push("I blocchi ad alto chilometraggio richiedono un sonno di alta qualità (8h+). Il recupero è dove avviene il miglioramento della forma fisica.");
     tips.push("Variazioni della Corsa Lunga: non correre solo piano; aggiungi 5-10km a ritmo gara alla fine delle tue sessioni superiori ai 25km.");
     guides.push({ label: "Alimentazione Maratona", slug: "running-nutrition" });
+    if (dist === "half-marathon") {
+      guides.push({ label: "Mezza Maratona in 2 Mesi", slug: "mezza-maratona-2-mesi" });
+      guides.push({ label: "Quanti Km alla Settimana per la Mezza", slug: "quanti-km-mezza-maratona" });
+    }
+    guides.push({ label: "Gel Energetici per la Corsa", slug: "gel-energetici-corsa" });
   } else if (freq === "5-6" || freq === "7+") {
     title = "Il Guerriero Stradale ad Alto Volume";
     archetype = "🚜";
