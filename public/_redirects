@@ -15,5 +15,8 @@ https://runners-hub.org/*         https://www.runners-hub.org/:splat  301
 /comparison/recupero-per-trail-prevenzione-infortuni  /comparison/recovery/trail/injury-prevention  301
 /comparison/integratori-per-corsa-resistenza  /comparison/supplements/running/endurance  301
 
+# Normalizza trailing slash → versione canonica senza slash (consolida i segnali di ranking in GSC)
+/*/  /:splat  301!
+
 # SPA fallback – deve rimanere ultima
 /*  /index.html  200
