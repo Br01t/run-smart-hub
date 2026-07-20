@@ -36,6 +36,7 @@ const GuidePage = () => {
     c.category === guide.hubCategory || 
     guide.tags.some(tag => c.tags.includes(tag))
   ).slice(0, 3);
+  const guideUrl = `https://www.runners-hub.org/guides/${slug}/`;
 
   return (
     <Layout>
@@ -50,7 +51,7 @@ const GuidePage = () => {
           "@graph": [
             {
               "@type": "Article",
-              "@id": `https://www.runners-hub.org/guides/${slug}#article`,
+              "@id": `${guideUrl}#article`,
               "headline": guide.seoTitle || guide.title,
               "description": guide.seoDescription || guide.description,
               "image": guide.heroImage
@@ -85,7 +86,7 @@ const GuidePage = () => {
               },
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": `https://www.runners-hub.org/guides/${slug}`
+                "@id": guideUrl
               },
               "wordCount": guide.sections
                 ? guide.sections.reduce((acc: number, s: any) => acc + (s.content ? Math.ceil(s.content.length / 5) : 0), 0) + 500
@@ -107,8 +108,8 @@ const GuidePage = () => {
               "@type": "BreadcrumbList",
               "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
-                { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://www.runners-hub.org/guides" },
-                { "@type": "ListItem", "position": 3, "name": guide.title, "item": `https://www.runners-hub.org/guides/${slug}` }
+                { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://www.runners-hub.org/guides/" },
+                { "@type": "ListItem", "position": 3, "name": guide.title, "item": guideUrl }
               ]
             }
           ]

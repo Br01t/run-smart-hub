@@ -32,6 +32,7 @@ import { apparelSpecs } from "@/data/specs/apparel";
 import { gearSpecs } from "@/data/specs/gear";
 
 const SITE_URL = "https://www.runners-hub.org";
+const canonicalizePath = (path: string) => path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`;
 
 /**
  * Estrae il prezzo minimo da stringhe come "€60-70", "€310", "€30-45".
@@ -537,13 +538,14 @@ const MasterHub = () => {
     : null;
 
   // Build structured data graph: CollectionPage + BreadcrumbList + Product ItemList
-  const canonicalUrl = `${SITE_URL}${seoPath}`;
+  const canonicalPath = canonicalizePath(seoPath);
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const breadcrumbItems: any[] = [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-    { "@type": "ListItem", "position": 2, "name": "Hub", "item": `${SITE_URL}/hub` },
+    { "@type": "ListItem", "position": 2, "name": "Hub", "item": `${SITE_URL}/hub/` },
   ];
   if (urlCategory) {
-    breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": translateCategory(urlCategory), "item": `${SITE_URL}/hub/${urlCategory}` });
+    breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": translateCategory(urlCategory), "item": `${SITE_URL}/hub/${urlCategory}/` });
   }
   if (urlCategory && sport && objective) {
     breadcrumbItems.push({ "@type": "ListItem", "position": 4, "name": `${sport} · ${objective}`, "item": canonicalUrl });

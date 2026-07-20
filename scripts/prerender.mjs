@@ -47,6 +47,14 @@ function outputPathFor(route) {
   return join(DIST, clean, "index.html");
 }
 
+function writeMetaRefreshRedirect(route) {
+  if (route === "/" || route === "" || route.endsWith("/")) return;
+  const target = `${route}/`;
+  const file = join(DIST, `${route.replace(/^\/+|\/+$/g, "")}.html`);
+  const html = `<!doctype html><html lang="it"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${BASE_URL}${target}"><title>Redirecting...</title><script>location.replace(${JSON.stringify(target)});</script></head><body><a href="${target}">Continua</a></body></html>`;
+  writeFileSync(file, html, "utf8");
+}
+
 async function main() {
   if (!existsSync(SSR_ENTRY)) {
     console.error(`Missing SSR bundle at ${SSR_ENTRY}`);
@@ -72,6 +80,7 @@ async function main() {
       const out = outputPathFor(route);
       mkdirSync(dirname(out), { recursive: true });
       writeFileSync(out, html, "utf8");
+      writeMetaRefreshRedirect(route);
       ok++;
     } catch (err) {
       fail++;

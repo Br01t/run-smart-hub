@@ -13,7 +13,8 @@ interface CalculatorShellProps {
 
 const CalculatorShell = ({ title, description, icon: Icon, children, keywords }: CalculatorShellProps) => {
   const location = useLocation();
-  const canonicalUrl = `https://www.runners-hub.org${location.pathname}`;
+  const canonicalPath = location.pathname === "/" ? "/" : `${location.pathname.replace(/\/+$/, "")}/`;
+  const canonicalUrl = `https://www.runners-hub.org${canonicalPath}`;
 
   return (
     <div className="container mx-auto max-w-7xl px-4 py-8 sm:py-12">

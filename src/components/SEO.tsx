@@ -27,10 +27,11 @@ interface SEOProps {
   const BASE_URL = "https://www.runners-hub.org";
   
   const fullTitle = `${title} | ${SITE_NAME}`;
-  // Canonical + og:url puntano allo STESSO URL (senza trailing slash, tranne root).
-  // Prima og:url e canonical potevano differire, dividendo il signal.
+  // Canonical + og:url puntano allo STESSO URL.
+  // Cloudflare Pages serve le route prerenderizzate come directory, quindi la
+  // versione stabile e indicizzata da Google è con trailing slash, tranne root.
   const rawPath = path.startsWith("/") ? path : `/${path}`;
-  const cleanPath = rawPath === "/" ? "/" : rawPath.replace(/\/+$/, "");
+  const cleanPath = rawPath === "/" ? "/" : `${rawPath.replace(/\/+$/, "")}/`;
   const canonicalUrl = `${BASE_URL}${cleanPath}`;
   const ogUrl = canonicalUrl;
 
