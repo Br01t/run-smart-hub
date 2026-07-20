@@ -29,7 +29,15 @@ function extractRoutes() {
   return Array.from(routes);
 }
 
-function injectIntoTemplate(template, { appHtml, headTags }) {
+function normalizeInternalLinks(html, routes) {
+  const canonicalRoutes = new Set(routes.filter((route) => route !== "/"));
+  return html.replace(/href="(\/[^"#?]+)"/g, (match, href) => {
+    const canonical = href.endsWith("/") ? href : `${href}/`;
+    return canonicalRoutes.has(canonical) ? `href="${canonical}"` : match;
+  });
+}
+
+function injectIntoTemplate(template, { appHtml, headTags }, routes) {
   let html = template;
   if (headTags) {
     html = html.replace("</head>", `    ${headTags}\n  </head>`);
@@ -38,7 +46,7 @@ function injectIntoTemplate(template, { appHtml, headTags }) {
     /<div id="root">[\s\S]*?<\/div>/,
     `<div id="root">${appHtml}</div>`,
   );
-  return html;
+  return normalizeInternalLinks(html, routes);
 }
 
 function outputPathFor(route) {
@@ -76,7 +84,7 @@ async function main() {
   for (const route of routes) {
     try {
       const result = await render(route);
-      const html = injectIntoTemplate(template, result);
+      const html = injectIntoTemplate(template, result, routes);
       const out = outputPathFor(route);
       mkdirSync(dirname(out), { recursive: true });
       writeFileSync(out, html, "utf8");
