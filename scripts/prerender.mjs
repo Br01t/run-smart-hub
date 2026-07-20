@@ -29,7 +29,15 @@ function extractRoutes() {
   return Array.from(routes);
 }
 
-function injectIntoTemplate(template, { appHtml, headTags }) {
+function normalizeInternalLinks(html, routes) {
+  const canonicalRoutes = new Set(routes.filter((route) => route !== "/"));
+  return html.replace(/href="(\/[^"#?]+)"/g, (match, href) => {
+    const canonical = href.endsWith("/") ? href : `${href}/`;
+    return canonicalRoutes.has(canonical) ? `href="${canonical}"` : match;
+  });
+}
+
+function injectIntoTemplate(template, { appHtml, headTags }, routes) {
   let html = template;
   if (headTags) {
     html = html.replace("</head>", `    ${headTags}\n  </head>`);
@@ -38,13 +46,21 @@ function injectIntoTemplate(template, { appHtml, headTags }) {
     /<div id="root">[\s\S]*?<\/div>/,
     `<div id="root">${appHtml}</div>`,
   );
-  return html;
+  return normalizeInternalLinks(html, routes);
 }
 
 function outputPathFor(route) {
   if (route === "/" || route === "") return join(DIST, "index.html");
   const clean = route.replace(/^\/+|\/+$/g, "");
   return join(DIST, clean, "index.html");
+}
+
+function writeMetaRefreshRedirect(route) {
+  if (route === "/" || route === "" || route.endsWith("/")) return;
+  const target = `${route}/`;
+  const file = join(DIST, `${route.replace(/^\/+|\/+$/g, "")}.html`);
+  const html = `<!doctype html><html lang="it"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=${target}"><link rel="canonical" href="${BASE_URL}${target}"><title>Redirecting...</title><script>location.replace(${JSON.stringify(target)});</script></head><body><a href="${target}">Continua</a></body></html>`;
+  writeFileSync(file, html, "utf8");
 }
 
 async function main() {
@@ -68,10 +84,11 @@ async function main() {
   for (const route of routes) {
     try {
       const result = await render(route);
-      const html = injectIntoTemplate(template, result);
+      const html = injectIntoTemplate(template, result, routes);
       const out = outputPathFor(route);
       mkdirSync(dirname(out), { recursive: true });
       writeFileSync(out, html, "utf8");
+      writeMetaRefreshRedirect(route);
       ok++;
     } catch (err) {
       fail++;

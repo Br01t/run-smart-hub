@@ -4,19 +4,30 @@ http://www.runners-hub.org/*      https://www.runners-hub.org/:splat  301
 https://runners-hub.org/*         https://www.runners-hub.org/:splat  301
 
 # Redirect slug italiano (Soft 404 segnalato in GSC)
-/comparison/integratori-per-corsa-dimagrimento  /comparison/supplements/running/weight-loss  301
-/comparison/integratori-per-corsa-recupero  /comparison/supplements/running/recovery  301
-/comparison/recupero-per-corsa-prevenzione-infortuni  /comparison/recovery/running/injury-prevention  301
-/comparison/accessori-per-trail-idratazione  /comparison/hydration/trail/hydration  301
-/comparison/scarpe-per-corsa-performance  /comparison/shoes/running/performance  301
-/comparison/accessori-per-corsa-idratazione  /comparison/hydration/running/hydration  301
-/comparison/accessori-per-corsa-performance  /comparison/gear/running/performance  301
-/comparison/integratori-per-trail-recupero  /comparison/supplements/trail/recovery  301
-/comparison/recupero-per-trail-prevenzione-infortuni  /comparison/recovery/trail/injury-prevention  301
-/comparison/integratori-per-corsa-resistenza  /comparison/supplements/running/endurance  301
+/comparison/integratori-per-corsa-dimagrimento  /comparison/supplements/running/weight-loss/  301
+/comparison/integratori-per-corsa-dimagrimento/  /comparison/supplements/running/weight-loss/  301
+/comparison/integratori-per-corsa-recupero  /comparison/supplements/running/recovery/  301
+/comparison/integratori-per-corsa-recupero/  /comparison/supplements/running/recovery/  301
+/comparison/recupero-per-corsa-prevenzione-infortuni  /comparison/recovery/running/injury-prevention/  301
+/comparison/recupero-per-corsa-prevenzione-infortuni/  /comparison/recovery/running/injury-prevention/  301
+/comparison/accessori-per-trail-idratazione  /comparison/hydration/trail/hydration/  301
+/comparison/accessori-per-trail-idratazione/  /comparison/hydration/trail/hydration/  301
+/comparison/scarpe-per-corsa-performance  /comparison/shoes/running/performance/  301
+/comparison/scarpe-per-corsa-performance/  /comparison/shoes/running/performance/  301
+/comparison/accessori-per-corsa-idratazione  /comparison/hydration/running/hydration/  301
+/comparison/accessori-per-corsa-idratazione/  /comparison/hydration/running/hydration/  301
+/comparison/accessori-per-corsa-performance  /comparison/gear/running/performance/  301
+/comparison/accessori-per-corsa-performance/  /comparison/gear/running/performance/  301
+/comparison/integratori-per-trail-recupero  /comparison/supplements/trail/recovery/  301
+/comparison/integratori-per-trail-recupero/  /comparison/supplements/trail/recovery/  301
+/comparison/recupero-per-trail-prevenzione-infortuni  /comparison/recovery/trail/injury-prevention/  301
+/comparison/recupero-per-trail-prevenzione-infortuni/  /comparison/recovery/trail/injury-prevention/  301
+/comparison/integratori-per-corsa-resistenza  /comparison/supplements/running/endurance/  301
+/comparison/integratori-per-corsa-resistenza/  /comparison/supplements/running/endurance/  301
 
-# Normalizza trailing slash → versione canonica senza slash (consolida i segnali di ranking in GSC)
-/*/  /:splat  301!
+# Nota Cloudflare Pages: le pagine prerenderizzate sono directory e vengono
+# servite stabilmente con trailing slash. Canonical, sitemap e schema usano
+# quindi la versione con slash finale, tranne la root.
 
 # SPA fallback – deve rimanere ultima
 /*  /index.html  200
