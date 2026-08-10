@@ -3,9 +3,9 @@ import guideHeartrate from "@/assets/guide-heartrate.webp";
 
 export const heartRateZones: GuideContent = {
   title: "Allenamento con le Zone di Frequenza Cardiaca",
-  seoTitle: "Allenamento Zone 2 Running: Come Calcolare e Benefici Longevità",
-  seoDescription: "Guida completa all'allenamento in Zona 2 per runner. Come calcolare le zone cardio, migliorare l'economia di corsa e la biogenesi mitocondriale 2026.",
-  keywords: ["allenamento zone 2 corsa", "calcolo zone cardio 2026", "benefici corsa bassa intensità", "frequenza cardiaca longevità", "soglia aerobica runner", "test zone cardio"],
+  seoTitle: "Zone di Frequenza Cardiaca: Formula di Karvonen e Zona 2",
+  seoDescription: "Come calcolare le zone di frequenza cardiaca per la corsa con la formula di Karvonen (esempio passo-passo), allenarsi in Zona 2 ed evitare la trappola della Zona 3.",
+  keywords: ["zone di frequenza cardiaca", "zona 2 corsa", "formula di karvonen", "correre in zona 3", "calcolo zone cardio", "allenamento zone 2 corsa", "soglia aerobica runner", "test zone cardio"],
   description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
   tags: ["accessories", "running", "gear"],
   heroImage: guideHeartrate,
@@ -35,9 +35,11 @@ export const heartRateZones: GuideContent = {
     { q: "Perché in Zona 2 il mio ritmo è così lento?", a: "È normale all'inizio. La Zona 2 sviluppa la base aerobica e la densità mitocondriale; dopo 8-12 settimane di lavoro costante il ritmo in Zona 2 migliora di 20-40 secondi/km a parità di battiti." },
     { q: "Quanto tempo a settimana devo correre in Zona 2?", a: "Per il modello polarizzato 80/20, circa l'80% del volume settimanale: se corri 4 ore a settimana, almeno 3 dovrebbero essere facili in Zona 1-2 e solo 45-60 minuti ad alta intensità." },
     { q: "Posso fidarmi dei battiti misurati dal polso?", a: "Per corse lente e continue sì. Per ripetute, intervalli brevi o salite serve la fascia toracica: il sensore ottico ha 10-15 secondi di ritardo e tende ad agganciare la cadenza dei passi invece dei battiti reali ('cadence lock')." },
+    { q: "Cos'è la formula di Karvonen e come si calcola?", a: "La formula di Karvonen calcola la frequenza cardiaca di allenamento usando la Riserva Cardiaca: FC Target = ((FC Max − FC a Riposo) × % intensità) + FC a Riposo. Esempio: con FC Max 180 e FC a riposo 55, la Zona 2 (60-70%) è 130-142 bpm." },
+    { q: "È sbagliato correre sempre in Zona 3?", a: "Correre occasionalmente in Zona 3 (tempo run) è utile, ma farci tutto il volume settimanale è la 'zona grigia': genera fatica cronica senza migliorare né la base aerobica né la soglia. Meglio polarizzare: 80% facile in Zona 1-2, 20% intenso in Zona 4-5." },
   ],
   datePublished: "2026-03-20",
-  dateModified: "2026-06-05",
+  dateModified: "2026-08-09",
   sections: [
     { 
       heading: "La Scienza: Hub dello Stress Metabolico", 
@@ -64,6 +66,17 @@ export const heartRateZones: GuideContent = {
         "Zona 1 (Recupero): Utilizzala per le corse post-gara per facilitare il flusso sanguigno senza stress aggiuntivo.",
         "HRV (Variabilità): Un'alta HRV indica un buon equilibrio tra sistema simpatico e parasimpatico."
       ] 
+    },
+    {
+      heading: "La Formula di Karvonen: Calcolo Passo-Passo con Esempio",
+      body: "La formula di Karvonen è il metodo più usato dai runner per calcolare le zone di frequenza cardiaca perché integra la FC a riposo, riflettendo il tuo reale livello di fitness.\n\n**La formula:** FC Target = ((FC Max − FC a Riposo) × % Intensità) + FC a Riposo\n\n**Esempio pratico:** Runner di 40 anni, FC a riposo 55 bpm (misurata al mattino), FC Max 180 bpm (misurata con test sul campo).\n\n1. Riserva Cardiaca (HRR) = 180 − 55 = **125 bpm**\n2. Limite inferiore Zona 2 (60%) = (125 × 0,60) + 55 = **130 bpm**\n3. Limite superiore Zona 2 (70%) = (125 × 0,70) + 55 = **142 bpm**\n\nRisultato: la sua Zona 2 è **130-142 bpm**. Sopra i 142 bpm entra in Zona 3 (la 'zona grigia' da evitare nei lenti), sotto i 130 è in Zona 1 di recupero attivo.",
+      variant: "highlight",
+      listItems: [
+        "Misura la FC a riposo: al mattino, appena sveglio, per 5 giorni consecutivi e usa la media.",
+        "Non usare 220-età per la FC Max: un test di 30 minuti al massimo sforzo dà un dato reale.",
+        "Ricalcola le zone ogni 8-12 settimane: con l'allenamento la FC a riposo scende e le zone cambiano.",
+        "Zone target tipiche: Z1 50-60% HRR, Z2 60-70%, Z3 70-80%, Z4 80-90%, Z5 90-100%."
+      ]
     },
     {
       heading: "Zona 2: La Base della Performance",

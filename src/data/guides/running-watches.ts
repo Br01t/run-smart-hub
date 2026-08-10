@@ -3,7 +3,7 @@ import guideRunningWatches from "@/assets/guide-running-watches.webp";
 
 export const runningWatches: GuideContent = {
   title: "Migliori Orologi Running 2026: Guida GPS per la Corsa",
-  seoTitle: "Miglior Orologio Running 2026: Guida GPS per Correre",
+  seoTitle: "Migliori Orologi per la Corsa 2026: GPS, Cardio e Batteria",
   seoDescription: "Guida ai migliori orologi per la corsa 2026: confronto GPS multi-band, cardio HRV, batteria e potenza. Trova l'orologio running giusto per te fra Garmin, Coros, Suunto.",
   keywords: ["orologi per la corsa", "orologio running", "orologi per correre", "miglior orologio running", "migliore orologio per correre", "migliori orologi per running", "orologio corsa gps", "orologio gps running"],
   description: "Una guida completa e indipendente per scegliere l'orologio GPS da corsa giusto. Analizziamo caratteristiche, precisione, batteria e rapporto qualità-prezzo per ogni budget.",
@@ -37,7 +37,7 @@ export const runningWatches: GuideContent = {
     { q: "Il VO2 Max stimato dall'orologio è affidabile?", a: "È utile per monitorare i trend nel tempo (±3-5 ml/kg/min vs test di laboratorio). Non usarlo come valore assoluto, ma come indicatore di miglioramento o calo di forma." },
   ],
   datePublished: "2026-04-15",
-  dateModified: "2026-06-05",
+  dateModified: "2026-08-09",
   sections: [
     { 
       heading: "La Scienza: Dinamiche GNSS e Precisione Satellitare", 

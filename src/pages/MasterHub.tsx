@@ -233,7 +233,7 @@ const getDynamicSEO = (category?: string, sport?: string, objective?: string) =>
       case "supplements":
         return {
           title: "Migliori Integratori per Runner 2026: Performance e Recupero",
-          description: "Migliora la tua nutrizione sportiva. Confronta proteine, beta-alanina, caffeina ed elettroliti con dosaggi clinici supportati dalla scienza.",
+          description: "I migliori integratori per la corsa a confronto: proteine, beta-alanina, caffeina, maltodestrine ed elettroliti con dosaggi supportati dalla scienza.",
           faq: [
             { q: "Quali sono gli integratori essenziali per un runner?", a: "Maltodestrine e sali minerali per corse lunghe, proteine del siero di latte per il recupero post-allenamento, e caffeina o beta-alanina per aumentare l'intensità." }
           ]

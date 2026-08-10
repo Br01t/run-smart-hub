@@ -3,8 +3,8 @@ import guideCadence from "@/assets/guide-cadence.webp";
 
 export const runningCadence: GuideContent = {
   title: "Cadenza nella Corsa: Perché i Passi al Minuto Contano",
-  seoTitle: "Guida Cadenza Corsa 2026: Perché i 180 SPM sono un Riferimento",
-  seoDescription: "Sblocca l'efficienza della corsa con la scienza della cadenza. Scopri come l'aumento dei passi al minuto riduce il rischio di infortuni, l'oscillazione verticale e le forze frenanti.",
+  seoTitle: "Cadenza Corsa: Quanti Passi al Minuto e Come Aumentarli",
+  seoDescription: "Cadenza nella corsa: qual è il numero di passi al minuto ideale, perché i 180 spm sono un riferimento e come aumentare la cadenza riducendo infortuni e forze frenanti.",
   keywords: ["cadenza corsa", "180 spm corsa", "aumentare passi al minuto", "oscillazione verticale corsa", "infortunio overstriding", "efficienza corsa"],
   description: "Scopri perché la cadenza influisce sulle prestazioni, il riferimento dei 180 spm e come aumentare in sicurezza il numero di passi.",
   tags: ["running", "accessories"],
@@ -75,5 +75,12 @@ export const runningCadence: GuideContent = {
       ] 
     }
   ],
+  faq: [
+    { q: "Qual è la cadenza di corsa ideale?", a: "Per la maggior parte dei runner la zona di efficienza è tra 170 e 190 passi al minuto (spm). Il riferimento classico dei 180 spm deriva dagli studi di Jack Daniels sugli atleti élite, ma la cadenza ottimale dipende da altezza e ritmo: runner più alti possono essere efficienti a 172-175 spm." },
+    { q: "Come faccio ad aumentare la mia cadenza di corsa?", a: "Aumenta gradualmente del 5% alla volta (circa 5-8 passi al minuto) e mantieni il nuovo ritmo per almeno 4 settimane. Usa un metronomo o playlist con BPM target, corri 'alto' con una leggera inclinazione in avanti e accorcia la falcata invece di forzare la frequenza." },
+    { q: "I 180 passi al minuto valgono per tutti?", a: "No. I 180 spm sono una media osservata sugli élite in gara, non un numero magico universale. La cadenza varia con la velocità: nei lenti può scendere fisiologicamente di 5-10 spm. L'obiettivo reale è evitare l'overstriding, non inseguire un numero." },
+    { q: "Una cadenza più alta previene davvero gli infortuni?", a: "Sì, gli studi biomeccanici mostrano che aumentare la cadenza del 5-10% riduce il carico sulle ginocchia fino al 20% e accorcia il tempo di contatto al suolo, riducendo le forze d'impatto. Attenzione però alla transizione: sposta il carico su polpacci e tendine d'Achille, quindi procedi per gradi." },
+  ],
+  dateModified: "2026-08-09",
   hubCategory: "shoes",
 };
