@@ -56,22 +56,17 @@ const buildProductListSchema = (category: string, listName: string, listUrl: str
     "name": listName,
     "url": listUrl,
     "numberOfItems": items.length,
-    "itemListElement": items.map((p, i) => {
-      const product: any = {
-        "@type": "Product",
-        "name": p.name,
-        "brand": p.brand ? { "@type": "Brand", "name": p.brand } : undefined,
-        "image": p.image ? (p.image.startsWith("http") ? p.image : `${SITE_URL}${p.image}`) : undefined,
-        "description": p.bestFor || p.descrizione || `${p.name} — selezione Runners Hub`,
-        "url": p.link || listUrl,
-      };
+    "itemListElement": items.map((p, i) => ({
+      // Volutamente NON usiamo @type "Product": siamo un sito affiliato e non
+      // possiamo dichiarare offers/review/aggregateRating (Google li richiede
+      // per i Product snippet). Una ItemList di ListItem è valida e sicura.
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": p.name,
+      "url": p.link || listUrl,
+      "image": p.image ? (p.image.startsWith("http") ? p.image : `${SITE_URL}${p.image}`) : undefined,
+    })),
 
-      return {
-        "@type": "ListItem",
-        "position": i + 1,
-        "item": product,
-      };
-    }),
   };
 };
 
