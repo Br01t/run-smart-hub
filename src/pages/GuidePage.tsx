@@ -105,13 +105,31 @@ const GuidePage = () => {
               }
             },
             {
+              "@type": "WebPage",
+              "@id": guideUrl,
+              "url": guideUrl,
+              "name": guide.seoTitle || guide.title,
+              "description": guide.seoDescription || guide.description,
+              "inLanguage": "it-IT",
+              "isPartOf": { "@id": "https://www.runners-hub.org/#website" },
+              "primaryImageOfPage": guide.heroImage
+                ? (guide.heroImage.startsWith("http") ? guide.heroImage : `https://www.runners-hub.org${guide.heroImage}`)
+                : undefined,
+              "breadcrumb": { "@id": `${guideUrl}#breadcrumb` },
+              "mainEntity": { "@id": `${guideUrl}#article` },
+              "datePublished": guide.datePublished || "2026-05-18",
+              "dateModified": guide.dateModified || "2026-06-12"
+            },
+            {
               "@type": "BreadcrumbList",
+              "@id": `${guideUrl}#breadcrumb`,
               "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.runners-hub.org" },
                 { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://www.runners-hub.org/guides/" },
                 { "@type": "ListItem", "position": 3, "name": guide.title, "item": guideUrl }
               ]
             }
+
           ]
         }}
       />
