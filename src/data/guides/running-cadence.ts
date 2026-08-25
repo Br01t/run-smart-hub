@@ -4,7 +4,7 @@ import guideCadence from "@/assets/guide-cadence.webp";
 export const runningCadence: GuideContent = {
   title: "Cadenza nella Corsa: Perché i Passi al Minuto Contano",
   seoTitle: "Cadenza Corsa: Quanti Passi al Minuto Servono Davvero",
-  seoDescription: "Quanti passi al minuto servono davvero? Scopri se i 180 spm valgono per te, come misurare la tua cadenza in 60 secondi e il metodo +5% per aumentarla senza infortuni.",
+  seoDescription: "Servono davvero 180 passi al minuto? Misura la tua cadenza in 60 secondi e usa il metodo +5% per aumentarla riducendo infortuni e forze frenanti.",
   keywords: ["cadenza corsa", "180 spm corsa", "aumentare passi al minuto", "oscillazione verticale corsa", "infortunio overstriding", "efficienza corsa"],
   description: "Scopri perché la cadenza influisce sulle prestazioni, il riferimento dei 180 spm e come aumentare in sicurezza il numero di passi.",
   tags: ["running", "accessories"],

@@ -4,7 +4,7 @@ import guideHeartrate from "@/assets/guide-heartrate.webp";
 export const heartRateZones: GuideContent = {
   title: "Allenamento con le Zone di Frequenza Cardiaca",
   seoTitle: "Zone di Frequenza Cardiaca: Calcolo in 2 Minuti",
-  seoDescription: "Calcola le tue 5 zone di frequenza cardiaca con la formula di Karvonen (esempio numerico passo-passo), scopri quanto correre in Zona 2 ed evita la trappola della Zona 3.",
+  seoDescription: "Calcola le 5 zone di frequenza cardiaca con la formula di Karvonen (esempio passo-passo), scopri quanto correre in Zona 2 ed evita la Zona 3.",
   keywords: ["zone di frequenza cardiaca", "zona 2 corsa", "formula di karvonen", "correre in zona 3", "calcolo zone cardio", "allenamento zone 2 corsa", "soglia aerobica runner", "test zone cardio"],
   description: "Come utilizzare le zone di frequenza cardiaca per allenarsi in modo più intelligente, evitare il sovrallenamento e migliorare le prestazioni nella corsa.",
   tags: ["accessories", "running", "gear"],
