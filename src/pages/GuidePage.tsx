@@ -89,8 +89,12 @@ const GuidePage = () => {
                 "@id": guideUrl
               },
               "wordCount": guide.sections
-                ? guide.sections.reduce((acc: number, s: any) => acc + (s.content ? Math.ceil(s.content.length / 5) : 0), 0) + 500
-                : 1200,
+                ? guide.sections.reduce((acc: number, s: any) => {
+                    const text = [s.heading, s.body, ...(s.listItems || [])].filter(Boolean).join(" ");
+                    return acc + text.trim().split(/\s+/).filter(Boolean).length;
+                  }, 0)
+                : undefined,
+
               "articleSection": guide.tags?.[0] || "Running",
               "keywords": guide.keywords?.join(", ") || guide.tags?.join(", "),
               "speakable": {
